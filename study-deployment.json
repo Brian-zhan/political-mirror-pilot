@@ -1,7 +1,7 @@
 {
   "schema": "pm-autostorage-deployment/1",
   "releaseVersion": "0.38.3-storage.2",
-  "revision": 2026092701,
+  "revision": 2026092703,
   "mode": "TEST",
   "researcherConfig": {
     "schema": "pm-researcher-config/2",

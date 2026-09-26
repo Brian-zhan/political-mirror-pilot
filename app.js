@@ -1,6 +1,4 @@
-// Configured Political Mirror frontend. TypeScript 5.8.3; frozen core unchanged.
-(()=>{
-
+(() => {
   var __create = Object.create;
   var __defProp = Object.defineProperty;
   var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
@@ -31,9 +29,9 @@
     mod
   ));
 
-  // node_modules/react/cjs/react.development.js
+  // ../pm_v0380_pilot/node_modules/react/cjs/react.development.js
   var require_react_development = __commonJS({
-    "node_modules/react/cjs/react.development.js"(exports, module) {
+    "../pm_v0380_pilot/node_modules/react/cjs/react.development.js"(exports, module) {
       "use strict";
       /**
        * @license React
@@ -1914,9 +1912,9 @@
     }
   });
 
-  // node_modules/react/index.js
+  // ../pm_v0380_pilot/node_modules/react/index.js
   var require_react = __commonJS({
-    "node_modules/react/index.js"(exports, module) {
+    "../pm_v0380_pilot/node_modules/react/index.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -1926,9 +1924,9 @@
     }
   });
 
-  // node_modules/scheduler/cjs/scheduler.development.js
+  // ../pm_v0380_pilot/node_modules/scheduler/cjs/scheduler.development.js
   var require_scheduler_development = __commonJS({
-    "node_modules/scheduler/cjs/scheduler.development.js"(exports) {
+    "../pm_v0380_pilot/node_modules/scheduler/cjs/scheduler.development.js"(exports) {
       "use strict";
       /**
        * @license React
@@ -2385,9 +2383,9 @@
     }
   });
 
-  // node_modules/scheduler/index.js
+  // ../pm_v0380_pilot/node_modules/scheduler/index.js
   var require_scheduler = __commonJS({
-    "node_modules/scheduler/index.js"(exports, module) {
+    "../pm_v0380_pilot/node_modules/scheduler/index.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -2397,9 +2395,9 @@
     }
   });
 
-  // node_modules/react-dom/cjs/react-dom.development.js
+  // ../pm_v0380_pilot/node_modules/react-dom/cjs/react-dom.development.js
   var require_react_dom_development = __commonJS({
-    "node_modules/react-dom/cjs/react-dom.development.js"(exports) {
+    "../pm_v0380_pilot/node_modules/react-dom/cjs/react-dom.development.js"(exports) {
       "use strict";
       /**
        * @license React
@@ -2416,9 +2414,9 @@
           if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
           }
-          var React4 = require_react();
+          var React5 = require_react();
           var Scheduler = require_scheduler();
-          var ReactSharedInternals = React4.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React5.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           var suppressWarning = false;
           function setSuppressWarning(newSuppressWarning) {
             {
@@ -4025,7 +4023,7 @@
             {
               if (props.value == null) {
                 if (typeof props.children === "object" && props.children !== null) {
-                  React4.Children.forEach(props.children, function(child) {
+                  React5.Children.forEach(props.children, function(child) {
                     if (child == null) {
                       return;
                     }
@@ -23583,9 +23581,9 @@
     }
   });
 
-  // node_modules/react-dom/index.js
+  // ../pm_v0380_pilot/node_modules/react-dom/index.js
   var require_react_dom = __commonJS({
-    "node_modules/react-dom/index.js"(exports, module) {
+    "../pm_v0380_pilot/node_modules/react-dom/index.js"(exports, module) {
       "use strict";
       if (false) {
         checkDCE();
@@ -23596,9 +23594,9 @@
     }
   });
 
-  // node_modules/react-dom/client.js
+  // ../pm_v0380_pilot/node_modules/react-dom/client.js
   var require_client = __commonJS({
-    "node_modules/react-dom/client.js"(exports) {
+    "../pm_v0380_pilot/node_modules/react-dom/client.js"(exports) {
       "use strict";
       var m = require_react_dom();
       if (false) {
@@ -23627,9 +23625,9 @@
     }
   });
 
-  // node_modules/react/cjs/react-jsx-runtime.development.js
+  // ../pm_v0380_pilot/node_modules/react/cjs/react-jsx-runtime.development.js
   var require_react_jsx_runtime_development = __commonJS({
-    "node_modules/react/cjs/react-jsx-runtime.development.js"(exports) {
+    "../pm_v0380_pilot/node_modules/react/cjs/react-jsx-runtime.development.js"(exports) {
       "use strict";
       /**
        * @license React
@@ -23643,7 +23641,7 @@
       if (true) {
         (function() {
           "use strict";
-          var React4 = require_react();
+          var React5 = require_react();
           var REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element");
           var REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal");
           var REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment");
@@ -23669,7 +23667,7 @@
             }
             return null;
           }
-          var ReactSharedInternals = React4.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React5.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           function error(format) {
             {
               {
@@ -24519,19 +24517,19 @@
               return jsxWithValidation(type, props, key, false);
             }
           }
-          var jsx4 = jsxWithValidationDynamic;
-          var jsxs3 = jsxWithValidationStatic;
+          var jsx5 = jsxWithValidationDynamic;
+          var jsxs4 = jsxWithValidationStatic;
           exports.Fragment = REACT_FRAGMENT_TYPE;
-          exports.jsx = jsx4;
-          exports.jsxs = jsxs3;
+          exports.jsx = jsx5;
+          exports.jsxs = jsxs4;
         })();
       }
     }
   });
 
-  // node_modules/react/jsx-runtime.js
+  // ../pm_v0380_pilot/node_modules/react/jsx-runtime.js
   var require_jsx_runtime = __commonJS({
-    "node_modules/react/jsx-runtime.js"(exports, module) {
+    "../pm_v0380_pilot/node_modules/react/jsx-runtime.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -24540,1700 +24538,656 @@
       }
     }
   });
-const __pmVendors={'react':require_react(),'react-dom/client':require_client(),'react/jsx-runtime':require_jsx_runtime()};
-const __pmModules={
-"pilot/browser.jsx": [{"react":"@vendor/react","react-dom/client":"@vendor/react-dom/client","./app.jsx":"pilot/app.jsx","react/jsx-runtime":"@vendor/react/jsx-runtime"},function(module,exports,require){
-"use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-const jsx_runtime_1 = require("react/jsx-runtime");
-const react_1 = __importDefault(require("react"));
-const client_1 = require("react-dom/client");
-const app_jsx_1 = __importDefault(require("./app.jsx"));
-const mount = document.getElementById('root');
-if (!mount)
-    throw new Error('Missing #root mount element.');
-(0, client_1.createRoot)(mount).render((0, jsx_runtime_1.jsx)(app_jsx_1.default, {}));
-mount.dataset.mounted = 'true';
 
-}],
-"pilot/app.jsx": [{"react":"@vendor/react","./game-ui.jsx":"pilot/game-ui.jsx","./cases.mjs":"pilot/cases.mjs","./prediction.mjs":"pilot/prediction.mjs","./actor-context.mjs":"pilot/actor-context.mjs","./sha256.mjs":"pilot/sha256.mjs","./assignment.mjs":"pilot/assignment.mjs","./consent-validator.mjs":"pilot/consent-validator.mjs","./build-info.json":"pilot/build-info.json","./client.mjs":"pilot/client.mjs","./study.mjs":"pilot/study.mjs","react/jsx-runtime":"@vendor/react/jsx-runtime"},function(module,exports,require){
-"use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || (function () {
-    var ownKeys = function(o) {
-        ownKeys = Object.getOwnPropertyNames || function (o) {
-            var ar = [];
-            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
-            return ar;
-        };
-        return ownKeys(o);
-    };
-    return function (mod) {
-        if (mod && mod.__esModule) return mod;
-        var result = {};
-        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
-        __setModuleDefault(result, mod);
-        return result;
-    };
-})();
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = PilotApp;
-const jsx_runtime_1 = require("react/jsx-runtime");
-const react_1 = __importStar(require("react"));
-const game_ui_jsx_1 = __importDefault(require("./game-ui.jsx"));
-const cases_mjs_1 = require("./cases.mjs");
-const prediction_mjs_1 = require("./prediction.mjs");
-const actor_context_mjs_1 = require("./actor-context.mjs");
-const sha256_mjs_1 = require("./sha256.mjs");
-const assignment_mjs_1 = require("./assignment.mjs");
-const consent_validator_mjs_1 = require("./consent-validator.mjs");
-const build_info_json_1 = __importDefault(require("./build-info.json"));
-const client_mjs_1 = require("./client.mjs");
-const study_mjs_1 = require("./study.mjs");
-const CONTACT = 'b0966821923@gmail.com';
-const CSS = `
- .ps-wrap{max-width:820px;margin:0 auto;padding:34px 24px 70px;line-height:1.65}
- .ps-head{border-bottom:1px solid var(--pm-rule);padding:18px 24px;display:flex;gap:15px;align-items:center;justify-content:space-between}
- .ps-head strong{font-size:17px;letter-spacing:.04em}.ps-meta{font-size:12px;color:var(--pm-ink-3)}
- .ps-card{border:1px solid var(--pm-rule);padding:24px;margin:22px 0;background:var(--pm-sheet);border-radius:4px}
- .ps-wrap h1{font-size:34px;font-weight:400;line-height:1.2;margin:22px 0}.ps-wrap h2{font-size:23px;font-weight:400;line-height:1.4}
- .ps-wrap p{margin:14px 0}.ps-check{display:flex;gap:13px;align-items:flex-start;margin:18px 0;cursor:pointer}.ps-check input{margin-top:6px;width:18px;height:18px;flex:none}
- .ps-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:25px}.ps-actions button{min-height:44px}
- .ps-number{width:116px;padding:12px;border:1px solid var(--pm-rule);background:var(--pm-paper);font-size:24px;color:var(--pm-ink);border-radius:3px}
- .ps-field{margin:26px 0;border:0;padding:0}.ps-field legend{margin-bottom:14px;line-height:1.5}
- .ps-vote{display:flex;gap:12px;flex-wrap:wrap}.ps-vote label{border:1px solid var(--pm-rule);padding:12px 18px;cursor:pointer}.ps-vote input{margin-right:10px}
- .ps-screen{position:fixed;inset:0;background:rgba(243,242,242,.92);z-index:1000;display:grid;place-items:center;padding:24px;overflow:auto}
- .ps-dialog{max-width:620px;border:1px solid var(--pm-rule);background:var(--pm-sheet);padding:32px;line-height:1.6;width:100%}
- .ps-error{color:var(--pm-against)}.ps-code{font-family:monospace;overflow-wrap:anywhere;font-size:12px}
- .ps-progress{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--pm-ink-3)}
- .ps-save{position:fixed;bottom:12px;right:16px;padding:8px 14px;background:var(--pm-sheet);border:1px solid var(--pm-rule);font-size:12px;z-index:900}
- button:disabled{opacity:.45;cursor:not-allowed}@media(max-width:600px){.ps-head{align-items:flex-start}.ps-wrap{padding:22px 18px 70px}.ps-card{padding:18px}.ps-wrap h1{font-size:29px}}
-`;
-function Button({ children, onClick, disabled = false, secondary = false, type = 'button' }) {
-    return (0, jsx_runtime_1.jsx)("button", { type: type, disabled: disabled, className: secondary ? 'pm-ghost' : 'pm-cta', onClick: onClick, children: children });
-}
-const consentAnswersFrom = (c) => ({ adult: c.adult, english: c.english, informed: c.informed, agreed: c.agreed, eligible: c.eligible, researcherConfigSha256: c.researcherConfigSha256, consentTextSha256: c.consentTextSha256, ethicsReference: c.ethicsReference ?? null, studyTitle: c.studyTitle ?? null });
-function Consent({ config, onSubmit, busy, notice, testSession }) {
-    const [checks, setChecks] = (0, react_1.useState)({ adult: false, english: false, informed: false, agreed: false });
-    const doc = config?.consentDocument;
-    (0, react_1.useEffect)(() => { setChecks({ adult: false, english: false, informed: false, agreed: false }); }, [config?.consentTextSha256, config?.collectionMode]);
-    if (!doc)
-        return (0, jsx_runtime_1.jsx)("main", { className: "ps-wrap", children: (0, jsx_runtime_1.jsx)("p", { role: "status", children: "Loading the participant information\u2026" }) });
-    // The document is rendered exactly as the collector hashed it; a mismatch means the page and the server disagree.
-    const integrity = (0, sha256_mjs_1.sha256Hex)((0, assignment_mjs_1.stableJSON)(doc)) === config.consentTextSha256;
-    const allTrue = consent_validator_mjs_1.CONSENT_CONFIRMATIONS.every((k) => checks[k] === true);
-    const notSupplied = !config.configured || (config.researcher?.ethics?.arrangement || 'NOT_SUPPLIED') === 'NOT_SUPPLIED';
-    const submit = () => onSubmit({ adult: checks.adult === true, english: checks.english === true, informed: checks.informed === true, agreed: checks.agreed === true, eligible: checks.adult === true && checks.english === true,
-        researcherConfigSha256: config.researcher.sha256, consentTextSha256: config.consentTextSha256, ethicsReference: config.researcher?.ethics?.reference ?? null, studyTitle: doc.title });
-    return (0, jsx_runtime_1.jsxs)("main", { className: "ps-wrap", "data-consent-version": doc.version, children: [(0, jsx_runtime_1.jsx)("div", { className: "ps-progress", children: "Participant information and consent" }), testSession && (0, jsx_runtime_1.jsx)("p", { className: "ps-code", role: "status", children: "TEST MODE \u2014 this session is not counted as a research participant." }), notice && (0, jsx_runtime_1.jsx)("p", { className: "ps-error", role: "alert", children: notice }), !integrity && (0, jsx_runtime_1.jsx)("p", { className: "ps-error", role: "alert", children: "The participant information could not be verified against the collector. Please reload the page." }), (0, jsx_runtime_1.jsx)("h1", { children: doc.title }), (0, jsx_runtime_1.jsx)("p", { className: "ps-meta", children: doc.researcherLine }), doc.sections.map((section) => (0, jsx_runtime_1.jsxs)("div", { className: `ps-card${section.heading === 'Ethics and contact' && notSupplied ? ' ps-error' : ''}`, children: [(0, jsx_runtime_1.jsx)("h2", { children: section.heading }), section.paragraphs.map((text, i) => (0, jsx_runtime_1.jsx)("p", { children: text }, i))] }, section.heading)), (0, jsx_runtime_1.jsxs)("p", { className: "ps-meta", children: ["Consent document version: ", doc.version, " \u00B7 ", String(config.consentTextSha256).slice(0, 12)] }), doc.confirmations.map((c) => (0, jsx_runtime_1.jsxs)("label", { className: "ps-check", children: [(0, jsx_runtime_1.jsx)("input", { type: "checkbox", checked: checks[c.id] === true, onChange: e => setChecks({ ...checks, [c.id]: e.target.checked === true }) }), c.text] }, c.id)), (0, jsx_runtime_1.jsxs)("div", { className: "ps-actions", children: [(0, jsx_runtime_1.jsx)(Button, { disabled: !allTrue || !integrity || busy, onClick: submit, children: "Agree and begin" }), (0, jsx_runtime_1.jsx)(Button, { secondary: true, disabled: busy, onClick: () => onSubmit(null), children: "I do not agree \u2014 leave" })] })] });
-}
-function Measurement({ state, onAnswer, busy }) {
-    const [score, setScore] = (0, react_1.useState)(''), [vote, setVote] = (0, react_1.useState)('');
-    const item = (0, cases_mjs_1.getCases)((0, study_mjs_1.formFor)(state, state.stage))[state.responses[state.stage].length];
-    if (!state.presentation || state.presentation.caseId !== item?.id)
-        return (0, jsx_runtime_1.jsx)("main", { className: "ps-wrap", children: (0, jsx_runtime_1.jsx)("p", { role: "status", children: "Preparing the next case\u2026" }) });
-    const blockNumber = { T0: 1, T1: 2, T2: 3 }[state.stage];
-    const valid = score !== '' && /^\d+$/.test(score) && Number(score) >= 0 && Number(score) <= 100 && ['RETAIN', 'REPLACE'].includes(vote);
-    return (0, jsx_runtime_1.jsxs)("main", { className: "ps-wrap", "data-study-block": state.stage, children: [(0, jsx_runtime_1.jsxs)("div", { className: "ps-progress", children: ["Judgment set ", blockNumber, " \u00B7 Case ", state.responses[state.stage].length + 1, " of 8"] }), (0, jsx_runtime_1.jsx)("h1", { children: "Your judgment as a voter" }), (0, jsx_runtime_1.jsx)("p", { children: cases_mjs_1.BLOCK_INSTRUCTIONS }), (0, jsx_runtime_1.jsxs)("article", { className: "ps-card", children: [(0, jsx_runtime_1.jsx)("h2", { children: item.title }), (0, jsx_runtime_1.jsx)("p", { children: item.text })] }), (0, jsx_runtime_1.jsxs)("form", { onSubmit: e => { e.preventDefault(); if (valid && !busy)
-                    onAnswer({ score: Number(score), vote }); }, children: [(0, jsx_runtime_1.jsxs)("fieldset", { className: "ps-field", children: [(0, jsx_runtime_1.jsx)("legend", { children: item.prompt }), (0, jsx_runtime_1.jsxs)("label", { children: [(0, jsx_runtime_1.jsx)("input", { className: "ps-number", "aria-label": "Probability of deliberate misuse, 0 to 100", type: "number", min: "0", max: "100", step: "1", inputMode: "numeric", value: score, onChange: e => setScore(e.target.value), required: true }), " ", (0, jsx_runtime_1.jsx)("span", { children: "out of 100" })] }), (0, jsx_runtime_1.jsx)("p", { className: "ps-meta", children: "0 = certain it did not happen \u00B7 50 = equally likely \u00B7 100 = certain it happened" })] }), (0, jsx_runtime_1.jsxs)("fieldset", { className: "ps-field", children: [(0, jsx_runtime_1.jsx)("legend", { children: item.votePrompt }), (0, jsx_runtime_1.jsxs)("div", { className: "ps-vote", children: [(0, jsx_runtime_1.jsxs)("label", { children: [(0, jsx_runtime_1.jsx)("input", { type: "radio", name: "vote", value: "RETAIN", checked: vote === 'RETAIN', onChange: () => setVote('RETAIN'), required: true }), "Retain"] }), (0, jsx_runtime_1.jsxs)("label", { children: [(0, jsx_runtime_1.jsx)("input", { type: "radio", name: "vote", value: "REPLACE", checked: vote === 'REPLACE', onChange: () => setVote('REPLACE'), required: true }), "Replace"] })] })] }), (0, jsx_runtime_1.jsx)("div", { className: "ps-actions", children: (0, jsx_runtime_1.jsx)(Button, { type: "submit", disabled: !valid || busy, children: "Save and continue" }) })] })] });
-}
-function Debrief({ state, onFinish, busy, contact = CONTACT, withdrawn = false, onDownload }) {
-    return (0, jsx_runtime_1.jsxs)("main", { className: "ps-wrap", children: [(0, jsx_runtime_1.jsx)("div", { className: "ps-progress", children: withdrawn ? 'Participation stopped — debrief' : 'Debrief' }), (0, jsx_runtime_1.jsx)("h1", { children: withdrawn ? 'You have left the study. Here is what the feedback was.' : 'Thank you for taking part.' }), (0, jsx_runtime_1.jsx)("p", { children: "This pilot studies whether judgments made inside a political simulation help predict judgments about new cases, and whether judgments change after a political career and its feedback." }), (0, jsx_runtime_1.jsxs)("div", { className: "ps-card", children: [(0, jsx_runtime_1.jsx)("h2", { children: "How your feedback was assigned" }), (0, jsx_runtime_1.jsx)("p", { children: "Participants were randomly assigned to one of two feedback packages. One uses the player\u2019s own recorded choices; the other presents a fixed comparison profile. The packages also differ in some accompanying material, so this pilot cannot isolate personalization from every other presentation difference." }), (0, jsx_runtime_1.jsx)("p", { children: state.assignment.arm === 'TRUE' ? 'You received feedback calculated from your own recorded play.' : 'You received the fixed comparison feedback. It was not a psychological description calculated from your personal choices.' }), (0, jsx_runtime_1.jsx)("p", { children: "The game calculated predictions before you answered the second set of cases. Your answers to that set were not used to make those predictions. The profiles and predictions are preliminary research tools and should not be treated as validated diagnoses or predictions of real-world voting." })] }), (0, jsx_runtime_1.jsx)("p", { children: "There was no politically correct vote to choose. This small pilot is intended to assess feasibility and estimate patterns; it does not establish that playing the game changes real elections or that any political attitude is better." }), (0, jsx_runtime_1.jsxs)("p", { children: ["If the feedback concerned you, or if you have questions about your data, contact ", (0, jsx_runtime_1.jsx)("a", { href: `mailto:${contact}`, children: contact }), " and quote your session ID below."] }), (0, jsx_runtime_1.jsxs)("p", { className: "ps-code", children: ["Session: ", state.sessionId] }), (0, jsx_runtime_1.jsx)("div", { className: "ps-actions", children: withdrawn ? (0, jsx_runtime_1.jsx)(Button, { disabled: busy, onClick: onDownload, children: "Download my study record" }) : (0, jsx_runtime_1.jsx)(Button, { disabled: busy, onClick: onFinish, children: "I have read the debrief \u2014 finish" }) }), withdrawn && (0, jsx_runtime_1.jsxs)("p", { children: ["No further activities are required. Use the withdrawal confirmation below to delete the submitted research record", state.withdrawal?.dataRemovalRequested ? '; your removal request has been recorded and the researcher will follow the stated procedure' : '', ". You can return to this page on the same browser to read this again."] })] });
-}
-function RemovalReceipt({ receipt, contact = CONTACT }) {
-    const arm = receipt.feedbackArm;
-    return (0, jsx_runtime_1.jsxs)("main", { className: "ps-wrap", "data-withdrawal-receipt": "true", children: [(0, jsx_runtime_1.jsx)("div", { className: "ps-progress", children: "Participation stopped \u2014 deletion confirmed" }), (0, jsx_runtime_1.jsx)("h1", { children: "You have left the study." }), (0, jsx_runtime_1.jsx)("p", { children: "Your submitted answers, game records, model predictions and questionnaire have been deleted from the active study database. This browser has cleared its pending answers and study credentials. Only a minimal coded withdrawal record and this receipt remain." }), (0, jsx_runtime_1.jsxs)("p", { className: "ps-code", children: ["Study number: ", receipt.participantCode, " \u00B7 Session: ", receipt.sessionId] }), (0, jsx_runtime_1.jsxs)("p", { className: "ps-meta", children: ["Deletion confirmed: ", receipt.removedAt] }), (0, jsx_runtime_1.jsxs)("section", { className: "ps-card", children: [(0, jsx_runtime_1.jsx)("h2", { children: "About the study and its feedback" }), (0, jsx_runtime_1.jsx)("p", { children: "This pilot examines judgments before and after a fictional political career and its feedback. The two feedback packages differ: one uses a player's own recorded choices and one uses a fixed comparison profile. These are research tools, not validated psychological diagnoses." }), receipt.sawFeedback ? (0, jsx_runtime_1.jsx)("p", { children: arm === 'SHUFFLED' ? 'You received the fixed comparison feedback. It was not a psychological description calculated from your personal choices.' : 'You received feedback calculated from your own recorded play.' }) : (0, jsx_runtime_1.jsx)("p", { children: "No feedback display was recorded before your withdrawal. No further tasks are required." })] }), (0, jsx_runtime_1.jsxs)("p", { children: ["Previously downloaded copies and platform recovery history are handled separately under the participant information. Contact ", (0, jsx_runtime_1.jsx)("a", { href: `mailto:${contact}`, children: contact }), " with your code for any question or deletion request."] }), (0, jsx_runtime_1.jsx)("div", { className: "ps-actions", children: (0, jsx_runtime_1.jsx)(Button, { onClick: () => (0, client_mjs_1.downloadJSON)(receipt, `PoliticalMirror_withdrawal_${receipt.participantCode}.json`), children: "Download deletion receipt" }) }), (0, jsx_runtime_1.jsx)("p", { children: "You may close this page. Returning on the same browser shows this receipt, not your deleted answers." })] });
-}
-function PilotApp({ client: suppliedClient }) {
-    const clientRef = (0, react_1.useRef)(suppliedClient || new client_mjs_1.StudyClient());
-    const client = clientRef.current;
-    const [config, setConfig] = (0, react_1.useState)(null), [state, setState] = (0, react_1.useState)(null);
-    const [busy, setBusy] = (0, react_1.useState)(false), [error, setError] = (0, react_1.useState)(null), [paused, setPaused] = (0, react_1.useState)(false), [stopping, setStopping] = (0, react_1.useState)(false), [notice, setNotice] = (0, react_1.useState)(null);
-    const [removalReceipt, setRemovalReceipt] = (0, react_1.useState)(null);
-    const [booted, setBooted] = (0, react_1.useState)(false), [resumeKey, setResumeKey] = (0, react_1.useState)(0), [preConsent, setPreConsent] = (0, react_1.useState)(false);
-    const stateRef = (0, react_1.useRef)(null), configRef = (0, react_1.useRef)(null), processing = (0, react_1.useRef)(false), errorQueue = (0, react_1.useRef)([]);
-    // Server journal sequence proves ordering; local clocks supply descriptive times.
-    const now = () => new Date().toISOString();
-    const publish = value => { stateRef.current = value; setState(value); };
-    const showError = cause => {
-        const value = cause instanceof Error ? cause : new Error(cause?.message || String(cause));
-        const issue = { message: value.message, code: value.code || cause?.code || 'CLIENT_ERROR', at: now() };
-        errorQueue.current.push(issue);
-        try {
-            client.recordError(issue);
-        }
-        catch { /* A full/unavailable local store is itself shown to the participant. */ }
-        setError(value);
-        setBusy(false);
-        processing.current = false;
-    };
-    const persist = async (next) => {
-        (0, study_mjs_1.validateStudyState)(next);
-        const ack = await client.checkpoint(next);
-        publish(next);
-        return ack;
-    };
-    const task = async (fn) => {
-        if (processing.current)
-            return;
-        processing.current = true;
-        setBusy(true);
-        setError(null);
-        try {
-            return await fn();
-        }
-        catch (cause) {
-            showError(cause);
-            return undefined;
-        }
-        finally {
-            processing.current = false;
-            setBusy(false);
-        }
-    };
-    const transition = mutate => task(() => persist(mutate(stateRef.current, now())));
-    const loadConfig = async () => {
-        const value = await client.config();
-        if (value.studyVersion !== build_info_json_1.default.studyVersion)
-            throw new Error('The server and study page use different study versions. Contact the researcher before continuing.');
-        configRef.current = value;
-        setConfig(value);
-        return value;
-    };
-    (0, react_1.useEffect)(() => { task(async () => { const receipt = client.withdrawalReceipt(); if (receipt) {
-        setRemovalReceipt(receipt);
-        setBooted(true);
-        return;
-    } await loadConfig(); setBooted(true); }); }, []);
-    const start = () => task(async () => {
-        const freshConfig = await loadConfig();
-        if (!freshConfig.allowedNewEnroll && !client.hasEnrollment())
-            throw new Error('Enrollment is currently closed. Please contact the researcher.');
-        setPreConsent(true);
-    });
-    const [declined, setDeclined] = (0, react_1.useState)(false), [consentNotice, setConsentNotice] = (0, react_1.useState)(null);
-    const testSession = config?.collectionMode === 'TEST';
-    const enrollWithConsent = answers => task(async () => {
-        if (answers === null) {
-            setPreConsent(false);
-            setDeclined(true);
-            return;
-        }
-        if (!consent_validator_mjs_1.CONSENT_CONFIRMATIONS.every((k) => answers[k] === true) || answers.eligible !== true)
-            throw new Error('All four confirmations are required to take part.');
-        const seenMode = configRef.current?.collectionMode;
-        const freshConfig = await loadConfig();
-        if (freshConfig.collectionMode !== seenMode) {
-            setConsentNotice('The site changed between testing and recruitment. Please read the information and confirm again.');
-            return;
-        }
-        if (freshConfig.consentTextSha256 !== answers.consentTextSha256) {
-            setConsentNotice('The participant information was updated while you were reading it. Please read the current version and confirm again.');
-            return;
-        }
-        if (!freshConfig.allowedNewEnroll && !client.hasEnrollment())
-            throw new Error('Enrollment is currently closed. Please contact the researcher.');
-        let record;
-        try {
-            record = await client.enroll({ consent: answers, collectionMode: freshConfig.collectionMode });
-        }
-        catch (e) {
-            if (['CONSENT_CONFIG_MISMATCH', 'COLLECTION_MODE_CHANGED'].includes(e.code)) {
-                client.clearEnrollment();
-                await loadConfig();
-                setConsentNotice('The participant information was updated while you were reading it. Please read the current version and confirm again.');
-                return;
-            }
-            throw e;
-        }
-        const initial = (0, study_mjs_1.consentStudy)((0, study_mjs_1.createStudy)({ sessionId: record.sessionId, assignment: record.assignment, coreGame: build_info_json_1.default, now: now() }), consentAnswersFrom(record.consent), now(), { at: record.consent.at });
-        await persist(initial);
-        setConsentNotice(null);
-        setPreConsent(false);
-        setBooted(true);
-    });
-    const acceptRemoval = receipt => { publish(null); setRemovalReceipt(receipt); setPaused(false); setStopping(false); setPreConsent(false); setNotice(null); setBooted(true); errorQueue.current = []; };
-    const stopAndDelete = () => task(async () => acceptRemoval(await client.withdraw()));
-    (0, react_1.useEffect)(() => { const onStorage = e => { if (e.key === client_mjs_1.WITHDRAWAL_RECEIPT_KEY) {
-        const receipt = client.withdrawalReceipt();
-        if (receipt) {
-            setError(null);
-            acceptRemoval(receipt);
-        }
-    } }; globalThis.addEventListener?.('storage', onStorage); return () => globalThis.removeEventListener?.('storage', onStorage); }, []);
-    const resume = () => task(async () => {
-        if (client.withdrawalReceipt()) {
-            acceptRemoval(client.withdrawalReceipt());
-            return;
-        }
-        if (client.withdrawalPending()) {
-            acceptRemoval(await client.withdraw());
-            return;
-        }
-        await loadConfig();
-        if (!client.hasSession()) {
-            if (client.hasEnrollment()) {
-                const enrolled = await client.enroll();
-                await persist((0, study_mjs_1.consentStudy)((0, study_mjs_1.createStudy)({ sessionId: enrolled.sessionId, assignment: enrolled.assignment, coreGame: build_info_json_1.default, now: now() }), consentAnswersFrom(enrolled.consent), now(), { at: enrolled.consent.at }));
-            }
-            else {
-                setBooted(true);
-                return;
-            }
-        }
-        let record;
-        try {
-            record = await client.recover();
-        }
-        catch (e) {
-            if (e.code === 'SESSION_REMOVED') {
-                acceptRemoval(await client.withdraw());
-                return;
-            }
-            throw e;
-        }
-        setNotice(record.recoveryNotice || null);
-        let next = record.checkpoint;
-        if (!next) {
-            next = (0, study_mjs_1.consentStudy)((0, study_mjs_1.createStudy)({ sessionId: client.credentials().sessionId, assignment: record.assignment, coreGame: build_info_json_1.default, now: now() }), consentAnswersFrom(record.consent), now(), { at: record.consent.at });
-            await persist(next);
-        }
-        else {
-            (0, study_mjs_1.validateStudyState)(next);
-            publish(next);
-        }
-        if (next.stage === 'PREDICTION' && record.prediction) {
-            next = (0, study_mjs_1.attachPrediction)(next, record.prediction, record.predictionReceipt, now());
-            await persist(next);
-        }
-        // Recovery writes append audit history only; the server remains authoritative.
-        if (!['COMPLETE', 'WITHDRAWN'].includes(next.stage)) {
-            next = (0, study_mjs_1.markResume)(next, now());
-            let issues = errorQueue.current;
-            try {
-                issues = client.errors();
-            }
-            catch { /* In-memory copy still permits recovery. */ }
-            for (const issue of issues)
-                next = (0, study_mjs_1.recordTechnicalError)(next, issue, issue.at);
-            await persist(next);
-            errorQueue.current = [];
-            client.clearErrors();
-        }
-        publish(next);
-        setResumeKey(key => key + 1);
-        setPaused(false);
-        setStopping(false);
-        setBooted(true);
-    });
-    (0, react_1.useEffect)(() => {
-        if (!state || busy || error || paused || processing.current)
-            return;
-        if (['T0', 'T1', 'T2'].includes(state.stage) && !state.presentation) {
-            task(() => persist((0, study_mjs_1.presentItem)(stateRef.current, now())));
-        }
-        else if (state.stage === 'PREDICTION') {
-            task(async () => {
-                const current = stateRef.current;
-                // Deliberately enumerate inputs: no T1/T2 response object reaches the model.
-                // The actor-only context is projected from the saved public transcript by the same
-                // function the collector runs after its own replay; private reads never reach M3.
-                const actorContext = (0, actor_context_mjs_1.extractPublicDecisionContext)(current.game.spec, current.game.transcript);
-                const prediction = (0, prediction_mjs_1.buildPredictionCommit)({
-                    participantId: current.participantId, sessionId: current.sessionId,
-                    coreState: current.game.canonicalState, t0: current.responses.T0,
-                    form: (0, study_mjs_1.formFor)(current, 'T1'), studyVersion: current.studyVersion,
-                    coreHash: current.coreGame.buildHash, timestamp: now(), actorContext,
-                });
-                const ack = await client.prediction(prediction);
-                // Persist the receipt and transition before any holdout item can render.
-                await persist((0, study_mjs_1.attachPrediction)(current, prediction, ack.predictionReceipt, now()));
-            });
-        }
-    }, [state, busy, error, paused]);
-    const saveGame = async (snapshot) => {
-        setBusy(true);
-        try {
-            await persist((0, study_mjs_1.checkpointGame)(stateRef.current, snapshot, now()));
-        }
-        catch (cause) {
-            showError(cause);
-            throw cause;
-        }
-        finally {
-            setBusy(false);
-        }
-    };
-    const endGame = async (snapshot) => {
-        setBusy(true);
-        try {
-            await persist((0, study_mjs_1.completeGame)(stateRef.current, snapshot, now()));
-        }
-        catch (cause) {
-            showError(cause);
-            throw cause;
-        }
-        finally {
-            setBusy(false);
-        }
-    };
-    const endMirror = async (snapshot) => {
-        setBusy(true);
-        try {
-            await persist((0, study_mjs_1.finishMirror)(stateRef.current, snapshot, now()));
-        }
-        catch (cause) {
-            showError(cause);
-            throw cause;
-        }
-        finally {
-            setBusy(false);
-        }
-    };
-    const endSurvey = async ({ answers, snapshot }) => {
-        setBusy(true);
-        try {
-            await persist((0, study_mjs_1.finishSurvey)(stateRef.current, answers, snapshot, now()));
-        }
-        catch (cause) {
-            showError(cause);
-            throw cause;
-        }
-        finally {
-            setBusy(false);
-        }
-    };
-    const download = () => task(async () => {
-        const exported = await client.researchExport();
-        (0, client_mjs_1.downloadJSON)(exported, `PoliticalMirror_Pilot_${stateRef.current.sessionId}.json`);
-    });
-    let savedSession = false, pendingEnrollment = false;
-    try {
-        savedSession = client.hasSession();
-        pendingEnrollment = client.hasEnrollment();
-    }
-    catch { /* handled on explicit recovery */ }
-    const active = state && !['COMPLETE', 'WITHDRAWN'].includes(state.stage);
-    const contact = config?.contactEmail || CONTACT;
-    const blockers = config?.enrollmentBlockers || [];
-    if (removalReceipt)
-        return (0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)("style", { children: CSS }), (0, jsx_runtime_1.jsx)(RemovalReceipt, { receipt: removalReceipt, contact: contact })] });
-    return (0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)("style", { children: CSS }), (0, jsx_runtime_1.jsxs)("header", { className: "ps-head", children: [(0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)("strong", { children: "Political Mirror" }), (0, jsx_runtime_1.jsxs)("div", { className: "ps-meta", children: ["A research study \u00B7 v", study_mjs_1.STUDY_VERSION] })] }), active && (0, jsx_runtime_1.jsxs)("div", { className: "ps-actions", style: { margin: 0 }, children: [(0, jsx_runtime_1.jsx)(Button, { secondary: true, disabled: busy, onClick: () => setPaused(true), children: "Pause" }), (0, jsx_runtime_1.jsx)(Button, { secondary: true, disabled: busy, onClick: () => setStopping(true), children: "Stop participation" })] })] }), (state?.assignment?.test === true || (!state && testSession)) && (0, jsx_runtime_1.jsx)("div", { role: "status", className: "ps-wrap", style: { paddingBottom: 0 }, children: (0, jsx_runtime_1.jsx)("p", { className: "ps-code", children: "TEST MODE \u2014 stored as test data, excluded from the 20-person pilot. \u6E2C\u8A66\u6A21\u5F0F\uFF1A\u4E0D\u8A08\u5165\u6B63\u5F0F\u6536\u6848\u3002" }) }), notice && (0, jsx_runtime_1.jsx)("div", { role: "status", className: "ps-wrap", style: { paddingBottom: 0 }, children: (0, jsx_runtime_1.jsxs)("div", { className: "ps-card", children: [(0, jsx_runtime_1.jsx)("p", { children: notice }), (0, jsx_runtime_1.jsx)(Button, { secondary: true, onClick: () => setNotice(null), children: "I understand" })] }) }), !state && !preConsent && !declined && (0, jsx_runtime_1.jsxs)("main", { className: "ps-wrap", children: [(0, jsx_runtime_1.jsx)("div", { className: "ps-progress", children: "Welcome" }), (0, jsx_runtime_1.jsx)("h1", { children: "Step into public life." }), (0, jsx_runtime_1.jsx)("p", { children: "Play a fictional political career and consider how you would judge other people in office." }), !booted ? (0, jsx_runtime_1.jsx)("p", { role: "status", children: "Connecting to the study\u2026" }) : savedSession ? (0, jsx_runtime_1.jsxs)("div", { className: "ps-card", children: [(0, jsx_runtime_1.jsx)("h2", { children: "Your previous session is saved." }), (0, jsx_runtime_1.jsx)("p", { children: "Continue on this browser to keep your answers and place in the study." }), (0, jsx_runtime_1.jsx)(Button, { disabled: busy, onClick: resume, children: "Continue previous session" })] }) : pendingEnrollment ? (0, jsx_runtime_1.jsxs)("div", { className: "ps-card", children: [(0, jsx_runtime_1.jsx)("p", { children: "Your previous enrollment needs confirmation." }), (0, jsx_runtime_1.jsx)(Button, { disabled: busy, onClick: resume, children: "Recover enrollment" })] }) : (0, jsx_runtime_1.jsxs)("div", { className: "ps-actions", children: [(0, jsx_runtime_1.jsx)(Button, { disabled: busy || !config?.allowedNewEnroll, onClick: start, children: "Read participation information" }), !config?.allowedNewEnroll && (0, jsx_runtime_1.jsx)("p", { children: blockers.length ? 'This study is not yet open for participation.' : 'Enrollment is currently closed.' }), blockers.length > 0 && (0, jsx_runtime_1.jsxs)("p", { className: "ps-code", role: "alert", children: ["Researcher configuration incomplete: ", blockers.join(', ')] })] }), config?.qaModeWithoutEthicsApproval && (0, jsx_runtime_1.jsx)("p", { className: "ps-code", role: "alert", children: "Technical test mode: this collector runs without an ethics approval reference and must not be used with human participants." }), (0, jsx_runtime_1.jsxs)("p", { className: "ps-meta", children: ["Questions? ", (0, jsx_runtime_1.jsx)("a", { href: `mailto:${contact}`, children: contact })] })] }), !state && preConsent && (0, jsx_runtime_1.jsx)(Consent, { config: config, busy: busy, notice: consentNotice, testSession: testSession, onSubmit: enrollWithConsent }), !state && declined && (0, jsx_runtime_1.jsxs)("main", { className: "ps-wrap", children: [(0, jsx_runtime_1.jsx)("div", { className: "ps-progress", children: "Not participating" }), (0, jsx_runtime_1.jsx)("h1", { children: "Thank you for considering the study." }), (0, jsx_runtime_1.jsx)("p", { children: "No study session was created and nothing was recorded. You may close this page." })] }), state && ['T0', 'T1', 'T2'].includes(state.stage) && (0, jsx_runtime_1.jsx)(Measurement, { state: state, busy: busy, onAnswer: answer => transition((s, at) => (0, study_mjs_1.answerItem)(s, answer, at)) }, `${state.stage}:${state.responses[state.stage].length}`), state && ['GAME', 'MIRROR', 'SURVEY'].includes(state.stage) && !error && (0, jsx_runtime_1.jsx)(game_ui_jsx_1.default, { study: { sessionId: state.sessionId, arm: state.assignment.arm, gameSnapshot: state.game, stage: state.stage }, onCheckpoint: saveGame, onGameplayComplete: endGame, onMirrorComplete: endMirror, onSurveyComplete: endSurvey, onError: showError }, `${resumeKey}:${state.stage}`), state?.stage === 'PREDICTION' && (0, jsx_runtime_1.jsxs)("main", { className: "ps-wrap", children: [(0, jsx_runtime_1.jsx)("h1", { children: "Your career is complete." }), (0, jsx_runtime_1.jsx)("p", { role: "status", children: "Saving your study record before the next set of cases\u2026" })] }), state?.stage === 'DEBRIEF' && (0, jsx_runtime_1.jsx)(Debrief, { state: state, busy: busy, contact: contact, onFinish: () => transition((s, at) => (0, study_mjs_1.completeStudy)(s, at)) }), state?.stage === 'COMPLETE' && (0, jsx_runtime_1.jsxs)("main", { className: "ps-wrap", children: [(0, jsx_runtime_1.jsx)("div", { className: "ps-progress", children: "Study complete" }), (0, jsx_runtime_1.jsx)("h1", { children: "Your responses have been saved." }), (0, jsx_runtime_1.jsx)("p", { children: "Thank you. You may close this page." }), (0, jsx_runtime_1.jsxs)("p", { className: "ps-code", children: ["Session: ", state.sessionId] }), (0, jsx_runtime_1.jsx)("div", { className: "ps-actions", children: (0, jsx_runtime_1.jsx)(Button, { disabled: busy, onClick: download, children: "Download my study record" }) }), (0, jsx_runtime_1.jsxs)("p", { children: ["Contact: ", (0, jsx_runtime_1.jsx)("a", { href: `mailto:${contact}`, children: contact })] })] }), state?.stage === 'WITHDRAWN' && state.withdrawal?.sawFeedback && (0, jsx_runtime_1.jsx)(Debrief, { state: state, busy: busy, contact: contact, withdrawn: true, onDownload: download }), state?.stage === 'WITHDRAWN' && !state.withdrawal?.sawFeedback && (0, jsx_runtime_1.jsxs)("main", { className: "ps-wrap", children: [(0, jsx_runtime_1.jsx)("div", { className: "ps-progress", children: "Participation stopped" }), (0, jsx_runtime_1.jsx)("h1", { children: "You have left the study." }), (0, jsx_runtime_1.jsx)("p", { children: "You stopped before any feedback about your play was shown, so there is no feedback to explain. For your information: participants who continue are randomly assigned to one of two feedback packages \u2014 one calculated from the participant\u2019s own recorded choices, the other a fixed comparison profile \u2014 and are told which they received at the end. Neither package is a validated psychological assessment." }), (0, jsx_runtime_1.jsxs)("p", { children: ["No further activities are required. Use the withdrawal confirmation below to delete the submitted research record", state.withdrawal?.dataRemovalRequested ? '; your removal request has been recorded and the researcher will follow the stated procedure' : '', ". Contact the researcher with your session ID if you have questions."] }), (0, jsx_runtime_1.jsxs)("p", { className: "ps-code", children: ["Session: ", state.sessionId] }), (0, jsx_runtime_1.jsx)("div", { className: "ps-actions", children: (0, jsx_runtime_1.jsx)(Button, { disabled: busy, onClick: download, children: "Download my study record" }) }), (0, jsx_runtime_1.jsxs)("p", { children: ["Contact: ", (0, jsx_runtime_1.jsx)("a", { href: `mailto:${contact}`, children: contact })] })] }), busy && !error && (0, jsx_runtime_1.jsx)("div", { className: "ps-save", role: "status", children: "Saving \u2014 please wait\u2026" }), paused && !error && (0, jsx_runtime_1.jsx)("div", { className: "ps-screen", role: "dialog", "aria-modal": "true", "aria-labelledby": "pause-title", children: (0, jsx_runtime_1.jsxs)("div", { className: "ps-dialog", children: [(0, jsx_runtime_1.jsx)("h2", { id: "pause-title", children: "Your last completed step is saved." }), (0, jsx_runtime_1.jsx)("p", { children: "You can close this page and return on the same browser. Unsubmitted answers on the current case are not saved. Do not clear this browser\u2019s stored site data." }), (0, jsx_runtime_1.jsxs)("p", { className: "ps-code", children: ["Session: ", state?.sessionId] }), (0, jsx_runtime_1.jsx)(Button, { onClick: () => setPaused(false), children: "Continue study" })] }) }), stopping && !error && (0, jsx_runtime_1.jsx)("div", { className: "ps-screen", role: "dialog", "aria-modal": "true", "aria-labelledby": "stop-title", children: (0, jsx_runtime_1.jsxs)("div", { className: "ps-dialog", children: [(0, jsx_runtime_1.jsx)("h2", { id: "stop-title", children: "Stop and delete your study data?" }), (0, jsx_runtime_1.jsx)("p", { children: "Confirming ends your participation and requests deletion of all submitted answers, game records, predictions and questionnaire from the active study database. This cannot be undone. Deletion is complete only after the server confirms it; if the connection fails, please retry or email the researcher with your session code. A minimal withdrawal record and debrief receipt remain. For a temporary break, choose Pause instead." }), (0, jsx_runtime_1.jsxs)("div", { className: "ps-actions", children: [(0, jsx_runtime_1.jsx)(Button, { disabled: busy, onClick: stopAndDelete, children: "Stop participation and delete my data" }), (0, jsx_runtime_1.jsx)(Button, { secondary: true, disabled: busy, onClick: () => setStopping(false), children: "Keep participating" })] })] }) }), error && (0, jsx_runtime_1.jsx)("div", { className: "ps-screen", role: "alertdialog", "aria-modal": "true", "aria-labelledby": "error-title", children: (0, jsx_runtime_1.jsxs)("div", { className: "ps-dialog", children: [(0, jsx_runtime_1.jsx)("h2", { id: "error-title", children: "This step needs attention." }), (0, jsx_runtime_1.jsx)("p", { className: "ps-error", children: error.message }), (0, jsx_runtime_1.jsx)("p", { children: "Your session will resume from the latest confirmed save. Please do not create another session." }), error.code && (0, jsx_runtime_1.jsxs)("p", { className: "ps-code", children: ["Reference: ", error.code] }), (0, jsx_runtime_1.jsx)("div", { className: "ps-actions", children: (0, jsx_runtime_1.jsx)(Button, { disabled: busy, onClick: resume, children: "Retry / resume" }) }), (0, jsx_runtime_1.jsxs)("p", { className: "ps-meta", children: ["If this continues, contact ", (0, jsx_runtime_1.jsx)("a", { href: `mailto:${contact}`, children: contact }), state?.sessionId ? ` with session ${state.sessionId}` : '', "."] })] }) })] });
-}
+  // pilot/browser.jsx
+  var import_react4 = __toESM(require_react(), 1);
+  var import_client2 = __toESM(require_client(), 1);
 
-}],
-"pilot/game-ui.jsx": [{"react":"@vendor/react","../src/abilities.mjs":"src/abilities.mjs","../src/engine.mjs":"src/engine.mjs","../src/content.mjs":"src/content.mjs","../src/game-session.mjs":"src/game-session.mjs","../src/playtest.mjs":"src/playtest.mjs","../src/ui-theme.mjs":"src/ui-theme.mjs","react/jsx-runtime":"@vendor/react/jsx-runtime"},function(module,exports,require){
-"use strict";
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || (function () {
-    var ownKeys = function(o) {
-        ownKeys = Object.getOwnPropertyNames || function (o) {
-            var ar = [];
-            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
-            return ar;
-        };
-        return ownKeys(o);
-    };
-    return function (mod) {
-        if (mod && mod.__esModule) return mod;
-        var result = {};
-        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
-        __setModuleDefault(result, mod);
-        return result;
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.default = PoliticalMirrorStudy;
-const jsx_runtime_1 = require("react/jsx-runtime");
-const react_1 = __importStar(require("react"));
-const abilities_mjs_1 = require("../src/abilities.mjs");
-const engine_mjs_1 = require("../src/engine.mjs");
-const content_mjs_1 = require("../src/content.mjs");
-const game_session_mjs_1 = require("../src/game-session.mjs");
-const playtest_mjs_1 = require("../src/playtest.mjs");
-const ui_theme_mjs_1 = require("../src/ui-theme.mjs");
-// ─── Presentation layer ("The Record") ──────────────────────────────────────
-// This file renders the current canonical interaction and dispatches canonical
-// actions. It owns no progression: it does not evaluate beat conditions, decide read
-// eligibility, apply events, run elections, age the electorate or mutate gameplay in
-// an effect. Visual tokens live in static/index.html; shared style objects live in
-// ./ui-theme.mjs.
-//
-// Study-only presentation boundary; see pilot-docs/GAME_ADAPTER.md.
-// Frozen gameplay labels/actions are retained. Participant title/seed/debug/save controls
-// are removed, and the career-summary VIEW_MIRROR action is labelled Continue because
-// the study presents T1 before the Mirror. The baseline DOM harness remains unmodified;
-// pilot-tests/game-adapter.test.mjs exercises this additive adapter through rendered UI.
-const pct = (value) => `${Math.round(value * 100)}%`;
-const pp = (value) => `${Math.abs(value * 100).toFixed(1)} pp`;
-const deepClone = (value) => structuredClone(value);
-const confidenceWord = (precision) => (precision < 0.7 ? 'low' : precision < 1.4 ? 'forming' : 'settled');
-const startingWord = (value) => (value >= 52 ? 'Strength' : value >= 44 ? 'Developing' : 'Weakness');
-const startingNotches = (value) => (value >= 57 ? 5 : value >= 52 ? 4 : value >= 47 ? 3 : value >= 44 ? 2 : 1);
-// ─── Primitives ─────────────────────────────────────────────────────────────
-function Kicker({ children, gold = false, size = 11 }) {
-    return (0, jsx_runtime_1.jsx)("div", { className: `pm-kicker${gold ? ' pm-kicker-gold' : ''}`, style: size === 11 ? undefined : { fontSize: size }, children: children });
-}
-// A phase names itself: left is the document, right is the aside. `mark` draws the
-// gold on-the-record dot that answers the Private Read's seal.
-function DocLabel({ document: doc, aside, mark = false, gold = false }) {
-    return (0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', alignItems: 'center', gap: 14 }, children: [(0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', alignItems: 'center', gap: 9 }, children: [mark && (0, jsx_runtime_1.jsx)("span", { className: "pm-dot", style: { background: ui_theme_mjs_1.T.gold, width: 7, height: 7 } }), (0, jsx_runtime_1.jsx)("span", { className: `pm-kicker${gold ? ' pm-kicker-gold' : ''}`, style: { letterSpacing: '.22em' }, children: doc })] }), (0, jsx_runtime_1.jsx)("div", { style: { flex: 1, ...ui_theme_mjs_1.hairline } }), aside && (0, jsx_runtime_1.jsx)("span", { className: "pm-kicker", children: aside })] });
-}
-function Fig({ label, value, sub, size = 17, tone }) {
-    return (0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.column)(2), children: [(0, jsx_runtime_1.jsx)("div", { className: "pm-kicker", style: { fontSize: 10, letterSpacing: '.14em' }, children: label }), (0, jsx_runtime_1.jsx)("div", { className: "pm-tnum", style: { fontSize: size, lineHeight: 1.1, color: tone || ui_theme_mjs_1.T.ink }, children: value }), sub && (0, jsx_runtime_1.jsx)("div", { style: { fontSize: 11, color: ui_theme_mjs_1.T.ink3 }, children: sub })] });
-}
-function Gauge({ value, tone = ui_theme_mjs_1.T.ink, height = 3 }) {
-    return (0, jsx_runtime_1.jsx)("div", { style: { background: 'var(--pm-inset)', height, borderRadius: height }, children: (0, jsx_runtime_1.jsx)("div", { style: { width: `${Math.max(0, Math.min(100, value * 100))}%`, background: tone,
-                height, borderRadius: height, transition: 'width .4s' } }) });
-}
-function Option({ children, onClick, disabled = false, selected = false, meta }) {
-    return (0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)("button", { type: "button", className: `pm-opt${selected ? ' pm-opt-selected' : ''}`, disabled: disabled, style: disabled ? { opacity: .45, cursor: 'default' } : undefined, onClick: disabled ? undefined : onClick, children: children }), meta && (0, jsx_runtime_1.jsx)("div", { className: "pm-opt-meta", children: meta })] });
-}
-// A locked ability gate, shown as a fact about the politician rather than a refusal:
-// where you are on the 20–80 rating scale, and where the option needs you to be.
-function GateMeter({ name, value, required }) {
-    const at = (level) => `${Math.max(0, Math.min(100, ((level - 20) / 60) * 100))}%`;
-    return (0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', alignItems: 'center', gap: 10 }, children: [(0, jsx_runtime_1.jsxs)("div", { style: { flex: 1, maxWidth: 260, position: 'relative', height: 6,
-                    background: 'var(--pm-inset)', borderRadius: 3 }, children: [(0, jsx_runtime_1.jsx)("div", { style: { width: at(value), height: 6, background: ui_theme_mjs_1.T.chrome, borderRadius: 3 } }), (0, jsx_runtime_1.jsx)("div", { style: { position: 'absolute', left: at(required), top: -4, bottom: -4, width: 2,
-                            background: ui_theme_mjs_1.T.against } })] }), (0, jsx_runtime_1.jsx)("span", { style: { ...(0, ui_theme_mjs_1.label)(10), letterSpacing: '.1em', whiteSpace: 'nowrap' }, children: name })] });
-}
-// Locked options stay in place, stay focusable and say what they need — but they are
-// deliberately not buttons, so nothing can dispatch them.
-function LockedOption({ children, needs, reason, meters = [] }) {
-    return (0, jsx_runtime_1.jsxs)("div", { className: "pm-opt-locked", role: "button", tabIndex: 0, "aria-disabled": "true", children: [(0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', justifyContent: 'space-between', gap: 16, alignItems: 'flex-start' }, children: [(0, jsx_runtime_1.jsx)("div", { children: children }), (0, jsx_runtime_1.jsx)("div", { style: { ...(0, ui_theme_mjs_1.label)(10, ui_theme_mjs_1.T.against), letterSpacing: '.16em', border: '1px solid rgba(143,58,46,.45)',
-                            borderRadius: 2, padding: '4px 8px', whiteSpace: 'nowrap' }, children: "Locked" })] }), (0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', gap: 10, alignItems: 'baseline', marginTop: 10,
-                    borderTop: `1px solid ${ui_theme_mjs_1.T.hair}`, paddingTop: 10 }, children: [(0, jsx_runtime_1.jsx)("div", { style: { ...(0, ui_theme_mjs_1.label)(10), letterSpacing: '.14em', whiteSpace: 'nowrap' }, children: "Needs" }), (0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(8), flex: 1, minWidth: 0 }, children: [reason && (0, jsx_runtime_1.jsx)("div", { style: { fontSize: 13.5, lineHeight: 1.55, color: ui_theme_mjs_1.T.ink3 }, children: reason }), meters.map((meter) => (0, jsx_runtime_1.jsx)(GateMeter, { ...meter }, meter.name)), needs && (0, jsx_runtime_1.jsx)("div", { style: { fontSize: 12.5, lineHeight: 1.55, color: ui_theme_mjs_1.T.chrome }, children: needs })] })] })] });
-}
-function Cta({ children, onClick, arrow = false, block = false }) {
-    return (0, jsx_runtime_1.jsx)("button", { type: "button", onClick: onClick, className: `pm-cta${arrow ? ' pm-arrow' : ''}${block ? ' pm-cta-block' : ''}`, children: children });
-}
-function Ghost({ children, onClick }) {
-    return (0, jsx_runtime_1.jsx)("button", { type: "button", className: "pm-ghost", onClick: onClick, children: children });
-}
-function Shell({ tone, head, children }) {
-    return (0, jsx_runtime_1.jsxs)("div", { className: `pm-shell${tone ? ` ${tone}` : ''}`, children: [head, (0, jsx_runtime_1.jsx)("div", { className: "pm-body-wrap", children: children })] });
-}
-// ─── Standing head ──────────────────────────────────────────────────────────
-function StandingHead({ interaction, onProfile }) {
-    const state = interaction.publicState;
-    const beliefTone = state.belief > 0.55 ? ui_theme_mjs_1.T.favour : state.belief < 0.42 ? ui_theme_mjs_1.T.against : ui_theme_mjs_1.T.ink;
-    return (0, jsx_runtime_1.jsx)("div", { className: "pm-hud", children: (0, jsx_runtime_1.jsxs)("div", { className: "pm-hud-inner", children: [(0, jsx_runtime_1.jsxs)("div", { className: "pm-hud-row", children: [(0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', alignItems: 'baseline', gap: 12, flex: 'none',
-                                whiteSpace: 'nowrap' }, children: [(0, jsx_runtime_1.jsxs)("div", { className: "pm-num", style: { fontSize: 22, lineHeight: 1 }, children: ["Age ", state.age] }), (0, jsx_runtime_1.jsxs)("div", { className: "pm-kicker", style: { letterSpacing: '.16em' }, children: [state.office || 'no office', interaction.beat?.chapter ? ` · ${interaction.beat.chapter}` : ''] })] }), (0, jsx_runtime_1.jsx)(Ghost, { onClick: onProfile, children: "Politician profile" })] }), (0, jsx_runtime_1.jsxs)("div", { className: "pm-figs", children: [(0, jsx_runtime_1.jsx)(Fig, { label: "Approval", value: pct(state.approval), size: 16 }), (0, jsx_runtime_1.jsx)(Fig, { label: "Capital / party", value: `${state.capital} / ${state.standing}`, size: 16 }), (0, jsx_runtime_1.jsx)(Fig, { label: "Funds", value: state.funds, size: 16 }), (0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(5), flex: '1 1 210px', maxWidth: 340, minWidth: 170 }, children: [(0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', justifyContent: 'space-between', gap: 8, alignItems: 'baseline' }, children: [(0, jsx_runtime_1.jsx)("span", { className: "pm-kicker", style: { fontSize: 10, letterSpacing: '.14em' }, children: "Belief in your integrity" }), (0, jsx_runtime_1.jsx)("span", { className: "pm-tnum", style: { fontSize: 11, color: ui_theme_mjs_1.T.ink3 }, children: pct(state.belief) })] }), (0, jsx_runtime_1.jsx)(Gauge, { value: state.belief, tone: beliefTone }), (0, jsx_runtime_1.jsxs)("span", { className: "pm-kicker", style: { fontSize: 10, letterSpacing: '.12em' }, children: ["Confidence ", confidenceWord(state.precision)] })] })] })] }) });
-}
-// ─── Rail ───────────────────────────────────────────────────────────────────
-function Rail({ interaction }) {
-    const state = interaction.publicState;
-    const abilities = state.abilities;
-    const ordered = abilities_mjs_1.ABILITIES.slice().sort((a, b) => abilities.value[b.id] - abilities.value[a.id]);
-    return (0, jsx_runtime_1.jsxs)("div", { className: "pm-rail", children: [(0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.column)(9), children: [(0, jsx_runtime_1.jsx)(Kicker, { children: "Your hand" }), (0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.ruledRow)(), children: [(0, jsx_runtime_1.jsx)("span", { style: { fontSize: 14 }, children: "Political capital" }), (0, jsx_runtime_1.jsx)("b", { className: "pm-tnum", style: { fontWeight: 600 }, children: state.capital })] }), (0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.ruledRow)(), children: [(0, jsx_runtime_1.jsx)("span", { style: { fontSize: 14 }, children: "Party standing" }), (0, jsx_runtime_1.jsx)("b", { className: "pm-tnum", style: { fontWeight: 600 }, children: state.standing })] }), (0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.ruledRow)(), children: [(0, jsx_runtime_1.jsx)("span", { style: { fontSize: 14 }, children: "Funds" }), (0, jsx_runtime_1.jsx)("b", { className: "pm-tnum", style: { fontWeight: 600 }, children: state.funds })] })] }), (0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.column)(8), children: [(0, jsx_runtime_1.jsx)(Kicker, { children: "What you can execute" }), ordered.map((ability) => (0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.ruledRow)(), children: [(0, jsx_runtime_1.jsx)("span", { style: { fontSize: 13.5 }, children: ability.name }), (0, jsx_runtime_1.jsx)("span", { style: { ...(0, ui_theme_mjs_1.label)(11, ui_theme_mjs_1.T.ink3), letterSpacing: '.1em', whiteSpace: 'nowrap' }, children: (0, abilities_mjs_1.tierOf)(abilities.value[ability.id]) })] }, ability.id)), (0, jsx_runtime_1.jsx)("div", { style: { fontSize: 12, lineHeight: 1.55, color: ui_theme_mjs_1.T.ink3 }, children: "Words, not numbers. Exact ratings are in the profile; how far each one can still grow is never shown." })] })] });
-}
-// ─── Profile panel ──────────────────────────────────────────────────────────
-function Profile({ abilities, age, onClose }) {
-    return (0, jsx_runtime_1.jsx)("div", { className: "pm-dialog-backdrop", role: "dialog", "aria-modal": "true", "aria-label": "Politician profile", children: (0, jsx_runtime_1.jsxs)("div", { className: "pm-dialog", children: [(0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 20,
-                        borderBottom: `1px solid ${ui_theme_mjs_1.T.rule}`, paddingBottom: 16 }, children: [(0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.column)(6), children: [(0, jsx_runtime_1.jsxs)(Kicker, { children: [age ? `Age ${age} · ` : '', "What you can execute"] }), (0, jsx_runtime_1.jsx)("h2", { className: "pm-h2", style: { fontSize: 32 }, children: "Politician profile" })] }), (0, jsx_runtime_1.jsx)(Ghost, { onClick: onClose, children: "Close profile" })] }), (0, jsx_runtime_1.jsx)("div", { style: { ...(0, ui_theme_mjs_1.column)(14), marginTop: 18 }, children: abilities_mjs_1.ABILITIES.map((ability) => {
-                        const value = abilities.value[ability.id];
-                        return (0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(5), borderBottom: `1px solid ${ui_theme_mjs_1.T.hair}`,
-                                paddingBottom: 14 }, children: [(0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 14 }, children: [(0, jsx_runtime_1.jsx)("div", { style: { fontSize: 16.5, fontWeight: 600 }, children: ability.name }), (0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', alignItems: 'baseline', gap: 9 }, children: [(0, jsx_runtime_1.jsx)("span", { className: "pm-num", style: { fontSize: 25, lineHeight: 1 }, children: value }), (0, jsx_runtime_1.jsx)("span", { style: { ...(0, ui_theme_mjs_1.label)(11, ui_theme_mjs_1.T.goldInk), letterSpacing: '.14em' }, children: (0, abilities_mjs_1.tierOf)(value) })] })] }), (0, jsx_runtime_1.jsx)("p", { style: { margin: 0, fontSize: 13, lineHeight: 1.6, color: ui_theme_mjs_1.T.ink3 }, children: ability.does }), (0, jsx_runtime_1.jsx)("p", { style: { margin: 0, fontSize: 13.5, lineHeight: 1.6, fontStyle: 'italic' }, children: (0, abilities_mjs_1.growthHint)(abilities, ability.id) })] }, ability.id);
-                    }) }), (0, jsx_runtime_1.jsx)("div", { style: { fontSize: 12, lineHeight: 1.6, color: ui_theme_mjs_1.T.ink3, marginTop: 16 }, children: "Numbers appear here and nowhere else in the loop." })] }) });
-}
-// ─── Private Read ───────────────────────────────────────────────────────────
-// The only inverted screen in the game. It is presentation and pacing only: the same
-// phase, the same single action, no timer, no acknowledgement step, no extra state.
-// The rail is withheld so nothing competes with the question. Research identifiers and
-// canonical hashes remain in telemetry and the read-only QA API, not participant text.
-function PrivateRead({ interaction, beat, session, onSubmit }) {
-    return (0, jsx_runtime_1.jsxs)("div", { className: "pm-solo pm-solo-pad", children: [(0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', alignItems: 'center', gap: 14 }, children: [(0, jsx_runtime_1.jsx)("span", { className: "pm-seal", children: "Off the record" }), (0, jsx_runtime_1.jsx)("div", { style: { flex: 1, height: 1, background: 'var(--pm-gold-tint-2)' } }), (0, jsx_runtime_1.jsx)("span", { className: "pm-kicker pm-narrow-hide", style: { letterSpacing: '.18em' }, children: "Private read" })] }), (0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.column)(16), children: [(0, jsx_runtime_1.jsx)("h2", { className: "pm-h2", children: beat.title }), (0, jsx_runtime_1.jsx)("p", { className: "pm-prose", style: { lineHeight: 1.78 }, children: beat.text })] }), (0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(18), borderTop: `1px solid ${ui_theme_mjs_1.T.rule}`, paddingTop: 24 }, children: [(0, jsx_runtime_1.jsx)("p", { className: "pm-quote", children: beat.readPrompt }), (0, jsx_runtime_1.jsx)("div", { style: (0, ui_theme_mjs_1.column)(9), children: interaction.ladder.map((text, credence) => (0, jsx_runtime_1.jsxs)("div", { className: "pm-ladder-row", children: [(0, jsx_runtime_1.jsx)("span", { "aria-hidden": "true", className: "pm-kicker pm-tnum pm-ladder-num", children: credence + 1 }), (0, jsx_runtime_1.jsx)("div", { style: { flex: 1, minWidth: 0 }, children: (0, jsx_runtime_1.jsx)(Option, { onClick: () => onSubmit(credence), children: text }) })] }, text)) }), (0, jsx_runtime_1.jsx)("div", { style: { display: 'flex', justifyContent: 'space-between', gap: 20, flexWrap: 'wrap',
-                            borderTop: `1px solid ${ui_theme_mjs_1.T.hair}`, paddingTop: 14 }, children: (0, jsx_runtime_1.jsx)("div", { style: { fontSize: 12.5, color: ui_theme_mjs_1.T.ink3, fontStyle: 'italic' }, children: "Nobody outside this room hears your answer." }) })] })] });
-}
-// ─── Reaction ───────────────────────────────────────────────────────────────
-function BlocReaction({ reaction }) {
-    if (!reaction)
-        return null;
-    const rows = Object.entries(reaction.byBloc || {})
-        .filter(([key, value]) => (reaction.blocN?.[key] || 0) > 25 && Math.abs(value) > 0.004)
-        .sort((a, b) => Math.abs(b[1]) - Math.abs(a[1])).slice(0, 6);
-    if (!rows.length)
-        return null;
-    const widest = rows.reduce((most, [, value]) => Math.max(most, Math.abs(value)), 0) || 1;
-    return (0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(4), borderTop: `1px solid ${ui_theme_mjs_1.T.rule}`, marginTop: 14, paddingTop: 12 }, children: [(0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 12 }, children: [(0, jsx_runtime_1.jsx)(Kicker, { children: "Who moved" }), (0, jsx_runtime_1.jsx)("span", { className: "pm-narrow-hide", style: { fontSize: 11, color: ui_theme_mjs_1.T.ink3 }, children: "\u2190 toward you \u00B7 away from you \u2192" })] }), rows.map(([key, value]) => {
-                const tone = (0, ui_theme_mjs_1.movementTone)(value);
-                const width = `${(Math.abs(value) / widest) * 48}%`;
-                const fill = `color-mix(in srgb, ${tone} 20%, transparent)`;
-                return (0, jsx_runtime_1.jsxs)("div", { className: "pm-bloc-row", children: [(0, jsx_runtime_1.jsx)("div", { style: { fontSize: 14.5, lineHeight: 1.35 }, children: engine_mjs_1.BLOC_LABELS[key] || key }), (0, jsx_runtime_1.jsxs)("div", { className: "pm-bloc-bar", "aria-hidden": "true", children: [(0, jsx_runtime_1.jsx)("div", { className: "pm-bloc-centre" }), (0, jsx_runtime_1.jsx)("div", { className: "pm-bloc-fill", style: { width, background: fill,
-                                        border: `1px solid ${tone}`,
-                                        left: value < 0 ? '50%' : undefined, right: value > 0 ? '50%' : undefined,
-                                        borderLeft: value < 0 ? 0 : undefined, borderRight: value > 0 ? 0 : undefined } })] }), (0, jsx_runtime_1.jsxs)("div", { className: "pm-tnum", style: { textAlign: 'right', fontSize: 14, fontWeight: 600,
-                                color: tone }, children: [(0, ui_theme_mjs_1.caret)(value), " ", pp(value)] })] }, key);
-            })] });
-}
-function ReactionCard({ data, onContinue }) {
-    const reaction = data?.reaction;
-    return (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)(DocLabel, { document: "Reaction", aside: "Who moved, and how far" }), data?.title && (0, jsx_runtime_1.jsx)("h2", { className: "pm-h2", children: data.title }), data?.text && (0, jsx_runtime_1.jsx)("p", { className: "pm-prose pm-measure", children: data.text }), reaction && (0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(14), borderTop: `1px solid ${ui_theme_mjs_1.T.rule}`,
-                    borderBottom: `1px solid ${ui_theme_mjs_1.T.rule}`, padding: '18px 0' }, children: [(0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', alignItems: 'flex-end', gap: 22, flexWrap: 'wrap' }, children: [(0, jsx_runtime_1.jsx)(Fig, { label: "Belief before", value: pct(reaction.before), size: 30, tone: ui_theme_mjs_1.T.ink3 }), (0, jsx_runtime_1.jsx)(Fig, { label: "After", value: pct(reaction.after), size: 30 }), (0, jsx_runtime_1.jsx)("div", { style: { borderLeft: `3px solid ${(0, ui_theme_mjs_1.movementTone)(reaction.after - reaction.before)}`,
-                                    paddingLeft: 14 }, children: (0, jsx_runtime_1.jsx)(Fig, { label: "Movement", size: 30, tone: (0, ui_theme_mjs_1.movementTone)(reaction.after - reaction.before), value: `${(0, ui_theme_mjs_1.caret)(reaction.after - reaction.before)} ${pp(reaction.after - reaction.before)}` }) }), (0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(6), marginLeft: 'auto', fontSize: 12.5, lineHeight: 1.5,
-                                    color: ui_theme_mjs_1.T.ink3, textAlign: 'right' }, children: [(0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsx)("b", { className: "pm-tnum", style: { fontWeight: 600 }, children: pct(reaction.exposedPct) }), " of voters heard about it"] }), (0, jsx_runtime_1.jsxs)("div", { children: ["of those, ", (0, jsx_runtime_1.jsx)("b", { className: "pm-tnum", style: { fontWeight: 600 }, children: pct(reaction.admittedPct) }), " took it seriously"] })] })] }), (0, jsx_runtime_1.jsx)(BlocReaction, { reaction: reaction })] }), (data?.strategyNote || data?.execution) && (0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', gap: 16,
-                    flexWrap: 'wrap', alignItems: 'stretch' }, children: [data.strategyNote && (0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(5), flex: '1 1 320px',
-                            borderLeft: `3px solid ${ui_theme_mjs_1.T.ink}`, paddingLeft: 16 }, children: [(0, jsx_runtime_1.jsx)(Kicker, { children: "Your analyst" }), (0, jsx_runtime_1.jsx)("p", { style: { margin: 0, fontSize: 14.5, lineHeight: 1.65, fontStyle: 'italic' }, children: data.strategyNote })] }), data.execution && (0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.card)({ width: 200, ...(0, ui_theme_mjs_1.column)(4) }), children: [(0, jsx_runtime_1.jsx)(Kicker, { children: "Execution" }), (0, jsx_runtime_1.jsx)("div", { className: "pm-h3", style: { textTransform: 'capitalize' }, children: data.execution.grade }), (0, jsx_runtime_1.jsx)("div", { style: { fontSize: 11.5, lineHeight: 1.5, color: ui_theme_mjs_1.T.ink3 }, children: "How well you pulled it off, not whether it was right." })] })] }), (0, jsx_runtime_1.jsx)("div", { children: (0, jsx_runtime_1.jsx)(Cta, { onClick: onContinue, arrow: true, children: "Continue" }) })] });
-}
-// ─── Development ────────────────────────────────────────────────────────────
-function DevelopmentFocus({ interaction, onSubmit }) {
-    const [primary, setPrimary] = (0, react_1.useState)(null);
-    const [secondary, setSecondary] = (0, react_1.useState)(null);
-    const development = interaction.development;
-    const choose = (ability) => {
-        if (!primary)
-            setPrimary(ability);
-        else if (ability !== primary)
-            setSecondary(ability);
-    };
-    const slotOf = (ability) => (primary === ability ? 'Primary'
-        : secondary === ability ? 'Evenings' : null);
-    const named = (ability) => development.focuses.find((focus) => focus.ability === ability)?.label;
-    return (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)(DocLabel, { document: "Development", aside: "Where the next years go", gold: true }), (0, jsx_runtime_1.jsx)("h2", { className: "pm-h2", children: development.grant.reason }), (0, jsx_runtime_1.jsx)("p", { className: "pm-prose pm-measure", children: "Choose where most of the period goes. Then choose the work that fills the evenings that are left." }), (0, jsx_runtime_1.jsxs)("div", { className: "pm-slots", children: [(0, jsx_runtime_1.jsxs)("div", { style: { border: `1px ${primary ? 'solid' : 'dashed'} ${primary ? ui_theme_mjs_1.T.gold : ui_theme_mjs_1.T.rule}`,
-                            borderRadius: 4, padding: '12px 14px',
-                            background: primary ? ui_theme_mjs_1.T.goldTint : 'transparent', ...(0, ui_theme_mjs_1.column)(4) }, children: [(0, jsx_runtime_1.jsx)(Kicker, { gold: Boolean(primary), children: "Primary \u00B7 most of it" }), (0, jsx_runtime_1.jsx)("div", { className: "pm-wrap-safe", style: { fontSize: 15, fontWeight: 600,
-                                    color: primary ? ui_theme_mjs_1.T.ink : ui_theme_mjs_1.T.ink3 }, children: primary ? named(primary) : 'Choose a focus' })] }), (0, jsx_runtime_1.jsxs)("div", { style: { border: `1px ${secondary ? 'solid' : 'dashed'} ${secondary ? ui_theme_mjs_1.T.gold : ui_theme_mjs_1.T.rule}`,
-                            borderRadius: 4, padding: '12px 14px',
-                            background: secondary ? ui_theme_mjs_1.T.goldTint : 'transparent', ...(0, ui_theme_mjs_1.column)(4) }, children: [(0, jsx_runtime_1.jsx)(Kicker, { gold: Boolean(secondary), children: "Evenings \u00B7 what is left" }), (0, jsx_runtime_1.jsx)("div", { className: "pm-wrap-safe", style: { fontSize: 15, fontWeight: 600,
-                                    color: secondary ? ui_theme_mjs_1.T.ink : ui_theme_mjs_1.T.ink3 }, children: secondary ? named(secondary) : 'Choose a second' })] })] }), (0, jsx_runtime_1.jsx)("div", { style: (0, ui_theme_mjs_1.column)(10), children: development.focuses.map((focus) => {
-                    const slot = slotOf(focus.ability);
-                    const ability = abilities_mjs_1.ABILITIES.find((item) => item.id === focus.ability);
-                    return (0, jsx_runtime_1.jsxs)(Option, { onClick: () => choose(focus.ability), disabled: Boolean(secondary), selected: Boolean(slot), children: [(0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', justifyContent: 'space-between', gap: 12,
-                                    alignItems: 'baseline', flexWrap: 'wrap' }, children: [(0, jsx_runtime_1.jsx)("b", { className: "pm-wrap-safe", style: { fontWeight: 600 }, children: focus.label }), (0, jsx_runtime_1.jsx)("span", { style: { ...(0, ui_theme_mjs_1.label)(10, slot ? ui_theme_mjs_1.T.goldInk : ui_theme_mjs_1.T.chrome), letterSpacing: '.14em',
-                                            whiteSpace: 'nowrap' }, children: slot || ability?.name })] }), (0, jsx_runtime_1.jsx)("div", { style: { fontSize: 12.5, color: ui_theme_mjs_1.T.ink3, marginTop: 4, lineHeight: 1.55 }, children: focus.blurb })] }, focus.id);
-                }) }), (0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', gap: 14, alignItems: 'center', flexWrap: 'wrap' }, children: [primary && secondary && (0, jsx_runtime_1.jsx)(Cta, { onClick: () => onSubmit(primary, secondary), children: "Commit these years" }), primary && !secondary && (0, jsx_runtime_1.jsx)(Ghost, { onClick: () => setPrimary(null), children: "Choose a different primary focus" }), (0, jsx_runtime_1.jsx)("div", { style: { fontSize: 12.5, lineHeight: 1.55, color: ui_theme_mjs_1.T.ink3 }, children: "Nothing is spent until both slots are filled and you commit." })] })] });
-}
-function DevelopmentResult({ interaction, onContinue }) {
-    const record = interaction.development.result;
-    const rows = [
-        { id: record.primary, slot: 'Primary', outcome: record.result?.primary },
-        { id: record.secondary, slot: 'Evenings', outcome: record.result?.secondary },
-    ];
-    return (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)(DocLabel, { document: "Development", aside: "What came of the work", gold: true }), (0, jsx_runtime_1.jsx)("h2", { className: "pm-h2", children: record.reason }), (0, jsx_runtime_1.jsx)("div", { style: (0, ui_theme_mjs_1.column)(22), children: rows.map(({ id, slot, outcome }) => {
-                    const ability = abilities_mjs_1.ABILITIES.find((item) => item.id === id);
-                    if (!ability)
-                        return null;
-                    const before = record.before[id];
-                    const after = record.after[id];
-                    const gained = outcome?.gained ?? (after - before);
-                    const spent = outcome?.spent ?? 0;
-                    return (0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(8), borderBottom: `1px solid ${ui_theme_mjs_1.T.rule}`,
-                            paddingBottom: 16 }, children: [(0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
-                                    gap: 14, flexWrap: 'wrap' }, children: [(0, jsx_runtime_1.jsxs)(Kicker, { gold: slot === 'Primary', children: [slot, " \u00B7 ", ability.name] }), (0, jsx_runtime_1.jsx)("span", { className: "pm-kicker", style: { fontSize: 10 }, children: (0, abilities_mjs_1.tierOf)(after) })] }), (0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', alignItems: 'flex-end', gap: 20, flexWrap: 'wrap' }, children: [(0, jsx_runtime_1.jsxs)("div", { className: "pm-ledger-figs", children: [(0, jsx_runtime_1.jsx)("span", { style: { fontSize: 28, color: ui_theme_mjs_1.T.ink3 }, children: before }), (0, jsx_runtime_1.jsx)("span", { style: { fontSize: 18, color: ui_theme_mjs_1.T.chrome }, children: "\u2192" }), (0, jsx_runtime_1.jsx)("span", { style: { fontSize: 40, fontWeight: 600, lineHeight: 1 }, children: after })] }), (0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(3), paddingBottom: 4, flex: '1 1 240px' }, children: [(0, jsx_runtime_1.jsxs)("div", { className: "pm-tnum", style: { fontSize: 14, fontWeight: 600,
-                                                    color: gained > 0 ? ui_theme_mjs_1.T.favour : ui_theme_mjs_1.T.ink3 }, children: [(0, ui_theme_mjs_1.caret)(gained), " ", Math.abs(gained), " ", Math.abs(gained) === 1 ? 'point' : 'points'] }), (0, jsx_runtime_1.jsx)("div", { style: { fontSize: 14.5, fontStyle: 'italic', lineHeight: 1.55 }, children: (0, abilities_mjs_1.focusOutcomeText)(gained, spent) })] })] })] }, id);
-                }) }), (0, jsx_runtime_1.jsx)("div", { children: (0, jsx_runtime_1.jsx)(Cta, { onClick: onContinue, arrow: true, children: "Continue" }) })] });
-}
-// ─── Mirror ─────────────────────────────────────────────────────────────────
-function Cases({ cases }) {
-    if (!cases?.length)
-        return null;
-    const first = cases[0];
-    return (0, jsx_runtime_1.jsx)("div", { className: "pm-case", style: { margin: '4px 0' }, children: first.hi?.title ? (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsxs)("div", { children: ["\u201C", first.hi.title, "\u201D \u2014 you ", first.hi.said, "."] }), (0, jsx_runtime_1.jsxs)("div", { style: { marginTop: 4 }, children: ["\u201C", first.lo.title, "\u201D \u2014 you ", first.lo.said, "."] })] }) : cases.slice(0, 2).map((item, index) => (0, jsx_runtime_1.jsxs)("div", { style: { marginTop: index ? 4 : 0 }, children: ["\u201C", item.title, "\u201D \u2014 you chose: ", item.label] }, `${item.title}:${index}`)) });
-}
-function Dimension({ dimension, kind }) {
-    const none = dimension.value === null || dimension.n === 0;
-    const confidence = dimension.conf ?? 0;
-    // Unchanged from the accepted baseline: same scale expression, same sign handling.
-    const scale = kind === 'voter' && dimension.label !== 'Evidence Sensitivity'
-        ? Math.min(1, Math.abs(dimension.value ?? 0) / 0.7)
-        : Math.min(1, Math.abs((dimension.value ?? 0) + 1) / 2);
-    return (0, jsx_runtime_1.jsxs)("div", { className: "pm-dim", children: [(0, jsx_runtime_1.jsxs)("div", { className: "pm-dim-top", children: [(0, jsx_runtime_1.jsx)("b", { style: { fontSize: 16.5, fontWeight: 600, color: none ? ui_theme_mjs_1.T.ink3 : ui_theme_mjs_1.T.ink }, children: dimension.label }), (0, jsx_runtime_1.jsx)("span", { className: "pm-tnum", style: { fontSize: 12, color: none ? ui_theme_mjs_1.T.against : ui_theme_mjs_1.T.ink3 }, children: none ? 'not enough evidence' : `confidence ${pct(confidence)}` })] }), !none && (0, jsx_runtime_1.jsx)(Gauge, { value: scale, tone: confidence < 0.45 ? ui_theme_mjs_1.T.chrome : ui_theme_mjs_1.T.ink, height: 5 }), (0, jsx_runtime_1.jsx)(Cases, { cases: dimension.cases }), (0, jsx_runtime_1.jsx)("div", { style: { fontSize: 12.5, color: ui_theme_mjs_1.T.ink3, lineHeight: 1.6 }, children: none ? 'This life did not put you in enough comparable situations to say anything.'
-                    : `${dimension.n} comparable ${dimension.n === 1 ? 'observation' : 'observations'}${dimension.detail ? ` · ${dimension.detail}` : ''}` })] });
-}
-function MirrorSection({ title, aside, children }) {
-    return (0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.column)(6), children: [(0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', alignItems: 'baseline', gap: 14 }, children: [(0, jsx_runtime_1.jsx)("h3", { className: "pm-h3", children: title }), (0, jsx_runtime_1.jsx)("div", { style: { flex: 1, ...ui_theme_mjs_1.hairline } }), aside && (0, jsx_runtime_1.jsx)("span", { className: "pm-kicker", style: { fontSize: 10 }, children: aside })] }), children] });
-}
-// ─── Tester survey ──────────────────────────────────────────────────────────
-// The survey is a research instrument: every question, follow-up, response type, option,
-// scale endpoint, NA option, answer key and answer shape below is the canonical SURVEY
-// definition, unchanged. Only layout and accessibility attributes are ours.
-//
-// SurveyPick and SurveyNote MUST stay at module scope. Declaring them inside Survey()
-// gave them a new component identity on every answer update, so React unmounted and
-// remounted each control — which disconnected the live <textarea> and dropped focus to
-// <body> after a single keystroke. Module scope keeps the component type stable, so the
-// same DOM nodes persist across updates and typing is uninterrupted.
-function SurveyPick({ selected, onSelect, wide = false, children }) {
-    return (0, jsx_runtime_1.jsx)("button", { type: "button", className: `pm-pick${wide ? ' pm-pick-wide' : ''}`, "aria-pressed": selected, onClick: onSelect, children: children });
-}
-function SurveyNote({ value, onChange, placeholder }) {
-    return (0, jsx_runtime_1.jsx)("textarea", { className: "pm-textarea", rows: 2, value: value, placeholder: placeholder || '', onChange: (event) => onChange(event.target.value) });
-}
-function Survey({ answers, onChange }) {
-    const set = (id, value) => onChange({ ...answers, [id]: value });
-    let section = null;
-    return (0, jsx_runtime_1.jsx)("div", { children: playtest_mjs_1.SURVEY.map((item) => {
-            const openedSection = item.section && item.section !== section;
-            if (item.section)
-                section = item.section;
-            return (0, jsx_runtime_1.jsxs)("div", { children: [openedSection && (0, jsx_runtime_1.jsx)("div", { style: { ...(0, ui_theme_mjs_1.column)(4), borderTop: `1px solid ${ui_theme_mjs_1.T.rule}`,
-                            paddingTop: 14, marginTop: 8 }, children: (0, jsx_runtime_1.jsx)(Kicker, { children: item.section }) }), (0, jsx_runtime_1.jsxs)("div", { className: "pm-q", children: [(0, jsx_runtime_1.jsx)("div", { className: "pm-wrap-safe", style: { fontSize: 14.5, fontWeight: 600, lineHeight: 1.5 }, children: item.q }), ['scale7', 'scale7_na', 'scale7_text'].includes(item.type) && (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)("div", { className: "pm-scale", role: "group", "aria-label": item.q, children: [1, 2, 3, 4, 5, 6, 7].map((value) => (0, jsx_runtime_1.jsx)(SurveyPick, { selected: answers[item.id] === value, onSelect: () => set(item.id, value), children: value }, value)) }), (0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', justifyContent: 'space-between', gap: 12,
-                                            fontSize: 11.5, color: ui_theme_mjs_1.T.ink3, lineHeight: 1.45 }, children: [(0, jsx_runtime_1.jsx)("span", { children: item.lo }), (0, jsx_runtime_1.jsx)("span", { style: { textAlign: 'right' }, children: item.hi })] }), item.na && (0, jsx_runtime_1.jsx)(SurveyPick, { wide: true, selected: answers[item.id] === 'NA', onSelect: () => set(item.id, 'NA'), children: item.na })] }), item.type === 'scale7_text' && (0, jsx_runtime_1.jsx)(SurveyNote, { value: answers[`${item.id}_note`] || '', placeholder: item.followUp, onChange: (value) => set(`${item.id}_note`, value) }), item.type === 'choice' && (0, jsx_runtime_1.jsx)("div", { style: (0, ui_theme_mjs_1.column)(6), children: item.options.map((option) => (0, jsx_runtime_1.jsx)(SurveyPick, { wide: true, selected: answers[item.id] === option, onSelect: () => set(item.id, option), children: option }, option)) }), item.type === 'yesno_text' && (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)("div", { style: { display: 'flex', gap: 6 }, children: ['Yes', 'No'].map((option) => (0, jsx_runtime_1.jsx)("div", { style: { minWidth: 96 }, children: (0, jsx_runtime_1.jsx)(SurveyPick, { wide: true, selected: answers[item.id] === option, onSelect: () => set(item.id, option), children: option }) }, option)) }), answers[item.id] === 'Yes' && (0, jsx_runtime_1.jsx)(SurveyNote, { value: answers[`${item.id}_which`] || '', placeholder: item.followUp, onChange: (value) => set(`${item.id}_which`, value) })] }), item.type === 'text' && (0, jsx_runtime_1.jsx)(SurveyNote, { value: answers[item.id] || '', onChange: (value) => set(item.id, value) }), item.type === 'multitext' && (0, jsx_runtime_1.jsx)("div", { style: (0, ui_theme_mjs_1.column)(8), children: item.fields.map((field) => {
-                                    const key = `${item.id}:${field}`;
-                                    return (0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.column)(4), children: [(0, jsx_runtime_1.jsx)("label", { htmlFor: `pm-${key}`, style: { fontSize: 12.5, color: ui_theme_mjs_1.T.ink3 }, children: field }), (0, jsx_runtime_1.jsx)("input", { id: `pm-${key}`, className: "pm-input", style: { fontSize: 14.5 }, value: answers[key] || '', onChange: (event) => set(key, event.target.value) })] }, field);
-                                }) })] })] }, item.id);
-        }) });
-}
-// ─── Pilot-only adapter; frozen modules above are imported without modification. ───
-function restoreStudyGame(study) {
-    if (!study || !study.sessionId || !['TRUE', 'SHUFFLED'].includes(study.arm))
-        throw new Error('A valid study session and assigned arm are required.');
-    if (!['GAME', 'MIRROR', 'SURVEY'].includes(study.stage))
-        throw new Error('Unsupported study stage.');
-    const saved = study.gameSnapshot;
-    if (!saved) {
-        if (study.stage !== 'GAME')
-            throw new Error('Completed career is missing.');
-        return { active: null, saved: null };
-    }
-    if (saved.schema !== 'political-mirror-study-game/1' || saved.sessionId !== study.sessionId
-        || saved.arm !== study.arm || saved.telemetry?.sessionId !== study.sessionId
-        || saved.telemetry?.mirrorMode !== study.arm)
-        throw new Error('Saved career does not match this study session.');
-    const active = (0, game_session_mjs_1.replayActionTranscript)(saved.spec, saved.transcript);
-    if ((0, game_session_mjs_1.hashCanonicalState)(active) !== saved.canonicalHash
-        || JSON.stringify((0, game_session_mjs_1.serializeCanonicalState)(active)) !== JSON.stringify(saved.canonicalState))
-        throw new Error('Saved career verification failed.');
-    if (study.stage !== 'GAME' && active.phase !== game_session_mjs_1.PHASES.MINI_MIRROR)
-        throw new Error('Feedback cannot be shown before the career is complete.');
-    return { active, saved: deepClone(saved) };
-}
-function PoliticalMirrorStudy({ study, onCheckpoint, onGameplayComplete, onMirrorComplete, onSurveyComplete, onError }) {
-    const restored = (0, react_1.useMemo)(() => {
-        try {
-            return restoreStudyGame(study);
-        }
-        catch (cause) {
-            return { active: null, saved: null, error: cause };
-        }
-    }, []);
-    const saved = restored.saved;
-    const [screen, setScreen] = (0, react_1.useState)(saved ? 'play' : 'create');
-    const seed = saved?.spec.seed || 'POL-M7GX4';
-    const [player, setPlayer] = (0, react_1.useState)(saved?.spec.player
-        || { name: 'A. Reyes', bloc: 'CIV', region: 'Harrow Vale', route: 'CIVIC' });
-    const testMode = 'natural';
-    const [showProfile, setShowProfile] = (0, react_1.useState)(false);
-    const [error, setError] = (0, react_1.useState)(restored.error?.message || null);
-    const [busy, setBusy] = (0, react_1.useState)(false);
-    const [survey, setSurvey] = (0, react_1.useState)(saved?.presentation.survey || {});
-    const [audit, setAudit] = (0, react_1.useState)(saved?.presentation.audit || null);
-    const [interp, setInterp] = (0, react_1.useState)(saved?.presentation.interpretations || {});
-    const [, setTick] = (0, react_1.useState)(0);
-    const sessionRef = (0, react_1.useRef)(restored.active);
-    const playtestRef = (0, react_1.useRef)(saved?.telemetry || null);
-    const shownAt = (0, react_1.useRef)(Date.now());
-    const resumeTiming = (0, react_1.useRef)(Boolean(saved));
-    const pending = (0, react_1.useRef)(Promise.resolve());
-    const locked = (0, react_1.useRef)(Boolean(restored.error));
-    const callbackRef = (0, react_1.useRef)({ onCheckpoint, onGameplayComplete, onMirrorComplete, onSurveyComplete, onError });
-    callbackRef.current = { onCheckpoint, onGameplayComplete, onMirrorComplete, onSurveyComplete, onError };
-    const presentation = (0, react_1.useRef)({ survey, audit, interpretations: interp });
-    const preview = (0, react_1.useMemo)(() => (0, game_session_mjs_1.previewStartingProfile)({ seed, player, testMode }), [seed, player.bloc, player.route, testMode]);
-    const session = sessionRef.current;
-    const interaction = session ? (0, game_session_mjs_1.getCurrentInteraction)(session) : null;
-    // The decision clock starts when the new phase is actually committed to the DOM,
-    // excluding the previous checkpoint's persistence latency and any resume gap.
-    (0, react_1.useLayoutEffect)(() => {
-        if (!busy && !error && screen === 'play' && study.stage === 'GAME'
-            && sessionRef.current?.phase !== game_session_mjs_1.PHASES.MINI_MIRROR)
-            shownAt.current = Date.now();
-    }, [busy, error, screen, interaction?.phase, session?.actionIndex]);
-    function fail(cause) {
-        locked.current = true;
-        setError('Your progress could not be verified or saved. Please pause and contact the researcher.');
-        setBusy(false);
-        try {
-            Promise.resolve(callbackRef.current.onError?.({ code: 'GAME_ADAPTER_ERROR', message: cause.message,
-                at: new Date().toISOString(), actionIndex: sessionRef.current?.actionIndex ?? null })).catch(() => { });
-        }
-        catch { /* The visible stop remains even if technical-error recording also fails. */ }
-    }
-    function snapshot() {
-        const active = sessionRef.current;
-        if (!active)
-            throw new Error('No career to save.');
-        return deepClone({ schema: 'political-mirror-study-game/1', sessionId: study.sessionId,
-            arm: study.arm,
-            spec: { seed: active.seed, player: active.player, testMode: active.testMode,
-                agentCount: active.agentCount },
-            transcript: active.actionTranscript.map(({ action, hash }) => ({ action, hash })),
-            canonicalState: (0, game_session_mjs_1.serializeCanonicalState)(active), canonicalHash: (0, game_session_mjs_1.hashCanonicalState)(active),
-            telemetry: playtestRef.current, mirror: active.mirror,
-            presentation: { ...presentation.current, screen: 'play', phaseShownAt: shownAt.current },
-            savedAt: new Date().toISOString() });
-    }
-    function checkpoint(value = snapshot()) {
-        if (typeof callbackRef.current.onCheckpoint !== 'function')
-            return Promise.reject(new Error('No persistence callback configured.'));
-        pending.current = pending.current.then(() => callbackRef.current.onCheckpoint(value));
-        return pending.current;
-    }
-    // Strict stage guard below prevents even a single render of feedback during GAME/T1.
-    // Mounting after an acknowledged checkpoint preserves both timing and telemetry.
-    (0, react_1.useEffect)(() => {
-        if (restored.error) {
-            fail(restored.error);
-            return;
-        }
-        const active = sessionRef.current;
-        if (!active)
-            return;
-        publishDebug(active);
-        if (study.stage === 'GAME' && active.phase === game_session_mjs_1.PHASES.MINI_MIRROR) {
-            setBusy(true);
-            checkpoint().then(() => callbackRef.current.onGameplayComplete(snapshot()))
-                .catch(fail);
-        }
-        else if (study.stage === 'MIRROR' && !playtestRef.current.mirrorPresentedAt) {
-            const shown = study.arm === 'SHUFFLED' ? playtest_mjs_1.SHUFFLED_PROFILE : active.mirror.analysis;
-            playtestRef.current.mirrorPresentedAt = new Date().toISOString();
-            playtestRef.current.mirrorShown = study.arm;
-            playtestRef.current.feedbackDisplay = {
-                voterDimensions: Object.keys(shown.voter).length,
-                politicianDimensions: Object.keys(shown.political).length,
-                voterExampleGroups: Object.values(shown.voter).reduce((n, d) => n + (d.cases?.length || 0), 0),
-                politicianExampleGroups: Object.values(shown.political).reduce((n, d) => n + (d.cases?.length || 0), 0),
-                crossPrompts: study.arm === 'SHUFFLED' ? 0 : active.mirror.cross.length,
-                checklistCount: active.mirror.checklist.length,
-                counterfactualAvailable: true,
-            };
-            checkpoint().catch(fail);
-        }
-    }, []);
-    function publishDebug(active) {
-        if (typeof window === 'undefined')
-            return;
-        window.__PM_TEST_API__ = Object.freeze({
-            getTranscript: () => deepClone(active.actionTranscript),
-            getCanonicalState: () => deepClone((0, game_session_mjs_1.serializeCanonicalState)(active)),
-            getHash: () => (0, game_session_mjs_1.hashCanonicalState)(active),
-            getInteraction: () => deepClone((0, game_session_mjs_1.getCurrentInteraction)(active)),
-            getStudySnapshot: () => snapshot(),
-        });
-    }
-    function syncPlaytest(active, action, before, elapsed) {
-        const log = playtestRef.current;
-        if (!log)
-            return;
-        if (action.type === game_session_mjs_1.ACTIONS.SUBMIT_PRIVATE_READ) {
-            (0, playtest_mjs_1.logRead)(log, { beatId: action.beatId, age: before.beat.age, credence: action.credence, msToDecide: elapsed });
-        }
-        if ([game_session_mjs_1.ACTIONS.SELECT_PUBLIC_MOVE, game_session_mjs_1.ACTIONS.SELECT_WILDERNESS_ROUTE].includes(action.type)) {
-            const move = active.st.log.filter((entry) => entry.kind === 'move').at(-1);
-            (0, playtest_mjs_1.logDecision)(log, { beatId: action.beatId, kind: before.beat.kind, age: before.beat.age,
-                choiceId: action.choiceId, label: move?.label, msToDecide: elapsed });
-        }
-        if (action.type === game_session_mjs_1.ACTIONS.SELECT_DEVELOPMENT_FOCUS) {
-            const development = active.st.focusLog.at(-1);
-            (0, playtest_mjs_1.logDevelopment)(log, deepClone(development));
-        }
-        recordSessionSnapshot(log, active);
-        const next = (0, game_session_mjs_1.getCurrentInteraction)(active);
-        for (const choice of next.choices || []) {
-            if (choice.requires)
-                (0, playtest_mjs_1.logAbilityOption)(log, { beatId: next.beat.id, choiceId: choice.id,
-                    requires: choice.requires, met: choice.availability.ok });
-            if (!choice.availability.ok)
-                (0, playtest_mjs_1.logLocked)(log, { beatId: next.beat.id, choiceId: choice.id,
-                    reason: choice.availability.reason });
-        }
-        if (active.phase === game_session_mjs_1.PHASES.MINI_MIRROR)
-            recordMirrorReached(log, active, Date.now());
-    }
-    // Restore the same canonical-derived fields after loading as after a live action.
-    // A completed career cannot dispatch another action to refresh these before export.
-    function recordSessionSnapshot(log, active) {
-        log.elections = active.elections.map(({ spec, tally, shares, winner, ...entry }) => deepClone(entry));
-        log.wildernessRoute = active.st.history.find((entry) => entry.kind === 'wilderness')?.route || null;
-        log.chainsSeen = Object.entries(active.st.chains).map(([chain, value]) => ({ chain, ...deepClone(value) }));
-        log.executionChecks = active.st.execs.map((entry) => deepClone(entry));
-        log.canonicalActions = active.actionTranscript.map((entry) => deepClone(entry));
-        log.finalCanonicalHash = (0, game_session_mjs_1.hashCanonicalState)(active);
-        log.actualSessionSeed = active.seed;
-        log.replaySeed = active.seed;
-    }
-    // The canonical phase is the only source of truth for "the Mirror was reached". Called from
-    // syncPlaytest after every action and from loadGame when a completed career is replayed, so
-    // an export after either path carries mirrorReached=true, the Mirror snapshot and the final
-    // abilities. Reads the session; never writes it and never dispatches an action.
-    function recordMirrorReached(log, active, now) {
-        if (!log || active.phase !== game_session_mjs_1.PHASES.MINI_MIRROR || !active.mirror)
-            return;
-        log.mirrorReached = true;
-        (0, playtest_mjs_1.markGameplayEnd)(log, now);
-        log.mirror = (0, playtest_mjs_1.snapshotMirror)(active.mirror.analysis, active.mirror.resolution);
-        // Reaching the canonical phase computes the profile; presentation occurs after T1.
-        if (!log.mirrorPresentedAt)
-            log.mirrorShown = null;
-        (0, playtest_mjs_1.recordAbilityFinal)(log, active.st.abilities);
-    }
-    async function act(action) {
-        if (locked.current || busy)
-            return;
-        locked.current = true;
-        setBusy(true);
-        const active = sessionRef.current;
-        const before = (0, game_session_mjs_1.getCurrentInteraction)(active);
-        const submittedAt = Date.now();
-        try {
-            (0, game_session_mjs_1.dispatchGameAction)(active, action);
-            syncPlaytest(active, action, before, submittedAt - shownAt.current);
-            playtestRef.current.actionTimings.push({ actionIndex: active.actionIndex,
-                type: action.type, beatId: action.beatId || null,
-                shownAt: shownAt.current, submittedAt, elapsedMs: submittedAt - shownAt.current,
-                resumedPhase: resumeTiming.current });
-            resumeTiming.current = false;
-            shownAt.current = Date.now();
-            publishDebug(active);
-            await checkpoint();
-            if (active.phase === game_session_mjs_1.PHASES.MINI_MIRROR) {
-                await callbackRef.current.onGameplayComplete(snapshot());
-                return;
-            }
-            locked.current = false;
-            setBusy(false);
-            setTick((value) => value + 1);
-        }
-        catch (cause) {
-            fail(cause);
-        }
-    }
-    async function startGame() {
-        if (locked.current || busy)
-            return;
-        locked.current = true;
-        setBusy(true);
-        try {
-            const active = (0, game_session_mjs_1.createGameSession)({ seed, player: { ...player, name: 'A. Reyes' },
-                agentCount: 700, testMode });
-            sessionRef.current = active;
-            const log = (0, playtest_mjs_1.newSession)({ sessionId: study.sessionId, seed: active.seed, testMode,
-                mirrorMode: study.arm, startedAt: Date.now() });
-            log.character = deepClone(active.player);
-            log.actionTimings = [];
-            log.mirrorPresentedAt = null;
-            log.mirrorShown = null;
-            playtestRef.current = log;
-            (0, game_session_mjs_1.dispatchGameAction)(active, { type: game_session_mjs_1.ACTIONS.START_GAME });
-            (0, playtest_mjs_1.recordAbilityStart)(log, player.route, active.st.abilities);
-            recordSessionSnapshot(log, active);
-            publishDebug(active);
-            shownAt.current = Date.now();
-            await checkpoint();
-            locked.current = false;
-            setBusy(false);
-            setScreen('play');
-            setTick((value) => value + 1);
-        }
-        catch (cause) {
-            fail(cause);
-        }
-    }
-    function updateSurvey(next) {
-        if (locked.current)
-            return;
-        (0, playtest_mjs_1.markSurveyStart)(playtestRef.current, Date.now());
-        presentation.current.survey = next;
-        playtestRef.current.survey = deepClone(next);
-        setSurvey(next);
-        checkpoint().catch(fail);
-    }
-    function updateInterpretation(next) {
-        if (locked.current)
-            return;
-        presentation.current.interpretations = next;
-        playtestRef.current.interpretations = deepClone(next);
-        setInterp(next);
-        checkpoint().catch(fail);
-    }
-    function openAudit() {
-        if (locked.current)
-            return;
-        const result = (0, game_session_mjs_1.runCounterfactualAudit)(sessionRef.current);
-        presentation.current.audit = result;
-        playtestRef.current.counterfactualOpened = true;
-        setAudit(result);
-        checkpoint().catch(fail);
-    }
-    async function completeMirror() {
-        if (locked.current || busy)
-            return;
-        locked.current = true;
-        setBusy(true);
-        try {
-            playtestRef.current.mirrorCompletedAt = new Date().toISOString();
-            await checkpoint();
-            await callbackRef.current.onMirrorComplete(snapshot());
-        }
-        catch (cause) {
-            fail(cause);
-        }
-    }
-    async function completeSurvey() {
-        if (locked.current || busy)
-            return;
-        locked.current = true;
-        setBusy(true);
-        try {
-            playtestRef.current.survey = deepClone(presentation.current.survey);
-            (0, playtest_mjs_1.finishSession)(playtestRef.current, Date.now());
-            await checkpoint();
-            await callbackRef.current.onSurveyComplete({ answers: deepClone(presentation.current.survey),
-                snapshot: snapshot() });
-        }
-        catch (cause) {
-            fail(cause);
-        }
-    }
-    const errorLine = error
-        ? (0, jsx_runtime_1.jsx)("p", { style: { margin: 0, fontSize: 13.5, lineHeight: 1.6, color: ui_theme_mjs_1.T.against,
-                borderLeft: `3px solid ${ui_theme_mjs_1.T.against}`, paddingLeft: 12 }, children: error })
-        : null;
-    if (error)
-        return (0, jsx_runtime_1.jsx)(Shell, { children: (0, jsx_runtime_1.jsx)("div", { role: "alert", className: "pm-prose", children: errorLine }) });
-    if (busy)
-        return (0, jsx_runtime_1.jsx)(Shell, { children: (0, jsx_runtime_1.jsx)("div", { role: "status", className: "pm-prose", children: "Saving your progress\u2026" }) });
-    if (study.stage === 'SURVEY')
-        return (0, jsx_runtime_1.jsx)(Shell, { children: (0, jsx_runtime_1.jsxs)("div", { style: { maxWidth: 820, margin: '0 auto', ...(0, ui_theme_mjs_1.column)(24) }, children: [(0, jsx_runtime_1.jsx)(Kicker, { children: "Your experience" }), (0, jsx_runtime_1.jsx)("h2", { className: "pm-h2", children: "A few questions" }), (0, jsx_runtime_1.jsx)("p", { className: "pm-prose", children: "Every question is optional. Please avoid names or identifying details." }), (0, jsx_runtime_1.jsx)(Survey, { answers: survey, onChange: updateSurvey }), (0, jsx_runtime_1.jsx)(Cta, { onClick: completeSurvey, children: "Continue to debrief" })] }) });
-    // ── Create ───────────────────────────────────────────────────────────────
-    if (screen === 'create') {
-        const ordered = abilities_mjs_1.ABILITIES.slice().sort((a, b) => preview.value[b.id] - preview.value[a.id]);
-        return (0, jsx_runtime_1.jsx)(Shell, { children: (0, jsx_runtime_1.jsxs)("div", { style: { maxWidth: 720, margin: '0 auto', ...(0, ui_theme_mjs_1.column)(26) }, children: [(0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.column)(10), children: [(0, jsx_runtime_1.jsx)(Kicker, { children: "Before any of it started" }), (0, jsx_runtime_1.jsx)("h2", { className: "pm-h2", children: "Create the politician" })] }), (0, jsx_runtime_1.jsxs)("div", { style: { display: 'grid', gridTemplateColumns: 'repeat(auto-fit,minmax(240px,1fr))', gap: 18 }, children: [(0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.column)(7), children: [(0, jsx_runtime_1.jsx)("div", { className: "pm-kicker", children: "Fictional character" }), (0, jsx_runtime_1.jsx)("div", { className: "pm-prose", children: "A. Reyes" })] }), (0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.column)(7), children: [(0, jsx_runtime_1.jsx)("div", { className: "pm-kicker", children: "Party" }), (0, jsx_runtime_1.jsx)("div", { className: "pm-seg", children: Object.values(content_mjs_1.BLOCS).map((bloc) => (0, jsx_runtime_1.jsxs)("button", { type: "button", "aria-pressed": player.bloc === bloc.id, onClick: () => setPlayer({ ...player, bloc: bloc.id }), children: [(0, jsx_runtime_1.jsx)("span", { className: "pm-dot", style: { background: (0, ui_theme_mjs_1.blocDot)(bloc.id), width: 7, height: 7 } }), bloc.name] }, bloc.id)) })] })] }), (0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.column)(10), children: [(0, jsx_runtime_1.jsx)("div", { className: "pm-kicker", children: "Where you come from" }), content_mjs_1.ROUTES.map((route) => (0, jsx_runtime_1.jsxs)(Option, { selected: player.route === route.id, onClick: () => setPlayer({ ...player, route: route.id }), children: [(0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', justifyContent: 'space-between', gap: 12, alignItems: 'baseline' }, children: [(0, jsx_runtime_1.jsx)("b", { style: { fontWeight: 600 }, children: route.name }), player.route === route.id
-                                                && (0, jsx_runtime_1.jsx)("span", { style: { ...(0, ui_theme_mjs_1.label)(10, ui_theme_mjs_1.T.goldInk), letterSpacing: '.16em' }, children: "Selected" })] }), (0, jsx_runtime_1.jsx)("div", { style: { fontSize: 13, color: ui_theme_mjs_1.T.ink3, marginTop: 4, lineHeight: 1.55 }, children: route.blurb })] }, route.id))] }), (0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(12), borderTop: `1px solid ${ui_theme_mjs_1.T.rule}`, paddingTop: 20 }, children: [(0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', gap: 14 }, children: [(0, jsx_runtime_1.jsx)("div", { className: "pm-h3", children: "You at twenty-three" }), (0, jsx_runtime_1.jsx)("span", { className: "pm-kicker", style: { fontSize: 10 }, children: "Strongest first" })] }), (0, jsx_runtime_1.jsx)("div", { children: ordered.map((ability) => {
-                                    const value = preview.value[ability.id];
-                                    const word = startingWord(value);
-                                    const filled = startingNotches(value);
-                                    const tone = word === 'Strength' ? ui_theme_mjs_1.T.goldInk : word === 'Weakness' ? ui_theme_mjs_1.T.against : ui_theme_mjs_1.T.ink3;
-                                    return (0, jsx_runtime_1.jsxs)("div", { style: { display: 'grid',
-                                            gridTemplateColumns: 'minmax(0,1fr) 96px 92px', gap: 14, alignItems: 'center',
-                                            padding: '11px 0', borderBottom: `1px solid ${ui_theme_mjs_1.T.hair}` }, children: [(0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.column)(2), children: [(0, jsx_runtime_1.jsx)("div", { style: { fontSize: 15 }, children: ability.name }), (0, jsx_runtime_1.jsx)("div", { style: { fontSize: 12, lineHeight: 1.45, color: ui_theme_mjs_1.T.ink3 }, children: ability.does })] }), (0, jsx_runtime_1.jsx)("div", { style: { display: 'flex', gap: 3 }, "aria-hidden": "true", children: [0, 1, 2, 3, 4].map((index) => (0, jsx_runtime_1.jsx)("div", { style: { flex: 1, height: 8,
-                                                        background: index < filled ? (word === 'Weakness' ? ui_theme_mjs_1.T.against : ui_theme_mjs_1.T.ink) : 'var(--pm-inset)' } }, index)) }), (0, jsx_runtime_1.jsx)("div", { style: { ...(0, ui_theme_mjs_1.label)(11, tone), letterSpacing: '.12em', textAlign: 'right' }, children: word })] }, ability.id);
-                                }) }), (0, jsx_runtime_1.jsx)("p", { style: { margin: 0, fontSize: 13.5, lineHeight: 1.65, fontStyle: 'italic' }, children: abilities_mjs_1.BACKGROUND_ABILITIES[player.route]?.note }), (0, jsx_runtime_1.jsx)("div", { style: { fontSize: 12, lineHeight: 1.6, color: ui_theme_mjs_1.T.ink3 }, children: "Five notches, three words, no numbers \u2014 and nothing about how far any of it can go." })] }), (0, jsx_runtime_1.jsx)(Cta, { block: true, onClick: startGame, children: "Start the career" }), errorLine] }) });
-    }
-    if (!session || !interaction)
-        return (0, jsx_runtime_1.jsx)(Shell, { children: (0, jsx_runtime_1.jsx)("div", { className: "pm-prose", children: "Loading\u2026" }) });
-    const beat = interaction.beat;
-    const continueAction = {
-        [game_session_mjs_1.PHASES.REACTION]: game_session_mjs_1.ACTIONS.CONTINUE_REACTION,
-        [game_session_mjs_1.PHASES.CHAIN_RETURN]: game_session_mjs_1.ACTIONS.CONTINUE_CHAIN,
-        [game_session_mjs_1.PHASES.ELECTION_RESULT]: game_session_mjs_1.ACTIONS.CONTINUE_ELECTION,
-        [game_session_mjs_1.PHASES.DEVELOPMENT_RESULT]: game_session_mjs_1.ACTIONS.CONTINUE_DEVELOPMENT_RESULT,
-        [game_session_mjs_1.PHASES.WILDERNESS_RESULT]: game_session_mjs_1.ACTIONS.CONTINUE_WILDERNESS,
-    }[interaction.phase];
-    // ── Career summary ───────────────────────────────────────────────────────
-    if (interaction.phase === game_session_mjs_1.PHASES.CAREER_SUMMARY)
-        return (0, jsx_runtime_1.jsx)(Shell, { children: (0, jsx_runtime_1.jsxs)("div", { style: { maxWidth: 820, margin: '0 auto', ...(0, ui_theme_mjs_1.column)(28) }, children: [(0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', gap: 24,
-                            borderBottom: `2px solid ${ui_theme_mjs_1.T.ink}`, paddingBottom: 16 }, children: [(0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.column)(6), children: [(0, jsx_runtime_1.jsx)(Kicker, { children: "The record so far" }), (0, jsx_runtime_1.jsx)("h2", { className: "pm-h2", children: session.player.name })] }), (0, jsx_runtime_1.jsx)(Fig, { label: "Age", value: session.st.age, size: 30 })] }), (0, jsx_runtime_1.jsxs)("div", { children: [(0, jsx_runtime_1.jsxs)("div", { className: "pm-record-head", children: [(0, jsx_runtime_1.jsx)("div", { className: "pm-kicker", style: { fontSize: 10 }, children: "Age" }), (0, jsx_runtime_1.jsx)("div", { className: "pm-kicker", style: { fontSize: 10 }, children: "Office" }), (0, jsx_runtime_1.jsx)("div", { className: "pm-kicker", style: { fontSize: 10, textAlign: 'right' }, children: "Your share" }), (0, jsx_runtime_1.jsx)("div", { className: "pm-kicker", style: { fontSize: 10, textAlign: 'right' }, children: "Result" })] }), interaction.summary.elections.map((election) => (0, jsx_runtime_1.jsxs)("div", { className: "pm-record-row", children: [(0, jsx_runtime_1.jsx)("div", { className: "pm-tnum", style: { fontSize: 15 }, children: election.age }), (0, jsx_runtime_1.jsx)("div", { className: "pm-wrap-safe", style: { fontSize: 16 }, children: election.office }), (0, jsx_runtime_1.jsx)("div", { className: "pm-num", style: { fontSize: 22, textAlign: 'right' }, children: pct(election.share) }), (0, jsx_runtime_1.jsx)("div", { style: { ...(0, ui_theme_mjs_1.label)(11, election.won ? ui_theme_mjs_1.T.favour : ui_theme_mjs_1.T.against), letterSpacing: '.16em',
-                                            textAlign: 'right' }, children: election.won ? 'Won' : 'Lost' })] }, `${election.age}:${election.office}`))] }), Object.keys(interaction.summary.chains || {}).length > 0 && (0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.column)(8), children: [(0, jsx_runtime_1.jsx)(Kicker, { children: "Files that came back" }), (0, jsx_runtime_1.jsx)("div", { style: { display: 'flex', gap: 8, flexWrap: 'wrap' }, children: Object.keys(interaction.summary.chains).map((key) => (0, jsx_runtime_1.jsx)("span", { className: "pm-file-tab", style: { border: `1px solid ${ui_theme_mjs_1.T.rule}`, borderRadius: 3 }, children: content_mjs_1.CHAINS[key]?.file || key }, key)) })] }), (0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', gap: 40, alignItems: 'flex-end', flexWrap: 'wrap',
-                            borderTop: `1px solid ${ui_theme_mjs_1.T.rule}`, paddingTop: 22 }, children: [(0, jsx_runtime_1.jsx)(Fig, { label: "Public decisions", value: interaction.summary.moves, size: 34 }), (0, jsx_runtime_1.jsx)(Fig, { label: "Private judgments", value: interaction.summary.reads, size: 34 }), (0, jsx_runtime_1.jsx)("div", { className: "pm-prose", style: { flex: '1 1 260px', maxWidth: '34ch', fontSize: 14.5 }, children: "That is the career. What it says about you is the other document." }), (0, jsx_runtime_1.jsx)(Cta, { arrow: true, onClick: () => act({ type: game_session_mjs_1.ACTIONS.VIEW_MIRROR }), children: "Continue" })] }), errorLine] }) });
-    // ── Mini Mirror ──────────────────────────────────────────────────────────
-    if (interaction.phase === game_session_mjs_1.PHASES.MINI_MIRROR && study.stage !== 'MIRROR')
-        return (0, jsx_runtime_1.jsx)(Shell, { children: (0, jsx_runtime_1.jsx)("div", { role: "status", className: "pm-prose", children: "Preparing the next part\u2026" }) });
-    if (interaction.phase === game_session_mjs_1.PHASES.MINI_MIRROR && study.stage === 'MIRROR') {
-        const arm = playtestRef.current?.mirrorMode || 'TRUE';
-        const shownAnalysis = arm === 'SHUFFLED' ? playtest_mjs_1.SHUFFLED_PROFILE : interaction.mirror.analysis;
-        const shownResolution = arm === 'SHUFFLED' ? playtest_mjs_1.SHUFFLED_RESOLUTION : interaction.mirror.resolution;
-        const shownCross = arm === 'SHUFFLED' ? [] : interaction.mirror.cross;
-        return (0, jsx_runtime_1.jsx)(Shell, { children: (0, jsx_runtime_1.jsxs)("div", { style: { maxWidth: 820, margin: '0 auto', ...(0, ui_theme_mjs_1.column)(36) }, children: [(0, jsx_runtime_1.jsxs)("div", { className: "pm-mirror-head pm-tone-ink", children: [(0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(12), flex: '1 1 280px' }, children: [(0, jsx_runtime_1.jsx)(Kicker, { gold: true, children: "Preliminary mirror \u00B7 one life" }), (0, jsx_runtime_1.jsx)("div", { className: "pm-h2", children: "Mirror resolution" }), (0, jsx_runtime_1.jsx)("p", { className: "pm-prose", style: { fontSize: 14.5, color: ui_theme_mjs_1.T.ink3 }, children: "One political life gave enough evidence for a preliminary picture. A different life would show whether these tendencies hold." })] }), (0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(10), alignItems: 'flex-end', flex: '0 1 260px', minWidth: 200 }, children: [(0, jsx_runtime_1.jsx)("div", { className: "pm-num", style: { fontSize: 'clamp(52px,9vw,88px)', lineHeight: .9,
-                                            fontWeight: 400 }, children: pct(shownResolution.resolution) }), (0, jsx_runtime_1.jsx)("div", { style: { width: '100%' }, children: (0, jsx_runtime_1.jsx)(Gauge, { value: shownResolution.resolution, tone: ui_theme_mjs_1.T.gold, height: 4 }) }), (0, jsx_runtime_1.jsx)("div", { style: { display: 'flex', gap: '4px 14px', flexWrap: 'wrap',
-                                            justifyContent: 'flex-end' }, children: Object.entries(shownResolution.components || {}).map(([key, value]) => (0, jsx_runtime_1.jsxs)("span", { className: "pm-kicker pm-tnum", style: { fontSize: 10 }, children: [key, " ", pct(value)] }, key)) })] })] }), (0, jsx_runtime_1.jsx)(MirrorSection, { title: "How you judged others", children: Object.values(shownAnalysis.voter).map((dimension) => (0, jsx_runtime_1.jsx)(Dimension, { dimension: dimension, kind: "voter" }, dimension.label)) }), (0, jsx_runtime_1.jsx)(MirrorSection, { title: "How you held power", children: Object.values(shownAnalysis.political).map((dimension) => (0, jsx_runtime_1.jsx)(Dimension, { dimension: dimension, kind: "political" }, dimension.label)) }), shownCross.length > 0 && (0, jsx_runtime_1.jsx)(MirrorSection, { title: "The two of you", children: (0, jsx_runtime_1.jsx)("div", { style: (0, ui_theme_mjs_1.column)(16), children: shownCross.map((item, index) => (0, jsx_runtime_1.jsxs)("div", { style: { border: `1px solid ${ui_theme_mjs_1.T.gold}`, borderRadius: 4,
-                                    padding: 'clamp(18px,2.5vw,28px)', ...(0, ui_theme_mjs_1.column)(18) }, children: [(0, jsx_runtime_1.jsx)("div", { className: "pm-h2", style: { fontSize: 'clamp(22px,2.8vw,30px)' }, children: item.title }), (0, jsx_runtime_1.jsxs)("div", { className: "pm-cross-cols", children: [(0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(6), borderLeft: `2px solid ${ui_theme_mjs_1.T.rule}`, paddingLeft: 16 }, children: [(0, jsx_runtime_1.jsx)(Kicker, { children: "As a politician" }), (0, jsx_runtime_1.jsx)("p", { className: "pm-wrap-safe", style: { margin: 0, fontSize: 15, lineHeight: 1.65 }, children: item.politician })] }), (0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(6), borderLeft: `2px solid ${ui_theme_mjs_1.T.gold}`, paddingLeft: 16 }, children: [(0, jsx_runtime_1.jsx)(Kicker, { gold: true, children: "As a judge of others" }), (0, jsx_runtime_1.jsx)("p", { className: "pm-wrap-safe", style: { margin: 0, fontSize: 15, lineHeight: 1.65 }, children: item.voter })] })] }), (0, jsx_runtime_1.jsx)("div", { style: { ...(0, ui_theme_mjs_1.column)(10), borderTop: `1px solid ${ui_theme_mjs_1.T.rule}`, paddingTop: 16 }, children: interp[index] === undefined ? (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)("div", { style: { fontSize: 15, fontWeight: 600 }, children: "What do you think explains this?" }), item.options.map((option, optionIndex) => (0, jsx_runtime_1.jsx)(Option, { onClick: () => updateInterpretation({ ...interp, [index]: optionIndex }), children: option }, option))] }) : (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsxs)("p", { style: { margin: 0, fontSize: 13.5, color: ui_theme_mjs_1.T.ink3 }, children: ["You said: \u201C", item.options[interp[index]], "\u201D"] }), (0, jsx_runtime_1.jsx)("b", { className: "pm-wrap-safe", style: { fontWeight: 600 }, children: item.title })] }) })] }, item.title)) }) }), (0, jsx_runtime_1.jsx)(MirrorSection, { title: "The same career, different voters", children: !audit ? (0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(8) }, children: [(0, jsx_runtime_1.jsx)("p", { className: "pm-prose", style: { fontSize: 14.5 }, children: "The same decisions, judged by an electorate with one thing changed." }), (0, jsx_runtime_1.jsx)("div", { children: (0, jsx_runtime_1.jsx)(Ghost, { onClick: openAudit, children: "Replay my career" }) })] })
-                            : (0, jsx_runtime_1.jsx)("div", { style: (0, ui_theme_mjs_1.column)(10), children: audit.conditions.filter((condition) => condition.interpretable).map((condition) => (0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.ruledRow)({ flexWrap: 'wrap' }), children: [(0, jsx_runtime_1.jsx)("b", { className: "pm-wrap-safe", style: { fontWeight: 600, fontSize: 15,
-                                                flex: '1 1 240px' }, children: condition.label }), (0, jsx_runtime_1.jsxs)("span", { className: "pm-tnum", style: { fontSize: 13.5, color: ui_theme_mjs_1.T.ink3 }, children: [pct(condition.share), " of reputation movement in the affected group"] })] }, condition.id)) }) }), (0, jsx_runtime_1.jsx)(MirrorSection, { title: "Outside the game", children: (0, jsx_runtime_1.jsx)("div", { style: (0, ui_theme_mjs_1.column)(12), children: interaction.mirror.checklist.map((item, index) => (0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', gap: 16, alignItems: 'baseline' }, children: [(0, jsx_runtime_1.jsx)("span", { className: "pm-num pm-tnum", style: { fontSize: 19, color: ui_theme_mjs_1.T.gold,
-                                            fontWeight: 400, flex: 'none' }, children: String(index + 1).padStart(2, '0') }), (0, jsx_runtime_1.jsx)("p", { className: "pm-prose pm-wrap-safe", style: { fontSize: 16, maxWidth: '70ch' }, children: item })] }, `${index}:${item}`)) }) }), (0, jsx_runtime_1.jsx)("p", { style: { margin: 0, fontSize: 12.5, lineHeight: 1.7, color: ui_theme_mjs_1.T.ink3,
-                            borderTop: `1px solid ${ui_theme_mjs_1.T.rule}`, paddingTop: 18 }, children: "Within this simulation, your choices showed the patterns above. This is an educational simulation, not a validated psychological assessment." }), (0, jsx_runtime_1.jsx)("div", { children: (0, jsx_runtime_1.jsx)(Cta, { onClick: completeMirror, children: "Continue to the next cases" }) }), errorLine] }) });
-    }
-    // ── The loop ─────────────────────────────────────────────────────────────
-    const isPrivate = interaction.phase === game_session_mjs_1.PHASES.PRIVATE_READ;
-    const isOut = [game_session_mjs_1.PHASES.WILDERNESS_CHOICE, game_session_mjs_1.PHASES.WILDERNESS_RESULT].includes(interaction.phase);
-    const tone = isPrivate ? 'pm-tone-ink' : isOut ? 'pm-tone-out' : undefined;
-    const isChoice = [game_session_mjs_1.PHASES.STORY_CHOICE, game_session_mjs_1.PHASES.PUBLIC_MOVE, game_session_mjs_1.PHASES.WILDERNESS_CHOICE]
-        .includes(interaction.phase);
-    const lockedCount = (interaction.choices || [])
-        .filter((choice) => !choice.availability.ok).length;
-    return (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)(Shell, { tone: tone, head: (0, jsx_runtime_1.jsx)(StandingHead, { interaction: interaction, onProfile: () => setShowProfile(true) }), children: isPrivate ? (0, jsx_runtime_1.jsx)(PrivateRead, { interaction: interaction, beat: beat, session: session, onSubmit: (credence) => act({ type: game_session_mjs_1.ACTIONS.SUBMIT_PRIVATE_READ, beatId: beat.id, credence }) })
-                    : (0, jsx_runtime_1.jsxs)("div", { className: "pm-cols", children: [(0, jsx_runtime_1.jsxs)("div", { className: "pm-main", children: [isChoice && (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)(DocLabel, { mark: interaction.phase === game_session_mjs_1.PHASES.PUBLIC_MOVE, gold: interaction.phase !== game_session_mjs_1.PHASES.WILDERNESS_CHOICE, document: interaction.phase === game_session_mjs_1.PHASES.PUBLIC_MOVE ? 'On the record'
-                                                    : interaction.phase === game_session_mjs_1.PHASES.WILDERNESS_CHOICE ? 'Out of office' : 'A decision', aside: interaction.phase === game_session_mjs_1.PHASES.PUBLIC_MOVE ? 'Public move' : null }), (0, jsx_runtime_1.jsx)("h2", { className: "pm-h2", children: beat.title }), (0, jsx_runtime_1.jsx)("p", { className: "pm-prose pm-measure", children: beat.text }), (0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(12), borderTop: `1px solid ${ui_theme_mjs_1.T.rule}`, paddingTop: 20 }, children: [(0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', justifyContent: 'space-between', alignItems: 'baseline',
-                                                            gap: 16, flexWrap: 'wrap' }, children: [(0, jsx_runtime_1.jsx)("div", { className: "pm-h3", children: beat.prompt || (interaction.phase === game_session_mjs_1.PHASES.PUBLIC_MOVE
-                                                                    ? 'Now: what do you actually do?' : 'What do you do?') }), (0, jsx_runtime_1.jsxs)("span", { className: "pm-kicker", style: { fontSize: 10 }, children: [interaction.choices.length, " options", lockedCount ? ` · ${lockedCount} locked` : ''] })] }), interaction.choices.map((choice) => {
-                                                        const rated = interaction.publicState.abilities.value;
-                                                        const meters = Object.entries(choice.requires || {}).map(([id, level]) => ({
-                                                            name: abilities_mjs_1.ABILITIES.find((ability) => ability.id === id)?.name || id,
-                                                            value: rated[id] ?? 0,
-                                                            required: level,
-                                                        }));
-                                                        const gate = meters.length
-                                                            ? `Asks for ${meters.map((meter) => `${meter.name} around ${meter.required}`).join(', ')}.`
-                                                            : null;
-                                                        const price = choice.cost
-                                                            ? `Costs ${Object.entries(choice.cost)
-                                                                .map(([resource, amount]) => `${amount} ${resource}`).join(', ')}.`
-                                                            : null;
-                                                        return choice.availability.ok
-                                                            ? (0, jsx_runtime_1.jsx)(Option, { meta: [gate, price].filter(Boolean).join(' ') || null, onClick: () => act({
-                                                                    type: interaction.phase === game_session_mjs_1.PHASES.WILDERNESS_CHOICE
-                                                                        ? game_session_mjs_1.ACTIONS.SELECT_WILDERNESS_ROUTE : game_session_mjs_1.ACTIONS.SELECT_PUBLIC_MOVE,
-                                                                    beatId: beat.id, choiceId: choice.id,
-                                                                }), children: choice.label }, choice.id)
-                                                            : (0, jsx_runtime_1.jsx)(LockedOption, { reason: choice.availability.reason, meters: meters, needs: price, children: choice.label }, choice.id);
-                                                    })] })] }), interaction.phase === game_session_mjs_1.PHASES.REACTION && (0, jsx_runtime_1.jsx)(ReactionCard, { data: interaction.reaction, onContinue: () => act({ type: continueAction, beatId: beat.id }) }), interaction.phase === game_session_mjs_1.PHASES.DEVELOPMENT_FOCUS && (0, jsx_runtime_1.jsx)(DevelopmentFocus, { interaction: interaction, onSubmit: (primary, secondary) => act({
-                                            type: game_session_mjs_1.ACTIONS.SELECT_DEVELOPMENT_FOCUS, beatId: beat.id, primary, secondary,
-                                        }) }, `${beat.id}:${interaction.development.grant.reason}`), interaction.phase === game_session_mjs_1.PHASES.DEVELOPMENT_RESULT && (0, jsx_runtime_1.jsx)(DevelopmentResult, { interaction: interaction, onContinue: () => act({ type: continueAction, beatId: beat.id }) }), interaction.phase === game_session_mjs_1.PHASES.WILDERNESS_RESULT && (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)(DocLabel, { document: "Out of office", aside: beat.chapter || null }), (0, jsx_runtime_1.jsx)("h2", { className: "pm-h2", children: beat.title }), (0, jsx_runtime_1.jsx)("p", { className: "pm-prose pm-measure", style: { lineHeight: 1.8 }, children: interaction.wilderness.text }), (0, jsx_runtime_1.jsx)("p", { className: "pm-quote pm-measure", style: { borderTop: `1px solid ${ui_theme_mjs_1.T.rule}`,
-                                                    paddingTop: 18, color: ui_theme_mjs_1.T.ink2 }, children: interaction.wilderness.note }), (0, jsx_runtime_1.jsx)("div", { children: (0, jsx_runtime_1.jsx)(Cta, { onClick: () => act({ type: continueAction, beatId: beat.id }), arrow: true, children: "Continue" }) })] }), interaction.phase === game_session_mjs_1.PHASES.CHAIN_RETURN && (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)(DocLabel, { document: "From the archive", aside: "Something you already judged", gold: true }), (0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', alignItems: 'flex-end' }, children: [(0, jsx_runtime_1.jsx)("div", { className: "pm-file-tab", children: interaction.chain.recall.file }), (0, jsx_runtime_1.jsx)("div", { style: { flex: 1, ...ui_theme_mjs_1.hairline } })] }), (0, jsx_runtime_1.jsx)("h2", { className: "pm-h2", children: interaction.chain.head }), (0, jsx_runtime_1.jsx)("p", { className: "pm-prose pm-measure", children: interaction.chain.body }), (0, jsx_runtime_1.jsxs)("div", { className: "pm-clipping", children: [(0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(4), minWidth: 120, flex: '0 1 150px' }, children: [(0, jsx_runtime_1.jsx)(Kicker, { children: "From your own file" }), (0, jsx_runtime_1.jsx)("div", { className: "pm-h3", children: interaction.chain.recall.header })] }), (0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(8), flex: '1 1 240px', minWidth: 0 }, children: [(0, jsx_runtime_1.jsx)("div", { className: "pm-wrap-safe", style: { fontSize: 15.5, lineHeight: 1.6 }, children: interaction.chain.recall.line }), interaction.chain.did && (0, jsx_runtime_1.jsxs)("div", { style: { display: 'flex', gap: 9,
-                                                                    alignItems: 'baseline', flexWrap: 'wrap' }, children: [(0, jsx_runtime_1.jsx)("span", { style: { ...(0, ui_theme_mjs_1.label)(10), letterSpacing: '.16em', whiteSpace: 'nowrap' }, children: "Publicly" }), (0, jsx_runtime_1.jsx)("span", { className: "pm-wrap-safe", style: { fontSize: 15.5, lineHeight: 1.6,
-                                                                            fontStyle: 'italic', flex: '1 1 200px' }, children: interaction.chain.did })] })] })] }), (0, jsx_runtime_1.jsx)("div", { style: { borderLeft: `3px solid ${ui_theme_mjs_1.T.gold}`, paddingLeft: 20 }, children: (0, jsx_runtime_1.jsx)("p", { className: "pm-quote pm-measure", style: { fontStyle: 'normal' }, children: interaction.chain.verdict }) }), (0, jsx_runtime_1.jsx)("div", { children: (0, jsx_runtime_1.jsx)(Cta, { onClick: () => act({ type: continueAction, beatId: beat.id }), arrow: true, children: "Continue" }) })] }), interaction.phase === game_session_mjs_1.PHASES.ELECTION_RESULT && (0, jsx_runtime_1.jsxs)(jsx_runtime_1.Fragment, { children: [(0, jsx_runtime_1.jsx)(DocLabel, { document: "Declaration of the poll", aside: interaction.election.office, gold: true }), (0, jsx_runtime_1.jsxs)("div", { className: "pm-plate", style: (0, ui_theme_mjs_1.column)(26), children: [(0, jsx_runtime_1.jsxs)("div", { style: { ...(0, ui_theme_mjs_1.column)(12), alignItems: 'center', textAlign: 'center' }, children: [(0, jsx_runtime_1.jsxs)(Kicker, { gold: true, children: [interaction.election.office, " \u00B7 age ", interaction.election.age] }), (0, jsx_runtime_1.jsx)("div", { className: "pm-h1", style: { fontSize: 'clamp(38px,7vw,72px)' }, children: interaction.election.won ? 'You won.' : 'You lost.' })] }), (0, jsx_runtime_1.jsx)("div", { style: { ...(0, ui_theme_mjs_1.column)(16), borderTop: `1px solid ${ui_theme_mjs_1.T.rule}`,
-                                                            borderBottom: `1px solid ${ui_theme_mjs_1.T.rule}`, padding: '20px 0' }, children: (interaction.election.spec?.candidates || []).map((entry) => {
-                                                            const share = interaction.election.shares?.[entry.id];
-                                                            if (typeof share !== 'number')
-                                                                return null;
-                                                            const mine = entry.id === 'PLAYER';
-                                                            const votes = interaction.election.tally?.[entry.id];
-                                                            const name = mine ? session.player.name
-                                                                : `${content_mjs_1.BLOCS[entry.bloc]?.name || 'Opposition'} candidate`;
-                                                            return (0, jsx_runtime_1.jsxs)("div", { className: "pm-cand-row", children: [(0, jsx_runtime_1.jsxs)("div", { style: (0, ui_theme_mjs_1.column)(7), children: [(0, jsx_runtime_1.jsxs)("div", { className: "pm-cand-name", children: [(0, jsx_runtime_1.jsx)("span", { className: "pm-dot", style: { background: (0, ui_theme_mjs_1.blocDot)(entry.bloc) } }), (0, jsx_runtime_1.jsx)("span", { style: { fontSize: 15, fontWeight: mine ? 600 : 400 }, children: name })] }), (0, jsx_runtime_1.jsx)("div", { style: { height: 13, background: 'var(--pm-inset)' }, "aria-hidden": "true", children: (0, jsx_runtime_1.jsx)("div", { style: { width: `${share * 100}%`, height: 13,
-                                                                                        background: mine ? ui_theme_mjs_1.T.ink : ui_theme_mjs_1.T.chrome } }) })] }), (0, jsx_runtime_1.jsxs)("div", { className: "pm-cand-figs", children: [(0, jsx_runtime_1.jsxs)("div", { className: "pm-cand-share", style: { fontWeight: mine ? 600 : 400,
-                                                                                    color: mine ? ui_theme_mjs_1.T.ink : ui_theme_mjs_1.T.ink3 }, children: [(share * 100).toFixed(2), "%"] }), typeof votes === 'number' && (0, jsx_runtime_1.jsxs)("div", { className: "pm-tnum", style: { fontSize: 12.5, color: ui_theme_mjs_1.T.ink3, marginTop: 3 }, children: [votes.toLocaleString('en-GB'), " votes"] })] })] }, entry.id);
-                                                        }) }), (0, jsx_runtime_1.jsxs)("div", { className: "pm-plate-figs", children: [(0, jsx_runtime_1.jsx)(Fig, { label: "Turnout", value: pct(interaction.election.turnout), size: 26 }), (0, jsx_runtime_1.jsx)(Fig, { label: "Approval", value: pct(interaction.election.approval), size: 26 }), (0, jsx_runtime_1.jsx)(Fig, { label: "Your share", value: pct(interaction.election.share), size: 26 }), (0, jsx_runtime_1.jsx)("div", { style: { marginLeft: 'auto' }, children: (0, jsx_runtime_1.jsx)(Cta, { onClick: () => act({ type: continueAction, beatId: beat.id }), arrow: true, children: "Continue" }) })] })] })] }), errorLine] }), (0, jsx_runtime_1.jsx)(Rail, { interaction: interaction, session: session })] }) }), showProfile && (0, jsx_runtime_1.jsx)(Profile, { abilities: interaction.publicState.abilities, age: interaction.publicState.age, onClose: () => setShowProfile(false) })] });
-}
+  // pilot/app.jsx
+  var import_react3 = __toESM(require_react(), 1);
 
-}],
-"src/abilities.mjs": [{},function(module,exports,require){
-"use strict";
-// Political Mirror — political ability system (v0.35 prototype).
-//
-// Layer discipline. These four things are kept separate on purpose:
-//   ABILITIES  (here)      what the politician is personally capable of executing
-//   RESOURCES  (game st)   funds / capital / standing / recognition / independence
-//   REPUTATION (electorate) what 700 simulated voters currently believe
-//   MIRROR     (player log) patterns inferred from the human's own judgments
-//
-// NON-NEGOTIABLE: nothing in this file may touch the Mirror. Abilities change what a
-// politician can execute and which options exist. They never touch the credence the
-// human states, the coded feature vector of a choice, or anything analysePlayer reads.
-// There is a test asserting a min-ability and a max-ability run produce identical
-// Mirror output from the same choices.
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.MOMENTUM_THRESHOLD = exports.BACKGROUND_ABILITIES = exports.ABILITY_IDS = exports.ABILITIES = exports.ABILITY_MAX = exports.ABILITY_MIN = void 0;
-exports.tierOf = tierOf;
-exports.rollAptitude = rollAptitude;
-exports.makeAbilities = makeAbilities;
-exports.costToRaise = costToRaise;
-exports.hasMomentum = hasMomentum;
-exports.growthHint = growthHint;
-exports.raise = raise;
-exports.addExperience = addExperience;
-exports.grantPoints = grantPoints;
-exports.check = check;
-exports.forecastText = forecastText;
-exports.mobilisationMultiplier = mobilisationMultiplier;
-exports.recognitionGain = recognitionGain;
-exports.negotiationDiscount = negotiationDiscount;
-exports.meets = meets;
-exports.unmetReason = unmetReason;
-exports.splitBudget = splitBudget;
-exports.focusOutcomeText = focusOutcomeText;
-exports.applyFocus = applyFocus;
-// ── Scale ───────────────────────────────────────────────────────────────────
-// 20–80, kept from the scouting convention. 50 is competent, 80 is exceptional and
-// nobody reaches it in more than one thing. A 0–100 scale invites reading "58" as a
-// percentage of something; 20–80 reads as a rating, which is what it is.
-exports.ABILITY_MIN = 20;
-exports.ABILITY_MAX = 80;
-exports.ABILITIES = [
-    { id: 'COMM', name: 'Public Communication', short: 'Communication',
-        does: 'Speeches, debates, press conferences, live town halls. How well a public statement lands, and how fast people come to know who you are.' },
-    { id: 'POLICY', name: 'Policy & Governance', short: 'Policy',
-        does: 'Drafting, delivery and administration. Whether what you promised actually works, and whether technical options are open to you at all.' },
-    { id: 'ORG', name: 'Organization', short: 'Organization',
-        does: 'Field operation, volunteers, canvassing, turnout. Converts money and party standing into people who actually vote.' },
-    { id: 'NEG', name: 'Negotiation', short: 'Negotiation',
-        does: 'Party bargaining, coalitions, legislative deals. What it costs you to get other people to move.' },
-    { id: 'STRAT', name: 'Political Strategy', short: 'Strategy',
-        does: 'Reading the position. Better internal information, sharper forecasts, steadier judgment when everything is on fire.' },
-];
-exports.ABILITY_IDS = exports.ABILITIES.map((a) => a.id);
-function tierOf(v) {
-    if (v >= 75)
-        return 'exceptional';
-    if (v >= 65)
-        return 'elite';
-    if (v >= 57)
-        return 'strong';
-    if (v >= 47)
-        return 'competent';
-    if (v >= 37)
-        return 'developing';
-    if (v >= 28)
-        return 'weak';
-    return 'very weak';
-}
-// renamed to avoid colliding with engine.mjs when both are inlined into the artifact
-const abClamp = (x, lo, hi) => (x < lo ? lo : x > hi ? hi : x);
-// ── Backgrounds ─────────────────────────────────────────────────────────────
-// Each background sets a starting profile AND weights which ability is likely to draw
-// the hidden signature aptitude. Weights, not guarantees: two organisers are not the
-// same person, which is what makes a re-roll worth doing.
-exports.BACKGROUND_ABILITIES = {
+  // pilot/game-ui.jsx
+  var import_react = __toESM(require_react(), 1);
+
+  // src/abilities.mjs
+  var ABILITY_MIN = 20;
+  var ABILITY_MAX = 80;
+  var ABILITIES = [
+    {
+      id: "COMM",
+      name: "Public Communication",
+      short: "Communication",
+      does: "Speeches, debates, press conferences, live town halls. How well a public statement lands, and how fast people come to know who you are."
+    },
+    {
+      id: "POLICY",
+      name: "Policy & Governance",
+      short: "Policy",
+      does: "Drafting, delivery and administration. Whether what you promised actually works, and whether technical options are open to you at all."
+    },
+    {
+      id: "ORG",
+      name: "Organization",
+      short: "Organization",
+      does: "Field operation, volunteers, canvassing, turnout. Converts money and party standing into people who actually vote."
+    },
+    {
+      id: "NEG",
+      name: "Negotiation",
+      short: "Negotiation",
+      does: "Party bargaining, coalitions, legislative deals. What it costs you to get other people to move."
+    },
+    {
+      id: "STRAT",
+      name: "Political Strategy",
+      short: "Strategy",
+      does: "Reading the position. Better internal information, sharper forecasts, steadier judgment when everything is on fire."
+    }
+  ];
+  var ABILITY_IDS = ABILITIES.map((a) => a.id);
+  function tierOf(v) {
+    if (v >= 75) return "exceptional";
+    if (v >= 65) return "elite";
+    if (v >= 57) return "strong";
+    if (v >= 47) return "competent";
+    if (v >= 37) return "developing";
+    if (v >= 28) return "weak";
+    return "very weak";
+  }
+  var abClamp = (x, lo, hi) => x < lo ? lo : x > hi ? hi : x;
+  var BACKGROUND_ABILITIES = {
     STAFF: {
-        label: 'Legislative staffer',
-        base: { COMM: 36, POLICY: 52, ORG: 40, NEG: 54, STRAT: 50 },
-        talent: { COMM: 0.6, POLICY: 1.3, ORG: 0.7, NEG: 1.5, STRAT: 1.4 },
-        note: 'You know how a bill actually moves and who has to be asked. You have never had to hold a room.',
+      label: "Legislative staffer",
+      base: { COMM: 36, POLICY: 52, ORG: 40, NEG: 54, STRAT: 50 },
+      talent: { COMM: 0.6, POLICY: 1.3, ORG: 0.7, NEG: 1.5, STRAT: 1.4 },
+      note: "You know how a bill actually moves and who has to be asked. You have never had to hold a room."
     },
     CIVIC: {
-        label: 'Community organiser',
-        base: { COMM: 53, POLICY: 36, ORG: 56, NEG: 42, STRAT: 43 },
-        talent: { COMM: 1.5, POLICY: 0.6, ORG: 1.6, NEG: 0.8, STRAT: 0.9 },
-        note: 'You can fill a hall and knock a ward. Nobody in the building owes you a favour and you have never drafted anything.',
+      label: "Community organiser",
+      base: { COMM: 53, POLICY: 36, ORG: 56, NEG: 42, STRAT: 43 },
+      talent: { COMM: 1.5, POLICY: 0.6, ORG: 1.6, NEG: 0.8, STRAT: 0.9 },
+      note: "You can fill a hall and knock a ward. Nobody in the building owes you a favour and you have never drafted anything."
     },
     PROF: {
-        label: 'Municipal auditor',
-        base: { COMM: 38, POLICY: 57, ORG: 39, NEG: 45, STRAT: 51 },
-        talent: { COMM: 0.6, POLICY: 1.6, ORG: 0.6, NEG: 0.9, STRAT: 1.3 },
-        note: 'You can read a procurement file faster than anyone in the chamber. You are not who they send to the doorstep.',
-    },
-};
-// ── Natural aptitude ────────────────────────────────────────────────────────
-// Natural aptitude: the range each ability develops within comfortably. It is NOT a
-// wall. A politician can work past their natural range, it simply costs far more time
-// than it is usually worth — which is how a player comes to feel where their limits are
-// without ever being shown a number.
-//
-// With only five abilities the ranges must be concentrated, the way YaKyoLife tightens a
-// pitcher's four ceilings rather than using the nine-ability spread. Every life gets one
-// signature aptitude, one strong, two ordinary and one narrow. The narrow one is the
-// point: it forces a real trade-off and makes the next life mechanically different.
-const APTITUDE_BANDS = [
-    { key: 'signature', lo: 70, hi: 80 },
-    { key: 'strong', lo: 58, hi: 68 },
-    { key: 'ordinary', lo: 48, hi: 60 },
-    { key: 'ordinary2', lo: 48, hi: 60 },
-    { key: 'narrow', lo: 38, hi: 50 },
-];
-// Weighted draw without replacement, so background bias shapes but never dictates.
-function weightedOrder(rng, weights) {
-    const pool = exports.ABILITY_IDS.map((id) => ({ id, w: Math.max(0.05, weights[id] ?? 1) }));
+      label: "Municipal auditor",
+      base: { COMM: 38, POLICY: 57, ORG: 39, NEG: 45, STRAT: 51 },
+      talent: { COMM: 0.6, POLICY: 1.6, ORG: 0.6, NEG: 0.9, STRAT: 1.3 },
+      note: "You can read a procurement file faster than anyone in the chamber. You are not who they send to the doorstep."
+    }
+  };
+  var APTITUDE_BANDS = [
+    { key: "signature", lo: 70, hi: 80 },
+    { key: "strong", lo: 58, hi: 68 },
+    { key: "ordinary", lo: 48, hi: 60 },
+    { key: "ordinary2", lo: 48, hi: 60 },
+    { key: "narrow", lo: 38, hi: 50 }
+  ];
+  function weightedOrder(rng, weights) {
+    const pool = ABILITY_IDS.map((id) => ({ id, w: Math.max(0.05, weights[id] ?? 1) }));
     const out = [];
     while (pool.length) {
-        let total = 0;
-        for (const p of pool)
-            total += p.w;
-        let r = rng.float() * total, i = 0;
-        while (i < pool.length - 1 && r > pool[i].w) {
-            r -= pool[i].w;
-            i++;
-        }
-        out.push(pool[i].id);
-        pool.splice(i, 1);
+      let total = 0;
+      for (const p of pool) total += p.w;
+      let r = rng.float() * total, i = 0;
+      while (i < pool.length - 1 && r > pool[i].w) {
+        r -= pool[i].w;
+        i++;
+      }
+      out.push(pool[i].id);
+      pool.splice(i, 1);
     }
     return out;
-}
-function rollAptitude(rng, backgroundId) {
-    const bg = exports.BACKGROUND_ABILITIES[backgroundId] || exports.BACKGROUND_ABILITIES.STAFF;
+  }
+  function rollAptitude(rng, backgroundId) {
+    const bg = BACKGROUND_ABILITIES[backgroundId] || BACKGROUND_ABILITIES.STAFF;
     const order = weightedOrder(rng, bg.talent);
-    // The hard limit is placed on whichever of the lower-drawn abilities the character is
-    // already weakest at. Otherwise a limit could land on something the background starts
-    // strong in, the sanity clamp would lift it, and the guaranteed weakness would vanish.
     const tail = order.slice(2);
-    const narrowId = tail.reduce((lo, id) => (bg.base[id] < bg.base[lo] ? id : lo), tail[0]);
+    const narrowId = tail.reduce((lo, id) => bg.base[id] < bg.base[lo] ? id : lo, tail[0]);
     const rest = order.filter((id) => id !== narrowId);
     const apt = {};
     const bands = {};
     rest.forEach((id, i) => {
-        const b = APTITUDE_BANDS[i];
-        apt[id] = Math.round(b.lo + rng.float() * (b.hi - b.lo));
-        bands[id] = b.key;
+      const b = APTITUDE_BANDS[i];
+      apt[id] = Math.round(b.lo + rng.float() * (b.hi - b.lo));
+      bands[id] = b.key;
     });
     const lb = APTITUDE_BANDS[APTITUDE_BANDS.length - 1];
     apt[narrowId] = Math.round(lb.lo + rng.float() * (lb.hi - lb.lo));
     bands[narrowId] = lb.key;
-    // An aptitude range that sits below where you already are would be nonsense.
-    for (const id of exports.ABILITY_IDS)
-        apt[id] = abClamp(apt[id], bg.base[id] + 2, exports.ABILITY_MAX);
+    for (const id of ABILITY_IDS) apt[id] = abClamp(apt[id], bg.base[id] + 2, ABILITY_MAX);
     return { aptitude: apt, bands };
-}
-function makeAbilities(rng, backgroundId) {
-    const bg = exports.BACKGROUND_ABILITIES[backgroundId] || exports.BACKGROUND_ABILITIES.STAFF;
+  }
+  function makeAbilities(rng, backgroundId) {
+    const bg = BACKGROUND_ABILITIES[backgroundId] || BACKGROUND_ABILITIES.STAFF;
     const { aptitude, bands } = rollAptitude(rng, backgroundId);
     const value = {};
     const xp = {};
-    for (const id of exports.ABILITY_IDS) {
-        // A couple of points of noise so two staffers are not identical.
-        value[id] = abClamp(bg.base[id] + Math.round(rng.range(-3, 3)), exports.ABILITY_MIN, exports.ABILITY_MAX);
-        xp[id] = 0;
+    for (const id of ABILITY_IDS) {
+      value[id] = abClamp(bg.base[id] + Math.round(rng.range(-3, 3)), ABILITY_MIN, ABILITY_MAX);
+      xp[id] = 0;
     }
     return { value, aptitude, bands, xp, dp: 0, history: {}, spent: 0 };
-}
-// ── Cost curve ──────────────────────────────────────────────────────────────
-// Cheap while developing, expensive at the top, and doubled once you are working past
-// your natural range — expensive, never forbidden. This is how a player comes to feel
-// where their aptitude sits without ever being shown the number.
-function costToRaise(ab, id) {
+  }
+  function costToRaise(ab, id) {
     const v = ab.value[id];
-    if (v >= exports.ABILITY_MAX)
-        return null; // hard cap
+    if (v >= ABILITY_MAX) return null;
     let c = v < 50 ? 1 : v < 60 ? 2 : v < 70 ? 3 : 4;
-    if (v >= ab.aptitude[id])
-        c *= 2;
-    if (hasMomentum(ab, id))
-        c = Math.max(1, c - 1); // recent experience discounts the next point
+    if (v >= ab.aptitude[id]) c *= 2;
+    if (hasMomentum(ab, id)) c = Math.max(1, c - 1);
     return c;
-}
-exports.MOMENTUM_THRESHOLD = 3;
-function hasMomentum(ab, id) { return (ab.xp[id] || 0) >= exports.MOMENTUM_THRESHOLD; }
-// What the profile screen may say about difficulty. Never states the number.
-function growthHint(ab, id) {
+  }
+  var MOMENTUM_THRESHOLD = 3;
+  function hasMomentum(ab, id) {
+    return (ab.xp[id] || 0) >= MOMENTUM_THRESHOLD;
+  }
+  function growthHint(ab, id) {
     const v = ab.value[id];
-    if (v >= exports.ABILITY_MAX)
-        return 'There is nothing left to learn here.';
-    if (v >= ab.aptitude[id] + 6)
-        return 'You are working a long way past what comes naturally to you. It can be done. It costs years.';
-    if (v >= ab.aptitude[id])
-        return 'You are past the range this comes to you easily. Every further step is expensive.';
-    if (v >= ab.aptitude[id] - 5)
-        return 'You are near the top of what comes naturally here.';
-    return hasMomentum(ab, id) ? 'Recent experience is making this easier.' : 'There is room here.';
-}
-function raise(ab, id, times = 1) {
+    if (v >= ABILITY_MAX) return "There is nothing left to learn here.";
+    if (v >= ab.aptitude[id] + 6) return "You are working a long way past what comes naturally to you. It can be done. It costs years.";
+    if (v >= ab.aptitude[id]) return "You are past the range this comes to you easily. Every further step is expensive.";
+    if (v >= ab.aptitude[id] - 5) return "You are near the top of what comes naturally here.";
+    return hasMomentum(ab, id) ? "Recent experience is making this easier." : "There is room here.";
+  }
+  function raise(ab, id, times = 1) {
     for (let i = 0; i < times; i++) {
-        const c = costToRaise(ab, id);
-        if (c === null || ab.dp < c)
-            return false;
-        ab.dp -= c;
-        ab.spent += c;
-        ab.value[id] = abClamp(ab.value[id] + 1, exports.ABILITY_MIN, exports.ABILITY_MAX);
-        if (hasMomentum(ab, id))
-            ab.xp[id] = Math.max(0, ab.xp[id] - exports.MOMENTUM_THRESHOLD);
+      const c = costToRaise(ab, id);
+      if (c === null || ab.dp < c) return false;
+      ab.dp -= c;
+      ab.spent += c;
+      ab.value[id] = abClamp(ab.value[id] + 1, ABILITY_MIN, ABILITY_MAX);
+      if (hasMomentum(ab, id)) ab.xp[id] = Math.max(0, ab.xp[id] - MOMENTUM_THRESHOLD);
     }
     return true;
-}
-// ── Experience ──────────────────────────────────────────────────────────────
-// Experience comes from doing political things, and losing is doing a political thing.
-// It is never awarded for choosing a morally approved option — only for the kind of
-// work the beat involved.
-function addExperience(ab, tags, label) {
+  }
+  function addExperience(ab, tags, label2) {
     for (const id of tags) {
-        if (!exports.ABILITY_IDS.includes(id))
-            continue;
-        ab.xp[id] = (ab.xp[id] || 0) + 1;
-        (ab.history[id] ||= []).push(label);
-        if (ab.history[id].length > 6)
-            ab.history[id].shift();
+      if (!ABILITY_IDS.includes(id)) continue;
+      ab.xp[id] = (ab.xp[id] || 0) + 1;
+      (ab.history[id] ||= []).push(label2);
+      if (ab.history[id].length > 6) ab.history[id].shift();
     }
     return ab;
-}
-function grantPoints(ab, n, reason) {
+  }
+  function grantPoints(ab, n, reason) {
     ab.dp += n;
     (ab.history._grants ||= []).push({ n, reason });
     return ab;
-}
-// ── Checks ──────────────────────────────────────────────────────────────────
-// Execution quality, not moral quality. The player picked the strategy; this decides
-// how well the politician pulls it off. Deterministic from the supplied rng.
-function check(ab, id, dc, rng, opts = {}) {
-    const pressure = opts.pressure || 0; // crisis beats raise the bar
-    const relief = Math.round(((ab.value.STRAT - 50) / 10) * 2); // Strategy steadies you
+  }
+  function check(ab, id, dc, rng, opts = {}) {
+    const pressure = opts.pressure || 0;
+    const relief = Math.round((ab.value.STRAT - 50) / 10 * 2);
     const effDc = dc + pressure - Math.max(0, relief) * (pressure > 0 ? 1 : 0);
-    // Wider noise than the ability gap so execution reads as a performance rather than a
-    // lookup: a merely competent speaker can still have a good night, and a strong one a bad one.
     const margin = ab.value[id] - effDc + Math.round(rng.range(-16, 16));
-    const grade = margin >= 10 ? 'excellent' : margin >= 0 ? 'solid' : margin >= -12 ? 'poor' : 'botched';
+    const grade = margin >= 10 ? "excellent" : margin >= 0 ? "solid" : margin >= -12 ? "poor" : "botched";
     const scale = { excellent: 1.35, solid: 1.05, poor: 0.65, botched: 0.35 }[grade];
     return { grade, margin, scale, effDc, ok: margin >= 0 };
-}
-// Strategy buys information, not win probability. Same election either way; a
-// well-advised campaign simply knows more about what it is walking into.
-function forecastText(ab, share, turnoutShare) {
-    const s = ab.value.STRAT;
-    const band = share > 0.56 ? 'STRONG' : share > 0.505 ? 'COMPETITIVE'
-        : share > 0.45 ? 'UNDERDOG' : 'LONG SHOT';
-    if (s < 45)
-        return { band, detail: null };
-    if (s < 58)
-        return { band, detail: 'Your campaign thinks it is closer than the mood in the room suggests.' };
-    const side = share >= 0.5 ? 'narrowly ahead' : 'slightly behind';
-    return { band, detail: `Your team puts you ${side}. They believe turnout among unaligned voters is the main uncertainty, and that roughly ${Math.round(turnoutShare * 100)}% of the electorate will actually vote.` };
-}
-// Organization turns money and party standing into an actual field operation.
-function mobilisationMultiplier(ab) {
-    return abClamp(0.45 + (ab.value.ORG - 40) * 0.030, 0.45, 1.85);
-}
-// Communication decides how quickly the public comes to know who you are.
-function recognitionGain(ab, base) {
+  }
+  function mobilisationMultiplier(ab) {
+    return abClamp(0.45 + (ab.value.ORG - 40) * 0.03, 0.45, 1.85);
+  }
+  function recognitionGain(ab, base) {
     return base * abClamp(0.5 + (ab.value.COMM - 40) * 0.02, 0.5, 1.6);
-}
-// Negotiation discounts what party support costs you.
-function negotiationDiscount(ab) {
-    return abClamp(1.25 - (ab.value.NEG - 40) * 0.012, 0.55, 1.25);
-}
-function meets(ab, req) {
-    if (!req)
-        return true;
-    for (const [id, v] of Object.entries(req))
-        if ((ab.value[id] ?? 0) < v)
-            return false;
+  }
+  function meets(ab, req) {
+    if (!req) return true;
+    for (const [id, v] of Object.entries(req)) if ((ab.value[id] ?? 0) < v) return false;
     return true;
-}
-function unmetReason(ab, req) {
+  }
+  function unmetReason(ab, req) {
     for (const [id, v] of Object.entries(req || {})) {
-        if ((ab.value[id] ?? 0) < v) {
-            const a = exports.ABILITIES.find((x) => x.id === id);
-            return `${a ? a.name : id} ${ab.value[id]} — this needs about ${v}.`;
-        }
+      if ((ab.value[id] ?? 0) < v) {
+        const a = ABILITIES.find((x) => x.id === id);
+        return `${a ? a.name : id} ${ab.value[id]} \u2014 this needs about ${v}.`;
+      }
     }
     return null;
-}
-// ── Diegetic development ────────────────────────────────────────────────────
-// The player never allocates points. They choose where a stretch of their life goes,
-// and the arithmetic happens underneath. A primary focus takes most of the period; a
-// secondary gets whatever evenings are left.
-//
-// What the player sees afterwards is how much came back out of the work, which is the
-// only honest way to communicate natural aptitude: pouring two years into something you
-// have no feel for visibly returns almost nothing.
-function splitBudget(total) {
+  }
+  function splitBudget(total) {
     const primary = Math.max(1, Math.ceil(total * 0.65));
     return { primary, secondary: Math.max(0, total - primary) };
-}
-function spendUpTo(ab, id, budget) {
+  }
+  function spendUpTo(ab, id, budget) {
     const from = ab.value[id];
     let left = budget, guard = 0;
     while (left > 0 && guard++ < 40) {
-        const c = costToRaise(ab, id);
-        if (c === null || c > left)
-            break;
-        const before = ab.value[id];
-        ab.dp += c; // the focus screen supplies its own budget
-        raise(ab, id);
-        if (ab.value[id] === before) {
-            ab.dp -= c;
-            break;
-        }
-        left -= c;
+      const c = costToRaise(ab, id);
+      if (c === null || c > left) break;
+      const before = ab.value[id];
+      ab.dp += c;
+      raise(ab, id);
+      if (ab.value[id] === before) {
+        ab.dp -= c;
+        break;
+      }
+      left -= c;
     }
     return { from, to: ab.value[id], gained: ab.value[id] - from, spent: budget - left };
-}
-// How the years felt. This is the aptitude reveal, in prose, without a number.
-function focusOutcomeText(gained, spent) {
-    if (spent === 0)
-        return 'There was not really time for it.';
-    if (gained === 0)
-        return 'The work went in. Very little came back out.';
-    if (gained === 1)
-        return 'Slow going, but something stuck.';
-    if (gained === 2)
-        return 'It came along steadily.';
-    return 'It came easily. Some things do.';
-}
-function applyFocus(ab, primaryId, secondaryId, total) {
+  }
+  function focusOutcomeText(gained, spent) {
+    if (spent === 0) return "There was not really time for it.";
+    if (gained === 0) return "The work went in. Very little came back out.";
+    if (gained === 1) return "Slow going, but something stuck.";
+    if (gained === 2) return "It came along steadily.";
+    return "It came easily. Some things do.";
+  }
+  function applyFocus(ab, primaryId, secondaryId, total) {
     const { primary, secondary } = splitBudget(total);
     const byId = (fid, list) => list.find((f) => f.id === fid);
     const out = { primary: null, secondary: null };
     const carry = ab.dp;
     ab.dp = 0;
-    if (primaryId)
-        out.primary = { focus: primaryId, ...spendUpTo(ab, primaryId, primary) };
-    if (secondaryId && secondary > 0)
-        out.secondary = { focus: secondaryId, ...spendUpTo(ab, secondaryId, secondary) };
-    ab.dp = carry; // unspent milestone budget does not bank; only prior carry survives
+    if (primaryId) out.primary = { focus: primaryId, ...spendUpTo(ab, primaryId, primary) };
+    if (secondaryId && secondary > 0) out.secondary = { focus: secondaryId, ...spendUpTo(ab, secondaryId, secondary) };
+    ab.dp = carry;
     return out;
-}
+  }
 
-}],
-"src/engine.mjs": [{"./det-math.mjs":"src/det-math.mjs"},function(module,exports,require){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CF_MOMENT_BAND = exports.CF_BAND = exports.CF_CONDITIONS = exports.CRED_LABEL = exports.STAKE_GAIN = exports.BLOC_LABELS = exports.FAMILY_LABEL = exports.FAMILIES = exports.PARAMS = exports.sigmoid = exports.q6 = void 0;
-exports.seedFromString = seedFromString;
-exports.makeRng = makeRng;
-exports.deriveSeed = deriveSeed;
-exports.updateBelief = updateBelief;
-exports.ageBelief = ageBelief;
-exports.makeElectorate = makeElectorate;
-exports.seedBeliefs = seedBeliefs;
-exports.blocsOf = blocsOf;
-exports.applyEvent = applyEvent;
-exports.actionSignals = actionSignals;
-exports.choiceLiability = choiceLiability;
-exports.liabilityReckoning = liabilityReckoning;
-exports.chainVerdict = chainVerdict;
-exports.meanBeliefWhere = meanBeliefWhere;
-exports.meanBelief = meanBelief;
-exports.meanPrecision = meanPrecision;
-exports.approvalOf = approvalOf;
-exports.ageElectorate = ageElectorate;
-exports.runElection = runElection;
-exports.analysePlayer = analysePlayer;
-exports.mirrorResolution = mirrorResolution;
-exports.crossMirror = crossMirror;
-exports.checklist = checklist;
-exports.makeTape = makeTape;
-exports.tapeEvent = tapeEvent;
-exports.tapeElection = tapeElection;
-exports.tapeAge = tapeAge;
-exports.buildInitialWorld = buildInitialWorld;
-exports.replayCareer = replayCareer;
-exports.counterfactualAudit = counterfactualAudit;
-exports.choiceAvailability = choiceAvailability;
-exports.payCost = payCost;
-// Political Mirror — vertical slice engine
-// Pure. No DOM, no React, no Date.now(). Testable in Node, inlined into the artifact by build.mjs.
-// Transcendentals come from det-math.mjs: Math.exp/log/tanh/** are engine-defined in their
-// last bit and broke browser/headless hash parity (v0.37.2, action 27 of POL-M7GX4).
-const det_math_mjs_1 = require("./det-math.mjs");
-// ─────────────────────────────── RNG ───────────────────────────────
-// xoshiro128** with splitmix32 seeding. Integer state, serialisable.
-const rotl = (x, k) => ((x << k) | (x >>> (32 - k))) >>> 0;
-function seedFromString(str) {
+  // src/det-math.mjs
+  var bits = new DataView(new ArrayBuffer(8));
+  function highWord(x) {
+    bits.setFloat64(0, x);
+    return bits.getUint32(0);
+  }
+  function lowWord(x) {
+    bits.setFloat64(0, x);
+    return bits.getUint32(4);
+  }
+  function fromWords(hi, lo) {
+    bits.setUint32(0, hi >>> 0);
+    bits.setUint32(4, lo >>> 0);
+    return bits.getFloat64(0);
+  }
+  function withHighWord(x, hi) {
+    bits.setFloat64(0, x);
+    bits.setUint32(0, hi >>> 0);
+    return bits.getFloat64(0);
+  }
+  var HUGE = 1e300;
+  var TINY = 1e-300;
+  var LN2_HI = 0.6931471803691238;
+  var LN2_LO = 19082149292705877e-26;
+  var INV_LN2 = 1.4426950408889634;
+  var O_THRESHOLD = 709.782712893384;
+  var U_THRESHOLD = -745.1332191019411;
+  var TWO_M1000 = 9332636185032189e-317;
+  var TWO_P1023 = 898846567431158e293;
+  var TWO54 = 18014398509481984;
+  var EXP_P1 = 0.16666666666666602;
+  var EXP_P2 = -0.0027777777777015593;
+  var EXP_P3 = 6613756321437934e-20;
+  var EXP_P4 = -16533902205465252e-22;
+  var EXP_P5 = 41381367970572385e-24;
+  function detExp(x) {
+    let hx = highWord(x);
+    const xsb = hx >>> 31 & 1;
+    hx &= 2147483647;
+    if (hx >= 1082535490) {
+      if (hx >= 2146435072) {
+        if ((hx & 1048575 | lowWord(x)) !== 0) return x + x;
+        return xsb === 0 ? x : 0;
+      }
+      if (x > O_THRESHOLD) return HUGE * HUGE;
+      if (x < U_THRESHOLD) return TWO_M1000 * TWO_M1000;
+    }
+    let k = 0, hi = 0, lo = 0;
+    if (hx > 1071001154) {
+      if (hx < 1072734898) {
+        hi = x - (xsb === 0 ? LN2_HI : -LN2_HI);
+        lo = xsb === 0 ? LN2_LO : -LN2_LO;
+        k = 1 - xsb - xsb;
+      } else {
+        k = Math.trunc(INV_LN2 * x + (xsb === 0 ? 0.5 : -0.5));
+        const t2 = k;
+        hi = x - t2 * LN2_HI;
+        lo = t2 * LN2_LO;
+      }
+      x = hi - lo;
+    } else if (hx < 1043333120) {
+      return 1 + x;
+    }
+    const t = x * x;
+    const c = x - t * (EXP_P1 + t * (EXP_P2 + t * (EXP_P3 + t * (EXP_P4 + t * EXP_P5))));
+    if (k === 0) return 1 - (x * c / (c - 2) - x);
+    const y = 1 - (lo - x * c / (2 - c) - hi);
+    if (k >= -1021) {
+      if (k === 1024) return y * 2 * TWO_P1023;
+      return y * fromWords(1023 + k << 20, 0);
+    }
+    return y * fromWords(1023 + (k + 1e3) << 20, 0) * TWO_M1000;
+  }
+  var EM1_Q1 = -0.03333333333333313;
+  var EM1_Q2 = 0.0015873015872548146;
+  var EM1_Q3 = -793650757867488e-19;
+  var EM1_Q4 = 4008217827329362e-21;
+  var EM1_Q5 = -20109921818362437e-23;
+  function detExpm1(x) {
+    let hx = highWord(x);
+    const negative = (hx & 2147483648) !== 0;
+    hx &= 2147483647;
+    if (hx >= 1078159482) {
+      if (hx >= 1082535490) {
+        if (hx >= 2146435072) {
+          if ((hx & 1048575 | lowWord(x)) !== 0) return x + x;
+          return negative ? -1 : x;
+        }
+        if (x > O_THRESHOLD) return HUGE * HUGE;
+      }
+      if (negative) return TINY - 1;
+    }
+    let k = 0, hi, lo, c = 0;
+    if (hx > 1071001154) {
+      if (hx < 1072734898) {
+        if (!negative) {
+          hi = x - LN2_HI;
+          lo = LN2_LO;
+          k = 1;
+        } else {
+          hi = x + LN2_HI;
+          lo = -LN2_LO;
+          k = -1;
+        }
+      } else {
+        k = Math.trunc(INV_LN2 * x + (negative ? -0.5 : 0.5));
+        const t2 = k;
+        hi = x - t2 * LN2_HI;
+        lo = t2 * LN2_LO;
+      }
+      x = hi - lo;
+      c = hi - x - lo;
+    } else if (hx < 1016070144) {
+      return x;
+    }
+    const hfx = 0.5 * x;
+    const hxs = x * hfx;
+    const r1 = 1 + hxs * (EM1_Q1 + hxs * (EM1_Q2 + hxs * (EM1_Q3 + hxs * (EM1_Q4 + hxs * EM1_Q5))));
+    let t = 3 - r1 * hfx;
+    let e = hxs * ((r1 - t) / (6 - x * t));
+    if (k === 0) return x - (x * e - hxs);
+    const twopk = fromWords(1072693248 + (k << 20), 0);
+    e = x * (e - c) - c;
+    e -= hxs;
+    if (k === -1) return 0.5 * (x - e) - 0.5;
+    if (k === 1) {
+      if (x < -0.25) return -2 * (e - (x + 0.5));
+      return 1 + 2 * (x - e);
+    }
+    if (k <= -2 || k > 56) {
+      let y2 = 1 - (e - x);
+      y2 = k === 1024 ? y2 * 2 * TWO_P1023 : y2 * twopk;
+      return y2 - 1;
+    }
+    let y;
+    if (k < 20) {
+      t = fromWords(1072693248 - (2097152 >> k), 0);
+      y = t - (e - x);
+      y = y * twopk;
+    } else {
+      t = fromWords(1023 - k << 20, 0);
+      y = x - (e + t);
+      y += 1;
+      y = y * twopk;
+    }
+    return y;
+  }
+  function detTanh(x) {
+    const jx = highWord(x) | 0;
+    const ix = jx & 2147483647;
+    if (ix >= 2146435072) return jx >= 0 ? 1 / x + 1 : 1 / x - 1;
+    let z;
+    if (ix < 1077280768) {
+      if (ix < 1043333120) return x;
+      if (ix >= 1072693248) {
+        const t = detExpm1(2 * Math.abs(x));
+        z = 1 - 2 / (t + 2);
+      } else {
+        const t = detExpm1(-2 * Math.abs(x));
+        z = -t / (t + 2);
+      }
+    } else {
+      z = 1 - TINY;
+    }
+    return jx >= 0 ? z : -z;
+  }
+  var LG1 = 0.6666666666666735;
+  var LG2 = 0.3999999999940942;
+  var LG3 = 0.2857142874366239;
+  var LG4 = 0.22222198432149784;
+  var LG5 = 0.1818357216161805;
+  var LG6 = 0.15313837699209373;
+  var LG7 = 0.14798198605116586;
+  function detLog(x) {
+    let hx = highWord(x) | 0;
+    const lx = lowWord(x);
+    let k = 0;
+    if (hx < 1048576) {
+      if ((hx & 2147483647 | lx) === 0) return -Infinity;
+      if (hx < 0) return NaN;
+      k -= 54;
+      x *= TWO54;
+      hx = highWord(x) | 0;
+    }
+    if (hx >= 2146435072) return x + x;
+    k += (hx >> 20) - 1023;
+    hx &= 1048575;
+    const i = hx + 614244 & 1048576;
+    x = withHighWord(x, hx | i ^ 1072693248);
+    k += i >> 20;
+    const f = x - 1;
+    if ((1048575 & 2 + hx) < 3) {
+      if (f === 0) {
+        if (k === 0) return 0;
+        return k * LN2_HI + k * LN2_LO;
+      }
+      const R2 = f * f * (0.5 - 0.3333333333333333 * f);
+      if (k === 0) return f - R2;
+      return k * LN2_HI - (R2 - k * LN2_LO - f);
+    }
+    const s = f / (2 + f);
+    const z = s * s;
+    const w = z * z;
+    const t1 = w * (LG2 + w * (LG4 + w * LG6));
+    const t2 = z * (LG1 + w * (LG3 + w * (LG5 + w * LG7)));
+    const R = t2 + t1;
+    const i2 = hx - 398458 | 440401 - hx;
+    if (i2 > 0) {
+      const hfsq = 0.5 * f * f;
+      if (k === 0) return f - (hfsq - s * (hfsq + R));
+      return k * LN2_HI - (hfsq - (s * (hfsq + R) + k * LN2_LO) - f);
+    }
+    if (k === 0) return f - s * (f - R);
+    return k * LN2_HI - (s * (f - R) - k * LN2_LO - f);
+  }
+  var detSquare = (v) => v * v;
+
+  // src/engine.mjs
+  var rotl = (x, k) => (x << k | x >>> 32 - k) >>> 0;
+  function seedFromString(str) {
     let h = 2166136261 >>> 0;
     for (let i = 0; i < str.length; i++) {
-        h ^= str.charCodeAt(i);
-        h = Math.imul(h, 16777619) >>> 0;
+      h ^= str.charCodeAt(i);
+      h = Math.imul(h, 16777619) >>> 0;
     }
     return h >>> 0;
-}
-function makeRng(seedInt) {
+  }
+  function makeRng(seedInt) {
     let z = seedInt >>> 0;
     const sm = () => {
-        z = (z + 0x9e3779b9) >>> 0;
-        let t = z;
-        t = Math.imul(t ^ (t >>> 15), 0x85ebca6b) >>> 0;
-        t = Math.imul(t ^ (t >>> 13), 0xc2b2ae35) >>> 0;
-        return (t ^ (t >>> 16)) >>> 0;
+      z = z + 2654435769 >>> 0;
+      let t = z;
+      t = Math.imul(t ^ t >>> 15, 2246822507) >>> 0;
+      t = Math.imul(t ^ t >>> 13, 3266489909) >>> 0;
+      return (t ^ t >>> 16) >>> 0;
     };
     let s0 = sm(), s1 = sm(), s2 = sm(), s3 = sm();
     const next = () => {
-        const r = Math.imul(rotl(Math.imul(s1, 5) >>> 0, 7), 9) >>> 0;
-        const t = (s1 << 9) >>> 0;
-        s2 = (s2 ^ s0) >>> 0;
-        s3 = (s3 ^ s1) >>> 0;
-        s1 = (s1 ^ s2) >>> 0;
-        s0 = (s0 ^ s3) >>> 0;
-        s2 = (s2 ^ t) >>> 0;
-        s3 = rotl(s3, 11);
-        return r;
+      const r = Math.imul(rotl(Math.imul(s1, 5) >>> 0, 7), 9) >>> 0;
+      const t = s1 << 9 >>> 0;
+      s2 = (s2 ^ s0) >>> 0;
+      s3 = (s3 ^ s1) >>> 0;
+      s1 = (s1 ^ s2) >>> 0;
+      s0 = (s0 ^ s3) >>> 0;
+      s2 = (s2 ^ t) >>> 0;
+      s3 = rotl(s3, 11);
+      return r;
     };
     const float = () => next() / 4294967296;
     return {
-        next, float,
-        range: (a, b) => a + float() * (b - a),
-        int: (n) => next() % n,
-        // Irwin-Hall normal: pure arithmetic, no transcendentals, fully deterministic.
-        normal: () => { let s = 0; for (let i = 0; i < 12; i++)
-            s += float(); return s - 6; },
-        gumbel: () => -(0, det_math_mjs_1.detLog)(-(0, det_math_mjs_1.detLog)(float() + 1e-12) + 1e-12),
-        state: () => [s0, s1, s2, s3],
-        setState: (st) => { s0 = st[0] >>> 0; s1 = st[1] >>> 0; s2 = st[2] >>> 0; s3 = st[3] >>> 0; },
+      next,
+      float,
+      range: (a, b) => a + float() * (b - a),
+      int: (n) => next() % n,
+      // Irwin-Hall normal: pure arithmetic, no transcendentals, fully deterministic.
+      normal: () => {
+        let s = 0;
+        for (let i = 0; i < 12; i++) s += float();
+        return s - 6;
+      },
+      gumbel: () => -detLog(-detLog(float() + 1e-12) + 1e-12),
+      state: () => [s0, s1, s2, s3],
+      setState: (st) => {
+        s0 = st[0] >>> 0;
+        s1 = st[1] >>> 0;
+        s2 = st[2] >>> 0;
+        s3 = st[3] >>> 0;
+      }
     };
-}
-// Derive an independent stream per subsystem. Never share a stream.
-function deriveSeed(root, label) {
-    return (seedFromString(label) ^ Math.imul(root >>> 0, 0x9e3779b9)) >>> 0;
-}
-// Quantise before any threshold comparison (ADR 002).
-const q6 = (x) => Math.round(x * 1e6) / 1e6;
-exports.q6 = q6;
-const clamp = (x, lo, hi) => (x < lo ? lo : x > hi ? hi : x);
-const sigmoid = (z) => 1 / (1 + (0, det_math_mjs_1.detExp)(-z));
-exports.sigmoid = sigmoid;
-// ───────────────────────── Belief representation ─────────────────────────
-// Gaussian in logit space with explicit precision. Formulation F1:
-// severity sets WHAT the evidence says; strength/reliability/diagnosticity/deniability
-// set HOW MUCH to trust it. Nothing appears in both.
-exports.PARAMS = {
-    X_MAX: 3.0, // logit location of a maximal-implication event
-    KAPPA: 0.63, // observation precision scale (calibrated)
+  }
+  function deriveSeed(root, label2) {
+    return (seedFromString(label2) ^ Math.imul(root >>> 0, 2654435769)) >>> 0;
+  }
+  var q6 = (x) => Math.round(x * 1e6) / 1e6;
+  var clamp = (x, lo, hi) => x < lo ? lo : x > hi ? hi : x;
+  var sigmoid = (z) => 1 / (1 + detExp(-z));
+  var PARAMS = {
+    X_MAX: 3,
+    // logit location of a maximal-implication event
+    KAPPA: 0.63,
+    // observation precision scale (calibrated)
     TAU_FLOOR: 0.35,
-    TAU_CEIL: 5.0,
-    Q_VOLATILITY: 0.022, // process noise per year
+    TAU_CEIL: 5,
+    Q_VOLATILITY: 0.022,
+    // process noise per year
     CROWD_LOC: 0.5,
-    KAPPA_CROWD: 0.30,
-    D_SENS_NORM: 0.7, // normative deniability discount
-};
-function updateBelief(belief, xEvent, tauObs) {
+    KAPPA_CROWD: 0.3,
+    D_SENS_NORM: 0.7
+    // normative deniability discount
+  };
+  function updateBelief(belief, xEvent, tauObs) {
     const tau = belief.tau;
-    const K = tauObs / (tau + tauObs);
+    const K2 = tauObs / (tau + tauObs);
     return {
-        mu: clamp(belief.mu + K * (xEvent - belief.mu), -6, 6),
-        tau: clamp(tau + tauObs, exports.PARAMS.TAU_FLOOR, exports.PARAMS.TAU_CEIL),
+      mu: clamp(belief.mu + K2 * (xEvent - belief.mu), -6, 6),
+      tau: clamp(tau + tauObs, PARAMS.TAU_FLOOR, PARAMS.TAU_CEIL)
     };
-}
-// Precision decays with time: people forget, and politicians change.
-// This is what makes newcomers volatile, veterans teflon, and comebacks possible.
-function ageBelief(belief, years) {
-    const inv = 1 / belief.tau + exports.PARAMS.Q_VOLATILITY * years;
-    const pull = Math.min(0.10, 0.012 * years); // slow drift toward the population reference
-    return { mu: belief.mu * (1 - pull), tau: clamp(1 / inv, exports.PARAMS.TAU_FLOOR, exports.PARAMS.TAU_CEIL) };
-}
-// ───────────────────────────── Voter agents ─────────────────────────────
-exports.FAMILIES = ['A', 'B', 'C', 'D'];
-exports.FAMILY_LABEL = {
-    A: 'Weighs the evidence',
-    B: 'Rejects inconvenient evidence',
-    C: 'Accepts it, discounts what it means',
-    D: 'Distrusts the messenger',
-};
-// A is the plurality by design; D smallest because it is the rival explanation.
-const FAMILY_MIX = [['A', 0.35], ['B', 0.25], ['C', 0.22], ['D', 0.18]];
-function drawFamily(u) {
+  }
+  function ageBelief(belief, years) {
+    const inv = 1 / belief.tau + PARAMS.Q_VOLATILITY * years;
+    const pull = Math.min(0.1, 0.012 * years);
+    return { mu: belief.mu * (1 - pull), tau: clamp(1 / inv, PARAMS.TAU_FLOOR, PARAMS.TAU_CEIL) };
+  }
+  var FAMILIES = ["A", "B", "C", "D"];
+  var FAMILY_MIX = [["A", 0.35], ["B", 0.25], ["C", 0.22], ["D", 0.18]];
+  function drawFamily(u) {
     let acc = 0;
     for (const [f, p] of FAMILY_MIX) {
-        acc += p;
-        if ((0, exports.q6)(u) < (0, exports.q6)(acc))
-            return f;
+      acc += p;
+      if (q6(u) < q6(acc)) return f;
     }
-    return 'D';
-}
-function makeElectorate(rng, n, blocOfPlayer, blocOfRival = 'OPP', tilt = 0) {
-    // tilt < 0 : this world's electorate mostly wants someone honest
-    // tilt > 0 : this world's electorate mostly wants someone who delivers
+    return "D";
+  }
+  function makeElectorate(rng, n, blocOfPlayer, blocOfRival = "OPP", tilt = 0) {
     const agents = new Array(n);
     for (let i = 0; i < n; i++) {
-        const lean = clamp(rng.normal() * 0.55, -1, 1);
-        const interest = clamp(0.5 + rng.normal() * 0.22, 0.05, 1);
-        const fam = drawFamily(rng.float());
-        const biasDraw = () => clamp(Math.abs(rng.normal()) * 1.1 + 0.25 * interest, 0, 4);
-        agents[i] = {
-            id: i,
-            lean, // −1 opposing bloc … +1 player's bloc
-            side: lean > 0.15 ? blocOfPlayer : lean < -0.15 ? blocOfRival : 'IND',
-            ideology: clamp(rng.normal() * 0.5, -1, 1),
-            interest,
-            mediaTrust: clamp(0.55 + rng.normal() * 0.2, 0.05, 1),
-            instTrust: clamp(0.55 + rng.normal() * 0.2, 0.05, 1),
-            turnoutBase: clamp(0.45 + interest * 0.4 + rng.normal() * 0.12, 0.02, 0.98),
-            crowdSens: clamp(0.4 + rng.normal() * 0.28, 0, 1),
-            denialSens: clamp(0.6 + rng.normal() * 0.25, 0, 1),
-            // What this voter is actually shopping for. Anti-correlated: nobody weights
-            // everything equally, and the population's centre of gravity varies by world.
-            wInt: clamp(1.5 - tilt + rng.normal() * 0.62, 0.15, 3.0),
-            wComp: clamp(1.5 + tilt + rng.normal() * 0.62, 0.15, 3.0),
-            family: fam,
-            gateBias: fam === 'B' ? biasDraw() : 0,
-            motivBias: fam === 'C' ? clamp(biasDraw() / 2.2, 0, 0.95) : 0,
-            srcBias: fam === 'D' ? clamp(biasDraw() / 2.2, 0, 0.95) : 0,
-            // Who this voter is in policy terms: what they stand to gain or lose. Used only to
-            // make the same decision land differently on different people. Never a targetable
-            // segment, and never used to optimise persuasion.
-            owner: rng.float() < 0.46,
-            young: rng.float() < 0.34,
-            publicSector: rng.float() < 0.22,
-            business: rng.float() < 0.18,
-            beliefs: {},
-        };
+      const lean = clamp(rng.normal() * 0.55, -1, 1);
+      const interest = clamp(0.5 + rng.normal() * 0.22, 0.05, 1);
+      const fam = drawFamily(rng.float());
+      const biasDraw = () => clamp(Math.abs(rng.normal()) * 1.1 + 0.25 * interest, 0, 4);
+      agents[i] = {
+        id: i,
+        lean,
+        // −1 opposing bloc … +1 player's bloc
+        side: lean > 0.15 ? blocOfPlayer : lean < -0.15 ? blocOfRival : "IND",
+        ideology: clamp(rng.normal() * 0.5, -1, 1),
+        interest,
+        mediaTrust: clamp(0.55 + rng.normal() * 0.2, 0.05, 1),
+        instTrust: clamp(0.55 + rng.normal() * 0.2, 0.05, 1),
+        turnoutBase: clamp(0.45 + interest * 0.4 + rng.normal() * 0.12, 0.02, 0.98),
+        crowdSens: clamp(0.4 + rng.normal() * 0.28, 0, 1),
+        denialSens: clamp(0.6 + rng.normal() * 0.25, 0, 1),
+        // What this voter is actually shopping for. Anti-correlated: nobody weights
+        // everything equally, and the population's centre of gravity varies by world.
+        wInt: clamp(1.5 - tilt + rng.normal() * 0.62, 0.15, 3),
+        wComp: clamp(1.5 + tilt + rng.normal() * 0.62, 0.15, 3),
+        family: fam,
+        gateBias: fam === "B" ? biasDraw() : 0,
+        motivBias: fam === "C" ? clamp(biasDraw() / 2.2, 0, 0.95) : 0,
+        srcBias: fam === "D" ? clamp(biasDraw() / 2.2, 0, 0.95) : 0,
+        // Who this voter is in policy terms: what they stand to gain or lose. Used only to
+        // make the same decision land differently on different people. Never a targetable
+        // segment, and never used to optimise persuasion.
+        owner: rng.float() < 0.46,
+        young: rng.float() < 0.34,
+        publicSector: rng.float() < 0.22,
+        business: rng.float() < 0.18,
+        beliefs: {}
+      };
     }
     return agents;
-}
-function seedBeliefs(agents, actorId, muBase, tauBase, rng) {
+  }
+  function seedBeliefs(agents, actorId, muBase, tauBase, rng) {
     for (const a of agents) {
-        a.beliefs[actorId] = {
-            integrity: { mu: muBase + rng.normal() * 0.4, tau: clamp(tauBase + rng.normal() * 0.15, 0.25, 5) },
-            competence: { mu: muBase * 0.7 + rng.normal() * 0.4, tau: clamp(tauBase + rng.normal() * 0.15, 0.25, 5) },
-        };
+      a.beliefs[actorId] = {
+        integrity: { mu: muBase + rng.normal() * 0.4, tau: clamp(tauBase + rng.normal() * 0.15, 0.25, 5) },
+        competence: { mu: muBase * 0.7 + rng.normal() * 0.4, tau: clamp(tauBase + rng.normal() * 0.15, 0.25, 5) }
+      };
     }
-}
-// Identity variables — explicit and non-negative. No signed "congruence" anywhere.
-function identityVars(agent, ev, playerBloc) {
-    const targetSide = ev.targetSide; // 'PLAYER_SIDE' | 'OPPOSING_SIDE' | 'NON_PARTISAN'
+  }
+  function identityVars(agent, ev, playerBloc) {
+    const targetSide = ev.targetSide;
     const agentWithPlayerBloc = agent.side === playerBloc;
     const incriminating = ev.implication < 0;
     let ownSideThreat = 0, outgroupTarget = 0;
-    if (targetSide !== 'NON_PARTISAN' && agent.side !== 'IND') {
-        const targetIsAgentsSide = (targetSide === 'PLAYER_SIDE' && agentWithPlayerBloc) ||
-            (targetSide === 'OPPOSING_SIDE' && !agentWithPlayerBloc);
-        if (incriminating) {
-            if (targetIsAgentsSide)
-                ownSideThreat = 1;
-            else
-                outgroupTarget = 1;
-        }
+    if (targetSide !== "NON_PARTISAN" && agent.side !== "IND") {
+      const targetIsAgentsSide = targetSide === "PLAYER_SIDE" && agentWithPlayerBloc || targetSide === "OPPOSING_SIDE" && !agentWithPlayerBloc;
+      if (incriminating) {
+        if (targetIsAgentsSide) ownSideThreat = 1;
+        else outgroupTarget = 1;
+      }
     }
-    // NOTE: interest already gates exposure. Multiplying by it again here double-counts
-    // and crushes every identity effect to near-zero.
     const identityStakes = clamp(Math.abs(agent.lean) * 1.25, 0, 1);
     let sourceAlignment = 0.5;
-    if (ev.sourceAlignment === 'ALIGNED')
-        sourceAlignment = agentWithPlayerBloc ? 0.85 : 0.15;
-    else if (ev.sourceAlignment === 'OPPOSED')
-        sourceAlignment = agentWithPlayerBloc ? 0.15 : 0.85;
+    if (ev.sourceAlignment === "ALIGNED") sourceAlignment = agentWithPlayerBloc ? 0.85 : 0.15;
+    else if (ev.sourceAlignment === "OPPOSED") sourceAlignment = agentWithPlayerBloc ? 0.15 : 0.85;
     return { ownSideThreat, outgroupTarget, identityStakes, sourceAlignment };
-}
-// Apply one event to the electorate. Returns what the UI needs to show a reaction.
-exports.BLOC_LABELS = {
-    core: 'Core supporters', ind: 'Independent voters', opp: 'Opposition voters',
-    owner: 'Homeowners', young: 'Younger renters', publicSector: 'Public-sector staff',
-    business: 'Local business',
-};
-function blocsOf(a, playerBloc) {
-    const out = [a.side === playerBloc ? 'core' : a.side === 'IND' ? 'ind' : 'opp'];
-    if (a.owner)
-        out.push('owner');
-    if (a.young)
-        out.push('young');
-    if (a.publicSector)
-        out.push('publicSector');
-    if (a.business)
-        out.push('business');
+  }
+  var BLOC_LABELS = {
+    core: "Core supporters",
+    ind: "Independent voters",
+    opp: "Opposition voters",
+    owner: "Homeowners",
+    young: "Younger renters",
+    publicSector: "Public-sector staff",
+    business: "Local business"
+  };
+  function blocsOf(a, playerBloc) {
+    const out = [a.side === playerBloc ? "core" : a.side === "IND" ? "ind" : "opp"];
+    if (a.owner) out.push("owner");
+    if (a.young) out.push("young");
+    if (a.publicSector) out.push("publicSector");
+    if (a.business) out.push("business");
     return out;
-}
-// How a voter's own stake shifts what an event means to them. A housing reform reads as
-// competence to a renter and as a threat to an owner, from the same set of facts. This is
-// the whole mechanism behind "different people wanted different things".
-// People who personally lose from a decision react to that loss far more strongly than
-// the general public reacts to the decision looking principled. Without this gain the
-// integrity signal of a clean choice swamps the anger of the people it costs, and the
-// trade-off collapses into "doing the right thing is just better".
-exports.STAKE_GAIN = 1.9;
-function stakeShift(a, ev, playerBloc) {
+  }
+  var STAKE_GAIN = 1.9;
+  function stakeShift(a, ev, playerBloc) {
     const s = ev.stakes;
-    if (!s)
-        return 0;
+    if (!s) return 0;
     let v = 0;
-    for (const k of ['owner', 'young', 'publicSector', 'business'])
-        if (a[k] && s[k])
-            v += s[k];
-    v += a.side === playerBloc ? (s.core || 0) : a.side === 'IND' ? (s.ind || 0) : (s.opp || 0);
-    return v * exports.STAKE_GAIN;
-}
-function applyEvent(agents, ev, rng, playerBloc, opts = {}) {
-    const trait = ev.trait || 'integrity';
+    for (const k of ["owner", "young", "publicSector", "business"]) if (a[k] && s[k]) v += s[k];
+    v += a.side === playerBloc ? s.core || 0 : a.side === "IND" ? s.ind || 0 : s.opp || 0;
+    return v * STAKE_GAIN;
+  }
+  function applyEvent(agents, ev, rng, playerBloc, opts = {}) {
+    const trait = ev.trait || "integrity";
     const before = meanBelief(agents, ev.actorId, trait);
     const byFamily = { A: 0, B: 0, C: 0, D: 0 };
     const byBloc = {};
@@ -26243,4427 +25197,7205 @@ function applyEvent(agents, ev, rng, playerBloc, opts = {}) {
     const sideN = {};
     let exposed = 0, admitted = 0;
     const baseImpl = ev.implication;
-    const suppress = opts.suppress || {}; // for counterfactual replay
+    const suppress = opts.suppress || {};
     for (const a of agents) {
-        const b = a.beliefs[ev.actorId];
-        if (!b)
-            continue;
-        const b0 = b[trait].mu;
-        const iv = identityVars(a, ev, playerBloc);
-        // Exposure
-        const pExp = clamp(a.interest * (ev.mediaReach ?? 0.8) * (1 + (ev.salience ?? 0)), 0, 1);
-        if ((0, exports.q6)(rng.float()) >= (0, exports.q6)(pExp)) {
-            accum(a, 0);
-            continue;
-        }
-        exposed++;
-        // Perceived reliability — Model A discounts by media trust, identity-independently.
-        let rel = ev.reliability * (0.55 + 0.45 * a.mediaTrust);
-        let diag = ev.diagnosticity;
-        let admit = true;
-        // Draw unconditionally so the RNG stream stays aligned across counterfactual
-        // conditions — otherwise suppression shifts every later draw and the measured
-        // "difference" is partly noise rather than mechanism.
-        const gateDraw = rng.float();
-        if (a.family === 'B') {
-            const z = -0.2 + 2.6 * ev.reliability + 1.4 * (1 - ev.deniability) + 0.9 * (iv.sourceAlignment - 0.5)
-                - (suppress.gate ? 0 : a.gateBias * iv.ownSideThreat * iv.identityStakes)
-                + (suppress.gate ? 0 : 0.5 * a.gateBias * iv.outgroupTarget * iv.identityStakes);
-            admit = (0, exports.q6)(gateDraw) < (0, exports.q6)((0, exports.sigmoid)(z));
-        }
-        if (a.family === 'C' && !suppress.motiv) {
-            diag = clamp(diag * (1 - a.motivBias * iv.ownSideThreat * iv.identityStakes)
-                * (1 + 0.5 * a.motivBias * iv.outgroupTarget * iv.identityStakes), 0, 1);
-        }
-        if (a.family === 'D' && !suppress.source) {
-            rel = clamp(rel * (1 - a.srcBias * iv.ownSideThreat * iv.identityStakes * (1 - iv.sourceAlignment)), 0, 1);
-        }
-        if (!admit) {
-            accum(a, 0);
-            continue;
-        }
-        admitted++;
-        // Deniability reduces effective reliability. The normative discount is NOT zero.
-        const dSens = suppress.deniability ? 0 : (exports.PARAMS.D_SENS_NORM * 0.5 + a.denialSens * 0.5);
-        const relEff = rel * (1 - ev.deniability * dSens);
-        const tauObs = exports.PARAMS.KAPPA * ev.strength * relEff * diag;
-        const implForAgent = clamp(baseImpl + stakeShift(a, ev, playerBloc), -1, 1);
-        b[trait] = updateBelief(b[trait], exports.PARAMS.X_MAX * implForAgent, tauObs);
-        // Crowd is a separate, weak, correlated channel — not a modifier on the evidence.
-        if (ev.crowd && !suppress.crowd) {
-            const indep = ev.crowd.independence ?? 0.25;
-            const tauCrowd = exports.PARAMS.KAPPA_CROWD * ev.crowd.magnitude * a.crowdSens * indep;
-            const xCrowd = exports.PARAMS.X_MAX * ev.crowd.direction * ev.crowd.magnitude * exports.PARAMS.CROWD_LOC;
-            b[trait] = updateBelief(b[trait], xCrowd, tauCrowd);
-        }
-        accum(a, b[trait].mu - b0);
+      const b = a.beliefs[ev.actorId];
+      if (!b) continue;
+      const b0 = b[trait].mu;
+      const iv = identityVars(a, ev, playerBloc);
+      const pExp = clamp(a.interest * (ev.mediaReach ?? 0.8) * (1 + (ev.salience ?? 0)), 0, 1);
+      if (q6(rng.float()) >= q6(pExp)) {
+        accum(a, 0);
+        continue;
+      }
+      exposed++;
+      let rel = ev.reliability * (0.55 + 0.45 * a.mediaTrust);
+      let diag = ev.diagnosticity;
+      let admit = true;
+      const gateDraw = rng.float();
+      if (a.family === "B") {
+        const z = -0.2 + 2.6 * ev.reliability + 1.4 * (1 - ev.deniability) + 0.9 * (iv.sourceAlignment - 0.5) - (suppress.gate ? 0 : a.gateBias * iv.ownSideThreat * iv.identityStakes) + (suppress.gate ? 0 : 0.5 * a.gateBias * iv.outgroupTarget * iv.identityStakes);
+        admit = q6(gateDraw) < q6(sigmoid(z));
+      }
+      if (a.family === "C" && !suppress.motiv) {
+        diag = clamp(diag * (1 - a.motivBias * iv.ownSideThreat * iv.identityStakes) * (1 + 0.5 * a.motivBias * iv.outgroupTarget * iv.identityStakes), 0, 1);
+      }
+      if (a.family === "D" && !suppress.source) {
+        rel = clamp(rel * (1 - a.srcBias * iv.ownSideThreat * iv.identityStakes * (1 - iv.sourceAlignment)), 0, 1);
+      }
+      if (!admit) {
+        accum(a, 0);
+        continue;
+      }
+      admitted++;
+      const dSens = suppress.deniability ? 0 : PARAMS.D_SENS_NORM * 0.5 + a.denialSens * 0.5;
+      const relEff = rel * (1 - ev.deniability * dSens);
+      const tauObs = PARAMS.KAPPA * ev.strength * relEff * diag;
+      const implForAgent = clamp(baseImpl + stakeShift(a, ev, playerBloc), -1, 1);
+      b[trait] = updateBelief(b[trait], PARAMS.X_MAX * implForAgent, tauObs);
+      if (ev.crowd && !suppress.crowd) {
+        const indep = ev.crowd.independence ?? 0.25;
+        const tauCrowd = PARAMS.KAPPA_CROWD * ev.crowd.magnitude * a.crowdSens * indep;
+        const xCrowd = PARAMS.X_MAX * ev.crowd.direction * ev.crowd.magnitude * PARAMS.CROWD_LOC;
+        b[trait] = updateBelief(b[trait], xCrowd, tauCrowd);
+      }
+      accum(a, b[trait].mu - b0);
     }
     function accum(a, d) {
-        for (const k of blocsOf(a, playerBloc)) {
-            byBloc[k] = (byBloc[k] || 0) + d;
-            blocN[k] = (blocN[k] || 0) + 1;
-        }
-        byFamily[a.family] += d;
-        famN[a.family]++;
-        bySide[a.side] = (bySide[a.side] || 0) + d;
-        sideN[a.side] = (sideN[a.side] || 0) + 1;
+      for (const k of blocsOf(a, playerBloc)) {
+        byBloc[k] = (byBloc[k] || 0) + d;
+        blocN[k] = (blocN[k] || 0) + 1;
+      }
+      byFamily[a.family] += d;
+      famN[a.family]++;
+      bySide[a.side] = (bySide[a.side] || 0) + d;
+      sideN[a.side] = (sideN[a.side] || 0) + 1;
     }
     const after = meanBelief(agents, ev.actorId, trait);
     const fam = {};
-    for (const f of exports.FAMILIES)
-        fam[f] = famN[f] ? byFamily[f] / famN[f] : 0;
+    for (const f of FAMILIES) fam[f] = famN[f] ? byFamily[f] / famN[f] : 0;
     const sides = {};
-    for (const k of Object.keys(bySide))
-        sides[k] = bySide[k] / sideN[k];
+    for (const k of Object.keys(bySide)) sides[k] = bySide[k] / sideN[k];
     return {
-        before, after, delta: after - before,
-        exposedPct: exposed / agents.length,
-        admittedPct: exposed ? admitted / exposed : 0,
-        byFamily: fam, bySide: sides,
-        byBloc: Object.fromEntries(Object.keys(byBloc).map((k) => [k, byBloc[k] / (blocN[k] || 1)])),
-        blocN,
+      before,
+      after,
+      delta: after - before,
+      exposedPct: exposed / agents.length,
+      admittedPct: exposed ? admitted / exposed : 0,
+      byFamily: fam,
+      bySide: sides,
+      byBloc: Object.fromEntries(Object.keys(byBloc).map((k) => [k, byBloc[k] / (blocN[k] || 1)])),
+      blocN
     };
-}
-// Every public action is itself evidence about the actor — on TWO traits, not one.
-// Integrity and competence pull in opposite directions for some choices, which is
-// what stops "be principled" from being a dominant strategy.
-function actionSignals(features, ctx = {}) {
+  }
+  function actionSignals(features, ctx = {}) {
     const f = features || {};
     const scrutiny = ctx.scrutiny ?? 0.6;
-    const salience = ctx.salience ?? 0; // how loudly the public is already watching
-    const integrity = clamp(0.55 * (f.transparency || 0) + 0.50 * (f.concession || 0) + 0.30 * (f.proceduralRestraint || 0)
-        - 0.60 * (f.exploitation || 0) - 0.45 * (f.deflection || 0) - 0.45 * (f.selfProtection || 0)
-        - 0.40 * (f.institutionalCost || 0), -1, 1);
-    // Decisiveness. Under a watching public, "wait for the process" reads as weakness,
-    // and acting hard reads as strength — regardless of whether it was right.
-    const decisive = 0.70 * (f.exploitation || 0) + 0.50 * (f.electoralGain > 0 ? f.electoralGain : 0)
-        + 0.35 * (f.concession || 0) + 0.25 * (f.transparency || 0);
+    const salience = ctx.salience ?? 0;
+    const integrity = clamp(
+      0.55 * (f.transparency || 0) + 0.5 * (f.concession || 0) + 0.3 * (f.proceduralRestraint || 0) - 0.6 * (f.exploitation || 0) - 0.45 * (f.deflection || 0) - 0.45 * (f.selfProtection || 0) - 0.4 * (f.institutionalCost || 0),
+      -1,
+      1
+    );
+    const decisive = 0.7 * (f.exploitation || 0) + 0.5 * (f.electoralGain > 0 ? f.electoralGain : 0) + 0.35 * (f.concession || 0) + 0.25 * (f.transparency || 0);
     const hesitant = 0.65 * (f.deflection || 0) + 0.62 * (f.proceduralRestraint || 0) + 0.35 * (f.selfProtection || 0);
-    const competence = clamp((decisive - hesitant) * (0.45 + 1.05 * salience)
-        + 0.40 * (f.horizon > 0 ? f.horizon : 0) * (1 - salience), -1, 1);
-    const reach = clamp(0.30 + scrutiny * 0.55 + salience * 0.2, 0.1, 1);
-    const mk = (impl, trait, dg) => Math.abs(impl) < 0.05 ? null : ({
-        implication: impl, strength: 0.45 + 0.25 * Math.abs(impl), reliability: 0.95,
-        diagnosticity: dg, deniability: 0, trait, targetSide: 'PLAYER_SIDE',
-        // Damaging coverage of you is carried by outlets hostile to you. That is the
-        // whole substrate for "they've got an agenda" — with a neutral source it never bites.
-        sourceAlignment: impl < 0 ? 'OPPOSED' : 'ALIGNED', crowd: null, mediaReach: reach,
-    });
-    return [mk(integrity, 'integrity', 0.55), mk(competence, 'competence', 0.6)]
-        .filter(Boolean)
-        .map((o) => (ctx.stakes ? { ...o, stakes: ctx.stakes } : o));
-}
-// ── Delayed chains ───────────────────────────────────────────────────────────
-// A chain resolves years later. What it costs you depends on what you SAID privately
-// and what you DID publicly, compared against what turned out to be true.
-// CRED[] indexes the 4-point private ladder: 0.15 / 0.40 / 0.60 / 0.85.
-// Liability accrued by a single choice. Exploitation and deflection buy short-term
-// advantage and are quietly remembered; procedure and disclosure pay it down.
-function choiceLiability(features) {
+    const competence = clamp((decisive - hesitant) * (0.45 + 1.05 * salience) + 0.4 * (f.horizon > 0 ? f.horizon : 0) * (1 - salience), -1, 1);
+    const reach = clamp(0.3 + scrutiny * 0.55 + salience * 0.2, 0.1, 1);
+    const mk = (impl, trait, dg) => Math.abs(impl) < 0.05 ? null : {
+      implication: impl,
+      strength: 0.45 + 0.25 * Math.abs(impl),
+      reliability: 0.95,
+      diagnosticity: dg,
+      deniability: 0,
+      trait,
+      targetSide: "PLAYER_SIDE",
+      // Damaging coverage of you is carried by outlets hostile to you. That is the
+      // whole substrate for "they've got an agenda" — with a neutral source it never bites.
+      sourceAlignment: impl < 0 ? "OPPOSED" : "ALIGNED",
+      crowd: null,
+      mediaReach: reach
+    };
+    return [mk(integrity, "integrity", 0.55), mk(competence, "competence", 0.6)].filter(Boolean).map((o) => ctx.stakes ? { ...o, stakes: ctx.stakes } : o);
+  }
+  function choiceLiability(features) {
     const f = features || {};
-    return Math.max(0, 1.00 * (f.exploitation || 0)
-        + 0.70 * (f.deflection || 0)
-        + 0.60 * (f.selfProtection || 0)
-        + 0.55 * (f.institutionalCost || 0)
-        - 0.45 * (f.transparency || 0)
-        - 0.35 * (f.proceduralRestraint || 0));
-}
-// The reckoning. Fires once, late, before the decisive election. Nothing happens below
-// the threshold — a couple of hard-nosed calls are just politics. A pattern is a story.
-function liabilityReckoning(total, thr = 1.8) {
-    if (total < thr)
-        return null;
+    return Math.max(
+      0,
+      1 * (f.exploitation || 0) + 0.7 * (f.deflection || 0) + 0.6 * (f.selfProtection || 0) + 0.55 * (f.institutionalCost || 0) - 0.45 * (f.transparency || 0) - 0.35 * (f.proceduralRestraint || 0)
+    );
+  }
+  function liabilityReckoning(total, thr = 1.8) {
+    if (total < thr) return null;
     const over = Math.min(total - thr, 3.2);
     return {
-        magnitude: over,
-        signal: { implication: -clamp(0.18 + 0.20 * over, 0, 0.85), strength: 0.72, reliability: 0.9,
-            diagnosticity: 0.8, deniability: 0.1, trait: 'integrity', targetSide: 'PLAYER_SIDE',
-            sourceAlignment: 'OPPOSED', crowd: { direction: -1, magnitude: clamp(0.25 + 0.18 * over, 0, 0.8), independence: 0.3 },
-            mediaReach: clamp(0.55 + 0.12 * over, 0, 0.95) },
+      magnitude: over,
+      signal: {
+        implication: -clamp(0.18 + 0.2 * over, 0, 0.85),
+        strength: 0.72,
+        reliability: 0.9,
+        diagnosticity: 0.8,
+        deniability: 0.1,
+        trait: "integrity",
+        targetSide: "PLAYER_SIDE",
+        sourceAlignment: "OPPOSED",
+        crowd: { direction: -1, magnitude: clamp(0.25 + 0.18 * over, 0, 0.8), independence: 0.3 },
+        mediaReach: clamp(0.55 + 0.12 * over, 0, 0.95)
+      }
     };
-}
-function chainVerdict(outcome, credence, move) {
-    const believed = credence === null || credence === undefined ? 0.5 : [0.15, 0.40, 0.60, 0.85][credence];
+  }
+  function chainVerdict(outcome, credence, move) {
+    const believed = credence === null || credence === void 0 ? 0.5 : [0.15, 0.4, 0.6, 0.85][credence];
     const procedural = move?.features?.proceduralRestraint ?? 0;
     const sanctioned = (move?.features?.exploitation ?? 0) + (move?.features?.concession ?? 0);
     const shielded = (move?.features?.selfProtection ?? 0) + (move?.features?.deflection ?? 0);
     let credibility = 0, calledIt = null;
-    if (outcome === 'CONFIRMED') {
-        credibility = (believed - 0.5) * 1.4 - shielded * 0.55 + procedural * 0.25;
-        calledIt = believed >= 0.45;
-    }
-    else if (outcome === 'DISPROVEN') {
-        credibility = (0.5 - believed) * 1.4 - sanctioned * 0.60 + procedural * 0.45;
-        calledIt = believed <= 0.55;
-    }
-    else { // UNRESOLVED — nobody is vindicated; loud early positions age worst
-        credibility = procedural * 0.30 - Math.abs(believed - 0.5) * 0.35 - sanctioned * 0.20;
-        calledIt = null;
+    if (outcome === "CONFIRMED") {
+      credibility = (believed - 0.5) * 1.4 - shielded * 0.55 + procedural * 0.25;
+      calledIt = believed >= 0.45;
+    } else if (outcome === "DISPROVEN") {
+      credibility = (0.5 - believed) * 1.4 - sanctioned * 0.6 + procedural * 0.45;
+      calledIt = believed <= 0.55;
+    } else {
+      credibility = procedural * 0.3 - Math.abs(believed - 0.5) * 0.35 - sanctioned * 0.2;
+      calledIt = null;
     }
     credibility = clamp(credibility, -1, 1);
-    // Tone now follows the thing the player is actually shown moving.
-    const tone = outcome === 'UNRESOLVED' ? 'murky'
-        : credibility > 0.06 ? 'right' : credibility < -0.06 ? 'wrong' : 'mixed';
+    const tone = outcome === "UNRESOLVED" ? "murky" : credibility > 0.06 ? "right" : credibility < -0.06 ? "wrong" : "mixed";
     return {
-        outcome, tone, beliefTone: tone, calledIt, credibility, believed, procedural,
-        signal: Math.abs(credibility) < 0.06 ? null : {
-            implication: credibility, strength: 0.7, reliability: 0.95, diagnosticity: 0.65,
-            deniability: 0, trait: 'competence', targetSide: 'PLAYER_SIDE',
-            sourceAlignment: 'NEUTRAL', crowd: null, mediaReach: 0.75,
-        },
+      outcome,
+      tone,
+      beliefTone: tone,
+      calledIt,
+      credibility,
+      believed,
+      procedural,
+      signal: Math.abs(credibility) < 0.06 ? null : {
+        implication: credibility,
+        strength: 0.7,
+        reliability: 0.95,
+        diagnosticity: 0.65,
+        deniability: 0,
+        trait: "competence",
+        targetSide: "PLAYER_SIDE",
+        sourceAlignment: "NEUTRAL",
+        crowd: null,
+        mediaReach: 0.75
+      }
     };
-}
-// Mean belief restricted to a subgroup. The identity mechanisms only act on voters
-// who identify with the target's side, so a whole-electorate average hides them.
-function meanBeliefWhere(agents, actorId, trait, pred) {
+  }
+  function meanBeliefWhere(agents, actorId, trait, pred) {
     let s = 0, n = 0;
     for (const a of agents) {
-        if (!pred(a))
-            continue;
-        const b = a.beliefs[actorId];
-        if (b) {
-            s += (0, exports.sigmoid)(b[trait].mu);
-            n++;
-        }
+      if (!pred(a)) continue;
+      const b = a.beliefs[actorId];
+      if (b) {
+        s += sigmoid(b[trait].mu);
+        n++;
+      }
     }
     return n ? s / n : 0.5;
-}
-function meanBelief(agents, actorId, trait = 'integrity') {
+  }
+  function meanBelief(agents, actorId, trait = "integrity") {
     let s = 0, n = 0;
     for (const a of agents) {
-        const b = a.beliefs[actorId];
-        if (b) {
-            s += (0, exports.sigmoid)(b[trait].mu);
-            n++;
-        }
+      const b = a.beliefs[actorId];
+      if (b) {
+        s += sigmoid(b[trait].mu);
+        n++;
+      }
     }
     return n ? s / n : 0.5;
-}
-function meanPrecision(agents, actorId, trait = 'integrity') {
+  }
+  function meanPrecision(agents, actorId, trait = "integrity") {
     let s = 0, n = 0;
     for (const a of agents) {
-        const b = a.beliefs[actorId];
-        if (b) {
-            s += b[trait].tau;
-            n++;
-        }
+      const b = a.beliefs[actorId];
+      if (b) {
+        s += b[trait].tau;
+        n++;
+      }
     }
     return n ? s / n : 1;
-}
-function approvalOf(agents, actorId) {
+  }
+  function approvalOf(agents, actorId) {
     let s = 0;
     for (const a of agents) {
-        const b = a.beliefs[actorId];
-        if (!b)
-            continue;
-        const wi = a.wInt ?? 1.5, wc = a.wComp ?? 1.5;
-        s += (wi * (0, exports.sigmoid)(b.integrity.mu) + wc * (0, exports.sigmoid)(b.competence.mu)) / (wi + wc);
+      const b = a.beliefs[actorId];
+      if (!b) continue;
+      const wi = a.wInt ?? 1.5, wc = a.wComp ?? 1.5;
+      s += (wi * sigmoid(b.integrity.mu) + wc * sigmoid(b.competence.mu)) / (wi + wc);
     }
     return s / agents.length;
-}
-function ageElectorate(agents, years) {
+  }
+  function ageElectorate(agents, years) {
     for (const a of agents) {
-        for (const k of Object.keys(a.beliefs)) {
-            a.beliefs[k].integrity = ageBelief(a.beliefs[k].integrity, years);
-            a.beliefs[k].competence = ageBelief(a.beliefs[k].competence, years);
-        }
+      for (const k of Object.keys(a.beliefs)) {
+        a.beliefs[k].integrity = ageBelief(a.beliefs[k].integrity, years);
+        a.beliefs[k].competence = ageBelief(a.beliefs[k].competence, years);
+      }
     }
-}
-// ─────────────────────────────── Election ───────────────────────────────
-// Turnout is separate from utility, so approval and vote share can diverge.
-const W = { party: 1.4, ideology: 0.7, retro: 1.75, noise: 0.6 };
-function runElection(agents, candidates, rng, ctx = {}) {
+  }
+  var W = { party: 1.4, ideology: 0.7, retro: 1.75, noise: 0.6 };
+  function runElection(agents, candidates, rng, ctx = {}) {
     const tally = {};
     const util = {};
     for (const c of candidates) {
-        tally[c.id] = 0;
-        util[c.id] = 0;
+      tally[c.id] = 0;
+      util[c.id] = 0;
     }
     let turnedOut = 0;
     for (const a of agents) {
-        const us = candidates.map((c) => {
-            const b = a.beliefs[c.id];
-            const partyMatch = c.bloc === 'IND' ? 0 : (a.side === c.bloc ? 1 : (a.side === 'IND' ? 0.15 : -1));
-            let u = W.party * partyMatch * Math.abs(a.lean)
-                - W.ideology * Math.abs(a.ideology - (c.ideology ?? 0))
-                + W.retro * (c.retro ?? 0) * (0.4 + 0.6 * a.instTrust)
-                + W.noise * rng.gumbel();
-            if (b)
-                u += (a.wInt ?? 1.5) * ((0, exports.sigmoid)(b.integrity.mu) - 0.5) + (a.wComp ?? 1.5) * ((0, exports.sigmoid)(b.competence.mu) - 0.5);
-            else
-                u -= 0.6; // unknown candidate penalty
-            u += (c.homeAdvantage ?? 0) * (a.side === c.bloc ? 1 : 0.3);
-            // Being known matters on its own. Four years out of sight is a real electoral cost;
-            // four years on a panel show is a real electoral asset, whatever people think of you.
-            u += 0.85 * ((c.recognition ?? 0.5) - 0.5) * (0.5 + 0.5 * a.interest);
-            return { id: c.id, u };
-        });
-        us.sort((x, y) => (0, exports.q6)(y.u) - (0, exports.q6)(x.u));
-        for (const c of us)
-            util[c.id] += c.u;
-        const margin = (0, exports.q6)(us[0].u - (us[1] ? us[1].u : us[0].u - 1));
-        const mobilise = ctx.mobilisation?.[us[0].id] ?? 0;
-        const pVote = clamp(a.turnoutBase + 0.10 * clamp(margin, 0, 2) + mobilise - 0.12 * (1 - a.interest), 0.01, 0.99);
-        if ((0, exports.q6)(rng.float()) < (0, exports.q6)(pVote)) {
-            turnedOut++;
-            tally[us[0].id]++;
-        }
+      const us = candidates.map((c) => {
+        const b = a.beliefs[c.id];
+        const partyMatch = c.bloc === "IND" ? 0 : a.side === c.bloc ? 1 : a.side === "IND" ? 0.15 : -1;
+        let u = W.party * partyMatch * Math.abs(a.lean) - W.ideology * Math.abs(a.ideology - (c.ideology ?? 0)) + W.retro * (c.retro ?? 0) * (0.4 + 0.6 * a.instTrust) + W.noise * rng.gumbel();
+        if (b) u += (a.wInt ?? 1.5) * (sigmoid(b.integrity.mu) - 0.5) + (a.wComp ?? 1.5) * (sigmoid(b.competence.mu) - 0.5);
+        else u -= 0.6;
+        u += (c.homeAdvantage ?? 0) * (a.side === c.bloc ? 1 : 0.3);
+        u += 0.85 * ((c.recognition ?? 0.5) - 0.5) * (0.5 + 0.5 * a.interest);
+        return { id: c.id, u };
+      });
+      us.sort((x, y) => q6(y.u) - q6(x.u));
+      for (const c of us) util[c.id] += c.u;
+      const margin = q6(us[0].u - (us[1] ? us[1].u : us[0].u - 1));
+      const mobilise = ctx.mobilisation?.[us[0].id] ?? 0;
+      const pVote = clamp(a.turnoutBase + 0.1 * clamp(margin, 0, 2) + mobilise - 0.12 * (1 - a.interest), 0.01, 0.99);
+      if (q6(rng.float()) < q6(pVote)) {
+        turnedOut++;
+        tally[us[0].id]++;
+      }
     }
     const total = Object.values(tally).reduce((x, y) => x + y, 0) || 1;
     const shares = {};
-    for (const c of candidates)
-        shares[c.id] = tally[c.id] / total;
-    const winner = candidates.reduce((best, c) => (tally[c.id] > tally[best.id] ? c : best), candidates[0]);
+    for (const c of candidates) shares[c.id] = tally[c.id] / total;
+    const winner = candidates.reduce((best, c) => tally[c.id] > tally[best.id] ? c : best, candidates[0]);
     return { tally, shares, winner: winner.id, turnout: turnedOut / agents.length };
-}
-// ──────────────────────── Player analysis (the Mirror) ────────────────────────
-// Deliberately simple: matched comparisons and slopes over the actual decision log.
-// No latent-trait model, no psychometric scoring, no comparison to other people.
-const CRED = [0.15, 0.40, 0.60, 0.85]; // locked credence anchors for the 4-point ladder
-const SAID = ['said there was nothing there', 'called it probably overblown',
-    'thought it was probably real', 'treated it as established'];
-exports.CRED_LABEL = SAID;
-function linSlope(xs, ys) {
+  }
+  var CRED = [0.15, 0.4, 0.6, 0.85];
+  var SAID = [
+    "said there was nothing there",
+    "called it probably overblown",
+    "thought it was probably real",
+    "treated it as established"
+  ];
+  function linSlope(xs, ys) {
     const n = xs.length;
-    if (n < 3)
-        return null;
+    if (n < 3) return null;
     const mx = xs.reduce((a, b) => a + b, 0) / n, my = ys.reduce((a, b) => a + b, 0) / n;
     let num = 0, den = 0, sy = 0;
     for (let i = 0; i < n; i++) {
-        num += (xs[i] - mx) * (ys[i] - my);
-        den += (0, det_math_mjs_1.detSquare)(xs[i] - mx);
-        sy += (0, det_math_mjs_1.detSquare)(ys[i] - my);
+      num += (xs[i] - mx) * (ys[i] - my);
+      den += detSquare(xs[i] - mx);
+      sy += detSquare(ys[i] - my);
     }
-    if (den < 1e-9)
-        return null;
+    if (den < 1e-9) return null;
     const slope = num / den;
-    const r2 = sy < 1e-9 ? 0 : (num * num) / (den * sy);
+    const r2 = sy < 1e-9 ? 0 : num * num / (den * sy);
     return { slope, r2, n };
-}
-// Confidence from how much we saw and how consistently, NOT from a posterior.
-function confFromPairs(diffs) {
-    if (diffs.length === 0)
-        return 0;
-    if (diffs.length === 1)
-        return 0.38;
-    const mean = diffs.reduce((a, b) => a + b, 0) / diffs.length;
-    const sd = Math.sqrt(diffs.reduce((a, b) => a + (0, det_math_mjs_1.detSquare)(b - mean), 0) / diffs.length);
-    const agreement = diffs.every((d) => Math.sign(d) === Math.sign(mean)) ? 1 : 0.45;
-    const base = clamp(0.30 + 0.16 * diffs.length, 0, 0.86);
+  }
+  function confFromPairs(diffs) {
+    if (diffs.length === 0) return 0;
+    if (diffs.length === 1) return 0.38;
+    const mean2 = diffs.reduce((a, b) => a + b, 0) / diffs.length;
+    const sd = Math.sqrt(diffs.reduce((a, b) => a + detSquare(b - mean2), 0) / diffs.length);
+    const agreement = diffs.every((d) => Math.sign(d) === Math.sign(mean2)) ? 1 : 0.45;
+    const base = clamp(0.3 + 0.16 * diffs.length, 0, 0.86);
     return clamp(base * agreement * (1 - clamp(sd / 0.5, 0, 0.5)), 0, 0.92);
-}
-function analysePlayer(log) {
-    const reads = log.filter((e) => e.kind === 'read');
-    const moves = log.filter((e) => e.kind === 'move');
+  }
+  function analysePlayer(log) {
+    const reads = log.filter((e) => e.kind === "read");
+    const moves = log.filter((e) => e.kind === "move");
     const dims = {};
-    // 1. Evidence Sensitivity — slope of stated credence on evidence quality.
     const xs = reads.map((r) => r.strength * r.reliability);
     const ys = reads.map((r) => CRED[r.credence]);
     const fit = linSlope(xs, ys);
-    const sorted = [...reads].sort((a, b) => (b.strength * b.reliability) - (a.strength * a.reliability));
+    const sorted = [...reads].sort((a, b) => b.strength * b.reliability - a.strength * a.reliability);
     const evCases = reads.length >= 2 ? [{
-            hi: { title: sorted[0].title, said: SAID[sorted[0].credence], q: sorted[0].strength * sorted[0].reliability },
-            lo: { title: sorted[sorted.length - 1].title, said: SAID[sorted[sorted.length - 1].credence],
-                q: sorted[sorted.length - 1].strength * sorted[sorted.length - 1].reliability },
-            diff: CRED[sorted[0].credence] - CRED[sorted[sorted.length - 1].credence]
-        }] : [];
+      hi: { title: sorted[0].title, said: SAID[sorted[0].credence], q: sorted[0].strength * sorted[0].reliability },
+      lo: {
+        title: sorted[sorted.length - 1].title,
+        said: SAID[sorted[sorted.length - 1].credence],
+        q: sorted[sorted.length - 1].strength * sorted[sorted.length - 1].reliability
+      },
+      diff: CRED[sorted[0].credence] - CRED[sorted[sorted.length - 1].credence]
+    }] : [];
     dims.evidenceSensitivity = {
-        cases: evCases,
-        label: 'Evidence Sensitivity',
-        n: reads.length,
-        value: fit ? clamp(fit.slope, -1.2, 1.6) : null,
-        conf: fit ? clamp(0.22 + 0.05 * fit.n + 0.30 * fit.r2, 0, 0.9) : 0,
-        detail: fit ? `slope ${fit.slope.toFixed(2)} across ${fit.n} judgments` : 'not enough judgments',
+      cases: evCases,
+      label: "Evidence Sensitivity",
+      n: reads.length,
+      value: fit ? clamp(fit.slope, -1.2, 1.6) : null,
+      conf: fit ? clamp(0.22 + 0.05 * fit.n + 0.3 * fit.r2, 0, 0.9) : 0,
+      detail: fit ? `slope ${fit.slope.toFixed(2)} across ${fit.n} judgments` : "not enough judgments"
     };
-    // 2/3/4. Matched-pair dimensions. Each pair differs on exactly one factor.
-    const pairDim = (factor, key, label, hi) => {
-        const groups = {};
-        for (const r of reads) {
-            if (!r.pairId || r.factor !== factor)
-                continue;
-            (groups[r.pairId] ||= []).push(r);
-        }
-        const diffs = [];
-        const cases = [];
-        for (const pid of Object.keys(groups)) {
-            const g = groups[pid];
-            if (g.length !== 2)
-                continue;
-            const a = g.find((x) => x.level === hi), b = g.find((x) => x.level !== hi);
-            if (!a || !b)
-                continue;
-            diffs.push(CRED[a.credence] - CRED[b.credence]);
-            cases.push({ diff: CRED[a.credence] - CRED[b.credence],
-                hi: { title: a.title, said: SAID[a.credence], q: a.strength * a.reliability },
-                lo: { title: b.title, said: SAID[b.credence], q: b.strength * b.reliability } });
-        }
-        const mean = diffs.length ? diffs.reduce((x, y) => x + y, 0) / diffs.length : null;
-        dims[key] = { label, n: diffs.length, value: mean, conf: confFromPairs(diffs), cases };
+    const pairDim = (factor, key, label2, hi) => {
+      const groups = {};
+      for (const r of reads) {
+        if (!r.pairId || r.factor !== factor) continue;
+        (groups[r.pairId] ||= []).push(r);
+      }
+      const diffs = [];
+      const cases = [];
+      for (const pid of Object.keys(groups)) {
+        const g = groups[pid];
+        if (g.length !== 2) continue;
+        const a = g.find((x) => x.level === hi), b = g.find((x) => x.level !== hi);
+        if (!a || !b) continue;
+        diffs.push(CRED[a.credence] - CRED[b.credence]);
+        cases.push({
+          diff: CRED[a.credence] - CRED[b.credence],
+          hi: { title: a.title, said: SAID[a.credence], q: a.strength * a.reliability },
+          lo: { title: b.title, said: SAID[b.credence], q: b.strength * b.reliability }
+        });
+      }
+      const mean2 = diffs.length ? diffs.reduce((x, y) => x + y, 0) / diffs.length : null;
+      dims[key] = { label: label2, n: diffs.length, value: mean2, conf: confFromPairs(diffs), cases };
     };
-    pairDim('PARTISAN', 'partisanSymmetry', 'Partisan Symmetry', 'OPPOSING_SIDE');
-    pairDim('CROWD', 'crowdSusceptibility', 'Crowd Susceptibility', 'CROWD_HIGH');
-    pairDim('DENIABILITY', 'deniabilitySusceptibility', 'Deniability Susceptibility', 'DEN_HIGH');
-    // Political Self — averaged coded features of the actions actually taken.
+    pairDim("PARTISAN", "partisanSymmetry", "Partisan Symmetry", "OPPOSING_SIDE");
+    pairDim("CROWD", "crowdSusceptibility", "Crowd Susceptibility", "CROWD_HIGH");
+    pairDim("DENIABILITY", "deniabilitySusceptibility", "Deniability Susceptibility", "DEN_HIGH");
     const feat = (name, filter = () => true) => {
-        const v = moves.filter(filter).map((m) => m.features[name] ?? 0);
-        return v.length ? v.reduce((a, b) => a + b, 0) / v.length : null;
+      const v = moves.filter(filter).map((m) => m.features[name] ?? 0);
+      return v.length ? v.reduce((a, b) => a + b, 0) / v.length : null;
     };
     const respMoves = moves.filter((m) => m.responsibility);
     const pol = {};
     pol.accountability = {
-        label: 'Accountability', n: respMoves.length,
-        value: respMoves.length ? feat('concession', (m) => m.responsibility) - feat('deflection', (m) => m.responsibility) : null,
+      label: "Accountability",
+      n: respMoves.length,
+      value: respMoves.length ? feat("concession", (m) => m.responsibility) - feat("deflection", (m) => m.responsibility) : null
     };
     pol.institutionalRestraint = {
-        label: 'Institutional Restraint', n: moves.filter((m) => m.institutional).length,
-        value: moves.some((m) => m.institutional)
-            ? feat('proceduralRestraint', (m) => m.institutional) - feat('institutionalCost', (m) => m.institutional) : null,
+      label: "Institutional Restraint",
+      n: moves.filter((m) => m.institutional).length,
+      value: moves.some((m) => m.institutional) ? feat("proceduralRestraint", (m) => m.institutional) - feat("institutionalCost", (m) => m.institutional) : null
     };
     pol.powerOrientation = {
-        label: 'Power / Survival Orientation', n: moves.length,
-        value: moves.length ? feat('electoralGain') - feat('horizon') : null,
+      label: "Power / Survival Orientation",
+      n: moves.length,
+      value: moves.length ? feat("electoralGain") - feat("horizon") : null
     };
-    const cite = (filter, feat) => moves.filter(filter)
-        .sort((a, b) => (b.features[feat] ?? 0) - (a.features[feat] ?? 0))
-        .slice(0, 2).map((m) => ({ title: m.title, label: m.label }));
-    pol.accountability.cases = cite((m) => m.responsibility, 'concession');
-    pol.institutionalRestraint.cases = cite((m) => m.institutional, 'proceduralRestraint');
-    pol.powerOrientation.cases = cite(() => true, 'electoralGain');
-    for (const k of Object.keys(pol))
-        pol[k].conf = clamp(0.18 + 0.11 * pol[k].n, 0, 0.85);
+    const cite = (filter, feat2) => moves.filter(filter).sort((a, b) => (b.features[feat2] ?? 0) - (a.features[feat2] ?? 0)).slice(0, 2).map((m) => ({ title: m.title, label: m.label }));
+    pol.accountability.cases = cite((m) => m.responsibility, "concession");
+    pol.institutionalRestraint.cases = cite((m) => m.institutional, "proceduralRestraint");
+    pol.powerOrientation.cases = cite(() => true, "electoralGain");
+    for (const k of Object.keys(pol)) pol[k].conf = clamp(0.18 + 0.11 * pol[k].n, 0, 0.85);
     return { voter: dims, political: pol, nReads: reads.length, nMoves: moves.length };
-}
-// Mirror Resolution — evidence volume, coverage, replication, consistency.
-// Never hard-coded per life, and it can fail to improve if a life was redundant.
-function mirrorResolution(analysis, log) {
-    const reads = log.filter((e) => e.kind === 'read');
+  }
+  function mirrorResolution(analysis, log) {
+    const reads = log.filter((e) => e.kind === "read");
     const volume = clamp(reads.length / 14, 0, 1);
-    const cats = new Set();
+    const cats = /* @__PURE__ */ new Set();
     for (const r of reads) {
-        if (r.strength * r.reliability > 0.5)
-            cats.add('strongEvidence');
-        else
-            cats.add('weakEvidence');
-        if (r.targetSide === 'OPPOSING_SIDE')
-            cats.add('opposing');
-        if (r.targetSide === 'PLAYER_SIDE')
-            cats.add('aligned');
-        if (r.factor === 'CROWD' && r.level === 'CROWD_HIGH')
-            cats.add('crowd');
-        if (r.factor === 'DENIABILITY' && r.level === 'DEN_HIGH')
-            cats.add('deniable');
+      if (r.strength * r.reliability > 0.5) cats.add("strongEvidence");
+      else cats.add("weakEvidence");
+      if (r.targetSide === "OPPOSING_SIDE") cats.add("opposing");
+      if (r.targetSide === "PLAYER_SIDE") cats.add("aligned");
+      if (r.factor === "CROWD" && r.level === "CROWD_HIGH") cats.add("crowd");
+      if (r.factor === "DENIABILITY" && r.level === "DEN_HIGH") cats.add("deniable");
     }
-    for (const m of log.filter((e) => e.kind === 'move')) {
-        if (m.institutional)
-            cats.add('institutional');
-        if (m.temptation)
-            cats.add('temptation');
-        if (m.responsibility)
-            cats.add('personalExposure');
+    for (const m of log.filter((e) => e.kind === "move")) {
+      if (m.institutional) cats.add("institutional");
+      if (m.temptation) cats.add("temptation");
+      if (m.responsibility) cats.add("personalExposure");
     }
-    const COVER = ['strongEvidence', 'weakEvidence', 'opposing', 'aligned', 'crowd', 'deniable', 'institutional', 'temptation', 'personalExposure'];
+    const COVER = ["strongEvidence", "weakEvidence", "opposing", "aligned", "crowd", "deniable", "institutional", "temptation", "personalExposure"];
     const coverage = COVER.filter((c) => cats.has(c)).length / COVER.length;
-    const dimsWithPairs = ['partisanSymmetry', 'crowdSusceptibility', 'deniabilitySusceptibility'];
+    const dimsWithPairs = ["partisanSymmetry", "crowdSusceptibility", "deniabilitySusceptibility"];
     const replication = dimsWithPairs.reduce((acc, k) => acc + clamp((analysis.voter[k]?.n ?? 0) / 2, 0, 1), 0) / dimsWithPairs.length;
     const confs = [...Object.values(analysis.voter), ...Object.values(analysis.political)].map((d) => d.conf ?? 0);
     const consistency = confs.length ? confs.reduce((a, b) => a + b, 0) / confs.length : 0;
-    const res = 0.30 * volume + 0.30 * coverage + 0.20 * replication + 0.20 * consistency;
+    const res = 0.3 * volume + 0.3 * coverage + 0.2 * replication + 0.2 * consistency;
     return {
-        resolution: clamp(res, 0, 0.98),
-        components: { volume, coverage, replication, consistency },
-        missing: COVER.filter((c) => !cats.has(c)),
+      resolution: clamp(res, 0, 0.98),
+      components: { volume, coverage, replication, consistency },
+      missing: COVER.filter((c) => !cats.has(c))
     };
-}
-// Cross-Mirror: how you acted vs how you judged. The point of the whole product.
-function crossMirror(analysis, log) {
+  }
+  function crossMirror(analysis, log) {
     const out = [];
     const ps = analysis.voter.partisanSymmetry;
-    const moves = log.filter((e) => e.kind === 'move');
+    const moves = log.filter((e) => e.kind === "move");
     const ownExposure = moves.filter((m) => m.responsibility);
-    const proceduralWhenExposed = ownExposure.length
-        ? ownExposure.reduce((a, m) => a + (m.features.proceduralRestraint ?? 0), 0) / ownExposure.length : null;
+    const proceduralWhenExposed = ownExposure.length ? ownExposure.reduce((a, m) => a + (m.features.proceduralRestraint ?? 0), 0) / ownExposure.length : null;
     if (ps && ps.n > 0 && proceduralWhenExposed !== null) {
-        const asked = ps.value; // + means harsher on opposing side at matched evidence
-        if (proceduralWhenExposed >= 0.25 && asked > 0.08) {
-            out.push({
-                title: 'You valued due process most when you needed it yourself.',
-                politician: `When you were the one exposed, you chose the procedural option ${(proceduralWhenExposed * 100).toFixed(0)}% of the way.`,
-                voter: `In matched controversies with the same evidence, you were ${(asked * 100).toFixed(0)} points readier to believe the charge when the target was on the other side.`,
-                options: ['I trusted the process more when I could see it up close', 'I judged the other side more harshly', 'The two situations were not really the same'],
-            });
-        }
+      const asked = ps.value;
+      if (proceduralWhenExposed >= 0.25 && asked > 0.08) {
+        out.push({
+          title: "You valued due process most when you needed it yourself.",
+          politician: `When you were the one exposed, you chose the procedural option ${(proceduralWhenExposed * 100).toFixed(0)}% of the way.`,
+          voter: `In matched controversies with the same evidence, you were ${(asked * 100).toFixed(0)} points readier to believe the charge when the target was on the other side.`,
+          options: ["I trusted the process more when I could see it up close", "I judged the other side more harshly", "The two situations were not really the same"]
+        });
+      }
     }
     const crowd = analysis.voter.crowdSusceptibility;
     const usedOutrage = moves.length ? moves.reduce((a, m) => a + (m.features.exploitation ?? 0), 0) / moves.length : 0;
     if (crowd && crowd.n > 0 && crowd.value !== null && crowd.value > 0.08 && usedOutrage < 0.5) {
-        out.push({
-            title: 'You resisted using outrage — but you were not immune to it.',
-            politician: `You rarely reached for the outrage play (${(usedOutrage * 100).toFixed(0)}% across your responses).`,
-            voter: `With the same underlying evidence, visible public anger moved your judgment by ${(crowd.value * 100).toFixed(0)} points.`,
-            options: ['Public anger is information', 'I was influenced more than I thought', 'One comparison is not enough to say'],
-        });
+      out.push({
+        title: "You resisted using outrage \u2014 but you were not immune to it.",
+        politician: `You rarely reached for the outrage play (${(usedOutrage * 100).toFixed(0)}% across your responses).`,
+        voter: `With the same underlying evidence, visible public anger moved your judgment by ${(crowd.value * 100).toFixed(0)} points.`,
+        options: ["Public anger is information", "I was influenced more than I thought", "One comparison is not enough to say"]
+      });
     }
     if (ps && ps.n > 0 && ps.value !== null && ps.value > 0.25 && (proceduralWhenExposed === null || proceduralWhenExposed < 0.25)) {
-        const sanction = moves.filter((m) => !m.responsibility)
-            .reduce((a, m) => a + (m.features.exploitation ?? 0), 0) / Math.max(1, moves.filter((m) => !m.responsibility).length);
-        out.push({
-            title: 'Your evidence bar moved with the target.',
-            politician: `When the story was about someone else you reached for the hard option ${(sanction * 100).toFixed(0)}% of the way.`,
-            voter: `Privately, with identical evidence in both cases, you were ${(ps.value * 100).toFixed(0)} points readier to believe it when the person was on the other side.`,
-            options: ['I had reasons to trust my own side', 'I applied a lower bar to opponents', 'The cases were not really identical'],
-        });
+      const sanction = moves.filter((m) => !m.responsibility).reduce((a, m) => a + (m.features.exploitation ?? 0), 0) / Math.max(1, moves.filter((m) => !m.responsibility).length);
+      out.push({
+        title: "Your evidence bar moved with the target.",
+        politician: `When the story was about someone else you reached for the hard option ${(sanction * 100).toFixed(0)}% of the way.`,
+        voter: `Privately, with identical evidence in both cases, you were ${(ps.value * 100).toFixed(0)} points readier to believe it when the person was on the other side.`,
+        options: ["I had reasons to trust my own side", "I applied a lower bar to opponents", "The cases were not really identical"]
+      });
     }
     const ev = analysis.voter.evidenceSensitivity;
     const exploited = moves.length ? moves.reduce((a, m) => a + (m.features.exploitation ?? 0), 0) / moves.length : 0;
     if (ev && ev.n >= 4 && ev.value !== null && ev.value > 0.35 && exploited > 0.4) {
-        out.push({
-            title: 'You wanted evidence. You did not always wait for it.',
-            politician: `Across your public responses you reached for the aggressive option ${(exploited * 100).toFixed(0)}% of the way.`,
-            voter: `Yet your private judgments tracked evidence quality closely — you moved ${ev.value.toFixed(2)} points of credence per unit of evidence.`,
-            options: ['Knowing better and acting anyway is just politics', 'I was harsher in public than in private', 'Winning required it'],
-        });
+      out.push({
+        title: "You wanted evidence. You did not always wait for it.",
+        politician: `Across your public responses you reached for the aggressive option ${(exploited * 100).toFixed(0)}% of the way.`,
+        voter: `Yet your private judgments tracked evidence quality closely \u2014 you moved ${ev.value.toFixed(2)} points of credence per unit of evidence.`,
+        options: ["Knowing better and acting anyway is just politics", "I was harsher in public than in private", "Winning required it"]
+      });
     }
     return out;
-}
-// Personalized real-world checklist, generated only from dimensions with evidence.
-function checklist(analysis) {
+  }
+  function checklist(analysis) {
     const out = [];
     const v = analysis.voter;
     if (v.crowdSusceptibility?.n > 0 && (v.crowdSusceptibility.value ?? 0) > 0.1)
-        out.push('When a controversy goes viral, read the underlying evidence before you read the comments or the reaction counts.');
+      out.push("When a controversy goes viral, read the underlying evidence before you read the comments or the reaction counts.");
     if (v.partisanSymmetry?.n > 0 && Math.abs(v.partisanSymmetry.value ?? 0) > 0.12)
-        out.push('Ask what evidence you would need if the politician belonged to the other side.');
+      out.push("Ask what evidence you would need if the politician belonged to the other side.");
     if (v.deniabilitySusceptibility?.n > 0 && (v.deniabilitySusceptibility.value ?? 0) < -0.1)
-        out.push('"AI-generated" is itself a claim, and it needs evidence of its own.');
+      out.push('"AI-generated" is itself a claim, and it needs evidence of its own.');
     if (v.evidenceSensitivity?.value !== null && (v.evidenceSensitivity?.value ?? 0) < 0.25)
-        out.push('Your judgments moved little between weak and strong evidence. Try naming, out loud, what would change your mind.');
-    if (out.length === 0)
-        out.push('Nothing in this run cleared the evidence bar for personalized advice. That is a real result, not a placeholder.');
+      out.push("Your judgments moved little between weak and strong evidence. Try naming, out loud, what would change your mind.");
+    if (out.length === 0) out.push("Nothing in this run cleared the evidence bar for personalized advice. That is a real result, not a placeholder.");
     return out;
-}
-// ── Counterfactual electorate replay ─────────────────────────────────────────
-// Records every event and election as a "tape", then replays the identical career
-// against a freshly built electorate with one cognitive mechanism switched off.
-// Common random numbers throughout: the ONLY thing that differs is the mechanism.
-function makeTape() { return { entries: [] }; }
-function tapeEvent(tape, ev) { tape.entries.push({ t: 'event', ev }); }
-function tapeElection(tape, spec) { tape.entries.push({ t: 'election', spec }); }
-function tapeAge(tape, age, years, label = 'extra time', mode = 'extra') {
-    tape.entries.push({ t: 'age', age, years, label, mode });
-}
-exports.CF_CONDITIONS = [
-    { id: 'ACTUAL', label: 'What actually happened', suppress: {}, group: 'all', who: 'everyone' },
-    { id: 'NO_GATE', label: 'If nobody refused to look at the evidence', suppress: { gate: true },
-        group: 'B', who: 'the voters who reject inconvenient evidence outright' },
-    { id: 'NO_MOTIV', label: 'If nobody discounted what the evidence meant', suppress: { motiv: true },
-        group: 'C', who: 'the voters who accept a story but not what it implies' },
-    { id: 'NO_SOURCE', label: 'If nobody dismissed the messenger', suppress: { source: true },
-        group: 'D', who: 'the voters who distrust hostile outlets' },
-    { id: 'NO_CROWD', label: 'If public anger moved nobody', suppress: { crowd: true },
-        group: 'crowd', who: 'the voters most responsive to public mood' },
-];
-// Single source of truth for world construction. play() and replayCareer() MUST
-// consume the world RNG in exactly the same order or the audit silently compares
-// the player's career against a different world.
-function buildInitialWorld(world) {
+  }
+  function makeTape() {
+    return { entries: [] };
+  }
+  function tapeEvent(tape, ev) {
+    tape.entries.push({ t: "event", ev });
+  }
+  function tapeElection(tape, spec) {
+    tape.entries.push({ t: "election", spec });
+  }
+  function tapeAge(tape, age, years, label2 = "extra time", mode = "extra") {
+    tape.entries.push({ t: "age", age, years, label: label2, mode });
+  }
+  var CF_CONDITIONS = [
+    { id: "ACTUAL", label: "What actually happened", suppress: {}, group: "all", who: "everyone" },
+    {
+      id: "NO_GATE",
+      label: "If nobody refused to look at the evidence",
+      suppress: { gate: true },
+      group: "B",
+      who: "the voters who reject inconvenient evidence outright"
+    },
+    {
+      id: "NO_MOTIV",
+      label: "If nobody discounted what the evidence meant",
+      suppress: { motiv: true },
+      group: "C",
+      who: "the voters who accept a story but not what it implies"
+    },
+    {
+      id: "NO_SOURCE",
+      label: "If nobody dismissed the messenger",
+      suppress: { source: true },
+      group: "D",
+      who: "the voters who distrust hostile outlets"
+    },
+    {
+      id: "NO_CROWD",
+      label: "If public anger moved nobody",
+      suppress: { crowd: true },
+      group: "crowd",
+      who: "the voters most responsive to public mood"
+    }
+  ];
+  function buildInitialWorld(world) {
     const wr = makeRng(world.worldSeed);
     const tilt = wr.range(-0.85, 0.85);
     const agents = makeElectorate(wr, world.n, world.playerBloc, world.rivalBloc, tilt);
-    seedBeliefs(agents, 'PLAYER', world.startMu, world.startTau, wr);
+    seedBeliefs(agents, "PLAYER", world.startMu, world.startTau, wr);
     const rq = wr.range(-0.25, 0.75);
-    seedBeliefs(agents, 'RIVAL1', 0.35 + rq * 0.7, 1.25, wr);
-    seedBeliefs(agents, 'RIVAL2', rq * 0.3, 0.45, wr);
+    seedBeliefs(agents, "RIVAL1", 0.35 + rq * 0.7, 1.25, wr);
+    seedBeliefs(agents, "RIVAL2", rq * 0.3, 0.45, wr);
     return { agents, wr, tilt, rq };
-}
-function replayCareer(tape, world, suppress) {
+  }
+  function replayCareer(tape, world, suppress) {
     const { agents } = buildInitialWorld(world);
-    // Third-party actors are seeded from their OWN stream, in tape order, so that
-    // adding a draw anywhere else cannot shift them.
     const actorRng = makeRng(world.actorSeed);
     const evRng = makeRng(world.eventSeed);
     const elections = [];
-    const moments = []; // per-event belief deltas on the player's own bad news
+    const moments = [];
     let lastAge = world.startAge ?? 23;
     for (const e of tape.entries) {
-        if (e.t === 'event') {
-            if (e.ev.__age && e.ev.__age > lastAge) {
-                ageElectorate(agents, e.ev.__age - lastAge);
-                lastAge = e.ev.__age;
-            }
-            if (e.ev.__seedActor)
-                seedBeliefs(agents, e.ev.actorId, e.ev.__seedActor[0], e.ev.__seedActor[1], actorRng);
-            const watch = e.ev.actorId === 'PLAYER' && e.ev.implication < -0.25;
-            // Record the movement inside each cognitive family separately. A mechanism that
-            // only 22% of one side possesses is invisible in a topline average and obvious
-            // inside the group that has it — the group is the honest place to report it.
-            const tr = e.ev.trait || 'integrity';
-            // Report inside the group the mechanism can actually act on. The identity
-            // mechanisms only fire for voters aligned with the target who have something at
-            // stake; averaging over all of family B dilutes the effect by roughly 3x and
-            // makes a real mechanism look like nothing.
-            const engaged = (a) => a.side === world.playerBloc && Math.abs(a.lean) * a.interest > 0.22;
-            const GRP = { all: () => true,
-                B: (a) => a.family === 'B' && engaged(a),
-                C: (a) => a.family === 'C' && engaged(a),
-                D: (a) => a.family === 'D' && engaged(a),
-                crowd: (a) => a.crowdSens > 0.6 };
-            const b0 = watch ? Object.fromEntries(Object.entries(GRP)
-                .map(([k, f]) => [k, meanBeliefWhere(agents, 'PLAYER', tr, f)])) : null;
-            applyEvent(agents, e.ev, evRng, world.playerBloc, { suppress });
-            if (watch)
-                moments.push({ age: e.ev.__age, trait: tr, label: e.ev.__label || 'a story about you',
-                    deltas: Object.fromEntries(Object.entries(GRP)
-                        .map(([k, f]) => [k, meanBeliefWhere(agents, 'PLAYER', tr, f) - b0[k]])) });
+      if (e.t === "event") {
+        if (e.ev.__age && e.ev.__age > lastAge) {
+          ageElectorate(agents, e.ev.__age - lastAge);
+          lastAge = e.ev.__age;
         }
-        else if (e.t === 'age') {
-            if (e.mode === 'timeline') {
-                ageElectorate(agents, e.years);
-                lastAge = e.age;
-            }
-            else {
-                if (e.age > lastAge) {
-                    ageElectorate(agents, e.age - lastAge);
-                    lastAge = e.age;
-                }
-                ageElectorate(agents, e.years);
-            }
+        if (e.ev.__seedActor) seedBeliefs(agents, e.ev.actorId, e.ev.__seedActor[0], e.ev.__seedActor[1], actorRng);
+        const watch = e.ev.actorId === "PLAYER" && e.ev.implication < -0.25;
+        const tr = e.ev.trait || "integrity";
+        const engaged = (a) => a.side === world.playerBloc && Math.abs(a.lean) * a.interest > 0.22;
+        const GRP = {
+          all: () => true,
+          B: (a) => a.family === "B" && engaged(a),
+          C: (a) => a.family === "C" && engaged(a),
+          D: (a) => a.family === "D" && engaged(a),
+          crowd: (a) => a.crowdSens > 0.6
+        };
+        const b0 = watch ? Object.fromEntries(Object.entries(GRP).map(([k, f]) => [k, meanBeliefWhere(agents, "PLAYER", tr, f)])) : null;
+        applyEvent(agents, e.ev, evRng, world.playerBloc, { suppress });
+        if (watch) moments.push({
+          age: e.ev.__age,
+          trait: tr,
+          label: e.ev.__label || "a story about you",
+          deltas: Object.fromEntries(Object.entries(GRP).map(([k, f]) => [k, meanBeliefWhere(agents, "PLAYER", tr, f) - b0[k]]))
+        });
+      } else if (e.t === "age") {
+        if (e.mode === "timeline") {
+          ageElectorate(agents, e.years);
+          lastAge = e.age;
+        } else {
+          if (e.age > lastAge) {
+            ageElectorate(agents, e.age - lastAge);
+            lastAge = e.age;
+          }
+          ageElectorate(agents, e.years);
         }
-        else {
-            const s = e.spec;
-            if (s.age > lastAge) {
-                ageElectorate(agents, s.age - lastAge);
-                lastAge = s.age;
-            }
-            const res = runElection(agents, s.candidates, makeRng(s.seed), s.ctx);
-            elections.push({ id: s.electionId, office: s.office, age: s.age,
-                won: res.winner === 'PLAYER', share: res.shares.PLAYER, turnout: res.turnout });
+      } else {
+        const s = e.spec;
+        if (s.age > lastAge) {
+          ageElectorate(agents, s.age - lastAge);
+          lastAge = s.age;
         }
+        const res = runElection(agents, s.candidates, makeRng(s.seed), s.ctx);
+        elections.push({
+          id: s.electionId,
+          office: s.office,
+          age: s.age,
+          won: res.winner === "PLAYER",
+          share: res.shares.PLAYER,
+          turnout: res.turnout
+        });
+      }
     }
-    return { agents, elections, moments, approval: approvalOf(agents, 'PLAYER'), belief: meanBelief(agents, 'PLAYER') };
-}
-// Only report a counterfactual difference if it is big enough to mean something.
-// A flipped election always counts; a share move under the band never does.
-exports.CF_BAND = 0.018; // vote share / approval
-exports.CF_MOMENT_BAND = 0.015; // per-event belief movement within the affected group
-function counterfactualAudit(tape, world) {
+    return { agents, elections, moments, approval: approvalOf(agents, "PLAYER"), belief: meanBelief(agents, "PLAYER") };
+  }
+  var CF_BAND = 0.018;
+  var CF_MOMENT_BAND = 0.015;
+  function counterfactualAudit(tape, world) {
     const actual = replayCareer(tape, world, {});
     const out = [];
-    for (const c of exports.CF_CONDITIONS.slice(1)) {
-        const r = replayCareer(tape, world, c.suppress);
-        const diffs = [];
-        r.elections.forEach((el, i) => {
-            const a = actual.elections[i];
-            if (!a)
-                return;
-            const d = el.share - a.share;
-            if (el.won !== a.won)
-                diffs.push({ el, a, d, flipped: true });
-            else if (Math.abs(d) >= exports.CF_BAND)
-                diffs.push({ el, a, d, flipped: false });
-        });
-        const approvalDiff = r.approval - actual.approval;
-        // Where the mechanisms are actually visible: the moment a story broke, not the
-        // election four years later. Aggregate effects wash out; moments do not.
-        const g = c.group || 'all';
-        const momentDiffs = r.moments.map((mm, i) => {
-            const am = actual.moments[i];
-            if (!am)
-                return null;
-            return { age: mm.age, label: mm.label, who: c.who,
-                actual: am.deltas[g], alt: mm.deltas[g], gap: mm.deltas[g] - am.deltas[g] };
-        }).filter((x) => x && Math.abs(x.gap) >= exports.CF_MOMENT_BAND)
-            .sort((x, y) => Math.abs(y.gap) - Math.abs(x.gap));
-        // How much of what happened to this player's reputation was the mechanism rather
-        // than the player? Reported as a share of total movement, because the outcome-level
-        // difference over one career is genuinely small and pretending otherwise would lie.
-        let gapSum = 0, moveSum = 0;
-        r.moments.forEach((mm, i) => {
-            const am = actual.moments[i];
-            if (!am)
-                return;
-            gapSum += Math.abs(mm.deltas[g] - am.deltas[g]);
-            moveSum += Math.abs(am.deltas[g]);
-        });
-        const share = moveSum > 1e-9 ? gapSum / moveSum : 0;
-        const biggest = momentDiffs[0] || null;
-        const interpretable = diffs.length > 0 || share >= 0.05 || Math.abs(approvalDiff) >= exports.CF_BAND;
-        out.push({ ...c, elections: r.elections, diffs, momentDiffs, biggest, share, approvalDiff, interpretable });
+    for (const c of CF_CONDITIONS.slice(1)) {
+      const r = replayCareer(tape, world, c.suppress);
+      const diffs = [];
+      r.elections.forEach((el, i) => {
+        const a = actual.elections[i];
+        if (!a) return;
+        const d = el.share - a.share;
+        if (el.won !== a.won) diffs.push({ el, a, d, flipped: true });
+        else if (Math.abs(d) >= CF_BAND) diffs.push({ el, a, d, flipped: false });
+      });
+      const approvalDiff = r.approval - actual.approval;
+      const g = c.group || "all";
+      const momentDiffs = r.moments.map((mm, i) => {
+        const am = actual.moments[i];
+        if (!am) return null;
+        return {
+          age: mm.age,
+          label: mm.label,
+          who: c.who,
+          actual: am.deltas[g],
+          alt: mm.deltas[g],
+          gap: mm.deltas[g] - am.deltas[g]
+        };
+      }).filter((x) => x && Math.abs(x.gap) >= CF_MOMENT_BAND).sort((x, y) => Math.abs(y.gap) - Math.abs(x.gap));
+      let gapSum = 0, moveSum = 0;
+      r.moments.forEach((mm, i) => {
+        const am = actual.moments[i];
+        if (!am) return;
+        gapSum += Math.abs(mm.deltas[g] - am.deltas[g]);
+        moveSum += Math.abs(am.deltas[g]);
+      });
+      const share = moveSum > 1e-9 ? gapSum / moveSum : 0;
+      const biggest = momentDiffs[0] || null;
+      const interpretable = diffs.length > 0 || share >= 0.05 || Math.abs(approvalDiff) >= CF_BAND;
+      out.push({ ...c, elections: r.elections, diffs, momentDiffs, biggest, share, approvalDiff, interpretable });
     }
     return { actual, conditions: out };
-}
-// ───────────────────── Resource gating (P4) ─────────────────────
-// A politician often cannot choose the ideal response because the resources to execute it
-// do not exist. Returns why an option is unavailable so the interface can say so plainly
-// rather than hiding the option and pretending it was never possible.
-function choiceAvailability(choice, st) {
+  }
+  function choiceAvailability(choice, st) {
     const cost = choice.cost;
-    if (!cost)
-        return { ok: true };
+    if (!cost) return { ok: true };
     for (const [k, v] of Object.entries(cost)) {
-        if ((st[k] ?? 0) < v) {
-            return { ok: false, reason: choice.lockNote || 'You do not have the resources for this.',
-                need: { key: k, have: st[k] ?? 0, want: v } };
-        }
+      if ((st[k] ?? 0) < v) {
+        return {
+          ok: false,
+          reason: choice.lockNote || "You do not have the resources for this.",
+          need: { key: k, have: st[k] ?? 0, want: v }
+        };
+      }
     }
     return { ok: true };
-}
-function payCost(choice, st) {
-    for (const [k, v] of Object.entries(choice.cost || {}))
-        st[k] = Math.max(0, (st[k] ?? 0) - v);
-}
+  }
+  function payCost(choice, st) {
+    for (const [k, v] of Object.entries(choice.cost || {})) st[k] = Math.max(0, (st[k] ?? 0) - v);
+  }
 
-}],
-"src/det-math.mjs": [{},function(module,exports,require){
-"use strict";
-// Political Mirror — deterministic transcendental functions for the canonical engine.
-//
-// ECMAScript guarantees correctly rounded IEEE-754 results for + - * / and Math.sqrt, but
-// NOT for Math.exp, Math.expm1, Math.log, Math.tanh, Math.pow or the ** operator. Those are
-// "implementation-approximated": their last bit depends on the engine's native libm port,
-// its version and how it was compiled (FMA contraction, vectorisation). The canonical
-// session hashes full-precision state after every action, so one ulp anywhere in the
-// canonical path is a browser/headless parity failure. v0.37.2's first divergence was
-// exactly that: action 27 of the POL-M7GX4 path, state.reactions[31].delta, Chrome 153
-// (-0.010428308748461457) vs Node 24 (-0.010428308748461346) — a single sigmoid() value
-// inside meanBelief() rounded differently by the two engines' Math.exp.
-//
-// The functions below are straight ports of the Sun/FreeBSD fdlibm algorithms
-// (e_exp.c, s_expm1.c, e_log.c, s_tanh.c) written with basic double arithmetic and
-// explicit bit access only. Every conforming JavaScript engine therefore produces
-// identical bits for identical inputs. They are not correctly rounded (fdlibm is < 1 ulp);
-// they are reproducible, which is the property the canonical hash needs. No tolerance,
-// no rounding-for-hash, no engine detection.
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.detBits = exports.detSquare = void 0;
-exports.detExp = detExp;
-exports.detExpm1 = detExpm1;
-exports.detTanh = detTanh;
-exports.detLog = detLog;
-const bits = new DataView(new ArrayBuffer(8));
-// DataView defaults to big-endian, so byte offset 0 is always the high word regardless of
-// the host CPU's endianness.
-function highWord(x) { bits.setFloat64(0, x); return bits.getUint32(0); }
-function lowWord(x) { bits.setFloat64(0, x); return bits.getUint32(4); }
-function fromWords(hi, lo) { bits.setUint32(0, hi >>> 0); bits.setUint32(4, lo >>> 0); return bits.getFloat64(0); }
-function withHighWord(x, hi) { bits.setFloat64(0, x); bits.setUint32(0, hi >>> 0); return bits.getFloat64(0); }
-// Shared constants (decimal literals are the fdlibm ones; each round-trips to the exact
-// double whose hex words are given in tests/det-math.test.mjs).
-const HUGE = 1.0e300;
-const TINY = 1.0e-300;
-const LN2_HI = 6.93147180369123816490e-01; // 3fe62e42 fee00000
-const LN2_LO = 1.90821492927058770002e-10; // 3dea39ef 35793c76
-const INV_LN2 = 1.44269504088896338700e+00; // 3ff71547 652b82fe
-const O_THRESHOLD = 7.09782712893383973096e+02; // 40862e42 fefa39ef
-const U_THRESHOLD = -7.45133219101941108420e+02; // c0874910 d52d3051
-const TWO_M1000 = 9.33263618503218878990e-302; // 01700000 00000000
-const TWO_P1023 = 8.98846567431157953865e+307; // 7fe00000 00000000
-const TWO54 = 1.80143985094819840000e+16; // 43500000 00000000
-// ── exp: fdlibm e_exp.c ──────────────────────────────────────────────────────────────
-const EXP_P1 = 1.66666666666666019037e-01; // 3fc55555 5555553e
-const EXP_P2 = -2.77777777770155933842e-03; // bf66c16c 16bebd93
-const EXP_P3 = 6.61375632143793436117e-05; // 3f11566a af25de2c
-const EXP_P4 = -1.65339022054652515390e-06; // bebbbd41 c5d26bf1
-const EXP_P5 = 4.13813679705723846039e-08; // 3e663769 72bea4d0
-function detExp(x) {
-    let hx = highWord(x);
-    const xsb = (hx >>> 31) & 1; // sign bit
-    hx &= 0x7fffffff; // high word of |x|
-    if (hx >= 0x40862E42) { // |x| >= 709.78…
-        if (hx >= 0x7ff00000) {
-            if (((hx & 0xfffff) | lowWord(x)) !== 0)
-                return x + x; // NaN
-            return xsb === 0 ? x : 0; // exp(±Infinity)
-        }
-        if (x > O_THRESHOLD)
-            return HUGE * HUGE; // overflow → Infinity
-        if (x < U_THRESHOLD)
-            return TWO_M1000 * TWO_M1000; // underflow → 0
-    }
-    let k = 0, hi = 0, lo = 0;
-    if (hx > 0x3fd62e42) { // |x| > 0.5 ln2: argument reduction
-        if (hx < 0x3FF0A2B2) { // |x| < 1.5 ln2
-            hi = x - (xsb === 0 ? LN2_HI : -LN2_HI);
-            lo = xsb === 0 ? LN2_LO : -LN2_LO;
-            k = 1 - xsb - xsb;
-        }
-        else {
-            k = Math.trunc(INV_LN2 * x + (xsb === 0 ? 0.5 : -0.5));
-            const t = k;
-            hi = x - t * LN2_HI; // exact
-            lo = t * LN2_LO;
-        }
-        x = hi - lo;
-    }
-    else if (hx < 0x3e300000) { // |x| < 2^-28
-        return 1 + x;
-    }
-    const t = x * x;
-    const c = x - t * (EXP_P1 + t * (EXP_P2 + t * (EXP_P3 + t * (EXP_P4 + t * EXP_P5))));
-    if (k === 0)
-        return 1 - ((x * c) / (c - 2.0) - x);
-    const y = 1 - ((lo - (x * c) / (2.0 - c)) - hi);
-    if (k >= -1021) {
-        if (k === 1024)
-            return y * 2.0 * TWO_P1023;
-        return y * fromWords((0x3ff + k) << 20, 0); // × 2^k, exact
-    }
-    return y * fromWords((0x3ff + (k + 1000)) << 20, 0) * TWO_M1000;
-}
-// ── expm1: fdlibm s_expm1.c (used by tanh) ───────────────────────────────────────────
-const EM1_Q1 = -3.33333333333331316428e-02; // bfa11111 111110f4
-const EM1_Q2 = 1.58730158725481460165e-03; // 3f5a01a0 19fe5585
-const EM1_Q3 = -7.93650757867487942473e-05; // bf14ce19 9eaadbb7
-const EM1_Q4 = 4.00821782732936239552e-06; // 3ed0cfca 86e65239
-const EM1_Q5 = -2.01099218183624371326e-07; // be8afdb7 6e09c32d
-function detExpm1(x) {
-    let hx = highWord(x);
-    const negative = (hx & 0x80000000) !== 0;
-    hx &= 0x7fffffff;
-    if (hx >= 0x4043687A) { // |x| >= 56 ln2
-        if (hx >= 0x40862E42) { // |x| >= 709.78…
-            if (hx >= 0x7ff00000) {
-                if (((hx & 0xfffff) | lowWord(x)) !== 0)
-                    return x + x; // NaN
-                return negative ? -1.0 : x; // expm1(±Infinity)
-            }
-            if (x > O_THRESHOLD)
-                return HUGE * HUGE; // overflow
-        }
-        if (negative)
-            return TINY - 1.0; // x < -56 ln2 → -1
-    }
-    let k = 0, hi, lo, c = 0;
-    if (hx > 0x3fd62e42) { // |x| > 0.5 ln2
-        if (hx < 0x3FF0A2B2) { // |x| < 1.5 ln2
-            if (!negative) {
-                hi = x - LN2_HI;
-                lo = LN2_LO;
-                k = 1;
-            }
-            else {
-                hi = x + LN2_HI;
-                lo = -LN2_LO;
-                k = -1;
-            }
-        }
-        else {
-            k = Math.trunc(INV_LN2 * x + (negative ? -0.5 : 0.5));
-            const t = k;
-            hi = x - t * LN2_HI;
-            lo = t * LN2_LO;
-        }
-        x = hi - lo;
-        c = (hi - x) - lo;
-    }
-    else if (hx < 0x3c900000) { // |x| < 2^-54
-        return x;
-    }
-    const hfx = 0.5 * x;
-    const hxs = x * hfx;
-    const r1 = 1 + hxs * (EM1_Q1 + hxs * (EM1_Q2 + hxs * (EM1_Q3 + hxs * (EM1_Q4 + hxs * EM1_Q5))));
-    let t = 3.0 - r1 * hfx;
-    let e = hxs * ((r1 - t) / (6.0 - x * t));
-    if (k === 0)
-        return x - (x * e - hxs);
-    const twopk = fromWords(0x3ff00000 + (k << 20), 0); // 2^k
-    e = (x * (e - c) - c);
-    e -= hxs;
-    if (k === -1)
-        return 0.5 * (x - e) - 0.5;
-    if (k === 1) {
-        if (x < -0.25)
-            return -2.0 * (e - (x + 0.5));
-        return 1 + 2.0 * (x - e);
-    }
-    if (k <= -2 || k > 56) {
-        let y = 1 - (e - x);
-        y = k === 1024 ? y * 2.0 * TWO_P1023 : y * twopk;
-        return y - 1;
-    }
-    let y;
-    if (k < 20) {
-        t = fromWords(0x3ff00000 - (0x200000 >> k), 0); // 1 - 2^-k
-        y = t - (e - x);
-        y = y * twopk;
-    }
-    else {
-        t = fromWords((0x3ff - k) << 20, 0); // 2^-k
-        y = x - (e + t);
-        y += 1;
-        y = y * twopk;
-    }
-    return y;
-}
-// ── tanh: fdlibm s_tanh.c ────────────────────────────────────────────────────────────
-function detTanh(x) {
-    const jx = highWord(x) | 0; // signed high word
-    const ix = jx & 0x7fffffff;
-    if (ix >= 0x7ff00000)
-        return jx >= 0 ? 1 / x + 1 : 1 / x - 1; // ±1 for ±Infinity, NaN stays NaN
-    let z;
-    if (ix < 0x40360000) { // |x| < 22
-        if (ix < 0x3e300000)
-            return x; // |x| < 2^-28
-        if (ix >= 0x3ff00000) { // |x| >= 1
-            const t = detExpm1(2 * Math.abs(x));
-            z = 1 - 2 / (t + 2);
-        }
-        else {
-            const t = detExpm1(-2 * Math.abs(x));
-            z = -t / (t + 2);
-        }
-    }
-    else {
-        z = 1 - TINY; // |x| >= 22 → ±1
-    }
-    return jx >= 0 ? z : -z;
-}
-// ── log: fdlibm e_log.c ──────────────────────────────────────────────────────────────
-const LG1 = 6.666666666666735130e-01; // 3fe55555 55555593
-const LG2 = 3.999999999940941908e-01; // 3fd99999 9997fa04
-const LG3 = 2.857142874366239149e-01; // 3fd24924 94229359
-const LG4 = 2.222219843214978396e-01; // 3fcc71c5 1d8e78af
-const LG5 = 1.818357216161805012e-01; // 3fc74664 96cb03de
-const LG6 = 1.531383769920937332e-01; // 3fc39a09 d078c69f
-const LG7 = 1.479819860511658591e-01; // 3fc2f112 df3e5244
-function detLog(x) {
-    let hx = highWord(x) | 0; // signed
-    const lx = lowWord(x);
-    let k = 0;
-    if (hx < 0x00100000) { // x < 2^-1022, zero or negative
-        if (((hx & 0x7fffffff) | lx) === 0)
-            return -Infinity; // log(±0)
-        if (hx < 0)
-            return NaN; // log(negative)
-        k -= 54;
-        x *= TWO54; // subnormal: scale up
-        hx = highWord(x) | 0;
-    }
-    if (hx >= 0x7ff00000)
-        return x + x; // Infinity or NaN
-    k += (hx >> 20) - 1023;
-    hx &= 0x000fffff;
-    const i = (hx + 0x95f64) & 0x100000;
-    x = withHighWord(x, hx | (i ^ 0x3ff00000)); // normalise to [√½, √2)
-    k += (i >> 20);
-    const f = x - 1.0;
-    if ((0x000fffff & (2 + hx)) < 3) { // -2^-20 <= f < 2^-20
-        if (f === 0) {
-            if (k === 0)
-                return 0;
-            return k * LN2_HI + k * LN2_LO;
-        }
-        const R = f * f * (0.5 - 0.33333333333333333 * f);
-        if (k === 0)
-            return f - R;
-        return k * LN2_HI - ((R - k * LN2_LO) - f);
-    }
-    const s = f / (2.0 + f);
-    const z = s * s;
-    const w = z * z;
-    const t1 = w * (LG2 + w * (LG4 + w * LG6));
-    const t2 = z * (LG1 + w * (LG3 + w * (LG5 + w * LG7)));
-    const R = t2 + t1;
-    const i2 = (hx - 0x6147a) | (0x6b851 - hx);
-    if (i2 > 0) {
-        const hfsq = 0.5 * f * f;
-        if (k === 0)
-            return f - (hfsq - s * (hfsq + R));
-        return k * LN2_HI - ((hfsq - (s * (hfsq + R) + k * LN2_LO)) - f);
-    }
-    if (k === 0)
-        return f - s * (f - R);
-    return k * LN2_HI - ((s * (f - R) - k * LN2_LO) - f);
-}
-// x*x in place of x ** 2: the ** operator is Math.pow, which is engine-defined; one IEEE
-// multiplication is exact-rounded everywhere.
-const detSquare = (v) => v * v;
-exports.detSquare = detSquare;
-// Bit-level helpers exported for the tests (constant verification, ulp distances).
-exports.detBits = { highWord, lowWord, fromWords };
-
-}],
-"src/content.mjs": [{},function(module,exports,require){
-"use strict";
-// Political Mirror — vertical slice content.
-// Latent parameters are declared per event. Matched pairs differ on EXACTLY one factor.
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.SCRIPT = exports.ROUTE_ENTRY = exports.EARLY_SCRIPT = exports.CHAIN_TEXT = exports.CHAINS = exports.WILDERNESS_PAYOFF = exports.WILDERNESS_TEXT = exports.LIFE_FOCUS = exports.CAMPAIGN_XP = exports.DP_GRANTS = exports.XP_TAGS = exports.LADDER = exports.ROUTES = exports.OPP = exports.BLOCS = void 0;
-exports.chainRecall = chainRecall;
-exports.BLOCS = {
-    CIV: { id: 'CIV', name: 'Civic Alliance', axis: 'Decisions belong close to the people affected by them.', color: 'ochre' },
-    REN: { id: 'REN', name: 'Renewal Front', axis: 'A capable centre can move faster than a hundred committees.', color: 'indigo' },
-};
-const OPP = (b) => (b === 'CIV' ? 'REN' : 'CIV');
-exports.OPP = OPP;
-exports.ROUTES = [
-    { id: 'STAFF', name: 'Legislative staffer', blurb: 'Six years drafting other people\'s bills. You know where the bodies are filed.',
-        start: { capital: 3, funds: 4, standing: 5, mu: 0.15, tau: 0.55 } },
-    { id: 'CIVIC', name: 'Community organiser', blurb: 'You ran a tenants\' union that beat the city twice. Nobody in the party owes you anything.',
-        start: { capital: 4, funds: 1, standing: 1, mu: 0.45, tau: 0.4 } },
-    { id: 'PROF', name: 'Municipal auditor', blurb: 'You spent your twenties finding money that had gone missing. Some of it belonged to your future colleagues.',
-        start: { capital: 2, funds: 3, standing: 2, mu: 0.55, tau: 0.7 } },
-];
-// The four-point private ladder. Anchors locked at 0.15 / 0.40 / 0.60 / 0.85.
-exports.LADDER = [
-    ['There\'s nothing here. Someone is fishing.', 'Probably overblown, but I want to know more.',
-        'I think it\'s real. I\'d want it confirmed.', 'It happened. We should assume it happened.'],
-    ['Weak lead', 'Plausible', 'Likely true', 'Near certain'],
-];
-const F = (o) => ({ selfProtection: 0, proceduralRestraint: 0, concession: 0, deflection: 0,
-    exploitation: 0, transparency: 0, institutionalCost: 0, electoralGain: 0, personalCost: 0, horizon: 0, ...o });
-// ── The three delayed chains ────────────────────────────────────────────────
-// Chain seeds are deliberately NOT matched-pair members: a pair member that
-// resolved early would tell the player the answer before judging its partner.
-exports.XP_TAGS = {
-    HOUSING_REFORM: ['POLICY', 'COMM'], PARTY_WHIP: ['NEG'], THE_ERROR: ['COMM', 'POLICY'],
-    ENTRY_23: ['POLICY'], FORMATIVE_24: ['ORG'],
-    INTRO: ['STRAT'], CULVERT: ['POLICY'], OPP_CONTRACT: ['STRAT'],
-    DISTRICTS: ['POLICY', 'STRAT'], CROWD_LOUD: ['COMM'], CROWD_QUIET: ['COMM'],
-    TIP_HOUSING: ['STRAT'], GRANT_QUESTION: ['POLICY'], SMEAR_RIVAL: ['COMM'],
-    RECORDING_DENIABLE: ['STRAT'], RECORDING_CLEAN: ['STRAT'],
-    ALLY_CONTRACT: ['NEG'], AUDIT_OFFICE: ['NEG', 'POLICY'],
-    PARTY_OFFER: ['NEG'], THE_ALLEGATION: ['COMM'], THE_TIP: ['STRAT'],
-    WILDERNESS: ['STRAT'], COMEBACK: ['ORG', 'STRAT'],
-    CHAIN_HOUSING: ['STRAT'], CHAIN_SMEAR: ['COMM'], CHAIN_GRANT: ['POLICY'],
-};
-// Development opportunities are SYMMETRIC. v0.35 gave a defeated player 5 points and a
-// winner 4, and — worse — the loser then also got the wilderness milestone the winner
-// never saw, so losing was worth 11 freely-allocatable points against 7. That made
-// deliberate defeat a rational build strategy, which is the opposite of the intention.
-//
-// Now both paths get three milestones and the same total. What losing gives you instead
-// is USE-BASED experience in the things a hard campaign actually exercises — which only
-// discounts growth in those specific abilities, and cannot be spent anywhere else.
-exports.DP_GRANTS = {
-    FORMATIVE: { n: 3, reason: 'Before any of it started' },
-    FIRST_CAMPAIGN: { n: 4, reason: 'Your first campaign' },
-    FIRST_TERM: { n: 4, reason: 'Two years in the job' },
-    WILDERNESS: { n: 4, reason: 'Four years out of office' },
-    MIDCAREER: { n: 3, reason: 'A decade in politics' },
-};
-// What each path genuinely exercises. Losing a close race means you knocked more doors
-// and spent more nights on the numbers; winning means you built something that held and
-// now have to govern with people you need.
-exports.CAMPAIGN_XP = {
-    WON: { tags: ['ORG', 'NEG'], label: 'Won the ward' },
-    LOST: { tags: ['ORG', 'ORG', 'STRAT', 'STRAT'], label: 'Lost the ward by four hundred votes' },
-};
-// ── Diegetic development: where the next stretch of a life goes ──
-exports.LIFE_FOCUS = [
-    { id: 'CONSTITUENCY', ability: 'ORG', label: 'The constituency',
-        blurb: 'Surgeries every Saturday morning. The volunteer list. The streets nobody else knocks.' },
-    { id: 'COMMITTEE', ability: 'POLICY', label: 'The committee corridor',
-        blurb: 'Bills, briefings, and the detail almost nobody else in the chamber has read.' },
-    { id: 'PLATFORM', ability: 'COMM', label: 'The studio and the platform',
-        blurb: 'Interviews, panels, debates. Learning to make an argument stand up in ninety seconds.' },
-    { id: 'CHAMBER_BAR', ability: 'NEG', label: 'The bar off the chamber',
-        blurb: 'The people whose votes you will need one day, and what each of them actually wants.' },
-    { id: 'BACKROOM', ability: 'STRAT', label: 'The back room',
-        blurb: 'Polling, ward maps, and the long unglamorous business of working out where this is going.' },
-];
-exports.WILDERNESS_TEXT = {
-    PROFESSIONAL: 'Two years of work that closes at six o\'clock. You are better paid than you have ever been and nobody asks your opinion about anything. Twice a year someone recognises you in a queue and cannot place where from.',
-    STAFF: 'Two years of other people\'s campaigns. You write the lines, you book the halls, you learn exactly how the nominations are actually decided. Everyone in the building knows your name and no one outside it does.',
-    MEDIA: 'Two years of the panel show and the Thursday column. You are recognised constantly now, and about half the people who recognise you have already decided what you are. The invitations come from one side only.',
-    LOCAL: 'Two years of school fetes, drainage meetings and the funeral of anyone who mattered. It is unglamorous and slow and there are four thousand people who would now put your leaflet in their window without being asked.',
-    LEAVE: 'Two years of not being a politician. It is remarkable, and slightly insulting, how completely a city forgets a person who stops appearing in it. The old scandal stops coming up because nothing about you comes up.',
-};
-// Four years out of office has to build something, or defeat is a death spiral rather
-// than a chapter. Each route earns a different kind of standing with the electorate.
-exports.WILDERNESS_PAYOFF = {
-    PROFESSIONAL: { trait: 'competence', implication: 0.6, strength: 0.8, reliability: 0.9,
-        diagnosticity: 0.55, mediaReach: 0.35 },
-    STAFF: { trait: 'competence', implication: 0.55, strength: 0.75, reliability: 0.88,
-        diagnosticity: 0.5, mediaReach: 0.3 },
-    MEDIA: { trait: 'competence', implication: 0.68, strength: 0.85, reliability: 0.85,
-        diagnosticity: 0.6, mediaReach: 0.9 },
-    LOCAL: { trait: 'integrity', implication: 0.82, strength: 0.9, reliability: 0.92,
-        diagnosticity: 0.7, mediaReach: 0.45 },
-    LEAVE: { trait: 'competence', implication: 0.3, strength: 0.3, reliability: 0.7,
-        diagnosticity: 0.4, mediaReach: 0.15 },
-};
-exports.CHAINS = {
-    HOUSING: { seedId: 'TIP_HOUSING', outcome: 'CONFIRMED', seedAge: 30,
-        file: 'THE NORTHGATE HOUSING FILE', reporter: 'Mara Venn',
-        returnLine: 'Mara Venn returns with procurement documents released under appeal.' },
-    SMEAR: { seedId: 'SMEAR_RIVAL', outcome: 'DISPROVEN', seedAge: 33,
-        file: 'THE QUALIFICATIONS DOSSIER', reporter: 'Ilse Brandt',
-        returnLine: 'Ilse Brandt, who first ran the dossier, files a retraction longer than the original story.' },
-    GRANT: { seedId: 'GRANT_QUESTION', outcome: 'UNRESOLVED', seedAge: 31,
-        file: 'THE MERIDIAN CULTURAL GRANT', reporter: 'the standing inquiry',
-        returnLine: 'The standing inquiry into the cultural grant finally reports.' },
-};
-// What the player is reminded of, in their own record, before any verdict.
-function chainRecall(spec, credence, move) {
-    const said = credence === null || credence === undefined ? null
-        : ['you thought there was nothing in it', 'you thought it was probably overblown',
-            'you thought it was probably real', 'you were sure it had happened'][credence];
-    return {
-        file: spec.file,
-        header: `${spec.seedAge === 30 ? 'Five' : spec.seedAge === 31 ? 'Eight' : 'Four'} years ago`,
-        line: said ? `At ${spec.seedAge}, ${said}.` : `At ${spec.seedAge}, this crossed your desk.`,
-        did: move?.label ?? null,
-    };
-}
-exports.CHAIN_TEXT = {
-    HOUSING: (v) => ({
-        head: 'Confirmed, five years late',
-        body: 'The bank records surface in an unrelated bankruptcy filing. The housing officer took four payments across eighteen months, and the unsigned letter that reached your office at thirty had the dates right.',
-        verdict: v.tone === 'wrong'
-            ? 'You were wrong, and you were wrong early and in writing. A reporter finds the minute where you said so.'
-            : v.procedural > 0.5
-                ? 'You did not announce a conclusion. You asked for it to be looked at, and it was, and it was there. Almost nobody notices. One person writes about it.'
-                : 'You called it before anyone could prove it. That reads as judgment, or as luck, depending on who is describing you.',
-    }),
-    SMEAR: (v) => ({
-        head: 'The dossier was manufactured',
-        body: 'The qualifications dossier was forged — competently, by a former campaign contractor with a grudge and a scanner, who confesses in a civil suit two years later. Every document in it was fabricated.',
-        verdict: v.tone === 'wrong'
-            ? 'You believed it, and some of what you did assumed it was true. The correction travels a fraction as far as the accusation did.'
-            : v.procedural > 0.5
-                ? 'You declined to treat it as established before it was established. In hindsight that was the only sensible thing anyone did with it.'
-                : 'You did not take the bait. Nobody thanks you, because nothing happened.',
-    }),
-    GRANT: () => ({
-        head: 'Closed without a finding',
-        body: 'The inquiry into the cultural grant reports after six years. It cannot establish that the foundation received favourable treatment. It also cannot establish that it did not. Two of the three relevant officials have retired; the third declines to be interviewed.',
-        verdict: 'Nothing is settled and nothing will be. The people who were certain at the time are still certain, in both directions, and the file goes into storage.',
-    }),
-};
-// ─── The event script. Ages drive pacing; quiet years compress between beats. ───
-const RAW_SCRIPT = (P) => [
+  // src/content.mjs
+  var BLOCS = {
+    CIV: { id: "CIV", name: "Civic Alliance", axis: "Decisions belong close to the people affected by them.", color: "ochre" },
+    REN: { id: "REN", name: "Renewal Front", axis: "A capable centre can move faster than a hundred committees.", color: "indigo" }
+  };
+  var OPP = (b) => b === "CIV" ? "REN" : "CIV";
+  var ROUTES = [
     {
-        id: 'INTRO', age: 26, kind: 'story', chapter: 'Entry',
-        title: 'The ward that nobody wanted',
-        text: `${P.region} has forty thousand people, one flooding culvert, and a council seat the ${exports.BLOCS[P.bloc].name} has lost three times running. The regional secretary offers it to you over bad coffee. "You'd be doing us a favour," she says, which means she expects you to lose.`,
-        choices: [
-            { id: 'take', flag: 'TOOK_SEAT', label: 'Take the seat. Losing in public is still being in public.',
-                features: F({ electoralGain: 0.6, horizon: 0.5 }), effect: { capital: 1 } },
-            { id: 'bargain', label: 'Take it \u2014 and make her fund it properly first.',
-                features: F({ electoralGain: 0.4, selfProtection: 0.3 }), effect: { funds: 3, standing: -1 } },
-            { id: 'wait', label: 'Decline. Ask for the safer ward next cycle.',
-                features: F({ selfProtection: 0.7, horizon: 0.3 }), effect: { standing: 2, funds: 1, capital: -1 } },
-        ],
+      id: "STAFF",
+      name: "Legislative staffer",
+      blurb: "Six years drafting other people's bills. You know where the bodies are filed.",
+      start: { capital: 3, funds: 4, standing: 5, mu: 0.15, tau: 0.55 }
     },
     {
-        id: 'CULVERT', age: 27, kind: 'story', chapter: 'Entry', responsibility: false,
-        title: 'The culvert',
-        text: 'The flooding culvert has been in the budget for nine years and out of it for nine years. Fixing it costs everything you can raise. Announcing you will fix it costs nothing and polls beautifully.',
-        choices: [
-            { id: 'fund', label: 'Spend the whole ward fund on the culvert.', features: F({ transparency: 0.4, horizon: 0.9, electoralGain: -0.2 }), effect: { funds: -3, capital: 2 }, flag: 'CULVERT_FUNDED' },
-            { id: 'announce', label: 'Announce a plan. Fund a study.', features: F({ deflection: 0.6, electoralGain: 0.7, horizon: -0.3 }), effect: { capital: 1, funds: 3, standing: 1 } },
-            { id: 'split', label: 'Fix the worst hundred metres. Say so plainly.', features: F({ transparency: 0.7, concession: 0.3, horizon: 0.4 }), effect: { funds: -1 }, flag: 'CULVERT_PARTIAL' },
-        ],
+      id: "CIVIC",
+      name: "Community organiser",
+      blurb: "You ran a tenants' union that beat the city twice. Nobody in the party owes you anything.",
+      start: { capital: 4, funds: 1, standing: 1, mu: 0.45, tau: 0.4 }
+    },
+    {
+      id: "PROF",
+      name: "Municipal auditor",
+      blurb: "You spent your twenties finding money that had gone missing. Some of it belonged to your future colleagues.",
+      start: { capital: 2, funds: 3, standing: 2, mu: 0.55, tau: 0.7 }
+    }
+  ];
+  var LADDER = [
+    [
+      "There's nothing here. Someone is fishing.",
+      "Probably overblown, but I want to know more.",
+      "I think it's real. I'd want it confirmed.",
+      "It happened. We should assume it happened."
+    ],
+    ["Weak lead", "Plausible", "Likely true", "Near certain"]
+  ];
+  var F = (o) => ({
+    selfProtection: 0,
+    proceduralRestraint: 0,
+    concession: 0,
+    deflection: 0,
+    exploitation: 0,
+    transparency: 0,
+    institutionalCost: 0,
+    electoralGain: 0,
+    personalCost: 0,
+    horizon: 0,
+    ...o
+  });
+  var XP_TAGS = {
+    HOUSING_REFORM: ["POLICY", "COMM"],
+    PARTY_WHIP: ["NEG"],
+    THE_ERROR: ["COMM", "POLICY"],
+    ENTRY_23: ["POLICY"],
+    FORMATIVE_24: ["ORG"],
+    INTRO: ["STRAT"],
+    CULVERT: ["POLICY"],
+    OPP_CONTRACT: ["STRAT"],
+    DISTRICTS: ["POLICY", "STRAT"],
+    CROWD_LOUD: ["COMM"],
+    CROWD_QUIET: ["COMM"],
+    TIP_HOUSING: ["STRAT"],
+    GRANT_QUESTION: ["POLICY"],
+    SMEAR_RIVAL: ["COMM"],
+    RECORDING_DENIABLE: ["STRAT"],
+    RECORDING_CLEAN: ["STRAT"],
+    ALLY_CONTRACT: ["NEG"],
+    AUDIT_OFFICE: ["NEG", "POLICY"],
+    PARTY_OFFER: ["NEG"],
+    THE_ALLEGATION: ["COMM"],
+    THE_TIP: ["STRAT"],
+    WILDERNESS: ["STRAT"],
+    COMEBACK: ["ORG", "STRAT"],
+    CHAIN_HOUSING: ["STRAT"],
+    CHAIN_SMEAR: ["COMM"],
+    CHAIN_GRANT: ["POLICY"]
+  };
+  var DP_GRANTS = {
+    FORMATIVE: { n: 3, reason: "Before any of it started" },
+    FIRST_CAMPAIGN: { n: 4, reason: "Your first campaign" },
+    FIRST_TERM: { n: 4, reason: "Two years in the job" },
+    WILDERNESS: { n: 4, reason: "Four years out of office" },
+    MIDCAREER: { n: 3, reason: "A decade in politics" }
+  };
+  var CAMPAIGN_XP = {
+    WON: { tags: ["ORG", "NEG"], label: "Won the ward" },
+    LOST: { tags: ["ORG", "ORG", "STRAT", "STRAT"], label: "Lost the ward by four hundred votes" }
+  };
+  var LIFE_FOCUS = [
+    {
+      id: "CONSTITUENCY",
+      ability: "ORG",
+      label: "The constituency",
+      blurb: "Surgeries every Saturday morning. The volunteer list. The streets nobody else knocks."
+    },
+    {
+      id: "COMMITTEE",
+      ability: "POLICY",
+      label: "The committee corridor",
+      blurb: "Bills, briefings, and the detail almost nobody else in the chamber has read."
+    },
+    {
+      id: "PLATFORM",
+      ability: "COMM",
+      label: "The studio and the platform",
+      blurb: "Interviews, panels, debates. Learning to make an argument stand up in ninety seconds."
+    },
+    {
+      id: "CHAMBER_BAR",
+      ability: "NEG",
+      label: "The bar off the chamber",
+      blurb: "The people whose votes you will need one day, and what each of them actually wants."
+    },
+    {
+      id: "BACKROOM",
+      ability: "STRAT",
+      label: "The back room",
+      blurb: "Polling, ward maps, and the long unglamorous business of working out where this is going."
+    }
+  ];
+  var WILDERNESS_TEXT = {
+    PROFESSIONAL: "Two years of work that closes at six o'clock. You are better paid than you have ever been and nobody asks your opinion about anything. Twice a year someone recognises you in a queue and cannot place where from.",
+    STAFF: "Two years of other people's campaigns. You write the lines, you book the halls, you learn exactly how the nominations are actually decided. Everyone in the building knows your name and no one outside it does.",
+    MEDIA: "Two years of the panel show and the Thursday column. You are recognised constantly now, and about half the people who recognise you have already decided what you are. The invitations come from one side only.",
+    LOCAL: "Two years of school fetes, drainage meetings and the funeral of anyone who mattered. It is unglamorous and slow and there are four thousand people who would now put your leaflet in their window without being asked.",
+    LEAVE: "Two years of not being a politician. It is remarkable, and slightly insulting, how completely a city forgets a person who stops appearing in it. The old scandal stops coming up because nothing about you comes up."
+  };
+  var WILDERNESS_PAYOFF = {
+    PROFESSIONAL: {
+      trait: "competence",
+      implication: 0.6,
+      strength: 0.8,
+      reliability: 0.9,
+      diagnosticity: 0.55,
+      mediaReach: 0.35
+    },
+    STAFF: {
+      trait: "competence",
+      implication: 0.55,
+      strength: 0.75,
+      reliability: 0.88,
+      diagnosticity: 0.5,
+      mediaReach: 0.3
+    },
+    MEDIA: {
+      trait: "competence",
+      implication: 0.68,
+      strength: 0.85,
+      reliability: 0.85,
+      diagnosticity: 0.6,
+      mediaReach: 0.9
+    },
+    LOCAL: {
+      trait: "integrity",
+      implication: 0.82,
+      strength: 0.9,
+      reliability: 0.92,
+      diagnosticity: 0.7,
+      mediaReach: 0.45
+    },
+    LEAVE: {
+      trait: "competence",
+      implication: 0.3,
+      strength: 0.3,
+      reliability: 0.7,
+      diagnosticity: 0.4,
+      mediaReach: 0.15
+    }
+  };
+  var CHAINS = {
+    HOUSING: {
+      seedId: "TIP_HOUSING",
+      outcome: "CONFIRMED",
+      seedAge: 30,
+      file: "THE NORTHGATE HOUSING FILE",
+      reporter: "Mara Venn",
+      returnLine: "Mara Venn returns with procurement documents released under appeal."
+    },
+    SMEAR: {
+      seedId: "SMEAR_RIVAL",
+      outcome: "DISPROVEN",
+      seedAge: 33,
+      file: "THE QUALIFICATIONS DOSSIER",
+      reporter: "Ilse Brandt",
+      returnLine: "Ilse Brandt, who first ran the dossier, files a retraction longer than the original story."
+    },
+    GRANT: {
+      seedId: "GRANT_QUESTION",
+      outcome: "UNRESOLVED",
+      seedAge: 31,
+      file: "THE MERIDIAN CULTURAL GRANT",
+      reporter: "the standing inquiry",
+      returnLine: "The standing inquiry into the cultural grant finally reports."
+    }
+  };
+  function chainRecall(spec, credence, move) {
+    const said = credence === null || credence === void 0 ? null : [
+      "you thought there was nothing in it",
+      "you thought it was probably overblown",
+      "you thought it was probably real",
+      "you were sure it had happened"
+    ][credence];
+    return {
+      file: spec.file,
+      header: `${spec.seedAge === 30 ? "Five" : spec.seedAge === 31 ? "Eight" : "Four"} years ago`,
+      line: said ? `At ${spec.seedAge}, ${said}.` : `At ${spec.seedAge}, this crossed your desk.`,
+      did: move?.label ?? null
+    };
+  }
+  var CHAIN_TEXT = {
+    HOUSING: (v) => ({
+      head: "Confirmed, five years late",
+      body: "The bank records surface in an unrelated bankruptcy filing. The housing officer took four payments across eighteen months, and the unsigned letter that reached your office at thirty had the dates right.",
+      verdict: v.tone === "wrong" ? "You were wrong, and you were wrong early and in writing. A reporter finds the minute where you said so." : v.procedural > 0.5 ? "You did not announce a conclusion. You asked for it to be looked at, and it was, and it was there. Almost nobody notices. One person writes about it." : "You called it before anyone could prove it. That reads as judgment, or as luck, depending on who is describing you."
+    }),
+    SMEAR: (v) => ({
+      head: "The dossier was manufactured",
+      body: "The qualifications dossier was forged \u2014 competently, by a former campaign contractor with a grudge and a scanner, who confesses in a civil suit two years later. Every document in it was fabricated.",
+      verdict: v.tone === "wrong" ? "You believed it, and some of what you did assumed it was true. The correction travels a fraction as far as the accusation did." : v.procedural > 0.5 ? "You declined to treat it as established before it was established. In hindsight that was the only sensible thing anyone did with it." : "You did not take the bait. Nobody thanks you, because nothing happened."
+    }),
+    GRANT: () => ({
+      head: "Closed without a finding",
+      body: "The inquiry into the cultural grant reports after six years. It cannot establish that the foundation received favourable treatment. It also cannot establish that it did not. Two of the three relevant officials have retired; the third declines to be interviewed.",
+      verdict: "Nothing is settled and nothing will be. The people who were certain at the time are still certain, in both directions, and the file goes into storage."
+    })
+  };
+  var RAW_SCRIPT = (P) => [
+    {
+      id: "INTRO",
+      age: 26,
+      kind: "story",
+      chapter: "Entry",
+      title: "The ward that nobody wanted",
+      text: `${P.region} has forty thousand people, one flooding culvert, and a council seat the ${BLOCS[P.bloc].name} has lost three times running. The regional secretary offers it to you over bad coffee. "You'd be doing us a favour," she says, which means she expects you to lose.`,
+      choices: [
+        {
+          id: "take",
+          flag: "TOOK_SEAT",
+          label: "Take the seat. Losing in public is still being in public.",
+          features: F({ electoralGain: 0.6, horizon: 0.5 }),
+          effect: { capital: 1 }
+        },
+        {
+          id: "bargain",
+          label: "Take it \u2014 and make her fund it properly first.",
+          features: F({ electoralGain: 0.4, selfProtection: 0.3 }),
+          effect: { funds: 3, standing: -1 }
+        },
+        {
+          id: "wait",
+          label: "Decline. Ask for the safer ward next cycle.",
+          features: F({ selfProtection: 0.7, horizon: 0.3 }),
+          effect: { standing: 2, funds: 1, capital: -1 }
+        }
+      ]
+    },
+    {
+      id: "CULVERT",
+      age: 27,
+      kind: "story",
+      chapter: "Entry",
+      responsibility: false,
+      title: "The culvert",
+      text: "The flooding culvert has been in the budget for nine years and out of it for nine years. Fixing it costs everything you can raise. Announcing you will fix it costs nothing and polls beautifully.",
+      choices: [
+        { id: "fund", label: "Spend the whole ward fund on the culvert.", features: F({ transparency: 0.4, horizon: 0.9, electoralGain: -0.2 }), effect: { funds: -3, capital: 2 }, flag: "CULVERT_FUNDED" },
+        { id: "announce", label: "Announce a plan. Fund a study.", features: F({ deflection: 0.6, electoralGain: 0.7, horizon: -0.3 }), effect: { capital: 1, funds: 3, standing: 1 } },
+        { id: "split", label: "Fix the worst hundred metres. Say so plainly.", features: F({ transparency: 0.7, concession: 0.3, horizon: 0.4 }), effect: { funds: -1 }, flag: "CULVERT_PARTIAL" }
+      ]
     },
     // ── MATCHED PAIR A, member 1: opposing-side target ──
     {
-        id: 'OPP_CONTRACT', age: 28, kind: 'judgment', chapter: 'First term',
-        factor: 'PARTISAN', pairId: 'P1', level: 'OPPOSING_SIDE', readFormat: 0,
-        title: 'A contract on the other side',
-        text: `A ${exports.BLOCS[(0, exports.OPP)(P.bloc)].name} councillor's brother-in-law won the waste-collection contract for the eastern districts. The procurement file shows two bidders and one very short evaluation window. The councillor says the process was clean and the family connection is a coincidence.`,
-        readPrompt: 'Your chief of staff shuts the door. "Off the record. What do you actually think happened?"',
-        latents: { implication: -0.62, strength: 0.62, reliability: 0.68, diagnosticity: 0.75, deniability: 0.2,
-            targetSide: 'OPPOSING_SIDE', sourceAlignment: 'NEUTRAL', crowd: null, mediaReach: 0.7 },
-        choices: [
-            { id: 'demand', label: 'Call for the councillor to stand down while it is investigated.', features: F({ exploitation: 0.7, electoralGain: 0.6, proceduralRestraint: 0.2 }), effect: { capital: 1, standing: 1, funds: 1 } },
-            { id: 'refer', cost: { capital: 2 }, lockNote: 'You have no standing left to spend on asking the Audit Office for favours.', label: 'Refer the file to the Audit Office and say nothing else.', features: F({ proceduralRestraint: 0.85, transparency: 0.5, horizon: 0.4 }), effect: { capital: 1 }, institutional: true },
-            { id: 'quiet', label: 'Leave it. Waste contracts are always ugly.', features: F({ deflection: 0.7, horizon: 0.2 }), effect: {} },
-        ],
+      id: "OPP_CONTRACT",
+      age: 28,
+      kind: "judgment",
+      chapter: "First term",
+      factor: "PARTISAN",
+      pairId: "P1",
+      level: "OPPOSING_SIDE",
+      readFormat: 0,
+      title: "A contract on the other side",
+      text: `A ${BLOCS[OPP(P.bloc)].name} councillor's brother-in-law won the waste-collection contract for the eastern districts. The procurement file shows two bidders and one very short evaluation window. The councillor says the process was clean and the family connection is a coincidence.`,
+      readPrompt: 'Your chief of staff shuts the door. "Off the record. What do you actually think happened?"',
+      latents: {
+        implication: -0.62,
+        strength: 0.62,
+        reliability: 0.68,
+        diagnosticity: 0.75,
+        deniability: 0.2,
+        targetSide: "OPPOSING_SIDE",
+        sourceAlignment: "NEUTRAL",
+        crowd: null,
+        mediaReach: 0.7
+      },
+      choices: [
+        { id: "demand", label: "Call for the councillor to stand down while it is investigated.", features: F({ exploitation: 0.7, electoralGain: 0.6, proceduralRestraint: 0.2 }), effect: { capital: 1, standing: 1, funds: 1 } },
+        { id: "refer", cost: { capital: 2 }, lockNote: "You have no standing left to spend on asking the Audit Office for favours.", label: "Refer the file to the Audit Office and say nothing else.", features: F({ proceduralRestraint: 0.85, transparency: 0.5, horizon: 0.4 }), effect: { capital: 1 }, institutional: true },
+        { id: "quiet", label: "Leave it. Waste contracts are always ugly.", features: F({ deflection: 0.7, horizon: 0.2 }), effect: {} }
+      ]
     },
-    { id: 'ELECTION_1', age: 29, kind: 'election', chapter: 'First term', office: 'Ward Council', tier: 1 },
+    { id: "ELECTION_1", age: 29, kind: "election", chapter: "First term", office: "Ward Council", tier: 1 },
     // Loss branch — political failure must not be game failure.
     {
-        id: 'WILDERNESS', age: 30, kind: 'story', chapter: 'Out', when: (st) => !st.office,
-        title: 'Out',
-        text: 'You lost by four hundred votes. The party stops returning calls within a fortnight. There is no ceremony to losing a ward seat — the office is cleared by the end of the month and the phone simply goes quiet.',
-        prompt: 'Four years is a long time. What do you do with them?',
-        choices: [
-            { id: 'professional', label: 'Go back to the profession. Earn properly for a while.',
-                features: F({ selfProtection: 0.4, horizon: -0.1 }),
-                effect: { funds: 7 }, flag: 'OUT_PROFESSIONAL',
-                out: { route: 'PROFESSIONAL', fade: 2.5, recognition: -0.14, independence: +0.2,
-                    note: 'You are solvent and nobody can reach you for comment.' } },
-            { id: 'staff', label: 'Take a job inside the party machine. Be owed things.',
-                features: F({ selfProtection: 0.35, electoralGain: 0.5 }),
-                effect: { standing: 6, funds: 2 }, flag: 'OUT_STAFF',
-                out: { route: 'STAFF', fade: 1.0, recognition: -0.04, independence: -0.35,
-                    note: 'The nomination will be easier next time. It will also be theirs to give.' } },
-            { id: 'media', label: 'Take the column and the panel slot. Be visible.',
-                features: F({ exploitation: 0.35, transparency: 0.3 }),
-                effect: { funds: 3 }, flag: 'OUT_MEDIA',
-                out: { route: 'MEDIA', fade: 0.0, recognition: +0.26, independence: +0.1, hardens: true,
-                    note: 'Everyone knows who you are now. Half of them have decided what you are.' } },
-            { id: 'local', label: 'Stay in the ward. Turn up to everything for four years.',
-                features: F({ horizon: 0.8, transparency: 0.5 }),
-                effect: { capital: 4, standing: 1 }, flag: 'OUT_LOCAL',
-                out: { route: 'LOCAL', fade: 0.8, recognition: +0.06, independence: +0.15, local: true,
-                    note: 'Nobody in the capital notices. Four thousand people in the ward do.' } },
-            { id: 'leave', label: 'Leave politics. Properly, as far as you know.',
-                features: F({ deflection: 0.4, horizon: -0.2 }),
-                effect: { funds: 5, capital: 1 }, flag: 'OUT_LEAVE',
-                out: { route: 'LEAVE', fade: 4.0, recognition: -0.30, independence: +0.3,
-                    note: 'It is remarkable how completely the city forgets a person who stops appearing in it.' } },
-        ],
+      id: "WILDERNESS",
+      age: 30,
+      kind: "story",
+      chapter: "Out",
+      when: (st) => !st.office,
+      title: "Out",
+      text: "You lost by four hundred votes. The party stops returning calls within a fortnight. There is no ceremony to losing a ward seat \u2014 the office is cleared by the end of the month and the phone simply goes quiet.",
+      prompt: "Four years is a long time. What do you do with them?",
+      choices: [
+        {
+          id: "professional",
+          label: "Go back to the profession. Earn properly for a while.",
+          features: F({ selfProtection: 0.4, horizon: -0.1 }),
+          effect: { funds: 7 },
+          flag: "OUT_PROFESSIONAL",
+          out: {
+            route: "PROFESSIONAL",
+            fade: 2.5,
+            recognition: -0.14,
+            independence: 0.2,
+            note: "You are solvent and nobody can reach you for comment."
+          }
+        },
+        {
+          id: "staff",
+          label: "Take a job inside the party machine. Be owed things.",
+          features: F({ selfProtection: 0.35, electoralGain: 0.5 }),
+          effect: { standing: 6, funds: 2 },
+          flag: "OUT_STAFF",
+          out: {
+            route: "STAFF",
+            fade: 1,
+            recognition: -0.04,
+            independence: -0.35,
+            note: "The nomination will be easier next time. It will also be theirs to give."
+          }
+        },
+        {
+          id: "media",
+          label: "Take the column and the panel slot. Be visible.",
+          features: F({ exploitation: 0.35, transparency: 0.3 }),
+          effect: { funds: 3 },
+          flag: "OUT_MEDIA",
+          out: {
+            route: "MEDIA",
+            fade: 0,
+            recognition: 0.26,
+            independence: 0.1,
+            hardens: true,
+            note: "Everyone knows who you are now. Half of them have decided what you are."
+          }
+        },
+        {
+          id: "local",
+          label: "Stay in the ward. Turn up to everything for four years.",
+          features: F({ horizon: 0.8, transparency: 0.5 }),
+          effect: { capital: 4, standing: 1 },
+          flag: "OUT_LOCAL",
+          out: {
+            route: "LOCAL",
+            fade: 0.8,
+            recognition: 0.06,
+            independence: 0.15,
+            local: true,
+            note: "Nobody in the capital notices. Four thousand people in the ward do."
+          }
+        },
+        {
+          id: "leave",
+          label: "Leave politics. Properly, as far as you know.",
+          features: F({ deflection: 0.4, horizon: -0.2 }),
+          effect: { funds: 5, capital: 1 },
+          flag: "OUT_LEAVE",
+          out: {
+            route: "LEAVE",
+            fade: 4,
+            recognition: -0.3,
+            independence: 0.3,
+            note: "It is remarkable how completely the city forgets a person who stops appearing in it."
+          }
+        }
+      ]
     },
     {
-        id: 'WILDERNESS_MID', age: 32, kind: 'wilderness', chapter: 'Out', when: (st) => !!st.out,
-        title: 'The middle of it',
+      id: "WILDERNESS_MID",
+      age: 32,
+      kind: "wilderness",
+      chapter: "Out",
+      when: (st) => !!st.out,
+      title: "The middle of it"
     },
     {
-        id: 'FIRST_TERM', age: 32, kind: 'milestone', chapter: 'Council', when: (st) => !!st.office,
-        title: 'Two years in',
-        grant: 'FIRST_TERM',
-        text: 'Two years of committee papers, ward surgeries and votes you did not get to choose. You have worked out which parts of this job you are actually good at, and which parts you have been getting away with.',
+      id: "FIRST_TERM",
+      age: 32,
+      kind: "milestone",
+      chapter: "Council",
+      when: (st) => !!st.office,
+      title: "Two years in",
+      grant: "FIRST_TERM",
+      text: "Two years of committee papers, ward surgeries and votes you did not get to choose. You have worked out which parts of this job you are actually good at, and which parts you have been getting away with."
     },
     {
-        id: 'COMEBACK', age: 34, kind: 'story', chapter: 'Out', when: (st) => !!st.out,
-        title: 'The seat comes open',
-        text: 'The member who beat you is moving to a national list. The ward selection is open, and your name comes up in the meeting — not first, but it comes up.',
-        prompt: 'Do you go back?',
-        choices: [
-            { id: 'run', label: 'Put your name in. You have been waiting four years to be asked.',
-                features: F({ electoralGain: 0.6, horizon: 0.4 }), effect: { capital: 1 }, flag: 'COMEBACK_RUN' },
-            { id: 'run_field', requires: { ORG: 55 }, check: { ability: 'ORG', dc: 52 },
-                label: 'Put your name in, and win it on the doorstep — four hundred volunteers and no money at all.',
-                features: F({ horizon: 0.6, electoralGain: 0.5, transparency: 0.4 }),
-                effect: { capital: 2, standing: 1 }, flag: 'COMEBACK_RUN' },
-            { id: 'run_hard', label: 'Put your name in, and make sure the other candidates hear about it first.',
-                features: F({ exploitation: 0.55, electoralGain: 0.75 }), effect: { standing: 2 }, flag: 'COMEBACK_RUN' },
-            { id: 'decline', label: 'Not this one. Wait for something that is actually yours.',
-                features: F({ selfProtection: 0.5, horizon: 0.5 }), effect: { funds: 2 }, flag: 'COMEBACK_DECLINE' },
-        ],
+      id: "COMEBACK",
+      age: 34,
+      kind: "story",
+      chapter: "Out",
+      when: (st) => !!st.out,
+      title: "The seat comes open",
+      text: "The member who beat you is moving to a national list. The ward selection is open, and your name comes up in the meeting \u2014 not first, but it comes up.",
+      prompt: "Do you go back?",
+      choices: [
+        {
+          id: "run",
+          label: "Put your name in. You have been waiting four years to be asked.",
+          features: F({ electoralGain: 0.6, horizon: 0.4 }),
+          effect: { capital: 1 },
+          flag: "COMEBACK_RUN"
+        },
+        {
+          id: "run_field",
+          requires: { ORG: 55 },
+          check: { ability: "ORG", dc: 52 },
+          label: "Put your name in, and win it on the doorstep \u2014 four hundred volunteers and no money at all.",
+          features: F({ horizon: 0.6, electoralGain: 0.5, transparency: 0.4 }),
+          effect: { capital: 2, standing: 1 },
+          flag: "COMEBACK_RUN"
+        },
+        {
+          id: "run_hard",
+          label: "Put your name in, and make sure the other candidates hear about it first.",
+          features: F({ exploitation: 0.55, electoralGain: 0.75 }),
+          effect: { standing: 2 },
+          flag: "COMEBACK_RUN"
+        },
+        {
+          id: "decline",
+          label: "Not this one. Wait for something that is actually yours.",
+          features: F({ selfProtection: 0.5, horizon: 0.5 }),
+          effect: { funds: 2 },
+          flag: "COMEBACK_DECLINE"
+        }
+      ]
     },
     // ── CHAIN A seed: doubted \u2192 later CONFIRMED ──
     {
-        id: 'TIP_HOUSING', age: 30, kind: 'judgment', chapter: 'First term', chainSeed: 'HOUSING', readFormat: 1,
-        title: 'An unsigned letter',
-        text: 'Mara Venn at the Northgate Record has been asking about the housing allocations for a month. An unsigned letter reaches your office claiming the district housing officer has been taking payments to move families up the allocation list. It names no dates and attaches no documents. It does name three families, and two of them did move up the list.',
-        readPrompt: 'Mark your internal confidence for the file. Nobody outside this room sees it.',
-        latents: { implication: -0.6, strength: 0.35, reliability: 0.4, diagnosticity: 0.7, deniability: 0.3,
-            targetSide: 'NON_PARTISAN', sourceAlignment: 'NEUTRAL', crowd: null, mediaReach: 0.3 },
-        choices: [
-            { id: 'push', label: 'Take it to the press. Let the pressure do the work.', features: F({ exploitation: 0.75, electoralGain: 0.5 }), effect: { capital: 1 } },
-            { id: 'refer', label: 'Ask the Audit Office to look at the allocation list quietly.', features: F({ proceduralRestraint: 0.85, horizon: 0.5 }), effect: {}, institutional: true },
-            { id: 'bin', label: 'Anonymous letters are how people settle scores. Bin it.', features: F({ deflection: 0.7 }), effect: {} },
-        ],
+      id: "TIP_HOUSING",
+      age: 30,
+      kind: "judgment",
+      chapter: "First term",
+      chainSeed: "HOUSING",
+      readFormat: 1,
+      title: "An unsigned letter",
+      text: "Mara Venn at the Northgate Record has been asking about the housing allocations for a month. An unsigned letter reaches your office claiming the district housing officer has been taking payments to move families up the allocation list. It names no dates and attaches no documents. It does name three families, and two of them did move up the list.",
+      readPrompt: "Mark your internal confidence for the file. Nobody outside this room sees it.",
+      latents: {
+        implication: -0.6,
+        strength: 0.35,
+        reliability: 0.4,
+        diagnosticity: 0.7,
+        deniability: 0.3,
+        targetSide: "NON_PARTISAN",
+        sourceAlignment: "NEUTRAL",
+        crowd: null,
+        mediaReach: 0.3
+      },
+      choices: [
+        { id: "push", label: "Take it to the press. Let the pressure do the work.", features: F({ exploitation: 0.75, electoralGain: 0.5 }), effect: { capital: 1 } },
+        { id: "refer", label: "Ask the Audit Office to look at the allocation list quietly.", features: F({ proceduralRestraint: 0.85, horizon: 0.5 }), effect: {}, institutional: true },
+        { id: "bin", label: "Anonymous letters are how people settle scores. Bin it.", features: F({ deflection: 0.7 }), effect: {} }
+      ]
     },
     // ── CHAIN C seed: never definitively resolves ──
     {
-        id: 'GRANT_QUESTION', age: 31, kind: 'judgment', chapter: 'Council', chainSeed: 'GRANT', readFormat: 0,
-        title: 'The cultural grant',
-        text: 'The standing inquiry into regional grants opens a file the same week. A foundation with a board full of familiar surnames received the largest cultural grant in the region\u2019s history. The scoring sheet exists, is signed, and awards them four points more than the runner-up on \u201cinstitutional capacity\u201d. Nobody can say what that means.',
-        readPrompt: 'Your chief of staff shuts the door. \u201cOff the record. What do you actually think happened?\u201d',
-        latents: { implication: -0.5, strength: 0.45, reliability: 0.6, diagnosticity: 0.55, deniability: 0.35,
-            targetSide: 'NON_PARTISAN', sourceAlignment: 'NEUTRAL', crowd: null, mediaReach: 0.5 },
-        choices: [
-            { id: 'demand', label: 'Demand the grant be revoked and rescored.', features: F({ exploitation: 0.6, electoralGain: 0.45 }), effect: { capital: 1, standing: -1 } },
-            { id: 'inquiry', label: 'Call for a formal inquiry and wait for it.', features: F({ proceduralRestraint: 0.85, horizon: 0.6 }), effect: {}, institutional: true },
-            { id: 'shrug', label: 'Every scoring sheet has a soft criterion. Let it go.', features: F({ deflection: 0.65 }), effect: {} },
-        ],
+      id: "GRANT_QUESTION",
+      age: 31,
+      kind: "judgment",
+      chapter: "Council",
+      chainSeed: "GRANT",
+      readFormat: 0,
+      title: "The cultural grant",
+      text: "The standing inquiry into regional grants opens a file the same week. A foundation with a board full of familiar surnames received the largest cultural grant in the region\u2019s history. The scoring sheet exists, is signed, and awards them four points more than the runner-up on \u201Cinstitutional capacity\u201D. Nobody can say what that means.",
+      readPrompt: "Your chief of staff shuts the door. \u201COff the record. What do you actually think happened?\u201D",
+      latents: {
+        implication: -0.5,
+        strength: 0.45,
+        reliability: 0.6,
+        diagnosticity: 0.55,
+        deniability: 0.35,
+        targetSide: "NON_PARTISAN",
+        sourceAlignment: "NEUTRAL",
+        crowd: null,
+        mediaReach: 0.5
+      },
+      choices: [
+        { id: "demand", label: "Demand the grant be revoked and rescored.", features: F({ exploitation: 0.6, electoralGain: 0.45 }), effect: { capital: 1, standing: -1 } },
+        { id: "inquiry", label: "Call for a formal inquiry and wait for it.", features: F({ proceduralRestraint: 0.85, horizon: 0.6 }), effect: {}, institutional: true },
+        { id: "shrug", label: "Every scoring sheet has a soft criterion. Let it go.", features: F({ deflection: 0.65 }), effect: {} }
+      ]
     },
     {
-        id: 'DISTRICTS', age: 31, kind: 'story', tradeoff: true, when: (st) => !!st.office, chapter: 'Council', temptation: true,
-        title: 'Two districts, one budget',
-        text: 'The renewal fund covers one district. The northern district has the worse flooding, the older pipes and the smaller turnout. The southern district decides your re-election. Both allocations are entirely legal and both have a written case.',
-        choices: [
-            { id: 'need', label: 'North. The need is measurable and the case is on paper.', features: F({ transparency: 0.6, horizon: 0.8, electoralGain: -0.6 }), effect: { capital: 2, funds: -1, standing: -1 }, flag: 'CHOSE_NEED', stakes: { core: -0.32, ind: 0.22, publicSector: 0.15 } },
-            { id: 'survive', label: 'South. You cannot fix anything from outside the chamber.', features: F({ electoralGain: 0.85, selfProtection: 0.5, horizon: -0.2 }), effect: { funds: 3, standing: 2 }, flag: 'CHOSE_SURVIVAL', stakes: { core: 0.35, ind: -0.22, owner: 0.12 } },
-            { id: 'split', label: 'Split it. Half a fix in both places.', features: F({ deflection: 0.4, concession: 0.2, electoralGain: 0.2 }), effect: { funds: 1 }, flag: 'CHOSE_SPLIT', stakes: { core: 0.05, ind: -0.05 } },
-        ],
+      id: "DISTRICTS",
+      age: 31,
+      kind: "story",
+      tradeoff: true,
+      when: (st) => !!st.office,
+      chapter: "Council",
+      temptation: true,
+      title: "Two districts, one budget",
+      text: "The renewal fund covers one district. The northern district has the worse flooding, the older pipes and the smaller turnout. The southern district decides your re-election. Both allocations are entirely legal and both have a written case.",
+      choices: [
+        { id: "need", label: "North. The need is measurable and the case is on paper.", features: F({ transparency: 0.6, horizon: 0.8, electoralGain: -0.6 }), effect: { capital: 2, funds: -1, standing: -1 }, flag: "CHOSE_NEED", stakes: { core: -0.32, ind: 0.22, publicSector: 0.15 } },
+        { id: "survive", label: "South. You cannot fix anything from outside the chamber.", features: F({ electoralGain: 0.85, selfProtection: 0.5, horizon: -0.2 }), effect: { funds: 3, standing: 2 }, flag: "CHOSE_SURVIVAL", stakes: { core: 0.35, ind: -0.22, owner: 0.12 } },
+        { id: "split", label: "Split it. Half a fix in both places.", features: F({ deflection: 0.4, concession: 0.2, electoralGain: 0.2 }), effect: { funds: 1 }, flag: "CHOSE_SPLIT", stakes: { core: 0.05, ind: -0.05 } }
+      ]
     },
     // ── MATCHED PAIR B, member 1: loud crowd ──
     {
-        // TRADE-OFF 1 — good policy, bad politics. Owners lose, renters gain, and no option
-        // is clean. Communication changes how badly it lands; it cannot make the loss vanish.
-        id: 'HOUSING_REFORM', age: 31, kind: 'story', chapter: 'Council', when: (st) => !!st.office,
-        tradeoff: true, responsibility: true,
-        title: 'The density map',
-        text: 'The ward has four thousand people on the housing list and a planning rule that has not changed since 1974. Lifting it would put three hundred new flats on the eastern approach within four years. It would also put them behind eleven hundred houses whose owners have spent thirty years believing that view was part of what they bought.',
-        prompt: 'The vote is yours to lead or to bury.',
-        choices: [
-            { id: 'full', label: 'Lead it. Full rezoning, and stand up at the meeting to defend it.',
-                features: F({ transparency: 0.8, horizon: 0.9, personalCost: 0.8, electoralGain: -0.7 }),
-                check: { ability: 'COMM', dc: 58 }, effect: { capital: 1 },
-                stakes: { owner: -0.55, young: 0.45, business: 0.15, core: -0.1 },
-                signal: { implication: 0.35, trait: 'competence', strength: 0.7 }, flag: 'HOUSING_FULL' },
-            { id: 'phased', label: 'Phase it over eight years so the first tranche lands after the election.',
-                features: F({ horizon: 0.5, deflection: 0.3, electoralGain: 0.2, proceduralRestraint: 0.3 }),
-                check: { ability: 'POLICY', dc: 55 }, effect: { capital: 1 },
-                stakes: { owner: -0.2, young: 0.15 },
-                signal: { implication: 0.12, trait: 'competence', strength: 0.5 }, flag: 'HOUSING_PHASED' },
-            { id: 'consult', label: 'Send it to consultation. Consultations take two years and produce a document.',
-                features: F({ deflection: 0.8, selfProtection: 0.5, horizon: -0.4 }),
-                effect: { standing: 1 },
-                stakes: { owner: 0.25, young: -0.35 }, flag: 'HOUSING_BURIED' },
-            { id: 'kill', label: 'Kill it and say plainly that you are protecting the character of the ward.',
-                features: F({ electoralGain: 0.6, selfProtection: 0.4, horizon: -0.6, transparency: 0.4 }),
-                effect: { standing: 4, funds: 5 },
-                stakes: { owner: 0.5, young: -0.5, business: -0.1 }, flag: 'HOUSING_KILLED' },
-        ],
+      // TRADE-OFF 1 — good policy, bad politics. Owners lose, renters gain, and no option
+      // is clean. Communication changes how badly it lands; it cannot make the loss vanish.
+      id: "HOUSING_REFORM",
+      age: 31,
+      kind: "story",
+      chapter: "Council",
+      when: (st) => !!st.office,
+      tradeoff: true,
+      responsibility: true,
+      title: "The density map",
+      text: "The ward has four thousand people on the housing list and a planning rule that has not changed since 1974. Lifting it would put three hundred new flats on the eastern approach within four years. It would also put them behind eleven hundred houses whose owners have spent thirty years believing that view was part of what they bought.",
+      prompt: "The vote is yours to lead or to bury.",
+      choices: [
+        {
+          id: "full",
+          label: "Lead it. Full rezoning, and stand up at the meeting to defend it.",
+          features: F({ transparency: 0.8, horizon: 0.9, personalCost: 0.8, electoralGain: -0.7 }),
+          check: { ability: "COMM", dc: 58 },
+          effect: { capital: 1 },
+          stakes: { owner: -0.55, young: 0.45, business: 0.15, core: -0.1 },
+          signal: { implication: 0.35, trait: "competence", strength: 0.7 },
+          flag: "HOUSING_FULL"
+        },
+        {
+          id: "phased",
+          label: "Phase it over eight years so the first tranche lands after the election.",
+          features: F({ horizon: 0.5, deflection: 0.3, electoralGain: 0.2, proceduralRestraint: 0.3 }),
+          check: { ability: "POLICY", dc: 55 },
+          effect: { capital: 1 },
+          stakes: { owner: -0.2, young: 0.15 },
+          signal: { implication: 0.12, trait: "competence", strength: 0.5 },
+          flag: "HOUSING_PHASED"
+        },
+        {
+          id: "consult",
+          label: "Send it to consultation. Consultations take two years and produce a document.",
+          features: F({ deflection: 0.8, selfProtection: 0.5, horizon: -0.4 }),
+          effect: { standing: 1 },
+          stakes: { owner: 0.25, young: -0.35 },
+          flag: "HOUSING_BURIED"
+        },
+        {
+          id: "kill",
+          label: "Kill it and say plainly that you are protecting the character of the ward.",
+          features: F({ electoralGain: 0.6, selfProtection: 0.4, horizon: -0.6, transparency: 0.4 }),
+          effect: { standing: 4, funds: 5 },
+          stakes: { owner: 0.5, young: -0.5, business: -0.1 },
+          flag: "HOUSING_KILLED"
+        }
+      ]
     },
     {
-        // TRADE-OFF 4 — party against principle. Negotiation decides what you get out of it,
-        // not whether the conflict exists.
-        id: 'PARTY_WHIP', age: 34, kind: 'story', chapter: 'Rising', tradeoff: true,
-        title: 'A three-line whip',
-        text: 'The bloc is going to vote for a procurement bill that removes the audit threshold on contracts under two million. You have read it twice. It is a bad bill and everyone privately knows it is a bad bill; it is also the price of a housing package your ward has waited six years for.',
-        prompt: 'The whip wants an answer before six.',
-        choices: [
-            { id: 'rebel', label: 'Vote against it and say why on the record.',
-                features: F({ transparency: 0.85, proceduralRestraint: 0.6, personalCost: 0.8, electoralGain: -0.3 }),
-                effect: { standing: -4, capital: 1 }, check: { ability: 'COMM', dc: 55 },
-                stakes: { core: -0.15, ind: 0.2, publicSector: 0.2 }, flag: 'REBELLED' },
-            { id: 'trade', label: 'Trade your vote — support it, and take the housing package in writing.',
-                features: F({ proceduralRestraint: 0.2, institutionalCost: 0.45, horizon: 0.55, electoralGain: 0.4 }),
-                effect: { standing: 3, capital: 2 }, check: { ability: 'NEG', dc: 56 },
-                stakes: { core: 0.2, young: 0.22, publicSector: -0.28, ind: -0.15 }, flag: 'TRADED_VOTE' },
-            { id: 'abstain', label: 'Abstain, and let it pass without your name on it.',
-                features: F({ deflection: 0.8, selfProtection: 0.6, institutionalCost: 0.25 }),
-                effect: { standing: -1 }, stakes: { ind: -0.14, core: -0.12, publicSector: 0.08 }, flag: 'ABSTAINED' },
-            { id: 'support', label: 'Vote for it and defend it in public as a sensible simplification.',
-                features: F({ selfProtection: 0.4, institutionalCost: 0.6, electoralGain: 0.35, deflection: 0.5 }),
-                effect: { standing: 6, funds: 4 }, check: { ability: 'COMM', dc: 52 },
-                stakes: { core: 0.15, publicSector: -0.25 }, flag: 'WHIPPED' },
-        ],
+      // TRADE-OFF 4 — party against principle. Negotiation decides what you get out of it,
+      // not whether the conflict exists.
+      id: "PARTY_WHIP",
+      age: 34,
+      kind: "story",
+      chapter: "Rising",
+      tradeoff: true,
+      title: "A three-line whip",
+      text: "The bloc is going to vote for a procurement bill that removes the audit threshold on contracts under two million. You have read it twice. It is a bad bill and everyone privately knows it is a bad bill; it is also the price of a housing package your ward has waited six years for.",
+      prompt: "The whip wants an answer before six.",
+      choices: [
+        {
+          id: "rebel",
+          label: "Vote against it and say why on the record.",
+          features: F({ transparency: 0.85, proceduralRestraint: 0.6, personalCost: 0.8, electoralGain: -0.3 }),
+          effect: { standing: -4, capital: 1 },
+          check: { ability: "COMM", dc: 55 },
+          stakes: { core: -0.15, ind: 0.2, publicSector: 0.2 },
+          flag: "REBELLED"
+        },
+        {
+          id: "trade",
+          label: "Trade your vote \u2014 support it, and take the housing package in writing.",
+          features: F({ proceduralRestraint: 0.2, institutionalCost: 0.45, horizon: 0.55, electoralGain: 0.4 }),
+          effect: { standing: 3, capital: 2 },
+          check: { ability: "NEG", dc: 56 },
+          stakes: { core: 0.2, young: 0.22, publicSector: -0.28, ind: -0.15 },
+          flag: "TRADED_VOTE"
+        },
+        {
+          id: "abstain",
+          label: "Abstain, and let it pass without your name on it.",
+          features: F({ deflection: 0.8, selfProtection: 0.6, institutionalCost: 0.25 }),
+          effect: { standing: -1 },
+          stakes: { ind: -0.14, core: -0.12, publicSector: 0.08 },
+          flag: "ABSTAINED"
+        },
+        {
+          id: "support",
+          label: "Vote for it and defend it in public as a sensible simplification.",
+          features: F({ selfProtection: 0.4, institutionalCost: 0.6, electoralGain: 0.35, deflection: 0.5 }),
+          effect: { standing: 6, funds: 4 },
+          check: { ability: "COMM", dc: 52 },
+          stakes: { core: 0.15, publicSector: -0.25 },
+          flag: "WHIPPED"
+        }
+      ]
     },
     {
-        // TRADE-OFF 5 — your own administration's error. Concealment can genuinely work; the
-        // seed decided years ago whether it surfaces, so this is not karma.
-        id: 'THE_ERROR', age: 36, kind: 'story', chapter: 'Rising', tradeoff: true,
-        responsibility: true, when: (st) => !!st.office,
-        title: 'Nine months of the wrong number',
-        text: 'Your office has been publishing a school-meals uptake figure that is wrong. Not fraudulently wrong — a spreadsheet inherited from the previous administration double-counted a category — but you have cited it four times, including once to justify a budget you won. Three people know. The press does not.',
-        prompt: 'Nobody is going to make this decision for you.',
-        choices: [
-            { id: 'disclose', label: 'Publish the correction today, with the four occasions you used it listed.',
-                features: F({ transparency: 0.95, concession: 0.8, personalCost: 0.8, electoralGain: -0.4 }),
-                check: { ability: 'COMM', dc: 56 }, effect: {},
-                stakes: { ind: 0.25, publicSector: 0.2, core: -0.3 },
-                signal: { implication: -0.28, trait: 'competence', strength: 0.6 }, flag: 'ERROR_DISCLOSED' },
-            { id: 'audit', label: 'Have the audit office look at it first, then publish whatever they find.',
-                features: F({ proceduralRestraint: 0.85, transparency: 0.5, horizon: 0.5 }),
-                cost: { capital: 2 }, lockNote: 'You have nothing left to spend on asking the audit office for anything.',
-                check: { ability: 'POLICY', dc: 54 }, stakes: { ind: 0.16, publicSector: 0.16, core: -0.14, opp: -0.1 }, flag: 'ERROR_AUDITED' },
-            { id: 'quiet', label: 'Correct the figure quietly in the next routine release and say nothing.',
-                features: F({ deflection: 0.7, selfProtection: 0.5, electoralGain: 0.2 }),
-                effect: { funds: 3, standing: 2 }, stakes: {}, flag: 'ERROR_BURIED' },
-            { id: 'blame', label: 'Correct it, and make clear it was inherited from the previous administration.',
-                features: F({ selfProtection: 0.8, deflection: 0.6, exploitation: 0.4, electoralGain: 0.35 }),
-                check: { ability: 'COMM', dc: 50 }, effect: { standing: 4, funds: 2 },
-                stakes: { core: 0.2, opp: -0.2 }, flag: 'ERROR_BLAMED' },
-        ],
+      // TRADE-OFF 5 — your own administration's error. Concealment can genuinely work; the
+      // seed decided years ago whether it surfaces, so this is not karma.
+      id: "THE_ERROR",
+      age: 36,
+      kind: "story",
+      chapter: "Rising",
+      tradeoff: true,
+      responsibility: true,
+      when: (st) => !!st.office,
+      title: "Nine months of the wrong number",
+      text: "Your office has been publishing a school-meals uptake figure that is wrong. Not fraudulently wrong \u2014 a spreadsheet inherited from the previous administration double-counted a category \u2014 but you have cited it four times, including once to justify a budget you won. Three people know. The press does not.",
+      prompt: "Nobody is going to make this decision for you.",
+      choices: [
+        {
+          id: "disclose",
+          label: "Publish the correction today, with the four occasions you used it listed.",
+          features: F({ transparency: 0.95, concession: 0.8, personalCost: 0.8, electoralGain: -0.4 }),
+          check: { ability: "COMM", dc: 56 },
+          effect: {},
+          stakes: { ind: 0.25, publicSector: 0.2, core: -0.3 },
+          signal: { implication: -0.28, trait: "competence", strength: 0.6 },
+          flag: "ERROR_DISCLOSED"
+        },
+        {
+          id: "audit",
+          label: "Have the audit office look at it first, then publish whatever they find.",
+          features: F({ proceduralRestraint: 0.85, transparency: 0.5, horizon: 0.5 }),
+          cost: { capital: 2 },
+          lockNote: "You have nothing left to spend on asking the audit office for anything.",
+          check: { ability: "POLICY", dc: 54 },
+          stakes: { ind: 0.16, publicSector: 0.16, core: -0.14, opp: -0.1 },
+          flag: "ERROR_AUDITED"
+        },
+        {
+          id: "quiet",
+          label: "Correct the figure quietly in the next routine release and say nothing.",
+          features: F({ deflection: 0.7, selfProtection: 0.5, electoralGain: 0.2 }),
+          effect: { funds: 3, standing: 2 },
+          stakes: {},
+          flag: "ERROR_BURIED"
+        },
+        {
+          id: "blame",
+          label: "Correct it, and make clear it was inherited from the previous administration.",
+          features: F({ selfProtection: 0.8, deflection: 0.6, exploitation: 0.4, electoralGain: 0.35 }),
+          check: { ability: "COMM", dc: 50 },
+          effect: { standing: 4, funds: 2 },
+          stakes: { core: 0.2, opp: -0.2 },
+          flag: "ERROR_BLAMED"
+        }
+      ]
     },
     {
-        id: 'CROWD_LOUD', age: 32, kind: 'judgment', chapter: 'Council',
-        factor: 'CROWD', pairId: 'C1', level: 'CROWD_HIGH', readFormat: 1,
-        title: 'The school-meals contractor',
-        text: 'A photograph circulates showing the school-meals contractor at a private dinner with the procurement officer who approved her renewal. It is a photograph of a dinner. Nothing else has surfaced. Forty thousand shares by lunchtime, and the reply column is a wall of fury.',
-        readPrompt: 'Mark your internal confidence for the file. Nobody outside this room sees it.',
-        latents: { implication: -0.45, strength: 0.4, reliability: 0.55, diagnosticity: 0.5, deniability: 0.25,
-            targetSide: 'NON_PARTISAN', sourceAlignment: 'NEUTRAL',
-            crowd: { direction: -1, magnitude: 0.85, independence: 0.25 }, mediaReach: 0.95, salience: 0.3 },
-        salience: 0.9,
-        choices: [
-            { id: 'ride', label: 'Amplify. The anger is already there and it is pointed the right way.', features: F({ exploitation: 0.85, electoralGain: 0.7, horizon: -0.4 }), effect: { capital: 1, funds: 1 } },
-            { id: 'process', check: { ability: 'COMM', dc: 54 }, label: 'Ask the council to review the contract properly, and say the photo is not evidence.', features: F({ proceduralRestraint: 0.8, transparency: 0.6, electoralGain: -0.4 }), effect: { capital: 1, standing: -1 }, institutional: true },
-            { id: 'silent', label: 'Say nothing. It will burn out.', features: F({ deflection: 0.75 }), effect: {} },
-        ],
+      id: "CROWD_LOUD",
+      age: 32,
+      kind: "judgment",
+      chapter: "Council",
+      factor: "CROWD",
+      pairId: "C1",
+      level: "CROWD_HIGH",
+      readFormat: 1,
+      title: "The school-meals contractor",
+      text: "A photograph circulates showing the school-meals contractor at a private dinner with the procurement officer who approved her renewal. It is a photograph of a dinner. Nothing else has surfaced. Forty thousand shares by lunchtime, and the reply column is a wall of fury.",
+      readPrompt: "Mark your internal confidence for the file. Nobody outside this room sees it.",
+      latents: {
+        implication: -0.45,
+        strength: 0.4,
+        reliability: 0.55,
+        diagnosticity: 0.5,
+        deniability: 0.25,
+        targetSide: "NON_PARTISAN",
+        sourceAlignment: "NEUTRAL",
+        crowd: { direction: -1, magnitude: 0.85, independence: 0.25 },
+        mediaReach: 0.95,
+        salience: 0.3
+      },
+      salience: 0.9,
+      choices: [
+        { id: "ride", label: "Amplify. The anger is already there and it is pointed the right way.", features: F({ exploitation: 0.85, electoralGain: 0.7, horizon: -0.4 }), effect: { capital: 1, funds: 1 } },
+        { id: "process", check: { ability: "COMM", dc: 54 }, label: "Ask the council to review the contract properly, and say the photo is not evidence.", features: F({ proceduralRestraint: 0.8, transparency: 0.6, electoralGain: -0.4 }), effect: { capital: 1, standing: -1 }, institutional: true },
+        { id: "silent", label: "Say nothing. It will burn out.", features: F({ deflection: 0.75 }), effect: {} }
+      ]
     },
     {
-        id: 'CULVERT_RESULT', age: 33, kind: 'consequence', chapter: 'Council',
-        title: 'Second storm',
-        resolve: (st) => st.flags.CULVERT_FUNDED
-            ? { text: 'The culvert holds. Four streets that flooded in your first year stay dry, and the local paper runs a photograph of the outflow that nobody outside the ward will ever care about. You care about it.', event: { implication: 0.55, strength: 0.7, reliability: 0.9, diagnosticity: 0.7, deniability: 0, trait: 'competence', targetSide: 'PLAYER_SIDE', sourceAlignment: 'NEUTRAL', crowd: null, mediaReach: 0.55 } }
-            : st.flags.CULVERT_PARTIAL
-                ? { text: 'The repaired hundred metres holds. The rest does not. Two streets flood, and because you said plainly what you were doing, nobody accuses you of lying about it.', event: { implication: 0.1, strength: 0.5, reliability: 0.85, diagnosticity: 0.5, deniability: 0, trait: 'competence', targetSide: 'PLAYER_SIDE', sourceAlignment: 'NEUTRAL', crowd: null, mediaReach: 0.6 } }
-                : { text: 'The study is eleven months from publication. The culvert is not. Six streets flood, and a resident reads your announcement aloud to a television camera standing in her kitchen.', event: { implication: -0.6, strength: 0.9, reliability: 0.92, diagnosticity: 0.65, deniability: 0, trait: 'competence', targetSide: 'PLAYER_SIDE', sourceAlignment: 'NEUTRAL', crowd: { direction: -1, magnitude: 0.5, independence: 0.3 }, mediaReach: 0.8 } },
+      id: "CULVERT_RESULT",
+      age: 33,
+      kind: "consequence",
+      chapter: "Council",
+      title: "Second storm",
+      resolve: (st) => st.flags.CULVERT_FUNDED ? { text: "The culvert holds. Four streets that flooded in your first year stay dry, and the local paper runs a photograph of the outflow that nobody outside the ward will ever care about. You care about it.", event: { implication: 0.55, strength: 0.7, reliability: 0.9, diagnosticity: 0.7, deniability: 0, trait: "competence", targetSide: "PLAYER_SIDE", sourceAlignment: "NEUTRAL", crowd: null, mediaReach: 0.55 } } : st.flags.CULVERT_PARTIAL ? { text: "The repaired hundred metres holds. The rest does not. Two streets flood, and because you said plainly what you were doing, nobody accuses you of lying about it.", event: { implication: 0.1, strength: 0.5, reliability: 0.85, diagnosticity: 0.5, deniability: 0, trait: "competence", targetSide: "PLAYER_SIDE", sourceAlignment: "NEUTRAL", crowd: null, mediaReach: 0.6 } } : { text: "The study is eleven months from publication. The culvert is not. Six streets flood, and a resident reads your announcement aloud to a television camera standing in her kitchen.", event: { implication: -0.6, strength: 0.9, reliability: 0.92, diagnosticity: 0.65, deniability: 0, trait: "competence", targetSide: "PLAYER_SIDE", sourceAlignment: "NEUTRAL", crowd: { direction: -1, magnitude: 0.5, independence: 0.3 }, mediaReach: 0.8 } }
     },
     // ── CHAIN B seed: accepted \u2192 later DISPROVEN ──
     {
-        id: 'SMEAR_RIVAL', age: 33, kind: 'judgment', chapter: 'Council', chainSeed: 'SMEAR', readFormat: 0,
-        title: 'The qualifications dossier',
-        text: `Ilse Brandt runs it first, under her own byline, and the others follow within the hour. A dossier reaches three newsrooms and your office on the same morning. It says the ${exports.BLOCS[(0, exports.OPP)(P.bloc)].name} candidate for mayor never completed the degree she has claimed for twenty years. It contains registry printouts, a letter on university paper and a statutory declaration. On its face it looks extremely solid.`,
-        readPrompt: 'Your chief of staff shuts the door. \u201cOff the record. What do you actually think happened?\u201d',
-        latents: { implication: -0.7, strength: 0.75, reliability: 0.72, diagnosticity: 0.7, deniability: 0.2,
-            targetSide: 'OPPOSING_SIDE', sourceAlignment: 'ALIGNED', crowd: null, mediaReach: 0.8, salience: 0.2 },
-        salience: 0.7,
-        choices: [
-            { id: 'run', label: 'Put it out. Documents are documents.', features: F({ exploitation: 0.9, electoralGain: 0.8, horizon: -0.5 }), effect: { capital: 1, funds: 2 }, flag: 'RAN_SMEAR', hitsRival: 0.6 },
-            { id: 'verify', label: 'Have the registry contacted directly before anyone says a word.', features: F({ proceduralRestraint: 0.9, transparency: 0.5, electoralGain: -0.4, horizon: 0.6 }), effect: { funds: -1 }, institutional: true },
-            { id: 'pass', label: 'Refuse it. A degree from 1998 is not why anyone should lose.', features: F({ proceduralRestraint: 0.5, personalCost: 0.4, electoralGain: -0.5 }), effect: { capital: 1 } },
-        ],
+      id: "SMEAR_RIVAL",
+      age: 33,
+      kind: "judgment",
+      chapter: "Council",
+      chainSeed: "SMEAR",
+      readFormat: 0,
+      title: "The qualifications dossier",
+      text: `Ilse Brandt runs it first, under her own byline, and the others follow within the hour. A dossier reaches three newsrooms and your office on the same morning. It says the ${BLOCS[OPP(P.bloc)].name} candidate for mayor never completed the degree she has claimed for twenty years. It contains registry printouts, a letter on university paper and a statutory declaration. On its face it looks extremely solid.`,
+      readPrompt: "Your chief of staff shuts the door. \u201COff the record. What do you actually think happened?\u201D",
+      latents: {
+        implication: -0.7,
+        strength: 0.75,
+        reliability: 0.72,
+        diagnosticity: 0.7,
+        deniability: 0.2,
+        targetSide: "OPPOSING_SIDE",
+        sourceAlignment: "ALIGNED",
+        crowd: null,
+        mediaReach: 0.8,
+        salience: 0.2
+      },
+      salience: 0.7,
+      choices: [
+        { id: "run", label: "Put it out. Documents are documents.", features: F({ exploitation: 0.9, electoralGain: 0.8, horizon: -0.5 }), effect: { capital: 1, funds: 2 }, flag: "RAN_SMEAR", hitsRival: 0.6 },
+        { id: "verify", label: "Have the registry contacted directly before anyone says a word.", features: F({ proceduralRestraint: 0.9, transparency: 0.5, electoralGain: -0.4, horizon: 0.6 }), effect: { funds: -1 }, institutional: true },
+        { id: "pass", label: "Refuse it. A degree from 1998 is not why anyone should lose.", features: F({ proceduralRestraint: 0.5, personalCost: 0.4, electoralGain: -0.5 }), effect: { capital: 1 } }
+      ]
     },
     // ── MATCHED PAIR B, member 2: same evidence, no crowd ──
     {
-        id: 'CROWD_QUIET', age: 34, kind: 'judgment', chapter: 'Council',
-        factor: 'CROWD', pairId: 'C1', level: 'CROWD_LOW', readFormat: 1,
-        title: 'The transport consultancy',
-        text: 'A photograph reaches your office showing the transport consultancy\'s director at a private dinner with the officer who renewed her framework agreement. It is a photograph of a dinner. Nothing else has surfaced. It has been sitting in a local reporter\'s drafts folder for a week and nobody has picked it up.',
-        readPrompt: 'Mark your internal confidence for the file. Nobody outside this room sees it.',
-        latents: { implication: -0.45, strength: 0.4, reliability: 0.55, diagnosticity: 0.5, deniability: 0.25,
-            targetSide: 'NON_PARTISAN', sourceAlignment: 'NEUTRAL', crowd: null, mediaReach: 0.35 },
-        choices: [
-            { id: 'push', label: 'Push it to the press yourself.', features: F({ exploitation: 0.8, electoralGain: 0.5 }), effect: {} },
-            { id: 'process', label: 'Ask for a proper review of the framework agreement.', features: F({ proceduralRestraint: 0.8, transparency: 0.55 }), effect: { capital: 1 }, institutional: true },
-            { id: 'silent', label: 'Nothing here worth acting on.', features: F({ deflection: 0.6 }), effect: {} },
-        ],
+      id: "CROWD_QUIET",
+      age: 34,
+      kind: "judgment",
+      chapter: "Council",
+      factor: "CROWD",
+      pairId: "C1",
+      level: "CROWD_LOW",
+      readFormat: 1,
+      title: "The transport consultancy",
+      text: "A photograph reaches your office showing the transport consultancy's director at a private dinner with the officer who renewed her framework agreement. It is a photograph of a dinner. Nothing else has surfaced. It has been sitting in a local reporter's drafts folder for a week and nobody has picked it up.",
+      readPrompt: "Mark your internal confidence for the file. Nobody outside this room sees it.",
+      latents: {
+        implication: -0.45,
+        strength: 0.4,
+        reliability: 0.55,
+        diagnosticity: 0.5,
+        deniability: 0.25,
+        targetSide: "NON_PARTISAN",
+        sourceAlignment: "NEUTRAL",
+        crowd: null,
+        mediaReach: 0.35
+      },
+      choices: [
+        { id: "push", label: "Push it to the press yourself.", features: F({ exploitation: 0.8, electoralGain: 0.5 }), effect: {} },
+        { id: "process", label: "Ask for a proper review of the framework agreement.", features: F({ proceduralRestraint: 0.8, transparency: 0.55 }), effect: { capital: 1 }, institutional: true },
+        { id: "silent", label: "Nothing here worth acting on.", features: F({ deflection: 0.6 }), effect: {} }
+      ]
     },
-    { id: 'CHAIN_HOUSING', age: 35, kind: 'chain', chapter: 'Rising', chain: 'HOUSING' },
+    { id: "CHAIN_HOUSING", age: 35, kind: "chain", chapter: "Rising", chain: "HOUSING" },
     // ── MATCHED PAIR C, member 1: high deniability ──
     {
-        id: 'RECORDING_DENIABLE', age: 35, kind: 'judgment', chapter: 'Rising',
-        factor: 'DENIABILITY', pairId: 'D1', level: 'DEN_HIGH', readFormat: 0,
-        title: 'Forty-one seconds',
-        text: 'A forty-one second recording surfaces of the regional housing chair apparently agreeing to move a rezoning decision in exchange for a favour. The chair says the audio is synthetic and has hired a firm that says so too. A different firm says it cannot tell. Nobody can produce the original file.',
-        readPrompt: 'Your chief of staff shuts the door. "Off the record. What do you actually think happened?"',
-        latents: { implication: -0.75, strength: 0.7, reliability: 0.6, diagnosticity: 0.8, deniability: 0.8,
-            targetSide: 'NON_PARTISAN', sourceAlignment: 'NEUTRAL', crowd: null, mediaReach: 0.85 },
-        choices: [
-            { id: 'treat', label: 'Treat it as real until someone proves otherwise.', features: F({ exploitation: 0.6, electoralGain: 0.4 }), effect: {} },
-            { id: 'forensic', cost: { funds: 4 }, lockNote: 'Your campaign cannot currently fund an external review.', label: 'Fund an independent forensic examination before anyone says anything.', features: F({ proceduralRestraint: 0.85, transparency: 0.6, horizon: 0.5 }), effect: { funds: -1, capital: 1 }, institutional: true },
-            { id: 'dismiss', label: 'Say publicly that unverifiable audio should not end careers.', features: F({ proceduralRestraint: 0.4, deflection: 0.4 }), effect: {} },
-        ],
+      id: "RECORDING_DENIABLE",
+      age: 35,
+      kind: "judgment",
+      chapter: "Rising",
+      factor: "DENIABILITY",
+      pairId: "D1",
+      level: "DEN_HIGH",
+      readFormat: 0,
+      title: "Forty-one seconds",
+      text: "A forty-one second recording surfaces of the regional housing chair apparently agreeing to move a rezoning decision in exchange for a favour. The chair says the audio is synthetic and has hired a firm that says so too. A different firm says it cannot tell. Nobody can produce the original file.",
+      readPrompt: 'Your chief of staff shuts the door. "Off the record. What do you actually think happened?"',
+      latents: {
+        implication: -0.75,
+        strength: 0.7,
+        reliability: 0.6,
+        diagnosticity: 0.8,
+        deniability: 0.8,
+        targetSide: "NON_PARTISAN",
+        sourceAlignment: "NEUTRAL",
+        crowd: null,
+        mediaReach: 0.85
+      },
+      choices: [
+        { id: "treat", label: "Treat it as real until someone proves otherwise.", features: F({ exploitation: 0.6, electoralGain: 0.4 }), effect: {} },
+        { id: "forensic", cost: { funds: 4 }, lockNote: "Your campaign cannot currently fund an external review.", label: "Fund an independent forensic examination before anyone says anything.", features: F({ proceduralRestraint: 0.85, transparency: 0.6, horizon: 0.5 }), effect: { funds: -1, capital: 1 }, institutional: true },
+        { id: "dismiss", label: "Say publicly that unverifiable audio should not end careers.", features: F({ proceduralRestraint: 0.4, deflection: 0.4 }), effect: {} }
+      ]
     },
     // The player has been judging other people for ten years. Now it is their turn.
     // This is also the only event that gives the four cognitive mechanisms real work
     // to do on the player's own reputation.
     {
-        id: 'THE_ALLEGATION', age: 36, pressure: 8, kind: 'story', chapter: 'Rising', responsibility: true,
-        title: 'Your turn',
-        text: 'A ' + exports.BLOCS[(0, exports.OPP)(P.bloc)].name + '-aligned outlet reports that your first campaign accepted eleven thousand from a construction firm that won a resurfacing contract fourteen months later. Both facts are true. The connection between them is asserted, not shown. By evening it is the only thing anyone wants to ask you about.',
-        salience: 1.0,
-        abilityOption: 'COMM',
-        playerAllegation: { implication: -0.72, strength: 0.55, reliability: 0.62, diagnosticity: 0.75,
-            deniability: 0.4, trait: 'integrity', targetSide: 'PLAYER_SIDE', sourceAlignment: 'OPPOSED',
-            crowd: { direction: -1, magnitude: 0.8, independence: 0.25 }, mediaReach: 0.95, salience: 0.5 },
-        choices: [
-            { id: 'open_meeting', requires: { COMM: 55 }, check: { ability: 'COMM', dc: 60 },
-                label: 'Book the biggest hall in the ward, invite the reporter, and take questions until they stop.',
-                features: F({ transparency: 0.9, concession: 0.2, personalCost: 0.7, electoralGain: -0.1 }),
-                effect: { capital: 2 } },
-            { id: 'disclose', label: 'Publish every donation and every contract from that year. All of it.',
-                features: F({ transparency: 0.95, concession: 0.4, personalCost: 0.6, electoralGain: -0.2, horizon: 0.7 }), effect: { capital: 2, standing: -2 } },
-            { id: 'ethics', label: 'Refer yourself to the ethics committee and stop commenting.',
-                features: F({ proceduralRestraint: 0.9, transparency: 0.4, personalCost: 0.4, electoralGain: -0.35 }), effect: { capital: 1, standing: -1 }, institutional: true },
-            { id: 'deny', label: 'Attack the outlet. It is a smear and its owner is on the other side.',
-                features: F({ selfProtection: 0.9, deflection: 0.6, exploitation: 0.4, electoralGain: 0.3 }), effect: { standing: 2, funds: 1 } },
-            { id: 'settle', label: 'Return the money quietly and say nothing.',
-                features: F({ deflection: 0.7, concession: 0.3, selfProtection: 0.4 }), effect: { funds: -2 } },
-        ],
+      id: "THE_ALLEGATION",
+      age: 36,
+      pressure: 8,
+      kind: "story",
+      chapter: "Rising",
+      responsibility: true,
+      title: "Your turn",
+      text: "A " + BLOCS[OPP(P.bloc)].name + "-aligned outlet reports that your first campaign accepted eleven thousand from a construction firm that won a resurfacing contract fourteen months later. Both facts are true. The connection between them is asserted, not shown. By evening it is the only thing anyone wants to ask you about.",
+      salience: 1,
+      abilityOption: "COMM",
+      playerAllegation: {
+        implication: -0.72,
+        strength: 0.55,
+        reliability: 0.62,
+        diagnosticity: 0.75,
+        deniability: 0.4,
+        trait: "integrity",
+        targetSide: "PLAYER_SIDE",
+        sourceAlignment: "OPPOSED",
+        crowd: { direction: -1, magnitude: 0.8, independence: 0.25 },
+        mediaReach: 0.95,
+        salience: 0.5
+      },
+      choices: [
+        {
+          id: "open_meeting",
+          requires: { COMM: 55 },
+          check: { ability: "COMM", dc: 60 },
+          label: "Book the biggest hall in the ward, invite the reporter, and take questions until they stop.",
+          features: F({ transparency: 0.9, concession: 0.2, personalCost: 0.7, electoralGain: -0.1 }),
+          effect: { capital: 2 }
+        },
+        {
+          id: "disclose",
+          label: "Publish every donation and every contract from that year. All of it.",
+          features: F({ transparency: 0.95, concession: 0.4, personalCost: 0.6, electoralGain: -0.2, horizon: 0.7 }),
+          effect: { capital: 2, standing: -2 }
+        },
+        {
+          id: "ethics",
+          label: "Refer yourself to the ethics committee and stop commenting.",
+          features: F({ proceduralRestraint: 0.9, transparency: 0.4, personalCost: 0.4, electoralGain: -0.35 }),
+          effect: { capital: 1, standing: -1 },
+          institutional: true
+        },
+        {
+          id: "deny",
+          label: "Attack the outlet. It is a smear and its owner is on the other side.",
+          features: F({ selfProtection: 0.9, deflection: 0.6, exploitation: 0.4, electoralGain: 0.3 }),
+          effect: { standing: 2, funds: 1 }
+        },
+        {
+          id: "settle",
+          label: "Return the money quietly and say nothing.",
+          features: F({ deflection: 0.7, concession: 0.3, selfProtection: 0.4 }),
+          effect: { funds: -2 }
+        }
+      ]
     },
     // ── MATCHED PAIR A, member 2: own-side target, same latents as OPP_CONTRACT ──
     {
-        id: 'ALLY_CONTRACT', age: 36, kind: 'judgment', chapter: 'Rising', responsibility: false,
-        factor: 'PARTISAN', pairId: 'P1', level: 'PLAYER_SIDE', readFormat: 0,
-        title: 'A contract on your side',
-        text: `A ${exports.BLOCS[P.bloc].name} councillor you have worked beside for six years has a brother-in-law who won the waste-collection contract for the western districts. The procurement file shows two bidders and one very short evaluation window. She tells you, personally, that the process was clean and the family connection is a coincidence.`,
-        readPrompt: 'Your chief of staff shuts the door. "Off the record. What do you actually think happened?"',
-        latents: { implication: -0.62, strength: 0.62, reliability: 0.68, diagnosticity: 0.75, deniability: 0.2,
-            targetSide: 'PLAYER_SIDE', sourceAlignment: 'NEUTRAL', crowd: null, mediaReach: 0.7 },
-        choices: [
-            { id: 'demand', check: { ability: 'COMM', dc: 58 }, label: 'Say publicly that she should stand down while it is investigated.', features: F({ concession: 0.7, transparency: 0.7, electoralGain: -0.5, personalCost: 0.6 }), effect: { standing: -3, capital: 1 } },
-            { id: 'refer', cost: { capital: 2 }, lockNote: 'You have no standing left to spend on asking the Audit Office for favours.', label: 'Refer the file to the Audit Office and say nothing else.', features: F({ proceduralRestraint: 0.85, transparency: 0.5, horizon: 0.4 }), effect: { standing: -1 }, institutional: true },
-            { id: 'shield', label: 'Back her publicly. You have seen the woman work.', features: F({ selfProtection: 0.6, deflection: 0.6, electoralGain: 0.2 }), effect: { standing: 3, funds: 1 } },
-        ],
+      id: "ALLY_CONTRACT",
+      age: 36,
+      kind: "judgment",
+      chapter: "Rising",
+      responsibility: false,
+      factor: "PARTISAN",
+      pairId: "P1",
+      level: "PLAYER_SIDE",
+      readFormat: 0,
+      title: "A contract on your side",
+      text: `A ${BLOCS[P.bloc].name} councillor you have worked beside for six years has a brother-in-law who won the waste-collection contract for the western districts. The procurement file shows two bidders and one very short evaluation window. She tells you, personally, that the process was clean and the family connection is a coincidence.`,
+      readPrompt: 'Your chief of staff shuts the door. "Off the record. What do you actually think happened?"',
+      latents: {
+        implication: -0.62,
+        strength: 0.62,
+        reliability: 0.68,
+        diagnosticity: 0.75,
+        deniability: 0.2,
+        targetSide: "PLAYER_SIDE",
+        sourceAlignment: "NEUTRAL",
+        crowd: null,
+        mediaReach: 0.7
+      },
+      choices: [
+        { id: "demand", check: { ability: "COMM", dc: 58 }, label: "Say publicly that she should stand down while it is investigated.", features: F({ concession: 0.7, transparency: 0.7, electoralGain: -0.5, personalCost: 0.6 }), effect: { standing: -3, capital: 1 } },
+        { id: "refer", cost: { capital: 2 }, lockNote: "You have no standing left to spend on asking the Audit Office for favours.", label: "Refer the file to the Audit Office and say nothing else.", features: F({ proceduralRestraint: 0.85, transparency: 0.5, horizon: 0.4 }), effect: { standing: -1 }, institutional: true },
+        { id: "shield", label: "Back her publicly. You have seen the woman work.", features: F({ selfProtection: 0.6, deflection: 0.6, electoralGain: 0.2 }), effect: { standing: 3, funds: 1 } }
+      ]
     },
-    { id: 'CHAIN_SMEAR', age: 37, kind: 'chain', chapter: 'Rising', chain: 'SMEAR' },
+    { id: "CHAIN_SMEAR", age: 37, kind: "chain", chapter: "Rising", chain: "SMEAR" },
     {
-        id: 'PARTY_OFFER', age: 33, kind: 'story', chapter: 'The offer', measurement: 'NONE',
-        title: 'The call from the capital',
-        text: 'The deputy leader wants you in the capital as a policy spokesperson. It is a real job with a real staff and it is two hundred miles from the only place that has ever voted for you. She does not say what she wants in return, because people at her level do not have to.',
-        prompt: 'You have until Friday.',
-        choices: [
-            { id: 'accept', label: 'Accept. The capital is where things are decided.',
-                features: F({ electoralGain: 0.5, horizon: 0.3 }),
-                effect: { standing: 5, funds: 4, capital: 1 }, flag: 'CAPITAL_ROLE',
-                career: { independence: -0.4, recognition: +0.18, local: -0.15 } },
-            { id: 'accept_with_people', requires: { NEG: 55 }, check: { ability: 'NEG', dc: 54 },
-                label: 'Accept — and bring two of your own people into the office with you.',
-                features: F({ proceduralRestraint: 0.3, electoralGain: 0.55, horizon: 0.7 }),
-                effect: { standing: 4, funds: 3, capital: 2 }, flag: 'CAPITAL_ROLE',
-                career: { independence: -0.15, recognition: +0.16 } },
-            { id: 'conditional', label: 'Accept, on the condition that you keep the ward and your own line on housing.',
-                features: F({ proceduralRestraint: 0.4, transparency: 0.35, horizon: 0.5 }),
-                effect: { standing: 2, funds: 2 }, flag: 'CAPITAL_CONDITIONAL',
-                career: { independence: -0.1, recognition: +0.10 } },
-            { id: 'decline', label: 'Decline. Build something here that is yours.',
-                features: F({ horizon: 0.7, selfProtection: 0.2 }),
-                effect: { capital: 3 }, flag: 'STAYED_LOCAL',
-                career: { independence: +0.25, recognition: -0.04, local: +0.15 } },
-            { id: 'refuse_loudly', label: 'Decline, and say publicly that the capital has stopped listening to wards like yours.',
-                features: F({ exploitation: 0.45, transparency: 0.5, institutionalCost: 0.25 }),
-                effect: { capital: 2, standing: -3 }, flag: 'BURNED_BRIDGE',
-                career: { independence: +0.45, recognition: +0.22, local: +0.2 } },
-        ],
+      id: "PARTY_OFFER",
+      age: 33,
+      kind: "story",
+      chapter: "The offer",
+      measurement: "NONE",
+      title: "The call from the capital",
+      text: "The deputy leader wants you in the capital as a policy spokesperson. It is a real job with a real staff and it is two hundred miles from the only place that has ever voted for you. She does not say what she wants in return, because people at her level do not have to.",
+      prompt: "You have until Friday.",
+      choices: [
+        {
+          id: "accept",
+          label: "Accept. The capital is where things are decided.",
+          features: F({ electoralGain: 0.5, horizon: 0.3 }),
+          effect: { standing: 5, funds: 4, capital: 1 },
+          flag: "CAPITAL_ROLE",
+          career: { independence: -0.4, recognition: 0.18, local: -0.15 }
+        },
+        {
+          id: "accept_with_people",
+          requires: { NEG: 55 },
+          check: { ability: "NEG", dc: 54 },
+          label: "Accept \u2014 and bring two of your own people into the office with you.",
+          features: F({ proceduralRestraint: 0.3, electoralGain: 0.55, horizon: 0.7 }),
+          effect: { standing: 4, funds: 3, capital: 2 },
+          flag: "CAPITAL_ROLE",
+          career: { independence: -0.15, recognition: 0.16 }
+        },
+        {
+          id: "conditional",
+          label: "Accept, on the condition that you keep the ward and your own line on housing.",
+          features: F({ proceduralRestraint: 0.4, transparency: 0.35, horizon: 0.5 }),
+          effect: { standing: 2, funds: 2 },
+          flag: "CAPITAL_CONDITIONAL",
+          career: { independence: -0.1, recognition: 0.1 }
+        },
+        {
+          id: "decline",
+          label: "Decline. Build something here that is yours.",
+          features: F({ horizon: 0.7, selfProtection: 0.2 }),
+          effect: { capital: 3 },
+          flag: "STAYED_LOCAL",
+          career: { independence: 0.25, recognition: -0.04, local: 0.15 }
+        },
+        {
+          id: "refuse_loudly",
+          label: "Decline, and say publicly that the capital has stopped listening to wards like yours.",
+          features: F({ exploitation: 0.45, transparency: 0.5, institutionalCost: 0.25 }),
+          effect: { capital: 2, standing: -3 },
+          flag: "BURNED_BRIDGE",
+          career: { independence: 0.45, recognition: 0.22, local: 0.2 }
+        }
+      ]
     },
     {
-        id: 'AUDIT_OFFICE', age: 37, kind: 'story', when: (st) => !!st.office, chapter: 'Rising', institutional: true, responsibility: true,
-        title: 'The Audit Office asks for more',
-        text: 'The Audit Office wants standing access to departmental procurement records without prior notice. It would make your own next four years considerably less comfortable, and it would survive you by decades. The vote is close and your bloc is looking at you.',
-        choices: [
-            { id: 'grant', check: { ability: 'NEG', dc: 56 }, label: 'Support it in full.', features: F({ proceduralRestraint: 0.95, transparency: 0.85, horizon: 0.9, personalCost: 0.7, electoralGain: -0.3 }), effect: { standing: -3, capital: 2 } },
-            { id: 'narrow', label: 'Support it, with a notice period.', features: F({ proceduralRestraint: 0.5, transparency: 0.4, institutionalCost: 0.35, horizon: 0.3 }), effect: { capital: 1 } },
-            { id: 'narrow_amendment', requires: { POLICY: 58 }, check: { ability: 'POLICY', dc: 55 },
-                label: 'Draft an amendment: full access, but a standing carve-out for live investigations — and get it through.',
-                features: F({ proceduralRestraint: 0.75, transparency: 0.6, institutionalCost: 0.15, horizon: 0.75, personalCost: 0.3 }),
-                effect: { capital: 3 } },
-            { id: 'block', label: 'Block it. The office already has enough.', features: F({ selfProtection: 0.8, institutionalCost: 0.85, electoralGain: 0.4, horizon: -0.5 }), effect: { standing: 3, funds: 2 } },
-        ],
+      id: "AUDIT_OFFICE",
+      age: 37,
+      kind: "story",
+      when: (st) => !!st.office,
+      chapter: "Rising",
+      institutional: true,
+      responsibility: true,
+      title: "The Audit Office asks for more",
+      text: "The Audit Office wants standing access to departmental procurement records without prior notice. It would make your own next four years considerably less comfortable, and it would survive you by decades. The vote is close and your bloc is looking at you.",
+      choices: [
+        { id: "grant", check: { ability: "NEG", dc: 56 }, label: "Support it in full.", features: F({ proceduralRestraint: 0.95, transparency: 0.85, horizon: 0.9, personalCost: 0.7, electoralGain: -0.3 }), effect: { standing: -3, capital: 2 } },
+        { id: "narrow", label: "Support it, with a notice period.", features: F({ proceduralRestraint: 0.5, transparency: 0.4, institutionalCost: 0.35, horizon: 0.3 }), effect: { capital: 1 } },
+        {
+          id: "narrow_amendment",
+          requires: { POLICY: 58 },
+          check: { ability: "POLICY", dc: 55 },
+          label: "Draft an amendment: full access, but a standing carve-out for live investigations \u2014 and get it through.",
+          features: F({ proceduralRestraint: 0.75, transparency: 0.6, institutionalCost: 0.15, horizon: 0.75, personalCost: 0.3 }),
+          effect: { capital: 3 }
+        },
+        { id: "block", label: "Block it. The office already has enough.", features: F({ selfProtection: 0.8, institutionalCost: 0.85, electoralGain: 0.4, horizon: -0.5 }), effect: { standing: 3, funds: 2 } }
+      ]
     },
     // ── MATCHED PAIR C, member 2: same evidence, low deniability ──
     {
-        id: 'RECORDING_CLEAN', age: 38, kind: 'judgment', chapter: 'Rising',
-        factor: 'DENIABILITY', pairId: 'D1', level: 'DEN_LOW', readFormat: 0,
-        title: 'Forty-four seconds',
-        text: 'A forty-four second recording surfaces of the regional licensing chair apparently agreeing to move a permit decision in exchange for a favour. The original file was handed over by the person who made it, with the device, and two independent laboratories have examined it and found no sign of editing.',
-        readPrompt: 'Your chief of staff shuts the door. "Off the record. What do you actually think happened?"',
-        latents: { implication: -0.75, strength: 0.7, reliability: 0.6, diagnosticity: 0.8, deniability: 0.05,
-            targetSide: 'NON_PARTISAN', sourceAlignment: 'NEUTRAL', crowd: null, mediaReach: 0.85 },
-        choices: [
-            { id: 'treat', label: 'Say publicly that it is authentic and should be acted on.', features: F({ transparency: 0.6, electoralGain: 0.3 }), effect: {} },
-            { id: 'forensic', label: 'Wait for the licensing committee to complete its own process.', features: F({ proceduralRestraint: 0.8, horizon: 0.4 }), effect: { capital: 1 }, institutional: true },
-            { id: 'dismiss', label: 'Note that recordings can mislead even when they are real.', features: F({ deflection: 0.6 }), effect: {} },
-        ],
+      id: "RECORDING_CLEAN",
+      age: 38,
+      kind: "judgment",
+      chapter: "Rising",
+      factor: "DENIABILITY",
+      pairId: "D1",
+      level: "DEN_LOW",
+      readFormat: 0,
+      title: "Forty-four seconds",
+      text: "A forty-four second recording surfaces of the regional licensing chair apparently agreeing to move a permit decision in exchange for a favour. The original file was handed over by the person who made it, with the device, and two independent laboratories have examined it and found no sign of editing.",
+      readPrompt: 'Your chief of staff shuts the door. "Off the record. What do you actually think happened?"',
+      latents: {
+        implication: -0.75,
+        strength: 0.7,
+        reliability: 0.6,
+        diagnosticity: 0.8,
+        deniability: 0.05,
+        targetSide: "NON_PARTISAN",
+        sourceAlignment: "NEUTRAL",
+        crowd: null,
+        mediaReach: 0.85
+      },
+      choices: [
+        { id: "treat", label: "Say publicly that it is authentic and should be acted on.", features: F({ transparency: 0.6, electoralGain: 0.3 }), effect: {} },
+        { id: "forensic", label: "Wait for the licensing committee to complete its own process.", features: F({ proceduralRestraint: 0.8, horizon: 0.4 }), effect: { capital: 1 }, institutional: true },
+        { id: "dismiss", label: "Note that recordings can mislead even when they are real.", features: F({ deflection: 0.6 }), effect: {} }
+      ]
     },
-    { id: 'CHAIN_GRANT', age: 39, kind: 'chain', chapter: 'The run', chain: 'GRANT' },
+    { id: "CHAIN_GRANT", age: 39, kind: "chain", chapter: "The run", chain: "GRANT" },
     {
-        id: 'THE_TIP', age: 39, tradeoff: true, kind: 'story', chapter: 'The run', temptation: true,
-        title: 'Eleven days out',
-        text: 'Eleven days before the vote, a folder reaches your campaign. It suggests your opponent\'s foundation moved money it should not have moved. It is unverified. Verifying it properly would take three weeks you do not have. Using it would probably decide the election.',
-        choices: [
-            { id: 'verify', cost: { funds: 3 }, lockNote: 'Verification costs money you do not have eleven days out.', label: 'Try to verify it. Say nothing until you can.', features: F({ proceduralRestraint: 0.9, transparency: 0.5, electoralGain: -0.7, horizon: 0.7 }), effect: { funds: -2 }, flag: 'TIP_VERIFY', stakes: { core: -0.15, ind: 0.2 } },
-            { id: 'read_it', requires: { STRAT: 58 }, label: 'Before deciding anything: have your analyst take the folder apart overnight.',
-                features: F({ proceduralRestraint: 0.65, horizon: 0.5 }), effect: {}, flag: 'TIP_ANALYSED',
-                strategyRead: true },
-            { id: 'hint', label: 'Say there are "serious questions" without making the claim.', features: F({ exploitation: 0.6, deflection: 0.5, electoralGain: 0.6 }), effect: {}, flag: 'TIP_HINT', hitsRival: 0.35, stakes: { core: 0.18, ind: -0.12 } },
-            { id: 'attack', label: 'Use it. Attribute it. Let them deny it.', features: F({ exploitation: 0.95, electoralGain: 0.85, horizon: -0.6 }), effect: { capital: 1 }, flag: 'TIP_ATTACK', hitsRival: 0.75, stakes: { core: 0.3, ind: -0.25, opp: -0.2 } },
-            { id: 'refuse', label: 'Destroy the folder and tell the campaign it never arrived.', features: F({ proceduralRestraint: 0.8, personalCost: 0.5, electoralGain: -0.6, horizon: 0.6 }), effect: { capital: 1 }, flag: 'TIP_REFUSE' },
-        ],
-    },
-    { id: 'TIP_FALLOUT', age: 40, kind: 'fallout', chapter: 'The run',
-        when: (st) => !!(st.flags.TIP_ATTACK || st.flags.TIP_HINT) },
-    { id: 'ELECTION_2', age: 40, kind: 'election', chapter: 'The run', office: 'City Mayor', tier: 2 },
-];
-// Beats are authored in thematic groups but must play in chronological order.
-// Stable sort keeps the authored sequence within a single year.
-// ── v0.37: formative years ────────────────────────────────────────────────
-// The life now starts at 23, before anyone would call this person a politician.
-// Three short beats, then the existing career. The point is that the player should
-// remember becoming one rather than arriving as one.
-const EARLY_SCRIPT = (P) => [
-    {
-        id: 'ENTRY_23', age: 23, kind: 'story', chapter: 'Before',
-        title: 'The first office',
-        text: exports.ROUTE_ENTRY[P.route] || exports.ROUTE_ENTRY.CIVIC,
-        prompt: 'Two months in, you notice something.',
-        choices: [
-            { id: 'raise', label: 'Say it out loud in the Monday meeting.',
-                features: F({ transparency: 0.8, personalCost: 0.4, proceduralRestraint: 0.3 }),
-                effect: { capital: 2 }, check: { ability: 'COMM', dc: 40 }, xp: ['COMM'] },
-            { id: 'memo', label: 'Put it in writing to one person who can act on it.',
-                features: F({ proceduralRestraint: 0.7, transparency: 0.4, horizon: 0.4 }),
-                effect: { capital: 1, standing: 1 }, check: { ability: 'POLICY', dc: 40 }, xp: ['POLICY'] },
-            { id: 'useful', label: 'Say nothing, and make yourself useful to the person it protects.',
-                features: F({ selfProtection: 0.6, electoralGain: 0.4, deflection: 0.4 }),
-                effect: { standing: 3, funds: 1 }, xp: ['NEG'] },
-        ],
-    },
-    {
-        id: 'FORMATIVE_24', age: 24, kind: 'story', chapter: 'Before',
-        title: 'The night they lose',
-        text: 'Your side loses the regional election by nine hundred votes. At two in the morning the room is looking for someone to blame, and the campaign manager is drunk and specific about it. Somebody has to talk to the volunteers who gave up four months of their lives.',
-        prompt: 'You are the most junior person still standing.',
-        choices: [
-            { id: 'speak', label: 'Get up on a chair and thank them by name until you run out of names.',
-                features: F({ transparency: 0.6, horizon: 0.5 }), effect: { capital: 2 },
-                check: { ability: 'COMM', dc: 42 }, xp: ['COMM', 'ORG'] },
-            { id: 'numbers', label: 'Go and find out where the nine hundred votes actually went.',
-                features: F({ proceduralRestraint: 0.4, horizon: 0.7 }), effect: { capital: 1 },
-                check: { ability: 'STRAT', dc: 42 }, xp: ['STRAT', 'STRAT'] },
-            { id: 'list', label: 'Take the volunteer list home. These are the only people who will ever knock for you.',
-                features: F({ electoralGain: 0.5, horizon: 0.6 }), effect: { standing: 1, funds: 1 },
-                xp: ['ORG', 'ORG'] },
-        ],
-    },
-    {
-        id: 'FORMATIVE_FOCUS', age: 25, kind: 'milestone', chapter: 'Before',
-        grant: 'FORMATIVE',
-        text: 'You are twenty-five and nobody is going to hand you anything. Whatever you spend the next two years getting good at is the thing you will be, when it eventually matters.',
-    },
-];
-exports.EARLY_SCRIPT = EARLY_SCRIPT;
-exports.ROUTE_ENTRY = {
-    STAFF: 'You are twenty-three and you answer a member\'s correspondence for a salary that does not cover the room you rent. You have read every bill that passed this session because nobody else in the office has time to.',
-    CIVIC: 'You are twenty-three and you run a tenants\' association out of a room above a laundrette. Forty households, one damp problem the council will not name, and a phone that rings at eleven at night.',
-    PROF: 'You are twenty-three and you check municipal procurement files for a living. It is the least glamorous job in the building and it is the only one where you get to read everything.',
-};
-const SCRIPT = (P) => [...(0, exports.EARLY_SCRIPT)(P), ...RAW_SCRIPT(P)]
-    .map((b, i) => ({ b, i }))
-    .sort((x, y) => (x.b.age - y.b.age) || (x.i - y.i))
-    .map((x) => x.b);
-exports.SCRIPT = SCRIPT;
-
-}],
-"src/game-session.mjs": [{"./engine.mjs":"src/engine.mjs","./abilities.mjs":"src/abilities.mjs","./election.mjs":"src/election.mjs","./content.mjs":"src/content.mjs","./playtest.mjs":"src/playtest.mjs"},function(module,exports,require){
-"use strict";
-// Political Mirror v0.37.2 — one canonical political life.
-//
-// This module is the only owner of gameplay progression. Browser code renders the
-// current interaction and dispatches actions; headless code chooses actions from the
-// same interaction. No consumer evaluates beat.when, skips a beat, fires an event, or
-// applies a public choice independently.
-var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    var desc = Object.getOwnPropertyDescriptor(m, k);
-    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
-      desc = { enumerable: true, get: function() { return m[k]; } };
-    }
-    Object.defineProperty(o, k2, desc);
-}) : (function(o, m, k, k2) {
-    if (k2 === undefined) k2 = k;
-    o[k2] = m[k];
-}));
-var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
-    Object.defineProperty(o, "default", { enumerable: true, value: v });
-}) : function(o, v) {
-    o["default"] = v;
-});
-var __importStar = (this && this.__importStar) || (function () {
-    var ownKeys = function(o) {
-        ownKeys = Object.getOwnPropertyNames || function (o) {
-            var ar = [];
-            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
-            return ar;
-        };
-        return ownKeys(o);
-    };
-    return function (mod) {
-        if (mod && mod.__esModule) return mod;
-        var result = {};
-        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
-        __setModuleDefault(result, mod);
-        return result;
-    };
-})();
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.GameSessionError = exports.ACTIONS = exports.PHASES = exports.SESSION_CONFIG = void 0;
-exports.resolveCanonicalSeed = resolveCanonicalSeed;
-exports.buildWorld = buildWorld;
-exports.previewStartingProfile = previewStartingProfile;
-exports.createGameSession = createGameSession;
-exports.advanceToNextInteraction = advanceToNextInteraction;
-exports.dispatchGameAction = dispatchGameAction;
-exports.buildMirror = buildMirror;
-exports.getCurrentInteraction = getCurrentInteraction;
-exports.stableStringify = stableStringify;
-exports.hashText = hashText;
-exports.voterStateDigest = voterStateDigest;
-exports.serializeCanonicalState = serializeCanonicalState;
-exports.hashCanonicalState = hashCanonicalState;
-exports.replayActionTranscript = replayActionTranscript;
-exports.getSessionResults = getSessionResults;
-exports.runCounterfactualAudit = runCounterfactualAudit;
-const engine_mjs_1 = require("./engine.mjs");
-const AB = __importStar(require("./abilities.mjs"));
-const EL = __importStar(require("./election.mjs"));
-const content_mjs_1 = require("./content.mjs");
-const playtest_mjs_1 = require("./playtest.mjs");
-const clamp = (value, low, high) => Math.max(low, Math.min(high, value));
-exports.SESSION_CONFIG = Object.freeze({
-    id: 'pm-session-config',
-    version: '0.37.2',
-    startAge: 23,
-    agentCount: 700,
-    hashActions: true,
-    liabilityThreshold: 2.4,
-    reckoningFundsDrain: 0.12,
-    reckoningStandingDrain: 0.12,
-});
-exports.PHASES = Object.freeze({
-    TITLE: 'TITLE',
-    STORY_CHOICE: 'STORY_CHOICE',
-    PRIVATE_READ: 'PRIVATE_READ',
-    PUBLIC_MOVE: 'PUBLIC_MOVE',
-    REACTION: 'REACTION',
-    CHAIN_RETURN: 'CHAIN_RETURN',
-    DEVELOPMENT_FOCUS: 'DEVELOPMENT_FOCUS',
-    DEVELOPMENT_RESULT: 'DEVELOPMENT_RESULT',
-    WILDERNESS_CHOICE: 'WILDERNESS_CHOICE',
-    WILDERNESS_RESULT: 'WILDERNESS_RESULT',
-    ELECTION_RESULT: 'ELECTION_RESULT',
-    CAREER_SUMMARY: 'CAREER_SUMMARY',
-    MINI_MIRROR: 'MINI_MIRROR',
-});
-exports.ACTIONS = Object.freeze({
-    START_GAME: 'START_GAME',
-    SUBMIT_PRIVATE_READ: 'SUBMIT_PRIVATE_READ',
-    SELECT_PUBLIC_MOVE: 'SELECT_PUBLIC_MOVE',
-    SELECT_WILDERNESS_ROUTE: 'SELECT_WILDERNESS_ROUTE',
-    SELECT_DEVELOPMENT_FOCUS: 'SELECT_DEVELOPMENT_FOCUS',
-    CONTINUE_REACTION: 'CONTINUE_REACTION',
-    CONTINUE_CHAIN: 'CONTINUE_CHAIN',
-    CONTINUE_ELECTION: 'CONTINUE_ELECTION',
-    CONTINUE_DEVELOPMENT_RESULT: 'CONTINUE_DEVELOPMENT_RESULT',
-    CONTINUE_WILDERNESS: 'CONTINUE_WILDERNESS',
-    VIEW_MIRROR: 'VIEW_MIRROR',
-});
-class GameSessionError extends Error {
-    constructor(message, code = 'INVALID_ACTION') {
-        super(message);
-        this.name = 'GameSessionError';
-        this.code = code;
-    }
-}
-exports.GameSessionError = GameSessionError;
-const DEFAULT_PLAYER = Object.freeze({
-    name: 'A. Reyes', bloc: 'CIV', region: 'Harrow Vale', route: 'CIVIC',
-});
-function clonePlain(value) {
-    if (value === undefined)
-        return undefined;
-    return structuredClone(value);
-}
-function finite(value, label) {
-    if (!Number.isFinite(value))
-        throw new GameSessionError(`${label} must be finite`, 'INVALID_CONFIG');
-    return value;
-}
-function resolveCanonicalSeed(seed, testMode) {
-    const mode = (0, playtest_mjs_1.resolveTestMode)(testMode);
-    const forced = mode ? playtest_mjs_1.PLAYTEST_SEEDS[mode].seed : null;
-    return String(forced || seed || 'POL-M7GX4').trim().toUpperCase() || 'POL-M7GX4';
-}
-function buildWorld(seed, player, agentCount = exports.SESSION_CONFIG.agentCount, config = exports.SESSION_CONFIG) {
-    const route = content_mjs_1.ROUTES.find((candidate) => candidate.id === player.route);
-    if (!route)
-        throw new GameSessionError(`unknown background route: ${player.route}`, 'INVALID_CONFIG');
-    const root = (0, engine_mjs_1.seedFromString)(seed);
-    return {
-        root,
-        route,
-        n: finite(agentCount, 'agentCount'),
-        worldSeed: (0, engine_mjs_1.deriveSeed)(root, 'world'),
-        eventSeed: (0, engine_mjs_1.deriveSeed)(root, 'events'),
-        actorSeed: (0, engine_mjs_1.deriveSeed)(root, 'actors'),
-        playerBloc: player.bloc,
-        rivalBloc: (0, content_mjs_1.OPP)(player.bloc),
-        startMu: route.start.mu,
-        startTau: route.start.tau,
-        startAge: config.startAge,
-    };
-}
-function previewStartingProfile({ seed = 'POL-M7GX4', player = DEFAULT_PLAYER, testMode = null } = {}) {
-    const canonicalPlayer = { ...DEFAULT_PLAYER, ...player };
-    const canonicalSeed = resolveCanonicalSeed(seed, testMode);
-    const world = buildWorld(canonicalSeed, canonicalPlayer, exports.SESSION_CONFIG.agentCount, exports.SESSION_CONFIG);
-    return AB.makeAbilities((0, engine_mjs_1.makeRng)((0, engine_mjs_1.deriveSeed)(world.worldSeed, 'abilities')), canonicalPlayer.route);
-}
-function createGameSession({ seed = 'POL-M7GX4', player = DEFAULT_PLAYER, agentCount = exports.SESSION_CONFIG.agentCount, testMode = null, config = {}, } = {}) {
-    const mergedConfig = Object.freeze({ ...exports.SESSION_CONFIG, ...config, startAge: 23 });
-    const canonicalPlayer = { ...DEFAULT_PLAYER, ...player };
-    if (!['CIV', 'REN'].includes(canonicalPlayer.bloc))
-        throw new GameSessionError(`unknown political bloc: ${canonicalPlayer.bloc}`, 'INVALID_CONFIG');
-    if (!Number.isInteger(agentCount) || agentCount <= 0)
-        throw new GameSessionError('agentCount must be a positive integer', 'INVALID_CONFIG');
-    return {
-        sessionVersion: '0.37.2',
-        config: mergedConfig,
-        requestedSeed: String(seed || ''),
-        seed: resolveCanonicalSeed(seed, testMode),
-        testMode: (0, playtest_mjs_1.resolveTestMode)(testMode),
-        player: canonicalPlayer,
-        agentCount,
-        phase: exports.PHASES.TITLE,
-        complete: false,
-        started: false,
-        script: [],
-        beatIndex: 0,
-        currentBeatId: null,
-        world: null,
-        agents: null,
-        worldRng: null,
-        actorRng: null,
-        eventRng: null,
-        rivalArc: [],
-        rivalProfile: null,
-        rivalPush: null,
-        tape: (0, engine_mjs_1.makeTape)(),
-        st: null,
-        pending: {},
-        resumeAfterDevelopment: null,
-        beatTrace: [],
-        eventTrace: [],
-        elections: [],
-        actionIndex: 0,
-        lastAction: null,
-        actionTranscript: [],
-        mirror: null,
-    };
-}
-function currentBeat(session) {
-    return session.script[session.beatIndex] || null;
-}
-function requireStarted(session) {
-    if (!session.started || !session.st)
-        throw new GameSessionError('game has not started', 'NOT_STARTED');
-}
-function initWorld(session) {
-    const world = buildWorld(session.seed, session.player, session.agentCount, session.config);
-    const { agents, wr, tilt } = (0, engine_mjs_1.buildInitialWorld)(world);
-    const actorRng = (0, engine_mjs_1.makeRng)(world.actorSeed);
-    // Consume the world stream exactly once, here. Every consumer inherits this order.
-    const tipTrue = wr.float() < 0.42;
-    world.errorFound = wr.float() < 0.45;
-    world.leakTraced = wr.float() < 0.38;
-    const rival = EL.rollRival(wr);
-    const start = world.route.start;
-    const abilities = AB.makeAbilities((0, engine_mjs_1.makeRng)((0, engine_mjs_1.deriveSeed)(world.worldSeed, 'abilities')), world.route.id);
-    session.world = world;
-    session.agents = agents;
-    session.worldRng = wr;
-    session.actorRng = actorRng;
-    session.eventRng = (0, engine_mjs_1.makeRng)(world.eventSeed);
-    session.rivalArc = rival.arc;
-    session.rivalProfile = rival.profile;
-    session.rivalPush = rival.push;
-    session.tape = (0, engine_mjs_1.makeTape)();
-    session.script = (0, content_mjs_1.SCRIPT)(session.player);
-    session.beatIndex = 0;
-    session.currentBeatId = null;
-    session.st = {
-        abilities,
-        age: session.config.startAge,
-        office: null,
-        recognition: 0.50,
-        independence: 0.5,
-        out: null,
-        lastOutRoute: null,
-        wildYears: 0,
-        capital: start.capital,
-        funds: start.funds,
-        standing: start.standing,
-        world,
-        flags: {},
-        log: [],
-        history: [],
-        chains: {},
-        execs: [],
-        focusLog: [],
-        reactions: [],
-        liability: 0,
-        reckoning: null,
-        tipTrue,
-        rivalProfile: rival.profile.id,
-        tilt,
-    };
-    session.started = true;
-}
-function traceEntry(session, beat, whenResult) {
-    const entry = {
-        beatIndex: session.beatIndex,
-        beatId: beat.id,
-        kind: beat.kind,
-        authoredAge: beat.age,
-        ageBefore: session.st.age,
-        whenResult,
-        skipped: !whenResult,
-        privateReadPresented: false,
-        publicMovePresented: false,
-        presentedChoices: [],
-        eventsFired: [],
-        nextPhase: null,
-    };
-    session.beatTrace.push(entry);
-    return entry;
-}
-function activeTrace(session) {
-    for (let i = session.beatTrace.length - 1; i >= 0; i--) {
-        if (session.beatTrace[i].beatIndex === session.beatIndex)
-            return session.beatTrace[i];
-    }
-    return null;
-}
-function fireEvent(session, event, age, seedActor = null, label = null) {
-    const full = { ...event, __age: age, __seedActor: seedActor, __label: label };
-    if (seedActor)
-        (0, engine_mjs_1.seedBeliefs)(session.agents, event.actorId, seedActor[0], seedActor[1], session.actorRng);
-    (0, engine_mjs_1.tapeEvent)(session.tape, full);
-    const reaction = (0, engine_mjs_1.applyEvent)(session.agents, event, session.eventRng, session.player.bloc);
-    const record = {
-        index: session.eventTrace.length,
-        beatId: currentBeat(session)?.id || null,
-        age,
-        actorId: event.actorId,
-        trait: event.trait || 'integrity',
-        implication: event.implication,
-        label,
-    };
-    session.eventTrace.push(record);
-    session.st.reactions.push({ ...record, delta: reaction.delta });
-    const trace = activeTrace(session);
-    if (trace)
-        trace.eventsFired.push(record.index);
-    return reaction;
-}
-function advanceAgeTo(session, age) {
-    if (age < session.st.age)
-        throw new GameSessionError(`age cannot move backward (${session.st.age} -> ${age})`, 'AGE_REGRESSION');
-    if (age > session.st.age) {
-        const years = age - session.st.age;
-        (0, engine_mjs_1.ageElectorate)(session.agents, years);
-        (0, engine_mjs_1.tapeAge)(session.tape, age, years, `age ${session.st.age} to ${age}`, 'timeline');
-        session.st.age = age;
-    }
-    while (session.rivalArc.length && session.rivalArc[0].age <= session.st.age) {
-        const arc = session.rivalArc.shift();
-        for (const actorId of ['RIVAL1', 'RIVAL2']) {
-            fireEvent(session, {
-                actorId,
-                implication: arc.implication,
-                strength: 0.9,
-                reliability: 0.9,
-                diagnosticity: 0.8,
-                deniability: 0,
-                trait: arc.trait,
-                targetSide: 'OPPOSING_SIDE',
-                sourceAlignment: 'NEUTRAL',
-                crowd: null,
-                mediaReach: 0.95,
-            }, arc.age, null, `rival ${arc.trait} arc`);
-        }
-    }
-}
-function finishBeat(session) {
-    const trace = activeTrace(session);
-    if (trace)
-        trace.nextPhase = 'ADVANCE';
-    session.beatIndex += 1;
-    session.currentBeatId = null;
-    session.pending = {};
-    session.resumeAfterDevelopment = null;
-    return advanceToNextInteraction(session);
-}
-function scheduleDevelopment(session, grant, resume) {
-    AB.grantPoints(session.st.abilities, grant.n, grant.reason);
-    session.pending.developmentGrant = clonePlain(grant);
-    session.pending.developmentResult = null;
-    session.resumeAfterDevelopment = resume;
-    session.phase = exports.PHASES.DEVELOPMENT_FOCUS;
-}
-function resolveElection(session, beat) {
-    if (beat.tier === 2 && !session.st.flags.RECKONED) {
-        session.st.flags.RECKONED = true;
-        const reckoning = (0, engine_mjs_1.liabilityReckoning)(session.st.liability || 0, session.config.liabilityThreshold);
-        if (reckoning) {
-            session.st.reckoning = reckoning.magnitude;
-            session.st.funds = Math.max(0, Math.round(session.st.funds
-                * (1 - session.config.reckoningFundsDrain * reckoning.magnitude)));
-            session.st.standing = Math.max(0, Math.round(session.st.standing
-                * (1 - session.config.reckoningStandingDrain * reckoning.magnitude)));
-            fireEvent(session, { actorId: 'PLAYER', ...reckoning.signal }, beat.age, null, 'The pattern');
-        }
-    }
-    const electionWorld = {
-        rivalPush: session.rivalPush,
-        rivalProfileId: session.rivalProfile.id,
-        playerBloc: session.player.bloc,
-        rivalBloc: (0, content_mjs_1.OPP)(session.player.bloc),
-        seedFor: (label) => (0, engine_mjs_1.deriveSeed)(session.world.root, label),
-    };
-    const { spec, res, won } = EL.holdElection(session.agents, session.st, beat, electionWorld, engine_mjs_1.makeRng);
-    (0, engine_mjs_1.tapeElection)(session.tape, spec);
-    session.st.office = won ? beat.office : null;
-    const result = {
-        age: beat.age,
-        office: beat.office,
-        won,
-        share: res.shares.PLAYER,
-        turnout: res.turnout,
-        approval: (0, engine_mjs_1.approvalOf)(session.agents, 'PLAYER'),
-        winner: res.winner,
-        tally: clonePlain(res.tally),
-        shares: clonePlain(res.shares),
-        spec: clonePlain(spec),
-    };
-    session.elections.push(result);
-    session.st.history.push({
-        age: beat.age, kind: 'election', office: beat.office, won,
-        share: result.share, turnout: result.turnout, approval: result.approval,
-    });
-    session.pending.election = result;
-    if (beat.tier === 1) {
-        const campaign = won ? content_mjs_1.CAMPAIGN_XP.WON : content_mjs_1.CAMPAIGN_XP.LOST;
-        AB.addExperience(session.st.abilities, campaign.tags, campaign.label);
-        scheduleDevelopment(session, content_mjs_1.DP_GRANTS.FIRST_CAMPAIGN, { type: 'PHASE', phase: exports.PHASES.ELECTION_RESULT });
-    }
-    else {
-        session.phase = exports.PHASES.ELECTION_RESULT;
-    }
-}
-function resolveChain(session, beat) {
-    const spec = content_mjs_1.CHAINS[beat.chain];
-    const read = session.st.log.find((entry) => entry.kind === 'read' && entry.eventId === spec.seedId);
-    const move = session.st.log.find((entry) => entry.kind === 'move' && entry.eventId === spec.seedId);
-    if (!read && !move)
-        return false;
-    const verdict = (0, engine_mjs_1.chainVerdict)(spec.outcome, read ? read.credence : null, move);
-    session.st.chains[beat.chain] = {
-        ...verdict,
-        seedId: spec.seedId,
-        credence: read?.credence ?? null,
-        choiceId: move?.choiceId ?? null,
-    };
-    const text = content_mjs_1.CHAIN_TEXT[beat.chain](verdict);
-    let reaction = null;
-    if (verdict.signal) {
-        reaction = fireEvent(session, { actorId: 'PLAYER', ...verdict.signal }, beat.age, null, `the ${beat.chain.toLowerCase()} file resurfacing`);
-    }
-    session.pending.chain = {
-        chain: beat.chain,
-        ...text,
-        verdictData: verdict,
-        recall: (0, content_mjs_1.chainRecall)(spec, read ? read.credence : null, move),
-        said: read ? content_mjs_1.LADDER[0][read.credence] : null,
-        did: move?.label ?? null,
-        seedTitle: read?.title || move?.title || null,
-        reaction,
-    };
-    session.phase = exports.PHASES.CHAIN_RETURN;
-    return true;
-}
-function resolveWilderness(session, beat) {
-    const route = session.st.out;
-    if (!route)
-        return false;
-    session.st.lastOutRoute = route.route;
-    session.st.wildYears += 2;
-    if (route.fade > 0) {
-        (0, engine_mjs_1.ageElectorate)(session.agents, route.fade);
-        (0, engine_mjs_1.tapeAge)(session.tape, beat.age, route.fade, `${route.route} wilderness fade`);
-    }
-    if (route.local)
-        session.st.capital += 2;
-    if (route.route === 'STAFF')
-        session.st.standing += 2;
-    if (route.route === 'PROFESSIONAL')
-        session.st.funds += 3;
-    if (route.route === 'MEDIA') {
-        session.st.recognition = clamp(session.st.recognition + 0.08, 0, 1);
-        session.st.flags.IMAGE_HARDENED = true;
-    }
-    const payoff = content_mjs_1.WILDERNESS_PAYOFF[route.route];
-    const reaction = payoff ? fireEvent(session, {
-        actorId: 'PLAYER', ...payoff, deniability: 0,
-        targetSide: 'PLAYER_SIDE', sourceAlignment: 'NEUTRAL', crowd: null,
-    }, beat.age, null, 'your four years out') : null;
-    AB.addExperience(session.st.abilities, route.route === 'MEDIA' ? ['COMM'] : route.route === 'STAFF' ? ['NEG']
-        : route.route === 'LOCAL' ? ['ORG'] : ['STRAT'], 'Four years out of office');
-    session.st.history.push({ age: beat.age, kind: 'wilderness', route: route.route });
-    session.pending.wilderness = {
-        route: route.route,
-        text: content_mjs_1.WILDERNESS_TEXT[route.route],
-        note: route.note,
-        fade: route.fade,
-        reaction,
-    };
-    scheduleDevelopment(session, content_mjs_1.DP_GRANTS.WILDERNESS, { type: 'PHASE', phase: exports.PHASES.WILDERNESS_RESULT });
-    return true;
-}
-function setPresentedPhase(session, trace, phase) {
-    session.phase = phase;
-    trace.nextPhase = phase;
-    if (phase === exports.PHASES.PRIVATE_READ)
-        trace.privateReadPresented = true;
-    if ([exports.PHASES.PUBLIC_MOVE, exports.PHASES.STORY_CHOICE, exports.PHASES.WILDERNESS_CHOICE].includes(phase)) {
-        trace.publicMovePresented = true;
-        trace.presentedChoices = (currentBeat(session)?.choices || []).map((choice) => ({
-            id: choice.id, ...choiceStatus(session, choice),
-        }));
-    }
-    return getCurrentInteraction(session);
-}
-function advanceToNextInteraction(session) {
-    requireStarted(session);
-    while (session.beatIndex < session.script.length) {
-        const beat = currentBeat(session);
-        session.currentBeatId = beat.id;
-        const whenResult = beat.when ? Boolean(beat.when(session.st)) : true;
-        const trace = traceEntry(session, beat, whenResult);
-        if (!whenResult) {
-            trace.nextPhase = 'SKIPPED';
-            session.beatIndex += 1;
-            session.currentBeatId = null;
-            continue;
-        }
-        advanceAgeTo(session, beat.age);
-        if (beat.kind === 'election') {
-            resolveElection(session, beat);
-            trace.nextPhase = session.phase;
-            return getCurrentInteraction(session);
-        }
-        if (beat.kind === 'milestone') {
-            if (beat.grant && !session.st.flags[`MS_${beat.id}`]) {
-                session.st.flags[`MS_${beat.id}`] = true;
-                session.st.history.push({ age: beat.age, kind: 'milestone', id: beat.id });
-                scheduleDevelopment(session, content_mjs_1.DP_GRANTS[beat.grant], { type: 'ADVANCE' });
-                trace.nextPhase = session.phase;
-                return getCurrentInteraction(session);
-            }
-            trace.nextPhase = 'AUTO_ADVANCE';
-            session.beatIndex += 1;
-            session.currentBeatId = null;
-            continue;
-        }
-        if (beat.kind === 'wilderness') {
-            if (resolveWilderness(session, beat)) {
-                trace.nextPhase = session.phase;
-                return getCurrentInteraction(session);
-            }
-            trace.nextPhase = 'AUTO_ADVANCE';
-            session.beatIndex += 1;
-            session.currentBeatId = null;
-            continue;
-        }
-        if (beat.kind === 'chain') {
-            if (resolveChain(session, beat)) {
-                trace.nextPhase = session.phase;
-                return getCurrentInteraction(session);
-            }
-            trace.nextPhase = 'AUTO_ADVANCE';
-            session.beatIndex += 1;
-            session.currentBeatId = null;
-            continue;
-        }
-        if (beat.kind === 'consequence') {
-            const resolution = beat.resolve(session.st);
-            const reaction = fireEvent(session, { actorId: 'PLAYER', ...resolution.event }, beat.age, null, beat.title);
-            session.st.history.push({ age: beat.age, kind: 'consequence', title: beat.title });
-            session.pending.reaction = { text: resolution.text, reaction, title: beat.title };
-            return setPresentedPhase(session, trace, exports.PHASES.REACTION);
-        }
-        if (beat.kind === 'fallout') {
-            const hard = Boolean(session.st.flags.TIP_ATTACK);
-            const implication = session.st.tipTrue ? (hard ? 0.35 : 0.18) : (hard ? -0.8 : -0.45);
-            session.st.flags.TIP_BACKFIRED = !session.st.tipTrue;
-            const reaction = fireEvent(session, {
-                actorId: 'PLAYER', implication, strength: 0.8, reliability: 0.9,
-                diagnosticity: 0.7, deniability: 0, trait: 'integrity',
-                targetSide: 'PLAYER_SIDE', sourceAlignment: implication < 0 ? 'OPPOSED' : 'ALIGNED',
-                crowd: null, mediaReach: 0.9, salience: 0.4,
-            }, beat.age, null, 'the folder you used');
-            session.pending.reaction = {
-                title: beat.title || 'The folder returns',
-                text: session.st.tipTrue
-                    ? 'The foundation story holds up. Two reporters confirm the transfers independently, and the material you used turns out to have been true.'
-                    : 'The foundation story collapses eight days before the vote. The transfers were routine and documented, and the correction runs beside a photograph of you making the claim.',
-                reaction,
-            };
-            return setPresentedPhase(session, trace, exports.PHASES.REACTION);
-        }
-        if (beat.playerAllegation) {
-            session.pending.allegationReaction = fireEvent(session, { actorId: 'PLAYER', ...beat.playerAllegation }, beat.age, null, beat.title);
-        }
-        if (beat.kind === 'judgment')
-            return setPresentedPhase(session, trace, exports.PHASES.PRIVATE_READ);
-        const phase = beat.id === 'WILDERNESS' ? exports.PHASES.WILDERNESS_CHOICE : exports.PHASES.STORY_CHOICE;
-        return setPresentedPhase(session, trace, phase);
-    }
-    session.phase = exports.PHASES.CAREER_SUMMARY;
-    session.currentBeatId = null;
-    session.pending = {};
-    return getCurrentInteraction(session);
-}
-function validateBeatAction(session, action) {
-    const beat = currentBeat(session);
-    if (!beat)
-        throw new GameSessionError('there is no active beat', 'INVALID_BEAT');
-    if (!action.beatId)
-        throw new GameSessionError(`${action.type} requires beatId`, 'INVALID_BEAT');
-    if (action.beatId !== beat.id) {
-        throw new GameSessionError(`${action.type} targets beat ${action.beatId}, but current beat is ${beat.id}`, 'INVALID_BEAT');
-    }
-    return beat;
-}
-function choiceStatus(session, choice) {
-    if (!AB.meets(session.st.abilities, choice.requires)) {
-        return { ok: false, reason: AB.unmetReason(session.st.abilities, choice.requires), kind: 'ABILITY' };
-    }
-    const resource = (0, engine_mjs_1.choiceAvailability)(choice, session.st);
-    return resource.ok ? { ok: true } : { ...resource, kind: 'RESOURCE' };
-}
-function applyPublicChoice(session, beat, choice) {
-    const status = choiceStatus(session, choice);
-    if (!status.ok)
-        throw new GameSessionError(`choice ${choice.id} is locked: ${status.reason}`, 'LOCKED_CHOICE');
-    session.st.log.push({
-        kind: 'move', eventId: beat.id, title: beat.title, label: choice.label,
-        choiceId: choice.id, features: clonePlain(choice.features),
-        responsibility: Boolean(beat.responsibility),
-        institutional: Boolean(choice.institutional || beat.institutional),
-        temptation: Boolean(beat.temptation),
-    });
-    session.st.liability += (0, engine_mjs_1.choiceLiability)(choice.features);
-    (0, engine_mjs_1.payCost)(choice, session.st);
-    if (choice.out) {
-        session.st.out = clonePlain(choice.out);
-        session.st.recognition = clamp(session.st.recognition + choice.out.recognition, 0, 1);
-        session.st.independence = clamp(session.st.independence + choice.out.independence, 0, 1);
-    }
-    if (choice.career) {
-        session.st.recognition = clamp(session.st.recognition + (choice.career.recognition || 0), 0, 1);
-        session.st.independence = clamp(session.st.independence + (choice.career.independence || 0), 0, 1);
-    }
-    for (const [key, value] of Object.entries(choice.effect || {}))
-        session.st[key] = Math.max(0, (session.st[key] || 0) + value);
-    if (choice.flag)
-        session.st.flags[choice.flag] = true;
-    if (choice.flag === 'COMEBACK_RUN' || choice.flag === 'COMEBACK_DECLINE')
-        session.st.out = null;
-    if (choice.flag === 'COMEBACK_RUN') {
-        session.st.office = 'Ward Council';
-        session.st.flags.CAME_BACK = true;
-    }
-    if (beat.flag)
-        session.st.flags[beat.flag] = true;
-    let execution = null;
-    if (choice.check) {
-        execution = AB.check(session.st.abilities, choice.check.ability, choice.check.dc, (0, engine_mjs_1.makeRng)((0, engine_mjs_1.deriveSeed)(session.world.worldSeed, `exec:${beat.id}:${choice.id}`)), { pressure: beat.pressure || 0 });
-        session.st.execs.push({
-            beat: beat.id, choiceId: choice.id, ability: choice.check.ability,
-            value: session.st.abilities.value[choice.check.ability], grade: execution.grade,
-        });
-    }
-    AB.addExperience(session.st.abilities, choice.xp || content_mjs_1.XP_TAGS[beat.id] || [], beat.title);
-    let reaction = null;
-    if (choice.signal) {
-        reaction = fireEvent(session, {
-            actorId: 'PLAYER', reliability: 0.9, diagnosticity: 0.65, deniability: 0,
-            targetSide: 'PLAYER_SIDE', sourceAlignment: 'NEUTRAL', crowd: null,
-            mediaReach: session.st.office ? 0.8 : 0.5, ...choice.signal, stakes: choice.stakes,
-        }, beat.age, null, beat.title);
-    }
-    const executionScale = execution ? execution.scale : 1;
-    for (const signal of (0, engine_mjs_1.actionSignals)(choice.features, {
-        scrutiny: session.st.office ? 0.85 : 0.45,
-        salience: beat.salience ?? (session.st.office ? 0.45 : 0.3),
-        stakes: choice.stakes,
-    })) {
-        reaction = fireEvent(session, {
-            actorId: 'PLAYER', ...signal,
-            implication: clamp(signal.implication * executionScale, -1, 1),
-        }, beat.age, null, beat.title);
-    }
-    if (execution && execution.grade !== 'solid') {
-        const implication = { excellent: 0.42, poor: -0.30, botched: -0.55 }[execution.grade];
-        reaction = fireEvent(session, {
-            actorId: 'PLAYER', implication, strength: 0.6, reliability: 0.9,
-            diagnosticity: 0.6, deniability: 0, trait: 'competence',
-            targetSide: 'PLAYER_SIDE', sourceAlignment: 'NEUTRAL', crowd: null,
-            mediaReach: session.st.office ? 0.7 : 0.45,
-        }, beat.age, null, `${beat.title} (execution)`);
-    }
-    if ((choice.features?.transparency || 0) + (choice.features?.exploitation || 0) > 0.25) {
-        session.st.recognition = clamp(session.st.recognition
-            + AB.recognitionGain(session.st.abilities, 0.012), 0, 1);
-    }
-    if (choice.hitsRival) {
-        fireEvent(session, {
-            actorId: beat.age >= 33 ? 'RIVAL2' : 'RIVAL1', implication: -choice.hitsRival,
-            strength: 0.7, reliability: 0.65, diagnosticity: 0.7, deniability: 0.3,
-            trait: 'integrity', targetSide: 'OPPOSING_SIDE', sourceAlignment: 'ALIGNED',
-            crowd: null, mediaReach: 0.85,
-        }, beat.age, null, beat.title);
-    }
-    session.st.history.push({
-        age: beat.age, kind: 'choice', id: beat.id, title: beat.title,
-        choiceId: choice.id, label: choice.label,
-    });
-    const strategyNote = choice.strategyRead
-        ? (session.st.tipTrue
-            ? 'Your analyst works through the night. “The paperwork stands up. Two of these transfers are real and I can show you why.”'
-            : 'Your analyst works through the night. “There is nothing underneath this. Somebody assembled it to look like something.”')
-        : null;
-    session.pending.reaction = reaction || strategyNote || execution
-        ? { title: beat.title, reaction, execution: clonePlain(execution), strategyNote }
-        : null;
-    if (beat.id === 'PARTY_OFFER' && !session.st.flags.MIDCAREER_DP) {
-        session.st.flags.MIDCAREER_DP = true;
-        scheduleDevelopment(session, content_mjs_1.DP_GRANTS.MIDCAREER, session.pending.reaction
-            ? { type: 'PHASE', phase: exports.PHASES.REACTION }
-            : { type: 'ADVANCE' });
-        return;
-    }
-    if (session.pending.reaction)
-        session.phase = exports.PHASES.REACTION;
-    else
-        finishBeat(session);
-}
-function submitRead(session, action) {
-    const beat = validateBeatAction(session, action);
-    if (!Number.isInteger(action.credence) || action.credence < 0 || action.credence > 3)
-        throw new GameSessionError('credence must be an integer from 0 to 3', 'INVALID_PAYLOAD');
-    session.st.log.push({
-        kind: 'read', eventId: beat.id, title: beat.title, pairId: beat.pairId,
-        factor: beat.factor, level: beat.level, credence: action.credence,
-        chainSeed: beat.chainSeed, ...clonePlain(beat.latents),
-    });
-    fireEvent(session, { actorId: `OTHER_${beat.id}`, ...beat.latents }, beat.age, [0.5, 1.1], beat.title);
-    session.phase = exports.PHASES.PUBLIC_MOVE;
-    const trace = activeTrace(session);
-    if (trace) {
-        trace.publicMovePresented = true;
-        trace.presentedChoices = (beat.choices || []).map((choice) => ({
-            id: choice.id, ...choiceStatus(session, choice),
-        }));
-        trace.nextPhase = exports.PHASES.PUBLIC_MOVE;
-    }
-}
-function chooseMove(session, action, expectedPhase) {
-    const beat = validateBeatAction(session, action);
-    if (session.phase !== expectedPhase)
-        throw new GameSessionError(`${action.type} is invalid during ${session.phase}`, 'WRONG_PHASE');
-    const choice = beat.choices?.find((candidate) => candidate.id === action.choiceId);
-    if (!choice)
-        throw new GameSessionError(`unknown choice ${action.choiceId} for ${beat.id}`, 'INVALID_CHOICE');
-    applyPublicChoice(session, beat, choice);
-}
-function selectDevelopment(session, action) {
-    validateBeatAction(session, action);
-    if (!AB.ABILITY_IDS.includes(action.primary) || !AB.ABILITY_IDS.includes(action.secondary))
-        throw new GameSessionError('development focus requires two valid ability ids', 'INVALID_PAYLOAD');
-    if (action.primary === action.secondary)
-        throw new GameSessionError('primary and secondary development focuses must differ', 'INVALID_PAYLOAD');
-    const grant = session.pending.developmentGrant;
-    const before = { ...session.st.abilities.value };
-    const result = AB.applyFocus(session.st.abilities, action.primary, action.secondary, grant.n);
-    session.st.abilities.dp = 0;
-    const record = {
-        reason: grant.reason,
-        budget: grant.n,
-        primary: action.primary,
-        secondary: action.secondary,
-        before,
-        after: { ...session.st.abilities.value },
-        result: clonePlain(result),
-        gained: (result.primary?.gained || 0) + (result.secondary?.gained || 0),
-    };
-    session.st.focusLog.push(record);
-    session.pending.developmentResult = record;
-    session.phase = exports.PHASES.DEVELOPMENT_RESULT;
-}
-function resumeAfterDevelopment(session) {
-    const resume = session.resumeAfterDevelopment;
-    session.resumeAfterDevelopment = null;
-    session.pending.developmentGrant = null;
-    session.pending.developmentResult = null;
-    if (resume?.type === 'PHASE') {
-        session.phase = resume.phase;
-        return;
-    }
-    finishBeat(session);
-}
-function assertPhase(session, expected, action) {
-    if (session.phase !== expected)
-        throw new GameSessionError(`${action.type} is invalid during ${session.phase}; expected ${expected}`, 'WRONG_PHASE');
-}
-function canonicalAction(action) {
-    const copy = {};
-    for (const key of Object.keys(action).sort())
-        copy[key] = clonePlain(action[key]);
-    return copy;
-}
-function dispatchGameAction(session, action) {
-    if (!action || typeof action.type !== 'string')
-        throw new GameSessionError('action.type is required', 'INVALID_ACTION');
-    if (session.complete)
-        throw new GameSessionError('session is already complete', 'POST_COMPLETION');
-    const phaseBefore = session.phase;
-    switch (action.type) {
-        case exports.ACTIONS.START_GAME:
-            if (session.started)
-                throw new GameSessionError('START_GAME may only be submitted once', 'DUPLICATE_ACTION');
-            assertPhase(session, exports.PHASES.TITLE, action);
-            initWorld(session);
-            advanceToNextInteraction(session);
-            break;
-        case exports.ACTIONS.SUBMIT_PRIVATE_READ:
-            assertPhase(session, exports.PHASES.PRIVATE_READ, action);
-            submitRead(session, action);
-            break;
-        case exports.ACTIONS.SELECT_PUBLIC_MOVE:
-            if (![exports.PHASES.PUBLIC_MOVE, exports.PHASES.STORY_CHOICE].includes(session.phase))
-                throw new GameSessionError(`${action.type} is invalid during ${session.phase}`, 'WRONG_PHASE');
-            chooseMove(session, action, session.phase);
-            break;
-        case exports.ACTIONS.SELECT_WILDERNESS_ROUTE:
-            chooseMove(session, action, exports.PHASES.WILDERNESS_CHOICE);
-            break;
-        case exports.ACTIONS.SELECT_DEVELOPMENT_FOCUS:
-            assertPhase(session, exports.PHASES.DEVELOPMENT_FOCUS, action);
-            selectDevelopment(session, action);
-            break;
-        case exports.ACTIONS.CONTINUE_DEVELOPMENT_RESULT:
-            assertPhase(session, exports.PHASES.DEVELOPMENT_RESULT, action);
-            validateBeatAction(session, action);
-            resumeAfterDevelopment(session);
-            break;
-        case exports.ACTIONS.CONTINUE_REACTION:
-            assertPhase(session, exports.PHASES.REACTION, action);
-            validateBeatAction(session, action);
-            finishBeat(session);
-            break;
-        case exports.ACTIONS.CONTINUE_CHAIN:
-            assertPhase(session, exports.PHASES.CHAIN_RETURN, action);
-            validateBeatAction(session, action);
-            finishBeat(session);
-            break;
-        case exports.ACTIONS.CONTINUE_ELECTION:
-            assertPhase(session, exports.PHASES.ELECTION_RESULT, action);
-            validateBeatAction(session, action);
-            finishBeat(session);
-            break;
-        case exports.ACTIONS.CONTINUE_WILDERNESS:
-            assertPhase(session, exports.PHASES.WILDERNESS_RESULT, action);
-            validateBeatAction(session, action);
-            finishBeat(session);
-            break;
-        case exports.ACTIONS.VIEW_MIRROR:
-            assertPhase(session, exports.PHASES.CAREER_SUMMARY, action);
-            session.mirror = buildMirror(session);
-            session.phase = exports.PHASES.MINI_MIRROR;
-            session.complete = true;
-            break;
-        default:
-            throw new GameSessionError(`unknown action type: ${action.type}`, 'UNKNOWN_ACTION');
-    }
-    session.actionIndex += 1;
-    session.lastAction = canonicalAction(action);
-    const hash = session.config.hashActions ? hashCanonicalState(session) : null;
-    const record = {
-        index: session.actionIndex,
-        action: session.lastAction,
-        phaseBefore,
-        phaseAfter: session.phase,
-        beatId: session.currentBeatId,
-        hash,
-    };
-    session.actionTranscript.push(record);
-    return record;
-}
-function beatView(beat) {
-    if (!beat)
-        return null;
-    return {
-        id: beat.id,
-        age: beat.age,
-        kind: beat.kind,
-        chapter: beat.chapter || null,
-        title: beat.title || null,
-        text: beat.text || null,
-        prompt: beat.prompt || null,
-        readPrompt: beat.readPrompt || null,
-        readFormat: beat.readFormat ?? 0,
-        factor: beat.factor || null,
-        pairId: beat.pairId || null,
-        level: beat.level || null,
-        latents: clonePlain(beat.latents || null),
-        chain: beat.chain || null,
-        tier: beat.tier || null,
-        office: beat.office || null,
-    };
-}
-function choiceView(session, choice) {
-    return {
-        id: choice.id,
-        label: choice.label,
-        requires: clonePlain(choice.requires || null),
-        cost: clonePlain(choice.cost || null),
-        availability: choiceStatus(session, choice),
-    };
-}
-function buildMirror(session) {
-    requireStarted(session);
-    const analysis = (0, engine_mjs_1.analysePlayer)(session.st.log);
-    const resolution = (0, engine_mjs_1.mirrorResolution)(analysis, session.st.log);
-    return {
-        analysis,
-        resolution,
-        cross: (0, engine_mjs_1.crossMirror)(analysis, session.st.log),
-        checklist: (0, engine_mjs_1.checklist)(analysis),
-        inputs: {
-            reads: clonePlain(session.st.log.filter((entry) => entry.kind === 'read')),
-            moves: clonePlain(session.st.log.filter((entry) => entry.kind === 'move')),
+      id: "THE_TIP",
+      age: 39,
+      tradeoff: true,
+      kind: "story",
+      chapter: "The run",
+      temptation: true,
+      title: "Eleven days out",
+      text: "Eleven days before the vote, a folder reaches your campaign. It suggests your opponent's foundation moved money it should not have moved. It is unverified. Verifying it properly would take three weeks you do not have. Using it would probably decide the election.",
+      choices: [
+        { id: "verify", cost: { funds: 3 }, lockNote: "Verification costs money you do not have eleven days out.", label: "Try to verify it. Say nothing until you can.", features: F({ proceduralRestraint: 0.9, transparency: 0.5, electoralGain: -0.7, horizon: 0.7 }), effect: { funds: -2 }, flag: "TIP_VERIFY", stakes: { core: -0.15, ind: 0.2 } },
+        {
+          id: "read_it",
+          requires: { STRAT: 58 },
+          label: "Before deciding anything: have your analyst take the folder apart overnight.",
+          features: F({ proceduralRestraint: 0.65, horizon: 0.5 }),
+          effect: {},
+          flag: "TIP_ANALYSED",
+          strategyRead: true
         },
-    };
-}
-function getCurrentInteraction(session) {
-    const beat = currentBeat(session);
-    const base = {
-        phase: session.phase,
-        complete: session.complete,
-        seed: session.seed,
-        testMode: session.testMode,
-        beat: beatView(beat),
-        publicState: session.st ? {
-            age: session.st.age,
-            office: session.st.office,
-            capital: session.st.capital,
-            funds: session.st.funds,
-            standing: session.st.standing,
-            recognition: session.st.recognition,
-            independence: session.st.independence,
-            liability: session.st.liability,
-            abilities: clonePlain(session.st.abilities),
-            belief: (0, engine_mjs_1.meanBelief)(session.agents, 'PLAYER'),
-            approval: (0, engine_mjs_1.approvalOf)(session.agents, 'PLAYER'),
-            precision: (0, engine_mjs_1.meanPrecision)(session.agents, 'PLAYER'),
-        } : null,
-    };
-    if (beat?.choices && [exports.PHASES.STORY_CHOICE, exports.PHASES.PUBLIC_MOVE,
-        exports.PHASES.WILDERNESS_CHOICE].includes(session.phase)) {
-        base.choices = beat.choices.map((choice) => choiceView(session, choice));
-    }
-    if (session.phase === exports.PHASES.PRIVATE_READ)
-        base.ladder = clonePlain(content_mjs_1.LADDER[beat.readFormat ?? 0]);
-    if (session.phase === exports.PHASES.REACTION)
-        base.reaction = clonePlain(session.pending.reaction);
-    if (session.phase === exports.PHASES.CHAIN_RETURN)
-        base.chain = clonePlain(session.pending.chain);
-    if (session.phase === exports.PHASES.ELECTION_RESULT)
-        base.election = clonePlain(session.pending.election);
-    if (session.phase === exports.PHASES.WILDERNESS_RESULT)
-        base.wilderness = clonePlain(session.pending.wilderness);
-    if (session.phase === exports.PHASES.DEVELOPMENT_FOCUS) {
-        base.development = {
-            grant: clonePlain(session.pending.developmentGrant),
-            focuses: content_mjs_1.LIFE_FOCUS.map((focus) => clonePlain(focus)),
-        };
-    }
-    if (session.phase === exports.PHASES.DEVELOPMENT_RESULT)
-        base.development = { result: clonePlain(session.pending.developmentResult) };
-    if (session.phase === exports.PHASES.CAREER_SUMMARY) {
-        base.summary = {
-            elections: clonePlain(session.elections),
-            chains: clonePlain(session.st.chains),
-            moves: session.st.log.filter((entry) => entry.kind === 'move').length,
-            reads: session.st.log.filter((entry) => entry.kind === 'read').length,
-        };
-    }
-    if (session.phase === exports.PHASES.MINI_MIRROR)
-        base.mirror = clonePlain(session.mirror);
-    return base;
-}
-function normalized(value) {
-    if (value === null || typeof value === 'boolean' || typeof value === 'string')
-        return value;
-    if (typeof value === 'number') {
-        if (!Number.isFinite(value))
-            throw new GameSessionError('canonical state contains a non-finite number', 'INVALID_STATE');
-        return Object.is(value, -0) ? 0 : value;
-    }
-    if (Array.isArray(value))
-        return value.map(normalized);
-    if (typeof value === 'object') {
-        const out = {};
-        for (const key of Object.keys(value).sort()) {
-            if (value[key] !== undefined && typeof value[key] !== 'function')
-                out[key] = normalized(value[key]);
+        { id: "hint", label: 'Say there are "serious questions" without making the claim.', features: F({ exploitation: 0.6, deflection: 0.5, electoralGain: 0.6 }), effect: {}, flag: "TIP_HINT", hitsRival: 0.35, stakes: { core: 0.18, ind: -0.12 } },
+        { id: "attack", label: "Use it. Attribute it. Let them deny it.", features: F({ exploitation: 0.95, electoralGain: 0.85, horizon: -0.6 }), effect: { capital: 1 }, flag: "TIP_ATTACK", hitsRival: 0.75, stakes: { core: 0.3, ind: -0.25, opp: -0.2 } },
+        { id: "refuse", label: "Destroy the folder and tell the campaign it never arrived.", features: F({ proceduralRestraint: 0.8, personalCost: 0.5, electoralGain: -0.6, horizon: 0.6 }), effect: { capital: 1 }, flag: "TIP_REFUSE" }
+      ]
+    },
+    {
+      id: "TIP_FALLOUT",
+      age: 40,
+      kind: "fallout",
+      chapter: "The run",
+      when: (st) => !!(st.flags.TIP_ATTACK || st.flags.TIP_HINT)
+    },
+    { id: "ELECTION_2", age: 40, kind: "election", chapter: "The run", office: "City Mayor", tier: 2 }
+  ];
+  var EARLY_SCRIPT = (P) => [
+    {
+      id: "ENTRY_23",
+      age: 23,
+      kind: "story",
+      chapter: "Before",
+      title: "The first office",
+      text: ROUTE_ENTRY[P.route] || ROUTE_ENTRY.CIVIC,
+      prompt: "Two months in, you notice something.",
+      choices: [
+        {
+          id: "raise",
+          label: "Say it out loud in the Monday meeting.",
+          features: F({ transparency: 0.8, personalCost: 0.4, proceduralRestraint: 0.3 }),
+          effect: { capital: 2 },
+          check: { ability: "COMM", dc: 40 },
+          xp: ["COMM"]
+        },
+        {
+          id: "memo",
+          label: "Put it in writing to one person who can act on it.",
+          features: F({ proceduralRestraint: 0.7, transparency: 0.4, horizon: 0.4 }),
+          effect: { capital: 1, standing: 1 },
+          check: { ability: "POLICY", dc: 40 },
+          xp: ["POLICY"]
+        },
+        {
+          id: "useful",
+          label: "Say nothing, and make yourself useful to the person it protects.",
+          features: F({ selfProtection: 0.6, electoralGain: 0.4, deflection: 0.4 }),
+          effect: { standing: 3, funds: 1 },
+          xp: ["NEG"]
         }
-        return out;
-    }
-    return String(value);
-}
-function stableStringify(value) {
-    return JSON.stringify(normalized(value));
-}
-function hashText(text) {
-    let hash = 0xcbf29ce484222325n;
-    const prime = 0x100000001b3n;
-    for (let i = 0; i < text.length; i++) {
-        const code = text.charCodeAt(i);
-        hash ^= BigInt(code & 0xff);
-        hash = BigInt.asUintN(64, hash * prime);
-        hash ^= BigInt(code >>> 8);
-        hash = BigInt.asUintN(64, hash * prime);
-    }
-    return hash.toString(16).padStart(16, '0');
-}
-function voterStateDigest(session) {
-    if (!session.agents)
-        return null;
-    const voters = session.agents.map((agent) => ({
-        id: agent.id,
-        lean: agent.lean,
-        side: agent.side,
-        ideology: agent.ideology,
-        interest: agent.interest,
-        mediaTrust: agent.mediaTrust,
-        instTrust: agent.instTrust,
-        turnoutBase: agent.turnoutBase,
-        crowdSens: agent.crowdSens,
-        denialSens: agent.denialSens,
-        wInt: agent.wInt,
-        wComp: agent.wComp,
-        family: agent.family,
-        gateBias: agent.gateBias,
-        motivBias: agent.motivBias,
-        srcBias: agent.srcBias,
-        owner: agent.owner,
-        young: agent.young,
-        publicSector: agent.publicSector,
-        business: agent.business,
-        beliefs: agent.beliefs,
-    }));
-    return hashText(stableStringify(voters));
-}
-function serializeCanonicalState(session) {
-    return normalized({
-        sessionVersion: session.sessionVersion,
-        config: session.config,
-        seed: session.seed,
-        testMode: session.testMode,
-        player: session.player,
-        agentCount: session.agentCount,
-        phase: session.phase,
-        complete: session.complete,
-        started: session.started,
-        beatIndex: session.beatIndex,
-        currentBeatId: session.currentBeatId,
-        actionIndex: session.actionIndex,
-        lastAction: session.lastAction,
-        world: session.world ? {
-            root: session.world.root,
-            n: session.world.n,
-            worldSeed: session.world.worldSeed,
-            eventSeed: session.world.eventSeed,
-            actorSeed: session.world.actorSeed,
-            playerBloc: session.world.playerBloc,
-            rivalBloc: session.world.rivalBloc,
-            startMu: session.world.startMu,
-            startTau: session.world.startTau,
-            startAge: session.world.startAge,
-            errorFound: session.world.errorFound,
-            leakTraced: session.world.leakTraced,
-        } : null,
-        state: session.st,
-        rivalArc: session.rivalArc,
-        rivalProfile: session.rivalProfile,
-        rivalPush: session.rivalPush,
-        pending: session.pending,
-        resumeAfterDevelopment: session.resumeAfterDevelopment,
-        beatTrace: session.beatTrace,
-        eventTrace: session.eventTrace,
-        elections: session.elections,
-        rng: session.started ? {
-            world: session.worldRng.state(),
-            actor: session.actorRng.state(),
-            events: session.eventRng.state(),
-        } : null,
-        tape: session.tape,
-        mirror: session.mirror,
-        voterStateDigest: voterStateDigest(session),
-    });
-}
-function hashCanonicalState(session) {
-    return hashText(stableStringify(serializeCanonicalState(session)));
-}
-function replayActionTranscript(options, transcript) {
-    const session = createGameSession(options);
-    for (const entry of transcript) {
-        const action = entry.action || entry;
-        const record = dispatchGameAction(session, action);
-        if (entry.hash && entry.hash !== record.hash) {
-            throw new GameSessionError(`parity divergence at action ${record.index} (${action.type}): expected ${entry.hash}, got ${record.hash}`, 'PARITY_DIVERGENCE');
+      ]
+    },
+    {
+      id: "FORMATIVE_24",
+      age: 24,
+      kind: "story",
+      chapter: "Before",
+      title: "The night they lose",
+      text: "Your side loses the regional election by nine hundred votes. At two in the morning the room is looking for someone to blame, and the campaign manager is drunk and specific about it. Somebody has to talk to the volunteers who gave up four months of their lives.",
+      prompt: "You are the most junior person still standing.",
+      choices: [
+        {
+          id: "speak",
+          label: "Get up on a chair and thank them by name until you run out of names.",
+          features: F({ transparency: 0.6, horizon: 0.5 }),
+          effect: { capital: 2 },
+          check: { ability: "COMM", dc: 42 },
+          xp: ["COMM", "ORG"]
+        },
+        {
+          id: "numbers",
+          label: "Go and find out where the nine hundred votes actually went.",
+          features: F({ proceduralRestraint: 0.4, horizon: 0.7 }),
+          effect: { capital: 1 },
+          check: { ability: "STRAT", dc: 42 },
+          xp: ["STRAT", "STRAT"]
+        },
+        {
+          id: "list",
+          label: "Take the volunteer list home. These are the only people who will ever knock for you.",
+          features: F({ electoralGain: 0.5, horizon: 0.6 }),
+          effect: { standing: 1, funds: 1 },
+          xp: ["ORG", "ORG"]
         }
+      ]
+    },
+    {
+      id: "FORMATIVE_FOCUS",
+      age: 25,
+      kind: "milestone",
+      chapter: "Before",
+      grant: "FORMATIVE",
+      text: "You are twenty-five and nobody is going to hand you anything. Whatever you spend the next two years getting good at is the thing you will be, when it eventually matters."
     }
-    return session;
-}
-function getSessionResults(session) {
-    requireStarted(session);
-    const mirror = session.mirror || buildMirror(session);
-    return {
-        st: session.st,
-        agents: session.agents,
-        world: session.world,
-        tape: session.tape,
-        analysis: mirror.analysis,
-        res: mirror.resolution,
-        cross: mirror.cross,
-        list: mirror.checklist,
-        belief: (0, engine_mjs_1.meanBelief)(session.agents, 'PLAYER'),
-        prec: (0, engine_mjs_1.meanPrecision)(session.agents, 'PLAYER'),
-        approval: (0, engine_mjs_1.approvalOf)(session.agents, 'PLAYER'),
-        session,
-    };
-}
-function runCounterfactualAudit(session) {
-    requireStarted(session);
-    return (0, engine_mjs_1.counterfactualAudit)(session.tape, session.world);
-}
+  ];
+  var ROUTE_ENTRY = {
+    STAFF: "You are twenty-three and you answer a member's correspondence for a salary that does not cover the room you rent. You have read every bill that passed this session because nobody else in the office has time to.",
+    CIVIC: "You are twenty-three and you run a tenants' association out of a room above a laundrette. Forty households, one damp problem the council will not name, and a phone that rings at eleven at night.",
+    PROF: "You are twenty-three and you check municipal procurement files for a living. It is the least glamorous job in the building and it is the only one where you get to read everything."
+  };
+  var SCRIPT = (P) => [...EARLY_SCRIPT(P), ...RAW_SCRIPT(P)].map((b, i) => ({ b, i })).sort((x, y) => x.b.age - y.b.age || x.i - y.i).map((x) => x.b);
 
-}],
-"src/election.mjs": [{"./engine.mjs":"src/engine.mjs","./det-math.mjs":"src/det-math.mjs","./abilities.mjs":"src/abilities.mjs"},function(module,exports,require){
-"use strict";
-// Political Mirror — the single election reality.
-//
-// Every consumer builds elections through this module: the browser UI, the scripted
-// playthrough, the matrix sweep, the seed hunters and the tests. There is no second copy.
-//
-// Why this file exists: between v0.35 and v0.37 the UI carried its own paste of the
-// election formula. It drifted three versions behind — pre-v0.36 home advantage, no
-// recognition term, an older mobilisation cap — so every balance number produced by the
-// headless tools described a game nobody could play. A missing field then produced a NaN
-// that silently collapsed turnout to zero. Both failures are structural, and both are
-// fixed by there being exactly one implementation and one config.
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.RIVAL_PROFILES = exports.ELECTION_CONFIG = void 0;
-exports.rollRival = rollRival;
-exports.retrospective = retrospective;
-exports.homeAdvantage = homeAdvantage;
-exports.mobilisation = mobilisation;
-exports.buildElectionSpec = buildElectionSpec;
-exports.validateElectionSpec = validateElectionSpec;
-exports.validateElectionResult = validateElectionResult;
-exports.holdElection = holdElection;
-const engine_mjs_1 = require("./engine.mjs");
-const det_math_mjs_1 = require("./det-math.mjs");
-const abilities_mjs_1 = require("./abilities.mjs");
-const cl = (x, a, b) => Math.max(a, Math.min(b, x));
-// ── Configuration ───────────────────────────────────────────────────────────
-// Named and versioned. Tools must not shadow these with private constants; a sweep that
-// wants different values passes an override object into the same functions.
-exports.ELECTION_CONFIG = {
-    id: 'pm-election-config',
-    version: '0.37.1',
+  // src/election.mjs
+  var cl = (x, a, b) => Math.max(a, Math.min(b, x));
+  var ELECTION_CONFIG = {
+    id: "pm-election-config",
+    version: "0.37.1",
     // opponent
-    rivalOffset: 0.30, // how strong the field is in general
+    rivalOffset: 0.3,
+    // how strong the field is in general
     rivalArcJitter: 0.22,
-    rivalPushMin: 0.0,
+    rivalPushMin: 0,
     rivalPushMax: 0.12,
     // the player's local advantage — earned, not granted
     homeBase: 0.03,
-    homeStandingWeight: 0.030,
+    homeStandingWeight: 0.03,
     homeFundsWeight: 0.012,
     homeTookSeatBonus: 0.06,
-    homeTier1Cap: 0.30,
+    homeTier1Cap: 0.3,
     homeTier2StandingWeight: 0.024,
-    homeTier2Cap: 0.20,
+    homeTier2Cap: 0.2,
     // the opponent's local advantage
-    rivalHomeTier1: 0.10,
-    rivalHomeTier2: 0.20,
+    rivalHomeTier1: 0.1,
+    rivalHomeTier2: 0.2,
     // the field operation: money and party standing, multiplied by Organization
     fundsWeight: 0.014,
-    standingWeight: 0.020,
-    mobilisationCapTier1: 0.32, // a ward race is a turnout game
+    standingWeight: 0.02,
+    mobilisationCapTier1: 0.32,
+    // a ward race is a turnout game
     mobilisationCapTier2: 0.26,
     // retrospective record
     retroCapitalScale: 9,
     retroCapitalWeight: 0.28,
-    retroCulvertFunded: 0.20,
+    retroCulvertFunded: 0.2,
     retroCulvertPartial: 0.05,
     retroCulvertFailed: -0.14,
     retroChoseSurvival: 0.18,
     retroChoseNeed: -0.16,
     retroTipBackfired: -0.16,
-    retroComebackLocal: 0.20,
+    retroComebackLocal: 0.2,
     retroComebackOther: 0.13,
-    baseRecognition: 0.50,
-    rivalRecognition: 0.50,
+    baseRecognition: 0.5,
+    rivalRecognition: 0.5,
     rivalBaseRetro: 0.05,
     playerIdeology: 0.05,
-    rivalIdeology: -0.10,
-};
-exports.RIVAL_PROFILES = [
-    { id: 'CLEAN', integrity: 0.62, competence: -0.22 },
-    { id: 'EFFECTIVE', integrity: -0.32, competence: 0.66 },
-    { id: 'STRONG', integrity: 0.34, competence: 0.38 },
-    { id: 'WEAK', integrity: -0.06, competence: -0.10 },
-];
-// ── The opponent's career ───────────────────────────────────────────────────
-// Rolled once per world from the world RNG. Both consumers must call this, in this
-// order, or their worlds diverge before a single vote is cast.
-function rollRival(wr, cfg = exports.ELECTION_CONFIG) {
+    rivalIdeology: -0.1
+  };
+  var RIVAL_PROFILES = [
+    { id: "CLEAN", integrity: 0.62, competence: -0.22 },
+    { id: "EFFECTIVE", integrity: -0.32, competence: 0.66 },
+    { id: "STRONG", integrity: 0.34, competence: 0.38 },
+    { id: "WEAK", integrity: -0.06, competence: -0.1 }
+  ];
+  function rollRival(wr, cfg = ELECTION_CONFIG) {
     const push = wr.range(cfg.rivalPushMin, cfg.rivalPushMax);
-    const profile = exports.RIVAL_PROFILES[wr.int(exports.RIVAL_PROFILES.length)];
+    const profile = RIVAL_PROFILES[wr.int(RIVAL_PROFILES.length)];
     const arc = [];
     for (const age of [28, 30, 32, 34, 36, 38, 39]) {
-        for (const trait of ['integrity', 'competence']) {
-            const target = profile[trait] + cfg.rivalOffset + wr.range(-cfg.rivalArcJitter, cfg.rivalArcJitter);
-            arc.push({ age, trait, implication: Math.max(-1, Math.min(1, target)) });
-        }
+      for (const trait of ["integrity", "competence"]) {
+        const target = profile[trait] + cfg.rivalOffset + wr.range(-cfg.rivalArcJitter, cfg.rivalArcJitter);
+        arc.push({ age, trait, implication: Math.max(-1, Math.min(1, target)) });
+      }
     }
     return { profile, profileId: profile.id, arc, push };
-}
-// ── Spec ────────────────────────────────────────────────────────────────────
-// Every numeric field is required and finite. Nothing is left to `?? 0` at the call site,
-// because that is precisely how `rivalPush` went missing at tier 2.
-function retrospective(st, cfg = exports.ELECTION_CONFIG) {
+  }
+  function retrospective(st, cfg = ELECTION_CONFIG) {
     const f = st.flags || {};
     const comebackRoute = st.out?.route || st.lastOutRoute;
-    const wildCredit = f.CAME_BACK
-        ? (comebackRoute === 'LOCAL' ? cfg.retroComebackLocal : cfg.retroComebackOther) : 0;
-    return cfg.retroCapitalWeight * (0, det_math_mjs_1.detTanh)((st.capital || 0) / cfg.retroCapitalScale)
-        + wildCredit
-        + (f.CULVERT_FUNDED ? cfg.retroCulvertFunded
-            : f.CULVERT_PARTIAL ? cfg.retroCulvertPartial : cfg.retroCulvertFailed)
-        + (f.CHOSE_SURVIVAL ? cfg.retroChoseSurvival : f.CHOSE_NEED ? cfg.retroChoseNeed : 0)
-        + (f.TIP_BACKFIRED ? cfg.retroTipBackfired : 0);
-}
-function homeAdvantage(st, tier, cfg = exports.ELECTION_CONFIG) {
+    const wildCredit = f.CAME_BACK ? comebackRoute === "LOCAL" ? cfg.retroComebackLocal : cfg.retroComebackOther : 0;
+    return cfg.retroCapitalWeight * detTanh((st.capital || 0) / cfg.retroCapitalScale) + wildCredit + (f.CULVERT_FUNDED ? cfg.retroCulvertFunded : f.CULVERT_PARTIAL ? cfg.retroCulvertPartial : cfg.retroCulvertFailed) + (f.CHOSE_SURVIVAL ? cfg.retroChoseSurvival : f.CHOSE_NEED ? cfg.retroChoseNeed : 0) + (f.TIP_BACKFIRED ? cfg.retroTipBackfired : 0);
+  }
+  function homeAdvantage(st, tier, cfg = ELECTION_CONFIG) {
     if (tier === 1) {
-        return cl(cfg.homeBase + cfg.homeStandingWeight * (st.standing || 0)
-            + cfg.homeFundsWeight * (st.funds || 0)
-            + (st.flags?.TOOK_SEAT ? cfg.homeTookSeatBonus : 0), 0, cfg.homeTier1Cap);
+      return cl(cfg.homeBase + cfg.homeStandingWeight * (st.standing || 0) + cfg.homeFundsWeight * (st.funds || 0) + (st.flags?.TOOK_SEAT ? cfg.homeTookSeatBonus : 0), 0, cfg.homeTier1Cap);
     }
     return cl(cfg.homeTier2StandingWeight * (st.standing || 0), 0, cfg.homeTier2Cap);
-}
-function mobilisation(st, tier, cfg = exports.ELECTION_CONFIG) {
-    const mult = st.abilities ? (0, abilities_mjs_1.mobilisationMultiplier)(st.abilities) : 1;
+  }
+  function mobilisation(st, tier, cfg = ELECTION_CONFIG) {
+    const mult = st.abilities ? mobilisationMultiplier(st.abilities) : 1;
     const cap = tier === 1 ? cfg.mobilisationCapTier1 : cfg.mobilisationCapTier2;
     return cl(mult * (cfg.fundsWeight * (st.funds || 0) + cfg.standingWeight * (st.standing || 0)), 0, cap);
-}
-/**
- * The one place an election is described. `world` must carry { rivalPush, playerBloc,
- * rivalBloc, seedFor(label) }.
- */
-function buildElectionSpec(st, beat, world, cfg = exports.ELECTION_CONFIG) {
+  }
+  function buildElectionSpec(st, beat, world, cfg = ELECTION_CONFIG) {
     const tier = beat.tier;
-    const rivalId = tier === 1 ? 'RIVAL1' : 'RIVAL2';
+    const rivalId = tier === 1 ? "RIVAL1" : "RIVAL2";
     const spec = {
-        electionId: beat.id,
-        age: beat.age,
-        office: beat.office,
-        officeTier: tier,
-        seed: world.seedFor('election-' + beat.id),
-        configVersion: cfg.version,
-        rivalProfileId: world.rivalProfileId,
-        rivalPush: world.rivalPush,
-        playerBloc: world.playerBloc,
-        opponentBloc: world.rivalBloc,
-        candidates: [
-            { id: 'PLAYER', bloc: world.playerBloc, ideology: cfg.playerIdeology,
-                retro: retrospective(st, cfg),
-                homeAdvantage: homeAdvantage(st, tier, cfg),
-                recognition: Number.isFinite(st.recognition) ? st.recognition : cfg.baseRecognition },
-            { id: rivalId, bloc: world.rivalBloc, ideology: cfg.rivalIdeology,
-                retro: cfg.rivalBaseRetro + (tier === 2 ? world.rivalPush : 0),
-                homeAdvantage: tier === 1 ? cfg.rivalHomeTier1 : cfg.rivalHomeTier2,
-                recognition: cfg.rivalRecognition },
-        ],
-        ctx: { mobilisation: { PLAYER: mobilisation(st, tier, cfg) } },
+      electionId: beat.id,
+      age: beat.age,
+      office: beat.office,
+      officeTier: tier,
+      seed: world.seedFor("election-" + beat.id),
+      configVersion: cfg.version,
+      rivalProfileId: world.rivalProfileId,
+      rivalPush: world.rivalPush,
+      playerBloc: world.playerBloc,
+      opponentBloc: world.rivalBloc,
+      candidates: [
+        {
+          id: "PLAYER",
+          bloc: world.playerBloc,
+          ideology: cfg.playerIdeology,
+          retro: retrospective(st, cfg),
+          homeAdvantage: homeAdvantage(st, tier, cfg),
+          recognition: Number.isFinite(st.recognition) ? st.recognition : cfg.baseRecognition
+        },
+        {
+          id: rivalId,
+          bloc: world.rivalBloc,
+          ideology: cfg.rivalIdeology,
+          retro: cfg.rivalBaseRetro + (tier === 2 ? world.rivalPush : 0),
+          homeAdvantage: tier === 1 ? cfg.rivalHomeTier1 : cfg.rivalHomeTier2,
+          recognition: cfg.rivalRecognition
+        }
+      ],
+      ctx: { mobilisation: { PLAYER: mobilisation(st, tier, cfg) } }
     };
     validateElectionSpec(spec);
     return spec;
-}
-const NUMERIC_SPEC_FIELDS = ['age', 'officeTier', 'seed', 'rivalPush'];
-const NUMERIC_CANDIDATE_FIELDS = ['ideology', 'retro', 'homeAdvantage', 'recognition'];
-function validateElectionSpec(spec) {
-    const where = (field) => `election "${spec.electionId}" (age ${spec.age}, tier ${spec.officeTier}, seed ${spec.seed}): ` +
-        `${field} is not a finite number`;
+  }
+  var NUMERIC_SPEC_FIELDS = ["age", "officeTier", "seed", "rivalPush"];
+  var NUMERIC_CANDIDATE_FIELDS = ["ideology", "retro", "homeAdvantage", "recognition"];
+  function validateElectionSpec(spec) {
+    const where = (field) => `election "${spec.electionId}" (age ${spec.age}, tier ${spec.officeTier}, seed ${spec.seed}): ${field} is not a finite number`;
     for (const f of NUMERIC_SPEC_FIELDS)
-        if (!Number.isFinite(spec[f]))
-            throw new Error(where(f) + ` — got ${spec[f]}`);
+      if (!Number.isFinite(spec[f])) throw new Error(where(f) + ` \u2014 got ${spec[f]}`);
     if (!spec.playerBloc || !spec.opponentBloc)
-        throw new Error(`election "${spec.electionId}": missing bloc identity`);
+      throw new Error(`election "${spec.electionId}": missing bloc identity`);
     if (!Array.isArray(spec.candidates) || spec.candidates.length !== 2)
-        throw new Error(`election "${spec.electionId}": needs exactly two candidates`);
+      throw new Error(`election "${spec.electionId}": needs exactly two candidates`);
     for (const c of spec.candidates) {
-        for (const f of NUMERIC_CANDIDATE_FIELDS)
-            if (!Number.isFinite(c[f]))
-                throw new Error(where(`${c.id}.${f}`) + ` — got ${c[f]}`);
-        if (!c.bloc)
-            throw new Error(`election "${spec.electionId}": ${c.id} has no bloc`);
+      for (const f of NUMERIC_CANDIDATE_FIELDS)
+        if (!Number.isFinite(c[f])) throw new Error(where(`${c.id}.${f}`) + ` \u2014 got ${c[f]}`);
+      if (!c.bloc) throw new Error(`election "${spec.electionId}": ${c.id} has no bloc`);
     }
     const m = spec.ctx?.mobilisation?.PLAYER;
-    if (!Number.isFinite(m))
-        throw new Error(where('ctx.mobilisation.PLAYER') + ` — got ${m}`);
+    if (!Number.isFinite(m)) throw new Error(where("ctx.mobilisation.PLAYER") + ` \u2014 got ${m}`);
     return spec;
-}
-function validateElectionResult(res, spec) {
-    const where = (field, v) => `election "${spec.electionId}" (age ${spec.age}, tier ${spec.officeTier}, seed ${spec.seed}): ` +
-        `${field} is invalid — got ${v}`;
-    if (!Number.isFinite(res.turnout))
-        throw new Error(where('turnout', res.turnout));
+  }
+  function validateElectionResult(res, spec) {
+    const where = (field, v) => `election "${spec.electionId}" (age ${spec.age}, tier ${spec.officeTier}, seed ${spec.seed}): ${field} is invalid \u2014 got ${v}`;
+    if (!Number.isFinite(res.turnout)) throw new Error(where("turnout", res.turnout));
     for (const c of spec.candidates) {
-        const s = res.shares[c.id];
-        if (!Number.isFinite(s))
-            throw new Error(where(`shares.${c.id}`, s));
+      const s = res.shares[c.id];
+      if (!Number.isFinite(s)) throw new Error(where(`shares.${c.id}`, s));
     }
-    // A turnout of exactly zero across a whole electorate is the signature of a NaN that
-    // got past the input checks. It is never a legitimate outcome here.
-    if (res.turnout === 0)
-        throw new Error(where('turnout', '0 — nobody voted, which means a NaN reached the utility function'));
-    if (!res.winner)
-        throw new Error(where('winner', res.winner));
+    if (res.turnout === 0) throw new Error(where("turnout", "0 \u2014 nobody voted, which means a NaN reached the utility function"));
+    if (!res.winner) throw new Error(where("winner", res.winner));
     return res;
-}
-/** Build, validate, run, validate. The only supported way to hold an election. */
-function holdElection(agents, st, beat, world, rng, cfg = exports.ELECTION_CONFIG) {
+  }
+  function holdElection(agents, st, beat, world, rng, cfg = ELECTION_CONFIG) {
     const spec = buildElectionSpec(st, beat, world, cfg);
-    const res = (0, engine_mjs_1.runElection)(agents, spec.candidates, rng(spec.seed), spec.ctx);
+    const res = runElection(agents, spec.candidates, rng(spec.seed), spec.ctx);
     validateElectionResult(res, spec);
-    return { spec, res, won: res.winner === 'PLAYER' };
-}
+    return { spec, res, won: res.winner === "PLAYER" };
+  }
 
-}],
-"src/playtest.mjs": [{},function(module,exports,require){
-"use strict";
-// Political Mirror — human playtest scaffolding.
-// Additive only. Nothing here changes game balance or the simulation.
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ABILITY_SURVEY_IDS = exports.SURVEY = exports.SHUFFLED_RESOLUTION = exports.SHUFFLED_PROFILE = exports.BUILD_LABEL = exports.SHUFFLE_RATE = exports.PLAYTEST_SEEDS = void 0;
-exports.resolveTestMode = resolveTestMode;
-exports.resolveMirrorOverride = resolveMirrorOverride;
-exports.assignMirrorArm = assignMirrorArm;
-exports.randomSessionId = randomSessionId;
-exports.newSession = newSession;
-exports.logDecision = logDecision;
-exports.logRead = logRead;
-exports.logLocked = logLocked;
-exports.logDevelopment = logDevelopment;
-exports.logExecution = logExecution;
-exports.logAbilityOption = logAbilityOption;
-exports.recordAbilityStart = recordAbilityStart;
-exports.recordAbilityFinal = recordAbilityFinal;
-exports.snapshotMirror = snapshotMirror;
-exports.markGameplayEnd = markGameplayEnd;
-exports.markSurveyStart = markSurveyStart;
-exports.finishSession = finishSession;
-exports.exportFilename = exportFilename;
-// ── Tester seeds, found by searching 900 worlds at the shipped electorate size of 700
-// agents (tools/seedhunt2.mjs). A seed's behaviour depends on agent count, so these are
-// only valid for the 700-agent build. ──
-exports.PLAYTEST_SEEDS = {
-    natural: { seed: null, label: 'Natural seed',
-        note: 'A random world. What an ordinary player gets.' },
-    defeat: { seed: 'POL-003K', label: 'Forced early defeat',
-        note: 'Most scripted styles lose the first election here, and every one of those runs finds a way back. Re-hunted for v0.37: the formative years leave players stronger, so no seed defeats every style any more.' },
-    close: { seed: 'POL-001J', label: 'Competitive',
-        note: 'Across the shipped backgrounds and styles, only one run loses the first election; mayoral results span 15.7 points and one lands at 49.72%. Choices decide it.' },
-    strong: { seed: 'POL-001Q', label: 'Strong opponent',
-        note: 'A true STRONG-rival world. Twelve of eighteen runs lose first, four still win the mayoralty, and four of the twelve defeated runs find a comeback.' },
-};
-function resolveTestMode(raw) {
-    const k = String(raw || '').toLowerCase();
-    return Object.prototype.hasOwnProperty.call(exports.PLAYTEST_SEEDS, k) ? k : null;
-}
-// ── Barnum arm assignment ────────────────────────────────────────────────────
-// Assigned from the session, never from the world seed. Deriving it from the seed meant
-// the three fixed tester seeds all resolved to TRUE and natural mode was hard-coded TRUE,
-// so a whole 6-10 person round could not contain a single shuffled Mirror.
-// Two testers on the same seed must be able to land in different arms.
-exports.SHUFFLE_RATE = 0.25;
-// Recorded in every export so v0.3 baseline sessions and v0.36 ability sessions can be
-// told apart during the A/B comparison. Normal players never see it.
-exports.BUILD_LABEL = 'v0.37.2-single-session';
-function resolveMirrorOverride(raw) {
-    const k = String(raw || '').toLowerCase();
-    if (k === 'true' || k === 'real')
-        return 'TRUE';
-    if (k === 'shuffled' || k === 'shuffle' || k === 'false')
-        return 'SHUFFLED';
-    return null;
-}
-function assignMirrorArm({ sessionId, override } = {}) {
-    const forced = resolveMirrorOverride(override);
-    if (forced)
-        return forced;
-    // Hash the session id, which is random per session and independent of the world.
-    let h = 2166136261 >>> 0;
-    const s = String(sessionId || '');
-    for (let i = 0; i < s.length; i++) {
-        h ^= s.charCodeAt(i);
-        h = Math.imul(h, 16777619) >>> 0;
+  // src/playtest.mjs
+  var PLAYTEST_SEEDS = {
+    natural: {
+      seed: null,
+      label: "Natural seed",
+      note: "A random world. What an ordinary player gets."
+    },
+    defeat: {
+      seed: "POL-003K",
+      label: "Forced early defeat",
+      note: "Most scripted styles lose the first election here, and every one of those runs finds a way back. Re-hunted for v0.37: the formative years leave players stronger, so no seed defeats every style any more."
+    },
+    close: {
+      seed: "POL-001J",
+      label: "Competitive",
+      note: "Across the shipped backgrounds and styles, only one run loses the first election; mayoral results span 15.7 points and one lands at 49.72%. Choices decide it."
+    },
+    strong: {
+      seed: "POL-001Q",
+      label: "Strong opponent",
+      note: "A true STRONG-rival world. Twelve of eighteen runs lose first, four still win the mayoralty, and four of the twelve defeated runs find a comeback."
     }
-    return (h % 1000) / 1000 < exports.SHUFFLE_RATE ? 'SHUFFLED' : 'TRUE';
-}
-function randomSessionId(rand = Math.random) {
-    let s = '';
-    for (let i = 0; i < 6; i++)
-        s += '0123456789ABCDEF'[Math.floor(rand() * 16)];
-    return 'PM_TEST_' + s;
-}
-// ── Session log ──
-// Local only. Never transmitted. Contains no identity of any kind.
-function newSession({ sessionId, seed, testMode, mirrorMode, startedAt }) {
+  };
+  function resolveTestMode(raw) {
+    const k = String(raw || "").toLowerCase();
+    return Object.prototype.hasOwnProperty.call(PLAYTEST_SEEDS, k) ? k : null;
+  }
+  var BUILD_LABEL = "v0.37.2-single-session";
+  function newSession({ sessionId, seed, testMode, mirrorMode, startedAt }) {
     return {
-        schema: 'political-mirror-playtest/1',
-        build: exports.BUILD_LABEL,
-        sessionId,
-        seed,
-        testMode: testMode || 'natural',
-        mirrorMode: mirrorMode || 'TRUE', // TRUE | SHUFFLED (Barnum control)
-        startedAt, // session boot
-        gameplayEndedAt: null, // the moment the Mini Mirror is first reached
-        gameplayMs: null, // career length — the number the guide judges game length by
-        surveyStartedAt: null, // first survey answer, or null if never started
-        surveyEndedAt: null,
-        surveyMs: null,
-        endedAt: null,
-        totalSessionMs: null,
-        playtimeMs: null, // DEPRECATED alias of totalSessionMs; kept for schema/1 readers
-        character: null,
-        decisions: [], // { beatId, kind, age, choiceId, label, msToDecide }
-        reads: [], // { beatId, age, credence, msToDecide }
-        elections: [], // { age, office, won, share, turnout, approval }
-        wildernessRoute: null,
-        chainsSeen: [], // { chain, file, outcome, tone, credenceAtSeed }
-        lockedOptionsSeen: [], // { beatId, choiceId, reason }
-        counterfactualOpened: false,
-        // ── ability system (v0.36) ──
-        background: null, // STAFF | CIVIC | PROF
-        abilityStart: null, // visible starting profile
-        abilityAptitude: null, // HIDDEN natural ranges — developer analysis only, never rendered
-        abilityBands: null, // which ability drew signature / strong / ordinary / narrow
-        abilityFinal: null,
-        abilityXP: null, // use-based experience accumulated
-        developments: [], // { reason, budget, primary, secondary, before, after, gained }
-        abilityOptionsSeen: [], // { beatId, choiceId, requires, met }  — aspiration vs frustration
-        executionChecks: [], // { beatId, choiceId, ability, value, grade }
-        strategyInfoUnlocked: false,
-        mirrorReached: false,
-        mirror: null, // { resolution, components, dimensions:[{key,label,n,value,conf}] }
-        survey: null,
+      schema: "political-mirror-playtest/1",
+      build: BUILD_LABEL,
+      sessionId,
+      seed,
+      testMode: testMode || "natural",
+      mirrorMode: mirrorMode || "TRUE",
+      // TRUE | SHUFFLED (Barnum control)
+      startedAt,
+      // session boot
+      gameplayEndedAt: null,
+      // the moment the Mini Mirror is first reached
+      gameplayMs: null,
+      // career length — the number the guide judges game length by
+      surveyStartedAt: null,
+      // first survey answer, or null if never started
+      surveyEndedAt: null,
+      surveyMs: null,
+      endedAt: null,
+      totalSessionMs: null,
+      playtimeMs: null,
+      // DEPRECATED alias of totalSessionMs; kept for schema/1 readers
+      character: null,
+      decisions: [],
+      // { beatId, kind, age, choiceId, label, msToDecide }
+      reads: [],
+      // { beatId, age, credence, msToDecide }
+      elections: [],
+      // { age, office, won, share, turnout, approval }
+      wildernessRoute: null,
+      chainsSeen: [],
+      // { chain, file, outcome, tone, credenceAtSeed }
+      lockedOptionsSeen: [],
+      // { beatId, choiceId, reason }
+      counterfactualOpened: false,
+      // ── ability system (v0.36) ──
+      background: null,
+      // STAFF | CIVIC | PROF
+      abilityStart: null,
+      // visible starting profile
+      abilityAptitude: null,
+      // HIDDEN natural ranges — developer analysis only, never rendered
+      abilityBands: null,
+      // which ability drew signature / strong / ordinary / narrow
+      abilityFinal: null,
+      abilityXP: null,
+      // use-based experience accumulated
+      developments: [],
+      // { reason, budget, primary, secondary, before, after, gained }
+      abilityOptionsSeen: [],
+      // { beatId, choiceId, requires, met }  — aspiration vs frustration
+      executionChecks: [],
+      // { beatId, choiceId, ability, value, grade }
+      strategyInfoUnlocked: false,
+      mirrorReached: false,
+      mirror: null,
+      // { resolution, components, dimensions:[{key,label,n,value,conf}] }
+      survey: null
     };
-}
-function logDecision(s, d) { s.decisions.push(d); return s; }
-function logRead(s, r) { s.reads.push(r); return s; }
-function logLocked(s, l) {
+  }
+  function logDecision(s, d) {
+    s.decisions.push(d);
+    return s;
+  }
+  function logRead(s, r) {
+    s.reads.push(r);
+    return s;
+  }
+  function logLocked(s, l) {
     if (!s.lockedOptionsSeen.some((x) => x.beatId === l.beatId && x.choiceId === l.choiceId))
-        s.lockedOptionsSeen.push(l);
+      s.lockedOptionsSeen.push(l);
     return s;
-}
-function logDevelopment(s, d) { if (s)
-    s.developments.push(d); return s; }
-function logExecution(s, e) { if (s)
-    s.executionChecks.push(e); return s; }
-function logAbilityOption(s, o) {
-    if (!s)
-        return s;
+  }
+  function logDevelopment(s, d) {
+    if (s) s.developments.push(d);
+    return s;
+  }
+  function logAbilityOption(s, o) {
+    if (!s) return s;
     if (!s.abilityOptionsSeen.some((x) => x.beatId === o.beatId && x.choiceId === o.choiceId))
-        s.abilityOptionsSeen.push(o);
+      s.abilityOptionsSeen.push(o);
     return s;
-}
-// Captured at character creation. The aptitude block is the one thing in this file the
-// player must never see; it exists so we can ask afterwards whether a tester's sense of
-// "this comes naturally" matched what the engine actually rolled.
-function recordAbilityStart(s, background, ab) {
-    if (!s)
-        return s;
+  }
+  function recordAbilityStart(s, background, ab) {
+    if (!s) return s;
     s.background = background;
     s.abilityStart = { ...ab.value };
     s.abilityAptitude = { ...ab.aptitude };
     s.abilityBands = { ...ab.bands };
     return s;
-}
-function recordAbilityFinal(s, ab) {
-    if (!s)
-        return s;
+  }
+  function recordAbilityFinal(s, ab) {
+    if (!s) return s;
     s.abilityFinal = { ...ab.value };
     s.abilityXP = { ...ab.xp };
     return s;
-}
-function snapshotMirror(analysis, res) {
+  }
+  function snapshotMirror(analysis, res) {
     const dims = [];
     for (const [key, d] of Object.entries(analysis.voter))
-        dims.push({ side: 'voter', key, label: d.label, n: d.n, value: d.value, conf: d.conf });
+      dims.push({ side: "voter", key, label: d.label, n: d.n, value: d.value, conf: d.conf });
     for (const [key, d] of Object.entries(analysis.political))
-        dims.push({ side: 'political', key, label: d.label, n: d.n, value: d.value, conf: d.conf });
+      dims.push({ side: "political", key, label: d.label, n: d.n, value: d.value, conf: d.conf });
     return { resolution: res.resolution, components: res.components, missing: res.missing, dimensions: dims };
-}
-// Gameplay ends when the career does — the moment the Mirror is reached. Everything
-// after that is reading the result and answering questions, which must not be counted
-// as evidence that the game itself runs long.
-function markGameplayEnd(s, at) {
-    if (!s || s.gameplayEndedAt !== null)
-        return s;
+  }
+  function markGameplayEnd(s, at) {
+    if (!s || s.gameplayEndedAt !== null) return s;
     s.gameplayEndedAt = at;
     s.gameplayMs = at - s.startedAt;
     return s;
-}
-function markSurveyStart(s, at) {
-    if (!s || s.surveyStartedAt !== null)
-        return s;
+  }
+  function markSurveyStart(s, at) {
+    if (!s || s.surveyStartedAt !== null) return s;
     s.surveyStartedAt = at;
     return s;
-}
-function finishSession(s, endedAt) {
+  }
+  function finishSession(s, endedAt) {
     s.endedAt = endedAt;
-    if (s.gameplayEndedAt === null)
-        markGameplayEnd(s, endedAt);
+    if (s.gameplayEndedAt === null) markGameplayEnd(s, endedAt);
     s.surveyEndedAt = s.surveyStartedAt === null ? null : endedAt;
     s.surveyMs = s.surveyStartedAt === null ? null : endedAt - s.surveyStartedAt;
     s.totalSessionMs = endedAt - s.startedAt;
-    s.playtimeMs = s.totalSessionMs; // deprecated alias
+    s.playtimeMs = s.totalSessionMs;
     return s;
-}
-// ── Barnum control ──
-// A plausible Mirror from a different, fixed run. Presentation must be identical to a
-// real one; only this flag distinguishes them, and only in the log. This is a sanity
-// check, not an experiment: if a shuffled Mirror reads as accurately as a real one,
-// the Mirror is too generic to be saying anything about the player.
-exports.SHUFFLED_PROFILE = {
+  }
+  var SHUFFLED_PROFILE = {
     voter: {
-        evidenceSensitivity: { label: 'Evidence Sensitivity', n: 8, value: 0.52, conf: 0.61,
-            detail: 'slope 0.52 across 8 judgments', cases: [] },
-        partisanSymmetry: { label: 'Partisan Symmetry', n: 1, value: 0.25, conf: 0.38, cases: [] },
-        crowdSusceptibility: { label: 'Crowd Susceptibility', n: 1, value: 0.20, conf: 0.38, cases: [] },
-        deniabilitySusceptibility: { label: 'Deniability Susceptibility', n: 1, value: -0.20, conf: 0.38, cases: [] },
+      evidenceSensitivity: {
+        label: "Evidence Sensitivity",
+        n: 8,
+        value: 0.52,
+        conf: 0.61,
+        detail: "slope 0.52 across 8 judgments",
+        cases: []
+      },
+      partisanSymmetry: { label: "Partisan Symmetry", n: 1, value: 0.25, conf: 0.38, cases: [] },
+      crowdSusceptibility: { label: "Crowd Susceptibility", n: 1, value: 0.2, conf: 0.38, cases: [] },
+      deniabilitySusceptibility: { label: "Deniability Susceptibility", n: 1, value: -0.2, conf: 0.38, cases: [] }
     },
     political: {
-        accountability: { label: 'Accountability', n: 2, value: 0.35, conf: 0.40 },
-        institutionalRestraint: { label: 'Institutional Restraint', n: 3, value: 0.45, conf: 0.51 },
-        powerOrientation: { label: 'Power / Survival Orientation', n: 9, value: 0.28, conf: 0.85 },
+      accountability: { label: "Accountability", n: 2, value: 0.35, conf: 0.4 },
+      institutionalRestraint: { label: "Institutional Restraint", n: 3, value: 0.45, conf: 0.51 },
+      powerOrientation: { label: "Power / Survival Orientation", n: 9, value: 0.28, conf: 0.85 }
     },
-    nReads: 8, nMoves: 9,
-};
-exports.SHUFFLED_RESOLUTION = {
+    nReads: 8,
+    nMoves: 9
+  };
+  var SHUFFLED_RESOLUTION = {
     resolution: 0.64,
     components: { volume: 0.57, coverage: 0.67, replication: 0.5, consistency: 0.52 },
-    missing: ['deniable'],
-};
-// ── Post-game survey ──
-exports.SURVEY = [
-    { id: 'q1', type: 'scale7', q: 'How much did you want to keep playing until the end?',
-        lo: 'Wanted to stop', hi: 'Wanted to keep going' },
-    { id: 'q2', type: 'text', q: 'At what point, if any, did the game start to feel repetitive?' },
-    { id: 'q3', type: 'text', q: 'Which decision was hardest to make?' },
-    { id: 'q4', type: 'yesno_text', q: 'Did any choice feel like it had an obvious "correct answer"?',
-        followUp: 'Which one?' },
-    { id: 'q5', type: 'choice', q: 'When an old case returned years later, did you remember the original event?',
-        options: ['Yes, clearly', 'Vaguely', 'No'] },
-    { id: 'q6', type: 'choice', q: 'If you lost an election: did losing make you want to continue?',
-        options: ['More', 'Same', 'Less', 'Not applicable'] },
-    { id: 'q7', type: 'choice', q: 'How did the locked resource options feel?',
-        options: ['A meaningful constraint', 'Frustrating', 'Confusing', 'Barely noticed them'] },
-    { id: 'q8', type: 'scale7', q: 'Did the Mini Mirror feel specific to your choices?',
-        lo: 'Could be anyone', hi: 'Specifically me' },
-    { id: 'q9', type: 'text', q: 'Did anything in the Mirror surprise you?' },
-    { id: 'q10', type: 'scale7_na', q: 'Did the Counterfactual Audit help you understand why voters reacted differently?',
-        lo: 'Not at all', hi: 'A lot', na: 'I did not open it' },
-    { id: 'q11', type: 'scale7', q: 'After playing, how interested are you in living another political life?',
-        lo: 'Not at all', hi: 'Very' },
-    { id: 'q12', type: 'text', q: 'What single thing would make you want to play again?' },
+    missing: ["deniable"]
+  };
+  var SURVEY = [
+    {
+      id: "q1",
+      type: "scale7",
+      q: "How much did you want to keep playing until the end?",
+      lo: "Wanted to stop",
+      hi: "Wanted to keep going"
+    },
+    { id: "q2", type: "text", q: "At what point, if any, did the game start to feel repetitive?" },
+    { id: "q3", type: "text", q: "Which decision was hardest to make?" },
+    {
+      id: "q4",
+      type: "yesno_text",
+      q: 'Did any choice feel like it had an obvious "correct answer"?',
+      followUp: "Which one?"
+    },
+    {
+      id: "q5",
+      type: "choice",
+      q: "When an old case returned years later, did you remember the original event?",
+      options: ["Yes, clearly", "Vaguely", "No"]
+    },
+    {
+      id: "q6",
+      type: "choice",
+      q: "If you lost an election: did losing make you want to continue?",
+      options: ["More", "Same", "Less", "Not applicable"]
+    },
+    {
+      id: "q7",
+      type: "choice",
+      q: "How did the locked resource options feel?",
+      options: ["A meaningful constraint", "Frustrating", "Confusing", "Barely noticed them"]
+    },
+    {
+      id: "q8",
+      type: "scale7",
+      q: "Did the Mini Mirror feel specific to your choices?",
+      lo: "Could be anyone",
+      hi: "Specifically me"
+    },
+    { id: "q9", type: "text", q: "Did anything in the Mirror surprise you?" },
+    {
+      id: "q10",
+      type: "scale7_na",
+      q: "Did the Counterfactual Audit help you understand why voters reacted differently?",
+      lo: "Not at all",
+      hi: "A lot",
+      na: "I did not open it"
+    },
+    {
+      id: "q11",
+      type: "scale7",
+      q: "After playing, how interested are you in living another political life?",
+      lo: "Not at all",
+      hi: "Very"
+    },
+    { id: "q12", type: "text", q: "What single thing would make you want to play again?" },
     // ── ability section (v0.36 build only) ──
-    { id: 'q13', type: 'scale7', section: 'ability',
-        q: 'Did developing your politician make the game feel more like a political life?',
-        lo: 'Not at all', hi: 'Very much' },
-    { id: 'q14', type: 'choice', section: 'ability',
-        q: 'Did the development choices feel like career decisions, or like a stat menu?',
-        options: ['Strongly like career decisions', 'Somewhat like career decisions', 'Mixed',
-            'Somewhat like stat allocation', 'Strongly like stat allocation'] },
-    { id: 'q15', type: 'multitext', section: 'ability',
-        q: 'Without looking back: what do you think each of these actually does?',
-        fields: ['Public Communication', 'Policy & Governance', 'Organization', 'Negotiation', 'Political Strategy'] },
-    { id: 'q16', type: 'choice', section: 'ability', q: 'Which ability felt most useful in your run?',
-        options: ['Public Communication', 'Policy & Governance', 'Organization', 'Negotiation', 'Political Strategy', 'None stood out'] },
-    { id: 'q17', type: 'choice', section: 'ability', q: 'Which ability felt least noticeable?',
-        options: ['Public Communication', 'Policy & Governance', 'Organization', 'Negotiation', 'Political Strategy', 'They all registered'] },
-    { id: 'q18', type: 'scale7', section: 'ability',
-        q: 'Did you understand why some development choices produced more growth than others?',
-        lo: 'No idea', hi: 'Completely clear' },
-    { id: 'q19', type: 'choice', section: 'ability',
-        q: 'Some things came more naturally to your politician than others. That felt:',
-        options: ['Interesting', 'Confusing', 'Unfair', 'Barely noticed it', 'Not sure'] },
-    { id: 'q20', type: 'yesno_text', section: 'ability',
-        q: 'Did any option you could not take make you think "I wish I had developed differently"?',
-        followUp: 'Which moment?' },
-    { id: 'q21', type: 'scale7_text', section: 'ability',
-        q: 'Did the development screen ever interrupt the feeling of living a political life?',
-        lo: 'Never', hi: 'Constantly', followUp: 'Anything you want to add?' },
-    { id: 'q22', type: 'scale7', section: 'ability',
-        q: 'If you played again, would you deliberately build a different kind of politician?',
-        lo: 'Same again', hi: 'Definitely different' },
-];
-exports.ABILITY_SURVEY_IDS = exports.SURVEY.filter((q) => q.section === 'ability').map((q) => q.id);
-function exportFilename(sessionId) { return sessionId + '.json'; }
+    {
+      id: "q13",
+      type: "scale7",
+      section: "ability",
+      q: "Did developing your politician make the game feel more like a political life?",
+      lo: "Not at all",
+      hi: "Very much"
+    },
+    {
+      id: "q14",
+      type: "choice",
+      section: "ability",
+      q: "Did the development choices feel like career decisions, or like a stat menu?",
+      options: [
+        "Strongly like career decisions",
+        "Somewhat like career decisions",
+        "Mixed",
+        "Somewhat like stat allocation",
+        "Strongly like stat allocation"
+      ]
+    },
+    {
+      id: "q15",
+      type: "multitext",
+      section: "ability",
+      q: "Without looking back: what do you think each of these actually does?",
+      fields: ["Public Communication", "Policy & Governance", "Organization", "Negotiation", "Political Strategy"]
+    },
+    {
+      id: "q16",
+      type: "choice",
+      section: "ability",
+      q: "Which ability felt most useful in your run?",
+      options: ["Public Communication", "Policy & Governance", "Organization", "Negotiation", "Political Strategy", "None stood out"]
+    },
+    {
+      id: "q17",
+      type: "choice",
+      section: "ability",
+      q: "Which ability felt least noticeable?",
+      options: ["Public Communication", "Policy & Governance", "Organization", "Negotiation", "Political Strategy", "They all registered"]
+    },
+    {
+      id: "q18",
+      type: "scale7",
+      section: "ability",
+      q: "Did you understand why some development choices produced more growth than others?",
+      lo: "No idea",
+      hi: "Completely clear"
+    },
+    {
+      id: "q19",
+      type: "choice",
+      section: "ability",
+      q: "Some things came more naturally to your politician than others. That felt:",
+      options: ["Interesting", "Confusing", "Unfair", "Barely noticed it", "Not sure"]
+    },
+    {
+      id: "q20",
+      type: "yesno_text",
+      section: "ability",
+      q: 'Did any option you could not take make you think "I wish I had developed differently"?',
+      followUp: "Which moment?"
+    },
+    {
+      id: "q21",
+      type: "scale7_text",
+      section: "ability",
+      q: "Did the development screen ever interrupt the feeling of living a political life?",
+      lo: "Never",
+      hi: "Constantly",
+      followUp: "Anything you want to add?"
+    },
+    {
+      id: "q22",
+      type: "scale7",
+      section: "ability",
+      q: "If you played again, would you deliberately build a different kind of politician?",
+      lo: "Same again",
+      hi: "Definitely different"
+    }
+  ];
+  var ABILITY_SURVEY_IDS = SURVEY.filter((q) => q.section === "ability").map((q) => q.id);
 
-}],
-"src/ui-theme.mjs": [{},function(module,exports,require){
-"use strict";
-// Political Mirror — presentation tokens and shared style objects.
-//
-// PRESENTATION ONLY. This module never imports, reads, writes or derives canonical
-// session state, and nothing in it may be given gameplay meaning. It exists so the
-// renderer can name a colour or a spacing without hard-coding a literal in twenty
-// places, and so the token names in src/ui.jsx match the custom properties declared
-// by the page shell in static/index.html.
-//
-// Values resolve through CSS custom properties rather than literals, so a container
-// carrying `pm-tone-ink` (the Private Read) or `pm-tone-out` (the wilderness) inverts
-// or desaturates every descendant without a single conditional in the view.
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.blocDot = exports.caret = exports.movementTone = exports.figureValue = exports.rowFlex = exports.column = exports.ruledRow = exports.hairlineSoft = exports.hairline = exports.card = exports.label = exports.T = void 0;
-exports.T = {
-    paper: 'var(--pm-paper)',
-    sheet: 'var(--pm-sheet)',
-    surface: 'var(--pm-surface)',
-    head: 'var(--pm-head)',
-    ink: 'var(--pm-ink)',
-    ink2: 'var(--pm-ink-2)',
-    ink3: 'var(--pm-ink-3)',
-    chrome: 'var(--pm-chrome)',
-    rule: 'var(--pm-rule)',
-    hair: 'var(--pm-hair)',
-    inset: 'var(--pm-inset)',
-    gold: 'var(--pm-gold)',
-    goldInk: 'var(--pm-gold-ink)',
-    goldTint: 'var(--pm-gold-tint)',
-    favour: 'var(--pm-favour)',
-    against: 'var(--pm-against)',
-    civ: 'var(--pm-civ)',
-    ren: 'var(--pm-ren)',
-    display: 'var(--pm-display)',
-    body: 'var(--pm-body)',
-};
-// Uppercase letterspaced label. `size` only ever gets smaller on dense chrome.
-const label = (size = 11, tone = exports.T.chrome) => ({
+  // src/game-session.mjs
+  var clamp2 = (value, low, high) => Math.max(low, Math.min(high, value));
+  var SESSION_CONFIG = Object.freeze({
+    id: "pm-session-config",
+    version: "0.37.2",
+    startAge: 23,
+    agentCount: 700,
+    hashActions: true,
+    liabilityThreshold: 2.4,
+    reckoningFundsDrain: 0.12,
+    reckoningStandingDrain: 0.12
+  });
+  var PHASES = Object.freeze({
+    TITLE: "TITLE",
+    STORY_CHOICE: "STORY_CHOICE",
+    PRIVATE_READ: "PRIVATE_READ",
+    PUBLIC_MOVE: "PUBLIC_MOVE",
+    REACTION: "REACTION",
+    CHAIN_RETURN: "CHAIN_RETURN",
+    DEVELOPMENT_FOCUS: "DEVELOPMENT_FOCUS",
+    DEVELOPMENT_RESULT: "DEVELOPMENT_RESULT",
+    WILDERNESS_CHOICE: "WILDERNESS_CHOICE",
+    WILDERNESS_RESULT: "WILDERNESS_RESULT",
+    ELECTION_RESULT: "ELECTION_RESULT",
+    CAREER_SUMMARY: "CAREER_SUMMARY",
+    MINI_MIRROR: "MINI_MIRROR"
+  });
+  var ACTIONS = Object.freeze({
+    START_GAME: "START_GAME",
+    SUBMIT_PRIVATE_READ: "SUBMIT_PRIVATE_READ",
+    SELECT_PUBLIC_MOVE: "SELECT_PUBLIC_MOVE",
+    SELECT_WILDERNESS_ROUTE: "SELECT_WILDERNESS_ROUTE",
+    SELECT_DEVELOPMENT_FOCUS: "SELECT_DEVELOPMENT_FOCUS",
+    CONTINUE_REACTION: "CONTINUE_REACTION",
+    CONTINUE_CHAIN: "CONTINUE_CHAIN",
+    CONTINUE_ELECTION: "CONTINUE_ELECTION",
+    CONTINUE_DEVELOPMENT_RESULT: "CONTINUE_DEVELOPMENT_RESULT",
+    CONTINUE_WILDERNESS: "CONTINUE_WILDERNESS",
+    VIEW_MIRROR: "VIEW_MIRROR"
+  });
+  var GameSessionError = class extends Error {
+    constructor(message, code = "INVALID_ACTION") {
+      super(message);
+      this.name = "GameSessionError";
+      this.code = code;
+    }
+  };
+  var DEFAULT_PLAYER = Object.freeze({
+    name: "A. Reyes",
+    bloc: "CIV",
+    region: "Harrow Vale",
+    route: "CIVIC"
+  });
+  function clonePlain(value) {
+    if (value === void 0) return void 0;
+    return structuredClone(value);
+  }
+  function finite(value, label2) {
+    if (!Number.isFinite(value)) throw new GameSessionError(`${label2} must be finite`, "INVALID_CONFIG");
+    return value;
+  }
+  function resolveCanonicalSeed(seed, testMode) {
+    const mode = resolveTestMode(testMode);
+    const forced = mode ? PLAYTEST_SEEDS[mode].seed : null;
+    return String(forced || seed || "POL-M7GX4").trim().toUpperCase() || "POL-M7GX4";
+  }
+  function buildWorld(seed, player, agentCount = SESSION_CONFIG.agentCount, config = SESSION_CONFIG) {
+    const route = ROUTES.find((candidate) => candidate.id === player.route);
+    if (!route) throw new GameSessionError(`unknown background route: ${player.route}`, "INVALID_CONFIG");
+    const root = seedFromString(seed);
+    return {
+      root,
+      route,
+      n: finite(agentCount, "agentCount"),
+      worldSeed: deriveSeed(root, "world"),
+      eventSeed: deriveSeed(root, "events"),
+      actorSeed: deriveSeed(root, "actors"),
+      playerBloc: player.bloc,
+      rivalBloc: OPP(player.bloc),
+      startMu: route.start.mu,
+      startTau: route.start.tau,
+      startAge: config.startAge
+    };
+  }
+  function previewStartingProfile({
+    seed = "POL-M7GX4",
+    player = DEFAULT_PLAYER,
+    testMode = null
+  } = {}) {
+    const canonicalPlayer = { ...DEFAULT_PLAYER, ...player };
+    const canonicalSeed = resolveCanonicalSeed(seed, testMode);
+    const world = buildWorld(canonicalSeed, canonicalPlayer, SESSION_CONFIG.agentCount, SESSION_CONFIG);
+    return makeAbilities(makeRng(deriveSeed(world.worldSeed, "abilities")), canonicalPlayer.route);
+  }
+  function createGameSession({
+    seed = "POL-M7GX4",
+    player = DEFAULT_PLAYER,
+    agentCount = SESSION_CONFIG.agentCount,
+    testMode = null,
+    config = {}
+  } = {}) {
+    const mergedConfig = Object.freeze({ ...SESSION_CONFIG, ...config, startAge: 23 });
+    const canonicalPlayer = { ...DEFAULT_PLAYER, ...player };
+    if (!["CIV", "REN"].includes(canonicalPlayer.bloc))
+      throw new GameSessionError(`unknown political bloc: ${canonicalPlayer.bloc}`, "INVALID_CONFIG");
+    if (!Number.isInteger(agentCount) || agentCount <= 0)
+      throw new GameSessionError("agentCount must be a positive integer", "INVALID_CONFIG");
+    return {
+      sessionVersion: "0.37.2",
+      config: mergedConfig,
+      requestedSeed: String(seed || ""),
+      seed: resolveCanonicalSeed(seed, testMode),
+      testMode: resolveTestMode(testMode),
+      player: canonicalPlayer,
+      agentCount,
+      phase: PHASES.TITLE,
+      complete: false,
+      started: false,
+      script: [],
+      beatIndex: 0,
+      currentBeatId: null,
+      world: null,
+      agents: null,
+      worldRng: null,
+      actorRng: null,
+      eventRng: null,
+      rivalArc: [],
+      rivalProfile: null,
+      rivalPush: null,
+      tape: makeTape(),
+      st: null,
+      pending: {},
+      resumeAfterDevelopment: null,
+      beatTrace: [],
+      eventTrace: [],
+      elections: [],
+      actionIndex: 0,
+      lastAction: null,
+      actionTranscript: [],
+      mirror: null
+    };
+  }
+  function currentBeat(session) {
+    return session.script[session.beatIndex] || null;
+  }
+  function requireStarted(session) {
+    if (!session.started || !session.st) throw new GameSessionError("game has not started", "NOT_STARTED");
+  }
+  function initWorld(session) {
+    const world = buildWorld(session.seed, session.player, session.agentCount, session.config);
+    const { agents, wr, tilt } = buildInitialWorld(world);
+    const actorRng = makeRng(world.actorSeed);
+    const tipTrue = wr.float() < 0.42;
+    world.errorFound = wr.float() < 0.45;
+    world.leakTraced = wr.float() < 0.38;
+    const rival = rollRival(wr);
+    const start = world.route.start;
+    const abilities = makeAbilities(makeRng(deriveSeed(world.worldSeed, "abilities")), world.route.id);
+    session.world = world;
+    session.agents = agents;
+    session.worldRng = wr;
+    session.actorRng = actorRng;
+    session.eventRng = makeRng(world.eventSeed);
+    session.rivalArc = rival.arc;
+    session.rivalProfile = rival.profile;
+    session.rivalPush = rival.push;
+    session.tape = makeTape();
+    session.script = SCRIPT(session.player);
+    session.beatIndex = 0;
+    session.currentBeatId = null;
+    session.st = {
+      abilities,
+      age: session.config.startAge,
+      office: null,
+      recognition: 0.5,
+      independence: 0.5,
+      out: null,
+      lastOutRoute: null,
+      wildYears: 0,
+      capital: start.capital,
+      funds: start.funds,
+      standing: start.standing,
+      world,
+      flags: {},
+      log: [],
+      history: [],
+      chains: {},
+      execs: [],
+      focusLog: [],
+      reactions: [],
+      liability: 0,
+      reckoning: null,
+      tipTrue,
+      rivalProfile: rival.profile.id,
+      tilt
+    };
+    session.started = true;
+  }
+  function traceEntry(session, beat, whenResult) {
+    const entry = {
+      beatIndex: session.beatIndex,
+      beatId: beat.id,
+      kind: beat.kind,
+      authoredAge: beat.age,
+      ageBefore: session.st.age,
+      whenResult,
+      skipped: !whenResult,
+      privateReadPresented: false,
+      publicMovePresented: false,
+      presentedChoices: [],
+      eventsFired: [],
+      nextPhase: null
+    };
+    session.beatTrace.push(entry);
+    return entry;
+  }
+  function activeTrace(session) {
+    for (let i = session.beatTrace.length - 1; i >= 0; i--) {
+      if (session.beatTrace[i].beatIndex === session.beatIndex) return session.beatTrace[i];
+    }
+    return null;
+  }
+  function fireEvent(session, event2, age, seedActor = null, label2 = null) {
+    const full = { ...event2, __age: age, __seedActor: seedActor, __label: label2 };
+    if (seedActor) seedBeliefs(session.agents, event2.actorId, seedActor[0], seedActor[1], session.actorRng);
+    tapeEvent(session.tape, full);
+    const reaction = applyEvent(session.agents, event2, session.eventRng, session.player.bloc);
+    const record = {
+      index: session.eventTrace.length,
+      beatId: currentBeat(session)?.id || null,
+      age,
+      actorId: event2.actorId,
+      trait: event2.trait || "integrity",
+      implication: event2.implication,
+      label: label2
+    };
+    session.eventTrace.push(record);
+    session.st.reactions.push({ ...record, delta: reaction.delta });
+    const trace = activeTrace(session);
+    if (trace) trace.eventsFired.push(record.index);
+    return reaction;
+  }
+  function advanceAgeTo(session, age) {
+    if (age < session.st.age)
+      throw new GameSessionError(`age cannot move backward (${session.st.age} -> ${age})`, "AGE_REGRESSION");
+    if (age > session.st.age) {
+      const years = age - session.st.age;
+      ageElectorate(session.agents, years);
+      tapeAge(session.tape, age, years, `age ${session.st.age} to ${age}`, "timeline");
+      session.st.age = age;
+    }
+    while (session.rivalArc.length && session.rivalArc[0].age <= session.st.age) {
+      const arc = session.rivalArc.shift();
+      for (const actorId of ["RIVAL1", "RIVAL2"]) {
+        fireEvent(session, {
+          actorId,
+          implication: arc.implication,
+          strength: 0.9,
+          reliability: 0.9,
+          diagnosticity: 0.8,
+          deniability: 0,
+          trait: arc.trait,
+          targetSide: "OPPOSING_SIDE",
+          sourceAlignment: "NEUTRAL",
+          crowd: null,
+          mediaReach: 0.95
+        }, arc.age, null, `rival ${arc.trait} arc`);
+      }
+    }
+  }
+  function finishBeat(session) {
+    const trace = activeTrace(session);
+    if (trace) trace.nextPhase = "ADVANCE";
+    session.beatIndex += 1;
+    session.currentBeatId = null;
+    session.pending = {};
+    session.resumeAfterDevelopment = null;
+    return advanceToNextInteraction(session);
+  }
+  function scheduleDevelopment(session, grant, resume) {
+    grantPoints(session.st.abilities, grant.n, grant.reason);
+    session.pending.developmentGrant = clonePlain(grant);
+    session.pending.developmentResult = null;
+    session.resumeAfterDevelopment = resume;
+    session.phase = PHASES.DEVELOPMENT_FOCUS;
+  }
+  function resolveElection(session, beat) {
+    if (beat.tier === 2 && !session.st.flags.RECKONED) {
+      session.st.flags.RECKONED = true;
+      const reckoning = liabilityReckoning(
+        session.st.liability || 0,
+        session.config.liabilityThreshold
+      );
+      if (reckoning) {
+        session.st.reckoning = reckoning.magnitude;
+        session.st.funds = Math.max(0, Math.round(session.st.funds * (1 - session.config.reckoningFundsDrain * reckoning.magnitude)));
+        session.st.standing = Math.max(0, Math.round(session.st.standing * (1 - session.config.reckoningStandingDrain * reckoning.magnitude)));
+        fireEvent(session, { actorId: "PLAYER", ...reckoning.signal }, beat.age, null, "The pattern");
+      }
+    }
+    const electionWorld = {
+      rivalPush: session.rivalPush,
+      rivalProfileId: session.rivalProfile.id,
+      playerBloc: session.player.bloc,
+      rivalBloc: OPP(session.player.bloc),
+      seedFor: (label2) => deriveSeed(session.world.root, label2)
+    };
+    const { spec, res, won } = holdElection(
+      session.agents,
+      session.st,
+      beat,
+      electionWorld,
+      makeRng
+    );
+    tapeElection(session.tape, spec);
+    session.st.office = won ? beat.office : null;
+    const result = {
+      age: beat.age,
+      office: beat.office,
+      won,
+      share: res.shares.PLAYER,
+      turnout: res.turnout,
+      approval: approvalOf(session.agents, "PLAYER"),
+      winner: res.winner,
+      tally: clonePlain(res.tally),
+      shares: clonePlain(res.shares),
+      spec: clonePlain(spec)
+    };
+    session.elections.push(result);
+    session.st.history.push({
+      age: beat.age,
+      kind: "election",
+      office: beat.office,
+      won,
+      share: result.share,
+      turnout: result.turnout,
+      approval: result.approval
+    });
+    session.pending.election = result;
+    if (beat.tier === 1) {
+      const campaign = won ? CAMPAIGN_XP.WON : CAMPAIGN_XP.LOST;
+      addExperience(session.st.abilities, campaign.tags, campaign.label);
+      scheduleDevelopment(
+        session,
+        DP_GRANTS.FIRST_CAMPAIGN,
+        { type: "PHASE", phase: PHASES.ELECTION_RESULT }
+      );
+    } else {
+      session.phase = PHASES.ELECTION_RESULT;
+    }
+  }
+  function resolveChain(session, beat) {
+    const spec = CHAINS[beat.chain];
+    const read2 = session.st.log.find((entry) => entry.kind === "read" && entry.eventId === spec.seedId);
+    const move = session.st.log.find((entry) => entry.kind === "move" && entry.eventId === spec.seedId);
+    if (!read2 && !move) return false;
+    const verdict = chainVerdict(spec.outcome, read2 ? read2.credence : null, move);
+    session.st.chains[beat.chain] = {
+      ...verdict,
+      seedId: spec.seedId,
+      credence: read2?.credence ?? null,
+      choiceId: move?.choiceId ?? null
+    };
+    const text = CHAIN_TEXT[beat.chain](verdict);
+    let reaction = null;
+    if (verdict.signal) {
+      reaction = fireEvent(
+        session,
+        { actorId: "PLAYER", ...verdict.signal },
+        beat.age,
+        null,
+        `the ${beat.chain.toLowerCase()} file resurfacing`
+      );
+    }
+    session.pending.chain = {
+      chain: beat.chain,
+      ...text,
+      verdictData: verdict,
+      recall: chainRecall(spec, read2 ? read2.credence : null, move),
+      said: read2 ? LADDER[0][read2.credence] : null,
+      did: move?.label ?? null,
+      seedTitle: read2?.title || move?.title || null,
+      reaction
+    };
+    session.phase = PHASES.CHAIN_RETURN;
+    return true;
+  }
+  function resolveWilderness(session, beat) {
+    const route = session.st.out;
+    if (!route) return false;
+    session.st.lastOutRoute = route.route;
+    session.st.wildYears += 2;
+    if (route.fade > 0) {
+      ageElectorate(session.agents, route.fade);
+      tapeAge(session.tape, beat.age, route.fade, `${route.route} wilderness fade`);
+    }
+    if (route.local) session.st.capital += 2;
+    if (route.route === "STAFF") session.st.standing += 2;
+    if (route.route === "PROFESSIONAL") session.st.funds += 3;
+    if (route.route === "MEDIA") {
+      session.st.recognition = clamp2(session.st.recognition + 0.08, 0, 1);
+      session.st.flags.IMAGE_HARDENED = true;
+    }
+    const payoff = WILDERNESS_PAYOFF[route.route];
+    const reaction = payoff ? fireEvent(session, {
+      actorId: "PLAYER",
+      ...payoff,
+      deniability: 0,
+      targetSide: "PLAYER_SIDE",
+      sourceAlignment: "NEUTRAL",
+      crowd: null
+    }, beat.age, null, "your four years out") : null;
+    addExperience(
+      session.st.abilities,
+      route.route === "MEDIA" ? ["COMM"] : route.route === "STAFF" ? ["NEG"] : route.route === "LOCAL" ? ["ORG"] : ["STRAT"],
+      "Four years out of office"
+    );
+    session.st.history.push({ age: beat.age, kind: "wilderness", route: route.route });
+    session.pending.wilderness = {
+      route: route.route,
+      text: WILDERNESS_TEXT[route.route],
+      note: route.note,
+      fade: route.fade,
+      reaction
+    };
+    scheduleDevelopment(
+      session,
+      DP_GRANTS.WILDERNESS,
+      { type: "PHASE", phase: PHASES.WILDERNESS_RESULT }
+    );
+    return true;
+  }
+  function setPresentedPhase(session, trace, phase) {
+    session.phase = phase;
+    trace.nextPhase = phase;
+    if (phase === PHASES.PRIVATE_READ) trace.privateReadPresented = true;
+    if ([PHASES.PUBLIC_MOVE, PHASES.STORY_CHOICE, PHASES.WILDERNESS_CHOICE].includes(phase)) {
+      trace.publicMovePresented = true;
+      trace.presentedChoices = (currentBeat(session)?.choices || []).map((choice) => ({
+        id: choice.id,
+        ...choiceStatus(session, choice)
+      }));
+    }
+    return getCurrentInteraction(session);
+  }
+  function advanceToNextInteraction(session) {
+    requireStarted(session);
+    while (session.beatIndex < session.script.length) {
+      const beat = currentBeat(session);
+      session.currentBeatId = beat.id;
+      const whenResult = beat.when ? Boolean(beat.when(session.st)) : true;
+      const trace = traceEntry(session, beat, whenResult);
+      if (!whenResult) {
+        trace.nextPhase = "SKIPPED";
+        session.beatIndex += 1;
+        session.currentBeatId = null;
+        continue;
+      }
+      advanceAgeTo(session, beat.age);
+      if (beat.kind === "election") {
+        resolveElection(session, beat);
+        trace.nextPhase = session.phase;
+        return getCurrentInteraction(session);
+      }
+      if (beat.kind === "milestone") {
+        if (beat.grant && !session.st.flags[`MS_${beat.id}`]) {
+          session.st.flags[`MS_${beat.id}`] = true;
+          session.st.history.push({ age: beat.age, kind: "milestone", id: beat.id });
+          scheduleDevelopment(session, DP_GRANTS[beat.grant], { type: "ADVANCE" });
+          trace.nextPhase = session.phase;
+          return getCurrentInteraction(session);
+        }
+        trace.nextPhase = "AUTO_ADVANCE";
+        session.beatIndex += 1;
+        session.currentBeatId = null;
+        continue;
+      }
+      if (beat.kind === "wilderness") {
+        if (resolveWilderness(session, beat)) {
+          trace.nextPhase = session.phase;
+          return getCurrentInteraction(session);
+        }
+        trace.nextPhase = "AUTO_ADVANCE";
+        session.beatIndex += 1;
+        session.currentBeatId = null;
+        continue;
+      }
+      if (beat.kind === "chain") {
+        if (resolveChain(session, beat)) {
+          trace.nextPhase = session.phase;
+          return getCurrentInteraction(session);
+        }
+        trace.nextPhase = "AUTO_ADVANCE";
+        session.beatIndex += 1;
+        session.currentBeatId = null;
+        continue;
+      }
+      if (beat.kind === "consequence") {
+        const resolution = beat.resolve(session.st);
+        const reaction = fireEvent(
+          session,
+          { actorId: "PLAYER", ...resolution.event },
+          beat.age,
+          null,
+          beat.title
+        );
+        session.st.history.push({ age: beat.age, kind: "consequence", title: beat.title });
+        session.pending.reaction = { text: resolution.text, reaction, title: beat.title };
+        return setPresentedPhase(session, trace, PHASES.REACTION);
+      }
+      if (beat.kind === "fallout") {
+        const hard = Boolean(session.st.flags.TIP_ATTACK);
+        const implication = session.st.tipTrue ? hard ? 0.35 : 0.18 : hard ? -0.8 : -0.45;
+        session.st.flags.TIP_BACKFIRED = !session.st.tipTrue;
+        const reaction = fireEvent(session, {
+          actorId: "PLAYER",
+          implication,
+          strength: 0.8,
+          reliability: 0.9,
+          diagnosticity: 0.7,
+          deniability: 0,
+          trait: "integrity",
+          targetSide: "PLAYER_SIDE",
+          sourceAlignment: implication < 0 ? "OPPOSED" : "ALIGNED",
+          crowd: null,
+          mediaReach: 0.9,
+          salience: 0.4
+        }, beat.age, null, "the folder you used");
+        session.pending.reaction = {
+          title: beat.title || "The folder returns",
+          text: session.st.tipTrue ? "The foundation story holds up. Two reporters confirm the transfers independently, and the material you used turns out to have been true." : "The foundation story collapses eight days before the vote. The transfers were routine and documented, and the correction runs beside a photograph of you making the claim.",
+          reaction
+        };
+        return setPresentedPhase(session, trace, PHASES.REACTION);
+      }
+      if (beat.playerAllegation) {
+        session.pending.allegationReaction = fireEvent(
+          session,
+          { actorId: "PLAYER", ...beat.playerAllegation },
+          beat.age,
+          null,
+          beat.title
+        );
+      }
+      if (beat.kind === "judgment") return setPresentedPhase(session, trace, PHASES.PRIVATE_READ);
+      const phase = beat.id === "WILDERNESS" ? PHASES.WILDERNESS_CHOICE : PHASES.STORY_CHOICE;
+      return setPresentedPhase(session, trace, phase);
+    }
+    session.phase = PHASES.CAREER_SUMMARY;
+    session.currentBeatId = null;
+    session.pending = {};
+    return getCurrentInteraction(session);
+  }
+  function validateBeatAction(session, action) {
+    const beat = currentBeat(session);
+    if (!beat) throw new GameSessionError("there is no active beat", "INVALID_BEAT");
+    if (!action.beatId) throw new GameSessionError(`${action.type} requires beatId`, "INVALID_BEAT");
+    if (action.beatId !== beat.id) {
+      throw new GameSessionError(
+        `${action.type} targets beat ${action.beatId}, but current beat is ${beat.id}`,
+        "INVALID_BEAT"
+      );
+    }
+    return beat;
+  }
+  function choiceStatus(session, choice) {
+    if (!meets(session.st.abilities, choice.requires)) {
+      return { ok: false, reason: unmetReason(session.st.abilities, choice.requires), kind: "ABILITY" };
+    }
+    const resource = choiceAvailability(choice, session.st);
+    return resource.ok ? { ok: true } : { ...resource, kind: "RESOURCE" };
+  }
+  function applyPublicChoice(session, beat, choice) {
+    const status = choiceStatus(session, choice);
+    if (!status.ok) throw new GameSessionError(`choice ${choice.id} is locked: ${status.reason}`, "LOCKED_CHOICE");
+    session.st.log.push({
+      kind: "move",
+      eventId: beat.id,
+      title: beat.title,
+      label: choice.label,
+      choiceId: choice.id,
+      features: clonePlain(choice.features),
+      responsibility: Boolean(beat.responsibility),
+      institutional: Boolean(choice.institutional || beat.institutional),
+      temptation: Boolean(beat.temptation)
+    });
+    session.st.liability += choiceLiability(choice.features);
+    payCost(choice, session.st);
+    if (choice.out) {
+      session.st.out = clonePlain(choice.out);
+      session.st.recognition = clamp2(session.st.recognition + choice.out.recognition, 0, 1);
+      session.st.independence = clamp2(session.st.independence + choice.out.independence, 0, 1);
+    }
+    if (choice.career) {
+      session.st.recognition = clamp2(session.st.recognition + (choice.career.recognition || 0), 0, 1);
+      session.st.independence = clamp2(session.st.independence + (choice.career.independence || 0), 0, 1);
+    }
+    for (const [key, value] of Object.entries(choice.effect || {}))
+      session.st[key] = Math.max(0, (session.st[key] || 0) + value);
+    if (choice.flag) session.st.flags[choice.flag] = true;
+    if (choice.flag === "COMEBACK_RUN" || choice.flag === "COMEBACK_DECLINE") session.st.out = null;
+    if (choice.flag === "COMEBACK_RUN") {
+      session.st.office = "Ward Council";
+      session.st.flags.CAME_BACK = true;
+    }
+    if (beat.flag) session.st.flags[beat.flag] = true;
+    let execution = null;
+    if (choice.check) {
+      execution = check(
+        session.st.abilities,
+        choice.check.ability,
+        choice.check.dc,
+        makeRng(deriveSeed(session.world.worldSeed, `exec:${beat.id}:${choice.id}`)),
+        { pressure: beat.pressure || 0 }
+      );
+      session.st.execs.push({
+        beat: beat.id,
+        choiceId: choice.id,
+        ability: choice.check.ability,
+        value: session.st.abilities.value[choice.check.ability],
+        grade: execution.grade
+      });
+    }
+    addExperience(session.st.abilities, choice.xp || XP_TAGS[beat.id] || [], beat.title);
+    let reaction = null;
+    if (choice.signal) {
+      reaction = fireEvent(session, {
+        actorId: "PLAYER",
+        reliability: 0.9,
+        diagnosticity: 0.65,
+        deniability: 0,
+        targetSide: "PLAYER_SIDE",
+        sourceAlignment: "NEUTRAL",
+        crowd: null,
+        mediaReach: session.st.office ? 0.8 : 0.5,
+        ...choice.signal,
+        stakes: choice.stakes
+      }, beat.age, null, beat.title);
+    }
+    const executionScale = execution ? execution.scale : 1;
+    for (const signal of actionSignals(choice.features, {
+      scrutiny: session.st.office ? 0.85 : 0.45,
+      salience: beat.salience ?? (session.st.office ? 0.45 : 0.3),
+      stakes: choice.stakes
+    })) {
+      reaction = fireEvent(session, {
+        actorId: "PLAYER",
+        ...signal,
+        implication: clamp2(signal.implication * executionScale, -1, 1)
+      }, beat.age, null, beat.title);
+    }
+    if (execution && execution.grade !== "solid") {
+      const implication = { excellent: 0.42, poor: -0.3, botched: -0.55 }[execution.grade];
+      reaction = fireEvent(session, {
+        actorId: "PLAYER",
+        implication,
+        strength: 0.6,
+        reliability: 0.9,
+        diagnosticity: 0.6,
+        deniability: 0,
+        trait: "competence",
+        targetSide: "PLAYER_SIDE",
+        sourceAlignment: "NEUTRAL",
+        crowd: null,
+        mediaReach: session.st.office ? 0.7 : 0.45
+      }, beat.age, null, `${beat.title} (execution)`);
+    }
+    if ((choice.features?.transparency || 0) + (choice.features?.exploitation || 0) > 0.25) {
+      session.st.recognition = clamp2(session.st.recognition + recognitionGain(session.st.abilities, 0.012), 0, 1);
+    }
+    if (choice.hitsRival) {
+      fireEvent(session, {
+        actorId: beat.age >= 33 ? "RIVAL2" : "RIVAL1",
+        implication: -choice.hitsRival,
+        strength: 0.7,
+        reliability: 0.65,
+        diagnosticity: 0.7,
+        deniability: 0.3,
+        trait: "integrity",
+        targetSide: "OPPOSING_SIDE",
+        sourceAlignment: "ALIGNED",
+        crowd: null,
+        mediaReach: 0.85
+      }, beat.age, null, beat.title);
+    }
+    session.st.history.push({
+      age: beat.age,
+      kind: "choice",
+      id: beat.id,
+      title: beat.title,
+      choiceId: choice.id,
+      label: choice.label
+    });
+    const strategyNote = choice.strategyRead ? session.st.tipTrue ? "Your analyst works through the night. \u201CThe paperwork stands up. Two of these transfers are real and I can show you why.\u201D" : "Your analyst works through the night. \u201CThere is nothing underneath this. Somebody assembled it to look like something.\u201D" : null;
+    session.pending.reaction = reaction || strategyNote || execution ? { title: beat.title, reaction, execution: clonePlain(execution), strategyNote } : null;
+    if (beat.id === "PARTY_OFFER" && !session.st.flags.MIDCAREER_DP) {
+      session.st.flags.MIDCAREER_DP = true;
+      scheduleDevelopment(
+        session,
+        DP_GRANTS.MIDCAREER,
+        session.pending.reaction ? { type: "PHASE", phase: PHASES.REACTION } : { type: "ADVANCE" }
+      );
+      return;
+    }
+    if (session.pending.reaction) session.phase = PHASES.REACTION;
+    else finishBeat(session);
+  }
+  function submitRead(session, action) {
+    const beat = validateBeatAction(session, action);
+    if (!Number.isInteger(action.credence) || action.credence < 0 || action.credence > 3)
+      throw new GameSessionError("credence must be an integer from 0 to 3", "INVALID_PAYLOAD");
+    session.st.log.push({
+      kind: "read",
+      eventId: beat.id,
+      title: beat.title,
+      pairId: beat.pairId,
+      factor: beat.factor,
+      level: beat.level,
+      credence: action.credence,
+      chainSeed: beat.chainSeed,
+      ...clonePlain(beat.latents)
+    });
+    fireEvent(
+      session,
+      { actorId: `OTHER_${beat.id}`, ...beat.latents },
+      beat.age,
+      [0.5, 1.1],
+      beat.title
+    );
+    session.phase = PHASES.PUBLIC_MOVE;
+    const trace = activeTrace(session);
+    if (trace) {
+      trace.publicMovePresented = true;
+      trace.presentedChoices = (beat.choices || []).map((choice) => ({
+        id: choice.id,
+        ...choiceStatus(session, choice)
+      }));
+      trace.nextPhase = PHASES.PUBLIC_MOVE;
+    }
+  }
+  function chooseMove(session, action, expectedPhase) {
+    const beat = validateBeatAction(session, action);
+    if (session.phase !== expectedPhase)
+      throw new GameSessionError(`${action.type} is invalid during ${session.phase}`, "WRONG_PHASE");
+    const choice = beat.choices?.find((candidate) => candidate.id === action.choiceId);
+    if (!choice) throw new GameSessionError(`unknown choice ${action.choiceId} for ${beat.id}`, "INVALID_CHOICE");
+    applyPublicChoice(session, beat, choice);
+  }
+  function selectDevelopment(session, action) {
+    validateBeatAction(session, action);
+    if (!ABILITY_IDS.includes(action.primary) || !ABILITY_IDS.includes(action.secondary))
+      throw new GameSessionError("development focus requires two valid ability ids", "INVALID_PAYLOAD");
+    if (action.primary === action.secondary)
+      throw new GameSessionError("primary and secondary development focuses must differ", "INVALID_PAYLOAD");
+    const grant = session.pending.developmentGrant;
+    const before = { ...session.st.abilities.value };
+    const result = applyFocus(session.st.abilities, action.primary, action.secondary, grant.n);
+    session.st.abilities.dp = 0;
+    const record = {
+      reason: grant.reason,
+      budget: grant.n,
+      primary: action.primary,
+      secondary: action.secondary,
+      before,
+      after: { ...session.st.abilities.value },
+      result: clonePlain(result),
+      gained: (result.primary?.gained || 0) + (result.secondary?.gained || 0)
+    };
+    session.st.focusLog.push(record);
+    session.pending.developmentResult = record;
+    session.phase = PHASES.DEVELOPMENT_RESULT;
+  }
+  function resumeAfterDevelopment(session) {
+    const resume = session.resumeAfterDevelopment;
+    session.resumeAfterDevelopment = null;
+    session.pending.developmentGrant = null;
+    session.pending.developmentResult = null;
+    if (resume?.type === "PHASE") {
+      session.phase = resume.phase;
+      return;
+    }
+    finishBeat(session);
+  }
+  function assertPhase(session, expected, action) {
+    if (session.phase !== expected)
+      throw new GameSessionError(
+        `${action.type} is invalid during ${session.phase}; expected ${expected}`,
+        "WRONG_PHASE"
+      );
+  }
+  function canonicalAction(action) {
+    const copy = {};
+    for (const key of Object.keys(action).sort()) copy[key] = clonePlain(action[key]);
+    return copy;
+  }
+  function dispatchGameAction(session, action) {
+    if (!action || typeof action.type !== "string")
+      throw new GameSessionError("action.type is required", "INVALID_ACTION");
+    if (session.complete) throw new GameSessionError("session is already complete", "POST_COMPLETION");
+    const phaseBefore = session.phase;
+    switch (action.type) {
+      case ACTIONS.START_GAME:
+        if (session.started) throw new GameSessionError("START_GAME may only be submitted once", "DUPLICATE_ACTION");
+        assertPhase(session, PHASES.TITLE, action);
+        initWorld(session);
+        advanceToNextInteraction(session);
+        break;
+      case ACTIONS.SUBMIT_PRIVATE_READ:
+        assertPhase(session, PHASES.PRIVATE_READ, action);
+        submitRead(session, action);
+        break;
+      case ACTIONS.SELECT_PUBLIC_MOVE:
+        if (![PHASES.PUBLIC_MOVE, PHASES.STORY_CHOICE].includes(session.phase))
+          throw new GameSessionError(`${action.type} is invalid during ${session.phase}`, "WRONG_PHASE");
+        chooseMove(session, action, session.phase);
+        break;
+      case ACTIONS.SELECT_WILDERNESS_ROUTE:
+        chooseMove(session, action, PHASES.WILDERNESS_CHOICE);
+        break;
+      case ACTIONS.SELECT_DEVELOPMENT_FOCUS:
+        assertPhase(session, PHASES.DEVELOPMENT_FOCUS, action);
+        selectDevelopment(session, action);
+        break;
+      case ACTIONS.CONTINUE_DEVELOPMENT_RESULT:
+        assertPhase(session, PHASES.DEVELOPMENT_RESULT, action);
+        validateBeatAction(session, action);
+        resumeAfterDevelopment(session);
+        break;
+      case ACTIONS.CONTINUE_REACTION:
+        assertPhase(session, PHASES.REACTION, action);
+        validateBeatAction(session, action);
+        finishBeat(session);
+        break;
+      case ACTIONS.CONTINUE_CHAIN:
+        assertPhase(session, PHASES.CHAIN_RETURN, action);
+        validateBeatAction(session, action);
+        finishBeat(session);
+        break;
+      case ACTIONS.CONTINUE_ELECTION:
+        assertPhase(session, PHASES.ELECTION_RESULT, action);
+        validateBeatAction(session, action);
+        finishBeat(session);
+        break;
+      case ACTIONS.CONTINUE_WILDERNESS:
+        assertPhase(session, PHASES.WILDERNESS_RESULT, action);
+        validateBeatAction(session, action);
+        finishBeat(session);
+        break;
+      case ACTIONS.VIEW_MIRROR:
+        assertPhase(session, PHASES.CAREER_SUMMARY, action);
+        session.mirror = buildMirror(session);
+        session.phase = PHASES.MINI_MIRROR;
+        session.complete = true;
+        break;
+      default:
+        throw new GameSessionError(`unknown action type: ${action.type}`, "UNKNOWN_ACTION");
+    }
+    session.actionIndex += 1;
+    session.lastAction = canonicalAction(action);
+    const hash = session.config.hashActions ? hashCanonicalState(session) : null;
+    const record = {
+      index: session.actionIndex,
+      action: session.lastAction,
+      phaseBefore,
+      phaseAfter: session.phase,
+      beatId: session.currentBeatId,
+      hash
+    };
+    session.actionTranscript.push(record);
+    return record;
+  }
+  function beatView(beat) {
+    if (!beat) return null;
+    return {
+      id: beat.id,
+      age: beat.age,
+      kind: beat.kind,
+      chapter: beat.chapter || null,
+      title: beat.title || null,
+      text: beat.text || null,
+      prompt: beat.prompt || null,
+      readPrompt: beat.readPrompt || null,
+      readFormat: beat.readFormat ?? 0,
+      factor: beat.factor || null,
+      pairId: beat.pairId || null,
+      level: beat.level || null,
+      latents: clonePlain(beat.latents || null),
+      chain: beat.chain || null,
+      tier: beat.tier || null,
+      office: beat.office || null
+    };
+  }
+  function choiceView(session, choice) {
+    return {
+      id: choice.id,
+      label: choice.label,
+      requires: clonePlain(choice.requires || null),
+      cost: clonePlain(choice.cost || null),
+      availability: choiceStatus(session, choice)
+    };
+  }
+  function buildMirror(session) {
+    requireStarted(session);
+    const analysis = analysePlayer(session.st.log);
+    const resolution = mirrorResolution(analysis, session.st.log);
+    return {
+      analysis,
+      resolution,
+      cross: crossMirror(analysis, session.st.log),
+      checklist: checklist(analysis),
+      inputs: {
+        reads: clonePlain(session.st.log.filter((entry) => entry.kind === "read")),
+        moves: clonePlain(session.st.log.filter((entry) => entry.kind === "move"))
+      }
+    };
+  }
+  function getCurrentInteraction(session) {
+    const beat = currentBeat(session);
+    const base = {
+      phase: session.phase,
+      complete: session.complete,
+      seed: session.seed,
+      testMode: session.testMode,
+      beat: beatView(beat),
+      publicState: session.st ? {
+        age: session.st.age,
+        office: session.st.office,
+        capital: session.st.capital,
+        funds: session.st.funds,
+        standing: session.st.standing,
+        recognition: session.st.recognition,
+        independence: session.st.independence,
+        liability: session.st.liability,
+        abilities: clonePlain(session.st.abilities),
+        belief: meanBelief(session.agents, "PLAYER"),
+        approval: approvalOf(session.agents, "PLAYER"),
+        precision: meanPrecision(session.agents, "PLAYER")
+      } : null
+    };
+    if (beat?.choices && [
+      PHASES.STORY_CHOICE,
+      PHASES.PUBLIC_MOVE,
+      PHASES.WILDERNESS_CHOICE
+    ].includes(session.phase)) {
+      base.choices = beat.choices.map((choice) => choiceView(session, choice));
+    }
+    if (session.phase === PHASES.PRIVATE_READ) base.ladder = clonePlain(LADDER[beat.readFormat ?? 0]);
+    if (session.phase === PHASES.REACTION) base.reaction = clonePlain(session.pending.reaction);
+    if (session.phase === PHASES.CHAIN_RETURN) base.chain = clonePlain(session.pending.chain);
+    if (session.phase === PHASES.ELECTION_RESULT) base.election = clonePlain(session.pending.election);
+    if (session.phase === PHASES.WILDERNESS_RESULT) base.wilderness = clonePlain(session.pending.wilderness);
+    if (session.phase === PHASES.DEVELOPMENT_FOCUS) {
+      base.development = {
+        grant: clonePlain(session.pending.developmentGrant),
+        focuses: LIFE_FOCUS.map((focus) => clonePlain(focus))
+      };
+    }
+    if (session.phase === PHASES.DEVELOPMENT_RESULT)
+      base.development = { result: clonePlain(session.pending.developmentResult) };
+    if (session.phase === PHASES.CAREER_SUMMARY) {
+      base.summary = {
+        elections: clonePlain(session.elections),
+        chains: clonePlain(session.st.chains),
+        moves: session.st.log.filter((entry) => entry.kind === "move").length,
+        reads: session.st.log.filter((entry) => entry.kind === "read").length
+      };
+    }
+    if (session.phase === PHASES.MINI_MIRROR) base.mirror = clonePlain(session.mirror);
+    return base;
+  }
+  function normalized(value) {
+    if (value === null || typeof value === "boolean" || typeof value === "string") return value;
+    if (typeof value === "number") {
+      if (!Number.isFinite(value)) throw new GameSessionError("canonical state contains a non-finite number", "INVALID_STATE");
+      return Object.is(value, -0) ? 0 : value;
+    }
+    if (Array.isArray(value)) return value.map(normalized);
+    if (typeof value === "object") {
+      const out = {};
+      for (const key of Object.keys(value).sort()) {
+        if (value[key] !== void 0 && typeof value[key] !== "function") out[key] = normalized(value[key]);
+      }
+      return out;
+    }
+    return String(value);
+  }
+  function stableStringify(value) {
+    return JSON.stringify(normalized(value));
+  }
+  function hashText(text) {
+    let hash = 0xcbf29ce484222325n;
+    const prime = 0x100000001b3n;
+    for (let i = 0; i < text.length; i++) {
+      const code = text.charCodeAt(i);
+      hash ^= BigInt(code & 255);
+      hash = BigInt.asUintN(64, hash * prime);
+      hash ^= BigInt(code >>> 8);
+      hash = BigInt.asUintN(64, hash * prime);
+    }
+    return hash.toString(16).padStart(16, "0");
+  }
+  function voterStateDigest(session) {
+    if (!session.agents) return null;
+    const voters = session.agents.map((agent) => ({
+      id: agent.id,
+      lean: agent.lean,
+      side: agent.side,
+      ideology: agent.ideology,
+      interest: agent.interest,
+      mediaTrust: agent.mediaTrust,
+      instTrust: agent.instTrust,
+      turnoutBase: agent.turnoutBase,
+      crowdSens: agent.crowdSens,
+      denialSens: agent.denialSens,
+      wInt: agent.wInt,
+      wComp: agent.wComp,
+      family: agent.family,
+      gateBias: agent.gateBias,
+      motivBias: agent.motivBias,
+      srcBias: agent.srcBias,
+      owner: agent.owner,
+      young: agent.young,
+      publicSector: agent.publicSector,
+      business: agent.business,
+      beliefs: agent.beliefs
+    }));
+    return hashText(stableStringify(voters));
+  }
+  function serializeCanonicalState(session) {
+    return normalized({
+      sessionVersion: session.sessionVersion,
+      config: session.config,
+      seed: session.seed,
+      testMode: session.testMode,
+      player: session.player,
+      agentCount: session.agentCount,
+      phase: session.phase,
+      complete: session.complete,
+      started: session.started,
+      beatIndex: session.beatIndex,
+      currentBeatId: session.currentBeatId,
+      actionIndex: session.actionIndex,
+      lastAction: session.lastAction,
+      world: session.world ? {
+        root: session.world.root,
+        n: session.world.n,
+        worldSeed: session.world.worldSeed,
+        eventSeed: session.world.eventSeed,
+        actorSeed: session.world.actorSeed,
+        playerBloc: session.world.playerBloc,
+        rivalBloc: session.world.rivalBloc,
+        startMu: session.world.startMu,
+        startTau: session.world.startTau,
+        startAge: session.world.startAge,
+        errorFound: session.world.errorFound,
+        leakTraced: session.world.leakTraced
+      } : null,
+      state: session.st,
+      rivalArc: session.rivalArc,
+      rivalProfile: session.rivalProfile,
+      rivalPush: session.rivalPush,
+      pending: session.pending,
+      resumeAfterDevelopment: session.resumeAfterDevelopment,
+      beatTrace: session.beatTrace,
+      eventTrace: session.eventTrace,
+      elections: session.elections,
+      rng: session.started ? {
+        world: session.worldRng.state(),
+        actor: session.actorRng.state(),
+        events: session.eventRng.state()
+      } : null,
+      tape: session.tape,
+      mirror: session.mirror,
+      voterStateDigest: voterStateDigest(session)
+    });
+  }
+  function hashCanonicalState(session) {
+    return hashText(stableStringify(serializeCanonicalState(session)));
+  }
+  function replayActionTranscript(options, transcript) {
+    const session = createGameSession(options);
+    for (const entry of transcript) {
+      const action = entry.action || entry;
+      const record = dispatchGameAction(session, action);
+      if (entry.hash && entry.hash !== record.hash) {
+        throw new GameSessionError(
+          `parity divergence at action ${record.index} (${action.type}): expected ${entry.hash}, got ${record.hash}`,
+          "PARITY_DIVERGENCE"
+        );
+      }
+    }
+    return session;
+  }
+  function runCounterfactualAudit(session) {
+    requireStarted(session);
+    return counterfactualAudit(session.tape, session.world);
+  }
+
+  // src/ui-theme.mjs
+  var T = {
+    paper: "var(--pm-paper)",
+    sheet: "var(--pm-sheet)",
+    surface: "var(--pm-surface)",
+    head: "var(--pm-head)",
+    ink: "var(--pm-ink)",
+    ink2: "var(--pm-ink-2)",
+    ink3: "var(--pm-ink-3)",
+    chrome: "var(--pm-chrome)",
+    rule: "var(--pm-rule)",
+    hair: "var(--pm-hair)",
+    inset: "var(--pm-inset)",
+    gold: "var(--pm-gold)",
+    goldInk: "var(--pm-gold-ink)",
+    goldTint: "var(--pm-gold-tint)",
+    favour: "var(--pm-favour)",
+    against: "var(--pm-against)",
+    civ: "var(--pm-civ)",
+    ren: "var(--pm-ren)",
+    display: "var(--pm-display)",
+    body: "var(--pm-body)"
+  };
+  var label = (size = 11, tone = T.chrome) => ({
     fontSize: size,
-    letterSpacing: '.18em',
-    textTransform: 'uppercase',
+    letterSpacing: ".18em",
+    textTransform: "uppercase",
     color: tone,
-    fontVariantNumeric: 'tabular-nums',
-    lineHeight: 1.5,
-});
-exports.label = label;
-// A bordered, unfilled surface. Colour is stroke here, never fill.
-const card = (extra = {}) => ({
-    border: `1px solid ${exports.T.rule}`,
+    fontVariantNumeric: "tabular-nums",
+    lineHeight: 1.5
+  });
+  var card = (extra = {}) => ({
+    border: `1px solid ${T.rule}`,
     borderRadius: 4,
-    padding: '16px 18px',
-    background: 'transparent',
-    ...extra,
-});
-exports.card = card;
-exports.hairline = { height: 1, background: exports.T.rule, border: 0, margin: 0 };
-exports.hairlineSoft = { height: 1, background: exports.T.hair, border: 0, margin: 0 };
-// Ruled row: the structural unit of every ledger, table and profile list.
-const ruledRow = (extra = {}) => ({
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'baseline',
+    padding: "16px 18px",
+    background: "transparent",
+    ...extra
+  });
+  var hairline = { height: 1, background: T.rule, border: 0, margin: 0 };
+  var hairlineSoft = { height: 1, background: T.hair, border: 0, margin: 0 };
+  var ruledRow = (extra = {}) => ({
+    display: "flex",
+    justifyContent: "space-between",
+    alignItems: "baseline",
     gap: 12,
-    padding: '9px 0',
-    borderBottom: `1px solid ${exports.T.hair}`,
-    ...extra,
-});
-exports.ruledRow = ruledRow;
-const column = (gap = 12, extra = {}) => ({
-    display: 'flex', flexDirection: 'column', gap, ...extra,
-});
-exports.column = column;
-const rowFlex = (gap = 12, extra = {}) => ({
-    display: 'flex', alignItems: 'baseline', gap, ...extra,
-});
-exports.rowFlex = rowFlex;
-// Figure block for the standing head and result plates.
-const figureValue = (size = 17) => ({
-    fontSize: size,
-    fontVariantNumeric: 'tabular-nums',
-    lineHeight: 1.1,
-    color: exports.T.ink,
-});
-exports.figureValue = figureValue;
-// Direction of movement. Sign and caret carry the same information as the colour,
-// so the reading survives greyscale and colour blindness.
-const movementTone = (value) => (value > 0 ? exports.T.favour : value < 0 ? exports.T.against : exports.T.ink3);
-exports.movementTone = movementTone;
-const caret = (value) => (value > 0 ? '\u25b2' : value < 0 ? '\u25bc' : '\u2014');
-exports.caret = caret;
-const blocDot = (blocId) => (blocId === 'REN' ? exports.T.ren : exports.T.civ);
-exports.blocDot = blocDot;
+    padding: "9px 0",
+    borderBottom: `1px solid ${T.hair}`,
+    ...extra
+  });
+  var column = (gap = 12, extra = {}) => ({
+    display: "flex",
+    flexDirection: "column",
+    gap,
+    ...extra
+  });
+  var movementTone = (value) => value > 0 ? T.favour : value < 0 ? T.against : T.ink3;
+  var caret = (value) => value > 0 ? "\u25B2" : value < 0 ? "\u25BC" : "\u2014";
+  var blocDot = (blocId) => blocId === "REN" ? T.ren : T.civ;
 
-}],
-"pilot/cases.mjs": [{},function(module,exports,require){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.FORMS = exports.BLOCK_INSTRUCTIONS = exports.VOTE_PROMPT = exports.JUDGMENT_PROMPT = exports.DIMENSIONS = exports.CASE_BANK_VERSION = void 0;
-exports.getCases = getCases;
-exports.getCase = getCase;
-// Additive study materials. No world/engine/content constants are changed here.
-// Numeric features are preregistered design codes, NOT known probabilities of guilt.
-exports.CASE_BANK_VERSION = 'pm-parallel-cases/1.0.0';
-exports.DIMENSIONS = Object.freeze([
-    'evidenceSensitivity', 'partisanSymmetry', 'crowdSusceptibility', 'deniabilitySusceptibility',
-]);
-exports.JUDGMENT_PROMPT = 'How likely is it that the official deliberately misused their public position in the way alleged?';
-exports.VOTE_PROMPT = 'If these were your only two options, would you retain this official or replace them with an otherwise comparable candidate?';
-exports.BLOCK_INSTRUCTIONS = 'All people, parties, places and events below are fictional. Judge each case separately using only the information provided. The cases concern different officials. Enter a probability from 0 (certain it did not happen) to 100 (certain it happened), then make a retain-or-replace choice. There is no answer key for these judgments.';
-const FEATURE_ROWS = [
-    ['E_LOW', 'evidenceSensitivity', 'LOW', { evidence: 0.20, partisan: 0, crowd: 0, deniability: 0 }],
-    ['P_OWN', 'partisanSymmetry', 'PLAYER_SIDE', { evidence: 0.45, partisan: -0.5, crowd: 0, deniability: 0 }],
-    ['C_HIGH', 'crowdSusceptibility', 'CROWD_HIGH', { evidence: 0.45, partisan: 0, crowd: 0.5, deniability: 0 }],
-    ['D_HIGH', 'deniabilitySusceptibility', 'DEN_HIGH', { evidence: 0.45, partisan: 0, crowd: 0, deniability: 0.5 }],
-    ['E_HIGH', 'evidenceSensitivity', 'HIGH', { evidence: 0.70, partisan: 0, crowd: 0, deniability: 0 }],
-    ['P_OPP', 'partisanSymmetry', 'OPPOSING_SIDE', { evidence: 0.45, partisan: 0.5, crowd: 0, deniability: 0 }],
-    ['C_LOW', 'crowdSusceptibility', 'CROWD_LOW', { evidence: 0.45, partisan: 0, crowd: -0.5, deniability: 0 }],
-    ['D_LOW', 'deniabilitySusceptibility', 'DEN_LOW', { evidence: 0.45, partisan: 0, crowd: 0, deniability: -0.5 }],
-];
-const TEXTS = {
+  // pilot/game-copy.mjs
+  var EVENT_COPY = {
+    ENTRY_23: {
+      prompt: "Two months in, you notice a problem in the office\u2019s work. Keeping it quiet would protect someone above you.",
+      choices: {
+        raise: "Bring it up at the Monday meeting.",
+        memo: "Write to one person who can do something about it.",
+        useful: "Say nothing, and help the person who benefits from keeping it quiet."
+      }
+    },
+    FORMATIVE_24: {
+      text: "Your party loses the regional election by nine hundred votes. At two in the morning, everyone is looking for someone to blame. The campaign manager is drunk and naming names. Someone needs to speak to the volunteers who gave up four months of their lives.",
+      choices: { list: "Take the volunteer list home. These are the people who may one day knock on doors for you." }
+    },
+    INTRO: {
+      title: "The seat nobody wanted",
+      text: (p) => `${p.region} has forty thousand residents, a drain that keeps flooding, and a council seat that the ${BLOCS[p.bloc].name} has lost three times in a row. Over bad coffee, the regional party secretary asks you to run. "You'd be doing us a favour," she says. She expects you to lose.`,
+      choices: {
+        take: "Agree to run. Even if you lose, people will know your name.",
+        bargain: "Agree to run \u2014 but make her fund the campaign properly first.",
+        wait: "Ask for a safer seat. Keep your money and avoid making a firm commitment for now."
+      }
+    },
+    CULVERT: {
+      title: "The blocked drain",
+      text: "For nine years, money to fix the flooding drain has been added to the budget, then taken out again. Fixing it would cost everything you can raise. Promising to fix it costs nothing and is popular with voters.",
+      choices: {
+        fund: "Spend the whole district fund on fixing the drain.",
+        announce: "Announce a plan. Pay for a study.",
+        split: "Fix the worst hundred metres. Be clear that this is all you are fixing."
+      }
+    },
+    OPP_CONTRACT: {
+      text: (p) => `A ${BLOCS[OPP(p.bloc)].name} councillor's brother-in-law won the contract to collect rubbish in the eastern districts. The contract records show two bidders and very little time to compare their bids. The councillor says the process was fair and the family connection is a coincidence.`,
+      choices: {
+        demand: "Call for the councillor to step down while the case is investigated.",
+        refer: "Send the records to the Audit Office and say nothing else.",
+        quiet: "Leave it alone. Rubbish-collection contracts are always messy."
+      }
+    },
+    WILDERNESS: {
+      title: "Out of office",
+      text: "You lost the election. Within two weeks, the party stops returning your calls. There is no ceremony when you lose a council seat. Your office is cleared by the end of the month, and the phone goes quiet.",
+      choices: {
+        professional: "Go back to your old profession. Earn a good salary for a while.",
+        staff: "Take a job working for the party. Build up favours you can ask for later.",
+        media: "Write a newspaper column and join a TV panel. Stay in the public eye.",
+        local: "Stay in the district. Attend every local event for four years.",
+        leave: "Leave politics, with no plans to come back."
+      }
+    },
+    WILDERNESS_MID: { title: "Two years later" },
+    FIRST_TERM: { text: "Two years of committee papers, meetings with local residents, and votes decided by others. You have learned which parts of the job you are good at, and which parts you are still struggling with." },
+    COMEBACK: {
+      text: "The councillor who beat you is moving on to national politics. Your party is choosing a new candidate for the district. Your name comes up in the meeting \u2014 not first, but it comes up.",
+      choices: {
+        run: "Apply to run. You have waited four years for this chance.",
+        run_field: "Apply to run. Win support by knocking on doors with four hundred volunteers and no money.",
+        run_hard: "Apply to run, and make sure the other candidates hear about it first.",
+        decline: "Pass on this race. Wait for a seat you can make your own."
+      }
+    },
+    TIP_HOUSING: {
+      text: "Mara Venn at the Northgate Record has spent a month asking how public housing is assigned. An unsigned letter reaches your office. It claims the district housing officer has taken payments to move families up the waiting list. It gives no dates and includes no documents. It names three families, and two of them did move up the list.",
+      choices: {
+        push: "Take it to the press. Let public pressure force some action.",
+        refer: "Ask the Audit Office to check the housing waiting list quietly.",
+        bin: "Anonymous letters can be a way to get revenge. Throw it away."
+      }
+    },
+    GRANT_QUESTION: {
+      text: 'An ongoing investigation into regional grants opens another case. A foundation whose board includes several well-known families received the largest cultural grant in the region\u2019s history. The signed scoring sheet gives it four more points than the runner-up for "institutional capacity". Nobody can explain what that means.',
+      choices: {
+        demand: "Demand that the grant be cancelled and the applications scored again.",
+        inquiry: "Call for a formal investigation and wait for the results.",
+        shrug: "Every scoring system has something open to judgment. Let it go."
+      }
+    },
+    DISTRICTS: {
+      text: "The repair budget covers one district. The northern district has worse flooding, older pipes, and fewer people who turn out to vote. The southern district will decide whether you are re-elected. Both choices are legal, and both have written reasons to support them.",
+      choices: {
+        need: "Choose the north. The records show it needs the repairs more.",
+        survive: "Choose the south. You cannot fix anything if you lose your seat.",
+        split: "Split the money. Fix half the problems in each place."
+      }
+    },
+    HOUSING_REFORM: {
+      title: "Making room for more homes",
+      text: "Four thousand people in your district are waiting for housing. A planning rule has not changed since 1974. Changing it would allow three hundred new flats on the eastern edge of the district within four years. They would stand behind eleven hundred houses. Their owners have spent thirty years believing the open view was part of what they bought.",
+      prompt: "Will you lead the vote, or stop the plan from moving forward?",
+      choices: {
+        full: "Lead the full change to the planning rules. Defend it at the public meeting.",
+        phased: "Spread the changes over eight years so the first new flats come after the election.",
+        consult: "Ask for a public consultation. It will take two years and end with a report.",
+        kill: "Stop the plan. Say clearly that you are protecting the area\u2019s character."
+      }
+    },
+    PARTY_WHIP: {
+      title: "Your party demands your vote",
+      text: "Your party plans to support a bill that would remove required audits for contracts under two million. You have read it twice. It is a bad bill, and everyone admits that in private. But supporting it is the price of getting a housing package your district has waited six years for.",
+      prompt: "The party official in charge of votes wants your answer before six.",
+      choices: {
+        rebel: "Vote against the bill and explain your reasons in public.",
+        trade: "Trade your vote for a written promise of the housing package.",
+        abstain: "Do not vote either way. Let it pass without your name on it.",
+        support: "Vote for the bill. Defend it in public as a sensible way to simplify the rules."
+      }
+    },
+    THE_ERROR: {
+      text: "For nine months, your office has published the wrong number of children using school meals. It was not fraud: a spreadsheet from the previous administration counted one group twice. You have quoted the number four times, once to win approval for a budget. Three people know. The press does not.",
+      choices: {
+        disclose: "Publish the correct number today. List all four times you used the wrong one.",
+        audit: "Ask the Audit Office to check first, then publish whatever it finds.",
+        quiet: "Put the correct number in the next regular update without mentioning the mistake.",
+        blame: "Correct the number. Make clear that the mistake came from the previous administration."
+      }
+    },
+    CROWD_LOUD: {
+      text: "A photo is spreading online. It shows the school-meals contractor at a private dinner with the official who renewed her contract. It is only a photo of a dinner; no other evidence has appeared. By lunchtime, it has forty thousand shares, and the comments are full of anger.",
+      choices: {
+        ride: "Spread the story. People are already angry at the right person.",
+        process: "Ask the council to review the contract properly. Say the photo is not evidence of wrongdoing.",
+        silent: "Say nothing. The anger will fade."
+      }
+    },
+    CROWD_QUIET: {
+      title: "The transport adviser",
+      text: "A photo reaches your office. It shows the director of a transport advice firm at a private dinner with the official who renewed her standing contract. It is only a photo of a dinner; no other evidence has appeared. A local reporter has kept it in a drafts folder for a week. Nobody else has picked up the story.",
+      choices: {
+        push: "Send it to the press yourself.",
+        process: "Ask for a proper review of the standing contract.",
+        silent: "There is nothing here worth acting on."
+      }
+    },
+    SMEAR_RIVAL: {
+      title: "The file about a rival\u2019s degree",
+      text: (p) => `Ilse Brandt publishes the story under her name, and other reporters follow within an hour. A file reached three newsrooms and your office that morning. It claims the ${BLOCS[OPP(p.bloc)].name} candidate for mayor never finished the degree she has claimed for twenty years. It includes university records, a letter on university paper, and a formal statement signed as true under the law. At first sight, the evidence looks very strong.`,
+      choices: {
+        run: "Publish the claim. The documents speak for themselves.",
+        verify: "Contact the university records office directly before anyone comments.",
+        pass: "Refuse to use it. A degree from 1998 is not a reason someone should lose an election."
+      }
+    },
+    RECORDING_DENIABLE: {
+      text: "A forty-one-second recording appears. It seems to show the regional housing chair agreeing to change a planning decision in exchange for a favour. The chair says the audio was artificially made, and has hired a firm that agrees. A different firm says it cannot tell. Nobody can provide the original file.",
+      choices: {
+        forensic: "Pay independent specialists to check whether the recording is genuine before anyone comments.",
+        dismiss: "Say publicly that a recording that cannot be checked should not end someone\u2019s career."
+      }
+    },
+    THE_ALLEGATION: {
+      text: (p) => `A news outlet that supports the ${BLOCS[OPP(p.bloc)].name} reports that your first campaign accepted eleven thousand from a construction firm. Fourteen months later, that firm won a road-resurfacing contract. Both facts are true. The report claims they are connected, but gives no proof of the link. By evening, everyone is asking about it.`,
+      choices: {
+        open_meeting: "Book the district\u2019s biggest hall, invite the reporter, and answer questions until there are no more.",
+        ethics: "Ask the ethics committee to investigate you, and stop commenting.",
+        deny: "Attack the news outlet. Call the story a smear and point out that its owner supports the other party."
+      }
+    },
+    ALLY_CONTRACT: {
+      text: (p) => `A ${BLOCS[p.bloc].name} councillor you have worked beside for six years has a brother-in-law who won the contract to collect rubbish in the western districts. The contract records show two bidders and very little time to compare their bids. She tells you personally that the process was fair and the family connection is a coincidence.`,
+      choices: {
+        demand: "Say publicly that she should step down while the case is investigated.",
+        refer: "Send the records to the Audit Office and say nothing else.",
+        shield: "Support her in public. You have seen how she works."
+      }
+    },
+    PARTY_OFFER: {
+      text: "The deputy party leader wants you to move to the capital and become a policy spokesperson. The job comes with its own staff. It is two hundred miles from the only place that has ever voted for you. She does not say what she expects in return. At her level, she does not have to.",
+      choices: {
+        conditional: "Accept, if you can keep representing the district and keep your own position on housing.",
+        decline: "Say no. Build your own career here.",
+        refuse_loudly: "Say no. Tell the public that the capital has stopped listening to districts like yours."
+      }
+    },
+    AUDIT_OFFICE: {
+      text: "The Audit Office wants permanent access to government contract records, without having to give advance notice. That would make your next four years in office much less comfortable. The rule would remain long after you leave. The vote is close, and your party is waiting for your decision.",
+      choices: {
+        narrow: "Support it, but require advance notice.",
+        narrow_amendment: "Write a change to the bill: full access, except for ongoing investigations. Get it passed.",
+        block: "Block it. The Audit Office already has enough power."
+      }
+    },
+    RECORDING_CLEAN: {
+      text: "A forty-four-second recording appears. It seems to show the regional licensing chair agreeing to change a permit decision in exchange for a favour. The person who made it has provided the original file and the recording device. Two independent labs checked it and found no signs of editing.",
+      choices: {
+        treat: "Say publicly that the recording is real and action should be taken.",
+        forensic: "Wait for the licensing committee to finish its own review."
+      }
+    },
+    THE_TIP: {
+      title: "Eleven days before the vote",
+      text: "Eleven days before the election, a folder reaches your campaign. It suggests your opponent\u2019s foundation transferred money it should not have. The claim has not been checked. Checking it properly would take three weeks \u2014 longer than you have. Using it would probably decide the election.",
+      choices: {
+        read_it: "Ask your analyst to examine the folder overnight. Keep it out of the campaign.",
+        attack: "Use the claim. Name its source. Let your opponent deny it."
+      }
+    }
+  };
+  var SHARED_COPY = {
+    "Legislative staffer": "Legislative assistant",
+    "Municipal auditor": "City auditor",
+    "Six years drafting other people's bills. You know where the bodies are filed.": "Six years writing bills for other politicians. You know where to find the secrets in the records.",
+    "You ran a tenants' union that beat the city twice. Nobody in the party owes you anything.": "You led a tenants\u2019 union that won two fights with the city. Nobody in the party owes you a favour.",
+    "You spent your twenties finding money that had gone missing. Some of it belonged to your future colleagues.": "In your twenties, you tracked down missing public money. Some of it led back to people you would later work with.",
+    "You are twenty-three and you answer a member's correspondence for a salary that does not cover the room you rent. You have read every bill that passed this session because nobody else in the office has time to.": "You are twenty-three. You answer letters for a politician, but your salary does not cover your rent. You have read every bill passed this session because nobody else in the office has time.",
+    "You are twenty-three and you run a tenants' association out of a room above a laundrette. Forty households, one damp problem the council will not name, and a phone that rings at eleven at night.": "You are twenty-three. You run a tenants\u2019 group from a room above a laundry. Forty households have a damp problem the council will not acknowledge. Your phone rings at eleven at night.",
+    "You are twenty-three and you check municipal procurement files for a living. It is the least glamorous job in the building and it is the only one where you get to read everything.": "You are twenty-three. Your job is to check city contract records. It is the least exciting job in the building, but it is the only one that lets you read everything.",
+    "Mark your internal confidence for the file. Nobody outside this room sees it.": "How sure are you that this happened? Your answer stays private within the story.",
+    "There's nothing here. Someone is fishing.": "There is nothing to this. Someone is looking for trouble.",
+    "Probably overblown, but I want to know more.": "Probably exaggerated, but I want to know more.",
+    "Weak lead": "Very little to go on",
+    "Plausible": "Could be true",
+    "Near certain": "Almost certain",
+    "The constituency": "Working with local residents",
+    "Surgeries every Saturday morning. The volunteer list. The streets nobody else knocks.": "Meet residents every Saturday, organise volunteers, and visit streets other politicians ignore.",
+    "The committee corridor": "Working on policy",
+    "Bills, briefings, and the detail almost nobody else in the chamber has read.": "Study bills, read briefings, and learn the details other politicians have missed.",
+    "The studio and the platform": "Speaking in public",
+    "Interviews, panels, debates. Learning to make an argument stand up in ninety seconds.": "Practise interviews and debates. Learn to make a clear argument in ninety seconds.",
+    "The bar off the chamber": "Building political deals",
+    "The people whose votes you will need one day, and what each of them actually wants.": "Get to know people whose votes you will need, and find out what they want.",
+    "The back room": "Planning your strategy",
+    "Polling, ward maps, and the long unglamorous business of working out where this is going.": "Study polls and district maps. Work out what may happen next.",
+    "Speeches, debates, press conferences, live town halls. How well a public statement lands, and how fast people come to know who you are.": "How clearly you speak in debates, interviews, and public meetings, and how quickly people get to know you.",
+    "Drafting, delivery and administration. Whether what you promised actually works, and whether technical options are open to you at all.": "How well you write and carry out policy, and whether you have the skills needed for technical choices.",
+    "Field operation, volunteers, canvassing, turnout. Converts money and party standing into people who actually vote.": "How well you organise volunteers and door-to-door campaigning, turning campaign resources into people who vote.",
+    "Party bargaining, coalitions, legislative deals. What it costs you to get other people to move.": "How well you make deals with parties and other politicians, and what you must give up to win their support.",
+    "Reading the position. Better internal information, sharper forecasts, steadier judgment when everything is on fire.": "How well you understand the situation, predict what comes next, and make decisions under pressure.",
+    "You know how a bill actually moves and who has to be asked. You have never had to hold a room.": "You know how bills get passed and whose help you need. You have little experience speaking to a crowd.",
+    "You can fill a hall and knock a ward. Nobody in the building owes you a favour and you have never drafted anything.": "You can draw a crowd and organise door-to-door visits. Party officials owe you no favours, and you have never written a bill.",
+    "You can read a procurement file faster than anyone in the chamber. You are not who they send to the doorstep.": "You understand contract records better than anyone in the council. Meeting voters at their doors is not your strength.",
+    "You have no standing left to spend on asking the Audit Office for favours.": "You do not have enough political influence to ask the Audit Office for help.",
+    "You have nothing left to spend on asking the audit office for anything.": "You do not have enough political influence to ask the Audit Office for help.",
+    "Verification costs money you do not have eleven days out.": "You do not have enough campaign money to check the claim before the election.",
+    "You are solvent and nobody can reach you for comment.": "Your finances are secure, and reporters cannot reach you for comment.",
+    "The nomination will be easier next time. It will also be theirs to give.": "It will be easier to become the party\u2019s candidate next time. But the party will still control that decision.",
+    "Evidence Sensitivity": "How you responded to evidence",
+    "Partisan Symmetry": "How you judged each party",
+    "Crowd Susceptibility": "How public anger affected your judgment",
+    "Deniability Susceptibility": "How doubts about a recording affected your judgment",
+    "Accountability": "Taking responsibility",
+    "Institutional Restraint": "Respecting independent checks",
+    "Power / Survival Orientation": "Winning now or planning for the future",
+    "said there was nothing there": "saw no basis for the claim",
+    "called it probably overblown": "thought it was probably exaggerated",
+    "treated it as established": "treated it as true",
+    "You valued due process most when you needed it yourself.": "You valued a fair review most when you were under scrutiny.",
+    "You resisted using outrage \u2014 but you were not immune to it.": "You made limited use of public anger, but it still affected your judgment.",
+    "Your evidence bar moved with the target.": "You needed different amounts of evidence for different people.",
+    "When a controversy goes viral, read the underlying evidence before you read the comments or the reaction counts.": "When a story spreads online, look at the evidence before reading comments or counting reactions.",
+    "Nothing in this run cleared the evidence bar for personalized advice. That is a real result, not a placeholder.": "This game did not provide enough evidence for personal advice.",
+    "If nobody discounted what the evidence meant": "If nobody downplayed what the evidence showed",
+    "If nobody dismissed the messenger": "If nobody rejected information because of its source",
+    "How did the locked resource options feel?": "How did it feel when you could not choose an option because you lacked resources?",
+    "A meaningful constraint": "A limit that made sense",
+    "Did the Mini Mirror feel specific to your choices?": "Did the Mirror feel specific to your choices?",
+    "Did the Counterfactual Audit help you understand why voters reacted differently?": 'Did "The same career, different voters" help you understand why voters reacted differently?',
+    "Did the development choices feel like career decisions, or like a stat menu?": "Did choosing how to develop your skills feel like career decisions, or like choosing which game scores to increase?",
+    "Somewhat like stat allocation": "Somewhat like choosing scores to increase",
+    "Strongly like stat allocation": "Strongly like choosing scores to increase",
+    "They all registered": "I noticed all of them",
+    "ability": "Your skills",
+    "There is room here.": "You have room to improve.",
+    "You are past the range this comes to you easily. Every further step is expensive.": "Further improvement no longer comes easily. Each step takes more time and effort.",
+    "It came along steadily.": "You made steady progress.",
+    "The work went in. Very little came back out.": "You put in the work, but made very little progress.",
+    "Slow going, but something stuck.": "Progress was slow, but you improved a little.",
+    "THE QUALIFICATIONS DOSSIER": "THE FILE ABOUT THE DEGREE",
+    "The dossier was manufactured": "The documents were fake",
+    "The bank records surface in an unrelated bankruptcy filing. The housing officer took four payments across eighteen months, and the unsigned letter that reached your office at thirty had the dates right.": "Bank records appear in an unrelated bankruptcy case. The housing officer took four payments over eighteen months. The unsigned letter you received at thirty was right about the payments.",
+    "You were wrong, and you were wrong early and in writing. A reporter finds the minute where you said so.": "Your early judgment was wrong. A reporter finds it written in the meeting record.",
+    "You did not announce a conclusion. You asked for it to be looked at, and it was, and it was there. Almost nobody notices. One person writes about it.": "You did not announce a conclusion. You asked for an investigation, and it found the payments. Almost nobody notices your role. One reporter writes about it.",
+    "You called it before anyone could prove it. That reads as judgment, or as luck, depending on who is describing you.": "You believed the claim before anyone could prove it. Some people call that good judgment; others call it luck.",
+    "The qualifications dossier was forged \u2014 competently, by a former campaign contractor with a grudge and a scanner, who confesses in a civil suit two years later. Every document in it was fabricated.": "Every document in the file about the degree was fake. A former campaign contractor made them skilfully, using a scanner, to get revenge. Two years later, the contractor admitted this in a civil court case.",
+    "You believed it, and some of what you did assumed it was true. The correction travels a fraction as far as the accusation did.": "You believed the claim and acted as if it were true. Far fewer people see the correction than saw the accusation.",
+    "You declined to treat it as established before it was established. In hindsight that was the only sensible thing anyone did with it.": "You waited for proof before treating the claim as true. Looking back, that caution was justified.",
+    "You did not take the bait. Nobody thanks you, because nothing happened.": "You did not fall for the claim. Nobody thanks you, because there is no story to report.",
+    "Closed without a finding": "Closed with no clear answer",
+    "The inquiry into the cultural grant reports after six years. It cannot establish that the foundation received favourable treatment. It also cannot establish that it did not. Two of the three relevant officials have retired; the third declines to be interviewed.": "The investigation into the cultural grant finally reports. It cannot prove that the foundation received special treatment, or that it did not. Two of the three officials involved have retired. The third refuses an interview.",
+    "Nothing is settled and nothing will be. The people who were certain at the time are still certain, in both directions, and the file goes into storage.": "There is no clear answer, and no more investigation is planned. People who were certain before remain certain, on both sides. The file goes into storage.",
+    "The culvert holds. Four streets that flooded in your first year stay dry, and the local paper runs a photograph of the outflow that nobody outside the ward will ever care about. You care about it.": "The drain holds. Four streets that flooded in your first year stay dry. The local paper prints a photo of the water flowing away. Nobody outside the district cares much about it. You do.",
+    "The repaired hundred metres holds. The rest does not. Two streets flood, and because you said plainly what you were doing, nobody accuses you of lying about it.": "The hundred metres you repaired holds. The rest does not. Two streets flood. Because you were clear about what you would fix, nobody accuses you of lying.",
+    "The study is eleven months from publication. The culvert is not. Six streets flood, and a resident reads your announcement aloud to a television camera standing in her kitchen.": "The study will not be ready for eleven months. The drain floods again. Six streets are under water, and a resident reads your promise aloud to a TV camera in her kitchen.",
+    "Two years of work that closes at six o'clock. You are better paid than you have ever been and nobody asks your opinion about anything. Twice a year someone recognises you in a queue and cannot place where from.": "For two years, work ends at six. You earn more than ever, but nobody asks your opinion. Occasionally, someone in a queue recognises you without remembering where from.",
+    "Two years of other people's campaigns. You write the lines, you book the halls, you learn exactly how the nominations are actually decided. Everyone in the building knows your name and no one outside it does.": "For two years, you work on other people\u2019s campaigns. You write speeches, book halls, and learn how the party chooses its candidates. Everyone in the party office knows your name; hardly anyone outside does.",
+    "Two years of the panel show and the Thursday column. You are recognised constantly now, and about half the people who recognise you have already decided what you are. The invitations come from one side only.": "For two years, you appear on TV panels and write a Thursday column. People recognise you often. About half have already made up their minds about you. Invitations come from only one political side.",
+    "Two years of school fetes, drainage meetings and the funeral of anyone who mattered. It is unglamorous and slow and there are four thousand people who would now put your leaflet in their window without being asked.": "For two years, you attend school fairs, meetings about drains, and the funerals of important local figures. It is slow, ordinary work. Four thousand people would now put your campaign leaflet in their window without being asked.",
+    "Two years of not being a politician. It is remarkable, and slightly insulting, how completely a city forgets a person who stops appearing in it. The old scandal stops coming up because nothing about you comes up.": "For two years, you stay out of politics. The city almost forgets you, which is a little insulting. Nobody mentions the old scandal, because nobody mentions you.",
+    "Your analyst works through the night. \u201CThe paperwork stands up. Two of these transfers are real and I can show you why.\u201D": "Your analyst works through the night. \u201CThe records hold up. I can show you that two of these money transfers were real.\u201D",
+    "Your analyst works through the night. \u201CThere is nothing underneath this. Somebody assembled it to look like something.\u201D": "Your analyst works through the night. \u201CThere is no evidence behind this. Someone put it together to make it look convincing.\u201D",
+    "The foundation story holds up. Two reporters confirm the transfers independently, and the material you used turns out to have been true.": "The foundation story checks out. Two reporters independently confirm the money transfers. The claim you used was true.",
+    "The foundation story collapses eight days before the vote. The transfers were routine and documented, and the correction runs beside a photograph of you making the claim.": "Eight days before the vote, the foundation story falls apart. The transfers were normal and properly recorded. A correction appears beside a photo of you making the accusation."
+  };
+  var exact = new Map(Object.entries(SHARED_COPY));
+  for (const bloc of Object.keys(BLOCS)) for (const route of ["STAFF", "CIVIC", "PROF"]) {
+    const p = { bloc, route, name: "A. Reyes", region: "Harrow Vale" };
+    for (const beat of SCRIPT(p)) {
+      const copy = EVENT_COPY[beat.id];
+      if (!copy) continue;
+      for (const field of ["title", "text", "prompt", "readPrompt"]) {
+        if (beat[field] && copy[field]) exact.set(beat[field], typeof copy[field] === "function" ? copy[field](p) : copy[field]);
+      }
+      for (const choice of beat.choices || []) if (copy.choices?.[choice.id]) exact.set(choice.label, copy.choices[choice.id]);
+    }
+  }
+  function gameText(value) {
+    if (typeof value !== "string") return value;
+    if (exact.has(value)) return exact.get(value);
+    return value.replace(/you thought it was probably overblown/g, "you thought it was probably exaggerated").replace(/^slope ([\d.-]+) across (\d+) judgments$/, "Evidence-response score: $1, based on $2 judgments").replace(/^When you were the one exposed, you chose the procedural option (\d+)% of the way\.$/, "When you were under scrutiny, your choices scored $1 out of 100 for following a formal review process.").replace(/^You rarely reached for the outrage play \((\d+)% across your responses\)\.$/, "Your public choices scored $1 out of 100 for using public anger or accusations to your advantage.").replace(/^When the story was about someone else you reached for the hard option (\d+)% of the way\.$/, "When the story was about someone else, your choices scored $1 out of 100 for using accusations to your advantage.").replace(/^Across your public responses you reached for the aggressive option (\d+)% of the way\.$/, "Your public choices scored $1 out of 100 for using accusations to your advantage.").replace(/^Yet your private judgments tracked evidence quality closely — you moved ([\d.-]+) points of credence per unit of evidence\.$/, "In private, stronger evidence made you more likely to believe a claim. Your evidence-response score was $1: a score for how much your judgment changed as evidence became stronger.").replace(/^In matched controversies with the same evidence, you were (\d+) points readier to believe the charge when the target was on the other side\.$/, "In similar cases with the same level of evidence, you were $1 points more likely to believe the accusation against the other party.").replace(/^Privately, with identical evidence in both cases, you were (\d+) points readier to believe it when the person was on the other side\.$/, "In private, with the same level of evidence in both cases, you were $1 points more likely to believe the accusation against the other party.").replace(/^With the same underlying evidence, visible public anger moved your judgment by (\d+) points\.$/, "With the same level of evidence, public anger shifted your judgment by $1 points.");
+  }
+  function displayTree(value) {
+    if (typeof value === "string") return gameText(value);
+    if (Array.isArray(value)) return value.map(displayTree);
+    if (value && typeof value === "object") return Object.fromEntries(Object.entries(value).map(([k, v]) => [k, displayTree(v)]));
+    return value;
+  }
+  function presentGameInteraction(interaction, player) {
+    if (!interaction) return interaction;
+    const view = { ...interaction };
+    for (const k of ["beat", "choices", "ladder", "reaction", "development", "wilderness", "chain"]) {
+      if (view[k]) view[k] = displayTree(view[k]);
+    }
+    const copy = EVENT_COPY[interaction.beat?.id];
+    if (view.beat && copy) for (const field of ["title", "text", "prompt", "readPrompt"]) {
+      if (copy[field]) view.beat[field] = typeof copy[field] === "function" ? copy[field](player) : copy[field];
+    }
+    return view;
+  }
+  var reactionScoreText = (value) => `${value > 0 ? "+" : value < 0 ? "\u2212" : ""}${Math.abs(value).toFixed(3)}`;
+  var probabilityPointText = (value) => `${Math.abs(value * 100).toFixed(1)} pp`;
+
+  // pilot/game-ui.jsx
+  var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
+  var ABILITIES2 = ABILITIES.map((a) => ({ ...a, name: gameText(a.name), does: gameText(a.does) }));
+  var ROUTES2 = ROUTES.map((r) => ({ ...r, name: gameText(r.name), blurb: gameText(r.blurb) }));
+  var pct = (value) => `${Math.round(value * 100)}%`;
+  var pp = probabilityPointText;
+  var deepClone = (value) => structuredClone(value);
+  var confidenceWord = (precision) => precision < 0.7 ? "low" : precision < 1.4 ? "forming" : "settled";
+  var startingWord = (value) => value >= 52 ? "Strength" : value >= 44 ? "Developing" : "Weakness";
+  var startingNotches = (value) => value >= 57 ? 5 : value >= 52 ? 4 : value >= 47 ? 3 : value >= 44 ? 2 : 1;
+  function Kicker({ children, gold = false, size = 11 }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+      "div",
+      {
+        className: `pm-kicker${gold ? " pm-kicker-gold" : ""}`,
+        style: size === 11 ? void 0 : { fontSize: size },
+        children
+      }
+    );
+  }
+  function DocLabel({ document: doc, aside, mark = false, gold = false }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 14 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 9 }, children: [
+        mark && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pm-dot", style: { background: T.gold, width: 7, height: 7 } }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+          "span",
+          {
+            className: `pm-kicker${gold ? " pm-kicker-gold" : ""}`,
+            style: { letterSpacing: ".22em" },
+            children: doc
+          }
+        )
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { flex: 1, ...hairline } }),
+      aside && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pm-kicker", children: aside })
+    ] });
+  }
+  function Fig({ label: label2, value, sub, size = 17, tone }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: column(2), children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-kicker", style: { fontSize: 10, letterSpacing: ".14em" }, children: label2 }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-tnum", style: { fontSize: size, lineHeight: 1.1, color: tone || T.ink }, children: value }),
+      sub && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 11, color: T.ink3 }, children: sub })
+    ] });
+  }
+  function Gauge({ value, tone = T.ink, height = 3 }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { background: "var(--pm-inset)", height, borderRadius: height }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: {
+      width: `${Math.max(0, Math.min(100, value * 100))}%`,
+      background: tone,
+      height,
+      borderRadius: height,
+      transition: "width .4s"
+    } }) });
+  }
+  function Option({ children, onClick, disabled = false, selected = false, meta }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+        "button",
+        {
+          type: "button",
+          className: `pm-opt${selected ? " pm-opt-selected" : ""}`,
+          disabled,
+          style: disabled ? { opacity: 0.45, cursor: "default" } : void 0,
+          onClick: disabled ? void 0 : onClick,
+          children
+        }
+      ),
+      meta && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-opt-meta", children: meta })
+    ] });
+  }
+  function GateMeter({ name, value, required }) {
+    const at = (level) => `${Math.max(0, Math.min(100, (level - 20) / 60 * 100))}%`;
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 10 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+        flex: 1,
+        maxWidth: 260,
+        position: "relative",
+        height: 6,
+        background: "var(--pm-inset)",
+        borderRadius: 3
+      }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: at(value), height: 6, background: T.chrome, borderRadius: 3 } }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: {
+          position: "absolute",
+          left: at(required),
+          top: -4,
+          bottom: -4,
+          width: 2,
+          background: T.against
+        } })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { ...label(10), letterSpacing: ".1em", whiteSpace: "nowrap" }, children: name })
+    ] });
+  }
+  function LockedOption({ children, needs, reason, meters = [] }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-opt-locked", role: "button", tabIndex: 0, "aria-disabled": "true", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", gap: 16, alignItems: "flex-start" }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: {
+          ...label(10, T.against),
+          letterSpacing: ".16em",
+          border: "1px solid rgba(143,58,46,.45)",
+          borderRadius: 2,
+          padding: "4px 8px",
+          whiteSpace: "nowrap"
+        }, children: "Locked" })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+        display: "flex",
+        gap: 10,
+        alignItems: "baseline",
+        marginTop: 10,
+        borderTop: `1px solid ${T.hair}`,
+        paddingTop: 10
+      }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { ...label(10), letterSpacing: ".14em", whiteSpace: "nowrap" }, children: "Needs" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { ...column(8), flex: 1, minWidth: 0 }, children: [
+          reason && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 13.5, lineHeight: 1.55, color: T.ink3 }, children: reason }),
+          meters.map((meter) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(GateMeter, { ...meter }, meter.name)),
+          needs && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 12.5, lineHeight: 1.55, color: T.chrome }, children: needs })
+        ] })
+      ] })
+    ] });
+  }
+  function Cta({ children, onClick, arrow = false, block = false }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+      "button",
+      {
+        type: "button",
+        onClick,
+        className: `pm-cta${arrow ? " pm-arrow" : ""}${block ? " pm-cta-block" : ""}`,
+        children
+      }
+    );
+  }
+  function Ghost({ children, onClick }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("button", { type: "button", className: "pm-ghost", onClick, children });
+  }
+  function Shell({ tone, head, children }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: `pm-shell${tone ? ` ${tone}` : ""}`, children: [
+      head,
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-body-wrap", children })
+    ] });
+  }
+  function StandingHead({ interaction, onProfile }) {
+    const state = interaction.publicState;
+    const beliefTone = state.belief > 0.55 ? T.favour : state.belief < 0.42 ? T.against : T.ink;
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-hud", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-hud-inner", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-hud-row", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+          display: "flex",
+          alignItems: "baseline",
+          gap: 12,
+          flex: "none",
+          whiteSpace: "nowrap"
+        }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-num", style: { fontSize: 22, lineHeight: 1 }, children: [
+            "Age ",
+            state.age
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-kicker", style: { letterSpacing: ".16em" }, children: [
+            state.office || "no office",
+            interaction.beat?.chapter ? ` \xB7 ${interaction.beat.chapter}` : ""
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Ghost, { onClick: onProfile, children: "Politician profile" })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-figs", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Fig, { label: "Approval", value: pct(state.approval), size: 16 }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Fig, { label: "Influence / party support", value: `${state.capital} / ${state.standing}`, size: 16 }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Fig, { label: "Funds", value: state.funds, size: 16 }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { ...column(5), flex: "1 1 210px", maxWidth: 340, minWidth: 170 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", gap: 8, alignItems: "baseline" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pm-kicker", style: { fontSize: 10, letterSpacing: ".14em" }, children: "Trust in your honesty" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pm-tnum", style: { fontSize: 11, color: T.ink3 }, children: pct(state.belief) })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Gauge, { value: state.belief, tone: beliefTone }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { className: "pm-kicker", style: { fontSize: 10, letterSpacing: ".12em" }, children: [
+            "Confidence ",
+            confidenceWord(state.precision)
+          ] })
+        ] })
+      ] })
+    ] }) });
+  }
+  function Rail({ interaction }) {
+    const state = interaction.publicState;
+    const abilities = state.abilities;
+    const ordered = ABILITIES2.slice().sort((a, b) => abilities.value[b.id] - abilities.value[a.id]);
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-rail", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: column(9), children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { children: "Your resources" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: ruledRow(), children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 14 }, children: "Political influence" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("b", { className: "pm-tnum", style: { fontWeight: 600 }, children: state.capital })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: ruledRow(), children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 14 }, children: "Support within your party" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("b", { className: "pm-tnum", style: { fontWeight: 600 }, children: state.standing })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: ruledRow(), children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 14 }, children: "Funds" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("b", { className: "pm-tnum", style: { fontWeight: 600 }, children: state.funds })
+        ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: column(8), children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { children: "Your skills" }),
+        ordered.map((ability) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: ruledRow(), children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 13.5 }, children: ability.name }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { ...label(11, T.ink3), letterSpacing: ".1em", whiteSpace: "nowrap" }, children: tierOf(abilities.value[ability.id]) })
+        ] }, ability.id)),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 12, lineHeight: 1.55, color: T.ink3 }, children: "Open your profile for exact ratings and hints about how much each skill can improve." })
+      ] })
+    ] });
+  }
+  function Profile({ abilities, age, onClose }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-dialog-backdrop", role: "dialog", "aria-modal": "true", "aria-label": "Politician profile", children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-dialog", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "flex-start",
+        gap: 20,
+        borderBottom: `1px solid ${T.rule}`,
+        paddingBottom: 16
+      }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: column(6), children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Kicker, { children: [
+            age ? `Age ${age} \xB7 ` : "",
+            "Your skills"
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "pm-h2", style: { fontSize: 32 }, children: "Politician profile" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Ghost, { onClick: onClose, children: "Close profile" })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { ...column(14), marginTop: 18 }, children: ABILITIES2.map((ability) => {
+        const value = abilities.value[ability.id];
+        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+          ...column(5),
+          borderBottom: `1px solid ${T.hair}`,
+          paddingBottom: 14
+        }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 14 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 16.5, fontWeight: 600 }, children: ability.name }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "baseline", gap: 9 }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pm-num", style: { fontSize: 25, lineHeight: 1 }, children: value }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { ...label(11, T.goldInk), letterSpacing: ".14em" }, children: tierOf(value) })
+            ] })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { margin: 0, fontSize: 13, lineHeight: 1.6, color: T.ink3 }, children: ability.does }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { margin: 0, fontSize: 13.5, lineHeight: 1.6, fontStyle: "italic" }, children: gameText(growthHint(abilities, ability.id)) })
+        ] }, ability.id);
+      }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 12, lineHeight: 1.6, color: T.ink3, marginTop: 16 }, children: "Your exact skill ratings are shown here." })
+    ] }) });
+  }
+  function PrivateRead({ interaction, beat, session, onSubmit }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-solo pm-solo-pad", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "center", gap: 14 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pm-seal", children: "Off the record" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { flex: 1, height: 1, background: "var(--pm-gold-tint-2)" } }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pm-kicker pm-narrow-hide", style: { letterSpacing: ".18em" }, children: "Private judgment" })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: column(16), children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "pm-h2", children: beat.title }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-prose", style: { lineHeight: 1.78 }, children: beat.text })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { ...column(18), borderTop: `1px solid ${T.rule}`, paddingTop: 24 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-quote", children: beat.readPrompt }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: column(9), children: interaction.ladder.map((text, credence) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-ladder-row", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { "aria-hidden": "true", className: "pm-kicker pm-tnum pm-ladder-num", children: credence + 1 }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { flex: 1, minWidth: 0 }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Option, { onClick: () => onSubmit(credence), children: text }) })
+        ] }, text)) }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: {
+          display: "flex",
+          justifyContent: "space-between",
+          gap: 20,
+          flexWrap: "wrap",
+          borderTop: `1px solid ${T.hair}`,
+          paddingTop: 14
+        }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 12.5, color: T.ink3, fontStyle: "italic" }, children: "This answer stays private within the story." }) })
+      ] })
+    ] });
+  }
+  function BlocReaction({ reaction }) {
+    if (!reaction) return null;
+    const rows = Object.entries(reaction.byBloc || {}).filter(([key, value]) => (reaction.blocN?.[key] || 0) > 25 && Math.abs(value) > 4e-3).sort((a, b) => Math.abs(b[1]) - Math.abs(a[1])).slice(0, 6);
+    if (!rows.length) return null;
+    const widest = rows.reduce((most, [, value]) => Math.max(most, Math.abs(value)), 0) || 1;
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { ...column(4), borderTop: `1px solid ${T.rule}`, marginTop: 14, paddingTop: 12 }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 12 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { children: "How voter groups reacted" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pm-narrow-hide", style: { fontSize: 11, color: T.ink3 }, children: "More favorable \u2190 0 \u2192 Less favorable" })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 12, color: T.ink3, lineHeight: 1.5 }, children: "Opinion shift (model score). Positive means a more favorable view; negative means a less favorable view. These are score changes, not percentages." }),
+      rows.map(([key, value]) => {
+        const tone = movementTone(value);
+        const width = `${Math.abs(value) / widest * 48}%`;
+        const fill = `color-mix(in srgb, ${tone} 20%, transparent)`;
+        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-bloc-row", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 14.5, lineHeight: 1.35 }, children: BLOC_LABELS[key] || key }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-bloc-bar", "aria-hidden": "true", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-bloc-centre" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-bloc-fill", style: {
+              width,
+              background: fill,
+              border: `1px solid ${tone}`,
+              left: value < 0 ? "50%" : void 0,
+              right: value > 0 ? "50%" : void 0,
+              borderLeft: value < 0 ? 0 : void 0,
+              borderRight: value > 0 ? 0 : void 0
+            } })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-tnum", style: {
+            textAlign: "right",
+            fontSize: 14,
+            fontWeight: 600,
+            color: tone
+          }, children: reactionScoreText(value) })
+        ] }, key);
+      })
+    ] });
+  }
+  function ReactionCard({ data, trait, onContinue }) {
+    const reaction = data?.reaction;
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DocLabel, { document: "Latest voter reaction", aside: "How voters\u2019 views changed" }),
+      data?.title && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "pm-h2", children: data.title }),
+      data?.text && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-prose pm-measure", children: data.text }),
+      reaction && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+        ...column(14),
+        borderTop: `1px solid ${T.rule}`,
+        borderBottom: `1px solid ${T.rule}`,
+        padding: "18px 0"
+      }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 14, fontWeight: 600 }, children: trait === "competence" ? "Average belief in your ability" : "Average belief in your honesty" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "flex-end", gap: 22, flexWrap: "wrap" }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Fig, { label: "Before", value: pct(reaction.before), size: 30, tone: T.ink3 }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Fig, { label: "After", value: pct(reaction.after), size: 30 }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: {
+            borderLeft: `3px solid ${movementTone(reaction.after - reaction.before)}`,
+            paddingLeft: 14
+          }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+            Fig,
+            {
+              label: "Change",
+              size: 30,
+              tone: movementTone(reaction.after - reaction.before),
+              value: `${caret(reaction.after - reaction.before)} ${pp(reaction.after - reaction.before)}`
+            }
+          ) }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+            ...column(6),
+            marginLeft: "auto",
+            fontSize: 12.5,
+            lineHeight: 1.5,
+            color: T.ink3,
+            textAlign: "right"
+          }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("b", { className: "pm-tnum", style: { fontWeight: 600 }, children: pct(reaction.exposedPct) }),
+              " of voters heard about it"
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+              "of those, ",
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("b", { className: "pm-tnum", style: { fontWeight: 600 }, children: pct(reaction.admittedPct) }),
+              " took it seriously"
+            ] })
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 12, lineHeight: 1.5, color: T.ink3 }, children: "These figures show voters\u2019 average belief, not vote shares. This is the latest update, not the total effect of your choice. The change above is in percentage points (pp)." }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(BlocReaction, { reaction })
+      ] }),
+      (data?.strategyNote || data?.execution) && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+        display: "flex",
+        gap: 16,
+        flexWrap: "wrap",
+        alignItems: "stretch"
+      }, children: [
+        data.strategyNote && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+          ...column(5),
+          flex: "1 1 320px",
+          borderLeft: `3px solid ${T.ink}`,
+          paddingLeft: 16
+        }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { children: "Your analyst" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { margin: 0, fontSize: 14.5, lineHeight: 1.65, fontStyle: "italic" }, children: data.strategyNote })
+        ] }),
+        data.execution && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: card({ width: 200, ...column(4) }), children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { children: "Execution" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-h3", style: { textTransform: "capitalize" }, children: data.execution.grade }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 11.5, lineHeight: 1.5, color: T.ink3 }, children: "How well you pulled it off, not whether it was right." })
+        ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Cta, { onClick: onContinue, arrow: true, children: "Continue" }) })
+    ] });
+  }
+  function DevelopmentFocus({ interaction, onSubmit }) {
+    const [primary, setPrimary] = (0, import_react.useState)(null);
+    const [secondary, setSecondary] = (0, import_react.useState)(null);
+    const development = interaction.development;
+    const choose = (ability) => {
+      if (!primary) setPrimary(ability);
+      else if (ability !== primary) setSecondary(ability);
+    };
+    const slotOf = (ability) => primary === ability ? "Primary" : secondary === ability ? "Evenings" : null;
+    const named = (ability) => development.focuses.find((focus) => focus.ability === ability)?.label;
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DocLabel, { document: "Development", aside: "Where the next years go", gold: true }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "pm-h2", children: development.grant.reason }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-prose pm-measure", children: "Choose the skill you will spend most of your time on. Then choose another to work on in the evenings." }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-slots", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+          border: `1px ${primary ? "solid" : "dashed"} ${primary ? T.gold : T.rule}`,
+          borderRadius: 4,
+          padding: "12px 14px",
+          background: primary ? T.goldTint : "transparent",
+          ...column(4)
+        }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { gold: Boolean(primary), children: "Main focus \xB7 most of your time" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-wrap-safe", style: {
+            fontSize: 15,
+            fontWeight: 600,
+            color: primary ? T.ink : T.ink3
+          }, children: primary ? named(primary) : "Choose a focus" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+          border: `1px ${secondary ? "solid" : "dashed"} ${secondary ? T.gold : T.rule}`,
+          borderRadius: 4,
+          padding: "12px 14px",
+          background: secondary ? T.goldTint : "transparent",
+          ...column(4)
+        }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { gold: Boolean(secondary), children: "Second focus \xB7 evenings" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-wrap-safe", style: {
+            fontSize: 15,
+            fontWeight: 600,
+            color: secondary ? T.ink : T.ink3
+          }, children: secondary ? named(secondary) : "Choose a second focus" })
+        ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: column(10), children: development.focuses.map((focus) => {
+        const slot = slotOf(focus.ability);
+        const ability = ABILITIES2.find((item) => item.id === focus.ability);
+        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+          Option,
+          {
+            onClick: () => choose(focus.ability),
+            disabled: Boolean(secondary),
+            selected: Boolean(slot),
+            children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+                display: "flex",
+                justifyContent: "space-between",
+                gap: 12,
+                alignItems: "baseline",
+                flexWrap: "wrap"
+              }, children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("b", { className: "pm-wrap-safe", style: { fontWeight: 600 }, children: focus.label }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: {
+                  ...label(10, slot ? T.goldInk : T.chrome),
+                  letterSpacing: ".14em",
+                  whiteSpace: "nowrap"
+                }, children: slot || ability?.name })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 12.5, color: T.ink3, marginTop: 4, lineHeight: 1.55 }, children: focus.blurb })
+            ]
+          },
+          focus.id
+        );
+      }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", gap: 14, alignItems: "center", flexWrap: "wrap" }, children: [
+        primary && secondary && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Cta, { onClick: () => onSubmit(primary, secondary), children: "Confirm both choices" }),
+        primary && !secondary && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Ghost, { onClick: () => setPrimary(null), children: "Change your main focus" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 12.5, lineHeight: 1.55, color: T.ink3 }, children: "Choose both skills, then confirm your choices." })
+      ] })
+    ] });
+  }
+  function DevelopmentResult({ interaction, onContinue }) {
+    const record = interaction.development.result;
+    const rows = [
+      { id: record.primary, slot: "Primary", outcome: record.result?.primary },
+      { id: record.secondary, slot: "Evenings", outcome: record.result?.secondary }
+    ];
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DocLabel, { document: "Development", aside: "What came of the work", gold: true }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "pm-h2", children: record.reason }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: column(22), children: rows.map(({ id, slot, outcome }) => {
+        const ability = ABILITIES2.find((item) => item.id === id);
+        if (!ability) return null;
+        const before = record.before[id];
+        const after = record.after[id];
+        const gained = outcome?.gained ?? after - before;
+        const spent = outcome?.spent ?? 0;
+        return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+          ...column(8),
+          borderBottom: `1px solid ${T.rule}`,
+          paddingBottom: 16
+        }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "baseline",
+            gap: 14,
+            flexWrap: "wrap"
+          }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Kicker, { gold: slot === "Primary", children: [
+              slot,
+              " \xB7 ",
+              ability.name
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pm-kicker", style: { fontSize: 10 }, children: tierOf(after) })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "flex-end", gap: 20, flexWrap: "wrap" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-ledger-figs", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 28, color: T.ink3 }, children: before }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 18, color: T.chrome }, children: "\u2192" }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 40, fontWeight: 600, lineHeight: 1 }, children: after })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { ...column(3), paddingBottom: 4, flex: "1 1 240px" }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-tnum", style: {
+                fontSize: 14,
+                fontWeight: 600,
+                color: gained > 0 ? T.favour : T.ink3
+              }, children: [
+                caret(gained),
+                " ",
+                Math.abs(gained),
+                " ",
+                Math.abs(gained) === 1 ? "point" : "points"
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 14.5, fontStyle: "italic", lineHeight: 1.55 }, children: gameText(focusOutcomeText(gained, spent)) })
+            ] })
+          ] })
+        ] }, id);
+      }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Cta, { onClick: onContinue, arrow: true, children: "Continue" }) })
+    ] });
+  }
+  function Cases({ cases }) {
+    if (!cases?.length) return null;
+    const first = cases[0];
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-case", style: { margin: "4px 0" }, children: first.hi?.title ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+        "\u201C",
+        gameText(first.hi.title),
+        "\u201D \u2014 you ",
+        gameText(first.hi.said),
+        "."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { marginTop: 4 }, children: [
+        "\u201C",
+        gameText(first.lo.title),
+        "\u201D \u2014 you ",
+        gameText(first.lo.said),
+        "."
+      ] })
+    ] }) : cases.slice(0, 2).map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+      "div",
+      {
+        style: { marginTop: index ? 4 : 0 },
+        children: [
+          "\u201C",
+          gameText(item.title),
+          "\u201D \u2014 you chose: ",
+          gameText(item.label)
+        ]
+      },
+      `${gameText(item.title)}:${index}`
+    )) });
+  }
+  function Dimension({ dimension, kind }) {
+    const none = dimension.value === null || dimension.n === 0;
+    const confidence = dimension.conf ?? 0;
+    const scale = kind === "voter" && dimension.label !== "Evidence Sensitivity" ? Math.min(1, Math.abs(dimension.value ?? 0) / 0.7) : Math.min(1, Math.abs((dimension.value ?? 0) + 1) / 2);
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-dim", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-dim-top", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("b", { style: { fontSize: 16.5, fontWeight: 600, color: none ? T.ink3 : T.ink }, children: gameText(dimension.label) }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pm-tnum", style: { fontSize: 12, color: none ? T.against : T.ink3 }, children: none ? "not enough evidence" : `confidence ${pct(confidence)}` })
+      ] }),
+      !none && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Gauge, { value: scale, tone: confidence < 0.45 ? T.chrome : T.ink, height: 5 }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Cases, { cases: dimension.cases }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 12.5, color: T.ink3, lineHeight: 1.6 }, children: none ? "This career did not include enough similar situations to show a pattern." : `${dimension.n} similar ${dimension.n === 1 ? "observation" : "observations"}${dimension.detail ? ` \xB7 ${gameText(dimension.detail)}` : ""}` })
+    ] });
+  }
+  function MirrorSection({ title, aside, children }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: column(6), children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "baseline", gap: 14 }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", { className: "pm-h3", children: title }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { flex: 1, ...hairline } }),
+        aside && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pm-kicker", style: { fontSize: 10 }, children: aside })
+      ] }),
+      children
+    ] });
+  }
+  function SurveyPick({ selected, onSelect, wide = false, children }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+      "button",
+      {
+        type: "button",
+        className: `pm-pick${wide ? " pm-pick-wide" : ""}`,
+        "aria-pressed": selected,
+        onClick: onSelect,
+        children
+      }
+    );
+  }
+  function SurveyNote({ value, onChange, placeholder }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+      "textarea",
+      {
+        className: "pm-textarea",
+        rows: 2,
+        value,
+        placeholder: placeholder || "",
+        onChange: (event2) => onChange(event2.target.value)
+      }
+    );
+  }
+  function Survey({ answers, onChange }) {
+    const set = (id, value) => onChange({ ...answers, [id]: value });
+    let section = null;
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: SURVEY.map((item) => {
+      const openedSection = item.section && item.section !== section;
+      if (item.section) section = item.section;
+      return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+        openedSection && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: {
+          ...column(4),
+          borderTop: `1px solid ${T.rule}`,
+          paddingTop: 14,
+          marginTop: 8
+        }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { children: gameText(item.section) }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-q", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-wrap-safe", style: { fontSize: 14.5, fontWeight: 600, lineHeight: 1.5 }, children: gameText(item.q) }),
+          ["scale7", "scale7_na", "scale7_text"].includes(item.type) && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-scale", role: "group", "aria-label": gameText(item.q), children: [1, 2, 3, 4, 5, 6, 7].map((value) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+              SurveyPick,
+              {
+                selected: answers[item.id] === value,
+                onSelect: () => set(item.id, value),
+                children: value
+              },
+              value
+            )) }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+              display: "flex",
+              justifyContent: "space-between",
+              gap: 12,
+              fontSize: 11.5,
+              color: T.ink3,
+              lineHeight: 1.45
+            }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { children: gameText(item.lo) }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { textAlign: "right" }, children: gameText(item.hi) })
+            ] }),
+            item.na && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+              SurveyPick,
+              {
+                wide: true,
+                selected: answers[item.id] === "NA",
+                onSelect: () => set(item.id, "NA"),
+                children: gameText(item.na)
+              }
+            )
+          ] }),
+          item.type === "scale7_text" && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+            SurveyNote,
+            {
+              value: answers[`${item.id}_note`] || "",
+              placeholder: gameText(item.followUp),
+              onChange: (value) => set(`${item.id}_note`, value)
+            }
+          ),
+          item.type === "choice" && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: column(6), children: item.options.map((option) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+            SurveyPick,
+            {
+              wide: true,
+              selected: answers[item.id] === option,
+              onSelect: () => set(item.id, option),
+              children: gameText(option)
+            },
+            gameText(option)
+          )) }),
+          item.type === "yesno_text" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", gap: 6 }, children: ["Yes", "No"].map((option) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { minWidth: 96 }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+              SurveyPick,
+              {
+                wide: true,
+                selected: answers[item.id] === option,
+                onSelect: () => set(item.id, option),
+                children: gameText(option)
+              }
+            ) }, gameText(option))) }),
+            answers[item.id] === "Yes" && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+              SurveyNote,
+              {
+                value: answers[`${item.id}_which`] || "",
+                placeholder: gameText(item.followUp),
+                onChange: (value) => set(`${item.id}_which`, value)
+              }
+            )
+          ] }),
+          item.type === "text" && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+            SurveyNote,
+            {
+              value: answers[item.id] || "",
+              onChange: (value) => set(item.id, value)
+            }
+          ),
+          item.type === "multitext" && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: column(8), children: item.fields.map((field) => {
+            const key = `${item.id}:${field}`;
+            return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: column(4), children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("label", { htmlFor: `pm-${key}`, style: { fontSize: 12.5, color: T.ink3 }, children: gameText(field) }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+                "input",
+                {
+                  id: `pm-${key}`,
+                  className: "pm-input",
+                  style: { fontSize: 14.5 },
+                  value: answers[key] || "",
+                  onChange: (event2) => set(key, event2.target.value)
+                }
+              )
+            ] }, gameText(field));
+          }) })
+        ] })
+      ] }, item.id);
+    }) });
+  }
+  function restoreStudyGame(study) {
+    if (!study || !study.sessionId || !["TRUE", "SHUFFLED"].includes(study.arm))
+      throw new Error("A valid study session and assigned arm are required.");
+    if (!["GAME", "MIRROR", "SURVEY"].includes(study.stage))
+      throw new Error("Unsupported study stage.");
+    const saved = study.gameSnapshot;
+    if (!saved) {
+      if (study.stage !== "GAME") throw new Error("Completed career is missing.");
+      return { active: null, saved: null };
+    }
+    if (saved.schema !== "political-mirror-study-game/1" || saved.sessionId !== study.sessionId || saved.arm !== study.arm || saved.telemetry?.sessionId !== study.sessionId || saved.telemetry?.mirrorMode !== study.arm)
+      throw new Error("Saved career does not match this study session.");
+    const active = replayActionTranscript(saved.spec, saved.transcript);
+    if (hashCanonicalState(active) !== saved.canonicalHash || JSON.stringify(serializeCanonicalState(active)) !== JSON.stringify(saved.canonicalState))
+      throw new Error("Saved career verification failed.");
+    if (study.stage !== "GAME" && active.phase !== PHASES.MINI_MIRROR)
+      throw new Error("Feedback cannot be shown before the career is complete.");
+    return { active, saved: deepClone(saved) };
+  }
+  function PoliticalMirrorStudy({
+    study,
+    onCheckpoint,
+    onGameplayComplete,
+    onMirrorComplete,
+    onSurveyComplete,
+    onError
+  }) {
+    const restored = (0, import_react.useMemo)(() => {
+      try {
+        return restoreStudyGame(study);
+      } catch (cause) {
+        return { active: null, saved: null, error: cause };
+      }
+    }, []);
+    const saved = restored.saved;
+    const [screen, setScreen] = (0, import_react.useState)(saved ? "play" : "create");
+    const seed = saved?.spec.seed || "POL-M7GX4";
+    const [player, setPlayer] = (0, import_react.useState)(saved?.spec.player || { name: "A. Reyes", bloc: "CIV", region: "Harrow Vale", route: "CIVIC" });
+    const testMode = "natural";
+    const [showProfile, setShowProfile] = (0, import_react.useState)(false);
+    const [error, setError] = (0, import_react.useState)(restored.error?.message || null);
+    const [busy, setBusy] = (0, import_react.useState)(false);
+    const [survey, setSurvey] = (0, import_react.useState)(saved?.presentation.survey || {});
+    const [audit, setAudit] = (0, import_react.useState)(saved?.presentation.audit || null);
+    const [interp, setInterp] = (0, import_react.useState)(saved?.presentation.interpretations || {});
+    const [, setTick] = (0, import_react.useState)(0);
+    const sessionRef = (0, import_react.useRef)(restored.active);
+    const playtestRef = (0, import_react.useRef)(saved?.telemetry || null);
+    const shownAt = (0, import_react.useRef)(Date.now());
+    const resumeTiming = (0, import_react.useRef)(Boolean(saved));
+    const pending = (0, import_react.useRef)(Promise.resolve());
+    const locked = (0, import_react.useRef)(Boolean(restored.error));
+    const callbackRef = (0, import_react.useRef)({ onCheckpoint, onGameplayComplete, onMirrorComplete, onSurveyComplete, onError });
+    callbackRef.current = { onCheckpoint, onGameplayComplete, onMirrorComplete, onSurveyComplete, onError };
+    const presentation = (0, import_react.useRef)({ survey, audit, interpretations: interp });
+    const preview = (0, import_react.useMemo)(
+      () => previewStartingProfile({ seed, player, testMode }),
+      [seed, player.bloc, player.route, testMode]
+    );
+    const session = sessionRef.current;
+    const interaction = session ? presentGameInteraction(getCurrentInteraction(session), session.player) : null;
+    (0, import_react.useLayoutEffect)(() => {
+      if (!busy && !error && screen === "play" && study.stage === "GAME" && sessionRef.current?.phase !== PHASES.MINI_MIRROR) shownAt.current = Date.now();
+    }, [busy, error, screen, interaction?.phase, session?.actionIndex]);
+    function fail(cause) {
+      locked.current = true;
+      setError("Your progress could not be verified or saved. Please pause and contact the researcher.");
+      setBusy(false);
+      try {
+        Promise.resolve(callbackRef.current.onError?.({
+          code: "GAME_ADAPTER_ERROR",
+          message: cause.message,
+          at: (/* @__PURE__ */ new Date()).toISOString(),
+          actionIndex: sessionRef.current?.actionIndex ?? null
+        })).catch(() => {
+        });
+      } catch {
+      }
+    }
+    function snapshot() {
+      const active = sessionRef.current;
+      if (!active) throw new Error("No career to save.");
+      return deepClone({
+        schema: "political-mirror-study-game/1",
+        sessionId: study.sessionId,
+        arm: study.arm,
+        spec: {
+          seed: active.seed,
+          player: active.player,
+          testMode: active.testMode,
+          agentCount: active.agentCount
+        },
+        transcript: active.actionTranscript.map(({ action, hash }) => ({ action, hash })),
+        canonicalState: serializeCanonicalState(active),
+        canonicalHash: hashCanonicalState(active),
+        telemetry: playtestRef.current,
+        mirror: active.mirror,
+        presentation: { ...presentation.current, screen: "play", phaseShownAt: shownAt.current },
+        savedAt: (/* @__PURE__ */ new Date()).toISOString()
+      });
+    }
+    function checkpoint(value = snapshot()) {
+      if (typeof callbackRef.current.onCheckpoint !== "function")
+        return Promise.reject(new Error("No persistence callback configured."));
+      pending.current = pending.current.then(() => callbackRef.current.onCheckpoint(value));
+      return pending.current;
+    }
+    (0, import_react.useEffect)(() => {
+      if (restored.error) {
+        fail(restored.error);
+        return;
+      }
+      const active = sessionRef.current;
+      if (!active) return;
+      publishDebug(active);
+      if (study.stage === "GAME" && active.phase === PHASES.MINI_MIRROR) {
+        setBusy(true);
+        checkpoint().then(() => callbackRef.current.onGameplayComplete(snapshot())).catch(fail);
+      } else if (study.stage === "MIRROR" && !playtestRef.current.mirrorPresentedAt) {
+        const shown = study.arm === "SHUFFLED" ? SHUFFLED_PROFILE : active.mirror.analysis;
+        playtestRef.current.mirrorPresentedAt = (/* @__PURE__ */ new Date()).toISOString();
+        playtestRef.current.mirrorShown = study.arm;
+        playtestRef.current.feedbackDisplay = {
+          voterDimensions: Object.keys(shown.voter).length,
+          politicianDimensions: Object.keys(shown.political).length,
+          voterExampleGroups: Object.values(shown.voter).reduce((n, d) => n + (d.cases?.length || 0), 0),
+          politicianExampleGroups: Object.values(shown.political).reduce((n, d) => n + (d.cases?.length || 0), 0),
+          crossPrompts: study.arm === "SHUFFLED" ? 0 : active.mirror.cross.length,
+          checklistCount: active.mirror.checklist.length,
+          counterfactualAvailable: true
+        };
+        checkpoint().catch(fail);
+      }
+    }, []);
+    function publishDebug(active) {
+      if (typeof window === "undefined") return;
+      window.__PM_TEST_API__ = Object.freeze({
+        getTranscript: () => deepClone(active.actionTranscript),
+        getCanonicalState: () => deepClone(serializeCanonicalState(active)),
+        getHash: () => hashCanonicalState(active),
+        getInteraction: () => deepClone(presentGameInteraction(getCurrentInteraction(active), active.player)),
+        getCanonicalInteraction: () => deepClone(getCurrentInteraction(active)),
+        getStudySnapshot: () => snapshot()
+      });
+    }
+    function syncPlaytest(active, action, before, elapsed) {
+      const log = playtestRef.current;
+      if (!log) return;
+      if (action.type === ACTIONS.SUBMIT_PRIVATE_READ) {
+        logRead(log, { beatId: action.beatId, age: before.beat.age, credence: action.credence, msToDecide: elapsed });
+      }
+      if ([ACTIONS.SELECT_PUBLIC_MOVE, ACTIONS.SELECT_WILDERNESS_ROUTE].includes(action.type)) {
+        const move = active.st.log.filter((entry) => entry.kind === "move").at(-1);
+        logDecision(log, {
+          beatId: action.beatId,
+          kind: before.beat.kind,
+          age: before.beat.age,
+          choiceId: action.choiceId,
+          label: move?.label,
+          msToDecide: elapsed
+        });
+      }
+      if (action.type === ACTIONS.SELECT_DEVELOPMENT_FOCUS) {
+        const development = active.st.focusLog.at(-1);
+        logDevelopment(log, deepClone(development));
+      }
+      recordSessionSnapshot(log, active);
+      const next = getCurrentInteraction(active);
+      for (const choice of next.choices || []) {
+        if (choice.requires) logAbilityOption(log, {
+          beatId: next.beat.id,
+          choiceId: choice.id,
+          requires: choice.requires,
+          met: choice.availability.ok
+        });
+        if (!choice.availability.ok) logLocked(log, {
+          beatId: next.beat.id,
+          choiceId: choice.id,
+          reason: choice.availability.reason
+        });
+      }
+      if (active.phase === PHASES.MINI_MIRROR) recordMirrorReached(log, active, Date.now());
+    }
+    function recordSessionSnapshot(log, active) {
+      log.elections = active.elections.map(({ spec, tally, shares, winner, ...entry }) => deepClone(entry));
+      log.wildernessRoute = active.st.history.find((entry) => entry.kind === "wilderness")?.route || null;
+      log.chainsSeen = Object.entries(active.st.chains).map(([chain, value]) => ({ chain, ...deepClone(value) }));
+      log.executionChecks = active.st.execs.map((entry) => deepClone(entry));
+      log.canonicalActions = active.actionTranscript.map((entry) => deepClone(entry));
+      log.finalCanonicalHash = hashCanonicalState(active);
+      log.actualSessionSeed = active.seed;
+      log.replaySeed = active.seed;
+    }
+    function recordMirrorReached(log, active, now) {
+      if (!log || active.phase !== PHASES.MINI_MIRROR || !active.mirror) return;
+      log.mirrorReached = true;
+      markGameplayEnd(log, now);
+      log.mirror = snapshotMirror(active.mirror.analysis, active.mirror.resolution);
+      if (!log.mirrorPresentedAt) log.mirrorShown = null;
+      recordAbilityFinal(log, active.st.abilities);
+    }
+    async function act(action) {
+      if (locked.current || busy) return;
+      locked.current = true;
+      setBusy(true);
+      const active = sessionRef.current;
+      const before = getCurrentInteraction(active);
+      const submittedAt = Date.now();
+      try {
+        dispatchGameAction(active, action);
+        syncPlaytest(active, action, before, submittedAt - shownAt.current);
+        playtestRef.current.actionTimings.push({
+          actionIndex: active.actionIndex,
+          type: action.type,
+          beatId: action.beatId || null,
+          shownAt: shownAt.current,
+          submittedAt,
+          elapsedMs: submittedAt - shownAt.current,
+          resumedPhase: resumeTiming.current
+        });
+        resumeTiming.current = false;
+        shownAt.current = Date.now();
+        publishDebug(active);
+        await checkpoint();
+        if (active.phase === PHASES.MINI_MIRROR) {
+          await callbackRef.current.onGameplayComplete(snapshot());
+          return;
+        }
+        locked.current = false;
+        setBusy(false);
+        setTick((value) => value + 1);
+      } catch (cause) {
+        fail(cause);
+      }
+    }
+    async function startGame() {
+      if (locked.current || busy) return;
+      locked.current = true;
+      setBusy(true);
+      try {
+        const active = createGameSession({
+          seed,
+          player: { ...player, name: "A. Reyes" },
+          agentCount: 700,
+          testMode
+        });
+        sessionRef.current = active;
+        const log = newSession({
+          sessionId: study.sessionId,
+          seed: active.seed,
+          testMode,
+          mirrorMode: study.arm,
+          startedAt: Date.now()
+        });
+        log.character = deepClone(active.player);
+        log.actionTimings = [];
+        log.mirrorPresentedAt = null;
+        log.mirrorShown = null;
+        playtestRef.current = log;
+        dispatchGameAction(active, { type: ACTIONS.START_GAME });
+        recordAbilityStart(log, player.route, active.st.abilities);
+        recordSessionSnapshot(log, active);
+        publishDebug(active);
+        shownAt.current = Date.now();
+        await checkpoint();
+        locked.current = false;
+        setBusy(false);
+        setScreen("play");
+        setTick((value) => value + 1);
+      } catch (cause) {
+        fail(cause);
+      }
+    }
+    function updateSurvey(next) {
+      if (locked.current) return;
+      markSurveyStart(playtestRef.current, Date.now());
+      presentation.current.survey = next;
+      playtestRef.current.survey = deepClone(next);
+      setSurvey(next);
+      checkpoint().catch(fail);
+    }
+    function updateInterpretation(next) {
+      if (locked.current) return;
+      presentation.current.interpretations = next;
+      playtestRef.current.interpretations = deepClone(next);
+      setInterp(next);
+      checkpoint().catch(fail);
+    }
+    function openAudit() {
+      if (locked.current) return;
+      const result = runCounterfactualAudit(sessionRef.current);
+      presentation.current.audit = result;
+      playtestRef.current.counterfactualOpened = true;
+      setAudit(result);
+      checkpoint().catch(fail);
+    }
+    async function completeMirror() {
+      if (locked.current || busy) return;
+      locked.current = true;
+      setBusy(true);
+      try {
+        playtestRef.current.mirrorCompletedAt = (/* @__PURE__ */ new Date()).toISOString();
+        await checkpoint();
+        await callbackRef.current.onMirrorComplete(snapshot());
+      } catch (cause) {
+        fail(cause);
+      }
+    }
+    async function completeSurvey() {
+      if (locked.current || busy) return;
+      locked.current = true;
+      setBusy(true);
+      try {
+        playtestRef.current.survey = deepClone(presentation.current.survey);
+        finishSession(playtestRef.current, Date.now());
+        await checkpoint();
+        await callbackRef.current.onSurveyComplete({
+          answers: deepClone(presentation.current.survey),
+          snapshot: snapshot()
+        });
+      } catch (cause) {
+        fail(cause);
+      }
+    }
+    const errorLine = error ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: {
+      margin: 0,
+      fontSize: 13.5,
+      lineHeight: 1.6,
+      color: T.against,
+      borderLeft: `3px solid ${T.against}`,
+      paddingLeft: 12
+    }, children: error }) : null;
+    if (error) return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shell, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { role: "alert", className: "pm-prose", children: errorLine }) });
+    if (busy) return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shell, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { role: "status", className: "pm-prose", children: "Saving your progress\u2026" }) });
+    if (study.stage === "SURVEY") return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shell, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { maxWidth: 820, margin: "0 auto", ...column(24) }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { children: "Your experience" }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "pm-h2", children: "A few questions" }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-prose", children: "Every question is optional. Please avoid names or identifying details." }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Survey, { answers: survey, onChange: updateSurvey }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Cta, { onClick: completeSurvey, children: "Continue to the study explanation" })
+    ] }) });
+    if (screen === "create") {
+      const ordered = ABILITIES2.slice().sort((a, b) => preview.value[b.id] - preview.value[a.id]);
+      return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shell, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { maxWidth: 720, margin: "0 auto", ...column(26) }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: column(10), children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { children: "Before any of it started" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "pm-h2", children: "Create the politician" })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "grid", gridTemplateColumns: "repeat(auto-fit,minmax(240px,1fr))", gap: 18 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: column(7), children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-kicker", children: "Fictional character" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-prose", children: "A. Reyes" })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: column(7), children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-kicker", children: "Party" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-seg", children: Object.values(BLOCS).map((bloc) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+              "button",
+              {
+                type: "button",
+                "aria-pressed": player.bloc === bloc.id,
+                onClick: () => setPlayer({ ...player, bloc: bloc.id }),
+                children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pm-dot", style: { background: blocDot(bloc.id), width: 7, height: 7 } }),
+                  bloc.name
+                ]
+              },
+              bloc.id
+            )) })
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: column(10), children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-kicker", children: "Where you come from" }),
+          ROUTES2.map((route) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+            Option,
+            {
+              selected: player.route === route.id,
+              onClick: () => setPlayer({ ...player, route: route.id }),
+              children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", gap: 12, alignItems: "baseline" }, children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("b", { style: { fontWeight: 600 }, children: route.name }),
+                  player.route === route.id && /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { ...label(10, T.goldInk), letterSpacing: ".16em" }, children: "Selected" })
+                ] }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 13, color: T.ink3, marginTop: 4, lineHeight: 1.55 }, children: route.blurb })
+              ]
+            },
+            route.id
+          ))
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { ...column(12), borderTop: `1px solid ${T.rule}`, paddingTop: 20 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 14 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-h3", children: "You at twenty-three" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pm-kicker", style: { fontSize: 10 }, children: "Strongest first" })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: ordered.map((ability) => {
+            const value = preview.value[ability.id];
+            const word = startingWord(value);
+            const filled = startingNotches(value);
+            const tone2 = word === "Strength" ? T.goldInk : word === "Weakness" ? T.against : T.ink3;
+            return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+              display: "grid",
+              gridTemplateColumns: "minmax(0,1fr) 96px 92px",
+              gap: 14,
+              alignItems: "center",
+              padding: "11px 0",
+              borderBottom: `1px solid ${T.hair}`
+            }, children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: column(2), children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 15 }, children: ability.name }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 12, lineHeight: 1.45, color: T.ink3 }, children: ability.does })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", gap: 3 }, "aria-hidden": "true", children: [0, 1, 2, 3, 4].map((index) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: {
+                flex: 1,
+                height: 8,
+                background: index < filled ? word === "Weakness" ? T.against : T.ink : "var(--pm-inset)"
+              } }, index)) }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { ...label(11, tone2), letterSpacing: ".12em", textAlign: "right" }, children: word })
+            ] }, ability.id);
+          }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: { margin: 0, fontSize: 13.5, lineHeight: 1.65, fontStyle: "italic" }, children: gameText(BACKGROUND_ABILITIES[player.route]?.note) }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 12, lineHeight: 1.6, color: T.ink3 }, children: "These bars show your starting strengths. You will discover how much each skill can improve as you play." })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Cta, { block: true, onClick: startGame, children: "Start the career" }),
+        errorLine
+      ] }) });
+    }
+    if (!session || !interaction) return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shell, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-prose", children: "Loading\u2026" }) });
+    const beat = interaction.beat;
+    const continueAction = {
+      [PHASES.REACTION]: ACTIONS.CONTINUE_REACTION,
+      [PHASES.CHAIN_RETURN]: ACTIONS.CONTINUE_CHAIN,
+      [PHASES.ELECTION_RESULT]: ACTIONS.CONTINUE_ELECTION,
+      [PHASES.DEVELOPMENT_RESULT]: ACTIONS.CONTINUE_DEVELOPMENT_RESULT,
+      [PHASES.WILDERNESS_RESULT]: ACTIONS.CONTINUE_WILDERNESS
+    }[interaction.phase];
+    if (interaction.phase === PHASES.CAREER_SUMMARY) return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shell, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { maxWidth: 820, margin: "0 auto", ...column(28) }, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "flex-end",
+        gap: 24,
+        borderBottom: `2px solid ${T.ink}`,
+        paddingBottom: 16
+      }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: column(6), children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { children: "The record so far" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "pm-h2", children: session.player.name })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Fig, { label: "Age", value: session.st.age, size: 30 })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-record-head", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-kicker", style: { fontSize: 10 }, children: "Age" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-kicker", style: { fontSize: 10 }, children: "Office" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-kicker", style: { fontSize: 10, textAlign: "right" }, children: "Your vote share" }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-kicker", style: { fontSize: 10, textAlign: "right" }, children: "Result" })
+        ] }),
+        interaction.summary.elections.map((election) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+          "div",
+          {
+            className: "pm-record-row",
+            children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-tnum", style: { fontSize: 15 }, children: election.age }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-wrap-safe", style: { fontSize: 16 }, children: election.office }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-num", style: { fontSize: 22, textAlign: "right" }, children: pct(election.share) }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: {
+                ...label(11, election.won ? T.favour : T.against),
+                letterSpacing: ".16em",
+                textAlign: "right"
+              }, children: election.won ? "Won" : "Lost" })
+            ]
+          },
+          `${election.age}:${election.office}`
+        ))
+      ] }),
+      Object.keys(interaction.summary.chains || {}).length > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: column(8), children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { children: "Files that came back" }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { display: "flex", gap: 8, flexWrap: "wrap" }, children: Object.keys(interaction.summary.chains).map((key) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+          "span",
+          {
+            className: "pm-file-tab",
+            style: { border: `1px solid ${T.rule}`, borderRadius: 3 },
+            children: CHAINS[key]?.file || key
+          },
+          key
+        )) })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+        display: "flex",
+        gap: 40,
+        alignItems: "flex-end",
+        flexWrap: "wrap",
+        borderTop: `1px solid ${T.rule}`,
+        paddingTop: 22
+      }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Fig, { label: "Public decisions", value: interaction.summary.moves, size: 34 }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Fig, { label: "Private judgments", value: interaction.summary.reads, size: 34 }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-prose", style: { flex: "1 1 260px", maxWidth: "34ch", fontSize: 14.5 }, children: "Your career is complete. Next, you will judge some new cases before seeing your feedback." }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Cta, { arrow: true, onClick: () => act({ type: ACTIONS.VIEW_MIRROR }), children: "Continue" })
+      ] }),
+      errorLine
+    ] }) });
+    if (interaction.phase === PHASES.MINI_MIRROR && study.stage !== "MIRROR")
+      return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shell, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { role: "status", className: "pm-prose", children: "Preparing the next part\u2026" }) });
+    if (interaction.phase === PHASES.MINI_MIRROR && study.stage === "MIRROR") {
+      const arm = playtestRef.current?.mirrorMode || "TRUE";
+      const shownAnalysis = arm === "SHUFFLED" ? SHUFFLED_PROFILE : interaction.mirror.analysis;
+      const shownResolution = arm === "SHUFFLED" ? SHUFFLED_RESOLUTION : interaction.mirror.resolution;
+      const shownCross = arm === "SHUFFLED" ? [] : interaction.mirror.cross;
+      return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shell, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { maxWidth: 820, margin: "0 auto", ...column(36) }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-mirror-head pm-tone-ink", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { ...column(12), flex: "1 1 280px" }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { gold: true, children: "Your Mirror \xB7 one political life" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-h2", children: "How much this game showed" }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-prose", style: { fontSize: 14.5, color: T.ink3 }, children: "This is an early picture based on one political life. Another life would help show whether the same patterns appear again. These percentages summarize the evidence in the game; they are not the chance that this profile is correct." })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { ...column(10), alignItems: "flex-end", flex: "0 1 260px", minWidth: 200 }, children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-num", style: {
+              fontSize: "clamp(52px,9vw,88px)",
+              lineHeight: 0.9,
+              fontWeight: 400
+            }, children: pct(shownResolution.resolution) }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { width: "100%" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Gauge, { value: shownResolution.resolution, tone: T.gold, height: 4 }) }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: {
+              display: "flex",
+              gap: "4px 14px",
+              flexWrap: "wrap",
+              justifyContent: "flex-end"
+            }, children: Object.entries(shownResolution.components || {}).map(([key, value]) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { className: "pm-kicker pm-tnum", style: { fontSize: 10 }, children: [
+              { volume: "Amount of evidence", coverage: "Range of situations", replication: "Repeated comparisons", consistency: "Pattern consistency" }[key] || key,
+              " ",
+              pct(value)
+            ] }, key)) })
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MirrorSection, { title: "How you judged others", children: Object.values(shownAnalysis.voter).map((dimension) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+          Dimension,
+          {
+            dimension,
+            kind: "voter"
+          },
+          dimension.label
+        )) }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MirrorSection, { title: "How you held power", children: Object.values(shownAnalysis.political).map((dimension) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+          Dimension,
+          {
+            dimension,
+            kind: "political"
+          },
+          dimension.label
+        )) }),
+        shownCross.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MirrorSection, { title: "Your actions and your judgments", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: column(16), children: shownCross.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+          "div",
+          {
+            style: {
+              border: `1px solid ${T.gold}`,
+              borderRadius: 4,
+              padding: "clamp(18px,2.5vw,28px)",
+              ...column(18)
+            },
+            children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-h2", style: { fontSize: "clamp(22px,2.8vw,30px)" }, children: gameText(item.title) }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-cross-cols", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { ...column(6), borderLeft: `2px solid ${T.rule}`, paddingLeft: 16 }, children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { children: "As a politician" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-wrap-safe", style: { margin: 0, fontSize: 15, lineHeight: 1.65 }, children: gameText(item.politician) })
+                ] }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { ...column(6), borderLeft: `2px solid ${T.gold}`, paddingLeft: 16 }, children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { gold: true, children: "When judging others" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-wrap-safe", style: { margin: 0, fontSize: 15, lineHeight: 1.65 }, children: gameText(item.voter) })
+                ] })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { ...column(10), borderTop: `1px solid ${T.rule}`, paddingTop: 16 }, children: interp[index] === void 0 ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { fontSize: 15, fontWeight: 600 }, children: "What do you think explains this?" }),
+                item.options.map((option, optionIndex) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+                  Option,
+                  {
+                    onClick: () => updateInterpretation({ ...interp, [index]: optionIndex }),
+                    children: gameText(option)
+                  },
+                  gameText(option)
+                ))
+              ] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", { style: { margin: 0, fontSize: 13.5, color: T.ink3 }, children: [
+                  "You said: \u201C",
+                  gameText(item.options[interp[index]]),
+                  "\u201D"
+                ] }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("b", { className: "pm-wrap-safe", style: { fontWeight: 600 }, children: gameText(item.title) })
+              ] }) })
+            ]
+          },
+          gameText(item.title)
+        )) }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MirrorSection, { title: "The same career, different voters", children: !audit ? /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { ...column(8) }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-prose", style: { fontSize: 14.5 }, children: "See how voters would respond to the same decisions if one way of judging evidence changed." }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Ghost, { onClick: openAudit, children: "Replay my career" }) })
+        ] }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: column(10), children: audit.conditions.filter((condition) => condition.interpretable).map((condition) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: ruledRow({ flexWrap: "wrap" }), children: [
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("b", { className: "pm-wrap-safe", style: {
+            fontWeight: 600,
+            fontSize: 15,
+            flex: "1 1 240px"
+          }, children: gameText(condition.label) }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { className: "pm-tnum", style: { fontSize: 13.5, color: T.ink3 }, children: [
+            pct(condition.share),
+            " of the change in the affected group\u2019s view"
+          ] })
+        ] }, condition.id)) }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MirrorSection, { title: "Outside the game", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: column(12), children: interaction.mirror.checklist.map((item, index) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+          "div",
+          {
+            style: { display: "flex", gap: 16, alignItems: "baseline" },
+            children: [
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pm-num pm-tnum", style: {
+                fontSize: 19,
+                color: T.gold,
+                fontWeight: 400,
+                flex: "none"
+              }, children: String(index + 1).padStart(2, "0") }),
+              /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-prose pm-wrap-safe", style: { fontSize: 16, maxWidth: "70ch" }, children: gameText(item) })
+            ]
+          },
+          `${index}:${item}`
+        )) }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { style: {
+          margin: 0,
+          fontSize: 12.5,
+          lineHeight: 1.7,
+          color: T.ink3,
+          borderTop: `1px solid ${T.rule}`,
+          paddingTop: 18
+        }, children: "These patterns describe your choices in this game. The game is designed for learning; it has not been validated as a psychological test." }),
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Cta, { onClick: completeMirror, children: "Continue to the next cases" }) }),
+        errorLine
+      ] }) });
+    }
+    const isPrivate = interaction.phase === PHASES.PRIVATE_READ;
+    const isOut = [PHASES.WILDERNESS_CHOICE, PHASES.WILDERNESS_RESULT].includes(interaction.phase);
+    const tone = isPrivate ? "pm-tone-ink" : isOut ? "pm-tone-out" : void 0;
+    const isChoice = [PHASES.STORY_CHOICE, PHASES.PUBLIC_MOVE, PHASES.WILDERNESS_CHOICE].includes(interaction.phase);
+    const lockedCount = (interaction.choices || []).filter((choice) => !choice.availability.ok).length;
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+        Shell,
+        {
+          tone,
+          head: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(StandingHead, { interaction, onProfile: () => setShowProfile(true) }),
+          children: isPrivate ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+            PrivateRead,
+            {
+              interaction,
+              beat,
+              session,
+              onSubmit: (credence) => act({ type: ACTIONS.SUBMIT_PRIVATE_READ, beatId: beat.id, credence })
+            }
+          ) : /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-cols", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-main", children: [
+              isChoice && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+                  DocLabel,
+                  {
+                    mark: interaction.phase === PHASES.PUBLIC_MOVE,
+                    gold: interaction.phase !== PHASES.WILDERNESS_CHOICE,
+                    document: interaction.phase === PHASES.PUBLIC_MOVE ? "On the record" : interaction.phase === PHASES.WILDERNESS_CHOICE ? "Out of office" : "A decision",
+                    aside: interaction.phase === PHASES.PUBLIC_MOVE ? "Public response" : null
+                  }
+                ),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "pm-h2", children: beat.title }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-prose pm-measure", children: beat.text }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { ...column(12), borderTop: `1px solid ${T.rule}`, paddingTop: 20 }, children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "baseline",
+                    gap: 16,
+                    flexWrap: "wrap"
+                  }, children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-h3", children: beat.prompt || (interaction.phase === PHASES.PUBLIC_MOVE ? "What will you do in public?" : "What do you do?") }),
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("span", { className: "pm-kicker", style: { fontSize: 10 }, children: [
+                      interaction.choices.length,
+                      " options",
+                      lockedCount ? ` \xB7 ${lockedCount} locked` : ""
+                    ] })
+                  ] }),
+                  interaction.choices.map((choice) => {
+                    const rated = interaction.publicState.abilities.value;
+                    const meters = Object.entries(choice.requires || {}).map(([id, level]) => ({
+                      name: ABILITIES2.find((ability) => ability.id === id)?.name || id,
+                      value: rated[id] ?? 0,
+                      required: level
+                    }));
+                    const gate = meters.length ? `Needs ${meters.map((meter) => `${meter.name} around ${meter.required}`).join(", ")}.` : null;
+                    const price = choice.cost ? `Costs ${Object.entries(choice.cost).map(([resource, amount]) => `${amount} ${{ capital: "political influence", standing: "party support", funds: "funds" }[resource] || resource}`).join(", ")}.` : null;
+                    return choice.availability.ok ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+                      Option,
+                      {
+                        meta: [gate, price].filter(Boolean).join(" ") || null,
+                        onClick: () => act({
+                          type: interaction.phase === PHASES.WILDERNESS_CHOICE ? ACTIONS.SELECT_WILDERNESS_ROUTE : ACTIONS.SELECT_PUBLIC_MOVE,
+                          beatId: beat.id,
+                          choiceId: choice.id
+                        }),
+                        children: choice.label
+                      },
+                      choice.id
+                    ) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+                      LockedOption,
+                      {
+                        reason: choice.availability.reason,
+                        meters,
+                        needs: price,
+                        children: choice.label
+                      },
+                      choice.id
+                    );
+                  })
+                ] })
+              ] }),
+              interaction.phase === PHASES.REACTION && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+                ReactionCard,
+                {
+                  data: interaction.reaction,
+                  trait: session.eventTrace.slice().reverse().find((event2) => event2.actorId === "PLAYER" && event2.beatId === beat.id)?.trait,
+                  onContinue: () => act({ type: continueAction, beatId: beat.id })
+                }
+              ),
+              interaction.phase === PHASES.DEVELOPMENT_FOCUS && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+                DevelopmentFocus,
+                {
+                  interaction,
+                  onSubmit: (primary, secondary) => act({
+                    type: ACTIONS.SELECT_DEVELOPMENT_FOCUS,
+                    beatId: beat.id,
+                    primary,
+                    secondary
+                  })
+                },
+                `${beat.id}:${interaction.development.grant.reason}`
+              ),
+              interaction.phase === PHASES.DEVELOPMENT_RESULT && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+                DevelopmentResult,
+                {
+                  interaction,
+                  onContinue: () => act({ type: continueAction, beatId: beat.id })
+                }
+              ),
+              interaction.phase === PHASES.WILDERNESS_RESULT && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DocLabel, { document: "Out of office", aside: beat.chapter || null }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "pm-h2", children: beat.title }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-prose pm-measure", style: { lineHeight: 1.8 }, children: interaction.wilderness.text }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-quote pm-measure", style: {
+                  borderTop: `1px solid ${T.rule}`,
+                  paddingTop: 18,
+                  color: T.ink2
+                }, children: interaction.wilderness.note }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Cta, { onClick: () => act({ type: continueAction, beatId: beat.id }), arrow: true, children: "Continue" }) })
+              ] }),
+              interaction.phase === PHASES.CHAIN_RETURN && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DocLabel, { document: "From the archive", aside: "Something you already judged", gold: true }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { display: "flex", alignItems: "flex-end" }, children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-file-tab", children: interaction.chain.recall.file }),
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { flex: 1, ...hairline } })
+                ] }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "pm-h2", children: interaction.chain.head }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-prose pm-measure", children: interaction.chain.body }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-clipping", children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { ...column(4), minWidth: 120, flex: "0 1 150px" }, children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { children: "From your own file" }),
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-h3", children: interaction.chain.recall.header })
+                  ] }),
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { ...column(8), flex: "1 1 240px", minWidth: 0 }, children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-wrap-safe", style: { fontSize: 15.5, lineHeight: 1.6 }, children: interaction.chain.recall.line }),
+                    interaction.chain.did && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
+                      display: "flex",
+                      gap: 9,
+                      alignItems: "baseline",
+                      flexWrap: "wrap"
+                    }, children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { ...label(10), letterSpacing: ".16em", whiteSpace: "nowrap" }, children: "Publicly" }),
+                      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pm-wrap-safe", style: {
+                        fontSize: 15.5,
+                        lineHeight: 1.6,
+                        fontStyle: "italic",
+                        flex: "1 1 200px"
+                      }, children: interaction.chain.did })
+                    ] })
+                  ] })
+                ] }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { borderLeft: `3px solid ${T.gold}`, paddingLeft: 20 }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-quote pm-measure", style: { fontStyle: "normal" }, children: interaction.chain.verdict }) }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Cta, { onClick: () => act({ type: continueAction, beatId: beat.id }), arrow: true, children: "Continue" }) })
+              ] }),
+              interaction.phase === PHASES.ELECTION_RESULT && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime.jsx)(DocLabel, { document: "Election result", aside: interaction.election.office, gold: true }),
+                /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-plate", style: column(26), children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { ...column(12), alignItems: "center", textAlign: "center" }, children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Kicker, { gold: true, children: [
+                      interaction.election.office,
+                      " \xB7 age ",
+                      interaction.election.age
+                    ] }),
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-h1", style: { fontSize: "clamp(38px,7vw,72px)" }, children: interaction.election.won ? "You won." : "You lost." })
+                  ] }),
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: {
+                    ...column(16),
+                    borderTop: `1px solid ${T.rule}`,
+                    borderBottom: `1px solid ${T.rule}`,
+                    padding: "20px 0"
+                  }, children: (interaction.election.spec?.candidates || []).map((entry) => {
+                    const share = interaction.election.shares?.[entry.id];
+                    if (typeof share !== "number") return null;
+                    const mine = entry.id === "PLAYER";
+                    const votes = interaction.election.tally?.[entry.id];
+                    const name = mine ? session.player.name : `${BLOCS[entry.bloc]?.name || "Opposition"} candidate`;
+                    return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-cand-row", children: [
+                      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: column(7), children: [
+                        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-cand-name", children: [
+                          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { className: "pm-dot", style: { background: blocDot(entry.bloc) } }),
+                          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { style: { fontSize: 15, fontWeight: mine ? 600 : 400 }, children: name })
+                        ] }),
+                        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { height: 13, background: "var(--pm-inset)" }, "aria-hidden": "true", children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: {
+                          width: `${share * 100}%`,
+                          height: 13,
+                          background: mine ? T.ink : T.chrome
+                        } }) })
+                      ] }),
+                      /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-cand-figs", children: [
+                        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-cand-share", style: {
+                          fontWeight: mine ? 600 : 400,
+                          color: mine ? T.ink : T.ink3
+                        }, children: [
+                          (share * 100).toFixed(2),
+                          "%"
+                        ] }),
+                        typeof votes === "number" && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(
+                          "div",
+                          {
+                            className: "pm-tnum",
+                            style: { fontSize: 12.5, color: T.ink3, marginTop: 3 },
+                            children: [
+                              votes.toLocaleString("en-GB"),
+                              " votes"
+                            ]
+                          }
+                        )
+                      ] })
+                    ] }, entry.id);
+                  }) }),
+                  /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-plate-figs", children: [
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Fig, { label: "Turnout", value: pct(interaction.election.turnout), size: 26 }),
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Fig, { label: "Approval", value: pct(interaction.election.approval), size: 26 }),
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Fig, { label: "Your vote share", value: pct(interaction.election.share), size: 26 }),
+                    /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { marginLeft: "auto" }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Cta, { onClick: () => act({ type: continueAction, beatId: beat.id }), arrow: true, children: "Continue" }) })
+                  ] })
+                ] })
+              ] }),
+              errorLine
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Rail, { interaction, session })
+          ] })
+        }
+      ),
+      showProfile && /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+        Profile,
+        {
+          abilities: interaction.publicState.abilities,
+          age: interaction.publicState.age,
+          onClose: () => setShowProfile(false)
+        }
+      )
+    ] });
+  }
+
+  // pilot/cases.mjs
+  var CASE_BANK_VERSION = "pm-parallel-cases/1.0.0";
+  var DIMENSIONS = Object.freeze([
+    "evidenceSensitivity",
+    "partisanSymmetry",
+    "crowdSusceptibility",
+    "deniabilitySusceptibility"
+  ]);
+  var JUDGMENT_PROMPT = "How likely is it that the official deliberately misused their public position in the way alleged?";
+  var VOTE_PROMPT = "If these were your only two options, would you retain this official or replace them with an otherwise comparable candidate?";
+  var FEATURE_ROWS = [
+    ["E_LOW", "evidenceSensitivity", "LOW", { evidence: 0.2, partisan: 0, crowd: 0, deniability: 0 }],
+    ["P_OWN", "partisanSymmetry", "PLAYER_SIDE", { evidence: 0.45, partisan: -0.5, crowd: 0, deniability: 0 }],
+    ["C_HIGH", "crowdSusceptibility", "CROWD_HIGH", { evidence: 0.45, partisan: 0, crowd: 0.5, deniability: 0 }],
+    ["D_HIGH", "deniabilitySusceptibility", "DEN_HIGH", { evidence: 0.45, partisan: 0, crowd: 0, deniability: 0.5 }],
+    ["E_HIGH", "evidenceSensitivity", "HIGH", { evidence: 0.7, partisan: 0, crowd: 0, deniability: 0 }],
+    ["P_OPP", "partisanSymmetry", "OPPOSING_SIDE", { evidence: 0.45, partisan: 0.5, crowd: 0, deniability: 0 }],
+    ["C_LOW", "crowdSusceptibility", "CROWD_LOW", { evidence: 0.45, partisan: 0, crowd: -0.5, deniability: 0 }],
+    ["D_LOW", "deniabilitySusceptibility", "DEN_LOW", { evidence: 0.45, partisan: 0, crowd: 0, deniability: -0.5 }]
+  ];
+  var TEXTS = {
     A: [
-        ['The delivery van', 'Councillor Lena Voss is accused of using a city delivery van to move stock for her private furniture shop. An anonymous online post says a van was seen near the shop. The photograph is blurred, the number plate cannot be read, and no journey record has been obtained. Voss denies arranging any private deliveries. No party affiliation or public reaction is reported.'],
-        ['The festival stall', 'Imagine that Councillor Ravi Sen belongs to the political party whose policies you generally prefer. Sen is accused of moving a campaign volunteer ahead of other applicants for a city festival stall. A dated waiting list shows the volunteer moved from eighth to first, but the reason field is blank. Sen says an eligibility review explains the change. No review record or additional evidence is available.'],
-        ['The evening hall booking', 'Councillor Mara Cole is accused of arranging free use of the town hall for a friend’s private ticketed talk. A booking entry lists Cole as the contact but leaves the payment field blank. It is unclear whether an invoice was issued separately. Cole denies arranging free access. Thousands of people have reposted this same entry with angry comments; none provides new evidence. No party affiliation is reported.'],
-        ['The overtime memo', 'A scanned memo appears to show Councillor Joel Ward directing paid city staff to prepare campaign leaflets. If authentic, the instruction would be a misuse of public resources. Ward says his signature was copied onto a draft he never approved. Only a forwarded scan is available, and the original has not been located or independently authenticated. No party affiliation or public reaction is reported.'],
-        ['The printing order', 'Councillor Tessa Reed is accused of using the city printing service for her private art sale. An independently checked order record identifies Reed, specifies the private sale flyers, and charges the job to the city. In a verified message, Reed acknowledges knowingly using the city account for this personal expense. No party affiliation or public reaction is reported.'],
-        ['The market stall', 'Imagine that Councillor Owen Park belongs to the political party whose policies you generally oppose. Park is accused of moving a campaign volunteer ahead of other applicants for a city market stall. A dated waiting list shows the volunteer moved from eighth to first, but the reason field is blank. Park says an eligibility review explains the change. No review record or additional evidence is available.'],
-        ['The afternoon hall booking', 'Councillor Nia Bell is accused of arranging free use of the town hall for a friend’s private ticketed lecture. A booking entry lists Bell as the contact but leaves the payment field blank. It is unclear whether an invoice was issued separately. Bell denies arranging free access. A local reporter has filed the entry, but there has been no public circulation or reaction. No party affiliation is reported.'],
-        ['The staffing memo', 'A signed memo appears to show Councillor Evan Moss directing paid city staff to prepare campaign posters. If authentic, the instruction would be a misuse of public resources. Moss says his signature was copied onto a draft he never approved. The original is available, and two independent document examiners confirm the signature and find no alterations. No party affiliation or public reaction is reported.'],
+      ["The delivery van", "Councillor Lena Voss is accused of using a city delivery van to move stock for her private furniture shop. An anonymous online post says a van was seen near the shop. The photograph is blurred, the number plate cannot be read, and no journey record has been obtained. Voss denies arranging any private deliveries. No party affiliation or public reaction is reported."],
+      ["The festival stall", "Imagine that Councillor Ravi Sen belongs to the political party whose policies you generally prefer. Sen is accused of moving a campaign volunteer ahead of other applicants for a city festival stall. A dated waiting list shows the volunteer moved from eighth to first, but the reason field is blank. Sen says an eligibility review explains the change. No review record or additional evidence is available."],
+      ["The evening hall booking", "Councillor Mara Cole is accused of arranging free use of the town hall for a friend\u2019s private ticketed talk. A booking entry lists Cole as the contact but leaves the payment field blank. It is unclear whether an invoice was issued separately. Cole denies arranging free access. Thousands of people have reposted this same entry with angry comments; none provides new evidence. No party affiliation is reported."],
+      ["The overtime memo", "A scanned memo appears to show Councillor Joel Ward directing paid city staff to prepare campaign leaflets. If authentic, the instruction would be a misuse of public resources. Ward says his signature was copied onto a draft he never approved. Only a forwarded scan is available, and the original has not been located or independently authenticated. No party affiliation or public reaction is reported."],
+      ["The printing order", "Councillor Tessa Reed is accused of using the city printing service for her private art sale. An independently checked order record identifies Reed, specifies the private sale flyers, and charges the job to the city. In a verified message, Reed acknowledges knowingly using the city account for this personal expense. No party affiliation or public reaction is reported."],
+      ["The market stall", "Imagine that Councillor Owen Park belongs to the political party whose policies you generally oppose. Park is accused of moving a campaign volunteer ahead of other applicants for a city market stall. A dated waiting list shows the volunteer moved from eighth to first, but the reason field is blank. Park says an eligibility review explains the change. No review record or additional evidence is available."],
+      ["The afternoon hall booking", "Councillor Nia Bell is accused of arranging free use of the town hall for a friend\u2019s private ticketed lecture. A booking entry lists Bell as the contact but leaves the payment field blank. It is unclear whether an invoice was issued separately. Bell denies arranging free access. A local reporter has filed the entry, but there has been no public circulation or reaction. No party affiliation is reported."],
+      ["The staffing memo", "A signed memo appears to show Councillor Evan Moss directing paid city staff to prepare campaign posters. If authentic, the instruction would be a misuse of public resources. Moss says his signature was copied onto a draft he never approved. The original is available, and two independent document examiners confirm the signature and find no alterations. No party affiliation or public reaction is reported."]
     ],
     B: [
-        ['The surveying kit', 'Councillor Iris Dale is accused of taking city surveying equipment for work on her private orchard. An anonymous online post says equipment was seen near the orchard. The photograph is blurred, the equipment label cannot be read, and no checkout record has been obtained. Dale denies arranging any private use. No party affiliation or public reaction is reported.'],
-        ['The west marina berth', 'Imagine that Councillor Amir Lake belongs to the political party whose policies you generally prefer. Lake is accused of moving a campaign volunteer ahead of other applicants for a city marina berth. A dated waiting list shows the volunteer moved from eighth to first, but the reason field is blank. Lake says an eligibility review explains the change. No review record or additional evidence is available.'],
-        ['The morning pool lane', 'Councillor Rosa Finch is accused of arranging free use of a municipal pool lane for a friend’s private paid coaching. A booking entry lists Finch as the contact but leaves the payment field blank. It is unclear whether an invoice was issued separately. Finch denies arranging free access. Thousands of people have reposted this same entry with angry comments; none provides new evidence. No party affiliation is reported.'],
-        ['The mailing instruction', 'A scanned instruction appears to show Councillor Milo Stone directing paid city staff to send campaign mailings. If authentic, the instruction would be a misuse of public resources. Stone says his signature was copied onto a draft he never approved. Only a forwarded scan is available, and the original has not been located or independently authenticated. No party affiliation or public reaction is reported.'],
-        ['The translation order', 'Councillor Anya Frost is accused of using the city translation service for her private cookbook. An independently checked order record identifies Frost, specifies the private cookbook text, and charges the job to the city. In a verified message, Frost acknowledges knowingly using the city account for this personal expense. No party affiliation or public reaction is reported.'],
-        ['The east marina berth', 'Imagine that Councillor Leo Brook belongs to the political party whose policies you generally oppose. Brook is accused of moving a campaign volunteer ahead of other applicants for a city marina berth. A dated waiting list shows the volunteer moved from eighth to first, but the reason field is blank. Brook says an eligibility review explains the change. No review record or additional evidence is available.'],
-        ['The evening pool lane', 'Councillor Hana Wells is accused of arranging free use of a municipal pool lane for a friend’s private paid training. A booking entry lists Wells as the contact but leaves the payment field blank. It is unclear whether an invoice was issued separately. Wells denies arranging free access. A local reporter has filed the entry, but there has been no public circulation or reaction. No party affiliation is reported.'],
-        ['The call-list instruction', 'A signed instruction appears to show Councillor Noah Field directing paid city staff to make campaign calls. If authentic, the instruction would be a misuse of public resources. Field says his signature was copied onto a draft he never approved. The original is available, and two independent document examiners confirm the signature and find no alterations. No party affiliation or public reaction is reported.'],
+      ["The surveying kit", "Councillor Iris Dale is accused of taking city surveying equipment for work on her private orchard. An anonymous online post says equipment was seen near the orchard. The photograph is blurred, the equipment label cannot be read, and no checkout record has been obtained. Dale denies arranging any private use. No party affiliation or public reaction is reported."],
+      ["The west marina berth", "Imagine that Councillor Amir Lake belongs to the political party whose policies you generally prefer. Lake is accused of moving a campaign volunteer ahead of other applicants for a city marina berth. A dated waiting list shows the volunteer moved from eighth to first, but the reason field is blank. Lake says an eligibility review explains the change. No review record or additional evidence is available."],
+      ["The morning pool lane", "Councillor Rosa Finch is accused of arranging free use of a municipal pool lane for a friend\u2019s private paid coaching. A booking entry lists Finch as the contact but leaves the payment field blank. It is unclear whether an invoice was issued separately. Finch denies arranging free access. Thousands of people have reposted this same entry with angry comments; none provides new evidence. No party affiliation is reported."],
+      ["The mailing instruction", "A scanned instruction appears to show Councillor Milo Stone directing paid city staff to send campaign mailings. If authentic, the instruction would be a misuse of public resources. Stone says his signature was copied onto a draft he never approved. Only a forwarded scan is available, and the original has not been located or independently authenticated. No party affiliation or public reaction is reported."],
+      ["The translation order", "Councillor Anya Frost is accused of using the city translation service for her private cookbook. An independently checked order record identifies Frost, specifies the private cookbook text, and charges the job to the city. In a verified message, Frost acknowledges knowingly using the city account for this personal expense. No party affiliation or public reaction is reported."],
+      ["The east marina berth", "Imagine that Councillor Leo Brook belongs to the political party whose policies you generally oppose. Brook is accused of moving a campaign volunteer ahead of other applicants for a city marina berth. A dated waiting list shows the volunteer moved from eighth to first, but the reason field is blank. Brook says an eligibility review explains the change. No review record or additional evidence is available."],
+      ["The evening pool lane", "Councillor Hana Wells is accused of arranging free use of a municipal pool lane for a friend\u2019s private paid training. A booking entry lists Wells as the contact but leaves the payment field blank. It is unclear whether an invoice was issued separately. Wells denies arranging free access. A local reporter has filed the entry, but there has been no public circulation or reaction. No party affiliation is reported."],
+      ["The call-list instruction", "A signed instruction appears to show Councillor Noah Field directing paid city staff to make campaign calls. If authentic, the instruction would be a misuse of public resources. Field says his signature was copied onto a draft he never approved. The original is available, and two independent document examiners confirm the signature and find no alterations. No party affiliation or public reaction is reported."]
     ],
     C: [
-        ['The recording studio', 'Councillor Ada Marsh is accused of using the city recording studio for her private advertising business. An anonymous online post says she was seen near the studio. The photograph is blurred, the entrance sign cannot be read, and no booking record has been obtained. Marsh denies arranging any private sessions. No party affiliation or public reaction is reported.'],
-        ['The north parking space', 'Imagine that Councillor Sami Glen belongs to the political party whose policies you generally prefer. Glen is accused of moving a campaign volunteer ahead of other applicants for a city overnight parking space. A dated waiting list shows the volunteer moved from eighth to first, but the reason field is blank. Glen says an eligibility review explains the change. No review record or additional evidence is available.'],
-        ['The first telescope booking', 'Councillor Clara Pine is accused of arranging free use of a municipal telescope for a friend’s private paid tour. A booking entry lists Pine as the contact but leaves the payment field blank. It is unclear whether an invoice was issued separately. Pine denies arranging free access. Thousands of people have reposted this same entry with angry comments; none provides new evidence. No party affiliation is reported.'],
-        ['The dispatch instruction', 'A scanned instruction appears to show Councillor Theo Vale directing paid city staff to deliver campaign newsletters. If authentic, the instruction would be a misuse of public resources. Vale says his signature was copied onto a draft he never approved. Only a forwarded scan is available, and the original has not been located or independently authenticated. No party affiliation or public reaction is reported.'],
-        ['The storage order', 'Councillor Mira Hart is accused of using the city warehouse for her private catering stock. An independently checked order record identifies Hart, specifies the private business supplies, and charges storage to the city. In a verified message, Hart acknowledges knowingly using the city account for this personal expense. No party affiliation or public reaction is reported.'],
-        ['The south parking space', 'Imagine that Councillor Luca Birch belongs to the political party whose policies you generally oppose. Birch is accused of moving a campaign volunteer ahead of other applicants for a city overnight parking space. A dated waiting list shows the volunteer moved from eighth to first, but the reason field is blank. Birch says an eligibility review explains the change. No review record or additional evidence is available.'],
-        ['The second telescope booking', 'Councillor Esme West is accused of arranging free use of a municipal telescope for a friend’s private paid visit. A booking entry lists West as the contact but leaves the payment field blank. It is unclear whether an invoice was issued separately. West denies arranging free access. A local reporter has filed the entry, but there has been no public circulation or reaction. No party affiliation is reported.'],
-        ['The packing instruction', 'A signed instruction appears to show Councillor Finn Grove directing paid city staff to pack campaign welcome letters. If authentic, the instruction would be a misuse of public resources. Grove says his signature was copied onto a draft he never approved. The original is available, and two independent document examiners confirm the signature and find no alterations. No party affiliation or public reaction is reported.'],
-    ],
-};
-function freezeDeep(value) {
-    if (value && typeof value === 'object') {
-        Object.values(value).forEach(freezeDeep);
-        Object.freeze(value);
+      ["The recording studio", "Councillor Ada Marsh is accused of using the city recording studio for her private advertising business. An anonymous online post says she was seen near the studio. The photograph is blurred, the entrance sign cannot be read, and no booking record has been obtained. Marsh denies arranging any private sessions. No party affiliation or public reaction is reported."],
+      ["The north parking space", "Imagine that Councillor Sami Glen belongs to the political party whose policies you generally prefer. Glen is accused of moving a campaign volunteer ahead of other applicants for a city overnight parking space. A dated waiting list shows the volunteer moved from eighth to first, but the reason field is blank. Glen says an eligibility review explains the change. No review record or additional evidence is available."],
+      ["The first telescope booking", "Councillor Clara Pine is accused of arranging free use of a municipal telescope for a friend\u2019s private paid tour. A booking entry lists Pine as the contact but leaves the payment field blank. It is unclear whether an invoice was issued separately. Pine denies arranging free access. Thousands of people have reposted this same entry with angry comments; none provides new evidence. No party affiliation is reported."],
+      ["The dispatch instruction", "A scanned instruction appears to show Councillor Theo Vale directing paid city staff to deliver campaign newsletters. If authentic, the instruction would be a misuse of public resources. Vale says his signature was copied onto a draft he never approved. Only a forwarded scan is available, and the original has not been located or independently authenticated. No party affiliation or public reaction is reported."],
+      ["The storage order", "Councillor Mira Hart is accused of using the city warehouse for her private catering stock. An independently checked order record identifies Hart, specifies the private business supplies, and charges storage to the city. In a verified message, Hart acknowledges knowingly using the city account for this personal expense. No party affiliation or public reaction is reported."],
+      ["The south parking space", "Imagine that Councillor Luca Birch belongs to the political party whose policies you generally oppose. Birch is accused of moving a campaign volunteer ahead of other applicants for a city overnight parking space. A dated waiting list shows the volunteer moved from eighth to first, but the reason field is blank. Birch says an eligibility review explains the change. No review record or additional evidence is available."],
+      ["The second telescope booking", "Councillor Esme West is accused of arranging free use of a municipal telescope for a friend\u2019s private paid visit. A booking entry lists West as the contact but leaves the payment field blank. It is unclear whether an invoice was issued separately. West denies arranging free access. A local reporter has filed the entry, but there has been no public circulation or reaction. No party affiliation is reported."],
+      ["The packing instruction", "A signed instruction appears to show Councillor Finn Grove directing paid city staff to pack campaign welcome letters. If authentic, the instruction would be a misuse of public resources. Grove says his signature was copied onto a draft he never approved. The original is available, and two independent document examiners confirm the signature and find no alterations. No party affiliation or public reaction is reported."]
+    ]
+  };
+  function freezeDeep(value) {
+    if (value && typeof value === "object") {
+      Object.values(value).forEach(freezeDeep);
+      Object.freeze(value);
     }
     return value;
-}
-exports.FORMS = freezeDeep(Object.fromEntries(Object.entries(TEXTS).map(([form, rows]) => [form,
+  }
+  var FORMS = freezeDeep(Object.fromEntries(Object.entries(TEXTS).map(([form, rows]) => [
+    form,
     rows.map(([title, text], index) => {
-        const [slot, dimension, level, features] = FEATURE_ROWS[index];
-        return { id: `${form}_${slot}`, caseId: `${form}_${slot}`, form, slot, dimension,
-            pairId: `${form}_${dimension}`, level, title, text, features: { ...features },
-            prompt: exports.JUDGMENT_PROMPT, votePrompt: exports.VOTE_PROMPT, caseBankVersion: exports.CASE_BANK_VERSION };
-    }),
-])));
-function getCases(form) {
-    if (!Object.hasOwn(exports.FORMS, form))
-        throw new Error(`Unknown parallel form: ${form}`);
-    return exports.FORMS[form];
-}
-function getCase(caseId) {
-    for (const rows of Object.values(exports.FORMS)) {
-        const item = rows.find((row) => row.id === caseId);
-        if (item)
-            return item;
+      const [slot, dimension, level, features] = FEATURE_ROWS[index];
+      return {
+        id: `${form}_${slot}`,
+        caseId: `${form}_${slot}`,
+        form,
+        slot,
+        dimension,
+        pairId: `${form}_${dimension}`,
+        level,
+        title,
+        text,
+        features: { ...features },
+        prompt: JUDGMENT_PROMPT,
+        votePrompt: VOTE_PROMPT,
+        caseBankVersion: CASE_BANK_VERSION
+      };
+    })
+  ])));
+  function getCases(form) {
+    if (!Object.hasOwn(FORMS, form)) throw new Error(`Unknown parallel form: ${form}`);
+    return FORMS[form];
+  }
+  function getCase(caseId) {
+    for (const rows of Object.values(FORMS)) {
+      const item = rows.find((row) => row.id === caseId);
+      if (item) return item;
     }
     throw new Error(`Unknown voter-judgment case: ${caseId}`);
-}
+  }
 
-}],
-"pilot/prediction.mjs": [{"../src/engine.mjs":"src/engine.mjs","./cases.mjs":"pilot/cases.mjs","./actor-context.mjs":"pilot/actor-context.mjs"},function(module,exports,require){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ACTOR_RULE = exports.ACTOR_RULE_VERSION = exports.MODEL_SPEC = exports.MODEL_IDS = exports.MODEL_VERSION = void 0;
-exports.buildPredictionCommit = buildPredictionCommit;
-// Prespecified transfer models. This module never accepts T1/T2 observed judgments.
-const engine_mjs_1 = require("../src/engine.mjs");
-const cases_mjs_1 = require("./cases.mjs");
-const actor_context_mjs_1 = require("./actor-context.mjs");
-exports.MODEL_VERSION = 'pm-fixed-transfer/2.0.0';
-exports.MODEL_IDS = Object.freeze(['M0', 'M1', 'M2', 'M3']);
-exports.MODEL_SPEC = Object.freeze({
+  // pilot/study-copy.mjs
+  var PRESENTATION_JUDGMENT_PROMPT = "How likely is it that this official deliberately misused their position, as claimed in this case?";
+  var PRESENTATION_VOTE_PROMPT = "If these were your only two choices, would you keep this official in office or replace them with a similar candidate in every other way?";
+  var PRESENTATION_BLOCK_INSTRUCTIONS = "All people, parties, places and events below are made up. A councillor is an elected local official. Each case is about a different person. Judge each case using only the information shown. Choose a number from 0 (certain it did not happen) to 100 (certain it happened). Then choose whether to keep the official in office or replace them. There is no answer key for these judgments.";
+  var replacements = [
+    ["No party affiliation or public reaction is reported.", "The case does not say which party the official belongs to or how the public reacted."],
+    ["No party affiliation is reported.", "The case does not say which party the official belongs to."],
+    ["An anonymous online post", "An online post from an unnamed person"],
+    ["no journey record has been obtained", "no record of the van\u2019s journeys has been found"],
+    ["no checkout record has been obtained", "no record of the equipment being taken out has been found"],
+    ["no booking record has been obtained", "no booking record has been found"],
+    ["party whose policies you generally prefer", "party whose policies you usually prefer"],
+    ["party whose policies you generally oppose", "party whose policies you usually oppose"],
+    ["A dated waiting list shows the volunteer moved from eighth to first, but the reason field is blank.", "A waiting list with a date shows that the volunteer moved from eighth place to first. The space for the reason is blank."],
+    ["says an eligibility review explains the change.", "says the change followed a check of who met the requirements."],
+    ["No review record or additional evidence is available.", "There is no record of that check and no other evidence."],
+    ["A booking entry lists", "A booking record lists"],
+    ["as the contact but leaves the payment field blank.", "as the contact person, but the space for payment details is blank."],
+    ["It is unclear whether an invoice was issued separately.", "It is not clear whether a separate bill was sent."],
+    ["denies arranging free access.", "denies arranging for the facility to be used for free."],
+    ["Thousands of people have reposted this same entry with angry comments; none provides new evidence.", "Thousands of people have shared this same record online with angry comments. None of them gives any new evidence."],
+    ["A local reporter has filed the entry, but there has been no public circulation or reaction.", "A local reporter has kept the record on file, but it has not been shared publicly and there has been no public reaction."],
+    ["If authentic, the instruction would be a misuse of public resources.", "If the document is genuine, this order would be a misuse of public resources."],
+    ["Only a forwarded scan is available, and the original has not been located or independently authenticated.", "Only a scan passed on by someone else is available. The original has not been found, and it has not been independently checked to confirm that it is genuine."],
+    ["The original is available, and two independent document examiners confirm the signature and find no alterations.", "The original is available. Two independent document experts confirm that the signature is genuine and that the document has not been changed."],
+    ["An independently checked order record identifies", "An order record, checked by an independent person, names"],
+    ["acknowledges knowingly using the city account for this personal expense.", "admits deliberately using the city account to pay this personal expense."],
+    ["directing paid city staff", "telling paid city staff"],
+    ["a municipal pool lane", "a lane in the city\u2019s public swimming pool"],
+    ["a municipal telescope", "a city-owned telescope"],
+    ["a city marina berth", "a place to keep a boat at the city marina"],
+    ["city surveying equipment", "city equipment used to measure land"]
+  ];
+  function plainText(text) {
+    for (const [oldText, newText] of replacements) text = text.split(oldText).join(newText);
+    return text;
+  }
+  var titleOverrides = { B_E_LOW: "The land-measuring equipment", B_P_OWN: "The west marina boat space", B_P_OPP: "The east marina boat space" };
+  var CASE_PRESENTATION = Object.freeze(Object.fromEntries(Object.values(FORMS).flat().map((item) => [item.id, Object.freeze({
+    title: titleOverrides[item.id] || item.title,
+    text: plainText(item.text),
+    prompt: PRESENTATION_JUDGMENT_PROMPT,
+    votePrompt: PRESENTATION_VOTE_PROMPT
+  })])));
+  function presentCase(item) {
+    if (!item || !CASE_PRESENTATION[item.id]) throw new Error("This case could not be displayed. Please contact the researcher.");
+    return { ...item, ...CASE_PRESENTATION[item.id] };
+  }
+
+  // pilot/judgment-slider.jsx
+  var import_react2 = __toESM(require_react(), 1);
+
+  // pilot/judgment-slider.mjs
+  var JUDGMENT_DRAFT_KEY = "pm-pilot-judgment-draft";
+  function validSliderScore(value) {
+    return Number.isInteger(value) && value >= 0 && value <= 100;
+  }
+  function emptyJudgmentDraft() {
+    return { score: 50, touched: false, vote: "", firstInteractionAt: null };
+  }
+  function judgmentDraftScope(state, item) {
+    return { sessionId: state.sessionId, block: state.stage, caseId: item.id, presentedAt: state.presentation.presentedAt };
+  }
+  function readJudgmentDraft(storage, scope) {
+    const initial = emptyJudgmentDraft();
+    if (!storage) return initial;
+    let stored;
+    try {
+      stored = JSON.parse(storage.getItem(JUDGMENT_DRAFT_KEY) || "null");
+    } catch {
+      return initial;
+    }
+    if (!stored || Object.entries(scope).some(([key, value]) => stored[key] !== value)) return initial;
+    if (!validSliderScore(stored.score) || typeof stored.touched !== "boolean") return initial;
+    if (stored.touched && (!Number.isFinite(Date.parse(stored.firstInteractionAt)) || Date.parse(stored.firstInteractionAt) < Date.parse(scope.presentedAt))) return initial;
+    return { score: stored.score, touched: stored.touched, vote: ["RETAIN", "REPLACE"].includes(stored.vote) ? stored.vote : "", firstInteractionAt: stored.touched ? stored.firstInteractionAt : null };
+  }
+  function writeJudgmentDraft(storage, scope, draft) {
+    if (storage) storage.setItem(JUDGMENT_DRAFT_KEY, JSON.stringify({ ...scope, ...draft }));
+  }
+  function clearJudgmentDraft(storage) {
+    storage?.removeItem(JUDGMENT_DRAFT_KEY);
+  }
+  function interactWithJudgment(draft, value, now = (/* @__PURE__ */ new Date()).toISOString()) {
+    const score = Number(value);
+    if (!validSliderScore(score)) return draft;
+    return { ...draft, score, touched: true, firstInteractionAt: draft.firstInteractionAt || now };
+  }
+  var SLIDER_KEYS = Object.freeze(["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Home", "End", "PageUp", "PageDown"]);
+
+  // pilot/judgment-slider.jsx
+  var import_jsx_runtime2 = __toESM(require_jsx_runtime(), 1);
+  function JudgmentSlider({ id = "judgment-score", prompt, value, touched, disabled = false, onInteract }) {
+    const interact = (event2) => {
+      if (!disabled) onInteract(Number(event2.currentTarget.value));
+    };
+    return /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "ps-slider", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("label", { id: `${id}-label`, htmlFor: id, children: prompt }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("output", { className: "ps-slider-value", htmlFor: id, "aria-live": "polite", children: touched ? `${value} out of 100` : "Choose your answer" }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)(
+        "input",
+        {
+          id,
+          type: "range",
+          min: "0",
+          max: "100",
+          step: "1",
+          value,
+          disabled,
+          "aria-labelledby": `${id}-label`,
+          "aria-describedby": `${id}-anchors ${id}-help`,
+          "aria-valuetext": touched ? `${value} out of 100` : "50 out of 100, no answer selected yet",
+          onChange: interact,
+          onPointerDown: (event2) => {
+            if (event2.button === 0 || event2.button === void 0) interact(event2);
+          },
+          onTouchStart: interact,
+          onKeyDown: (event2) => {
+            if (SLIDER_KEYS.includes(event2.key)) interact(event2);
+          }
+        }
+      ),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("div", { className: "ps-slider-anchors", id: `${id}-anchors`, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("span", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("b", { children: "0" }),
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("br", {}),
+          "Definitely did not"
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("span", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("b", { children: "50" }),
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("br", {}),
+          "Equally likely"
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime2.jsxs)("span", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("b", { children: "100" }),
+          /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("br", {}),
+          "Definitely did"
+        ] })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime2.jsx)("p", { id: `${id}-help`, className: "ps-meta", children: "Move or tap the slider to choose. To choose 50, tap the middle. You can also use the arrow keys. Your answer is saved when you choose \u201CSave and continue\u201D." })
+    ] });
+  }
+
+  // pilot/error-copy.mjs
+  var ERROR_COPY = Object.freeze({
+    NETWORK_ERROR: "This step has not been confirmed as saved. Keep this page open and choose Retry / resume when your connection returns.",
+    REQUEST_TIMEOUT: "The save is taking too long to confirm. Keep this page open and choose Retry / resume when your connection returns.",
+    INVALID_RESPONSE: "The page could not read the reply from the study. Please retry without starting a new session.",
+    REVISION_CONFLICT: "This session was saved in another tab. Close the other study tabs, then choose Retry / resume. You may need to enter the current step again.",
+    ENROLLMENT_CLOSED: "The study is not accepting new participants right now. Please contact the researcher.",
+    LOCAL_STORAGE_CORRUPT: "This browser could not read your saved session. Please contact the researcher before starting again.",
+    MISSING_CREDENTIALS: "This browser cannot find the details needed to open your session. Please email the researcher with your session code.",
+    SECURE_CONTEXT_REQUIRED: "This study needs a secure connection. Please open the study\u2019s HTTPS link.",
+    WITHDRAWAL_NOT_CONFIRMED: "You have asked to leave, but deletion has not been confirmed. Choose Retry / resume to send your deletion request again, or email the researcher with your session code.",
+    WITHDRAWAL_PENDING: "Your request to leave is still being processed. Answers will not be sent. Choose Retry / resume to check the deletion request.",
+    SESSION_REMOVED: "This session has been deleted. Choose Retry / resume to view your deletion receipt.",
+    PENDING_SAVE: "A previous save still needs confirmation. Choose Retry / resume.",
+    SAVE_IN_PROGRESS: "A save is already in progress. Please wait for it to finish.",
+    SESSION_EXISTS: "A session is already saved in this browser. Continue that session.",
+    CONSENT_CONFIG_MISMATCH: "The participant information has changed. Please reload the page and read it again.",
+    COLLECTION_MODE_CHANGED: "The site has switched between test mode and research mode. Please reload the page and read the participant information again."
+  });
+  var FALLBACK_ERROR_COPY = "The study could not complete this step. Choose Retry / resume. If this happens again, contact the researcher and include the reference code below.";
+  var EXACT_LOCAL_MESSAGES = /* @__PURE__ */ new Set([
+    "This page and the study\u2019s saved records use different versions. Please contact the researcher before continuing.",
+    "The study is not accepting new participants right now. Please contact the researcher.",
+    "All four confirmations are required to take part."
+  ]);
+  function participantErrorMessage(error) {
+    return ERROR_COPY[error?.code] || (EXACT_LOCAL_MESSAGES.has(error?.message) ? error.message : FALLBACK_ERROR_COPY);
+  }
+
+  // pilot/actor-context.mjs
+  var ACTOR_CONTEXT_SCHEMA = "pm-actor-context/1";
+  var PUBLIC_JUDGMENT_EVENTS = Object.freeze({
+    OPP_CONTRACT: Object.freeze({ pairId: "P1", factor: "PARTISAN", level: "OPPOSING_SIDE", targetSide: "OPPOSING_SIDE", coding: Object.freeze({ demand: 1, refer: 0.5, quiet: 0 }) }),
+    ALLY_CONTRACT: Object.freeze({ pairId: "P1", factor: "PARTISAN", level: "PLAYER_SIDE", targetSide: "PLAYER_SIDE", coding: Object.freeze({ demand: 1, refer: 0.5, shield: 0 }) }),
+    CROWD_LOUD: Object.freeze({ pairId: "C1", factor: "CROWD", level: "CROWD_HIGH", targetSide: "NON_PARTISAN", coding: Object.freeze({ ride: 1, process: 0.5, silent: 0 }) }),
+    CROWD_QUIET: Object.freeze({ pairId: "C1", factor: "CROWD", level: "CROWD_LOW", targetSide: "NON_PARTISAN", coding: Object.freeze({ push: 1, process: 0.5, silent: 0 }) }),
+    RECORDING_DENIABLE: Object.freeze({ pairId: "D1", factor: "DENIABILITY", level: "DEN_HIGH", targetSide: "NON_PARTISAN", coding: Object.freeze({ treat: 1, forensic: 0.5, dismiss: 0 }) }),
+    RECORDING_CLEAN: Object.freeze({ pairId: "D1", factor: "DENIABILITY", level: "DEN_LOW", targetSide: "NON_PARTISAN", coding: Object.freeze({ treat: 1, forensic: 0.5, dismiss: 0 }) }),
+    TIP_HOUSING: Object.freeze({ pairId: null, factor: "EVIDENCE", level: null, targetSide: "NON_PARTISAN", coding: Object.freeze({ push: 1, refer: 0.5, bin: 0 }) }),
+    GRANT_QUESTION: Object.freeze({ pairId: null, factor: "EVIDENCE", level: null, targetSide: "NON_PARTISAN", coding: Object.freeze({ demand: 1, inquiry: 0.5, shrug: 0 }) }),
+    SMEAR_RIVAL: Object.freeze({ pairId: null, factor: "EVIDENCE", level: null, targetSide: "OPPOSING_SIDE", coding: Object.freeze({ run: 1, verify: 0.5, pass: 0 }) })
+  });
+  var round6 = (x) => Math.round(x * 1e6) / 1e6;
+  function beatIndex(player) {
+    const index = /* @__PURE__ */ new Map();
+    for (const beat of SCRIPT(player)) if (beat && beat.id) index.set(beat.id, beat);
+    return index;
+  }
+  function extractPublicDecisionContext(spec, transcript, { returnSession = false } = {}) {
+    if (!spec || !Array.isArray(transcript)) throw new Error("Game spec and canonical transcript are required");
+    const beats = beatIndex(spec.player);
+    const session = createGameSession(spec);
+    const publicDecisions = [];
+    const judgmentDecisions = [];
+    let actionIndex = 0;
+    for (const entry of transcript) {
+      const action = entry.action || entry;
+      actionIndex += 1;
+      if (action.type === ACTIONS.SELECT_PUBLIC_MOVE || action.type === ACTIONS.SELECT_WILDERNESS_ROUTE) {
+        const interaction = getCurrentInteraction(session);
+        const choices = (interaction.choices || []).map((c) => ({
+          id: c.id,
+          available: c.availability?.ok !== false,
+          lockKind: c.availability?.ok === false ? c.availability.kind || "LOCKED" : null
+        }));
+        const record = { actionIndex, eventId: action.beatId, choiceId: action.choiceId, choices };
+        publicDecisions.push(record);
+        const rule = PUBLIC_JUDGMENT_EVENTS[action.beatId];
+        if (rule && action.type === ACTIONS.SELECT_PUBLIC_MOVE) {
+          const beat = beats.get(action.beatId);
+          if (!beat || !beat.latents) throw new Error(`Frozen script lacks judgment event ${action.beatId}`);
+          const ids = choices.map((c) => c.id).sort().join(",");
+          const coded = Object.keys(rule.coding).sort().join(",");
+          if (ids !== coded) throw new Error(`Option identifiers of ${action.beatId} (${ids}) differ from the M3 coding table (${coded})`);
+          if (!(action.choiceId in rule.coding)) throw new Error(`Unknown public choice ${action.choiceId} at ${action.beatId}`);
+          const chosen = choices.find((c) => c.id === action.choiceId);
+          if (!chosen || !chosen.available) throw new Error(`Chosen option ${action.choiceId} at ${action.beatId} was not selectable`);
+          judgmentDecisions.push({
+            actionIndex,
+            eventId: action.beatId,
+            age: beat.age ?? null,
+            choiceId: action.choiceId,
+            actionCredence: rule.coding[action.choiceId],
+            pairId: rule.pairId,
+            factor: rule.factor,
+            level: rule.level,
+            targetSide: rule.targetSide,
+            evidenceQuality: round6(beat.latents.strength * beat.latents.reliability),
+            deniability: beat.latents.deniability ?? null,
+            crowdMagnitude: beat.latents.crowd ? beat.latents.crowd.magnitude : 0,
+            choices,
+            allOptionsAvailable: choices.every((c) => c.available)
+          });
+        }
+      }
+      dispatchGameAction(session, action);
+    }
+    const context = {
+      schema: ACTOR_CONTEXT_SCHEMA,
+      actionCount: actionIndex,
+      publicDecisions,
+      judgmentDecisions,
+      codingTable: PUBLIC_JUDGMENT_EVENTS,
+      excluded: ["SUBMIT_PRIVATE_READ credences", "reactions", "election tallies", "Mirror", "T0/T1/T2", "questionnaire"]
+    };
+    const plain = JSON.parse(JSON.stringify(context));
+    return returnSession ? { context: plain, session } : plain;
+  }
+  function validateActorContext(context) {
+    if (!context || context.schema !== ACTOR_CONTEXT_SCHEMA) throw new Error("Actor context schema mismatch");
+    if (!Array.isArray(context.judgmentDecisions) || !Array.isArray(context.publicDecisions)) throw new Error("Actor context is incomplete");
+    for (const d of context.judgmentDecisions) {
+      const rule = PUBLIC_JUDGMENT_EVENTS[d.eventId];
+      if (!rule || rule.coding[d.choiceId] !== d.actionCredence) throw new Error(`Actor context coding mismatch at ${d.eventId}`);
+      if (!Number.isFinite(d.evidenceQuality)) throw new Error(`Actor context evidence quality missing at ${d.eventId}`);
+      for (const key of Object.keys(d)) {
+        if (/credence(?!Action)|read|score|t0|t1|t2|mirror|questionnaire/i.test(key) && key !== "actionCredence")
+          throw new Error(`Actor context carries a disallowed field: ${key}`);
+      }
+    }
+    return true;
+  }
+
+  // pilot/prediction.mjs
+  var MODEL_VERSION = "pm-fixed-transfer/2.0.0";
+  var MODEL_IDS = Object.freeze(["M0", "M1", "M2", "M3"]);
+  var MODEL_SPEC = Object.freeze({
     evidenceReference: 0.45,
     interceptPseudoCount: 4,
     evidencePseudoCount: 4,
     pairPseudoCount: 2,
-    credenceAnchors: Object.freeze([0.15, 0.40, 0.60, 0.85]),
-    output: 'probability judgment on 0–100 scale; not probability of a future binary response',
-});
-// M3 (0.38.1-pilot.1): actor-side public decisions only. Rule `pm-actor-public-judgment/2.0.0`.
-// The frozen game contains nine public judgment events with an identical three-option
-// structure (act on the allegation / refer to process / dismiss) and three matched pairs whose
-// only difference is the same manipulation used by the T1 case bank: target side (P1),
-// public anger with identical evidence (C1) and a deniability claim with identical
-// evidence (D1). M3 therefore predicts each T1 within-dimension contrast from the
-// participant's OWN public-action contrast on the matched public pair, and the evidence
-// contrast from the slope of public action on frozen evidence quality across the
-// non-partisan, no-crowd, low-deniability events. Cross-role consistency ("acts as they
-// judge") is the hypothesis under test; the rival strategic-action account predicts null or
-// reversed association. No T0 answer, private read, T1/T2 answer, Mirror output or
-// questionnaire can enter: the only input is the projected actor context
-// (pilot/actor-context.mjs). Scale and fallback rules are engineering priors documented in
-// pilot-docs/M3_SCIENTIFIC_SPEC.md; nothing here was fitted to any data.
-exports.ACTOR_RULE_VERSION = 'pm-actor-public-judgment/2.0.0';
-exports.ACTOR_RULE = Object.freeze({
-    ruleVersion: exports.ACTOR_RULE_VERSION,
+    credenceAnchors: Object.freeze([0.15, 0.4, 0.6, 0.85]),
+    output: "probability judgment on 0\u2013100 scale; not probability of a future binary response"
+  });
+  var ACTOR_RULE_VERSION = "pm-actor-public-judgment/2.0.0";
+  var ACTOR_RULE = Object.freeze({
+    ruleVersion: ACTOR_RULE_VERSION,
     intercept: 0.5,
     pointsPerUnitIndex: 25,
     actionCredence: Object.freeze({ act: 1, process: 0.5, dismiss: 0 }),
     pairs: Object.freeze({
-        partisanSymmetry: Object.freeze({ pairId: 'P1', high: 'OPP_CONTRACT', low: 'ALLY_CONTRACT',
-            hypothesis: 'public readiness to act against an opposing-side official minus own-side official predicts the T1 opposing-minus-own credence contrast (same sign)' }),
-        crowdSusceptibility: Object.freeze({ pairId: 'C1', high: 'CROWD_LOUD', low: 'CROWD_QUIET',
-            hypothesis: 'public readiness to act under visible public anger minus without it (identical evidence) predicts the T1 crowd-high minus crowd-low contrast (same sign)' }),
-        deniabilitySusceptibility: Object.freeze({ pairId: 'D1', high: 'RECORDING_DENIABLE', low: 'RECORDING_CLEAN',
-            hypothesis: 'public readiness to act on a deniable recording minus an authenticated one predicts the T1 deniable-minus-authenticated contrast (same sign; usually negative)' }),
+      partisanSymmetry: Object.freeze({
+        pairId: "P1",
+        high: "OPP_CONTRACT",
+        low: "ALLY_CONTRACT",
+        hypothesis: "public readiness to act against an opposing-side official minus own-side official predicts the T1 opposing-minus-own credence contrast (same sign)"
+      }),
+      crowdSusceptibility: Object.freeze({
+        pairId: "C1",
+        high: "CROWD_LOUD",
+        low: "CROWD_QUIET",
+        hypothesis: "public readiness to act under visible public anger minus without it (identical evidence) predicts the T1 crowd-high minus crowd-low contrast (same sign)"
+      }),
+      deniabilitySusceptibility: Object.freeze({
+        pairId: "D1",
+        high: "RECORDING_DENIABLE",
+        low: "RECORDING_CLEAN",
+        hypothesis: "public readiness to act on a deniable recording minus an authenticated one predicts the T1 deniable-minus-authenticated contrast (same sign; usually negative)"
+      })
     }),
     evidence: Object.freeze({
-        events: Object.freeze(['TIP_HOUSING', 'CROWD_QUIET', 'GRANT_QUESTION', 'RECORDING_CLEAN']),
-        minimumEvents: 3,
-        t1DesignRange: 0.5,
-        hypothesis: 'the least-squares slope of public action credence on frozen evidence quality (non-partisan target, no crowd, low deniability) predicts the T1 strong-minus-weak evidence contrast (same sign)',
+      events: Object.freeze(["TIP_HOUSING", "CROWD_QUIET", "GRANT_QUESTION", "RECORDING_CLEAN"]),
+      minimumEvents: 3,
+      t1DesignRange: 0.5,
+      hypothesis: "the least-squares slope of public action credence on frozen evidence quality (non-partisan target, no crowd, low deniability) predicts the T1 strong-minus-weak evidence contrast (same sign)"
     }),
-    fallback: 'a dimension whose public pair was not decided, or whose option set was restricted by a locked option in either member, is not personalized: both items receive the intercept and the reason is recorded',
-    excluded: Object.freeze(['T0 responses', 'in-game private reads', 'T1 responses', 'T2 responses', 'Mirror output', 'questionnaire', 'elections/office', 'private profiles']),
-});
-const clamp = (x, lo, hi) => Math.max(lo, Math.min(hi, x));
-const mean = (xs) => xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null;
-const shrink = (n, k) => n / (n + k);
-const clone = (value) => JSON.parse(JSON.stringify(value));
-function freezeDeep(value) {
-    if (value && typeof value === 'object') {
-        Object.values(value).forEach(freezeDeep);
-        Object.freeze(value);
+    fallback: "a dimension whose public pair was not decided, or whose option set was restricted by a locked option in either member, is not personalized: both items receive the intercept and the reason is recorded",
+    excluded: Object.freeze(["T0 responses", "in-game private reads", "T1 responses", "T2 responses", "Mirror output", "questionnaire", "elections/office", "private profiles"])
+  });
+  var clamp3 = (x, lo, hi) => Math.max(lo, Math.min(hi, x));
+  var mean = (xs) => xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null;
+  var shrink = (n, k) => n / (n + k);
+  var clone = (value) => JSON.parse(JSON.stringify(value));
+  function freezeDeep2(value) {
+    if (value && typeof value === "object") {
+      Object.values(value).forEach(freezeDeep2);
+      Object.freeze(value);
     }
     return value;
-}
-const DESIGN_RANGE = Object.freeze({ evidenceSensitivity: 0.5, partisanSymmetry: 1, crowdSusceptibility: 1, deniabilitySusceptibility: 1 });
-function actorModel(actorContext) {
-    (0, actor_context_mjs_1.validateActorContext)(actorContext);
-    const decided = new Map();
+  }
+  var DESIGN_RANGE = Object.freeze({ evidenceSensitivity: 0.5, partisanSymmetry: 1, crowdSusceptibility: 1, deniabilitySusceptibility: 1 });
+  function actorModel(actorContext) {
+    validateActorContext(actorContext);
+    const decided = /* @__PURE__ */ new Map();
     for (const d of actorContext.judgmentDecisions) {
-        if (decided.has(d.eventId))
-            throw new Error(`Public judgment event ${d.eventId} decided twice`);
-        decided.set(d.eventId, d);
+      if (decided.has(d.eventId)) throw new Error(`Public judgment event ${d.eventId} decided twice`);
+      decided.set(d.eventId, d);
     }
     const dimensions = {};
     const dimension = (key, fields) => {
-        dimensions[key] = { ...fields, coefficient: fields.available ? exports.ACTOR_RULE.pointsPerUnitIndex / 100 * fields.index / DESIGN_RANGE[key] : 0,
-            predictedPairContrastPoints: fields.available ? exports.ACTOR_RULE.pointsPerUnitIndex * fields.index : 0 };
+      dimensions[key] = {
+        ...fields,
+        coefficient: fields.available ? ACTOR_RULE.pointsPerUnitIndex / 100 * fields.index / DESIGN_RANGE[key] : 0,
+        predictedPairContrastPoints: fields.available ? ACTOR_RULE.pointsPerUnitIndex * fields.index : 0
+      };
     };
-    for (const [key, pair] of Object.entries(exports.ACTOR_RULE.pairs)) {
-        const high = decided.get(pair.high), low = decided.get(pair.low);
-        const reasons = [];
-        if (!high)
-            reasons.push(`${pair.high} not decided`);
-        if (!low)
-            reasons.push(`${pair.low} not decided`);
-        if (high && !high.allOptionsAvailable)
-            reasons.push(`${pair.high} option set restricted by lock`);
-        if (low && !low.allOptionsAvailable)
-            reasons.push(`${pair.low} option set restricted by lock`);
-        const available = reasons.length === 0;
-        dimension(key, { source: 'matched public pair', pairId: pair.pairId, events: [pair.high, pair.low],
-            highChoice: high?.choiceId ?? null, lowChoice: low?.choiceId ?? null,
-            highActionCredence: high?.actionCredence ?? null, lowActionCredence: low?.actionCredence ?? null,
-            index: available ? high.actionCredence - low.actionCredence : 0, available, fallbackReasons: reasons });
+    for (const [key, pair] of Object.entries(ACTOR_RULE.pairs)) {
+      const high = decided.get(pair.high), low = decided.get(pair.low);
+      const reasons = [];
+      if (!high) reasons.push(`${pair.high} not decided`);
+      if (!low) reasons.push(`${pair.low} not decided`);
+      if (high && !high.allOptionsAvailable) reasons.push(`${pair.high} option set restricted by lock`);
+      if (low && !low.allOptionsAvailable) reasons.push(`${pair.low} option set restricted by lock`);
+      const available = reasons.length === 0;
+      dimension(key, {
+        source: "matched public pair",
+        pairId: pair.pairId,
+        events: [pair.high, pair.low],
+        highChoice: high?.choiceId ?? null,
+        lowChoice: low?.choiceId ?? null,
+        highActionCredence: high?.actionCredence ?? null,
+        lowActionCredence: low?.actionCredence ?? null,
+        index: available ? high.actionCredence - low.actionCredence : 0,
+        available,
+        fallbackReasons: reasons
+      });
     }
-    const rows = exports.ACTOR_RULE.evidence.events.map((id) => decided.get(id)).filter((d) => d && d.allOptionsAvailable);
-    const evidenceReasons = exports.ACTOR_RULE.evidence.events.filter((id) => !decided.get(id)).map((id) => `${id} not decided`)
-        .concat(exports.ACTOR_RULE.evidence.events.filter((id) => decided.get(id) && !decided.get(id).allOptionsAvailable).map((id) => `${id} option set restricted by lock`));
+    const rows = ACTOR_RULE.evidence.events.map((id) => decided.get(id)).filter((d) => d && d.allOptionsAvailable);
+    const evidenceReasons = ACTOR_RULE.evidence.events.filter((id) => !decided.get(id)).map((id) => `${id} not decided`).concat(ACTOR_RULE.evidence.events.filter((id) => decided.get(id) && !decided.get(id).allOptionsAvailable).map((id) => `${id} option set restricted by lock`));
     let slope = null, evidenceIndex = 0;
     const distinctQ = new Set(rows.map((r) => r.evidenceQuality));
-    const evidenceAvailable = rows.length >= exports.ACTOR_RULE.evidence.minimumEvents && distinctQ.size >= 2;
+    const evidenceAvailable = rows.length >= ACTOR_RULE.evidence.minimumEvents && distinctQ.size >= 2;
     if (evidenceAvailable) {
-        const mx = mean(rows.map((r) => r.evidenceQuality)), my = mean(rows.map((r) => r.actionCredence));
-        const sxx = rows.reduce((a, r) => a + (r.evidenceQuality - mx) ** 2, 0);
-        slope = rows.reduce((a, r) => a + (r.evidenceQuality - mx) * (r.actionCredence - my), 0) / sxx;
-        evidenceIndex = clamp(slope * exports.ACTOR_RULE.evidence.t1DesignRange, -1, 1);
-    }
-    else if (rows.length && rows.length < exports.ACTOR_RULE.evidence.minimumEvents)
-        evidenceReasons.push(`only ${rows.length} usable evidence events`);
-    dimension('evidenceSensitivity', { source: 'public action slope on frozen evidence quality', events: exports.ACTOR_RULE.evidence.events,
-        observations: rows.map((r) => ({ eventId: r.eventId, evidenceQuality: r.evidenceQuality, choiceId: r.choiceId, actionCredence: r.actionCredence })),
-        rawSlope: slope, index: evidenceIndex, available: evidenceAvailable, fallbackReasons: evidenceReasons });
+      const mx = mean(rows.map((r) => r.evidenceQuality)), my = mean(rows.map((r) => r.actionCredence));
+      const sxx = rows.reduce((a, r) => a + (r.evidenceQuality - mx) ** 2, 0);
+      slope = rows.reduce((a, r) => a + (r.evidenceQuality - mx) * (r.actionCredence - my), 0) / sxx;
+      evidenceIndex = clamp3(slope * ACTOR_RULE.evidence.t1DesignRange, -1, 1);
+    } else if (rows.length && rows.length < ACTOR_RULE.evidence.minimumEvents) evidenceReasons.push(`only ${rows.length} usable evidence events`);
+    dimension("evidenceSensitivity", {
+      source: "public action slope on frozen evidence quality",
+      events: ACTOR_RULE.evidence.events,
+      observations: rows.map((r) => ({ eventId: r.eventId, evidenceQuality: r.evidenceQuality, choiceId: r.choiceId, actionCredence: r.actionCredence })),
+      rawSlope: slope,
+      index: evidenceIndex,
+      available: evidenceAvailable,
+      fallbackReasons: evidenceReasons
+    });
     const personalizedDimensions = Object.values(dimensions).filter((d) => d.available).length;
     return {
-        source: 'actor-side public judgment decisions only (projected actor context); no T0, no private reads, no T1/T2, no Mirror output',
-        ruleVersion: exports.ACTOR_RULE_VERSION, rule: exports.ACTOR_RULE,
-        features: { judgmentDecisions: actorContext.judgmentDecisions, publicDecisionCount: actorContext.publicDecisions.length, actionCount: actorContext.actionCount },
-        meanPublicActionCredence: actorContext.judgmentDecisions.length ? mean(actorContext.judgmentDecisions.map((d) => d.actionCredence)) : null,
-        intercept: exports.ACTOR_RULE.intercept, dimensions,
-        coverage: { personalizedDimensions, personalizedItems: personalizedDimensions * 2, fallbackItems: 8 - personalizedDimensions * 2,
-            note: 'fallback items carry no actor information and must not be counted as actor predictions' },
+      source: "actor-side public judgment decisions only (projected actor context); no T0, no private reads, no T1/T2, no Mirror output",
+      ruleVersion: ACTOR_RULE_VERSION,
+      rule: ACTOR_RULE,
+      features: { judgmentDecisions: actorContext.judgmentDecisions, publicDecisionCount: actorContext.publicDecisions.length, actionCount: actorContext.actionCount },
+      meanPublicActionCredence: actorContext.judgmentDecisions.length ? mean(actorContext.judgmentDecisions.map((d) => d.actionCredence)) : null,
+      intercept: ACTOR_RULE.intercept,
+      dimensions,
+      coverage: {
+        personalizedDimensions,
+        personalizedItems: personalizedDimensions * 2,
+        fallbackItems: 8 - personalizedDimensions * 2,
+        note: "fallback items carry no actor information and must not be counted as actor predictions"
+      }
     };
-}
-function checkBaseline(t0, targetForm) {
-    if (!Array.isArray(t0) || t0.length !== 8)
-        throw new Error('T0 must contain eight completed item-level responses');
-    const seen = new Set(), forms = new Set();
+  }
+  function checkBaseline(t0, targetForm) {
+    if (!Array.isArray(t0) || t0.length !== 8) throw new Error("T0 must contain eight completed item-level responses");
+    const seen = /* @__PURE__ */ new Set(), forms = /* @__PURE__ */ new Set();
     const rows = t0.map((row) => {
-        const item = (0, cases_mjs_1.getCase)(row.caseId);
-        if (item.form === targetForm)
-            throw new Error('T0 form must be distinct from T1 holdout form');
-        if (seen.has(item.id))
-            throw new Error(`Duplicate T0 case: ${item.id}`);
-        if (!Number.isFinite(row.score) || row.score < 0 || row.score > 100)
-            throw new Error(`Invalid T0 score: ${item.id}`);
-        seen.add(item.id);
-        forms.add(item.form);
-        // Explicit projection prevents arbitrary extra row properties reaching the model.
-        return { caseId: item.id, form: item.form, dimension: item.dimension,
-            features: { ...item.features }, score: row.score };
+      const item = getCase(row.caseId);
+      if (item.form === targetForm) throw new Error("T0 form must be distinct from T1 holdout form");
+      if (seen.has(item.id)) throw new Error(`Duplicate T0 case: ${item.id}`);
+      if (!Number.isFinite(row.score) || row.score < 0 || row.score > 100) throw new Error(`Invalid T0 score: ${item.id}`);
+      seen.add(item.id);
+      forms.add(item.form);
+      return {
+        caseId: item.id,
+        form: item.form,
+        dimension: item.dimension,
+        features: { ...item.features },
+        score: row.score
+      };
     });
-    if (forms.size !== 1)
-        throw new Error('T0 must use one complete parallel form');
+    if (forms.size !== 1) throw new Error("T0 must use one complete parallel form");
     return rows;
-}
-function baselineModel(rows) {
+  }
+  function baselineModel(rows) {
     const n = rows.length, rawIntercept = mean(rows.map((r) => r.score / 100));
     const dimensions = {};
-    for (const dimension of cases_mjs_1.DIMENSIONS) {
-        const pair = rows.filter((r) => r.dimension === dimension);
-        const feature = dimension === 'evidenceSensitivity' ? 'evidence' :
-            dimension === 'partisanSymmetry' ? 'partisan' : dimension === 'crowdSusceptibility' ? 'crowd' : 'deniability';
-        const ordered = [...pair].sort((a, b) => a.features[feature] - b.features[feature]);
-        const rawValue = (ordered[1].score - ordered[0].score) / 100 /
-            (ordered[1].features[feature] - ordered[0].features[feature]);
-        const evidence = dimension === 'evidenceSensitivity';
-        const weight = evidence ? shrink(2, exports.MODEL_SPEC.evidencePseudoCount) : shrink(1, exports.MODEL_SPEC.pairPseudoCount);
-        const value = evidence ? clamp(rawValue, -1.2, 1.6) : clamp(rawValue, -1, 1);
-        dimensions[dimension] = { rawValue, boundedValue: value, weight, coefficient: value * weight,
-            n: evidence ? 2 : 1, available: true };
+    for (const dimension of DIMENSIONS) {
+      const pair = rows.filter((r) => r.dimension === dimension);
+      const feature = dimension === "evidenceSensitivity" ? "evidence" : dimension === "partisanSymmetry" ? "partisan" : dimension === "crowdSusceptibility" ? "crowd" : "deniability";
+      const ordered = [...pair].sort((a, b) => a.features[feature] - b.features[feature]);
+      const rawValue = (ordered[1].score - ordered[0].score) / 100 / (ordered[1].features[feature] - ordered[0].features[feature]);
+      const evidence = dimension === "evidenceSensitivity";
+      const weight2 = evidence ? shrink(2, MODEL_SPEC.evidencePseudoCount) : shrink(1, MODEL_SPEC.pairPseudoCount);
+      const value = evidence ? clamp3(rawValue, -1.2, 1.6) : clamp3(rawValue, -1, 1);
+      dimensions[dimension] = {
+        rawValue,
+        boundedValue: value,
+        weight: weight2,
+        coefficient: value * weight2,
+        n: evidence ? 2 : 1,
+        available: true
+      };
     }
-    const weight = shrink(n, exports.MODEL_SPEC.interceptPseudoCount);
-    return { source: 'T0 only', n, rawIntercept, interceptWeight: weight,
-        intercept: 0.5 + weight * (rawIntercept - 0.5), dimensions };
-}
-function gameModel(coreState, gameLog) {
-    const source = coreState?.state?.log ?? coreState?.st?.log ?? coreState?.log ??
-        (Array.isArray(gameLog) ? gameLog : gameLog?.canonicalLog);
-    if (!Array.isArray(source))
-        throw new Error('Complete canonical in-game log is required for prediction');
-    const inputReads = source.filter((r) => r.kind === 'read');
-    const validReads = inputReads.filter((r) => Number.isInteger(r.credence) && r.credence >= 0 && r.credence <= 3 &&
-        Number.isFinite(r.strength) && Number.isFinite(r.reliability));
-    const moves = source.filter((r) => r.kind === 'move' && r.features && typeof r.features === 'object');
-    // Frozen Mirror computation: observed n/conf and formulas are unchanged.
-    const profile = (0, engine_mjs_1.analysePlayer)([...validReads, ...moves]);
+    const weight = shrink(n, MODEL_SPEC.interceptPseudoCount);
+    return {
+      source: "T0 only",
+      n,
+      rawIntercept,
+      interceptWeight: weight,
+      intercept: 0.5 + weight * (rawIntercept - 0.5),
+      dimensions
+    };
+  }
+  function gameModel(coreState, gameLog) {
+    const source = coreState?.state?.log ?? coreState?.st?.log ?? coreState?.log ?? (Array.isArray(gameLog) ? gameLog : gameLog?.canonicalLog);
+    if (!Array.isArray(source)) throw new Error("Complete canonical in-game log is required for prediction");
+    const inputReads = source.filter((r) => r.kind === "read");
+    const validReads = inputReads.filter((r) => Number.isInteger(r.credence) && r.credence >= 0 && r.credence <= 3 && Number.isFinite(r.strength) && Number.isFinite(r.reliability));
+    const moves = source.filter((r) => r.kind === "move" && r.features && typeof r.features === "object");
+    const profile = analysePlayer([...validReads, ...moves]);
     const dimensions = {};
-    for (const key of cases_mjs_1.DIMENSIONS) {
-        const dimension = profile.voter[key];
-        const available = Number.isFinite(dimension.value) && dimension.n > 0;
-        const weight = available ? shrink(dimension.n, key === 'evidenceSensitivity'
-            ? exports.MODEL_SPEC.evidencePseudoCount : exports.MODEL_SPEC.pairPseudoCount) : 0;
-        dimensions[key] = { rawValue: dimension.value, n: dimension.n, available,
-            weight, coefficient: available ? dimension.value * weight : 0,
-            descriptiveMirrorConfidence: dimension.conf };
+    for (const key of DIMENSIONS) {
+      const dimension = profile.voter[key];
+      const available = Number.isFinite(dimension.value) && dimension.n > 0;
+      const weight2 = available ? shrink(dimension.n, key === "evidenceSensitivity" ? MODEL_SPEC.evidencePseudoCount : MODEL_SPEC.pairPseudoCount) : 0;
+      dimensions[key] = {
+        rawValue: dimension.value,
+        n: dimension.n,
+        available,
+        weight: weight2,
+        coefficient: available ? dimension.value * weight2 : 0,
+        descriptiveMirrorConfidence: dimension.conf
+      };
     }
-    const meanCredence = mean(validReads.map((r) => exports.MODEL_SPEC.credenceAnchors[r.credence]));
+    const meanCredence = mean(validReads.map((r) => MODEL_SPEC.credenceAnchors[r.credence]));
     const meanEvidence = mean(validReads.map((r) => r.strength * r.reliability));
     const evidenceSlope = dimensions.evidenceSensitivity.available ? dimensions.evidenceSensitivity.rawValue : 0;
-    const rawIntercept = validReads.length ? clamp(meanCredence + evidenceSlope *
-        (exports.MODEL_SPEC.evidenceReference - meanEvidence), 0, 1) : 0.5;
-    const weight = shrink(validReads.length, exports.MODEL_SPEC.interceptPseudoCount);
+    const rawIntercept = validReads.length ? clamp3(meanCredence + evidenceSlope * (MODEL_SPEC.evidenceReference - meanEvidence), 0, 1) : 0.5;
+    const weight = shrink(validReads.length, MODEL_SPEC.interceptPseudoCount);
     return {
-        source: 'in-game private judgments only; political profile saved but not used as predictor',
-        n: validReads.length, excludedReadCount: inputReads.length - validReads.length,
-        meanCredence, meanEvidence, rawIntercept, interceptWeight: weight,
-        intercept: 0.5 + weight * (rawIntercept - 0.5), dimensions,
-        voterProfile: profile.voter, politicianProfile: profile.political,
-        inputReadRecords: validReads.map((r) => ({ eventId: r.eventId ?? null,
-            credence: r.credence, strength: r.strength, reliability: r.reliability,
-            factor: r.factor ?? null, pairId: r.pairId ?? null, level: r.level ?? null })),
+      source: "in-game private judgments only; political profile saved but not used as predictor",
+      n: validReads.length,
+      excludedReadCount: inputReads.length - validReads.length,
+      meanCredence,
+      meanEvidence,
+      rawIntercept,
+      interceptWeight: weight,
+      intercept: 0.5 + weight * (rawIntercept - 0.5),
+      dimensions,
+      voterProfile: profile.voter,
+      politicianProfile: profile.political,
+      inputReadRecords: validReads.map((r) => ({
+        eventId: r.eventId ?? null,
+        credence: r.credence,
+        strength: r.strength,
+        reliability: r.reliability,
+        factor: r.factor ?? null,
+        pairId: r.pairId ?? null,
+        level: r.level ?? null
+      }))
     };
-}
-function predict(model, item) {
+  }
+  function predict(model, item) {
     const d = model.dimensions, x = item.features;
-    return 100 * clamp(model.intercept +
-        d.evidenceSensitivity.coefficient * (x.evidence - exports.MODEL_SPEC.evidenceReference) +
-        d.partisanSymmetry.coefficient * x.partisan +
-        d.crowdSusceptibility.coefficient * x.crowd +
-        d.deniabilitySusceptibility.coefficient * x.deniability, 0, 1);
-}
-function buildPredictionCommit(input) {
-    const allowed = new Set(['participantId', 'sessionId', 'coreState', 'gameLog', 't0', 'form', 'studyVersion', 'coreHash', 'timestamp', 'actorContext']);
+    return 100 * clamp3(model.intercept + d.evidenceSensitivity.coefficient * (x.evidence - MODEL_SPEC.evidenceReference) + d.partisanSymmetry.coefficient * x.partisan + d.crowdSusceptibility.coefficient * x.crowd + d.deniabilitySusceptibility.coefficient * x.deniability, 0, 1);
+  }
+  function buildPredictionCommit(input) {
+    const allowed = /* @__PURE__ */ new Set(["participantId", "sessionId", "coreState", "gameLog", "t0", "form", "studyVersion", "coreHash", "timestamp", "actorContext"]);
     for (const key of Object.keys(input ?? {})) {
-        if (!allowed.has(key))
-            throw new Error(`Prediction builder does not accept ${key}; T1/T2 data must never enter this API`);
+      if (!allowed.has(key)) throw new Error(`Prediction builder does not accept ${key}; T1/T2 data must never enter this API`);
     }
     const { participantId, sessionId, coreState, gameLog, t0, form, studyVersion, coreHash, timestamp, actorContext } = input ?? {};
     for (const [key, value] of Object.entries({ participantId, sessionId, studyVersion, coreHash })) {
-        if (typeof value !== 'string' || !value)
-            throw new Error(`Prediction commit requires ${key}`);
+      if (typeof value !== "string" || !value) throw new Error(`Prediction commit requires ${key}`);
     }
-    if (!((typeof timestamp === 'number' && Number.isFinite(timestamp)) ||
-        (typeof timestamp === 'string' && Number.isFinite(Date.parse(timestamp)))))
-        throw new Error('Prediction timestamp is required');
-    const items = (0, cases_mjs_1.getCases)(form);
+    if (!(typeof timestamp === "number" && Number.isFinite(timestamp) || typeof timestamp === "string" && Number.isFinite(Date.parse(timestamp)))) throw new Error("Prediction timestamp is required");
+    const items = getCases(form);
     const baselineRows = checkBaseline(t0, form);
     const M1 = baselineModel(baselineRows);
     const M2 = gameModel(coreState, gameLog);
     const M3 = actorModel(actorContext);
     const predictions = items.map((item) => {
-        const m1 = predict(M1, item), m2 = predict(M2, item), m3 = predict(M3, item);
-        return { caseId: item.id, form, dimension: item.dimension,
-            M0: { predictedScore: 50 }, M1: { predictedScore: m1 }, M2: { predictedScore: m2 },
-            M3: { predictedScore: m3, personalized: M3.dimensions[item.dimension].available === true } };
+      const m1 = predict(M1, item), m2 = predict(M2, item), m3 = predict(M3, item);
+      return {
+        caseId: item.id,
+        form,
+        dimension: item.dimension,
+        M0: { predictedScore: 50 },
+        M1: { predictedScore: m1 },
+        M2: { predictedScore: m2 },
+        M3: { predictedScore: m3, personalized: M3.dimensions[item.dimension].available === true }
+      };
     });
-    return freezeDeep(clone({ schema: 'political-mirror-prediction-commit/1',
-        participantId, sessionId, studyVersion, coreHash, timestamp, form,
-        caseBankVersion: cases_mjs_1.CASE_BANK_VERSION, modelVersion: exports.MODEL_VERSION, actorRuleVersion: exports.ACTOR_RULE_VERSION,
-        modelState: { spec: exports.MODEL_SPEC, M0: { constant: 50 }, M1, M2, M3,
-            baselineRows, outcome: 'deliberate-wrongdoing probability judgment',
-            predictiveConfidence: null, confidenceNote: 'No calibrated predictive intervals are estimated. Mirror confidence is descriptive coverage only.' },
-        predictions,
+    return freezeDeep2(clone({
+      schema: "political-mirror-prediction-commit/1",
+      participantId,
+      sessionId,
+      studyVersion,
+      coreHash,
+      timestamp,
+      form,
+      caseBankVersion: CASE_BANK_VERSION,
+      modelVersion: MODEL_VERSION,
+      actorRuleVersion: ACTOR_RULE_VERSION,
+      modelState: {
+        spec: MODEL_SPEC,
+        M0: { constant: 50 },
+        M1,
+        M2,
+        M3,
+        baselineRows,
+        outcome: "deliberate-wrongdoing probability judgment",
+        predictiveConfidence: null,
+        confidenceNote: "No calibrated predictive intervals are estimated. Mirror confidence is descriptive coverage only."
+      },
+      predictions
     }));
-}
+  }
 
-}],
-"pilot/actor-context.mjs": [{"../src/game-session.mjs":"src/game-session.mjs","../src/content.mjs":"src/content.mjs"},function(module,exports,require){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.PUBLIC_JUDGMENT_EVENTS = exports.ACTOR_CONTEXT_SCHEMA = void 0;
-exports.extractPublicDecisionContext = extractPublicDecisionContext;
-exports.validateActorContext = validateActorContext;
-// Actor-side public decision context for M3 (0.38.1-pilot.1).
-//
-// This module is the only door through which gameplay reaches M3. It replays the frozen
-// engine (read-only use of src/) and projects out ONLY public political decisions:
-// which allowlisted public event was decided, which option was chosen, which options were
-// actually selectable at that moment (locked options are recorded, never treated as
-// preferences), and the frozen evidence design of the event. Private judgments
-// (SUBMIT_PRIVATE_READ credences), reactions, election tallies and any post-game data are
-// deliberately absent from the returned object. Tests assert that rewriting every private
-// read leaves the context unchanged and that rewriting an allowlisted public choice changes it.
-const game_session_mjs_1 = require("../src/game-session.mjs");
-const content_mjs_1 = require("../src/content.mjs");
-exports.ACTOR_CONTEXT_SCHEMA = 'pm-actor-context/1';
-// Public "action credence" coding of the three-option structure shared by the frozen
-// judgment events: act on the allegation as if credible (1), refer it to a process while
-// withholding public judgment (0.5), dismiss/let it go/protect the target (0). The table is
-// explicit so it can be audited against src/content.mjs; the extractor refuses an event whose
-// option identifiers differ from this table.
-// The pairs (P1/C1/D1) are design-matched prediction features: each pair contrasts one T1 factor, but the two events
-// differ in career age, people, option costs, ability checks and consequences. They are not controlled manipulations,
-// and the 1/0.5/0 coding below is a prospectively fixed design constant, not a calibrated parameter (M3_SCIENTIFIC_SPEC §3, §5).
-exports.PUBLIC_JUDGMENT_EVENTS = Object.freeze({
-    OPP_CONTRACT: Object.freeze({ pairId: 'P1', factor: 'PARTISAN', level: 'OPPOSING_SIDE', targetSide: 'OPPOSING_SIDE', coding: Object.freeze({ demand: 1, refer: 0.5, quiet: 0 }) }),
-    ALLY_CONTRACT: Object.freeze({ pairId: 'P1', factor: 'PARTISAN', level: 'PLAYER_SIDE', targetSide: 'PLAYER_SIDE', coding: Object.freeze({ demand: 1, refer: 0.5, shield: 0 }) }),
-    CROWD_LOUD: Object.freeze({ pairId: 'C1', factor: 'CROWD', level: 'CROWD_HIGH', targetSide: 'NON_PARTISAN', coding: Object.freeze({ ride: 1, process: 0.5, silent: 0 }) }),
-    CROWD_QUIET: Object.freeze({ pairId: 'C1', factor: 'CROWD', level: 'CROWD_LOW', targetSide: 'NON_PARTISAN', coding: Object.freeze({ push: 1, process: 0.5, silent: 0 }) }),
-    RECORDING_DENIABLE: Object.freeze({ pairId: 'D1', factor: 'DENIABILITY', level: 'DEN_HIGH', targetSide: 'NON_PARTISAN', coding: Object.freeze({ treat: 1, forensic: 0.5, dismiss: 0 }) }),
-    RECORDING_CLEAN: Object.freeze({ pairId: 'D1', factor: 'DENIABILITY', level: 'DEN_LOW', targetSide: 'NON_PARTISAN', coding: Object.freeze({ treat: 1, forensic: 0.5, dismiss: 0 }) }),
-    TIP_HOUSING: Object.freeze({ pairId: null, factor: 'EVIDENCE', level: null, targetSide: 'NON_PARTISAN', coding: Object.freeze({ push: 1, refer: 0.5, bin: 0 }) }),
-    GRANT_QUESTION: Object.freeze({ pairId: null, factor: 'EVIDENCE', level: null, targetSide: 'NON_PARTISAN', coding: Object.freeze({ demand: 1, inquiry: 0.5, shrug: 0 }) }),
-    SMEAR_RIVAL: Object.freeze({ pairId: null, factor: 'EVIDENCE', level: null, targetSide: 'OPPOSING_SIDE', coding: Object.freeze({ run: 1, verify: 0.5, pass: 0 }) }),
-});
-const round6 = (x) => Math.round(x * 1e6) / 1e6;
-function beatIndex(player) {
-    const index = new Map();
-    for (const beat of (0, content_mjs_1.SCRIPT)(player))
-        if (beat && beat.id)
-            index.set(beat.id, beat);
-    return index;
-}
-/**
- * Replays a saved transcript and returns the projected public decision context.
- * Options: { returnSession: true } also returns the replayed session so a caller that
- * must verify the canonical state does not replay twice.
- */
-function extractPublicDecisionContext(spec, transcript, { returnSession = false } = {}) {
-    if (!spec || !Array.isArray(transcript))
-        throw new Error('Game spec and canonical transcript are required');
-    const beats = beatIndex(spec.player);
-    const session = (0, game_session_mjs_1.createGameSession)(spec);
-    const publicDecisions = [];
-    const judgmentDecisions = [];
-    let actionIndex = 0;
-    for (const entry of transcript) {
-        const action = entry.action || entry;
-        actionIndex += 1;
-        if (action.type === game_session_mjs_1.ACTIONS.SELECT_PUBLIC_MOVE || action.type === game_session_mjs_1.ACTIONS.SELECT_WILDERNESS_ROUTE) {
-            const interaction = (0, game_session_mjs_1.getCurrentInteraction)(session);
-            const choices = (interaction.choices || []).map((c) => ({
-                id: c.id, available: c.availability?.ok !== false,
-                lockKind: c.availability?.ok === false ? (c.availability.kind || 'LOCKED') : null,
-            }));
-            const record = { actionIndex, eventId: action.beatId, choiceId: action.choiceId, choices };
-            publicDecisions.push(record);
-            const rule = exports.PUBLIC_JUDGMENT_EVENTS[action.beatId];
-            if (rule && action.type === game_session_mjs_1.ACTIONS.SELECT_PUBLIC_MOVE) {
-                const beat = beats.get(action.beatId);
-                if (!beat || !beat.latents)
-                    throw new Error(`Frozen script lacks judgment event ${action.beatId}`);
-                const ids = choices.map((c) => c.id).sort().join(',');
-                const coded = Object.keys(rule.coding).sort().join(',');
-                if (ids !== coded)
-                    throw new Error(`Option identifiers of ${action.beatId} (${ids}) differ from the M3 coding table (${coded})`);
-                if (!(action.choiceId in rule.coding))
-                    throw new Error(`Unknown public choice ${action.choiceId} at ${action.beatId}`);
-                const chosen = choices.find((c) => c.id === action.choiceId);
-                if (!chosen || !chosen.available)
-                    throw new Error(`Chosen option ${action.choiceId} at ${action.beatId} was not selectable`);
-                judgmentDecisions.push({
-                    actionIndex, eventId: action.beatId, age: beat.age ?? null, choiceId: action.choiceId,
-                    actionCredence: rule.coding[action.choiceId],
-                    pairId: rule.pairId, factor: rule.factor, level: rule.level, targetSide: rule.targetSide,
-                    evidenceQuality: round6(beat.latents.strength * beat.latents.reliability),
-                    deniability: beat.latents.deniability ?? null,
-                    crowdMagnitude: beat.latents.crowd ? beat.latents.crowd.magnitude : 0,
-                    choices, allOptionsAvailable: choices.every((c) => c.available),
-                });
-            }
-        }
-        (0, game_session_mjs_1.dispatchGameAction)(session, action);
-    }
-    const context = {
-        schema: exports.ACTOR_CONTEXT_SCHEMA, actionCount: actionIndex,
-        publicDecisions, judgmentDecisions,
-        codingTable: exports.PUBLIC_JUDGMENT_EVENTS,
-        excluded: ['SUBMIT_PRIVATE_READ credences', 'reactions', 'election tallies', 'Mirror', 'T0/T1/T2', 'questionnaire'],
-    };
-    const plain = JSON.parse(JSON.stringify(context));
-    return returnSession ? { context: plain, session } : plain;
-}
-function validateActorContext(context) {
-    if (!context || context.schema !== exports.ACTOR_CONTEXT_SCHEMA)
-        throw new Error('Actor context schema mismatch');
-    if (!Array.isArray(context.judgmentDecisions) || !Array.isArray(context.publicDecisions))
-        throw new Error('Actor context is incomplete');
-    for (const d of context.judgmentDecisions) {
-        const rule = exports.PUBLIC_JUDGMENT_EVENTS[d.eventId];
-        if (!rule || rule.coding[d.choiceId] !== d.actionCredence)
-            throw new Error(`Actor context coding mismatch at ${d.eventId}`);
-        if (!Number.isFinite(d.evidenceQuality))
-            throw new Error(`Actor context evidence quality missing at ${d.eventId}`);
-        for (const key of Object.keys(d)) {
-            if (/credence(?!Action)|read|score|t0|t1|t2|mirror|questionnaire/i.test(key) && key !== 'actionCredence')
-                throw new Error(`Actor context carries a disallowed field: ${key}`);
-        }
-    }
-    return true;
-}
-
-}],
-"pilot/sha256.mjs": [{},function(module,exports,require){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.sha256Bytes = sha256Bytes;
-exports.sha256Hex = sha256Hex;
-exports.hmacSha256Bytes = hmacSha256Bytes;
-exports.hmacSha256Base64url = hmacSha256Base64url;
-exports.hmacSha256Hex = hmacSha256Hex;
-exports.timingSafeEqualString = timingSafeEqualString;
-// Portable synchronous SHA-256 / HMAC-SHA-256 (UTF-8 input, hex output) so the Cloudflare
-// Worker, the Node collector and the browser produce identical hashes without WebCrypto's
-// asynchronous API. Verified against node:crypto in pilot-tests/cloud.test.mjs.
-const K = new Uint32Array([0x428a2f98, 0x71374491, 0xb5c0fbcf, 0xe9b5dba5, 0x3956c25b, 0x59f111f1, 0x923f82a4, 0xab1c5ed5, 0xd807aa98, 0x12835b01, 0x243185be, 0x550c7dc3, 0x72be5d74, 0x80deb1fe, 0x9bdc06a7, 0xc19bf174, 0xe49b69c1, 0xefbe4786, 0x0fc19dc6, 0x240ca1cc, 0x2de92c6f, 0x4a7484aa, 0x5cb0a9dc, 0x76f988da, 0x983e5152, 0xa831c66d, 0xb00327c8, 0xbf597fc7, 0xc6e00bf3, 0xd5a79147, 0x06ca6351, 0x14292967, 0x27b70a85, 0x2e1b2138, 0x4d2c6dfc, 0x53380d13, 0x650a7354, 0x766a0abb, 0x81c2c92e, 0x92722c85, 0xa2bfe8a1, 0xa81a664b, 0xc24b8b70, 0xc76c51a3, 0xd192e819, 0xd6990624, 0xf40e3585, 0x106aa070, 0x19a4c116, 0x1e376c08, 0x2748774c, 0x34b0bcb5, 0x391c0cb3, 0x4ed8aa4a, 0x5b9cca4f, 0x682e6ff3, 0x748f82ee, 0x78a5636f, 0x84c87814, 0x8cc70208, 0x90befffa, 0xa4506ceb, 0xbef9a3f7, 0xc67178f2]);
-const encoder = new TextEncoder();
-function toBytes(input) { return input instanceof Uint8Array ? input : encoder.encode(String(input)); }
-function sha256Bytes(input) {
+  // pilot/sha256.mjs
+  var K = new Uint32Array([1116352408, 1899447441, 3049323471, 3921009573, 961987163, 1508970993, 2453635748, 2870763221, 3624381080, 310598401, 607225278, 1426881987, 1925078388, 2162078206, 2614888103, 3248222580, 3835390401, 4022224774, 264347078, 604807628, 770255983, 1249150122, 1555081692, 1996064986, 2554220882, 2821834349, 2952996808, 3210313671, 3336571891, 3584528711, 113926993, 338241895, 666307205, 773529912, 1294757372, 1396182291, 1695183700, 1986661051, 2177026350, 2456956037, 2730485921, 2820302411, 3259730800, 3345764771, 3516065817, 3600352804, 4094571909, 275423344, 430227734, 506948616, 659060556, 883997877, 958139571, 1322822218, 1537002063, 1747873779, 1955562222, 2024104815, 2227730452, 2361852424, 2428436474, 2756734187, 3204031479, 3329325298]);
+  var encoder = new TextEncoder();
+  function toBytes(input) {
+    return input instanceof Uint8Array ? input : encoder.encode(String(input));
+  }
+  function sha256Bytes(input) {
     const msg = toBytes(input);
     const l = msg.length;
-    const total = ((l + 9 + 63) >> 6) << 6;
+    const total = l + 9 + 63 >> 6 << 6;
     const buf = new Uint8Array(total);
     buf.set(msg);
-    buf[l] = 0x80;
+    buf[l] = 128;
     const view = new DataView(buf.buffer);
-    const bits = l * 8;
-    view.setUint32(total - 8, Math.floor(bits / 4294967296));
-    view.setUint32(total - 4, bits >>> 0);
-    const h = new Uint32Array([0x6a09e667, 0xbb67ae85, 0x3c6ef372, 0xa54ff53a, 0x510e527f, 0x9b05688c, 0x1f83d9ab, 0x5be0cd19]);
+    const bits2 = l * 8;
+    view.setUint32(total - 8, Math.floor(bits2 / 4294967296));
+    view.setUint32(total - 4, bits2 >>> 0);
+    const h = new Uint32Array([1779033703, 3144134277, 1013904242, 2773480762, 1359893119, 2600822924, 528734635, 1541459225]);
     const w = new Uint32Array(64);
     for (let off = 0; off < total; off += 64) {
-        for (let i = 0; i < 16; i++)
-            w[i] = view.getUint32(off + i * 4);
-        for (let i = 16; i < 64; i++) {
-            const a = w[i - 15], b = w[i - 2];
-            const s0 = ((a >>> 7) | (a << 25)) ^ ((a >>> 18) | (a << 14)) ^ (a >>> 3);
-            const s1 = ((b >>> 17) | (b << 15)) ^ ((b >>> 19) | (b << 13)) ^ (b >>> 10);
-            w[i] = (w[i - 16] + s0 + w[i - 7] + s1) >>> 0;
-        }
-        let [a, b, c, d, e, f, g, hh] = h;
-        for (let i = 0; i < 64; i++) {
-            const S1 = ((e >>> 6) | (e << 26)) ^ ((e >>> 11) | (e << 21)) ^ ((e >>> 25) | (e << 7));
-            const ch = (e & f) ^ (~e & g);
-            const t1 = (hh + S1 + ch + K[i] + w[i]) >>> 0;
-            const S0 = ((a >>> 2) | (a << 30)) ^ ((a >>> 13) | (a << 19)) ^ ((a >>> 22) | (a << 10));
-            const maj = (a & b) ^ (a & c) ^ (b & c);
-            const t2 = (S0 + maj) >>> 0;
-            hh = g;
-            g = f;
-            f = e;
-            e = (d + t1) >>> 0;
-            d = c;
-            c = b;
-            b = a;
-            a = (t1 + t2) >>> 0;
-        }
-        h[0] = (h[0] + a) >>> 0;
-        h[1] = (h[1] + b) >>> 0;
-        h[2] = (h[2] + c) >>> 0;
-        h[3] = (h[3] + d) >>> 0;
-        h[4] = (h[4] + e) >>> 0;
-        h[5] = (h[5] + f) >>> 0;
-        h[6] = (h[6] + g) >>> 0;
-        h[7] = (h[7] + hh) >>> 0;
+      for (let i = 0; i < 16; i++) w[i] = view.getUint32(off + i * 4);
+      for (let i = 16; i < 64; i++) {
+        const a2 = w[i - 15], b2 = w[i - 2];
+        const s0 = (a2 >>> 7 | a2 << 25) ^ (a2 >>> 18 | a2 << 14) ^ a2 >>> 3;
+        const s1 = (b2 >>> 17 | b2 << 15) ^ (b2 >>> 19 | b2 << 13) ^ b2 >>> 10;
+        w[i] = w[i - 16] + s0 + w[i - 7] + s1 >>> 0;
+      }
+      let [a, b, c, d, e, f, g, hh] = h;
+      for (let i = 0; i < 64; i++) {
+        const S1 = (e >>> 6 | e << 26) ^ (e >>> 11 | e << 21) ^ (e >>> 25 | e << 7);
+        const ch = e & f ^ ~e & g;
+        const t1 = hh + S1 + ch + K[i] + w[i] >>> 0;
+        const S0 = (a >>> 2 | a << 30) ^ (a >>> 13 | a << 19) ^ (a >>> 22 | a << 10);
+        const maj = a & b ^ a & c ^ b & c;
+        const t2 = S0 + maj >>> 0;
+        hh = g;
+        g = f;
+        f = e;
+        e = d + t1 >>> 0;
+        d = c;
+        c = b;
+        b = a;
+        a = t1 + t2 >>> 0;
+      }
+      h[0] = h[0] + a >>> 0;
+      h[1] = h[1] + b >>> 0;
+      h[2] = h[2] + c >>> 0;
+      h[3] = h[3] + d >>> 0;
+      h[4] = h[4] + e >>> 0;
+      h[5] = h[5] + f >>> 0;
+      h[6] = h[6] + g >>> 0;
+      h[7] = h[7] + hh >>> 0;
     }
     const out = new Uint8Array(32);
     for (let i = 0; i < 8; i++) {
-        out[i * 4] = h[i] >>> 24;
-        out[i * 4 + 1] = (h[i] >>> 16) & 255;
-        out[i * 4 + 2] = (h[i] >>> 8) & 255;
-        out[i * 4 + 3] = h[i] & 255;
+      out[i * 4] = h[i] >>> 24;
+      out[i * 4 + 1] = h[i] >>> 16 & 255;
+      out[i * 4 + 2] = h[i] >>> 8 & 255;
+      out[i * 4 + 3] = h[i] & 255;
     }
     return out;
-}
-const hex = (bytes) => [...bytes].map((b) => b.toString(16).padStart(2, '0')).join('');
-function sha256Hex(input) { return hex(sha256Bytes(input)); }
-function hmacSha256Bytes(key, message) {
-    let k = toBytes(key);
-    if (k.length > 64)
-        k = sha256Bytes(k);
-    const pad = new Uint8Array(64);
-    pad.set(k);
-    const ipad = pad.map((x) => x ^ 0x36), opad = pad.map((x) => x ^ 0x5c);
-    const inner = new Uint8Array(64 + toBytes(message).length);
-    inner.set(ipad);
-    inner.set(toBytes(message), 64);
-    const innerHash = sha256Bytes(inner);
-    const outer = new Uint8Array(96);
-    outer.set(opad);
-    outer.set(innerHash, 64);
-    return sha256Bytes(outer);
-}
-function hmacSha256Base64url(key, message) {
-    const bytes = hmacSha256Bytes(key, message);
-    let s = '';
-    for (const b of bytes)
-        s += String.fromCharCode(b);
-    return btoa(s).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
-}
-function hmacSha256Hex(key, message) { return hex(hmacSha256Bytes(key, message)); }
-function timingSafeEqualString(a, b) {
-    const x = toBytes(a), y = toBytes(b);
-    let diff = x.length ^ y.length;
-    for (let i = 0; i < Math.max(x.length, y.length); i++)
-        diff |= (x[i] ?? 0) ^ (y[i] ?? 0);
-    return diff === 0;
-}
+  }
+  var hex = (bytes) => [...bytes].map((b) => b.toString(16).padStart(2, "0")).join("");
+  function sha256Hex(input) {
+    return hex(sha256Bytes(input));
+  }
 
-}],
-"pilot/assignment.mjs": [{"./sha256.mjs":"pilot/sha256.mjs"},function(module,exports,require){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.FORM_ORDERS = exports.ASSIGNMENT_VERSION = void 0;
-exports.assignmentForSlot = assignmentForSlot;
-exports.stableJSON = stableJSON;
-exports.enrollmentToken = enrollmentToken;
-// Deterministic block randomisation shared by the Node collector and the Cloudflare Worker.
-// Slot zero is the first allocation, including sessions that later drop out.
-const sha256_mjs_1 = require("./sha256.mjs");
-exports.ASSIGNMENT_VERSION = 'PM-BLOCK6-1';
-exports.FORM_ORDERS = Object.freeze([['A', 'B', 'C'], ['B', 'C', 'A'], ['C', 'A', 'B']]);
-function assignmentForSlot(slot, runKey, runId = 'pilot-run') {
-    if (!Number.isSafeInteger(slot) || slot < 0)
-        throw new Error('INVALID_SLOT');
-    const block = Math.floor(slot / 6), within = slot % 6;
-    const forms = [0, 1, 2].sort((a, b) => (0, sha256_mjs_1.sha256Hex)(`${runKey}|${block}|form|${a}`).localeCompare((0, sha256_mjs_1.sha256Hex)(`${runKey}|${block}|form|${b}`)));
-    const form = forms[Math.floor(within / 2)];
-    const firstTrue = (parseInt((0, sha256_mjs_1.sha256Hex)(`${runKey}|${block}|arm|${form}`).slice(0, 2), 16) & 1) === 0;
-    const arm = (within % 2 === 0 ? firstTrue : !firstTrue) ? 'TRUE' : 'SHUFFLED';
-    return { slot, arm, formOrder: [...exports.FORM_ORDERS[form]], assignmentVersion: exports.ASSIGNMENT_VERSION, runId };
-}
-function stableJSON(value) {
-    if (Array.isArray(value))
-        return '[' + value.map(stableJSON).join(',') + ']';
-    if (value && typeof value === 'object')
-        return '{' + Object.keys(value).sort().map((k) => JSON.stringify(k) + ':' + stableJSON(value[k])).join(',') + '}';
+  // pilot/assignment.mjs
+  var FORM_ORDERS = Object.freeze([["A", "B", "C"], ["B", "C", "A"], ["C", "A", "B"]]);
+  function stableJSON(value) {
+    if (Array.isArray(value)) return "[" + value.map(stableJSON).join(",") + "]";
+    if (value && typeof value === "object") return "{" + Object.keys(value).sort().map((k) => JSON.stringify(k) + ":" + stableJSON(value[k])).join(",") + "}";
     return JSON.stringify(value);
-}
-function enrollmentToken(runKey, sessionId, requestId) {
-    return hmacSha256Base64urlWrapper(runKey, 'PM-ENROLL|' + sessionId + '|' + requestId);
-}
-const sha256_mjs_2 = require("./sha256.mjs");
-function hmacSha256Base64urlWrapper(key, message) { return (0, sha256_mjs_2.hmacSha256Base64url)(key, message); }
+  }
 
-}],
-"pilot/consent-validator.mjs": [{},function(module,exports,require){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.CONSENT_CONFIRMATIONS = void 0;
-exports.validateConsentSubmission = validateConsentSubmission;
-exports.consentRecordIsComplete = consentRecordIsComplete;
-// Authoritative consent validator shared by the UI, the study transition and the collectors.
-// Every confirmation must be the boolean `true`; nothing is coerced, defaulted or inferred.
-exports.CONSENT_CONFIRMATIONS = Object.freeze(['adult', 'english', 'informed', 'agreed']);
-const HEX64 = /^[a-f0-9]{64}$/;
-function validateConsentSubmission(input, { researcherConfigSha256, consentTextSha256 } = {}) {
-    if (!input || typeof input !== 'object' || Array.isArray(input))
-        throw new Error('CONSENT_OBJECT_REQUIRED');
-    const allowed = new Set([...exports.CONSENT_CONFIRMATIONS, 'eligible', 'researcherConfigSha256', 'consentTextSha256', 'ethicsReference', 'studyTitle']);
-    for (const key of Object.keys(input))
-        if (!allowed.has(key))
-            throw new Error(`CONSENT_UNKNOWN_FIELD:${key}`);
-    for (const key of exports.CONSENT_CONFIRMATIONS) {
-        if (!(key in input) || input[key] === undefined)
-            throw new Error(`CONSENT_CONFIRMATION_MISSING:${key}`);
-        if (typeof input[key] !== 'boolean')
-            throw new Error(`CONSENT_CONFIRMATION_NOT_BOOLEAN:${key}`);
-        if (input[key] !== true)
-            throw new Error(`CONSENT_CONFIRMATION_NOT_TRUE:${key}`);
+  // pilot/consent-validator.mjs
+  var CONSENT_CONFIRMATIONS = Object.freeze(["adult", "english", "informed", "agreed"]);
+  var HEX64 = /^[a-f0-9]{64}$/;
+  function validateConsentSubmission(input, { researcherConfigSha256, consentTextSha256 } = {}) {
+    if (!input || typeof input !== "object" || Array.isArray(input)) throw new Error("CONSENT_OBJECT_REQUIRED");
+    const allowed = /* @__PURE__ */ new Set([...CONSENT_CONFIRMATIONS, "eligible", "researcherConfigSha256", "consentTextSha256", "ethicsReference", "studyTitle"]);
+    for (const key of Object.keys(input)) if (!allowed.has(key)) throw new Error(`CONSENT_UNKNOWN_FIELD:${key}`);
+    for (const key of CONSENT_CONFIRMATIONS) {
+      if (!(key in input) || input[key] === void 0) throw new Error(`CONSENT_CONFIRMATION_MISSING:${key}`);
+      if (typeof input[key] !== "boolean") throw new Error(`CONSENT_CONFIRMATION_NOT_BOOLEAN:${key}`);
+      if (input[key] !== true) throw new Error(`CONSENT_CONFIRMATION_NOT_TRUE:${key}`);
     }
-    if ('eligible' in input && input.eligible !== true)
-        throw new Error('CONSENT_CONFIRMATION_NOT_TRUE:eligible');
-    if (!HEX64.test(input.researcherConfigSha256 || ''))
-        throw new Error('CONSENT_CONFIG_HASH_REQUIRED');
-    if (!HEX64.test(input.consentTextSha256 || ''))
-        throw new Error('CONSENT_TEXT_HASH_REQUIRED');
-    if (researcherConfigSha256 && input.researcherConfigSha256 !== researcherConfigSha256)
-        throw new Error('CONSENT_CONFIG_MISMATCH');
-    if (consentTextSha256 && input.consentTextSha256 !== consentTextSha256)
-        throw new Error('CONSENT_CONFIG_MISMATCH');
-    if (input.ethicsReference != null && (typeof input.ethicsReference !== 'string' || input.ethicsReference.length > 200))
-        throw new Error('CONSENT_INVALID_ETHICS_REFERENCE');
-    if (input.studyTitle != null && (typeof input.studyTitle !== 'string' || input.studyTitle.length > 300))
-        throw new Error('CONSENT_INVALID_STUDY_TITLE');
-    return { adult: true, english: true, informed: true, agreed: true, eligible: true,
-        researcherConfigSha256: input.researcherConfigSha256, consentTextSha256: input.consentTextSha256,
-        ethicsReference: input.ethicsReference ?? null, studyTitle: input.studyTitle ?? null };
-}
-/** True only when a stored consent object carries every confirmation as boolean true. */
-function consentRecordIsComplete(consent) {
-    return !!consent && typeof consent === 'object' && [...exports.CONSENT_CONFIRMATIONS, 'eligible'].every((k) => consent[k] === true)
-        && HEX64.test(consent.researcherConfigSha256 || '') && HEX64.test(consent.consentTextSha256 || '') && typeof consent.at === 'string';
-}
+    if ("eligible" in input && input.eligible !== true) throw new Error("CONSENT_CONFIRMATION_NOT_TRUE:eligible");
+    if (!HEX64.test(input.researcherConfigSha256 || "")) throw new Error("CONSENT_CONFIG_HASH_REQUIRED");
+    if (!HEX64.test(input.consentTextSha256 || "")) throw new Error("CONSENT_TEXT_HASH_REQUIRED");
+    if (researcherConfigSha256 && input.researcherConfigSha256 !== researcherConfigSha256) throw new Error("CONSENT_CONFIG_MISMATCH");
+    if (consentTextSha256 && input.consentTextSha256 !== consentTextSha256) throw new Error("CONSENT_CONFIG_MISMATCH");
+    if (input.ethicsReference != null && (typeof input.ethicsReference !== "string" || input.ethicsReference.length > 200)) throw new Error("CONSENT_INVALID_ETHICS_REFERENCE");
+    if (input.studyTitle != null && (typeof input.studyTitle !== "string" || input.studyTitle.length > 300)) throw new Error("CONSENT_INVALID_STUDY_TITLE");
+    return {
+      adult: true,
+      english: true,
+      informed: true,
+      agreed: true,
+      eligible: true,
+      researcherConfigSha256: input.researcherConfigSha256,
+      consentTextSha256: input.consentTextSha256,
+      ethicsReference: input.ethicsReference ?? null,
+      studyTitle: input.studyTitle ?? null
+    };
+  }
+  function consentRecordIsComplete(consent) {
+    return !!consent && typeof consent === "object" && [...CONSENT_CONFIRMATIONS, "eligible"].every((k) => consent[k] === true) && HEX64.test(consent.researcherConfigSha256 || "") && HEX64.test(consent.consentTextSha256 || "") && typeof consent.at === "string";
+  }
 
-}],
-"pilot/build-info.json": [{},function(module,exports,require){
-module.exports = JSON.parse("{\n  \"version\": \"0.37.2\",\n  \"buildHash\": \"f5eaaff91d5ccc9b03bb7fbc240cd4b5ed592e0a37448a15b537024a2c8f5e04\",\n  \"sourceManifestHash\": \"439b4dc3ac6cd7b884976530230e99f088b7d82e9998e299b04c8db49be88934\",\n  \"studyVersion\": \"0.38.3-pilot.1\"\n}\n");
-}],
-"pilot/client.mjs": [{},function(module,exports,require){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.StudyClient = exports.StudyTransportError = exports.WITHDRAWAL_RECEIPT_KEY = exports.WITHDRAWAL_PENDING_KEY = exports.ERROR_KEY = exports.ENROLLMENT_KEY = exports.PENDING_KEY = exports.CREDENTIALS_KEY = void 0;
-exports.downloadJSON = downloadJSON;
-// Participant transport: server acknowledgements are the only durable-write signal.
-// Credentials and idempotency requests stay local and never enter the research export.
-exports.CREDENTIALS_KEY = 'pm-pilot-0.38.0-credentials';
-exports.PENDING_KEY = 'pm-pilot-0.38.0-pending';
-exports.ENROLLMENT_KEY = 'pm-pilot-0.38.0-enrollment';
-exports.ERROR_KEY = 'pm-pilot-0.38.0-errors';
-exports.WITHDRAWAL_PENDING_KEY = 'pm-pilot-withdrawal-pending';
-exports.WITHDRAWAL_RECEIPT_KEY = 'pm-pilot-withdrawal-receipt';
-class StudyTransportError extends Error {
-    constructor(message, { status = 0, code = 'NETWORK_ERROR' } = {}) {
-        super(message);
-        this.name = 'StudyTransportError';
-        this.status = status;
-        this.code = code;
+  // pilot/build-info.json
+  var build_info_default = {
+    version: "0.37.2",
+    buildHash: "f5eaaff91d5ccc9b03bb7fbc240cd4b5ed592e0a37448a15b537024a2c8f5e04",
+    sourceManifestHash: "439b4dc3ac6cd7b884976530230e99f088b7d82e9998e299b04c8db49be88934",
+    studyVersion: "0.38.3-pilot.1",
+    presentationVersion: "0.38.3-readability.1"
+  };
+
+  // pilot/client.mjs
+  var CREDENTIALS_KEY = "pm-pilot-0.38.0-credentials";
+  var PENDING_KEY = "pm-pilot-0.38.0-pending";
+  var ENROLLMENT_KEY = "pm-pilot-0.38.0-enrollment";
+  var ERROR_KEY = "pm-pilot-0.38.0-errors";
+  var WITHDRAWAL_PENDING_KEY = "pm-pilot-withdrawal-pending";
+  var WITHDRAWAL_RECEIPT_KEY = "pm-pilot-withdrawal-receipt";
+  var StudyTransportError = class extends Error {
+    constructor(message, { status = 0, code = "NETWORK_ERROR" } = {}) {
+      super(message);
+      this.name = "StudyTransportError";
+      this.status = status;
+      this.code = code;
     }
-}
-exports.StudyTransportError = StudyTransportError;
-function read(storage, key) {
+  };
+  function read(storage, key) {
     const raw = storage.getItem(key);
-    if (!raw)
-        return null;
+    if (!raw) return null;
     try {
-        return JSON.parse(raw);
+      return JSON.parse(raw);
+    } catch {
+      throw new StudyTransportError("This browser could not read your saved session. Please contact the researcher before starting again.", { code: "LOCAL_STORAGE_CORRUPT" });
     }
-    catch {
-        throw new StudyTransportError('The saved session information cannot be read. Please contact the researcher before starting again.', { code: 'LOCAL_STORAGE_CORRUPT' });
-    }
-}
-function randomId() {
-    if (!globalThis.crypto?.randomUUID)
-        throw new StudyTransportError('This study needs a secure browser connection.', { code: 'SECURE_CONTEXT_REQUIRED' });
+  }
+  function randomId() {
+    if (!globalThis.crypto?.randomUUID) throw new StudyTransportError("This study needs a secure connection. Please open the study\u2019s HTTPS link.", { code: "SECURE_CONTEXT_REQUIRED" });
     return globalThis.crypto.randomUUID();
-}
-class StudyClient {
-    constructor({ storage = globalThis.localStorage, fetchImpl = globalThis.fetch, base = '' } = {}) {
-        this.storage = storage;
-        this.fetchImpl = fetchImpl;
-        this.base = base;
-        this.revision = 0;
-        this.activeRequest = null;
+  }
+  var StudyClient = class {
+    constructor({ storage = globalThis.localStorage, fetchImpl = globalThis.fetch, base = "" } = {}) {
+      this.storage = storage;
+      this.fetchImpl = fetchImpl;
+      this.base = base;
+      this.revision = 0;
+      this.activeRequest = null;
     }
-    credentials() { return read(this.storage, exports.CREDENTIALS_KEY); }
-    hasSession() { return !!this.credentials(); }
-    hasEnrollment() { return !!read(this.storage, exports.ENROLLMENT_KEY); }
-    clearEnrollment() { this.storage.removeItem(exports.ENROLLMENT_KEY); }
-    pending() { return read(this.storage, exports.PENDING_KEY); }
-    errors() { return read(this.storage, exports.ERROR_KEY) || []; }
+    credentials() {
+      return read(this.storage, CREDENTIALS_KEY);
+    }
+    hasSession() {
+      return !!this.credentials();
+    }
+    hasEnrollment() {
+      return !!read(this.storage, ENROLLMENT_KEY);
+    }
+    clearEnrollment() {
+      this.storage.removeItem(ENROLLMENT_KEY);
+    }
+    pending() {
+      return read(this.storage, PENDING_KEY);
+    }
+    errors() {
+      return read(this.storage, ERROR_KEY) || [];
+    }
     recordError(issue) {
-        const errors = [...this.errors(), issue].slice(-100);
-        this.storage.setItem(exports.ERROR_KEY, JSON.stringify(errors));
+      const errors = [...this.errors(), issue].slice(-100);
+      this.storage.setItem(ERROR_KEY, JSON.stringify(errors));
     }
-    clearErrors() { this.storage.removeItem(exports.ERROR_KEY); }
-    async request(path, { method = 'GET', body, authenticated = true } = {}) {
-        const credentials = this.credentials();
-        const headers = { 'Content-Type': 'application/json' };
-        if (authenticated) {
-            if (!credentials?.token)
-                throw new StudyTransportError('No saved session was found.', { code: 'MISSING_CREDENTIALS' });
-            headers.Authorization = `Bearer ${credentials.token}`;
-        }
-        const controller = new AbortController();
-        const timeout = setTimeout(() => controller.abort(), 30000);
-        let response;
-        try {
-            // Real browsers throw "Illegal invocation" when window.fetch is called as a method of
-            // another object (this.fetchImpl(...)). Node/JSDOM bridges do not, so this must stay bound
-            // to the global object; verified in Chromium 141 (pilot-evidence/chromium).
-            response = await this.fetchImpl.call(globalThis, `${this.base}${path}`, {
-                method, headers, body: body === undefined ? undefined : JSON.stringify(body),
-                signal: controller.signal, cache: 'no-store', credentials: 'same-origin',
-            });
-        }
-        catch (cause) {
-            throw new StudyTransportError('The server has not confirmed this step. Keep this page open and choose Retry / resume when the connection returns.', { code: cause?.name === 'AbortError' ? 'REQUEST_TIMEOUT' : 'NETWORK_ERROR' });
-        }
-        finally {
-            clearTimeout(timeout);
-        }
-        let result;
-        try {
-            result = await response.json();
-        }
-        catch {
-            throw new StudyTransportError('The server returned an unreadable response. Please retry without starting another session.', { status: response.status, code: 'INVALID_RESPONSE' });
-        }
-        if (!response.ok) {
-            const code = result.code || result.error?.code || (typeof result.error === 'string' ? result.error : 'SERVER_REJECTED');
-            const messages = {
-                REVISION_CONFLICT: 'This session was saved in another tab. Close other study tabs, then choose Retry / resume. The unconfirmed step may need to be entered again.',
-                REQUEST_ID_REUSED_WITH_DIFFERENT_BODY: 'A saved request failed its consistency check. Please contact the researcher before continuing.',
-                ENROLLMENT_CLOSED: 'Enrollment is currently closed. Please contact the researcher.',
-            };
-            throw new StudyTransportError(result.message || result.error?.message || messages[code] || 'The server could not confirm this step. Please retry or contact the researcher.', { status: response.status, code });
-        }
-        return result;
+    clearErrors() {
+      this.storage.removeItem(ERROR_KEY);
     }
-    withdrawalPending() { return read(this.storage, exports.WITHDRAWAL_PENDING_KEY); }
-    withdrawalReceipt() { return read(this.storage, exports.WITHDRAWAL_RECEIPT_KEY); }
+    async request(path, { method = "GET", body, authenticated = true } = {}) {
+      const credentials = this.credentials();
+      const headers = { "Content-Type": "application/json" };
+      if (authenticated) {
+        if (!credentials?.token) throw new StudyTransportError("No saved session was found.", { code: "MISSING_CREDENTIALS" });
+        headers.Authorization = `Bearer ${credentials.token}`;
+      }
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 3e4);
+      let response;
+      try {
+        response = await this.fetchImpl.call(globalThis, `${this.base}${path}`, {
+          method,
+          headers,
+          body: body === void 0 ? void 0 : JSON.stringify(body),
+          signal: controller.signal,
+          cache: "no-store",
+          credentials: "same-origin"
+        });
+      } catch (cause) {
+        throw new StudyTransportError("This step has not been confirmed as saved. Keep this page open and choose Retry / resume when your connection returns.", { code: cause?.name === "AbortError" ? "REQUEST_TIMEOUT" : "NETWORK_ERROR" });
+      } finally {
+        clearTimeout(timeout);
+      }
+      let result;
+      try {
+        result = await response.json();
+      } catch {
+        throw new StudyTransportError("The page could not read the reply from the study. Please retry without starting a new session.", { status: response.status, code: "INVALID_RESPONSE" });
+      }
+      if (!response.ok) {
+        const code = result.code || result.error?.code || (typeof result.error === "string" ? result.error : "SERVER_REJECTED");
+        const messages = {
+          REVISION_CONFLICT: "This session was saved in another tab. Close other study tabs, then choose Retry / resume. The unconfirmed step may need to be entered again.",
+          REQUEST_ID_REUSED_WITH_DIFFERENT_BODY: "A saved request no longer matches the original. Please contact the researcher before continuing.",
+          ENROLLMENT_CLOSED: "The study is not accepting new participants right now. Please contact the researcher."
+        };
+        throw new StudyTransportError(result.message || result.error?.message || messages[code] || "The server could not confirm this step. Please retry or contact the researcher.", { status: response.status, code });
+      }
+      return result;
+    }
+    withdrawalPending() {
+      return read(this.storage, WITHDRAWAL_PENDING_KEY);
+    }
+    withdrawalReceipt() {
+      return read(this.storage, WITHDRAWAL_RECEIPT_KEY);
+    }
     // Confirmed withdrawal erases pending answer payloads before retrying the deletion.
     // A small pending intent retains only request/session IDs; it never contains responses.
     async withdraw() {
-        const done = this.withdrawalReceipt();
-        if (done?.dataDeleted === true)
-            return done;
-        const credentials = this.credentials();
-        if (!credentials)
-            throw new StudyTransportError('No saved session can be identified. Email the researcher with your session code.', { code: 'MISSING_CREDENTIALS' });
-        let intent = this.withdrawalPending();
-        if (!intent) {
-            intent = { sessionId: credentials.sessionId, requestId: 'withdraw_' + randomId() };
-            this.storage.setItem(exports.WITHDRAWAL_PENDING_KEY, JSON.stringify(intent));
-        }
-        if (intent.sessionId !== credentials.sessionId)
-            throw new StudyTransportError('The withdrawal request does not match this session.', { code: 'SESSION_MISMATCH' });
-        this.storage.removeItem(exports.PENDING_KEY);
-        this.clearErrors();
-        this.clearEnrollment();
-        let result;
-        try {
-            result = await this.request(`/api/session/${encodeURIComponent(credentials.sessionId)}/withdraw`, {
-                method: 'POST', body: { requestId: intent.requestId }
-            });
-        }
-        catch (cause) {
-            throw new StudyTransportError('You have asked to leave, but the server has not confirmed deletion. Choose Retry / resume to resend only your deletion request, or email the researcher with your session code.', { status: cause.status, code: 'WITHDRAWAL_NOT_CONFIRMED' });
-        }
-        if (result.schema !== 'pm-withdrawal-receipt/1' || result.sessionId !== credentials.sessionId || result.dataDeleted !== true || !result.removedAt)
-            throw new StudyTransportError('The deletion acknowledgement could not be verified. Retry or contact the researcher.', { code: 'WITHDRAWAL_NOT_CONFIRMED' });
-        const receipt = { schema: result.schema, sessionId: result.sessionId, participantCode: result.participantCode,
-            studyVersion: result.studyVersion, removedAt: result.removedAt, dataDeleted: true, status: 'withdrawn',
-            sawFeedback: result.sawFeedback === true, feedbackArm: result.feedbackArm ?? null };
-        this.storage.setItem(exports.WITHDRAWAL_RECEIPT_KEY, JSON.stringify(receipt));
-        for (const key of [exports.CREDENTIALS_KEY, exports.PENDING_KEY, exports.ENROLLMENT_KEY, exports.ERROR_KEY, exports.WITHDRAWAL_PENDING_KEY])
-            this.storage.removeItem(key);
-        this.activeRequest = null;
-        return receipt;
+      const done = this.withdrawalReceipt();
+      if (done?.dataDeleted === true) return done;
+      const credentials = this.credentials();
+      if (!credentials) throw new StudyTransportError("No saved session can be identified. Email the researcher with your session code.", { code: "MISSING_CREDENTIALS" });
+      let intent = this.withdrawalPending();
+      if (!intent) {
+        intent = { sessionId: credentials.sessionId, requestId: "withdraw_" + randomId() };
+        this.storage.setItem(WITHDRAWAL_PENDING_KEY, JSON.stringify(intent));
+      }
+      if (intent.sessionId !== credentials.sessionId) throw new StudyTransportError("The withdrawal request does not match this session.", { code: "SESSION_MISMATCH" });
+      this.storage.removeItem(PENDING_KEY);
+      this.clearErrors();
+      this.clearEnrollment();
+      clearJudgmentDraft(this.storage);
+      let result;
+      try {
+        result = await this.request(`/api/session/${encodeURIComponent(credentials.sessionId)}/withdraw`, {
+          method: "POST",
+          body: { requestId: intent.requestId }
+        });
+      } catch (cause) {
+        throw new StudyTransportError("You have asked to leave, but the server has not confirmed deletion. Choose Retry / resume to resend only your deletion request, or email the researcher with your session code.", { status: cause.status, code: "WITHDRAWAL_NOT_CONFIRMED" });
+      }
+      if (result.schema !== "pm-withdrawal-receipt/1" || result.sessionId !== credentials.sessionId || result.dataDeleted !== true || !result.removedAt)
+        throw new StudyTransportError("The page could not confirm that your data was deleted. Retry or contact the researcher.", { code: "WITHDRAWAL_NOT_CONFIRMED" });
+      const receipt = {
+        schema: result.schema,
+        sessionId: result.sessionId,
+        participantCode: result.participantCode,
+        studyVersion: result.studyVersion,
+        removedAt: result.removedAt,
+        dataDeleted: true,
+        status: "withdrawn",
+        sawFeedback: result.sawFeedback === true,
+        feedbackArm: result.feedbackArm ?? null
+      };
+      this.storage.setItem(WITHDRAWAL_RECEIPT_KEY, JSON.stringify(receipt));
+      for (const key of [CREDENTIALS_KEY, PENDING_KEY, ENROLLMENT_KEY, ERROR_KEY, WITHDRAWAL_PENDING_KEY]) this.storage.removeItem(key);
+      this.activeRequest = null;
+      return receipt;
     }
-    config() { return this.request('/api/config', { authenticated: false }); }
+    config() {
+      return this.request("/api/config", { authenticated: false });
+    }
     /** Enrollment = consent submission + allocation. The enrollment key AND the consent it carries are
      *  persisted before the request so that a lost acknowledgement is retried with the identical body. */
     async enroll({ consent, collectionMode } = {}) {
-        if (this.hasSession())
-            throw new StudyTransportError('A session is already saved in this browser. Continue that session.', { code: 'SESSION_EXISTS' });
-        let enrollment = read(this.storage, exports.ENROLLMENT_KEY);
-        if (!enrollment || (consent && JSON.stringify(enrollment.consent) !== JSON.stringify(consent))) {
-            if (!consent)
-                throw new StudyTransportError('Consent is required to enroll.', { code: 'CONSENT_REQUIRED' });
-            enrollment = { requestId: `enroll_${randomId()}`, consent, ...(collectionMode ? { collectionMode } : {}) };
-            this.storage.setItem(exports.ENROLLMENT_KEY, JSON.stringify(enrollment));
-        }
-        const result = await this.request('/api/session', { method: 'POST', body: enrollment, authenticated: false });
-        if (!result.sessionId || !result.token || !result.assignment || !result.consent)
-            throw new StudyTransportError('The enrollment response is incomplete.', { code: 'INVALID_ENROLLMENT' });
-        this.storage.setItem(exports.CREDENTIALS_KEY, JSON.stringify({ sessionId: result.sessionId, token: result.token }));
-        this.revision = result.revision ?? 0;
-        this.storage.removeItem(exports.ENROLLMENT_KEY);
-        return result;
+      if (this.hasSession()) throw new StudyTransportError("A session is already saved in this browser. Continue that session.", { code: "SESSION_EXISTS" });
+      let enrollment = read(this.storage, ENROLLMENT_KEY);
+      if (!enrollment || consent && JSON.stringify(enrollment.consent) !== JSON.stringify(consent)) {
+        if (!consent) throw new StudyTransportError("Consent is required to enroll.", { code: "CONSENT_REQUIRED" });
+        enrollment = { requestId: `enroll_${randomId()}`, consent, ...collectionMode ? { collectionMode } : {} };
+        this.storage.setItem(ENROLLMENT_KEY, JSON.stringify(enrollment));
+      }
+      const result = await this.request("/api/session", { method: "POST", body: enrollment, authenticated: false });
+      if (!result.sessionId || !result.token || !result.assignment || !result.consent) throw new StudyTransportError("The study did not send all the details needed to start your session. Please retry.", { code: "INVALID_ENROLLMENT" });
+      this.storage.setItem(CREDENTIALS_KEY, JSON.stringify({ sessionId: result.sessionId, token: result.token }));
+      this.revision = result.revision ?? 0;
+      this.storage.removeItem(ENROLLMENT_KEY);
+      return result;
     }
     async sendPending(pending) {
-        const credentials = this.credentials();
-        if (!pending || pending.sessionId !== credentials?.sessionId)
-            throw new StudyTransportError('The pending save does not belong to this session.', { code: 'SESSION_MISMATCH' });
-        const result = await this.request(`/api/session/${encodeURIComponent(credentials.sessionId)}/${pending.kind}`, { method: 'POST', body: pending.body });
-        if (!Number.isInteger(result.revision))
-            throw new StudyTransportError('The server did not confirm a save revision.', { code: 'INVALID_ACKNOWLEDGEMENT' });
-        this.revision = result.revision;
-        // Clear only the exact acknowledged request. Never clear a newer local write.
-        if (this.pending()?.body?.requestId === pending.body.requestId)
-            this.storage.removeItem(exports.PENDING_KEY);
-        return result;
+      const credentials = this.credentials();
+      if (!pending || pending.sessionId !== credentials?.sessionId) throw new StudyTransportError("The pending save does not belong to this session.", { code: "SESSION_MISMATCH" });
+      const result = await this.request(`/api/session/${encodeURIComponent(credentials.sessionId)}/${pending.kind}`, { method: "POST", body: pending.body });
+      if (!Number.isInteger(result.revision)) throw new StudyTransportError("The study did not confirm that this save was completed. Please retry.", { code: "INVALID_ACKNOWLEDGEMENT" });
+      this.revision = result.revision;
+      if (this.pending()?.body?.requestId === pending.body.requestId) this.storage.removeItem(PENDING_KEY);
+      return result;
     }
     async recover() {
-        if (this.withdrawalPending() || this.withdrawalReceipt())
-            throw new StudyTransportError('Withdrawal has priority over study recovery.', { code: 'WITHDRAWAL_PENDING' });
-        const pending = this.pending();
-        let recoveryNotice = null;
-        if (pending) {
-            try {
-                await this.sendPending(pending);
-            }
-            catch (cause) {
-                if (cause.status !== 409 || cause.code !== 'REVISION_CONFLICT')
-                    throw cause;
-                // A definitive rejection proves this request was NOT committed. An ambiguous
-                // network failure never takes this branch and must retain its pending request.
-                if (this.pending()?.body?.requestId === pending.body.requestId)
-                    this.storage.removeItem(exports.PENDING_KEY);
-                recoveryNotice = 'Another tab had already saved this session. Your latest unconfirmed step was not accepted. We restored the server’s saved record; re-enter that step if it is still shown.';
-                this.recordError({ message: recoveryNotice, code: 'REVISION_CONFLICT_RECOVERED', at: new Date().toISOString() });
-            }
+      if (this.withdrawalPending() || this.withdrawalReceipt()) throw new StudyTransportError("Withdrawal has priority over study recovery.", { code: "WITHDRAWAL_PENDING" });
+      const pending = this.pending();
+      let recoveryNotice = null;
+      if (pending) {
+        try {
+          await this.sendPending(pending);
+        } catch (cause) {
+          if (cause.status !== 409 || cause.code !== "REVISION_CONFLICT") throw cause;
+          if (this.pending()?.body?.requestId === pending.body.requestId) this.storage.removeItem(PENDING_KEY);
+          recoveryNotice = "Another tab already saved this session. Your latest step was not accepted. We restored the last confirmed save. Please enter the current step again if needed.";
+          this.recordError({ message: recoveryNotice, code: "REVISION_CONFLICT_RECOVERED", at: (/* @__PURE__ */ new Date()).toISOString() });
         }
-        const credentials = this.credentials();
-        if (!credentials)
-            throw new StudyTransportError('No session is saved on this browser.', { code: 'MISSING_CREDENTIALS' });
-        const result = await this.request(`/api/session/${encodeURIComponent(credentials.sessionId)}`);
-        this.revision = result.revision ?? 0;
-        return { ...result, recoveryNotice };
+      }
+      const credentials = this.credentials();
+      if (!credentials) throw new StudyTransportError("No session is saved on this browser.", { code: "MISSING_CREDENTIALS" });
+      const result = await this.request(`/api/session/${encodeURIComponent(credentials.sessionId)}`);
+      this.revision = result.revision ?? 0;
+      return { ...result, recoveryNotice };
     }
     async write(kind, value) {
-        if (this.withdrawalPending() || this.withdrawalReceipt())
-            throw new StudyTransportError('This session is being withdrawn; answers will not be sent.', { code: 'WITHDRAWAL_PENDING' });
-        if (this.activeRequest)
-            throw new StudyTransportError('A save is already in progress. Wait for it to finish.', { code: 'SAVE_IN_PROGRESS' });
-        if (this.pending())
-            throw new StudyTransportError('A previous save still needs confirmation. Choose Retry / resume.', { code: 'PENDING_SAVE' });
-        const credentials = this.credentials();
-        const pending = { sessionId: credentials?.sessionId, kind, body: {
-                requestId: randomId(), expectedRevision: this.revision, [kind]: value,
-            } };
-        this.storage.setItem(exports.PENDING_KEY, JSON.stringify(pending));
-        this.activeRequest = pending.body.requestId;
-        try {
-            return await this.sendPending(pending);
-        }
-        finally {
-            this.activeRequest = null;
-        }
+      if (this.withdrawalPending() || this.withdrawalReceipt()) throw new StudyTransportError("This session is being withdrawn; answers will not be sent.", { code: "WITHDRAWAL_PENDING" });
+      if (this.activeRequest) throw new StudyTransportError("A save is already in progress. Wait for it to finish.", { code: "SAVE_IN_PROGRESS" });
+      if (this.pending()) throw new StudyTransportError("A previous save still needs confirmation. Choose Retry / resume.", { code: "PENDING_SAVE" });
+      const credentials = this.credentials();
+      const pending = { sessionId: credentials?.sessionId, kind, body: {
+        requestId: randomId(),
+        expectedRevision: this.revision,
+        [kind]: value
+      } };
+      this.storage.setItem(PENDING_KEY, JSON.stringify(pending));
+      this.activeRequest = pending.body.requestId;
+      try {
+        return await this.sendPending(pending);
+      } finally {
+        this.activeRequest = null;
+      }
     }
-    checkpoint(checkpoint) { return this.write('checkpoint', checkpoint); }
-    prediction(prediction) { return this.write('prediction', prediction); }
+    checkpoint(checkpoint) {
+      return this.write("checkpoint", checkpoint);
+    }
+    prediction(prediction) {
+      return this.write("prediction", prediction);
+    }
     async researchExport() {
-        const credentials = this.credentials();
-        return this.request(`/api/session/${encodeURIComponent(credentials.sessionId)}/export`);
+      const credentials = this.credentials();
+      return this.request(`/api/session/${encodeURIComponent(credentials.sessionId)}/export`);
     }
-}
-exports.StudyClient = StudyClient;
-function downloadJSON(value, filename) {
-    const blob = new Blob([JSON.stringify(value, null, 2)], { type: 'application/json' });
+  };
+  function downloadJSON(value, filename) {
+    const blob = new Blob([JSON.stringify(value, null, 2)], { type: "application/json" });
     const url = URL.createObjectURL(blob);
-    const anchor = document.createElement('a');
+    const anchor = document.createElement("a");
     anchor.href = url;
     anchor.download = filename;
     document.body.appendChild(anchor);
     anchor.click();
     anchor.remove();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
-}
+    setTimeout(() => URL.revokeObjectURL(url), 1e3);
+  }
 
-}],
-"pilot/study.mjs": [{"./consent-validator.mjs":"pilot/consent-validator.mjs","./cases.mjs":"pilot/cases.mjs"},function(module,exports,require){
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.STAGES = exports.CONSENT_VERSION = exports.STUDY_VERSION = void 0;
-exports.formFor = formFor;
-exports.createStudy = createStudy;
-exports.consentStudy = consentStudy;
-exports.presentItem = presentItem;
-exports.answerItem = answerItem;
-exports.checkpointGame = checkpointGame;
-exports.completeGame = completeGame;
-exports.attachPrediction = attachPrediction;
-exports.finishMirror = finishMirror;
-exports.updateQuestionnaire = updateQuestionnaire;
-exports.finishSurvey = finishSurvey;
-exports.completeStudy = completeStudy;
-exports.withdrawStudy = withdrawStudy;
-exports.recordTechnicalError = recordTechnicalError;
-exports.markResume = markResume;
-exports.validateStudyState = validateStudyState;
-exports.validateStudyTransition = validateStudyTransition;
-const consent_validator_mjs_1 = require("./consent-validator.mjs");
-const cases_mjs_1 = require("./cases.mjs");
-exports.STUDY_VERSION = '0.38.3-pilot.1';
-exports.CONSENT_VERSION = 'PM-CONSENT-5';
-exports.STAGES = ['CONSENT', 'T0', 'GAME', 'PREDICTION', 'T1', 'MIRROR', 'T2', 'SURVEY', 'DEBRIEF', 'COMPLETE'];
-const clone = x => structuredClone(x);
-const iso = value => new Date(value ?? Date.now()).toISOString();
-const insist = (condition, message) => { if (!condition)
-    throw new Error(message); };
-const eq = (a, b) => JSON.stringify(a) === JSON.stringify(b);
-const validDate = x => typeof x === 'string' && Number.isFinite(Date.parse(x));
-const validScore = x => Number.isInteger(x) && x >= 0 && x <= 100;
-function requireStage(s, stage) { insist(s.stage === stage, `Expected ${stage}, received ${s.stage}`); }
-function event(s, type, now, detail = {}) {
+  // pilot/study.mjs
+  var STUDY_VERSION = "0.38.3-pilot.1";
+  var CONSENT_VERSION = "PM-CONSENT-5";
+  var STAGES = ["CONSENT", "T0", "GAME", "PREDICTION", "T1", "MIRROR", "T2", "SURVEY", "DEBRIEF", "COMPLETE"];
+  var clone2 = (x) => structuredClone(x);
+  var iso = (value) => new Date(value ?? Date.now()).toISOString();
+  var insist = (condition, message) => {
+    if (!condition) throw new Error(message);
+  };
+  var eq = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+  var validDate = (x) => typeof x === "string" && Number.isFinite(Date.parse(x));
+  var validScore = (x) => Number.isInteger(x) && x >= 0 && x <= 100;
+  function requireStage(s, stage) {
+    insist(s.stage === stage, `Expected ${stage}, received ${s.stage}`);
+  }
+  function event(s, type, now, detail = {}) {
     const at = iso(now);
     s.timestamps.updatedAt = at;
     s.events.push({ seq: s.events.length + 1, type, at, stage: s.stage, ...detail });
     return s;
-}
-function mutable(s) { validateStudyState(s); return clone(s); }
-function formFor(s, block) { return s.assignment.formOrder[['T0', 'T1', 'T2'].indexOf(block)]; }
-function createStudy({ sessionId, assignment, coreGame, now }) {
+  }
+  function mutable(s) {
+    validateStudyState(s);
+    return clone2(s);
+  }
+  function formFor(s, block) {
+    return s.assignment.formOrder[["T0", "T1", "T2"].indexOf(block)];
+  }
+  function createStudy({ sessionId, assignment, coreGame, now }) {
     const at = iso(now);
-    const s = { schema: 'political-mirror-study/1', studyVersion: exports.STUDY_VERSION, coreGame: clone(coreGame), consentVersion: exports.CONSENT_VERSION,
-        participantId: sessionId, sessionId, assignment: clone(assignment), stage: 'CONSENT', consent: null,
-        responses: { T0: [], T1: [], T2: [] }, presentation: null, game: null, prediction: null, predictionReceipt: null,
-        questionnaire: {}, timestamps: { createdAt: at, updatedAt: at }, events: [], status: 'in_progress', technicalErrors: [] };
-    event(s, 'SESSION_CREATED', at);
+    const s = {
+      schema: "political-mirror-study/1",
+      studyVersion: STUDY_VERSION,
+      coreGame: clone2(coreGame),
+      consentVersion: CONSENT_VERSION,
+      participantId: sessionId,
+      sessionId,
+      assignment: clone2(assignment),
+      stage: "CONSENT",
+      consent: null,
+      responses: { T0: [], T1: [], T2: [] },
+      presentation: null,
+      game: null,
+      prediction: null,
+      predictionReceipt: null,
+      questionnaire: {},
+      timestamps: { createdAt: at, updatedAt: at },
+      events: [],
+      status: "in_progress",
+      technicalErrors: []
+    };
+    event(s, "SESSION_CREATED", at);
     validateStudyState(s);
     return s;
-}
-function consentStudy(state, answers, now, { at } = {}) {
+  }
+  function consentStudy(state, answers, now, { at } = {}) {
     const s = mutable(state);
-    requireStage(s, 'CONSENT');
+    requireStage(s, "CONSENT");
     let valid;
     try {
-        valid = (0, consent_validator_mjs_1.validateConsentSubmission)(answers);
+      valid = validateConsentSubmission(answers);
+    } catch (e) {
+      throw new Error(`Active consent is required (${e.message})`);
     }
-    catch (e) {
-        throw new Error(`Active consent is required (${e.message})`);
-    }
-    if (at !== undefined)
-        insist(typeof at === 'string' && !Number.isNaN(Date.parse(at)), 'Invalid server consent time');
-    s.consent = { ...valid, at: at ?? iso(now), version: exports.CONSENT_VERSION };
-    s.stage = 'T0';
-    return event(s, 'CONSENT_ACCEPTED', now);
-}
-function presentItem(state, now) {
+    if (at !== void 0) insist(typeof at === "string" && !Number.isNaN(Date.parse(at)), "Invalid server consent time");
+    s.consent = { ...valid, at: at ?? iso(now), version: CONSENT_VERSION };
+    s.stage = "T0";
+    return event(s, "CONSENT_ACCEPTED", now);
+  }
+  function presentItem(state, now) {
     const s = mutable(state);
-    insist(['T0', 'T1', 'T2'].includes(s.stage), 'Not a measurement stage');
-    if (s.presentation)
-        return s;
-    if (s.stage === 'T1')
-        insist(s.prediction && s.predictionReceipt, 'Prediction must be durably committed before T1');
-    const item = (0, cases_mjs_1.getCases)(formFor(s, s.stage))[s.responses[s.stage].length];
-    insist(item, 'No remaining item');
+    insist(["T0", "T1", "T2"].includes(s.stage), "Not a measurement stage");
+    if (s.presentation) return s;
+    if (s.stage === "T1") insist(s.prediction && s.predictionReceipt, "Prediction must be durably committed before T1");
+    const item = getCases(formFor(s, s.stage))[s.responses[s.stage].length];
+    insist(item, "No remaining item");
     s.presentation = { block: s.stage, caseId: item.id, presentedAt: iso(now) };
-    return event(s, 'ITEM_PRESENTED', now, { block: s.stage, caseId: item.id });
-}
-function answerItem(state, { score, vote }, now) {
+    return event(s, "ITEM_PRESENTED", now, { block: s.stage, caseId: item.id });
+  }
+  function answerItem(state, { score, vote }, now) {
     const s = mutable(state);
-    insist(s.presentation?.block === s.stage, 'Item must be saved before response');
-    insist(validScore(score), 'Judgment must be an integer from 0 to 100');
-    insist(['RETAIN', 'REPLACE'].includes(vote), 'Choose retain or replace');
+    insist(s.presentation?.block === s.stage, "Item must be saved before response");
+    insist(validScore(score), "Judgment must be an integer from 0 to 100");
+    insist(["RETAIN", "REPLACE"].includes(vote), "Choose retain or replace");
     const block = s.stage, at = iso(now), p = s.presentation;
-    insist(Date.parse(at) >= Date.parse(p.presentedAt), 'Response precedes presentation');
+    insist(Date.parse(at) >= Date.parse(p.presentedAt), "Response precedes presentation");
     s.responses[block].push({ caseId: p.caseId, score, vote, presentedAt: p.presentedAt, answeredAt: at, rtMs: Date.parse(at) - Date.parse(p.presentedAt) });
     s.presentation = null;
-    event(s, 'ITEM_ANSWERED', at, { block, caseId: p.caseId });
+    event(s, "ITEM_ANSWERED", at, { block, caseId: p.caseId });
     if (s.responses[block].length === 8) {
-        s.stage = { T0: 'GAME', T1: 'MIRROR', T2: 'SURVEY' }[block];
-        s.timestamps[`${block}CompletedAt`] = at;
-        event(s, 'BLOCK_COMPLETED', at, { block });
+      s.stage = { T0: "GAME", T1: "MIRROR", T2: "SURVEY" }[block];
+      s.timestamps[`${block}CompletedAt`] = at;
+      event(s, "BLOCK_COMPLETED", at, { block });
     }
     validateStudyState(s);
     return s;
-}
-function checkpointGame(state, snapshot, now) {
+  }
+  function checkpointGame(state, snapshot, now) {
     const s = mutable(state);
-    insist(['GAME', 'MIRROR', 'SURVEY'].includes(s.stage), 'Game snapshot is not accepted here');
+    insist(["GAME", "MIRROR", "SURVEY"].includes(s.stage), "Game snapshot is not accepted here");
     validateGameSnapshot(s, snapshot);
-    s.game = clone(snapshot);
-    if (s.stage === 'SURVEY')
-        s.questionnaire = clone(snapshot.presentation?.survey || s.questionnaire);
-    return event(s, 'GAME_CHECKPOINT', now, { canonicalHash: snapshot.canonicalHash, actionCount: snapshot.transcript.length });
-}
-function completeGame(state, snapshot, now) {
+    s.game = clone2(snapshot);
+    if (s.stage === "SURVEY") s.questionnaire = clone2(snapshot.presentation?.survey || s.questionnaire);
+    return event(s, "GAME_CHECKPOINT", now, { canonicalHash: snapshot.canonicalHash, actionCount: snapshot.transcript.length });
+  }
+  function completeGame(state, snapshot, now) {
     const s = mutable(state);
-    requireStage(s, 'GAME');
+    requireStage(s, "GAME");
     validateGameSnapshot(s, snapshot);
-    insist(snapshot.canonicalState?.phase === 'MINI_MIRROR', 'Career must reach its canonical end');
-    s.game = clone(snapshot);
-    s.stage = 'PREDICTION';
+    insist(snapshot.canonicalState?.phase === "MINI_MIRROR", "Career must reach its canonical end");
+    s.game = clone2(snapshot);
+    s.stage = "PREDICTION";
     s.timestamps.gameCompletedAt = iso(now);
-    return event(s, 'GAME_COMPLETED_BEFORE_FEEDBACK', now, { canonicalHash: snapshot.canonicalHash });
-}
-function attachPrediction(state, prediction, receipt, now) {
+    return event(s, "GAME_COMPLETED_BEFORE_FEEDBACK", now, { canonicalHash: snapshot.canonicalHash });
+  }
+  function attachPrediction(state, prediction, receipt, now) {
     const s = mutable(state);
-    requireStage(s, 'PREDICTION');
-    insist(receipt?.predictionSha256 && validDate(receipt.committedAt), 'Durable prediction receipt required');
-    s.prediction = clone(prediction);
-    s.predictionReceipt = clone(receipt);
-    s.stage = 'T1';
+    requireStage(s, "PREDICTION");
+    insist(receipt?.predictionSha256 && validDate(receipt.committedAt), "Durable prediction receipt required");
+    s.prediction = clone2(prediction);
+    s.predictionReceipt = clone2(receipt);
+    s.stage = "T1";
     s.timestamps.predictionCommittedAt = receipt.committedAt;
-    event(s, 'PREDICTION_COMMITTED', now, { predictionSha256: receipt.predictionSha256 });
+    event(s, "PREDICTION_COMMITTED", now, { predictionSha256: receipt.predictionSha256 });
     validateStudyState(s);
     return s;
-}
-function finishMirror(state, snapshot, now) {
+  }
+  function finishMirror(state, snapshot, now) {
     const s = mutable(state);
-    requireStage(s, 'MIRROR');
+    requireStage(s, "MIRROR");
     validateGameSnapshot(s, snapshot);
-    insist(s.responses.T1.length === 8, 'T1 must precede feedback');
-    s.game = clone(snapshot);
-    s.stage = 'T2';
+    insist(s.responses.T1.length === 8, "T1 must precede feedback");
+    s.game = clone2(snapshot);
+    s.stage = "T2";
     s.timestamps.mirrorCompletedAt = iso(now);
-    return event(s, 'MIRROR_COMPLETED', now);
-}
-function updateQuestionnaire(state, answers, snapshot, now) {
+    return event(s, "MIRROR_COMPLETED", now);
+  }
+  function updateQuestionnaire(state, answers, snapshot, now) {
     const s = mutable(state);
-    requireStage(s, 'SURVEY');
+    requireStage(s, "SURVEY");
     validateGameSnapshot(s, snapshot);
-    s.questionnaire = clone(answers);
-    s.game = clone(snapshot);
-    return event(s, 'QUESTIONNAIRE_SAVED', now);
-}
-function finishSurvey(state, answers, snapshot, now) {
+    s.questionnaire = clone2(answers);
+    s.game = clone2(snapshot);
+    return event(s, "QUESTIONNAIRE_SAVED", now);
+  }
+  function finishSurvey(state, answers, snapshot, now) {
     const s = updateQuestionnaire(state, answers, snapshot, now);
-    s.stage = 'DEBRIEF';
+    s.stage = "DEBRIEF";
     s.timestamps.surveyCompletedAt = iso(now);
-    return event(s, 'SURVEY_COMPLETED', now);
-}
-function completeStudy(state, now) {
+    return event(s, "SURVEY_COMPLETED", now);
+  }
+  function completeStudy(state, now) {
     const s = mutable(state);
-    requireStage(s, 'DEBRIEF');
-    s.stage = 'COMPLETE';
-    s.status = 'complete';
+    requireStage(s, "DEBRIEF");
+    s.stage = "COMPLETE";
+    s.status = "complete";
     s.timestamps.completedAt = iso(now);
-    return event(s, 'DEBRIEF_ACKNOWLEDGED', now);
-}
-function withdrawStudy(state, now, { reason = 'participant_stop', dataRemovalRequested = false } = {}) {
+    return event(s, "DEBRIEF_ACKNOWLEDGED", now);
+  }
+  function recordTechnicalError(state, error, now) {
+    const s = clone2(state);
+    s.technicalErrors.push({ at: iso(now), message: String(error?.message || error).slice(0, 1e3), stage: s.stage });
+    return event(s, "TECHNICAL_ERROR", now);
+  }
+  function markResume(state, now, { presentationVersion } = {}) {
     const s = mutable(state);
-    insist(!['COMPLETE', 'WITHDRAWN'].includes(s.stage), 'Already finished');
-    insist(['participant_stop', 'participant_stop_remove_data', 'declined_consent'].includes(reason), 'Invalid withdrawal reason');
-    const seen = exports.STAGES.indexOf(s.stage) > exports.STAGES.indexOf('MIRROR') || (s.stage === 'MIRROR' && !!s.game?.mirror);
-    s.withdrawal = { at: iso(now), reason, stageAtStop: s.stage, sawFeedback: seen, feedbackArm: seen ? s.assignment.arm : null, dataRemovalRequested: dataRemovalRequested === true || reason === 'participant_stop_remove_data' };
-    s.stage = 'WITHDRAWN';
-    s.status = 'withdrawn';
-    s.timestamps.withdrawnAt = iso(now);
-    s.presentation = null;
-    return event(s, 'PARTICIPATION_STOPPED', now);
-}
-function recordTechnicalError(state, error, now) {
-    const s = clone(state);
-    s.technicalErrors.push({ at: iso(now), message: String(error?.message || error).slice(0, 1000), stage: s.stage });
-    return event(s, 'TECHNICAL_ERROR', now);
-}
-function markResume(state, now) { const s = mutable(state); return event(s, 'SESSION_RESUMED', now); }
-function validateGameSnapshot(s, g) {
-    insist(g?.schema === 'political-mirror-study-game/1', 'Missing game snapshot');
-    insist(g.sessionId === s.sessionId && g.arm === s.assignment.arm, 'Game identity/arm changed');
-    insist(g.spec?.testMode === 'natural' && g.spec?.agentCount === 700, 'Unexpected game configuration');
-    insist(Array.isArray(g.transcript) && g.canonicalState && typeof g.canonicalHash === 'string', 'Incomplete canonical snapshot');
-    insist(g.telemetry && typeof g.telemetry === 'object', 'Game telemetry missing');
+    const detail = {};
+    if (presentationVersion !== void 0) {
+      insist(typeof presentationVersion === "string" && presentationVersion.length > 0 && presentationVersion.length <= 100, "Invalid presentation version");
+      detail.presentationVersion = presentationVersion;
+    }
+    return event(s, "SESSION_RESUMED", now, detail);
+  }
+  function validateGameSnapshot(s, g) {
+    insist(g?.schema === "political-mirror-study-game/1", "Missing game snapshot");
+    insist(g.sessionId === s.sessionId && g.arm === s.assignment.arm, "Game identity/arm changed");
+    insist(g.spec?.testMode === "natural" && g.spec?.agentCount === 700, "Unexpected game configuration");
+    insist(Array.isArray(g.transcript) && g.canonicalState && typeof g.canonicalHash === "string", "Incomplete canonical snapshot");
+    insist(g.telemetry && typeof g.telemetry === "object", "Game telemetry missing");
     if (s.game) {
-        insist(g.transcript.length >= s.game.transcript.length, 'Canonical actions cannot disappear');
-        insist(eq(g.transcript.slice(0, s.game.transcript.length), s.game.transcript), 'Canonical history changed');
-        if (s.stage !== 'GAME')
-            insist(eq(g.canonicalState, s.game.canonicalState) && g.canonicalHash === s.game.canonicalHash, 'Feedback/survey must not alter canonical state');
+      insist(g.transcript.length >= s.game.transcript.length, "Canonical actions cannot disappear");
+      insist(eq(g.transcript.slice(0, s.game.transcript.length), s.game.transcript), "Canonical history changed");
+      if (s.stage !== "GAME") insist(eq(g.canonicalState, s.game.canonicalState) && g.canonicalHash === s.game.canonicalHash, "Feedback/survey must not alter canonical state");
     }
-}
-function validateStudyState(s, { predictionCommitted } = {}) {
-    insist(s?.schema === 'political-mirror-study/1' && s.studyVersion === exports.STUDY_VERSION, 'Unknown study schema/version');
-    insist(typeof s.sessionId === 'string' && s.participantId === s.sessionId, 'Participant/session mismatch');
-    insist(s.coreGame?.version === '0.37.2' && /^[a-f0-9]{64}$/.test(s.coreGame.buildHash) && /^[a-f0-9]{64}$/.test(s.coreGame.sourceManifestHash), 'Frozen build identity missing');
-    insist(s.consentVersion === exports.CONSENT_VERSION, 'Consent version mismatch');
-    insist(['TRUE', 'SHUFFLED'].includes(s.assignment?.arm), 'Unknown arm');
-    insist(['ABC', 'BCA', 'CAB'].includes(s.assignment?.formOrder?.join('')), 'Unknown parallel form order');
-    insist([...exports.STAGES, 'WITHDRAWN'].includes(s.stage), 'Unknown stage');
-    insist(s.status === ({ 'COMPLETE': 'complete', 'WITHDRAWN': 'withdrawn' }[s.stage] || 'in_progress'), 'Status/stage mismatch');
-    insist(validDate(s.timestamps?.createdAt) && validDate(s.timestamps?.updatedAt), 'Invalid timestamps');
-    insist(Array.isArray(s.events) && Array.isArray(s.technicalErrors), 'Audit arrays missing');
-    s.events.forEach((e, i) => insist(e.seq === i + 1 && validDate(e.at), 'Invalid event sequence'));
-    if (!['CONSENT', 'WITHDRAWN'].includes(s.stage))
-        insist((0, consent_validator_mjs_1.consentRecordIsComplete)(s.consent) && s.consent.version === exports.CONSENT_VERSION, 'Active consent required');
-    for (const block of ['T0', 'T1', 'T2']) {
-        const rows = s.responses?.[block];
-        insist(Array.isArray(rows) && rows.length <= 8, `Invalid ${block} rows`);
-        const cases = (0, cases_mjs_1.getCases)(formFor(s, block));
-        rows.forEach((r, i) => insist(r.caseId === cases[i].id && validScore(r.score) && ['RETAIN', 'REPLACE'].includes(r.vote) && validDate(r.presentedAt) && validDate(r.answeredAt) && Date.parse(r.answeredAt) >= Date.parse(r.presentedAt) && Number.isFinite(r.rtMs) && r.rtMs === Date.parse(r.answeredAt) - Date.parse(r.presentedAt), `Invalid ${block} response ${i}`));
+  }
+  function validateStudyState(s, { predictionCommitted } = {}) {
+    insist(s?.schema === "political-mirror-study/1" && s.studyVersion === STUDY_VERSION, "Unknown study schema/version");
+    insist(typeof s.sessionId === "string" && s.participantId === s.sessionId, "Participant/session mismatch");
+    insist(s.coreGame?.version === "0.37.2" && /^[a-f0-9]{64}$/.test(s.coreGame.buildHash) && /^[a-f0-9]{64}$/.test(s.coreGame.sourceManifestHash), "Frozen build identity missing");
+    insist(s.consentVersion === CONSENT_VERSION, "Consent version mismatch");
+    insist(["TRUE", "SHUFFLED"].includes(s.assignment?.arm), "Unknown arm");
+    insist(["ABC", "BCA", "CAB"].includes(s.assignment?.formOrder?.join("")), "Unknown parallel form order");
+    insist([...STAGES, "WITHDRAWN"].includes(s.stage), "Unknown stage");
+    insist(s.status === ({ "COMPLETE": "complete", "WITHDRAWN": "withdrawn" }[s.stage] || "in_progress"), "Status/stage mismatch");
+    insist(validDate(s.timestamps?.createdAt) && validDate(s.timestamps?.updatedAt), "Invalid timestamps");
+    insist(Array.isArray(s.events) && Array.isArray(s.technicalErrors), "Audit arrays missing");
+    s.events.forEach((e, i) => insist(e.seq === i + 1 && validDate(e.at), "Invalid event sequence"));
+    if (!["CONSENT", "WITHDRAWN"].includes(s.stage)) insist(consentRecordIsComplete(s.consent) && s.consent.version === CONSENT_VERSION, "Active consent required");
+    for (const block of ["T0", "T1", "T2"]) {
+      const rows = s.responses?.[block];
+      insist(Array.isArray(rows) && rows.length <= 8, `Invalid ${block} rows`);
+      const cases = getCases(formFor(s, block));
+      rows.forEach((r, i) => insist(r.caseId === cases[i].id && validScore(r.score) && ["RETAIN", "REPLACE"].includes(r.vote) && validDate(r.presentedAt) && validDate(r.answeredAt) && Date.parse(r.answeredAt) >= Date.parse(r.presentedAt) && Number.isFinite(r.rtMs) && r.rtMs === Date.parse(r.answeredAt) - Date.parse(r.presentedAt), `Invalid ${block} response ${i}`));
     }
-    if (s.stage === 'CONSENT')
-        insist(Object.values(s.responses).every(rows => rows.length === 0) && !s.presentation && !s.game && !s.prediction && Object.keys(s.questionnaire).length === 0, 'No research responses before consent');
-    if (s.stage === 'T0')
-        insist(!s.game && !s.prediction, 'Gameplay cannot precede completed T0');
-    if (Object.values(s.responses).some(rows => rows.length) || s.game)
-        insist(s.consent?.agreed === true && s.consent?.eligible === true && s.consent?.adult === true, 'Research data require prior consent');
-    const ix = exports.STAGES.indexOf(s.stage);
-    if (ix >= 2)
-        insist(s.responses.T0.length === 8, 'T0 incomplete');
-    if (ix >= 5)
-        insist(s.responses.T1.length === 8, 'T1 incomplete');
-    if (ix >= 7)
-        insist(s.responses.T2.length === 8, 'T2 incomplete');
-    if (ix < 4 && s.stage !== 'WITHDRAWN')
-        insist(s.responses.T1.length === 0, 'Premature T1 data');
-    if (ix < 6 && s.stage !== 'WITHDRAWN')
-        insist(s.responses.T2.length === 0, 'Premature T2 data');
+    if (s.stage === "CONSENT") insist(Object.values(s.responses).every((rows) => rows.length === 0) && !s.presentation && !s.game && !s.prediction && Object.keys(s.questionnaire).length === 0, "No research responses before consent");
+    if (s.stage === "T0") insist(!s.game && !s.prediction, "Gameplay cannot precede completed T0");
+    if (Object.values(s.responses).some((rows) => rows.length) || s.game) insist(s.consent?.agreed === true && s.consent?.eligible === true && s.consent?.adult === true, "Research data require prior consent");
+    const ix = STAGES.indexOf(s.stage);
+    if (ix >= 2) insist(s.responses.T0.length === 8, "T0 incomplete");
+    if (ix >= 5) insist(s.responses.T1.length === 8, "T1 incomplete");
+    if (ix >= 7) insist(s.responses.T2.length === 8, "T2 incomplete");
+    if (ix < 4 && s.stage !== "WITHDRAWN") insist(s.responses.T1.length === 0, "Premature T1 data");
+    if (ix < 6 && s.stage !== "WITHDRAWN") insist(s.responses.T2.length === 0, "Premature T2 data");
     if (s.presentation) {
-        insist(['T0', 'T1', 'T2'].includes(s.stage) && s.presentation.block === s.stage, 'Invalid item presentation');
-        insist(s.presentation.caseId === (0, cases_mjs_1.getCases)(formFor(s, s.stage))[s.responses[s.stage].length]?.id && validDate(s.presentation.presentedAt), 'Wrong presented item');
+      insist(["T0", "T1", "T2"].includes(s.stage) && s.presentation.block === s.stage, "Invalid item presentation");
+      insist(s.presentation.caseId === getCases(formFor(s, s.stage))[s.responses[s.stage].length]?.id && validDate(s.presentation.presentedAt), "Wrong presented item");
     }
-    if (ix >= 3)
-        insist(s.game?.canonicalState?.phase === 'MINI_MIRROR', 'Missing completed canonical game');
-    if (s.game)
-        validateGameSnapshot({ ...s, game: null }, s.game);
+    if (ix >= 3) insist(s.game?.canonicalState?.phase === "MINI_MIRROR", "Missing completed canonical game");
+    if (s.game) validateGameSnapshot({ ...s, game: null }, s.game);
     if (ix >= 4 || s.responses.T1.length || s.responses.T2.length || s.prediction) {
-        const p = s.prediction;
-        insist(p && s.predictionReceipt?.predictionSha256 && validDate(s.predictionReceipt.committedAt), 'Missing committed prediction');
-        insist(predictionCommitted !== false, 'Server prediction not committed');
-        insist(p.participantId === s.participantId && p.sessionId === s.sessionId && p.studyVersion === s.studyVersion && p.coreHash === s.coreGame.buildHash, 'Prediction identity mismatch');
-        insist(p.form === formFor(s, 'T1') && validDate(p.timestamp), 'Prediction form/timestamp mismatch');
-        insist(Array.isArray(p.predictions) && p.predictions.length === 8 && p.modelState, 'Incomplete prediction payload');
-        p.predictions.forEach((r, i) => {
-            insist(r.caseId === (0, cases_mjs_1.getCases)(p.form)[i].id, 'Wrong prediction case');
-            for (const m of ['M0', 'M1', 'M2', 'M3'])
-                insist(Number.isFinite(r[m]?.predictedScore) && r[m].predictedScore >= 0 && r[m].predictedScore <= 100, 'Invalid prediction score');
-        });
-        // Browser and server clocks need not agree. The server's durable journal and
-        // this append-only event order, not a cross-clock timestamp comparison, gate T1.
-        const commitEvent = s.events.find(e => e.type === 'PREDICTION_COMMITTED');
-        const firstT1 = s.events.find(e => e.type === 'ITEM_PRESENTED' && e.block === 'T1');
-        insist(commitEvent, 'Prediction commit event missing');
-        if (firstT1)
-            insist(firstT1.seq > commitEvent.seq, 'T1 presentation precedes prediction commitment');
+      const p = s.prediction;
+      insist(p && s.predictionReceipt?.predictionSha256 && validDate(s.predictionReceipt.committedAt), "Missing committed prediction");
+      insist(predictionCommitted !== false, "Server prediction not committed");
+      insist(p.participantId === s.participantId && p.sessionId === s.sessionId && p.studyVersion === s.studyVersion && p.coreHash === s.coreGame.buildHash, "Prediction identity mismatch");
+      insist(p.form === formFor(s, "T1") && validDate(p.timestamp), "Prediction form/timestamp mismatch");
+      insist(Array.isArray(p.predictions) && p.predictions.length === 8 && p.modelState, "Incomplete prediction payload");
+      p.predictions.forEach((r, i) => {
+        insist(r.caseId === getCases(p.form)[i].id, "Wrong prediction case");
+        for (const m of ["M0", "M1", "M2", "M3"]) insist(Number.isFinite(r[m]?.predictedScore) && r[m].predictedScore >= 0 && r[m].predictedScore <= 100, "Invalid prediction score");
+      });
+      const commitEvent = s.events.find((e) => e.type === "PREDICTION_COMMITTED");
+      const firstT1 = s.events.find((e) => e.type === "ITEM_PRESENTED" && e.block === "T1");
+      insist(commitEvent, "Prediction commit event missing");
+      if (firstT1) insist(firstT1.seq > commitEvent.seq, "T1 presentation precedes prediction commitment");
     }
     return true;
-}
-// Collector calls this against its saved checkpoint; a client cannot rewind or rewrite a trial.
-function validateStudyTransition(previous, next, options = {}) {
-    validateStudyState(next, options);
-    if (!previous)
-        return true;
-    for (const field of ['schema', 'studyVersion', 'coreGame', 'consentVersion', 'participantId', 'sessionId', 'assignment'])
-        insist(eq(previous[field], next[field]), `Immutable field changed: ${field}`);
-    if (previous.consent)
-        insist(eq(previous.consent, next.consent), 'Consent changed');
-    for (const b of ['T0', 'T1', 'T2'])
-        insist(eq(previous.responses[b], next.responses[b].slice(0, previous.responses[b].length)), 'A saved response changed');
-    insist(eq(previous.events, next.events.slice(0, previous.events.length)), 'Audit history changed');
-    insist(eq(previous.technicalErrors, next.technicalErrors.slice(0, previous.technicalErrors.length)), 'Error history changed');
-    if (previous.prediction)
-        insist(eq(previous.prediction, next.prediction) && eq(previous.predictionReceipt, next.predictionReceipt), 'Prediction lock changed');
-    if (previous.game && next.game)
-        validateGameSnapshot(previous, next.game);
-    const a = exports.STAGES.indexOf(previous.stage), b = exports.STAGES.indexOf(next.stage);
-    if (next.stage !== 'WITHDRAWN')
-        insist(previous.stage !== 'WITHDRAWN' && b >= a && b <= a + 1, 'Illegal study transition');
-    if (previous.stage === 'COMPLETE')
-        insist(next.stage === 'COMPLETE', 'Completed session reopened');
-    return true;
-}
+  }
 
-}]
-};
-const __pmCache=Object.create(null);function __pmLoad(id){if(id.startsWith('@vendor/'))return __pmVendors[id.slice(8)];if(__pmCache[id])return __pmCache[id].exports;const spec=__pmModules[id];if(!spec)throw Error('Missing compiled module: '+id);const m={exports:{}};__pmCache[id]=m;spec[1](m,m.exports,name=>{if(!spec[0][name])throw Error('Unknown dependency: '+name);return __pmLoad(spec[0][name]);});return m.exports;}
-__pmLoad('pilot/browser.jsx');
+  // pilot/app.jsx
+  var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
+  var CONTACT = "b0966821923@gmail.com";
+  var CSS = `
+ .ps-wrap{max-width:820px;margin:0 auto;padding:34px 24px 70px;line-height:1.65}
+ .ps-head{border-bottom:1px solid var(--pm-rule);padding:18px 24px;display:flex;gap:15px;align-items:center;justify-content:space-between}
+ .ps-head strong{font-size:17px;letter-spacing:.04em}.ps-meta{font-size:12px;color:var(--pm-ink-3)}
+ .ps-card{border:1px solid var(--pm-rule);padding:24px;margin:22px 0;background:var(--pm-sheet);border-radius:4px}
+ .ps-wrap h1{font-size:34px;font-weight:400;line-height:1.2;margin:22px 0}.ps-wrap h2{font-size:23px;font-weight:400;line-height:1.4}
+ .ps-wrap p{margin:14px 0}.ps-check{display:flex;gap:13px;align-items:flex-start;margin:18px 0;cursor:pointer}.ps-check input{margin-top:6px;width:18px;height:18px;flex:none}
+ .ps-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:25px}.ps-actions button{min-height:44px}
+ .ps-slider{width:100%;min-width:0}.ps-slider label{display:block;margin-bottom:12px}.ps-slider-value{display:block;text-align:center;font-size:24px;font-weight:600;margin:14px 0 0}.ps-slider input[type=range]{display:block;width:100%;height:48px;margin:0;accent-color:var(--pm-ink);cursor:pointer;touch-action:pan-y}.ps-slider input[type=range]:focus-visible{outline:3px solid var(--pm-ink);outline-offset:3px}.ps-slider-anchors{display:flex;justify-content:space-between;gap:10px;font-size:13px;line-height:1.4}.ps-slider-anchors span{flex:1}.ps-slider-anchors span:nth-child(2){text-align:center}.ps-slider-anchors span:last-child{text-align:right}
+ .ps-field{margin:26px 0;border:0;padding:0}.ps-field legend{margin-bottom:14px;line-height:1.5}
+ .ps-vote{display:flex;gap:12px;flex-wrap:wrap}.ps-vote label{border:1px solid var(--pm-rule);padding:12px 18px;cursor:pointer}.ps-vote input{margin-right:10px}
+ .ps-screen{position:fixed;inset:0;background:rgba(243,242,242,.92);z-index:1000;display:grid;place-items:center;padding:24px;overflow:auto}
+ .ps-dialog{max-width:620px;border:1px solid var(--pm-rule);background:var(--pm-sheet);padding:32px;line-height:1.6;width:100%}
+ .ps-error{color:var(--pm-against)}.ps-code{font-family:monospace;overflow-wrap:anywhere;font-size:12px}
+ .ps-progress{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--pm-ink-3)}
+ .ps-save{position:fixed;bottom:12px;right:16px;padding:8px 14px;background:var(--pm-sheet);border:1px solid var(--pm-rule);font-size:12px;z-index:900}
+ button:disabled{opacity:.45;cursor:not-allowed}@media(max-width:600px){.ps-head{align-items:flex-start}.ps-wrap{padding:22px 18px 70px}.ps-card{padding:18px}.ps-wrap h1{font-size:29px}}
+`;
+  function Button({ children, onClick, disabled = false, secondary = false, type = "button" }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("button", { type, disabled, className: secondary ? "pm-ghost" : "pm-cta", onClick, children });
+  }
+  var consentAnswersFrom = (c) => ({ adult: c.adult, english: c.english, informed: c.informed, agreed: c.agreed, eligible: c.eligible, researcherConfigSha256: c.researcherConfigSha256, consentTextSha256: c.consentTextSha256, ethicsReference: c.ethicsReference ?? null, studyTitle: c.studyTitle ?? null });
+  function Consent({ config, onSubmit, busy, notice, testSession }) {
+    const [checks, setChecks] = (0, import_react3.useState)({ adult: false, english: false, informed: false, agreed: false });
+    const doc = config?.consentDocument;
+    (0, import_react3.useEffect)(() => {
+      setChecks({ adult: false, english: false, informed: false, agreed: false });
+    }, [config?.consentTextSha256, config?.collectionMode]);
+    if (!doc) return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("main", { className: "ps-wrap", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { role: "status", children: "Loading the participant information\u2026" }) });
+    const integrity = sha256Hex(stableJSON(doc)) === config.consentTextSha256;
+    const allTrue = CONSENT_CONFIRMATIONS.every((k) => checks[k] === true);
+    const notSupplied = !config.configured || (config.researcher?.ethics?.arrangement || "NOT_SUPPLIED") === "NOT_SUPPLIED";
+    const submit = () => onSubmit({
+      adult: checks.adult === true,
+      english: checks.english === true,
+      informed: checks.informed === true,
+      agreed: checks.agreed === true,
+      eligible: checks.adult === true && checks.english === true,
+      researcherConfigSha256: config.researcher.sha256,
+      consentTextSha256: config.consentTextSha256,
+      ethicsReference: config.researcher?.ethics?.reference ?? null,
+      studyTitle: doc.title
+    });
+    return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", "data-consent-version": doc.version, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-progress", children: "Participant information and consent" }),
+      testSession && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-code", role: "status", children: "TEST MODE \u2014 this session is not counted as a research participant." }),
+      notice && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-error", role: "alert", children: notice }),
+      !integrity && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-error", role: "alert", children: "The information on this page does not match the study\u2019s saved version. Please reload the page." }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: doc.title }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-meta", children: doc.researcherLine }),
+      doc.sections.map((section) => /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: `ps-card${section.heading === "Ethics and contact" && notSupplied ? " ps-error" : ""}`, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { children: section.heading }),
+        section.paragraphs.map((text, i) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: text }, i))
+      ] }, section.heading)),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-meta", children: [
+        "Consent document version: ",
+        doc.version,
+        " \xB7 ",
+        String(config.consentTextSha256).slice(0, 12)
+      ] }),
+      doc.confirmations.map((c) => /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("label", { className: "ps-check", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("input", { type: "checkbox", checked: checks[c.id] === true, onChange: (e) => setChecks({ ...checks, [c.id]: e.target.checked === true }) }),
+        c.text
+      ] }, c.id)),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-actions", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: !allTrue || !integrity || busy, onClick: submit, children: "Agree and begin" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { secondary: true, disabled: busy, onClick: () => onSubmit(null), children: "I do not agree \u2014 leave the study" })
+      ] })
+    ] });
+  }
+  function Measurement({ state, onAnswer, busy, storage = globalThis.localStorage, onDraftError = () => {
+  } }) {
+    const canonicalItem = getCases(formFor(state, state.stage))[state.responses[state.stage].length];
+    const ready = state.presentation && state.presentation.caseId === canonicalItem?.id;
+    const scope = ready ? judgmentDraftScope(state, canonicalItem) : null;
+    const [draft, setDraft] = (0, import_react3.useState)(() => scope ? readJudgmentDraft(storage, scope) : { score: 50, touched: false, vote: "", firstInteractionAt: null });
+    const draftRef = (0, import_react3.useRef)(draft);
+    const lastScope = (0, import_react3.useRef)(scope ? JSON.stringify(scope) : null);
+    (0, import_react3.useEffect)(() => {
+      const key = scope ? JSON.stringify(scope) : null;
+      if (key !== lastScope.current) {
+        lastScope.current = key;
+        if (scope) {
+          const restored = readJudgmentDraft(storage, scope);
+          draftRef.current = restored;
+          setDraft(restored);
+        }
+      }
+    }, [scope?.sessionId, scope?.caseId, scope?.presentedAt]);
+    if (!ready) return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("main", { className: "ps-wrap", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { role: "status", children: "Preparing the next case\u2026" }) });
+    const item = presentCase(canonicalItem);
+    const blockNumber = { T0: 1, T1: 2, T2: 3 }[state.stage];
+    const valid = draft.touched && validSliderScore(draft.score) && ["RETAIN", "REPLACE"].includes(draft.vote);
+    const updateDraft = (update) => {
+      const next = update(draftRef.current);
+      draftRef.current = next;
+      setDraft(next);
+      try {
+        writeJudgmentDraft(storage, scope, next);
+      } catch (error) {
+        onDraftError(error);
+      }
+    };
+    return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", "data-study-block": state.stage, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-progress", children: [
+        "Judgment set ",
+        blockNumber,
+        " \xB7 Case ",
+        state.responses[state.stage].length + 1,
+        " of 8"
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "Your judgment as a voter" }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: PRESENTATION_BLOCK_INSTRUCTIONS }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("article", { className: "ps-card", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { children: item.title }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: item.text })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("form", { onSubmit: (e) => {
+        e.preventDefault();
+        if (valid && !busy) onAnswer({ score: draft.score, vote: draft.vote });
+      }, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-field", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+          JudgmentSlider,
+          {
+            prompt: item.prompt,
+            value: draft.score,
+            touched: draft.touched,
+            disabled: busy,
+            onInteract: (value) => updateDraft((previous) => interactWithJudgment(previous, value))
+          }
+        ) }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("fieldset", { className: "ps-field", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("legend", { children: item.votePrompt }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-vote", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("label", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("input", { type: "radio", name: "vote", value: "RETAIN", checked: draft.vote === "RETAIN", onChange: () => updateDraft((previous) => ({ ...previous, vote: "RETAIN" })), required: true, disabled: busy }),
+              "Keep in office"
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("label", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("input", { type: "radio", name: "vote", value: "REPLACE", checked: draft.vote === "REPLACE", onChange: () => updateDraft((previous) => ({ ...previous, vote: "REPLACE" })), required: true, disabled: busy }),
+              "Replace"
+            ] })
+          ] })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-actions", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { type: "submit", disabled: !valid || busy, children: "Save and continue" }) })
+      ] })
+    ] });
+  }
+  function Debrief({ state, onFinish, busy, contact = CONTACT, withdrawn = false, onDownload }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-progress", children: withdrawn ? "Participation stopped \u2014 debrief" : "Debrief" }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: withdrawn ? "You have left the study. Here is an explanation of your feedback." : "Thank you for taking part." }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "This small study asks whether choices and judgments made in the game help predict how people judge new cases. It also looks at whether those judgments change after playing a political career and reading feedback." }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-card", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { children: "How your feedback was assigned" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "Each participant was randomly assigned to one of two types of feedback. One uses the player\u2019s own choices. The other uses a fixed profile for comparison. Some of the extra information also differs, so any differences between the groups cannot be explained by personal feedback alone." }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: state.assignment.arm === "TRUE" ? "Your feedback was based on your own choices in the game." : "You received the fixed comparison profile. It was not based on your own choices and does not describe your personality." }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "The study saved its predictions before you answered the second set of cases. It did not use your answers to make those predictions. The profiles and predictions are still being tested. They cannot diagnose your personality or reliably tell us how you would vote in real life." })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "There was no politically correct answer. This small study checks whether the research tasks work and looks for early patterns. It cannot show that the game changes real elections or that one political view is better than another." }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { children: [
+        "If the feedback worried you, or you have questions about your data, contact ",
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: `mailto:${contact}`, children: contact }),
+        " and quote your session ID below."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-code", children: [
+        "Session: ",
+        state.sessionId
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-actions", children: withdrawn ? /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy, onClick: onDownload, children: "Download my study record" }) : /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy, onClick: onFinish, children: "I have read this explanation \u2014 finish" }) }),
+      withdrawn && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { children: [
+        "You do not need to do any more tasks. Use the confirmation below to delete the research data you have submitted",
+        state.withdrawal?.dataRemovalRequested ? "; your removal request has been recorded and the researcher will follow the stated procedure" : "",
+        ". You can return to this page on the same browser to read this again."
+      ] })
+    ] });
+  }
+  function RemovalReceipt({ receipt, contact = CONTACT }) {
+    const arm = receipt.feedbackArm;
+    return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", "data-withdrawal-receipt": "true", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-progress", children: "Participation stopped \u2014 deletion confirmed" }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "You have left the study." }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "Your submitted answers, game records, predictions and questionnaire have been deleted from the active study database. Unsaved answers and the details used to access your session have also been cleared from this browser. Only a short coded record that you left the study and this receipt remain." }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-code", children: [
+        "Study number: ",
+        receipt.participantCode,
+        " \xB7 Session: ",
+        receipt.sessionId
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-meta", children: [
+        "Deletion confirmed: ",
+        receipt.removedAt
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("section", { className: "ps-card", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { children: "About the study and its feedback" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "This small study looks at judgments before and after a fictional political career and its feedback. One type of feedback uses the player\u2019s own choices. The other uses a fixed profile for comparison. These profiles are research tools and cannot diagnose your personality." }),
+        receipt.sawFeedback ? /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: arm === "SHUFFLED" ? "You received the fixed comparison profile. It was not based on your own choices and does not describe your personality." : "Your feedback was based on your own choices in the game." }) : /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "The study has no record of showing you feedback before you left. You do not need to do anything else." })
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { children: [
+        "Copies already downloaded and the hosting service\u2019s recovery history are handled separately, as described in the participant information. Contact ",
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: `mailto:${contact}`, children: contact }),
+        " with your code for any question or deletion request."
+      ] }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-actions", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { onClick: () => downloadJSON(receipt, `PoliticalMirror_withdrawal_${receipt.participantCode}.json`), children: "Download deletion receipt" }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "You may close this page. Returning on the same browser shows this receipt, not your deleted answers." })
+    ] });
+  }
+  function PilotApp({ client: suppliedClient }) {
+    const clientRef = (0, import_react3.useRef)(suppliedClient || new StudyClient());
+    const client = clientRef.current;
+    const [config, setConfig] = (0, import_react3.useState)(null), [state, setState] = (0, import_react3.useState)(null);
+    const [busy, setBusy] = (0, import_react3.useState)(false), [error, setError] = (0, import_react3.useState)(null), [paused, setPaused] = (0, import_react3.useState)(false), [stopping, setStopping] = (0, import_react3.useState)(false), [notice, setNotice] = (0, import_react3.useState)(null);
+    const [removalReceipt, setRemovalReceipt] = (0, import_react3.useState)(null);
+    const [booted, setBooted] = (0, import_react3.useState)(false), [resumeKey, setResumeKey] = (0, import_react3.useState)(0), [preConsent, setPreConsent] = (0, import_react3.useState)(false);
+    const stateRef = (0, import_react3.useRef)(null), configRef = (0, import_react3.useRef)(null), processing = (0, import_react3.useRef)(false), errorQueue = (0, import_react3.useRef)([]);
+    const now = () => (/* @__PURE__ */ new Date()).toISOString();
+    const publish = (value) => {
+      stateRef.current = value;
+      setState(value);
+    };
+    const showError = (cause) => {
+      const value = cause instanceof Error ? cause : new Error(cause?.message || String(cause));
+      const issue = { message: value.message, code: value.code || cause?.code || "CLIENT_ERROR", at: now() };
+      errorQueue.current.push(issue);
+      try {
+        client.recordError(issue);
+      } catch {
+      }
+      setError(value);
+      setBusy(false);
+      processing.current = false;
+    };
+    const persist = async (next) => {
+      validateStudyState(next);
+      const ack = await client.checkpoint(next);
+      publish(next);
+      return ack;
+    };
+    const task = async (fn) => {
+      if (processing.current) return;
+      processing.current = true;
+      setBusy(true);
+      setError(null);
+      try {
+        return await fn();
+      } catch (cause) {
+        showError(cause);
+        return void 0;
+      } finally {
+        processing.current = false;
+        setBusy(false);
+      }
+    };
+    const transition = (mutate) => task(() => persist(mutate(stateRef.current, now())));
+    const loadConfig = async () => {
+      const value = await client.config();
+      if (value.studyVersion !== build_info_default.studyVersion) throw new Error("This page and the study\u2019s saved records use different versions. Please contact the researcher before continuing.");
+      configRef.current = value;
+      setConfig(value);
+      return value;
+    };
+    (0, import_react3.useEffect)(() => {
+      task(async () => {
+        const receipt = client.withdrawalReceipt();
+        if (receipt) {
+          setRemovalReceipt(receipt);
+          setBooted(true);
+          return;
+        }
+        await loadConfig();
+        setBooted(true);
+      });
+    }, []);
+    const start = () => task(async () => {
+      const freshConfig = await loadConfig();
+      if (!freshConfig.allowedNewEnroll && !client.hasEnrollment()) throw new Error("The study is not accepting new participants right now. Please contact the researcher.");
+      setPreConsent(true);
+    });
+    const [declined, setDeclined] = (0, import_react3.useState)(false), [consentNotice, setConsentNotice] = (0, import_react3.useState)(null);
+    const testSession = config?.collectionMode === "TEST";
+    const enrollWithConsent = (answers) => task(async () => {
+      if (answers === null) {
+        setPreConsent(false);
+        setDeclined(true);
+        return;
+      }
+      if (!CONSENT_CONFIRMATIONS.every((k) => answers[k] === true) || answers.eligible !== true) throw new Error("All four confirmations are required to take part.");
+      const seenMode = configRef.current?.collectionMode;
+      const freshConfig = await loadConfig();
+      if (freshConfig.collectionMode !== seenMode) {
+        setConsentNotice("The site has switched between test mode and research mode. Please read the information and confirm again.");
+        return;
+      }
+      if (freshConfig.consentTextSha256 !== answers.consentTextSha256) {
+        setConsentNotice("The participant information was updated while you were reading it. Please read the current version and confirm again.");
+        return;
+      }
+      if (!freshConfig.allowedNewEnroll && !client.hasEnrollment()) throw new Error("The study is not accepting new participants right now. Please contact the researcher.");
+      let record;
+      try {
+        record = await client.enroll({ consent: answers, collectionMode: freshConfig.collectionMode });
+      } catch (e) {
+        if (["CONSENT_CONFIG_MISMATCH", "COLLECTION_MODE_CHANGED"].includes(e.code)) {
+          client.clearEnrollment();
+          await loadConfig();
+          setConsentNotice("The participant information was updated while you were reading it. Please read the current version and confirm again.");
+          return;
+        }
+        throw e;
+      }
+      const initial = consentStudy(createStudy({ sessionId: record.sessionId, assignment: record.assignment, coreGame: build_info_default, now: now() }), consentAnswersFrom(record.consent), now(), { at: record.consent.at });
+      await persist(initial);
+      setConsentNotice(null);
+      setPreConsent(false);
+      setBooted(true);
+    });
+    const acceptRemoval = (receipt) => {
+      publish(null);
+      setRemovalReceipt(receipt);
+      setPaused(false);
+      setStopping(false);
+      setPreConsent(false);
+      setNotice(null);
+      setBooted(true);
+      errorQueue.current = [];
+    };
+    const stopAndDelete = () => task(async () => acceptRemoval(await client.withdraw()));
+    (0, import_react3.useEffect)(() => {
+      const onStorage = (e) => {
+        if (e.key === WITHDRAWAL_RECEIPT_KEY) {
+          const receipt = client.withdrawalReceipt();
+          if (receipt) {
+            setError(null);
+            acceptRemoval(receipt);
+          }
+        }
+      };
+      globalThis.addEventListener?.("storage", onStorage);
+      return () => globalThis.removeEventListener?.("storage", onStorage);
+    }, []);
+    const resume = () => task(async () => {
+      if (client.withdrawalReceipt()) {
+        acceptRemoval(client.withdrawalReceipt());
+        return;
+      }
+      if (client.withdrawalPending()) {
+        acceptRemoval(await client.withdraw());
+        return;
+      }
+      await loadConfig();
+      if (!client.hasSession()) {
+        if (client.hasEnrollment()) {
+          const enrolled = await client.enroll();
+          await persist(consentStudy(createStudy({ sessionId: enrolled.sessionId, assignment: enrolled.assignment, coreGame: build_info_default, now: now() }), consentAnswersFrom(enrolled.consent), now(), { at: enrolled.consent.at }));
+        } else {
+          setBooted(true);
+          return;
+        }
+      }
+      let record;
+      try {
+        record = await client.recover();
+      } catch (e) {
+        if (e.code === "SESSION_REMOVED") {
+          acceptRemoval(await client.withdraw());
+          return;
+        }
+        throw e;
+      }
+      setNotice(record.recoveryNotice || null);
+      let next = record.checkpoint;
+      if (!next) {
+        next = consentStudy(createStudy({ sessionId: client.credentials().sessionId, assignment: record.assignment, coreGame: build_info_default, now: now() }), consentAnswersFrom(record.consent), now(), { at: record.consent.at });
+        await persist(next);
+      } else {
+        validateStudyState(next);
+        publish(next);
+      }
+      if (next.stage === "PREDICTION" && record.prediction) {
+        next = attachPrediction(next, record.prediction, record.predictionReceipt, now());
+        await persist(next);
+      }
+      if (!["COMPLETE", "WITHDRAWN"].includes(next.stage)) {
+        next = markResume(next, now(), { presentationVersion: build_info_default.presentationVersion });
+        let issues = errorQueue.current;
+        try {
+          issues = client.errors();
+        } catch {
+        }
+        for (const issue of issues) next = recordTechnicalError(next, issue, issue.at);
+        await persist(next);
+        errorQueue.current = [];
+        client.clearErrors();
+      }
+      publish(next);
+      setResumeKey((key) => key + 1);
+      setPaused(false);
+      setStopping(false);
+      setBooted(true);
+    });
+    (0, import_react3.useEffect)(() => {
+      if (!state || busy || error || paused || processing.current) return;
+      if (["T0", "T1", "T2"].includes(state.stage) && !state.presentation) {
+        task(() => persist(presentItem(stateRef.current, now())));
+      } else if (state.stage === "PREDICTION") {
+        task(async () => {
+          const current = stateRef.current;
+          const actorContext = extractPublicDecisionContext(current.game.spec, current.game.transcript);
+          const prediction = buildPredictionCommit({
+            participantId: current.participantId,
+            sessionId: current.sessionId,
+            coreState: current.game.canonicalState,
+            t0: current.responses.T0,
+            form: formFor(current, "T1"),
+            studyVersion: current.studyVersion,
+            coreHash: current.coreGame.buildHash,
+            timestamp: now(),
+            actorContext
+          });
+          const ack = await client.prediction(prediction);
+          await persist(attachPrediction(current, prediction, ack.predictionReceipt, now()));
+        });
+      }
+    }, [state, busy, error, paused]);
+    const saveGame = async (snapshot) => {
+      setBusy(true);
+      try {
+        await persist(checkpointGame(stateRef.current, snapshot, now()));
+      } catch (cause) {
+        showError(cause);
+        throw cause;
+      } finally {
+        setBusy(false);
+      }
+    };
+    const endGame = async (snapshot) => {
+      setBusy(true);
+      try {
+        await persist(completeGame(stateRef.current, snapshot, now()));
+      } catch (cause) {
+        showError(cause);
+        throw cause;
+      } finally {
+        setBusy(false);
+      }
+    };
+    const endMirror = async (snapshot) => {
+      setBusy(true);
+      try {
+        await persist(finishMirror(stateRef.current, snapshot, now()));
+      } catch (cause) {
+        showError(cause);
+        throw cause;
+      } finally {
+        setBusy(false);
+      }
+    };
+    const endSurvey = async ({ answers, snapshot }) => {
+      setBusy(true);
+      try {
+        await persist(finishSurvey(stateRef.current, answers, snapshot, now()));
+      } catch (cause) {
+        showError(cause);
+        throw cause;
+      } finally {
+        setBusy(false);
+      }
+    };
+    const download = () => task(async () => {
+      const exported = await client.researchExport();
+      downloadJSON(exported, `PoliticalMirror_Pilot_${stateRef.current.sessionId}.json`);
+    });
+    let savedSession = false, pendingEnrollment = false;
+    try {
+      savedSession = client.hasSession();
+      pendingEnrollment = client.hasEnrollment();
+    } catch {
+    }
+    const active = state && !["COMPLETE", "WITHDRAWN"].includes(state.stage);
+    const contact = config?.contactEmail || CONTACT;
+    const blockers = config?.enrollmentBlockers || [];
+    if (removalReceipt) return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("style", { children: CSS }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(RemovalReceipt, { receipt: removalReceipt, contact })
+    ] });
+    return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("style", { children: CSS }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("header", { className: "ps-head", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("strong", { children: "Political Mirror" }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-meta", children: [
+            "A research study \xB7 v",
+            STUDY_VERSION
+          ] })
+        ] }),
+        active && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-actions", style: { margin: 0 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { secondary: true, disabled: busy, onClick: () => setPaused(true), children: "Pause" }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { secondary: true, disabled: busy, onClick: () => setStopping(true), children: "Stop participation" })
+        ] })
+      ] }),
+      (state?.assignment?.test === true || !state && testSession) && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { role: "status", className: "ps-wrap", style: { paddingBottom: 0 }, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-code", children: "TEST MODE \u2014 stored as test data, excluded from the 20-person pilot. \u6E2C\u8A66\u6A21\u5F0F\uFF1A\u4E0D\u8A08\u5165\u6B63\u5F0F\u6536\u6848\u3002" }) }),
+      notice && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { role: "status", className: "ps-wrap", style: { paddingBottom: 0 }, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-card", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: notice }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { secondary: true, onClick: () => setNotice(null), children: "I understand" })
+      ] }) }),
+      !state && !preConsent && !declined && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-progress", children: "Welcome" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "Step into public life." }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "Play a fictional political career and consider how you would judge other people in office." }),
+        !booted ? /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { role: "status", children: "Connecting to the study\u2026" }) : savedSession ? /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-card", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { children: "Your previous session is saved." }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "Continue on this browser to keep your answers and place in the study." }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy, onClick: resume, children: "Continue previous session" })
+        ] }) : pendingEnrollment ? /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-card", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "You started joining the study, but that step still needs to be confirmed." }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy, onClick: resume, children: "Continue joining the study" })
+        ] }) : /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-actions", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy || !config?.allowedNewEnroll, onClick: start, children: "Read about the study" }),
+          !config?.allowedNewEnroll && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: blockers.length ? "This study is not yet open for participation." : "The study is not accepting new participants right now." }),
+          blockers.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-code", role: "alert", children: [
+            "The researcher still needs to complete the setup: ",
+            blockers.join(", ")
+          ] })
+        ] }),
+        config?.qaModeWithoutEthicsApproval && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-code", role: "alert", children: "Technical test only: an ethics approval reference has not been entered. This version must not be used to collect research data from participants." }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-meta", children: [
+          "Questions? ",
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: `mailto:${contact}`, children: contact })
+        ] })
+      ] }),
+      !state && preConsent && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Consent, { config, busy, notice: consentNotice, testSession, onSubmit: enrollWithConsent }),
+      !state && declined && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-progress", children: "Not participating" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "Thank you for considering the study." }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "No study session was created and nothing was recorded. You may close this page." })
+      ] }),
+      state && ["T0", "T1", "T2"].includes(state.stage) && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Measurement, { state, busy, storage: client.storage, onDraftError: showError, onAnswer: (answer) => transition((s, at) => answerItem(s, answer, at)) }, `${state.stage}:${state.responses[state.stage].length}`),
+      state && ["GAME", "MIRROR", "SURVEY"].includes(state.stage) && !error && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+        PoliticalMirrorStudy,
+        {
+          study: { sessionId: state.sessionId, arm: state.assignment.arm, gameSnapshot: state.game, stage: state.stage },
+          onCheckpoint: saveGame,
+          onGameplayComplete: endGame,
+          onMirrorComplete: endMirror,
+          onSurveyComplete: endSurvey,
+          onError: showError
+        },
+        `${resumeKey}:${state.stage}`
+      ),
+      state?.stage === "PREDICTION" && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "Your career is complete." }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { role: "status", children: "Saving your study record before the next set of cases\u2026" })
+      ] }),
+      state?.stage === "DEBRIEF" && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Debrief, { state, busy, contact, onFinish: () => transition((s, at) => completeStudy(s, at)) }),
+      state?.stage === "COMPLETE" && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-progress", children: "Study complete" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "Your responses have been saved." }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "Thank you. You may close this page." }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-code", children: [
+          "Session: ",
+          state.sessionId
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-actions", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy, onClick: download, children: "Download my study record" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { children: [
+          "Contact: ",
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: `mailto:${contact}`, children: contact })
+        ] })
+      ] }),
+      state?.stage === "WITHDRAWN" && state.withdrawal?.sawFeedback && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Debrief, { state, busy, contact, withdrawn: true, onDownload: download }),
+      state?.stage === "WITHDRAWN" && !state.withdrawal?.sawFeedback && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-progress", children: "Participation stopped" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "You have left the study." }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "You left before seeing feedback about your play. Participants who continue are randomly assigned to one of two types of feedback. One uses their own choices; the other uses a fixed profile for comparison. They are told which type they received at the end. Neither type can diagnose their personality." }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { children: [
+          "You do not need to do any more tasks. Use the confirmation below to delete the research data you have submitted",
+          state.withdrawal?.dataRemovalRequested ? "; your removal request has been recorded and the researcher will follow the stated procedure" : "",
+          ". Contact the researcher with your session ID if you have questions."
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-code", children: [
+          "Session: ",
+          state.sessionId
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-actions", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy, onClick: download, children: "Download my study record" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { children: [
+          "Contact: ",
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: `mailto:${contact}`, children: contact })
+        ] })
+      ] }),
+      busy && !error && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-save", role: "status", children: "Saving \u2014 please wait\u2026" }),
+      paused && !error && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-screen", role: "dialog", "aria-modal": "true", "aria-labelledby": "pause-title", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-dialog", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { id: "pause-title", children: "Your last completed step is saved." }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "You can close this page and return on the same browser. Your slider answer and choice on the current case are kept on this browser until you submit them. They have not yet been sent to the study. Do not clear this browser\u2019s stored site data." }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-code", children: [
+          "Session: ",
+          state?.sessionId
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { onClick: () => setPaused(false), children: "Continue study" })
+      ] }) }),
+      stopping && !error && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-screen", role: "dialog", "aria-modal": "true", "aria-labelledby": "stop-title", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-dialog", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { id: "stop-title", children: "Stop and delete your study data?" }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "This will end your participation and ask the study to delete all your submitted answers, game records, predictions and questionnaire from its active database. This cannot be undone. Wait for the page to confirm that deletion is complete. If the connection fails, retry or email the researcher with your session code. A short coded record that you left and a receipt explaining the feedback will remain. If you only want a break, choose Pause." }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-actions", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy, onClick: stopAndDelete, children: "Stop participation and delete my data" }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { secondary: true, disabled: busy, onClick: () => setStopping(false), children: "Keep participating" })
+        ] })
+      ] }) }),
+      error && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-screen", role: "alertdialog", "aria-modal": "true", "aria-labelledby": "error-title", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-dialog", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { id: "error-title", children: "We could not finish this step." }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-error", children: participantErrorMessage(error) }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "You can continue from the last step that was successfully saved. Please do not start a new session." }),
+        error.code && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-code", children: [
+          "Reference: ",
+          error.code
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-actions", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy, onClick: resume, children: "Retry / resume" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-meta", children: [
+          "If this continues, contact ",
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: `mailto:${contact}`, children: contact }),
+          state?.sessionId ? ` with session ${state.sessionId}` : "",
+          "."
+        ] })
+      ] }) })
+    ] });
+  }
+
+  // pilot/browser.jsx
+  var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
+  var mount = document.getElementById("root");
+  if (!mount) throw new Error("Missing #root mount element.");
+  (0, import_client2.createRoot)(mount).render(/* @__PURE__ */ (0, import_jsx_runtime4.jsx)(PilotApp, {}));
+  mount.dataset.mounted = "true";
+  mount.dataset.presentationVersion = build_info_default.presentationVersion;
 })();
