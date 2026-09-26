@@ -1,0 +1,31 @@
+{
+  "schema": "pm-autostorage-deployment/1",
+  "releaseVersion": "0.38.3-storage.2",
+  "revision": 2026092701,
+  "mode": "TEST",
+  "researcherConfig": {
+    "schema": "pm-researcher-config/2",
+    "studyTitle": "Political Mirror pilot study",
+    "principalInvestigator": "詹子毅",
+    "institution": "清華大學 教育與心理諮商學系 Agile Brain and Cognition Lab",
+    "contactEmail": "b0966821923@gmail.com",
+    "estimatedDurationMinutes": 25,
+    "durationEstimateBasis": "researcher-provided estimate before this pilot",
+    "dataRetention": "Coded research records are retained indefinitely, including after this study ends, except when participation is withdrawn or deletion is requested as described below",
+    "dataAccess": "The researcher and the supervising professor",
+    "withdrawalProcedure": "To leave before completion, select Stop participation and confirm deletion. To request deletion after completing the study, email b0966821923@gmail.com and quote your session code (or study number if available). The researcher will identify and delete the linked research record. No request deadline has been specified in this study information; please contact the researcher with any data-withdrawal request",
+    "ethics": {
+      "arrangement": "SUPERVISOR_HANDLED",
+      "statement": "The researcher confirms that the ethical arrangements for this study have been addressed with the supervising professor. Participation is voluntary and requires informed consent. Participants may stop at any time without disadvantage; data are handled according to the privacy and withdrawal arrangements stated above. Questions or concerns may be sent to the researcher using the contact details below.",
+      "body": null,
+      "reference": null,
+      "researcherConfirmed": true
+    },
+    "recruitment": {
+      "targetAllocations": 20,
+      "allocationRule": "Twenty validly consented and allocated participants, including later withdrawals. Test sessions do not count toward the twenty participants.",
+      "stopRule": "Recruitment closes after twenty valid human allocations. Withdrawn places are not reused, and recruitment is not extended on the basis of results."
+    }
+  },
+  "removeSessionIds": []
+}

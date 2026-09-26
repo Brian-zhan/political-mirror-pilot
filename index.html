@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f3f2f2">
+  <meta name="description" content="Political Mirror — live one political career in Meridia, through two elections and decisions judged by seven hundred voters who do not all think the same way.">
+  <title>Political Mirror v0.38.0 · Pilot Study</title>
+  <style>
+    /* ────────────────────────────────────────────────────────────────────────
+       Political Mirror — presentation layer ("The Record").
+       Page shell only: tokens, base type, interaction states, responsive
+       structure. No gameplay, no canonical state, no network requests.
+       Every token is a CSS custom property so the static build and the offline
+       standalone build resolve identically with no CDN and no webfont.
+       ──────────────────────────────────────────────────────────────────────── */
+
+    :root {
+      /* Ground and ink (paper tone) */
+      --pm-paper: #f3f2f2;
+      --pm-sheet: #faf9f8;
+      --pm-surface: #eae9e9;
+      --pm-head: #f6f5f4;
+      --pm-ink: #201f1d;        /* body text            15.3:1 on paper */
+      --pm-ink-2: #444141;      /* secondary prose       8.7:1 */
+      --pm-ink-3: #605d5d;      /* micro-copy            4.9:1 */
+      --pm-chrome: #7d7979;     /* uppercase chrome only 3.9:1 */
+      --pm-rule: rgba(32, 31, 29, .16);
+      --pm-hair: rgba(32, 31, 29, .10);
+      --pm-inset: rgba(32, 31, 29, .06);
+
+      /* Accent — stroke and small marks only, never a fill */
+      --pm-gold: #b68235;
+      --pm-gold-ink: #7d5411;   /* accent at text size on paper */
+      --pm-gold-tint: rgba(182, 130, 53, .07);
+      --pm-gold-tint-2: rgba(182, 130, 53, .13);
+
+      /* Movement — direction is also carried by sign and caret */
+      --pm-favour: #3f6b52;
+      --pm-against: #8f3a2e;
+
+      /* Party identity marks — never used for good/bad */
+      --pm-civ: #9a6b1f;
+      --pm-ren: #3d5a8a;
+
+      /* Type — local stacks only; no @import, no CDN, no webfont file yet.
+         Embedded subsets are a separate, separately-verified batch. */
+      --pm-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua",
+        "URW Palladio L", "Hoefler Text", "Times New Roman", Georgia, serif;
+      --pm-body: Georgia, "Iowan Old Style", Charter, "Bitstream Charter",
+        "Palatino Linotype", "Times New Roman", serif;
+
+      --pm-measure: 64ch;
+      --pm-gutter: 40px;
+    }
+
+    /* The one inversion in the game: the closed door. Redefining the tokens
+       inside the container flips every child that reads them. */
+    .pm-tone-ink {
+      --pm-paper: #1b1a18;
+      --pm-sheet: #201f1d;
+      --pm-surface: #26241f;
+      --pm-head: #201f1d;
+      --pm-ink: #f6f5f3;        /* 15.0:1 on ink */
+      --pm-ink-2: #cfccc8;      /* 10.6:1 */
+      --pm-ink-3: #a8a4a0;      /*  6.6:1 */
+      --pm-chrome: #8c8884;     /*  4.9:1 */
+      --pm-rule: rgba(243, 242, 242, .20);
+      --pm-hair: rgba(243, 242, 242, .12);
+      --pm-inset: rgba(243, 242, 242, .06);
+      --pm-gold-ink: #e1ad66;   /* 7.6:1 */
+      --pm-gold-tint: rgba(225, 173, 102, .08);
+      --pm-gold-tint-2: rgba(225, 173, 102, .16);
+      background: var(--pm-paper);
+      color: var(--pm-ink);
+    }
+
+    /* Out of office: the accent is withheld and the rules widen. */
+    .pm-tone-out {
+      --pm-paper: #eeecea;
+      --pm-sheet: #f3f2f2;
+      --pm-gold: rgba(32, 31, 29, .45);
+      --pm-gold-ink: #444141;
+      --pm-gold-tint: rgba(32, 31, 29, .05);
+      --pm-gold-tint-2: rgba(32, 31, 29, .10);
+      background: var(--pm-paper);
+    }
+
+    * { box-sizing: border-box; }
+    html, body, #root { margin: 0; min-height: 100%; }
+    body {
+      background: var(--pm-paper);
+      color: var(--pm-ink);
+      font-family: var(--pm-body);
+      -webkit-text-size-adjust: 100%;
+      -webkit-font-smoothing: antialiased;
+    }
+    button, input, textarea, select { font: inherit; color: inherit; }
+    ::selection { background: var(--pm-gold-tint-2); }
+    :focus-visible { outline: 2px solid var(--pm-gold); outline-offset: 2px; }
+
+    /* ── Type scale ───────────────────────────────────────────────────────── */
+    .pm-kicker {
+      font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+      color: var(--pm-chrome); font-variant-numeric: tabular-nums; line-height: 1.5;
+    }
+    .pm-kicker-gold { color: var(--pm-gold-ink); }
+    .pm-h1 {
+      margin: 0; font-family: var(--pm-display); font-weight: 400;
+      font-size: clamp(38px, 7vw, 62px); line-height: 1; letter-spacing: -.02em;
+    }
+    .pm-h2 {
+      margin: 0; font-family: var(--pm-display); font-weight: 400;
+      font-size: clamp(27px, 4.4vw, 40px); line-height: 1.08; letter-spacing: -.012em;
+    }
+    .pm-h3 {
+      margin: 0; font-family: var(--pm-display); font-weight: 600;
+      font-size: clamp(19px, 2.4vw, 25px); line-height: 1.2;
+    }
+    .pm-prose {
+      margin: 0; font-size: clamp(15.5px, 1.4vw, 17px); line-height: 1.72;
+      color: var(--pm-ink-2); text-wrap: pretty;
+    }
+    .pm-quote {
+      margin: 0; font-family: var(--pm-display); font-style: italic;
+      font-size: clamp(18px, 2.2vw, 23px); line-height: 1.45; color: var(--pm-ink);
+      text-wrap: pretty;
+    }
+    .pm-num { font-family: var(--pm-display); font-weight: 600; font-variant-numeric: tabular-nums; }
+    .pm-tnum { font-variant-numeric: tabular-nums; }
+    .pm-measure { max-width: var(--pm-measure); }
+
+    /* Arrow is decoration: it must never reach textContent, because the DOM
+       harness matches buttons on exact text. */
+    .pm-arrow::after { content: " \2192"; }
+
+    /* ── Structure ────────────────────────────────────────────────────────── */
+    .pm-shell { min-height: 100vh; display: flex; flex-direction: column; background: var(--pm-paper); }
+    .pm-hud { position: sticky; top: 0; z-index: 5; background: var(--pm-head);
+      border-bottom: 1px solid var(--pm-rule); }
+    .pm-hud-inner { max-width: 1180px; margin: 0 auto; padding: 12px var(--pm-gutter);
+      display: flex; flex-direction: column; gap: 8px; }
+    .pm-hud-row { display: flex; justify-content: space-between; align-items: baseline; gap: 20px; }
+    .pm-figs { display: flex; align-items: baseline; gap: 28px; flex-wrap: wrap; }
+    .pm-body-wrap { max-width: 1180px; width: 100%; margin: 0 auto;
+      padding: 36px var(--pm-gutter) 56px; }
+    .pm-cols { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 56px; align-items: start; }
+    .pm-main { display: flex; flex-direction: column; gap: 24px; min-width: 0; max-width: 680px; }
+    .pm-rail { display: flex; flex-direction: column; gap: 22px;
+      border-left: 1px solid var(--pm-rule); padding-left: 28px; }
+    .pm-stack { display: flex; flex-direction: column; gap: 12px; }
+    .pm-row { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; }
+    .pm-hr { height: 1px; background: var(--pm-rule); border: 0; margin: 0; }
+
+    /* ── Controls ─────────────────────────────────────────────────────────── */
+    .pm-opt {
+      display: block; width: 100%; min-height: 56px; text-align: left;
+      background: var(--pm-sheet); color: var(--pm-ink);
+      border: 1px solid var(--pm-rule); border-radius: 4px;
+      padding: 16px 18px; cursor: pointer; font-family: var(--pm-body);
+      font-size: clamp(15px, 1.35vw, 16.5px); line-height: 1.5;
+      transition: border-color .12s, background .12s;
+    }
+    .pm-opt:hover { border-color: var(--pm-gold); background: var(--pm-gold-tint); }
+    .pm-opt:active { background: var(--pm-gold-tint-2); }
+    .pm-opt-selected { border-color: var(--pm-gold); background: var(--pm-gold-tint);
+      box-shadow: 0 0 0 3px var(--pm-gold-tint); }
+    .pm-opt-locked {
+      display: block; width: 100%; border: 1px dashed var(--pm-rule); border-radius: 4px;
+      padding: 16px 18px; background: transparent; color: var(--pm-ink-3);
+      font-size: clamp(15px, 1.35vw, 16.5px); line-height: 1.5;
+    }
+    .pm-opt-meta { font-size: 12.5px; line-height: 1.55; color: var(--pm-ink-3);
+      padding: 6px 2px 0; }
+    .pm-cta {
+      display: inline-block; background: transparent; color: var(--pm-gold-ink);
+      border: 1px solid var(--pm-gold); border-radius: 4px;
+      padding: 15px 28px; min-height: 56px; cursor: pointer; font-family: var(--pm-body);
+      font-size: 13px; letter-spacing: .16em; text-transform: uppercase;
+      transition: background .12s;
+    }
+    .pm-cta:hover { background: var(--pm-gold-tint-2); }
+    .pm-cta-block { display: block; width: 100%; text-align: center; }
+    .pm-ghost {
+      background: transparent; color: var(--pm-ink-3);
+      border: 1px solid var(--pm-rule); border-radius: 4px;
+      padding: 12px 18px; cursor: pointer; font-family: var(--pm-body);
+      font-size: 12px; letter-spacing: .14em; text-transform: uppercase;
+    }
+    .pm-ghost:hover { border-color: var(--pm-ink); color: var(--pm-ink); }
+    .pm-link {
+      background: none; border: 0; padding: 0; cursor: pointer; color: var(--pm-ink-3);
+      font-size: 12px; text-decoration: underline; text-underline-offset: 2px;
+    }
+    .pm-link:hover { color: var(--pm-gold-ink); }
+    .pm-input {
+      width: 100%; padding: 13px 14px; background: var(--pm-sheet); color: var(--pm-ink);
+      border: 1px solid var(--pm-rule); border-radius: 4px; font-family: var(--pm-body);
+      font-size: 16px;
+    }
+    .pm-input:hover { border-color: var(--pm-gold); }
+    .pm-seg { display: flex; border: 1px solid var(--pm-rule); border-radius: 4px; overflow: hidden; }
+    .pm-seg > button { flex: 1; min-height: 48px; background: transparent; border: 0;
+      padding: 11px 10px; cursor: pointer; font-size: 13.5px; color: var(--pm-ink-3);
+      display: flex; align-items: center; justify-content: center; gap: 7px; }
+    .pm-seg > button + button { border-left: 1px solid var(--pm-rule); }
+    .pm-seg > button:hover { background: var(--pm-inset); }
+    .pm-seg > button[aria-pressed="true"] { color: var(--pm-ink);
+      background: var(--pm-gold-tint); box-shadow: inset 0 0 0 1px var(--pm-gold); }
+
+    .pm-card { border: 1px solid var(--pm-rule); border-radius: 4px; padding: 16px 18px;
+      background: transparent; }
+
+    /* A single centred column: the Private Read, where nothing competes with the
+       question. No rail, no figures, no second thing to look at. */
+    .pm-solo { max-width: 680px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+    .pm-solo-pad { padding-top: clamp(8px, 4vh, 40px); }
+    .pm-seal { display: inline-block; border: 1px solid var(--pm-gold); color: var(--pm-gold-ink);
+      font-size: 10.5px; letter-spacing: .22em; text-transform: uppercase; padding: 6px 11px;
+      border-radius: 2px; white-space: nowrap; }
+    .pm-ladder-row { display: flex; align-items: center; gap: 14px; }
+    .pm-ladder-num { width: 12px; flex: none; text-align: right; }
+
+    /* Bloc reaction: label | diverging bar | signed value, on one row. */
+    .pm-bloc-row { display: grid; grid-template-columns: minmax(104px, 1.1fr) minmax(110px, 1.6fr) 88px;
+      align-items: center; gap: 14px; padding: 9px 0; border-bottom: 1px solid var(--pm-hair); }
+    .pm-bloc-bar { position: relative; height: 12px; }
+    .pm-bloc-centre { position: absolute; left: 50%; top: -3px; bottom: -3px; width: 1px;
+      background: var(--pm-rule); }
+    .pm-bloc-fill { position: absolute; top: 0; height: 12px; background: var(--pm-inset); }
+
+    /* Declaration of the poll: name over its bar, share and tally in a fixed column
+       that cannot collide with the name. */
+    .pm-cand-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(96px, 132px);
+      gap: 16px; align-items: center; }
+    .pm-cand-name { display: flex; align-items: center; gap: 9px; min-width: 0; }
+    .pm-cand-name > span:last-child { overflow-wrap: anywhere; }
+    .pm-cand-figs { text-align: right; min-width: 0; }
+    .pm-cand-share { font-family: var(--pm-display); font-weight: 600;
+      font-variant-numeric: tabular-nums; font-size: clamp(22px, 3.2vw, 34px); line-height: 1; }
+    .pm-plate-figs { display: flex; gap: clamp(18px, 3vw, 36px); flex-wrap: wrap;
+      align-items: flex-end; }
+
+    /* Development ledger and the archive file tab. */
+    .pm-slots { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+    .pm-ledger-figs { display: flex; align-items: baseline; gap: 10px;
+      font-family: var(--pm-display); font-variant-numeric: tabular-nums; }
+    .pm-file-tab { display: inline-block; border: 1px solid var(--pm-rule); border-bottom: 0;
+      border-radius: 3px 3px 0 0; padding: 8px 16px; background: var(--pm-surface);
+      color: var(--pm-ink-2); font-size: 10.5px; letter-spacing: .2em; text-transform: uppercase;
+      max-width: 100%; overflow-wrap: anywhere; }
+    .pm-clipping { background: var(--pm-surface); border: 1px solid var(--pm-rule);
+      border-radius: 3px; padding: 18px 20px; display: flex; gap: 22px; flex-wrap: wrap; }
+    .pm-wrap-safe { overflow-wrap: anywhere; }
+
+    /* The record: age | office | share | result, restacking without losing a field. */
+    .pm-record-head, .pm-record-row { display: grid;
+      grid-template-columns: 64px minmax(0, 1fr) 116px 84px; gap: 16px; align-items: baseline; }
+    .pm-record-head { padding-bottom: 8px; border-bottom: 1px solid var(--pm-rule); }
+    .pm-record-row { padding: 13px 0; border-bottom: 1px solid var(--pm-hair); }
+
+    /* Mini Mirror. */
+    .pm-mirror-head { border-radius: 4px; padding: clamp(22px, 4vw, 40px); display: flex;
+      justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; }
+    .pm-dim { padding: 16px 0; border-bottom: 1px solid var(--pm-hair);
+      display: flex; flex-direction: column; gap: 8px; }
+    .pm-dim-top { display: flex; justify-content: space-between; align-items: baseline;
+      gap: 16px; flex-wrap: wrap; }
+    .pm-case { background: var(--pm-surface); padding: 11px 13px; font-size: 13.5px;
+      line-height: 1.6; overflow-wrap: anywhere; }
+    .pm-cross-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 24px; }
+
+    /* Tester panel and survey — research instruments: content locked, layout only. */
+    .pm-tester { border: 1px dashed var(--pm-against); border-radius: 4px;
+      padding: clamp(14px, 2vw, 18px); display: flex; flex-direction: column; gap: 14px; }
+    .pm-tester-seeds { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 8px; }
+    .pm-scale { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 4px; }
+    .pm-pick {
+      min-height: 44px; padding: 10px 12px; cursor: pointer; text-align: center;
+      background: var(--pm-sheet); color: var(--pm-ink);
+      border: 1px solid var(--pm-rule); border-radius: 3px;
+      font-family: var(--pm-body); font-size: 14px; line-height: 1.4;
+      font-variant-numeric: tabular-nums;
+    }
+    .pm-pick:hover { border-color: var(--pm-gold); background: var(--pm-gold-tint); }
+    /* Selected state carries weight and a ring, not colour alone. */
+    .pm-pick[aria-pressed="true"] { background: var(--pm-ink); color: var(--pm-paper);
+      border-color: var(--pm-ink); font-weight: 600;
+      box-shadow: inset 0 0 0 2px var(--pm-paper), 0 0 0 1px var(--pm-ink); }
+    .pm-pick-wide { text-align: left; width: 100%; }
+    .pm-textarea { width: 100%; min-height: 64px; padding: 10px 12px; margin-top: 6px;
+      background: var(--pm-sheet); color: var(--pm-ink); border: 1px solid var(--pm-rule);
+      border-radius: 4px; font-family: var(--pm-body); font-size: 14.5px; line-height: 1.6; }
+    .pm-textarea:hover { border-color: var(--pm-gold); }
+    .pm-q { border-top: 1px solid var(--pm-hair); padding: 14px 0;
+      display: flex; flex-direction: column; gap: 8px; }
+    .pm-plate { border: 1px solid var(--pm-gold); border-radius: 4px;
+      background: var(--pm-head); padding: clamp(24px, 4vw, 44px) clamp(20px, 4vw, 48px); }
+    .pm-dot { width: 8px; height: 8px; border-radius: 50%; flex: none; display: inline-block; }
+
+    .pm-dialog-backdrop { position: fixed; inset: 0; z-index: 20; display: grid;
+      place-items: center; padding: 16px; background: rgba(27, 26, 24, .55); }
+    .pm-dialog { width: min(620px, 100%); max-height: 90vh; overflow: auto;
+      background: var(--pm-paper); border: 1px solid var(--pm-rule); border-radius: 7px;
+      box-shadow: 0 12px 32px rgba(45, 43, 43, .28); padding: 28px 30px; }
+
+    /* ── Responsive ───────────────────────────────────────────────────────── */
+    @media (max-width: 1023px) {
+      :root { --pm-gutter: 28px; }
+      .pm-cols { grid-template-columns: minmax(0, 1fr); gap: 30px; }
+      .pm-main { max-width: none; }
+      .pm-rail { border-left: 0; padding-left: 0; border-top: 1px solid var(--pm-rule);
+        padding-top: 22px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
+    }
+    @media (max-width: 767px) {
+      :root { --pm-gutter: 20px; }
+      .pm-body-wrap { padding: 24px var(--pm-gutter) 48px; }
+      .pm-hud-row { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .pm-figs { gap: 18px; }
+      .pm-rail { grid-template-columns: 1fr; }
+      .pm-wide { display: none; }
+    }
+    @media (max-width: 479px) {
+      .pm-bloc-row { grid-template-columns: minmax(0, 1fr) 80px; }
+      .pm-bloc-bar { display: none; }
+      /* Share moves under the candidate's name rather than being dropped. */
+      .pm-cand-row { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+      .pm-cand-figs { text-align: left; }
+      /* The record keeps every field; the row becomes two lines. */
+      .pm-record-head { display: none; }
+      .pm-record-row { grid-template-columns: 56px minmax(0, 1fr); gap: 4px 12px; }
+      .pm-record-row > :nth-child(3) { grid-column: 2; text-align: left; }
+      .pm-record-row > :nth-child(4) { grid-column: 2; text-align: left; }
+      .pm-scale { gap: 3px; }
+      .pm-pick { padding: 10px 4px; font-size: 13.5px; }
+    }
+    @media (max-width: 399px) {
+      .pm-narrow-hide { display: none; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <noscript>Political Mirror needs JavaScript enabled in this browser.</noscript>
+  <script src="./app.js"></script>
+</body>
+</html>
