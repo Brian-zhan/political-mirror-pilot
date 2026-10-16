@@ -4,7 +4,7 @@ var build_info_default = {
   buildHash: "f5eaaff91d5ccc9b03bb7fbc240cd4b5ed592e0a37448a15b537024a2c8f5e04",
   sourceManifestHash: "439b4dc3ac6cd7b884976530230e99f088b7d82e9998e299b04c8db49be88934",
   studyVersion: "0.38.3-pilot.1",
-  presentationVersion: "0.38.3-readability.1"
+  presentationVersion: "0.38.3-readability.2"
 };
 
 // pilot-cloud/schema-statements.json

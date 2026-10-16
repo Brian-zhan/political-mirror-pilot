@@ -1,19 +1,19 @@
 {
   "compiler": "esbuild 0.28.2",
   "method": "complete source graph; pinned React 18.3.1 and ReactDOM 18.3.1",
-  "presentationVersion": "0.38.3-readability.1",
+  "presentationVersion": "0.38.3-readability.2",
   "modules": {
     "pilot/actor-context.mjs": "d028f004d359784a584ae9df948006aa5552eb8aa0047cfa63c38a36d6777e38",
-    "pilot/app.jsx": "ff4f60a83d4c222566b25ecd938314a4898d44eee8607173ccdabceebe6ac6e3",
+    "pilot/app.jsx": "caa03c08405dac2810bfb2953542a3dead0ba6b7fabf694a5f6f83a2df55b408",
     "pilot/assignment.mjs": "424b33c7db1f5cce3d230b8f25c6b8c1f1de09755088144647a8e2ea4c127f6e",
     "pilot/browser.jsx": "7bc695a1048030b7010763fe8f15e4719c3c981348e00742262a1cf4e2f8c80c",
-    "pilot/build-info.json": "620ceacbac3ade6d3501570b3c0ac6cc52fe001b499943c1376c2ef01547ca33",
+    "pilot/build-info.json": "1f7497fc1870a9fa165e167845005491ec8e74671a2e71c1a6fa3e60e82f26ca",
     "pilot/cases.mjs": "a5e5c38c3cd3450785b2248e1f8eb48b76ddb500e4d38c93b66376ac27c8f45f",
     "pilot/client.mjs": "e06f958dc17b0c0dcc9836e6e67165f41100ce53602e6c7cff022c37ea1438fb",
     "pilot/consent-validator.mjs": "886aca29d0b029dde780bc1ed30b8a5db6bc2578b3e3a232fb6ac9c3d85fb687",
     "pilot/error-copy.mjs": "85da1e7536d65933dbe5661f78584a3236293f2e43623f494d7292a0db9c91e1",
-    "pilot/game-copy.mjs": "3efa713de0ed99c62a8a3f7b691d317830efca3d0be93f6603b24164a294f10e",
-    "pilot/game-ui.jsx": "a7c84574e9ec0f0040c4980649cf248bb2fe686ea34afda925c8a893b3b8d694",
+    "pilot/game-copy.mjs": "9ea47403df18bfc0706a5035d4f769ba69d4c9d4168537b58a168597343568f8",
+    "pilot/game-ui.jsx": "5607f56ec51854f705eab6d3a39c0b7b1ae57482f006660c21d6e1db2a35fe77",
     "pilot/judgment-slider.jsx": "e0c9775457bbc8890d56905fdb121496478cdc4dd727d119a4dbbdaca9686e5f",
     "pilot/judgment-slider.mjs": "a50631be546fe5e6e4c3899f438b82773d2d6dc5125a211469e23efc0ce322ea",
     "pilot/prediction.mjs": "8b67b66c434df0909667cb928f67e3594d729ebcbe0e94bd95dd4f33d63ab4a4",
@@ -29,6 +29,6 @@
     "src/playtest.mjs": "25bb8c4722314acaec056ac64cfd6cc22c6b0a334ef4e18d09c23f14c0291296",
     "src/ui-theme.mjs": "69250e1b537a9ee6adeb6f6a8b5836a442449f5cb4208be1482ac65f174a352c"
   },
-  "appSHA256": "d6d68dd70114c89797ab0878b04f16ff0ce9cf744837a7f9cf3f996879507e9f",
+  "appSHA256": "07d1efbcc5b43c108df02b6396b5ffe6c212244dd3a8c4b63fa705b974473f48",
   "frozenCount": 134
 }

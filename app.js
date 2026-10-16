@@ -29,9 +29,9 @@
     mod
   ));
 
-  // ../pm_v0380_pilot/node_modules/react/cjs/react.development.js
+  // node_modules/react/cjs/react.development.js
   var require_react_development = __commonJS({
-    "../pm_v0380_pilot/node_modules/react/cjs/react.development.js"(exports, module) {
+    "node_modules/react/cjs/react.development.js"(exports, module) {
       "use strict";
       /**
        * @license React
@@ -1912,9 +1912,9 @@
     }
   });
 
-  // ../pm_v0380_pilot/node_modules/react/index.js
+  // node_modules/react/index.js
   var require_react = __commonJS({
-    "../pm_v0380_pilot/node_modules/react/index.js"(exports, module) {
+    "node_modules/react/index.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -1924,9 +1924,9 @@
     }
   });
 
-  // ../pm_v0380_pilot/node_modules/scheduler/cjs/scheduler.development.js
+  // node_modules/scheduler/cjs/scheduler.development.js
   var require_scheduler_development = __commonJS({
-    "../pm_v0380_pilot/node_modules/scheduler/cjs/scheduler.development.js"(exports) {
+    "node_modules/scheduler/cjs/scheduler.development.js"(exports) {
       "use strict";
       /**
        * @license React
@@ -2383,9 +2383,9 @@
     }
   });
 
-  // ../pm_v0380_pilot/node_modules/scheduler/index.js
+  // node_modules/scheduler/index.js
   var require_scheduler = __commonJS({
-    "../pm_v0380_pilot/node_modules/scheduler/index.js"(exports, module) {
+    "node_modules/scheduler/index.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -2395,9 +2395,9 @@
     }
   });
 
-  // ../pm_v0380_pilot/node_modules/react-dom/cjs/react-dom.development.js
+  // node_modules/react-dom/cjs/react-dom.development.js
   var require_react_dom_development = __commonJS({
-    "../pm_v0380_pilot/node_modules/react-dom/cjs/react-dom.development.js"(exports) {
+    "node_modules/react-dom/cjs/react-dom.development.js"(exports) {
       "use strict";
       /**
        * @license React
@@ -23581,9 +23581,9 @@
     }
   });
 
-  // ../pm_v0380_pilot/node_modules/react-dom/index.js
+  // node_modules/react-dom/index.js
   var require_react_dom = __commonJS({
-    "../pm_v0380_pilot/node_modules/react-dom/index.js"(exports, module) {
+    "node_modules/react-dom/index.js"(exports, module) {
       "use strict";
       if (false) {
         checkDCE();
@@ -23594,9 +23594,9 @@
     }
   });
 
-  // ../pm_v0380_pilot/node_modules/react-dom/client.js
+  // node_modules/react-dom/client.js
   var require_client = __commonJS({
-    "../pm_v0380_pilot/node_modules/react-dom/client.js"(exports) {
+    "node_modules/react-dom/client.js"(exports) {
       "use strict";
       var m = require_react_dom();
       if (false) {
@@ -23625,9 +23625,9 @@
     }
   });
 
-  // ../pm_v0380_pilot/node_modules/react/cjs/react-jsx-runtime.development.js
+  // node_modules/react/cjs/react-jsx-runtime.development.js
   var require_react_jsx_runtime_development = __commonJS({
-    "../pm_v0380_pilot/node_modules/react/cjs/react-jsx-runtime.development.js"(exports) {
+    "node_modules/react/cjs/react-jsx-runtime.development.js"(exports) {
       "use strict";
       /**
        * @license React
@@ -24527,9 +24527,9 @@
     }
   });
 
-  // ../pm_v0380_pilot/node_modules/react/jsx-runtime.js
+  // node_modules/react/jsx-runtime.js
   var require_jsx_runtime = __commonJS({
-    "../pm_v0380_pilot/node_modules/react/jsx-runtime.js"(exports, module) {
+    "node_modules/react/jsx-runtime.js"(exports, module) {
       "use strict";
       if (false) {
         module.exports = null;
@@ -28813,10 +28813,12 @@
     "The back room": "Planning your strategy",
     "Polling, ward maps, and the long unglamorous business of working out where this is going.": "Study polls and district maps. Work out what may happen next.",
     "Speeches, debates, press conferences, live town halls. How well a public statement lands, and how fast people come to know who you are.": "How clearly you speak in debates, interviews, and public meetings, and how quickly people get to know you.",
-    "Drafting, delivery and administration. Whether what you promised actually works, and whether technical options are open to you at all.": "How well you write and carry out policy, and whether you have the skills needed for technical choices.",
-    "Field operation, volunteers, canvassing, turnout. Converts money and party standing into people who actually vote.": "How well you organise volunteers and door-to-door campaigning, turning campaign resources into people who vote.",
-    "Party bargaining, coalitions, legislative deals. What it costs you to get other people to move.": "How well you make deals with parties and other politicians, and what you must give up to win their support.",
-    "Reading the position. Better internal information, sharper forecasts, steadier judgment when everything is on fire.": "How well you understand the situation, predict what comes next, and make decisions under pressure.",
+    "Organization": "Campaign Organization",
+    "Policy & Governance": "Governing",
+    "Drafting, delivery and administration. Whether what you promised actually works, and whether technical options are open to you at all.": "How well you develop policies, put them into practice, and handle technical decisions.",
+    "Field operation, volunteers, canvassing, turnout. Converts money and party standing into people who actually vote.": "How well you organise volunteers, run door-to-door campaigns, and get supporters to vote.",
+    "Party bargaining, coalitions, legislative deals. What it costs you to get other people to move.": "How well you reach agreements with other politicians and parties, and what you give up to win their support.",
+    "Reading the position. Better internal information, sharper forecasts, steadier judgment when everything is on fire.": "How well you understand the political situation, plan ahead, and make decisions under pressure.",
     "You know how a bill actually moves and who has to be asked. You have never had to hold a room.": "You know how bills get passed and whose help you need. You have little experience speaking to a crowd.",
     "You can fill a hall and knock a ward. Nobody in the building owes you a favour and you have never drafted anything.": "You can draw a crowd and organise door-to-door visits. Party officials owe you no favours, and you have never written a bill.",
     "You can read a procurement file faster than anyone in the chamber. You are not who they send to the doorstep.": "You understand contract records better than anyone in the council. Meeting voters at their doors is not your strength.",
@@ -28897,7 +28899,7 @@
   function gameText(value) {
     if (typeof value !== "string") return value;
     if (exact.has(value)) return exact.get(value);
-    return value.replace(/you thought it was probably overblown/g, "you thought it was probably exaggerated").replace(/^slope ([\d.-]+) across (\d+) judgments$/, "Evidence-response score: $1, based on $2 judgments").replace(/^When you were the one exposed, you chose the procedural option (\d+)% of the way\.$/, "When you were under scrutiny, your choices scored $1 out of 100 for following a formal review process.").replace(/^You rarely reached for the outrage play \((\d+)% across your responses\)\.$/, "Your public choices scored $1 out of 100 for using public anger or accusations to your advantage.").replace(/^When the story was about someone else you reached for the hard option (\d+)% of the way\.$/, "When the story was about someone else, your choices scored $1 out of 100 for using accusations to your advantage.").replace(/^Across your public responses you reached for the aggressive option (\d+)% of the way\.$/, "Your public choices scored $1 out of 100 for using accusations to your advantage.").replace(/^Yet your private judgments tracked evidence quality closely — you moved ([\d.-]+) points of credence per unit of evidence\.$/, "In private, stronger evidence made you more likely to believe a claim. Your evidence-response score was $1: a score for how much your judgment changed as evidence became stronger.").replace(/^In matched controversies with the same evidence, you were (\d+) points readier to believe the charge when the target was on the other side\.$/, "In similar cases with the same level of evidence, you were $1 points more likely to believe the accusation against the other party.").replace(/^Privately, with identical evidence in both cases, you were (\d+) points readier to believe it when the person was on the other side\.$/, "In private, with the same level of evidence in both cases, you were $1 points more likely to believe the accusation against the other party.").replace(/^With the same underlying evidence, visible public anger moved your judgment by (\d+) points\.$/, "With the same level of evidence, public anger shifted your judgment by $1 points.");
+    return value.replace(/\b(?:Campaign )?Organization\b/g, "Campaign Organization").replace(/\bPolicy & Governance\b/g, "Governing").replace(/you thought it was probably overblown/g, "you thought it was probably exaggerated").replace(/^slope ([\d.-]+) across (\d+) judgments$/, "Evidence-response score: $1, based on $2 judgments").replace(/^When you were the one exposed, you chose the procedural option (\d+)% of the way\.$/, "When you were under scrutiny, your choices scored $1 out of 100 for following a formal review process.").replace(/^You rarely reached for the outrage play \((\d+)% across your responses\)\.$/, "Your public choices scored $1 out of 100 for using public anger or accusations to your advantage.").replace(/^When the story was about someone else you reached for the hard option (\d+)% of the way\.$/, "When the story was about someone else, your choices scored $1 out of 100 for using accusations to your advantage.").replace(/^Across your public responses you reached for the aggressive option (\d+)% of the way\.$/, "Your public choices scored $1 out of 100 for using accusations to your advantage.").replace(/^Yet your private judgments tracked evidence quality closely — you moved ([\d.-]+) points of credence per unit of evidence\.$/, "In private, stronger evidence made you more likely to believe a claim. Your evidence-response score was $1: a score for how much your judgment changed as evidence became stronger.").replace(/^In matched controversies with the same evidence, you were (\d+) points readier to believe the charge when the target was on the other side\.$/, "In similar cases with the same level of evidence, you were $1 points more likely to believe the accusation against the other party.").replace(/^Privately, with identical evidence in both cases, you were (\d+) points readier to believe it when the person was on the other side\.$/, "In private, with the same level of evidence in both cases, you were $1 points more likely to believe the accusation against the other party.").replace(/^With the same underlying evidence, visible public anger moved your judgment by (\d+) points\.$/, "With the same level of evidence, public anger shifted your judgment by $1 points.");
   }
   function displayTree(value) {
     if (typeof value === "string") return gameText(value);
@@ -30045,11 +30047,7 @@
             const word = startingWord(value);
             const filled = startingNotches(value);
             const tone2 = word === "Strength" ? T.goldInk : word === "Weakness" ? T.against : T.ink3;
-            return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: {
-              display: "grid",
-              gridTemplateColumns: "minmax(0,1fr) 96px 92px",
-              gap: 14,
-              alignItems: "center",
+            return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-starting-skill", style: {
               padding: "11px 0",
               borderBottom: `1px solid ${T.hair}`
             }, children: [
@@ -31280,7 +31278,7 @@
     buildHash: "f5eaaff91d5ccc9b03bb7fbc240cd4b5ed592e0a37448a15b537024a2c8f5e04",
     sourceManifestHash: "439b4dc3ac6cd7b884976530230e99f088b7d82e9998e299b04c8db49be88934",
     studyVersion: "0.38.3-pilot.1",
-    presentationVersion: "0.38.3-readability.1"
+    presentationVersion: "0.38.3-readability.2"
   };
 
   // pilot/client.mjs
@@ -31776,12 +31774,14 @@
  .ps-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:25px}.ps-actions button{min-height:44px}
  .ps-slider{width:100%;min-width:0}.ps-slider label{display:block;margin-bottom:12px}.ps-slider-value{display:block;text-align:center;font-size:24px;font-weight:600;margin:14px 0 0}.ps-slider input[type=range]{display:block;width:100%;height:48px;margin:0;accent-color:var(--pm-ink);cursor:pointer;touch-action:pan-y}.ps-slider input[type=range]:focus-visible{outline:3px solid var(--pm-ink);outline-offset:3px}.ps-slider-anchors{display:flex;justify-content:space-between;gap:10px;font-size:13px;line-height:1.4}.ps-slider-anchors span{flex:1}.ps-slider-anchors span:nth-child(2){text-align:center}.ps-slider-anchors span:last-child{text-align:right}
  .ps-field{margin:26px 0;border:0;padding:0}.ps-field legend{margin-bottom:14px;line-height:1.5}
- .ps-vote{display:flex;gap:12px;flex-wrap:wrap}.ps-vote label{border:1px solid var(--pm-rule);padding:12px 18px;cursor:pointer}.ps-vote input{margin-right:10px}
+ .ps-vote{display:flex;gap:12px;flex-wrap:wrap}.ps-vote label{box-sizing:border-box;flex:0 0 132px;max-width:100%;min-height:48px;display:inline-flex;align-items:center;justify-content:center;border:1px solid var(--pm-rule);padding:12px 18px;cursor:pointer}.ps-vote input{margin:0 10px 0 0;flex:none}
  .ps-screen{position:fixed;inset:0;background:rgba(243,242,242,.92);z-index:1000;display:grid;place-items:center;padding:24px;overflow:auto}
  .ps-dialog{max-width:620px;border:1px solid var(--pm-rule);background:var(--pm-sheet);padding:32px;line-height:1.6;width:100%}
  .ps-error{color:var(--pm-against)}.ps-code{font-family:monospace;overflow-wrap:anywhere;font-size:12px}
  .ps-progress{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--pm-ink-3)}
  .ps-save{position:fixed;bottom:12px;right:16px;padding:8px 14px;background:var(--pm-sheet);border:1px solid var(--pm-rule);font-size:12px;z-index:900}
+ .pm-starting-skill{display:grid;grid-template-columns:minmax(0,1fr) 96px 92px;gap:14px;align-items:center}
+ @media(max-width:600px){.pm-starting-skill{grid-template-columns:96px minmax(0,1fr);gap:8px 14px}.pm-starting-skill>div:first-child{grid-column:1 / -1}}
  button:disabled{opacity:.45;cursor:not-allowed}@media(max-width:600px){.ps-head{align-items:flex-start}.ps-wrap{padding:22px 18px 70px}.ps-card{padding:18px}.ps-wrap h1{font-size:29px}}
 `;
   function Button({ children, onClick, disabled = false, secondary = false, type = "button" }) {
@@ -31902,7 +31902,7 @@
           /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-vote", children: [
             /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("label", { children: [
               /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("input", { type: "radio", name: "vote", value: "RETAIN", checked: draft.vote === "RETAIN", onChange: () => updateDraft((previous) => ({ ...previous, vote: "RETAIN" })), required: true, disabled: busy }),
-              "Keep in office"
+              "Keep"
             ] }),
             /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("label", { children: [
               /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("input", { type: "radio", name: "vote", value: "REPLACE", checked: draft.vote === "REPLACE", onChange: () => updateDraft((previous) => ({ ...previous, vote: "REPLACE" })), required: true, disabled: busy }),
