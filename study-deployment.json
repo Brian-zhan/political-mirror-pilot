@@ -1,7 +1,7 @@
 {
   "schema": "pm-autostorage-deployment/1",
-  "releaseVersion": "0.38.3-storage.2",
-  "revision": 2026101701,
+  "releaseVersion": "0.38.3-storage.4",
+  "revision": 2026102004,
   "mode": "HUMAN",
   "researcherConfig": {
     "schema": "pm-researcher-config/2",
@@ -27,5 +27,8 @@
       "stopRule": "Recruitment closes after twenty valid human allocations. Withdrawn places are not reused, and recruitment is not extended on the basis of results."
     }
   },
-  "removeSessionIds": []
+  "removeSessionIds": [],
+  "instrumentVersion": "PM-BACKGROUND-2",
+  "consentVersion": "PM-CONSENT-7",
+  "presentationVersion": "0.38.3-background.4"
 }

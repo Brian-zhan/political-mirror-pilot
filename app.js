@@ -639,8 +639,8 @@
             }
             return ReactElement(element.type, key, ref, self, source, owner, props);
           }
-          function isValidElement(object) {
-            return typeof object === "object" && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+          function isValidElement(object3) {
+            return typeof object3 === "object" && object3 !== null && object3.$$typeof === REACT_ELEMENT_TYPE;
           }
           var SEPARATOR = ".";
           var SUBSEPARATOR = ":";
@@ -657,8 +657,8 @@
           }
           var didWarnAboutMaps = false;
           var userProvidedKeyEscapeRegex = /\/+/g;
-          function escapeUserProvidedKey(text) {
-            return text.replace(userProvidedKeyEscapeRegex, "$&/");
+          function escapeUserProvidedKey(text2) {
+            return text2.replace(userProvidedKeyEscapeRegex, "$&/");
           }
           function getElementKey(element, index) {
             if (typeof element === "object" && element !== null && element.key != null) {
@@ -1097,7 +1097,7 @@
             }
             return dispatcher.useContext(Context);
           }
-          function useState3(initialState) {
+          function useState5(initialState) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useState(initialState);
           }
@@ -1105,11 +1105,11 @@
             var dispatcher = resolveDispatcher();
             return dispatcher.useReducer(reducer, initialArg, init);
           }
-          function useRef3(initialValue) {
+          function useRef5(initialValue) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useRef(initialValue);
           }
-          function useEffect3(create, deps) {
+          function useEffect4(create, deps) {
             var dispatcher = resolveDispatcher();
             return dispatcher.useEffect(create, deps);
           }
@@ -1892,15 +1892,15 @@
           exports.useContext = useContext;
           exports.useDebugValue = useDebugValue;
           exports.useDeferredValue = useDeferredValue;
-          exports.useEffect = useEffect3;
+          exports.useEffect = useEffect4;
           exports.useId = useId;
           exports.useImperativeHandle = useImperativeHandle;
           exports.useInsertionEffect = useInsertionEffect;
           exports.useLayoutEffect = useLayoutEffect2;
           exports.useMemo = useMemo3;
           exports.useReducer = useReducer;
-          exports.useRef = useRef3;
-          exports.useState = useState3;
+          exports.useRef = useRef5;
+          exports.useState = useState5;
           exports.useSyncExternalStore = useSyncExternalStore;
           exports.useTransition = useTransition;
           exports.version = ReactVersion;
@@ -2414,9 +2414,9 @@
           if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
             __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(new Error());
           }
-          var React5 = require_react();
+          var React7 = require_react();
           var Scheduler = require_scheduler();
-          var ReactSharedInternals = React5.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React7.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           var suppressWarning = false;
           function setSuppressWarning(newSuppressWarning) {
             {
@@ -2465,7 +2465,7 @@
           var HostPortal = 4;
           var HostComponent = 5;
           var HostText = 6;
-          var Fragment2 = 7;
+          var Fragment3 = 7;
           var Mode = 8;
           var ContextConsumer = 9;
           var ContextProvider = 10;
@@ -3622,7 +3622,7 @@
                 return "DehydratedFragment";
               case ForwardRef:
                 return getWrappedName$1(type, type.render, "ForwardRef");
-              case Fragment2:
+              case Fragment3:
                 return "Fragment";
               case HostComponent:
                 return type;
@@ -4023,7 +4023,7 @@
             {
               if (props.value == null) {
                 if (typeof props.children === "object" && props.children !== null) {
-                  React5.Children.forEach(props.children, function(child) {
+                  React7.Children.forEach(props.children, function(child) {
                     if (child == null) {
                       return;
                     }
@@ -4311,15 +4311,15 @@
           var COMMENT_NODE = 8;
           var DOCUMENT_NODE = 9;
           var DOCUMENT_FRAGMENT_NODE = 11;
-          var setTextContent = function(node, text) {
-            if (text) {
+          var setTextContent = function(node, text2) {
+            if (text2) {
               var firstChild = node.firstChild;
               if (firstChild && firstChild === node.lastChild && firstChild.nodeType === TEXT_NODE) {
-                firstChild.nodeValue = text;
+                firstChild.nodeValue = text2;
                 return;
               }
             }
-            node.textContent = text;
+            node.textContent = text2;
           };
           var shorthandToLonghand = {
             animation: ["animationDelay", "animationDirection", "animationDuration", "animationFillMode", "animationIterationCount", "animationName", "animationPlayState", "animationTimingFunction"],
@@ -9508,8 +9508,8 @@
             }
             return domElement;
           }
-          function createTextNode(text, rootContainerElement) {
-            return getOwnerDocumentFromRootContainer(rootContainerElement).createTextNode(text);
+          function createTextNode(text2, rootContainerElement) {
+            return getOwnerDocumentFromRootContainer(rootContainerElement).createTextNode(text2);
           }
           function setInitialProperties(domElement, tag, rawProps, rootContainerElement) {
             var isCustomComponentTag = isCustomComponent(tag, rawProps);
@@ -9953,8 +9953,8 @@
             }
             return updatePayload;
           }
-          function diffHydratedText(textNode, text, isConcurrentMode) {
-            var isDifferent = textNode.nodeValue !== text;
+          function diffHydratedText(textNode, text2, isConcurrentMode) {
+            var isDifferent = textNode.nodeValue !== text2;
             return isDifferent;
           }
           function warnForDeletedHydratableElement(parentNode, child) {
@@ -9984,16 +9984,16 @@
               error("Expected server HTML to contain a matching <%s> in <%s>.", tag, parentNode.nodeName.toLowerCase());
             }
           }
-          function warnForInsertedHydratedText(parentNode, text) {
+          function warnForInsertedHydratedText(parentNode, text2) {
             {
-              if (text === "") {
+              if (text2 === "") {
                 return;
               }
               if (didWarnInvalidHydration) {
                 return;
               }
               didWarnInvalidHydration = true;
-              error('Expected server HTML to contain a matching text node for "%s" in <%s>.', text, parentNode.nodeName.toLowerCase());
+              error('Expected server HTML to contain a matching text node for "%s" in <%s>.', text2, parentNode.nodeName.toLowerCase());
             }
           }
           function restoreControlledState$3(domElement, tag, props) {
@@ -10366,12 +10366,12 @@
           function shouldSetTextContent(type, props) {
             return type === "textarea" || type === "noscript" || typeof props.children === "string" || typeof props.children === "number" || typeof props.dangerouslySetInnerHTML === "object" && props.dangerouslySetInnerHTML !== null && props.dangerouslySetInnerHTML.__html != null;
           }
-          function createTextInstance(text, rootContainerInstance, hostContext, internalInstanceHandle) {
+          function createTextInstance(text2, rootContainerInstance, hostContext, internalInstanceHandle) {
             {
               var hostContextDev = hostContext;
-              validateDOMNesting(null, text, hostContextDev.ancestorInfo);
+              validateDOMNesting(null, text2, hostContextDev.ancestorInfo);
             }
-            var textNode = createTextNode(text, rootContainerInstance);
+            var textNode = createTextNode(text2, rootContainerInstance);
             precacheFiberNode(internalInstanceHandle, textNode);
             return textNode;
           }
@@ -10509,8 +10509,8 @@
             var display = styleProp !== void 0 && styleProp !== null && styleProp.hasOwnProperty("display") ? styleProp.display : null;
             instance.style.display = dangerousStyleValue("display", display);
           }
-          function unhideTextInstance(textInstance, text) {
-            textInstance.nodeValue = text;
+          function unhideTextInstance(textInstance, text2) {
+            textInstance.nodeValue = text2;
           }
           function clearContainer(container) {
             if (container.nodeType === ELEMENT_NODE) {
@@ -10527,8 +10527,8 @@
             }
             return instance;
           }
-          function canHydrateTextInstance(instance, text) {
-            if (text === "" || instance.nodeType !== TEXT_NODE) {
+          function canHydrateTextInstance(instance, text2) {
+            if (text2 === "" || instance.nodeType !== TEXT_NODE) {
               return null;
             }
             return instance;
@@ -10607,10 +10607,10 @@
             var isConcurrentMode = (internalInstanceHandle.mode & ConcurrentMode) !== NoMode;
             return diffHydratedProperties(instance, type, props, parentNamespace, rootContainerInstance, isConcurrentMode, shouldWarnDev);
           }
-          function hydrateTextInstance(textInstance, text, internalInstanceHandle, shouldWarnDev) {
+          function hydrateTextInstance(textInstance, text2, internalInstanceHandle, shouldWarnDev) {
             precacheFiberNode(internalInstanceHandle, textInstance);
             var isConcurrentMode = (internalInstanceHandle.mode & ConcurrentMode) !== NoMode;
-            return diffHydratedText(textInstance, text);
+            return diffHydratedText(textInstance, text2);
           }
           function hydrateSuspenseInstance(suspenseInstance, internalInstanceHandle) {
             precacheFiberNode(internalInstanceHandle, suspenseInstance);
@@ -10664,14 +10664,14 @@
           function shouldDeleteUnhydratedTailInstances(parentType) {
             return parentType !== "head" && parentType !== "body";
           }
-          function didNotMatchHydratedContainerTextInstance(parentContainer, textInstance, text, isConcurrentMode) {
+          function didNotMatchHydratedContainerTextInstance(parentContainer, textInstance, text2, isConcurrentMode) {
             var shouldWarnDev = true;
-            checkForUnmatchedText(textInstance.nodeValue, text, isConcurrentMode, shouldWarnDev);
+            checkForUnmatchedText(textInstance.nodeValue, text2, isConcurrentMode, shouldWarnDev);
           }
-          function didNotMatchHydratedTextInstance(parentType, parentProps, parentInstance, textInstance, text, isConcurrentMode) {
+          function didNotMatchHydratedTextInstance(parentType, parentProps, parentInstance, textInstance, text2, isConcurrentMode) {
             if (parentProps[SUPPRESS_HYDRATION_WARNING$1] !== true) {
               var shouldWarnDev = true;
-              checkForUnmatchedText(textInstance.nodeValue, text, isConcurrentMode, shouldWarnDev);
+              checkForUnmatchedText(textInstance.nodeValue, text2, isConcurrentMode, shouldWarnDev);
             }
           }
           function didNotHydrateInstanceWithinContainer(parentContainer, instance) {
@@ -10714,9 +10714,9 @@
               warnForInsertedHydratedElement(parentContainer, type);
             }
           }
-          function didNotFindHydratableTextInstanceWithinContainer(parentContainer, text) {
+          function didNotFindHydratableTextInstanceWithinContainer(parentContainer, text2) {
             {
-              warnForInsertedHydratedText(parentContainer, text);
+              warnForInsertedHydratedText(parentContainer, text2);
             }
           }
           function didNotFindHydratableInstanceWithinSuspenseInstance(parentInstance, type, props) {
@@ -10725,10 +10725,10 @@
               if (parentNode !== null) warnForInsertedHydratedElement(parentNode, type);
             }
           }
-          function didNotFindHydratableTextInstanceWithinSuspenseInstance(parentInstance, text) {
+          function didNotFindHydratableTextInstanceWithinSuspenseInstance(parentInstance, text2) {
             {
               var parentNode = parentInstance.parentNode;
-              if (parentNode !== null) warnForInsertedHydratedText(parentNode, text);
+              if (parentNode !== null) warnForInsertedHydratedText(parentNode, text2);
             }
           }
           function didNotFindHydratableInstance(parentType, parentProps, parentInstance, type, props, isConcurrentMode) {
@@ -10738,10 +10738,10 @@
               }
             }
           }
-          function didNotFindHydratableTextInstance(parentType, parentProps, parentInstance, text, isConcurrentMode) {
+          function didNotFindHydratableTextInstance(parentType, parentProps, parentInstance, text2, isConcurrentMode) {
             {
               if (isConcurrentMode || parentProps[SUPPRESS_HYDRATION_WARNING$1] !== true) {
-                warnForInsertedHydratedText(parentInstance, text);
+                warnForInsertedHydratedText(parentInstance, text2);
               }
             }
           }
@@ -11349,8 +11349,8 @@
                       didNotFindHydratableInstanceWithinContainer(parentContainer, type);
                       break;
                     case HostText:
-                      var text = fiber.pendingProps;
-                      didNotFindHydratableTextInstanceWithinContainer(parentContainer, text);
+                      var text2 = fiber.pendingProps;
+                      didNotFindHydratableTextInstanceWithinContainer(parentContainer, text2);
                       break;
                   }
                   break;
@@ -11431,8 +11431,8 @@
                 return false;
               }
               case HostText: {
-                var text = fiber.pendingProps;
-                var textInstance = canHydrateTextInstance(nextInstance, text);
+                var text2 = fiber.pendingProps;
+                var textInstance = canHydrateTextInstance(nextInstance, text2);
                 if (textInstance !== null) {
                   fiber.stateNode = textInstance;
                   hydrationParentFiber = fiber;
@@ -11983,10 +11983,10 @@
               return existingChildren;
             }
             function useFiber(fiber, pendingProps) {
-              var clone3 = createWorkInProgress(fiber, pendingProps);
-              clone3.index = 0;
-              clone3.sibling = null;
-              return clone3;
+              var clone4 = createWorkInProgress(fiber, pendingProps);
+              clone4.index = 0;
+              clone4.sibling = null;
+              return clone4;
             }
             function placeChild(newFiber, lastPlacedIndex, newIndex) {
               newFiber.index = newIndex;
@@ -12064,7 +12064,7 @@
               }
             }
             function updateFragment2(returnFiber, current2, fragment, lanes, key) {
-              if (current2 === null || current2.tag !== Fragment2) {
+              if (current2 === null || current2.tag !== Fragment3) {
                 var created = createFiberFromFragment(fragment, returnFiber.mode, lanes, key);
                 created.return = returnFiber;
                 return created;
@@ -12191,10 +12191,10 @@
               }
               return null;
             }
-            function warnOnInvalidKey(child, knownKeys, returnFiber) {
+            function warnOnInvalidKey(child, knownKeys2, returnFiber) {
               {
                 if (typeof child !== "object" || child === null) {
-                  return knownKeys;
+                  return knownKeys2;
                 }
                 switch (child.$$typeof) {
                   case REACT_ELEMENT_TYPE:
@@ -12204,13 +12204,13 @@
                     if (typeof key !== "string") {
                       break;
                     }
-                    if (knownKeys === null) {
-                      knownKeys = /* @__PURE__ */ new Set();
-                      knownKeys.add(key);
+                    if (knownKeys2 === null) {
+                      knownKeys2 = /* @__PURE__ */ new Set();
+                      knownKeys2.add(key);
                       break;
                     }
-                    if (!knownKeys.has(key)) {
-                      knownKeys.add(key);
+                    if (!knownKeys2.has(key)) {
+                      knownKeys2.add(key);
                       break;
                     }
                     error("Encountered two children with the same key, `%s`. Keys should be unique so that components maintain their identity across updates. Non-unique keys may cause children to be duplicated and/or omitted \u2014 the behavior is unsupported and could change in a future version.", key);
@@ -12218,18 +12218,18 @@
                   case REACT_LAZY_TYPE:
                     var payload = child._payload;
                     var init = child._init;
-                    warnOnInvalidKey(init(payload), knownKeys, returnFiber);
+                    warnOnInvalidKey(init(payload), knownKeys2, returnFiber);
                     break;
                 }
               }
-              return knownKeys;
+              return knownKeys2;
             }
             function reconcileChildrenArray(returnFiber, currentFirstChild, newChildren, lanes) {
               {
-                var knownKeys = null;
+                var knownKeys2 = null;
                 for (var i = 0; i < newChildren.length; i++) {
                   var child = newChildren[i];
-                  knownKeys = warnOnInvalidKey(child, knownKeys, returnFiber);
+                  knownKeys2 = warnOnInvalidKey(child, knownKeys2, returnFiber);
                 }
               }
               var resultingFirstChild = null;
@@ -12344,11 +12344,11 @@
                 }
                 var _newChildren = iteratorFn.call(newChildrenIterable);
                 if (_newChildren) {
-                  var knownKeys = null;
+                  var knownKeys2 = null;
                   var _step = _newChildren.next();
                   for (; !_step.done; _step = _newChildren.next()) {
                     var child = _step.value;
-                    knownKeys = warnOnInvalidKey(child, knownKeys, returnFiber);
+                    knownKeys2 = warnOnInvalidKey(child, knownKeys2, returnFiber);
                   }
                 }
               }
@@ -12467,7 +12467,7 @@
                 if (child.key === key) {
                   var elementType = element.type;
                   if (elementType === REACT_FRAGMENT_TYPE) {
-                    if (child.tag === Fragment2) {
+                    if (child.tag === Fragment3) {
                       deleteRemainingChildren(returnFiber, child.sibling);
                       var existing = useFiber(child, element.props.children);
                       existing.return = returnFiber;
@@ -12932,14 +12932,14 @@
             var queue = workInProgress2.updateQueue;
             var currentQueue = current2.updateQueue;
             if (queue === currentQueue) {
-              var clone3 = {
+              var clone4 = {
                 baseState: currentQueue.baseState,
                 firstBaseUpdate: currentQueue.firstBaseUpdate,
                 lastBaseUpdate: currentQueue.lastBaseUpdate,
                 shared: currentQueue.shared,
                 effects: currentQueue.effects
               };
-              workInProgress2.updateQueue = clone3;
+              workInProgress2.updateQueue = clone4;
             }
           }
           function createUpdate(eventTime, lane) {
@@ -13005,7 +13005,7 @@
                 if (firstBaseUpdate !== null) {
                   var update = firstBaseUpdate;
                   do {
-                    var clone3 = {
+                    var clone4 = {
                       eventTime: update.eventTime,
                       lane: update.lane,
                       tag: update.tag,
@@ -13014,10 +13014,10 @@
                       next: null
                     };
                     if (newLast === null) {
-                      newFirst = newLast = clone3;
+                      newFirst = newLast = clone4;
                     } else {
-                      newLast.next = clone3;
-                      newLast = clone3;
+                      newLast.next = clone4;
+                      newLast = clone4;
                     }
                     update = update.next;
                   } while (update !== null);
@@ -13156,7 +13156,7 @@
                 var updateLane = update.lane;
                 var updateEventTime = update.eventTime;
                 if (!isSubsetOfLanes(renderLanes2, updateLane)) {
-                  var clone3 = {
+                  var clone4 = {
                     eventTime: updateEventTime,
                     lane: updateLane,
                     tag: update.tag,
@@ -13165,10 +13165,10 @@
                     next: null
                   };
                   if (newLastBaseUpdate === null) {
-                    newFirstBaseUpdate = newLastBaseUpdate = clone3;
+                    newFirstBaseUpdate = newLastBaseUpdate = clone4;
                     newBaseState = newState;
                   } else {
-                    newLastBaseUpdate = newLastBaseUpdate.next = clone3;
+                    newLastBaseUpdate = newLastBaseUpdate.next = clone4;
                   }
                   newLanes = mergeLanes(newLanes, updateLane);
                 } else {
@@ -13418,11 +13418,11 @@
           }
           function registerMutableSourceForHydration(root2, mutableSource) {
             var getVersion = mutableSource._getVersion;
-            var version = getVersion(mutableSource._source);
+            var version2 = getVersion(mutableSource._source);
             if (root2.mutableSourceEagerHydrationData == null) {
-              root2.mutableSourceEagerHydrationData = [mutableSource, version];
+              root2.mutableSourceEagerHydrationData = [mutableSource, version2];
             } else {
-              root2.mutableSourceEagerHydrationData.push(mutableSource, version);
+              root2.mutableSourceEagerHydrationData.push(mutableSource, version2);
             }
           }
           var ReactCurrentDispatcher$1 = ReactSharedInternals.ReactCurrentDispatcher, ReactCurrentBatchConfig$2 = ReactSharedInternals.ReactCurrentBatchConfig;
@@ -13756,7 +13756,7 @@
               do {
                 var updateLane = update.lane;
                 if (!isSubsetOfLanes(renderLanes, updateLane)) {
-                  var clone3 = {
+                  var clone4 = {
                     lane: updateLane,
                     action: update.action,
                     hasEagerState: update.hasEagerState,
@@ -13764,10 +13764,10 @@
                     next: null
                   };
                   if (newBaseQueueLast === null) {
-                    newBaseQueueFirst = newBaseQueueLast = clone3;
+                    newBaseQueueFirst = newBaseQueueLast = clone4;
                     newBaseState = newState;
                   } else {
-                    newBaseQueueLast = newBaseQueueLast.next = clone3;
+                    newBaseQueueLast = newBaseQueueLast.next = clone4;
                   }
                   currentlyRenderingFiber$1.lanes = mergeLanes(currentlyRenderingFiber$1.lanes, updateLane);
                   markSkippedUpdateLanes(updateLane);
@@ -17943,7 +17943,7 @@
                 var _resolvedProps2 = workInProgress2.elementType === type ? _unresolvedProps2 : resolveDefaultProps(type, _unresolvedProps2);
                 return updateForwardRef(current2, workInProgress2, type, _resolvedProps2, renderLanes2);
               }
-              case Fragment2:
+              case Fragment3:
                 return updateFragment(current2, workInProgress2, renderLanes2);
               case Mode:
                 return updateMode(current2, workInProgress2, renderLanes2);
@@ -18215,7 +18215,7 @@
               case SimpleMemoComponent:
               case FunctionComponent:
               case ForwardRef:
-              case Fragment2:
+              case Fragment3:
               case Mode:
               case Profiler:
               case ContextConsumer:
@@ -22476,7 +22476,7 @@
             return fiber;
           }
           function createFiberFromFragment(elements, mode, lanes, key) {
-            var fiber = createFiber(Fragment2, elements, key, mode);
+            var fiber = createFiber(Fragment3, elements, key, mode);
             fiber.lanes = lanes;
             return fiber;
           }
@@ -23641,7 +23641,7 @@
       if (true) {
         (function() {
           "use strict";
-          var React5 = require_react();
+          var React7 = require_react();
           var REACT_ELEMENT_TYPE = /* @__PURE__ */ Symbol.for("react.element");
           var REACT_PORTAL_TYPE = /* @__PURE__ */ Symbol.for("react.portal");
           var REACT_FRAGMENT_TYPE = /* @__PURE__ */ Symbol.for("react.fragment");
@@ -23667,7 +23667,7 @@
             }
             return null;
           }
-          var ReactSharedInternals = React5.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+          var ReactSharedInternals = React7.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
           function error(format) {
             {
               {
@@ -24295,9 +24295,9 @@
           {
             propTypesMisspellWarningShown = false;
           }
-          function isValidElement(object) {
+          function isValidElement(object3) {
             {
-              return typeof object === "object" && object !== null && object.$$typeof === REACT_ELEMENT_TYPE;
+              return typeof object3 === "object" && object3 !== null && object3.$$typeof === REACT_ELEMENT_TYPE;
             }
           }
           function getDeclarationErrorAddendum() {
@@ -24517,11 +24517,11 @@
               return jsxWithValidation(type, props, key, false);
             }
           }
-          var jsx5 = jsxWithValidationDynamic;
-          var jsxs4 = jsxWithValidationStatic;
+          var jsx7 = jsxWithValidationDynamic;
+          var jsxs6 = jsxWithValidationStatic;
           exports.Fragment = REACT_FRAGMENT_TYPE;
-          exports.jsx = jsx5;
-          exports.jsxs = jsxs4;
+          exports.jsx = jsx7;
+          exports.jsxs = jsxs6;
         })();
       }
     }
@@ -24540,11 +24540,11 @@
   });
 
   // pilot/browser.jsx
-  var import_react4 = __toESM(require_react(), 1);
+  var import_react6 = __toESM(require_react(), 1);
   var import_client2 = __toESM(require_client(), 1);
 
   // pilot/app.jsx
-  var import_react3 = __toESM(require_react(), 1);
+  var import_react5 = __toESM(require_react(), 1);
 
   // pilot/game-ui.jsx
   var import_react = __toESM(require_react(), 1);
@@ -27795,7 +27795,7 @@
       credence: read2?.credence ?? null,
       choiceId: move?.choiceId ?? null
     };
-    const text = CHAIN_TEXT[beat.chain](verdict);
+    const text2 = CHAIN_TEXT[beat.chain](verdict);
     let reaction = null;
     if (verdict.signal) {
       reaction = fireEvent(
@@ -27808,7 +27808,7 @@
     }
     session.pending.chain = {
       chain: beat.chain,
-      ...text,
+      ...text2,
       verdictData: verdict,
       recall: chainRecall(spec, read2 ? read2.credence : null, move),
       said: read2 ? LADDER[0][read2.credence] : null,
@@ -28421,11 +28421,11 @@
   function stableStringify(value) {
     return JSON.stringify(normalized(value));
   }
-  function hashText(text) {
+  function hashText(text2) {
     let hash = 0xcbf29ce484222325n;
     const prime = 0x100000001b3n;
-    for (let i = 0; i < text.length; i++) {
-      const code = text.charCodeAt(i);
+    for (let i = 0; i < text2.length; i++) {
+      const code = text2.charCodeAt(i);
       hash ^= BigInt(code & 255);
       hash = BigInt.asUintN(64, hash * prime);
       hash ^= BigInt(code >>> 8);
@@ -28922,6 +28922,70 @@
   var reactionScoreText = (value) => `${value > 0 ? "+" : value < 0 ? "\u2212" : ""}${Math.abs(value).toFixed(3)}`;
   var probabilityPointText = (value) => `${Math.abs(value * 100).toFixed(1)} pp`;
 
+  // pilot/participant-instrument.mjs
+  var PARTICIPANT_INSTRUMENT_VERSION = "PM-BACKGROUND-2";
+  var PARTICIPANT_CONSENT_VERSION = "PM-CONSENT-7";
+  var PARTICIPANT_PRESENTATION_VERSION = "0.38.3-background.4";
+  var REMOVED_SURVEY_IDS = Object.freeze(["q2", "q3", "q4", "q9", "q12", "q15", "q20", "q21"]);
+  var PARTICIPANT_SURVEY_IDS = Object.freeze(SURVEY.filter((q) => !REMOVED_SURVEY_IDS.includes(q.id)).map((q) => q.id));
+  var version = (value) => typeof value === "object" && value !== null ? value.instrumentVersion : value;
+  var insist = (condition, message) => {
+    if (!condition) throw new Error(message);
+  };
+  var object = (value) => !!value && typeof value === "object" && !Array.isArray(value);
+  var date = (value) => typeof value === "string" && Number.isFinite(Date.parse(value));
+  function exactKeys(value, keys, message) {
+    insist(object(value) && Object.keys(value).length === keys.length && keys.every((key) => Object.hasOwn(value, key)), message);
+  }
+  function hasBackgroundInstrument(value) {
+    return ["PM-BACKGROUND-1", PARTICIPANT_INSTRUMENT_VERSION].includes(version(value));
+  }
+  function hasParticipantContact(value) {
+    return version(value) === PARTICIPANT_INSTRUMENT_VERSION;
+  }
+  function consentVersionForInstrument(value) {
+    const instrument = version(value);
+    if (instrument === void 0 || instrument === null) return "PM-CONSENT-5";
+    if (instrument === "PM-BACKGROUND-1") return "PM-CONSENT-6";
+    insist(instrument === PARTICIPANT_INSTRUMENT_VERSION, "Unknown background instrument");
+    return PARTICIPANT_CONSENT_VERSION;
+  }
+  function surveyQuestionsForInstrument(questions, value) {
+    return hasParticipantContact(value) ? questions.filter((q) => !REMOVED_SURVEY_IDS.includes(q.id)) : questions;
+  }
+  function validateQuestionnaireForInstrument(answers, value) {
+    if (!hasParticipantContact(value)) return true;
+    insist(object(answers), "Invalid questionnaire answers");
+    const questions = surveyQuestionsForInstrument(SURVEY, value);
+    for (const [key, answer2] of Object.entries(answers)) {
+      const question = questions.find((q) => q.id === key);
+      insist(question, `Questionnaire field is not collected by this instrument: ${key}`);
+      if (question.type === "choice") insist(question.options.includes(answer2), `Invalid questionnaire answer: ${key}`);
+      else insist(Number.isInteger(answer2) && answer2 >= 1 && answer2 <= 7 || question.type === "scale7_na" && answer2 === "NA", `Invalid questionnaire answer: ${key}`);
+    }
+    return true;
+  }
+  function validateContactSubmission(input) {
+    exactKeys(input, ["nameRaw", "emailRaw"], "Enter your name and contact email.");
+    insist(typeof input.nameRaw === "string" && input.nameRaw.length <= 200 && input.nameRaw.trim().length > 0 && !/[\r\n]/.test(input.nameRaw), "Enter your name.");
+    insist(typeof input.emailRaw === "string" && input.emailRaw.length <= 254 && !/[\r\n]/.test(input.emailRaw) && /^[^\s@]+@[^\s@]+\.[^\s@]+$/u.test(input.emailRaw.trim()), "Enter a valid email address.");
+    return { nameRaw: input.nameRaw, emailRaw: input.emailRaw };
+  }
+  function validateContactMetadata(contact) {
+    exactKeys(contact, ["status", "collectedAt"], "Invalid contact metadata; direct identifiers are stored separately");
+    insist(["not_collected", "completed"].includes(contact.status), "Invalid contact status");
+    insist(contact.status === "not_collected" ? contact.collectedAt === null : date(contact.collectedAt), "Invalid contact collection time");
+    return true;
+  }
+  function assertNoContactIdentifiers(value) {
+    if (!value || typeof value !== "object") return true;
+    for (const [key, child] of Object.entries(value)) {
+      insist(!["nameRaw", "emailRaw", "contactName", "contactEmail", "contactDetails"].includes(key), "Direct contact identifiers cannot be saved in research data");
+      if (child && typeof child === "object") assertNoContactIdentifiers(child);
+    }
+    return true;
+  }
+
   // pilot/game-ui.jsx
   var import_jsx_runtime = __toESM(require_jsx_runtime(), 1);
   var ABILITIES2 = ABILITIES.map((a) => ({ ...a, name: gameText(a.name), does: gameText(a.does) }));
@@ -29189,10 +29253,10 @@
       ] }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { ...column(18), borderTop: `1px solid ${T.rule}`, paddingTop: 24 }, children: [
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-quote", children: beat.readPrompt }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: column(9), children: interaction.ladder.map((text, credence) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-ladder-row", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: column(9), children: interaction.ladder.map((text2, credence) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-ladder-row", children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", { "aria-hidden": "true", className: "pm-kicker pm-tnum pm-ladder-num", children: credence + 1 }),
-          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { flex: 1, minWidth: 0 }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Option, { onClick: () => onSubmit(credence), children: text }) })
-        ] }, text)) }),
+          /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: { flex: 1, minWidth: 0 }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Option, { onClick: () => onSubmit(credence), children: text2 }) })
+        ] }, text2)) }),
         /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { style: {
           display: "flex",
           justifyContent: "space-between",
@@ -29539,10 +29603,10 @@
       }
     );
   }
-  function Survey({ answers, onChange }) {
+  function Survey({ answers, onChange, instrumentVersion }) {
     const set = (id, value) => onChange({ ...answers, [id]: value });
     let section = null;
-    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: SURVEY.map((item) => {
+    return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { children: surveyQuestionsForInstrument(SURVEY, instrumentVersion).map((item) => {
       const openedSection = item.section && item.section !== section;
       if (item.section) section = item.section;
       return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [
@@ -29552,7 +29616,7 @@
           paddingTop: 14,
           marginTop: 8
         }, children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { children: gameText(item.section) }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-q", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { className: "pm-q", "data-survey-question": item.id, children: [
           /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-wrap-safe", style: { fontSize: 14.5, fontWeight: 600, lineHeight: 1.5 }, children: gameText(item.q) }),
           ["scale7", "scale7_na", "scale7_text"].includes(item.type) && /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(import_jsx_runtime.Fragment, { children: [
             /* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", { className: "pm-scale", role: "group", "aria-label": gameText(item.q), children: [1, 2, 3, 4, 5, 6, 7].map((value) => /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
@@ -29986,8 +30050,8 @@
     if (study.stage === "SURVEY") return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Shell, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { style: { maxWidth: 820, margin: "0 auto", ...column(24) }, children: [
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Kicker, { children: "Your experience" }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", { className: "pm-h2", children: "A few questions" }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-prose", children: "Every question is optional. Please avoid names or identifying details." }),
-      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Survey, { answers: survey, onChange: updateSurvey }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { className: "pm-prose", children: hasParticipantContact(study.instrumentVersion) ? "Every question is optional. Choose the answers that best describe your experience." : "Every question is optional. Please avoid names or identifying details." }),
+      /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Survey, { answers: survey, onChange: updateSurvey, instrumentVersion: study.instrumentVersion }),
       /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Cta, { onClick: completeSurvey, children: "Continue to the study explanation" })
     ] }) });
     if (screen === "create") {
@@ -30577,7 +30641,7 @@
   }
   var FORMS = freezeDeep(Object.fromEntries(Object.entries(TEXTS).map(([form, rows]) => [
     form,
-    rows.map(([title, text], index) => {
+    rows.map(([title, text2], index) => {
       const [slot, dimension, level, features] = FEATURE_ROWS[index];
       return {
         id: `${form}_${slot}`,
@@ -30588,7 +30652,7 @@
         pairId: `${form}_${dimension}`,
         level,
         title,
-        text,
+        text: text2,
         features: { ...features },
         prompt: JUDGMENT_PROMPT,
         votePrompt: VOTE_PROMPT,
@@ -30641,9 +30705,9 @@
     ["a city marina berth", "a place to keep a boat at the city marina"],
     ["city surveying equipment", "city equipment used to measure land"]
   ];
-  function plainText(text) {
-    for (const [oldText, newText] of replacements) text = text.split(oldText).join(newText);
-    return text;
+  function plainText(text2) {
+    for (const [oldText, newText] of replacements) text2 = text2.split(oldText).join(newText);
+    return text2;
   }
   var titleOverrides = { B_E_LOW: "The land-measuring equipment", B_P_OWN: "The west marina boat space", B_P_OPP: "The east marina boat space" };
   var CASE_PRESENTATION = Object.freeze(Object.fromEntries(Object.values(FORMS).flat().map((item) => [item.id, Object.freeze({
@@ -30751,12 +30815,549 @@
     ] });
   }
 
+  // pilot/background-ui.jsx
+  var import_react3 = __toESM(require_react(), 1);
+
+  // pilot/background.mjs
+  var BACKGROUND_INSTRUMENT_VERSION = "PM-BACKGROUND-1";
+  var BACKGROUND_PRESENTATION_VERSION = "0.38.3-background.3";
+  var BACKGROUND_FIELDS = Object.freeze({
+    demographics: Object.freeze(["age", "gender", "education", "residenceCountry"]),
+    political: Object.freeze(["politicalContext", "politicalOrientation", "politicalInterest"])
+  });
+  var GENDER_OPTIONS = Object.freeze([
+    { value: "male", label: "Male" },
+    { value: "female", label: "Female" },
+    { value: "non_binary", label: "Non-binary" },
+    { value: "another_gender", label: "Another gender (please specify)" },
+    { value: "prefer_not_to_say", label: "Prefer not to say" }
+  ]);
+  var EDUCATION_OPTIONS = Object.freeze([
+    { value: "less_than_high_school", label: "Less than high school" },
+    { value: "high_school", label: "High school or equivalent" },
+    { value: "some_college", label: "Some college or university, no degree" },
+    { value: "associate", label: "Associate degree or equivalent" },
+    { value: "bachelor", label: "Bachelor's degree" },
+    { value: "master", label: "Master's degree" },
+    { value: "doctoral_professional", label: "Doctoral or professional degree" },
+    { value: "other", label: "Other" },
+    { value: "prefer_not_to_say", label: "Prefer not to say" }
+  ]);
+  var insist2 = (ok, message) => {
+    if (!ok) throw new Error(message);
+  };
+  var object2 = (x) => !!x && typeof x === "object" && !Array.isArray(x);
+  var date2 = (x) => typeof x === "string" && Number.isFinite(Date.parse(x));
+  var missing = () => ({ status: "not_collected", value: null });
+  var fields = Object.values(BACKGROUND_FIELDS).flat();
+  function knownKeys(value, allowed, message) {
+    insist2(object2(value), message);
+    for (const key of Object.keys(value)) insist2(allowed.includes(key), `${message}: unknown field ${key}`);
+  }
+  function text(value, name, { required = true, max = 200 } = {}) {
+    insist2(typeof value === "string" && value.length <= max && (!required || value.trim().length > 0), `Invalid ${name}`);
+  }
+  function emptyBackgroundAnswers(block) {
+    insist2(BACKGROUND_FIELDS[block], "Unknown background block");
+    return Object.fromEntries(BACKGROUND_FIELDS[block].map((field) => [field, missing()]));
+  }
+  function createBackground(instrumentVersion = BACKGROUND_INSTRUMENT_VERSION) {
+    insist2(hasBackgroundInstrument(instrumentVersion), "Unknown background instrument");
+    return { instrumentVersion, ...Object.fromEntries(Object.keys(BACKGROUND_FIELDS).map((block) => [
+      block,
+      { status: "not_collected", answers: emptyBackgroundAnswers(block), startedAt: null, completedAt: null }
+    ])) };
+  }
+  function validateBackgroundAnswer(field, answer2, { complete = false } = {}) {
+    insist2(fields.includes(field), "Unknown background field");
+    knownKeys(answer2, ["status", "value", "raw", "detailRaw", "touched"], `Invalid ${field} answer`);
+    const allowed = ["answered", "not_collected"];
+    if (["gender", "education", "residenceCountry"].includes(field)) allowed.push("prefer_not_to_say");
+    insist2(allowed.includes(answer2.status), `Invalid ${field} response status`);
+    if (answer2.status !== "answered") {
+      insist2(answer2.value === null, `${field} nonanswer must have a null value`);
+      insist2(!Object.keys(answer2).some((k) => ["raw", "detailRaw", "touched"].includes(k)), `${field} nonanswer cannot contain a response`);
+      if (complete) insist2(answer2.status !== "not_collected", `Please answer ${field}`);
+      return true;
+    }
+    if (field === "age") {
+      insist2(Number.isSafeInteger(answer2.value), "Enter your age as a whole number.");
+      insist2(answer2.value >= 18, "You must be 18 or older to take part.");
+      if (Object.hasOwn(answer2, "raw")) {
+        text(answer2.raw, "age raw input", { max: 30 });
+        insist2(/^\d+$/.test(answer2.raw.trim()) && Number(answer2.raw.trim()) === answer2.value, "Age raw input does not match the age.");
+      }
+    } else if (field === "gender" || field === "education") {
+      const choices = field === "gender" ? GENDER_OPTIONS : EDUCATION_OPTIONS;
+      insist2(choices.some((x) => x.value === answer2.value && x.value !== "prefer_not_to_say"), `Invalid ${field} choice`);
+      if (field === "gender" && answer2.value === "another_gender") text(answer2.detailRaw, "gender description");
+      else if (field === "education" && answer2.value === "other" && Object.hasOwn(answer2, "detailRaw")) text(answer2.detailRaw, "education description", { required: false });
+      else insist2(!Object.hasOwn(answer2, "detailRaw"), `Unexpected ${field} description`);
+    } else if (field === "residenceCountry" || field === "politicalContext") {
+      text(answer2.value, field);
+      text(answer2.raw, `${field} raw input`);
+      insist2(answer2.value === answer2.raw, `${field} must preserve the original country input`);
+    } else if (field === "politicalOrientation") {
+      insist2(Number.isInteger(answer2.value) && answer2.value >= 0 && answer2.value <= 10, "Choose a number from 0 to 10.");
+      insist2(answer2.touched === true, "Move or select the slider to answer.");
+    } else if (field === "politicalInterest") {
+      insist2(Number.isInteger(answer2.value) && answer2.value >= 1 && answer2.value <= 7, "Choose a number from 1 to 7.");
+    }
+    if (!["age", "residenceCountry", "politicalContext"].includes(field)) insist2(!Object.hasOwn(answer2, "raw"), `Unexpected ${field} raw input`);
+    if (!["gender", "education"].includes(field)) insist2(!Object.hasOwn(answer2, "detailRaw"), `Unexpected ${field} description`);
+    if (field !== "politicalOrientation") insist2(!Object.hasOwn(answer2, "touched"), `Unexpected ${field} interaction marker`);
+    return true;
+  }
+  function validateBackgroundAnswers(block, answers, { complete = false, partial = false } = {}) {
+    insist2(BACKGROUND_FIELDS[block], "Unknown background block");
+    knownKeys(answers, BACKGROUND_FIELDS[block], `Invalid ${block} answers`);
+    for (const field of BACKGROUND_FIELDS[block]) {
+      if (partial && !Object.hasOwn(answers, field)) continue;
+      validateBackgroundAnswer(field, answers[field], { complete });
+    }
+    return true;
+  }
+  function validateBackground(background) {
+    knownKeys(background, ["instrumentVersion", ...Object.keys(BACKGROUND_FIELDS)], "Invalid background data");
+    insist2(hasBackgroundInstrument(background.instrumentVersion), "Unknown background instrument");
+    for (const block of Object.keys(BACKGROUND_FIELDS)) {
+      const value = background[block];
+      knownKeys(value, ["status", "answers", "startedAt", "completedAt"], `Invalid ${block} block`);
+      insist2(["not_collected", "in_progress", "completed"].includes(value.status), `Invalid ${block} block status`);
+      validateBackgroundAnswers(block, value.answers, { complete: value.status === "completed" });
+      if (value.status === "not_collected") {
+        insist2(value.startedAt === null && value.completedAt === null, `Unexpected ${block} timestamps`);
+        insist2(Object.values(value.answers).every((a) => a.status === "not_collected"), `Premature ${block} answers`);
+      } else {
+        insist2(date2(value.startedAt), `Invalid ${block} start timestamp`);
+        if (value.status === "completed") insist2(date2(value.completedAt) && Date.parse(value.completedAt) >= Date.parse(value.startedAt), `Invalid ${block} completion timestamp`);
+        else insist2(value.completedAt === null, `Premature ${block} completion timestamp`);
+      }
+    }
+    return true;
+  }
+
+  // pilot/background-draft.mjs
+  var BACKGROUND_DRAFT_KEY = "pm-pilot-background-draft";
+  var clone = (value) => JSON.parse(JSON.stringify(value));
+  var backgroundScope = (state, block) => ({ sessionId: state.sessionId, instrumentVersion: state.instrumentVersion, block });
+  var answer = (status, value = null, extra = {}) => ({ status, value, ...extra });
+  function initialBackgroundDraft(answers = {}) {
+    const choice = (field) => answers[field]?.status === "answered" ? answers[field].value : answers[field]?.status === "prefer_not_to_say" ? "prefer_not_to_say" : "";
+    return {
+      ageRaw: answers.age?.status === "answered" ? answers.age.raw ?? String(answers.age.value) : "",
+      gender: choice("gender"),
+      genderDetail: answers.gender?.detailRaw ?? "",
+      education: choice("education"),
+      residenceCountryRaw: answers.residenceCountry?.raw ?? "",
+      residenceStatus: answers.residenceCountry?.status ?? "not_collected",
+      politicalContextRaw: answers.politicalContext?.raw ?? "",
+      contextStatus: answers.politicalContext?.status ?? "not_collected",
+      orientationValue: answers.politicalOrientation?.status === "answered" ? answers.politicalOrientation.value : null,
+      orientationStatus: answers.politicalOrientation?.status ?? "not_collected",
+      interestValue: answers.politicalInterest?.status === "answered" ? answers.politicalInterest.value : null,
+      interestStatus: answers.politicalInterest?.status ?? "not_collected"
+    };
+  }
+  function backgroundFormErrors(block, draft) {
+    const errors = {};
+    if (block === "demographics") {
+      const age = draft.ageRaw.trim();
+      if (!age) errors.age = "Please enter your age.";
+      else if (!/^\d+$/.test(age) || !Number.isSafeInteger(Number(age))) errors.age = "Enter your age as a whole number.";
+      else if (Number(age) < 18) errors.age = "You must be 18 or older to take part.";
+      if (!draft.gender) errors.gender = "Choose an option, or select Prefer not to say.";
+      else if (draft.gender === "another_gender" && !draft.genderDetail.trim()) errors.gender = "Please describe your gender, or choose another option.";
+      if (!draft.education) errors.education = "Choose an option, or select Prefer not to say.";
+      if (draft.residenceStatus !== "prefer_not_to_say" && !draft.residenceCountryRaw.trim()) errors.residenceCountry = "Enter your country, or select Prefer not to say.";
+    } else {
+      if (draft.contextStatus !== "answered" || !draft.politicalContextRaw.trim()) errors.politicalContext = "Please enter a country.";
+      if (draft.orientationStatus !== "answered" || !Number.isInteger(draft.orientationValue) || draft.orientationValue < 0 || draft.orientationValue > 10) errors.politicalOrientation = "Move or tap the slider to answer.";
+      if (draft.interestStatus !== "answered" || !Number.isInteger(draft.interestValue) || draft.interestValue < 1 || draft.interestValue > 7) errors.politicalInterest = "Choose a number from 1 to 7.";
+    }
+    return errors;
+  }
+  function backgroundAnswersFromDraft(block, draft) {
+    const result = emptyBackgroundAnswers(block);
+    if (block === "demographics") {
+      result.age = answer("answered", Number(draft.ageRaw.trim()), { raw: draft.ageRaw });
+      result.gender = draft.gender === "prefer_not_to_say" ? answer("prefer_not_to_say") : answer("answered", draft.gender, draft.gender === "another_gender" ? { detailRaw: draft.genderDetail } : {});
+      result.education = draft.education === "prefer_not_to_say" ? answer("prefer_not_to_say") : answer("answered", draft.education);
+      result.residenceCountry = draft.residenceStatus === "prefer_not_to_say" ? answer("prefer_not_to_say") : answer("answered", draft.residenceCountryRaw, { raw: draft.residenceCountryRaw });
+    } else {
+      result.politicalContext = draft.contextStatus === "answered" ? answer("answered", draft.politicalContextRaw, { raw: draft.politicalContextRaw }) : answer("not_collected");
+      result.politicalOrientation = draft.orientationStatus === "answered" ? answer("answered", draft.orientationValue, { touched: true }) : answer(draft.orientationStatus);
+      result.politicalInterest = draft.interestStatus === "answered" ? answer("answered", draft.interestValue) : answer(draft.interestStatus);
+    }
+    for (const [field, value] of Object.entries(result)) {
+      try {
+        validateBackgroundAnswer(field, value);
+      } catch {
+        result[field] = answer("not_collected");
+      }
+    }
+    return result;
+  }
+  function readBackgroundDraft(storage, scope, answers) {
+    const fallback = initialBackgroundDraft(answers);
+    if (!hasBackgroundInstrument(scope.instrumentVersion)) return fallback;
+    try {
+      const stored = JSON.parse(storage?.getItem(BACKGROUND_DRAFT_KEY) || "null");
+      if (!stored || Object.entries(scope).some(([key, value]) => stored[key] !== value)) return fallback;
+      if (!stored.draft || Object.keys(stored.draft).length !== Object.keys(fallback).length) return fallback;
+      for (const [key, value] of Object.entries(fallback)) {
+        const raw = stored.draft[key];
+        if (key.endsWith("Value")) {
+          if (raw !== null && !Number.isInteger(raw)) return fallback;
+        } else if (typeof raw !== "string" || raw.length > (key === "ageRaw" ? 30 : 200)) return fallback;
+      }
+      const draft = stored.draft;
+      if (!["", ...GENDER_OPTIONS.map((x) => x.value)].includes(draft.gender) || !["", ...EDUCATION_OPTIONS.map((x) => x.value)].includes(draft.education)) return fallback;
+      if (!["not_collected", "answered", "prefer_not_to_say"].includes(draft.residenceStatus)) return fallback;
+      if (!["not_collected", "answered"].includes(draft.contextStatus) || !["not_collected", "answered"].includes(draft.orientationStatus)) return fallback;
+      if (!["not_collected", "answered"].includes(draft.interestStatus)) return fallback;
+      if (draft.orientationStatus === "answered" && (draft.orientationValue === null || draft.orientationValue < 0 || draft.orientationValue > 10)) return fallback;
+      if (draft.interestStatus === "answered" && (draft.interestValue === null || draft.interestValue < 1 || draft.interestValue > 7)) return fallback;
+      return clone(draft);
+    } catch {
+      return fallback;
+    }
+  }
+  function writeBackgroundDraft(storage, scope, draft) {
+    storage?.setItem(BACKGROUND_DRAFT_KEY, JSON.stringify({ ...scope, draft }));
+  }
+  function clearBackgroundDraft(storage) {
+    storage?.removeItem(BACKGROUND_DRAFT_KEY);
+  }
+
+  // pilot/background-ui.jsx
+  var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
+  var BACKGROUND_CSS = `
+ .ps-background .ps-card{margin:18px 0;padding:22px 24px}
+ .ps-background .ps-form-fields{border:0;margin:0;padding:0;min-width:0}
+ .ps-background .ps-field{margin:0;min-width:0}.ps-background legend,.ps-background .ps-question{font-size:18px;line-height:1.4;margin:0 0 14px;display:block;font-weight:500}
+ .ps-background .ps-hint{font-size:14px;color:var(--pm-ink-3);margin:0 0 16px}
+ .ps-background .ps-text,.ps-background select{box-sizing:border-box;display:block;width:100%;min-height:48px;border:1px solid var(--pm-rule);border-radius:3px;background:var(--pm-sheet);color:var(--pm-ink);font:inherit;padding:10px 12px;line-height:1.5}
+ .ps-background .ps-age{max-width:145px}.ps-background .ps-choices{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 14px}
+ .ps-background .ps-choice{display:flex;align-items:center;gap:10px;min-height:44px;cursor:pointer;font-size:15px;line-height:1.4;margin:0;padding:6px 0}
+ .ps-background .ps-choice input{flex:none;width:18px;height:18px;margin:0;accent-color:var(--pm-ink)}.ps-background .ps-alternatives{margin-top:12px}
+ .ps-background .ps-detail{margin:12px 0 0}.ps-background input:focus-visible,.ps-background select:focus-visible{outline:2px solid var(--pm-ink);outline-offset:3px}
+ .ps-background .ps-error{font-size:14px;margin:12px 0 0}.ps-background .ps-interest{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;margin:16px 0 10px}
+ .ps-background .ps-interest label{display:flex;flex-direction:column;align-items:center;gap:7px;border:1px solid var(--pm-rule);padding:10px 3px;cursor:pointer;min-width:0}.ps-background .ps-interest label:has(input:checked){background:var(--pm-ink);color:var(--pm-sheet)}
+ .ps-background .ps-interest input{width:17px;height:17px;margin:0;accent-color:var(--pm-ink)}.ps-background .ps-interest-anchors{display:flex;justify-content:space-between;gap:20px;font-size:13px;line-height:1.4}.ps-background .ps-interest-anchors span:last-child{text-align:right}
+ @media(max-width:600px){.ps-background .ps-card{padding:18px}.ps-background .ps-choices{grid-template-columns:1fr}.ps-background .ps-question,.ps-background legend{font-size:17px}.ps-background .ps-interest{gap:5px}}
+`;
+  var sliderKeys = ["ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown", "Home", "End", "PageUp", "PageDown"];
+  function ErrorText({ field, errors }) {
+    return errors[field] ? /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-error", id: `${field}-error`, role: "alert", children: errors[field] }) : null;
+  }
+  function Choice({ name, value, checked, onChange, children, disabled }) {
+    return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("label", { className: "ps-choice", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("input", { type: "radio", name, value, checked, onChange, disabled }),
+      children
+    ] });
+  }
+  function BackgroundForm({ state, block, onSaveDraft, onComplete, busy = false, blocked = false, storage = globalThis.localStorage, onDraftError = () => {
+  } }) {
+    const scope = backgroundScope(state, block);
+    const [draft, setDraft] = (0, import_react3.useState)(() => readBackgroundDraft(storage, scope, state.background[block].answers));
+    const draftRef = (0, import_react3.useRef)(draft), dirty = (0, import_react3.useRef)(false), timer = (0, import_react3.useRef)(null), formRef = (0, import_react3.useRef)(null), submittingRef = (0, import_react3.useRef)(false);
+    const [visited, setVisited] = (0, import_react3.useState)({}), [attempted, setAttempted] = (0, import_react3.useState)(false), [submitting, setSubmitting] = (0, import_react3.useState)(false);
+    const allErrors = backgroundFormErrors(block, draft);
+    const errors = Object.fromEntries(Object.entries(allErrors).filter(([key]) => attempted || visited[key]));
+    const saveRef = (0, import_react3.useRef)(onSaveDraft);
+    saveRef.current = onSaveDraft;
+    (0, import_react3.useEffect)(() => {
+      const restored = backgroundAnswersFromDraft(block, draftRef.current);
+      if (JSON.stringify(restored) !== JSON.stringify(state.background[block].answers)) timer.current = setTimeout(() => saveRef.current?.(restored), 500);
+      return () => clearTimeout(timer.current);
+    }, []);
+    const update = (patch) => {
+      const next = { ...draftRef.current, ...patch };
+      draftRef.current = next;
+      setDraft(next);
+      dirty.current = true;
+      try {
+        writeBackgroundDraft(storage, scope, next);
+      } catch (error) {
+        onDraftError(error);
+      }
+      clearTimeout(timer.current);
+      timer.current = setTimeout(() => {
+        if (dirty.current) {
+          dirty.current = false;
+          saveRef.current?.(backgroundAnswersFromDraft(block, draftRef.current));
+        }
+      }, 500);
+    };
+    const visit = (field) => setVisited((previous) => ({ ...previous, [field]: true }));
+    const fieldProps = (field) => ({ "aria-invalid": !!errors[field], "aria-describedby": errors[field] ? `${field}-error` : void 0, onBlur: () => visit(field) });
+    const finish = (event2) => {
+      event2.preventDefault();
+      setAttempted(true);
+      if (blocked || submittingRef.current) return;
+      const currentErrors = backgroundFormErrors(block, draftRef.current);
+      if (Object.keys(currentErrors).length) {
+        const field = Object.keys(currentErrors)[0];
+        const selector = field === "gender" && draftRef.current.gender === "another_gender" ? "#background-gender-detail" : `[data-field="${field}"] input, [data-field="${field}"] select`;
+        const input = formRef.current?.querySelector(selector);
+        input?.focus();
+        input?.scrollIntoView?.({ block: "center" });
+        return;
+      }
+      clearTimeout(timer.current);
+      dirty.current = false;
+      submittingRef.current = true;
+      setSubmitting(true);
+      Promise.resolve().then(() => onComplete(backgroundAnswersFromDraft(block, draftRef.current))).catch(onDraftError).finally(() => {
+        submittingRef.current = false;
+        setSubmitting(false);
+      });
+    };
+    const enterToContinue = (event2) => {
+      if (event2.key === "Enter" && !event2.isComposing && event2.target.tagName === "INPUT" && event2.target.type === "text") finish(event2);
+    };
+    const orientation = draft.orientationStatus === "answered";
+    const interact = (event2) => {
+      const value = Number(event2.currentTarget.value);
+      if (!Number.isInteger(value) || value < 0 || value > 10) return;
+      update({ orientationValue: value, orientationStatus: "answered" });
+      visit("politicalOrientation");
+    };
+    return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap ps-background", "data-background-block": block, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("style", { children: BACKGROUND_CSS }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-progress", children: block === "demographics" ? "Before we begin" : "A little about your political background" }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: block === "demographics" ? "A little about you" : "Your political background" }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: block === "demographics" ? "These four short questions help us describe who took part. Your age is needed to check that you are eligible. You can choose not to answer the other questions." : "These three short questions help us understand who took part. Please answer each question to continue. There are no right or wrong answers." }),
+      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("form", { ref: formRef, onSubmit: finish, onKeyDown: enterToContinue, noValidate: true, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("fieldset", { className: "ps-form-fields", disabled: submitting || blocked, children: [
+        block === "demographics" ? /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(import_jsx_runtime3.Fragment, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("section", { className: "ps-card", "data-field": "age", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("label", { className: "ps-question", htmlFor: "background-age", children: "How old are you?" }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("input", { className: "ps-text ps-age", id: "background-age", name: "age", type: "text", inputMode: "numeric", pattern: "[0-9]*", autoComplete: "off", maxLength: 30, value: draft.ageRaw, onChange: (event2) => update({ ageRaw: event2.target.value }), ...fieldProps("age") }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(ErrorText, { field: "age", errors })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("section", { className: "ps-card", "data-field": "gender", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("fieldset", { className: "ps-field", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("legend", { children: "What is your gender?" }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-choices", children: GENDER_OPTIONS.map((option) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Choice, { name: "gender", value: option.value, checked: draft.gender === option.value, onChange: () => {
+              update({ gender: option.value, genderDetail: option.value === "another_gender" ? draft.genderDetail : "" });
+              visit("gender");
+            }, children: option.label }, option.value)) }),
+            draft.gender === "another_gender" && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-detail", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("label", { className: "ps-meta", htmlFor: "background-gender-detail", children: "Please specify" }),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("input", { className: "ps-text", id: "background-gender-detail", type: "text", autoComplete: "off", maxLength: 200, value: draft.genderDetail, onChange: (event2) => update({ genderDetail: event2.target.value }), ...fieldProps("gender") })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(ErrorText, { field: "gender", errors })
+          ] }) }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("section", { className: "ps-card", "data-field": "education", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("label", { className: "ps-question", htmlFor: "background-education", children: "What is the highest level of education you have completed?" }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("select", { id: "background-education", name: "education", value: draft.education, onChange: (event2) => {
+              update({ education: event2.target.value });
+              visit("education");
+            }, ...fieldProps("education"), children: [
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("option", { value: "", disabled: true, children: "Choose an option" }),
+              EDUCATION_OPTIONS.map((option) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("option", { value: option.value, children: option.label }, option.value))
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(ErrorText, { field: "education", errors })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("section", { className: "ps-card", "data-field": "residenceCountry", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("label", { className: "ps-question", htmlFor: "background-residence", children: "Which country do you currently live in?" }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("input", { className: "ps-text", id: "background-residence", name: "residenceCountry", type: "text", autoComplete: "off", placeholder: "Type your country", maxLength: 200, value: draft.residenceCountryRaw, onChange: (event2) => update({ residenceCountryRaw: event2.target.value, residenceStatus: "answered" }), ...fieldProps("residenceCountry") }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("label", { className: "ps-choice ps-alternatives", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("input", { type: "checkbox", name: "residencePreferNot", checked: draft.residenceStatus === "prefer_not_to_say", onChange: (event2) => {
+                update({ residenceStatus: event2.target.checked ? "prefer_not_to_say" : "not_collected", residenceCountryRaw: "" });
+                visit("residenceCountry");
+              } }),
+              "Prefer not to say"
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(ErrorText, { field: "residenceCountry", errors })
+          ] })
+        ] }) : /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)(import_jsx_runtime3.Fragment, { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("section", { className: "ps-card", "data-field": "politicalContext", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("label", { className: "ps-question", htmlFor: "background-context", children: "Which country's politics are you most familiar with?" }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-hint", children: "Think of the country whose politics you know best." }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("input", { className: "ps-text", id: "background-context", name: "politicalContext", type: "text", autoComplete: "off", placeholder: "Type a country", maxLength: 200, value: draft.politicalContextRaw, onChange: (event2) => update({ politicalContextRaw: event2.target.value, contextStatus: "answered" }), ...fieldProps("politicalContext") }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(ErrorText, { field: "politicalContext", errors })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("section", { className: "ps-card", "data-field": "politicalOrientation", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-slider", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("label", { className: "ps-question", id: "background-orientation-label", htmlFor: "background-orientation", children: "Thinking about that country's politics, where would you place your political views?" }),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("output", { className: "ps-slider-value", htmlFor: "background-orientation", "aria-live": "polite", children: orientation ? `${draft.orientationValue} out of 10` : "Choose your answer" }),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("input", { id: "background-orientation", name: "politicalOrientation", type: "range", min: "0", max: "10", step: "1", value: orientation ? draft.orientationValue : 5, "aria-labelledby": "background-orientation-label", "aria-describedby": "background-orientation-anchors background-orientation-help", "aria-valuetext": orientation ? `${draft.orientationValue} out of 10` : "5 out of 10, no number selected yet", onChange: interact, onPointerDown: (event2) => {
+                if (event2.button === 0 || event2.button === void 0) interact(event2);
+              }, onTouchStart: interact, onKeyDown: (event2) => {
+                if (sliderKeys.includes(event2.key)) interact(event2);
+              } }),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { id: "background-orientation-anchors", className: "ps-slider-anchors", children: [
+                /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("span", { children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("b", { children: "0" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("br", {}),
+                  "Left"
+                ] }),
+                /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("span", { children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("b", { children: "5" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("br", {}),
+                  "Center"
+                ] }),
+                /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("span", { children: [
+                  /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("b", { children: "10" }),
+                  /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("br", {}),
+                  "Right"
+                ] })
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-hint", id: "background-orientation-help", children: "Move or tap the slider to choose a number. To choose 5, tap the middle. You can also use the arrow keys." })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(ErrorText, { field: "politicalOrientation", errors })
+          ] }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("section", { className: "ps-card", "data-field": "politicalInterest", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("fieldset", { className: "ps-field", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("legend", { children: "How interested are you in politics?" }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-interest", children: [1, 2, 3, 4, 5, 6, 7].map((value) => /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("label", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("input", { type: "radio", name: "politicalInterest", value, checked: draft.interestStatus === "answered" && draft.interestValue === value, onChange: () => {
+                update({ interestStatus: "answered", interestValue: value });
+                visit("politicalInterest");
+              } }),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("span", { children: value })
+            ] }, value)) }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-interest-anchors", children: [
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("span", { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("b", { children: "1" }),
+                " = Not at all interested"
+              ] }),
+              /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("span", { children: [
+                /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("b", { children: "7" }),
+                " = Extremely interested"
+              ] })
+            ] }),
+            /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(ErrorText, { field: "politicalInterest", errors })
+          ] }) })
+        ] }),
+        attempted && Object.keys(allErrors).length > 0 && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-error", id: "background-submit-errors", role: "alert", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "Please check these answers before continuing:" }),
+          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("ul", { children: Object.entries(allErrors).map(([field, message]) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("li", { children: message }, field)) })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-actions", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("button", { type: "button", "data-background-continue": true, className: "pm-cta", disabled: blocked || submitting, "aria-describedby": attempted && Object.keys(allErrors).length ? "background-submit-errors" : void 0, onClick: finish, children: submitting ? "Saving and continuing\u2026" : "Save and continue" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-meta", children: "Your answers are saved as you go. Choose \u201CSave and continue\u201D when you are ready." })
+      ] }) })
+    ] });
+  }
+
+  // pilot/contact-ui.jsx
+  var import_react4 = __toESM(require_react(), 1);
+
+  // pilot/contact-draft.mjs
+  var CONTACT_DRAFT_KEY = "pm-pilot-contact-draft";
+  var contactDraftScope = (state) => ({ sessionId: state.sessionId, instrumentVersion: state.instrumentVersion });
+  function readContactDraft(storage, scope) {
+    const empty = { nameRaw: "", emailRaw: "" };
+    if (!hasParticipantContact(scope.instrumentVersion)) return empty;
+    try {
+      const saved = JSON.parse(storage?.getItem(CONTACT_DRAFT_KEY) || "null");
+      if (!saved || saved.sessionId !== scope.sessionId || saved.instrumentVersion !== scope.instrumentVersion) return empty;
+      if (typeof saved.nameRaw !== "string" || saved.nameRaw.length > 200 || typeof saved.emailRaw !== "string" || saved.emailRaw.length > 254) return empty;
+      if (/\r|\n/.test(saved.nameRaw + saved.emailRaw)) return empty;
+      return { nameRaw: saved.nameRaw, emailRaw: saved.emailRaw };
+    } catch {
+      return empty;
+    }
+  }
+  function writeContactDraft(storage, scope, draft) {
+    storage?.setItem(CONTACT_DRAFT_KEY, JSON.stringify({ ...scope, nameRaw: draft.nameRaw, emailRaw: draft.emailRaw }));
+  }
+  function clearContactDraft(storage) {
+    storage?.removeItem(CONTACT_DRAFT_KEY);
+  }
+  function contactFormErrors(draft) {
+    const errors = {};
+    if (!draft.nameRaw.trim()) errors.nameRaw = "Please enter your name.";
+    else if (draft.nameRaw.length > 200 || /[\r\n]/.test(draft.nameRaw)) errors.nameRaw = "Enter your name on one line, using up to 200 characters.";
+    if (!draft.emailRaw.trim()) errors.emailRaw = "Please enter your email address.";
+    else if (draft.emailRaw.length > 254 || /[\r\n]/.test(draft.emailRaw) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(draft.emailRaw.trim())) errors.emailRaw = "Enter an email address, such as name@example.com.";
+    return errors;
+  }
+
+  // pilot/contact-ui.jsx
+  var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
+  function ContactForm({ state, onComplete, busy = false, blocked = false, storage = globalThis.localStorage, onDraftError = () => {
+  } }) {
+    const scope = contactDraftScope(state);
+    const [draft, setDraft] = (0, import_react4.useState)(() => readContactDraft(storage, scope));
+    const draftRef = (0, import_react4.useRef)(draft), submittingRef = (0, import_react4.useRef)(false), formRef = (0, import_react4.useRef)(null);
+    const [attempted, setAttempted] = (0, import_react4.useState)(false), [visited, setVisited] = (0, import_react4.useState)({}), [submitting, setSubmitting] = (0, import_react4.useState)(false);
+    const allErrors = contactFormErrors(draft);
+    const errors = Object.fromEntries(Object.entries(allErrors).filter(([field]) => attempted || visited[field]));
+    const safeFailure = (cause) => onDraftError(Object.assign(new Error("Your contact details could not be saved. Please try again."), { code: typeof cause?.code === "string" && /^[A-Z0-9_]{1,80}$/.test(cause.code) ? cause.code : "CONTACT_SAVE_FAILED" }));
+    const update = (patch) => {
+      const next = { ...draftRef.current, ...patch };
+      draftRef.current = next;
+      setDraft(next);
+      try {
+        writeContactDraft(storage, scope, next);
+      } catch {
+        safeFailure({ code: "CONTACT_DRAFT_SAVE_FAILED" });
+      }
+    };
+    const finish = (event2) => {
+      event2.preventDefault();
+      setAttempted(true);
+      if (busy || blocked || submittingRef.current) return;
+      const currentErrors = contactFormErrors(draftRef.current);
+      if (Object.keys(currentErrors).length) {
+        const input = formRef.current?.querySelector(`[name="${Object.keys(currentErrors)[0]}"]`);
+        input?.focus();
+        input?.scrollIntoView?.({ block: "center" });
+        return;
+      }
+      let answer2;
+      try {
+        answer2 = validateContactSubmission(draftRef.current);
+      } catch (cause) {
+        safeFailure(cause);
+        return;
+      }
+      submittingRef.current = true;
+      setSubmitting(true);
+      Promise.resolve().then(() => onComplete(answer2)).catch(safeFailure).finally(() => {
+        submittingRef.current = false;
+        setSubmitting(false);
+      });
+    };
+    const enterToContinue = (event2) => {
+      if (event2.key === "Enter" && !event2.isComposing && event2.target.tagName === "INPUT") finish(event2);
+    };
+    const props = (field) => ({ "aria-invalid": !!errors[field], "aria-describedby": errors[field] ? `contact-${field}-error` : void 0, onBlur: () => setVisited((previous) => ({ ...previous, [field]: true })) });
+    return /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("main", { className: "ps-wrap ps-background", "data-contact-form": "true", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("style", { children: BACKGROUND_CSS }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "ps-progress", children: "Before we begin" }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("h1", { children: "Your contact details" }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { children: "We ask for your name and email so the researcher can contact you about your participation. These details are stored separately from your study answers." }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { children: "Both fields are required to continue. You can choose \u201CStop participation\u201D if you do not wish to provide them." }),
+      /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("form", { ref: formRef, onSubmit: finish, onKeyDown: enterToContinue, noValidate: true, children: /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("fieldset", { className: "ps-form-fields", disabled: busy || blocked || submitting, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("section", { className: "ps-card", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("label", { className: "ps-question", htmlFor: "contact-name", children: "What is your name?" }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("input", { id: "contact-name", className: "ps-text", name: "nameRaw", type: "text", autoComplete: "name", maxLength: 200, value: draft.nameRaw, onChange: (event2) => update({ nameRaw: event2.target.value }), ...props("nameRaw") }),
+          errors.nameRaw && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "ps-error", id: "contact-nameRaw-error", role: "alert", children: errors.nameRaw })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("section", { className: "ps-card", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("label", { className: "ps-question", htmlFor: "contact-email", children: "What is your email address?" }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("input", { id: "contact-email", className: "ps-text", name: "emailRaw", type: "email", inputMode: "email", autoComplete: "email", autoCapitalize: "none", spellCheck: false, maxLength: 254, value: draft.emailRaw, onChange: (event2) => update({ emailRaw: event2.target.value }), ...props("emailRaw") }),
+          errors.emailRaw && /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "ps-error", id: "contact-emailRaw-error", role: "alert", children: errors.emailRaw })
+        ] }),
+        attempted && Object.keys(allErrors).length > 0 && /* @__PURE__ */ (0, import_jsx_runtime4.jsxs)("div", { className: "ps-error", id: "contact-submit-errors", role: "alert", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { children: "Please check these details before continuing:" }),
+          /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("ul", { children: Object.entries(allErrors).map(([field, message]) => /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("li", { children: message }, field)) })
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("div", { className: "ps-actions", children: /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("button", { type: "button", "data-contact-continue": true, className: "pm-cta", disabled: busy || blocked || submitting, "aria-describedby": attempted && Object.keys(allErrors).length ? "contact-submit-errors" : void 0, onClick: finish, children: submitting ? "Saving and continuing\u2026" : "Save and continue" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime4.jsx)("p", { className: "ps-meta", children: "Unfinished typing is kept on this browser. Choose \u201CSave and continue\u201D to send these details to the study." })
+      ] }) })
+    ] });
+  }
+
   // pilot/error-copy.mjs
   var ERROR_COPY = Object.freeze({
     NETWORK_ERROR: "This step has not been confirmed as saved. Keep this page open and choose Retry / resume when your connection returns.",
     REQUEST_TIMEOUT: "The save is taking too long to confirm. Keep this page open and choose Retry / resume when your connection returns.",
     INVALID_RESPONSE: "The page could not read the reply from the study. Please retry without starting a new session.",
     REVISION_CONFLICT: "This session was saved in another tab. Close the other study tabs, then choose Retry / resume. You may need to enter the current step again.",
+    STALE_PARTICIPANT_APP_RELOAD_REQUIRED: "This page has been updated. Reload it before joining the study. Your existing session, if any, is still saved.",
     ENROLLMENT_CLOSED: "The study is not accepting new participants right now. Please contact the researcher.",
     LOCAL_STORAGE_CORRUPT: "This browser could not read your saved session. Please contact the researcher before starting again.",
     MISSING_CREDENTIALS: "This browser cannot find the details needed to open your session. Please email the researcher with your session code.",
@@ -30923,7 +31524,7 @@
   var clamp3 = (x, lo, hi) => Math.max(lo, Math.min(hi, x));
   var mean = (xs) => xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null;
   var shrink = (n, k) => n / (n + k);
-  var clone = (value) => JSON.parse(JSON.stringify(value));
+  var clone2 = (value) => JSON.parse(JSON.stringify(value));
   function freezeDeep2(value) {
     if (value && typeof value === "object") {
       Object.values(value).forEach(freezeDeep2);
@@ -30940,11 +31541,11 @@
       decided.set(d.eventId, d);
     }
     const dimensions = {};
-    const dimension = (key, fields) => {
+    const dimension = (key, fields2) => {
       dimensions[key] = {
-        ...fields,
-        coefficient: fields.available ? ACTOR_RULE.pointsPerUnitIndex / 100 * fields.index / DESIGN_RANGE[key] : 0,
-        predictedPairContrastPoints: fields.available ? ACTOR_RULE.pointsPerUnitIndex * fields.index : 0
+        ...fields2,
+        coefficient: fields2.available ? ACTOR_RULE.pointsPerUnitIndex / 100 * fields2.index / DESIGN_RANGE[key] : 0,
+        predictedPairContrastPoints: fields2.available ? ACTOR_RULE.pointsPerUnitIndex * fields2.index : 0
       };
     };
     for (const [key, pair] of Object.entries(ACTOR_RULE.pairs)) {
@@ -31136,7 +31737,7 @@
         M3: { predictedScore: m3, personalized: M3.dimensions[item.dimension].available === true }
       };
     });
-    return freezeDeep2(clone({
+    return freezeDeep2(clone2({
       schema: "political-mirror-prediction-commit/1",
       participantId,
       sessionId,
@@ -31278,7 +31879,8 @@
     buildHash: "f5eaaff91d5ccc9b03bb7fbc240cd4b5ed592e0a37448a15b537024a2c8f5e04",
     sourceManifestHash: "439b4dc3ac6cd7b884976530230e99f088b7d82e9998e299b04c8db49be88934",
     studyVersion: "0.38.3-pilot.1",
-    presentationVersion: "0.38.3-readability.2"
+    presentationVersion: "0.38.3-background.4",
+    instrumentVersion: "PM-BACKGROUND-2"
   };
 
   // pilot/client.mjs
@@ -31377,7 +31979,8 @@
         const messages = {
           REVISION_CONFLICT: "This session was saved in another tab. Close other study tabs, then choose Retry / resume. The unconfirmed step may need to be entered again.",
           REQUEST_ID_REUSED_WITH_DIFFERENT_BODY: "A saved request no longer matches the original. Please contact the researcher before continuing.",
-          ENROLLMENT_CLOSED: "The study is not accepting new participants right now. Please contact the researcher."
+          ENROLLMENT_CLOSED: "The study is not accepting new participants right now. Please contact the researcher.",
+          STALE_PARTICIPANT_APP_RELOAD_REQUIRED: "This page has been updated. Reload it before joining the study. Your existing session, if any, is still saved."
         };
         throw new StudyTransportError(result.message || result.error?.message || messages[code] || "The server could not confirm this step. Please retry or contact the researcher.", { status: response.status, code });
       }
@@ -31406,6 +32009,8 @@
       this.clearErrors();
       this.clearEnrollment();
       clearJudgmentDraft(this.storage);
+      clearBackgroundDraft(this.storage);
+      clearContactDraft(this.storage);
       let result;
       try {
         result = await this.request(`/api/session/${encodeURIComponent(credentials.sessionId)}/withdraw`, {
@@ -31438,15 +32043,21 @@
     }
     /** Enrollment = consent submission + allocation. The enrollment key AND the consent it carries are
      *  persisted before the request so that a lost acknowledgement is retried with the identical body. */
-    async enroll({ consent, collectionMode } = {}) {
+    async enroll({ consent, collectionMode, instrumentVersion, presentationVersion } = {}) {
       if (this.hasSession()) throw new StudyTransportError("A session is already saved in this browser. Continue that session.", { code: "SESSION_EXISTS" });
       let enrollment = read(this.storage, ENROLLMENT_KEY);
       if (!enrollment || consent && JSON.stringify(enrollment.consent) !== JSON.stringify(consent)) {
         if (!consent) throw new StudyTransportError("Consent is required to enroll.", { code: "CONSENT_REQUIRED" });
-        enrollment = { requestId: `enroll_${randomId()}`, consent, ...collectionMode ? { collectionMode } : {} };
+        enrollment = { requestId: `enroll_${randomId()}`, consent, ...collectionMode ? { collectionMode } : {}, ...instrumentVersion ? { instrumentVersion, presentationVersion } : {} };
         this.storage.setItem(ENROLLMENT_KEY, JSON.stringify(enrollment));
       }
-      const result = await this.request("/api/session", { method: "POST", body: enrollment, authenticated: false });
+      let result;
+      try {
+        result = await this.request("/api/session", { method: "POST", body: enrollment, authenticated: false });
+      } catch (error) {
+        if (error.code === "STALE_PARTICIPANT_APP_RELOAD_REQUIRED") this.clearEnrollment();
+        throw error;
+      }
       if (!result.sessionId || !result.token || !result.assignment || !result.consent) throw new StudyTransportError("The study did not send all the details needed to start your session. Please retry.", { code: "INVALID_ENROLLMENT" });
       this.storage.setItem(CREDENTIALS_KEY, JSON.stringify({ sessionId: result.sessionId, token: result.token }));
       this.revision = result.revision ?? 0;
@@ -31459,7 +32070,10 @@
       const result = await this.request(`/api/session/${encodeURIComponent(credentials.sessionId)}/${pending.kind}`, { method: "POST", body: pending.body });
       if (!Number.isInteger(result.revision)) throw new StudyTransportError("The study did not confirm that this save was completed. Please retry.", { code: "INVALID_ACKNOWLEDGEMENT" });
       this.revision = result.revision;
-      if (this.pending()?.body?.requestId === pending.body.requestId) this.storage.removeItem(PENDING_KEY);
+      if (this.pending()?.body?.requestId === pending.body.requestId) {
+        this.storage.removeItem(PENDING_KEY);
+        if (pending.kind === "contact") clearContactDraft(this.storage);
+      }
       return result;
     }
     async recover() {
@@ -31471,7 +32085,10 @@
           await this.sendPending(pending);
         } catch (cause) {
           if (cause.status !== 409 || cause.code !== "REVISION_CONFLICT") throw cause;
-          if (this.pending()?.body?.requestId === pending.body.requestId) this.storage.removeItem(PENDING_KEY);
+          if (this.pending()?.body?.requestId === pending.body.requestId) {
+            this.storage.removeItem(PENDING_KEY);
+            if (pending.kind === "contact") clearContactDraft(this.storage);
+          }
           recoveryNotice = "Another tab already saved this session. Your latest step was not accepted. We restored the last confirmed save. Please enter the current step again if needed.";
           this.recordError({ message: recoveryNotice, code: "REVISION_CONFLICT_RECOVERED", at: (/* @__PURE__ */ new Date()).toISOString() });
         }
@@ -31500,6 +32117,9 @@
         this.activeRequest = null;
       }
     }
+    saveContact(contact) {
+      return this.write("contact", contact);
+    }
     checkpoint(checkpoint) {
       return this.write("checkpoint", checkpoint);
     }
@@ -31525,18 +32145,22 @@
 
   // pilot/study.mjs
   var STUDY_VERSION = "0.38.3-pilot.1";
-  var CONSENT_VERSION = "PM-CONSENT-5";
   var STAGES = ["CONSENT", "T0", "GAME", "PREDICTION", "T1", "MIRROR", "T2", "SURVEY", "DEBRIEF", "COMPLETE"];
-  var clone2 = (x) => structuredClone(x);
+  var BACKGROUND_STAGES = ["CONSENT", "DEMOGRAPHICS", "T0", "GAME", "PREDICTION", "T1", "MIRROR", "T2", "POLITICAL_BACKGROUND", "SURVEY", "DEBRIEF", "COMPLETE"];
+  var PARTICIPANT_STAGES = ["CONSENT", "CONTACT", "DEMOGRAPHICS", "T0", "GAME", "PREDICTION", "T1", "MIRROR", "T2", "POLITICAL_BACKGROUND", "SURVEY", "DEBRIEF", "COMPLETE"];
+  function stagesFor(s) {
+    return hasParticipantContact(s) ? PARTICIPANT_STAGES : hasBackgroundInstrument(s) ? BACKGROUND_STAGES : STAGES;
+  }
+  var clone3 = (x) => structuredClone(x);
   var iso = (value) => new Date(value ?? Date.now()).toISOString();
-  var insist = (condition, message) => {
+  var insist3 = (condition, message) => {
     if (!condition) throw new Error(message);
   };
   var eq = (a, b) => JSON.stringify(a) === JSON.stringify(b);
   var validDate = (x) => typeof x === "string" && Number.isFinite(Date.parse(x));
   var validScore = (x) => Number.isInteger(x) && x >= 0 && x <= 100;
   function requireStage(s, stage) {
-    insist(s.stage === stage, `Expected ${stage}, received ${s.stage}`);
+    insist3(s.stage === stage, `Expected ${stage}, received ${s.stage}`);
   }
   function event(s, type, now, detail = {}) {
     const at = iso(now);
@@ -31546,21 +32170,26 @@
   }
   function mutable(s) {
     validateStudyState(s);
-    return clone2(s);
+    return clone3(s);
   }
   function formFor(s, block) {
     return s.assignment.formOrder[["T0", "T1", "T2"].indexOf(block)];
   }
-  function createStudy({ sessionId, assignment, coreGame, now }) {
+  function createStudy({ sessionId, assignment, coreGame, now, instrumentVersion, consentVersion, presentationVersion }) {
+    insist3(instrumentVersion === void 0 || hasBackgroundInstrument(instrumentVersion), "Unknown background instrument");
+    const hasBackground = hasBackgroundInstrument(instrumentVersion);
+    insist3(hasBackground || presentationVersion === void 0, "Legacy session cannot acquire a new presentation instrument");
+    const expectedConsent = consentVersionForInstrument(instrumentVersion);
+    insist3(consentVersion === void 0 || consentVersion === expectedConsent, "Consent version mismatch");
     const at = iso(now);
     const s = {
       schema: "political-mirror-study/1",
       studyVersion: STUDY_VERSION,
-      coreGame: clone2(coreGame),
-      consentVersion: CONSENT_VERSION,
+      coreGame: clone3(coreGame),
+      consentVersion: expectedConsent,
       participantId: sessionId,
       sessionId,
-      assignment: clone2(assignment),
+      assignment: clone3(assignment),
       stage: "CONSENT",
       consent: null,
       responses: { T0: [], T1: [], T2: [] },
@@ -31574,6 +32203,8 @@
       status: "in_progress",
       technicalErrors: []
     };
+    if (hasBackground) Object.assign(s, { instrumentVersion, presentationVersion: presentationVersion ?? (hasParticipantContact(instrumentVersion) ? PARTICIPANT_PRESENTATION_VERSION : BACKGROUND_PRESENTATION_VERSION), background: createBackground(instrumentVersion) });
+    if (hasParticipantContact(s)) s.contact = { status: "not_collected", collectedAt: null };
     event(s, "SESSION_CREATED", at);
     validateStudyState(s);
     return s;
@@ -31587,33 +32218,57 @@
     } catch (e) {
       throw new Error(`Active consent is required (${e.message})`);
     }
-    if (at !== void 0) insist(typeof at === "string" && !Number.isNaN(Date.parse(at)), "Invalid server consent time");
-    s.consent = { ...valid, at: at ?? iso(now), version: CONSENT_VERSION };
-    s.stage = "T0";
+    if (at !== void 0) insist3(typeof at === "string" && !Number.isNaN(Date.parse(at)), "Invalid server consent time");
+    s.consent = { ...valid, at: at ?? iso(now), version: s.consentVersion };
+    s.stage = hasParticipantContact(s) ? "CONTACT" : hasBackgroundInstrument(s) ? "DEMOGRAPHICS" : "T0";
     return event(s, "CONSENT_ACCEPTED", now);
+  }
+  function saveBackgroundDraft(state, block, answers, now) {
+    const s = mutable(state);
+    insist3(hasBackgroundInstrument(s), "This session does not collect background responses");
+    insist3(["demographics", "political"].includes(block), "Unknown background block");
+    requireStage(s, block === "demographics" ? "DEMOGRAPHICS" : "POLITICAL_BACKGROUND");
+    insist3(s.background[block].status !== "completed", "Completed background answers cannot be changed");
+    validateBackgroundAnswers(block, answers, { partial: true });
+    const current = s.background[block], at = iso(now);
+    s.background[block] = { ...current, status: "in_progress", answers: { ...current.answers, ...clone3(answers) }, startedAt: current.startedAt ?? at };
+    event(s, "BACKGROUND_DRAFT_SAVED", at, { block });
+    validateStudyState(s);
+    return s;
+  }
+  function finishBackground(state, block, answers, now) {
+    const s = saveBackgroundDraft(state, block, answers, now), at = iso(now);
+    validateBackgroundAnswers(block, s.background[block].answers, { complete: true });
+    s.background[block].status = "completed";
+    s.background[block].completedAt = at;
+    s.timestamps[block === "demographics" ? "demographicsCompletedAt" : "politicalBackgroundCompletedAt"] = at;
+    s.stage = block === "demographics" ? "T0" : "SURVEY";
+    event(s, "BACKGROUND_BLOCK_COMPLETED", at, { block });
+    validateStudyState(s);
+    return s;
   }
   function presentItem(state, now) {
     const s = mutable(state);
-    insist(["T0", "T1", "T2"].includes(s.stage), "Not a measurement stage");
+    insist3(["T0", "T1", "T2"].includes(s.stage), "Not a measurement stage");
     if (s.presentation) return s;
-    if (s.stage === "T1") insist(s.prediction && s.predictionReceipt, "Prediction must be durably committed before T1");
+    if (s.stage === "T1") insist3(s.prediction && s.predictionReceipt, "Prediction must be durably committed before T1");
     const item = getCases(formFor(s, s.stage))[s.responses[s.stage].length];
-    insist(item, "No remaining item");
+    insist3(item, "No remaining item");
     s.presentation = { block: s.stage, caseId: item.id, presentedAt: iso(now) };
     return event(s, "ITEM_PRESENTED", now, { block: s.stage, caseId: item.id });
   }
   function answerItem(state, { score, vote }, now) {
     const s = mutable(state);
-    insist(s.presentation?.block === s.stage, "Item must be saved before response");
-    insist(validScore(score), "Judgment must be an integer from 0 to 100");
-    insist(["RETAIN", "REPLACE"].includes(vote), "Choose retain or replace");
+    insist3(s.presentation?.block === s.stage, "Item must be saved before response");
+    insist3(validScore(score), "Judgment must be an integer from 0 to 100");
+    insist3(["RETAIN", "REPLACE"].includes(vote), "Choose retain or replace");
     const block = s.stage, at = iso(now), p = s.presentation;
-    insist(Date.parse(at) >= Date.parse(p.presentedAt), "Response precedes presentation");
+    insist3(Date.parse(at) >= Date.parse(p.presentedAt), "Response precedes presentation");
     s.responses[block].push({ caseId: p.caseId, score, vote, presentedAt: p.presentedAt, answeredAt: at, rtMs: Date.parse(at) - Date.parse(p.presentedAt) });
     s.presentation = null;
     event(s, "ITEM_ANSWERED", at, { block, caseId: p.caseId });
     if (s.responses[block].length === 8) {
-      s.stage = { T0: "GAME", T1: "MIRROR", T2: "SURVEY" }[block];
+      s.stage = { T0: "GAME", T1: "MIRROR", T2: hasBackgroundInstrument(s) ? "POLITICAL_BACKGROUND" : "SURVEY" }[block];
       s.timestamps[`${block}CompletedAt`] = at;
       event(s, "BLOCK_COMPLETED", at, { block });
     }
@@ -31622,18 +32277,18 @@
   }
   function checkpointGame(state, snapshot, now) {
     const s = mutable(state);
-    insist(["GAME", "MIRROR", "SURVEY"].includes(s.stage), "Game snapshot is not accepted here");
+    insist3(["GAME", "MIRROR", "SURVEY"].includes(s.stage), "Game snapshot is not accepted here");
     validateGameSnapshot(s, snapshot);
-    s.game = clone2(snapshot);
-    if (s.stage === "SURVEY") s.questionnaire = clone2(snapshot.presentation?.survey || s.questionnaire);
+    s.game = clone3(snapshot);
+    if (s.stage === "SURVEY") s.questionnaire = clone3(snapshot.presentation?.survey || s.questionnaire);
     return event(s, "GAME_CHECKPOINT", now, { canonicalHash: snapshot.canonicalHash, actionCount: snapshot.transcript.length });
   }
   function completeGame(state, snapshot, now) {
     const s = mutable(state);
     requireStage(s, "GAME");
     validateGameSnapshot(s, snapshot);
-    insist(snapshot.canonicalState?.phase === "MINI_MIRROR", "Career must reach its canonical end");
-    s.game = clone2(snapshot);
+    insist3(snapshot.canonicalState?.phase === "MINI_MIRROR", "Career must reach its canonical end");
+    s.game = clone3(snapshot);
     s.stage = "PREDICTION";
     s.timestamps.gameCompletedAt = iso(now);
     return event(s, "GAME_COMPLETED_BEFORE_FEEDBACK", now, { canonicalHash: snapshot.canonicalHash });
@@ -31641,9 +32296,9 @@
   function attachPrediction(state, prediction, receipt, now) {
     const s = mutable(state);
     requireStage(s, "PREDICTION");
-    insist(receipt?.predictionSha256 && validDate(receipt.committedAt), "Durable prediction receipt required");
-    s.prediction = clone2(prediction);
-    s.predictionReceipt = clone2(receipt);
+    insist3(receipt?.predictionSha256 && validDate(receipt.committedAt), "Durable prediction receipt required");
+    s.prediction = clone3(prediction);
+    s.predictionReceipt = clone3(receipt);
     s.stage = "T1";
     s.timestamps.predictionCommittedAt = receipt.committedAt;
     event(s, "PREDICTION_COMMITTED", now, { predictionSha256: receipt.predictionSha256 });
@@ -31654,8 +32309,8 @@
     const s = mutable(state);
     requireStage(s, "MIRROR");
     validateGameSnapshot(s, snapshot);
-    insist(s.responses.T1.length === 8, "T1 must precede feedback");
-    s.game = clone2(snapshot);
+    insist3(s.responses.T1.length === 8, "T1 must precede feedback");
+    s.game = clone3(snapshot);
     s.stage = "T2";
     s.timestamps.mirrorCompletedAt = iso(now);
     return event(s, "MIRROR_COMPLETED", now);
@@ -31664,8 +32319,9 @@
     const s = mutable(state);
     requireStage(s, "SURVEY");
     validateGameSnapshot(s, snapshot);
-    s.questionnaire = clone2(answers);
-    s.game = clone2(snapshot);
+    validateQuestionnaireForInstrument(answers, s);
+    s.questionnaire = clone3(answers);
+    s.game = clone3(snapshot);
     return event(s, "QUESTIONNAIRE_SAVED", now);
   }
   function finishSurvey(state, answers, snapshot, now) {
@@ -31683,7 +32339,7 @@
     return event(s, "DEBRIEF_ACKNOWLEDGED", now);
   }
   function recordTechnicalError(state, error, now) {
-    const s = clone2(state);
+    const s = clone3(state);
     s.technicalErrors.push({ at: iso(now), message: String(error?.message || error).slice(0, 1e3), stage: s.stage });
     return event(s, "TECHNICAL_ERROR", now);
   }
@@ -31691,83 +32347,119 @@
     const s = mutable(state);
     const detail = {};
     if (presentationVersion !== void 0) {
-      insist(typeof presentationVersion === "string" && presentationVersion.length > 0 && presentationVersion.length <= 100, "Invalid presentation version");
+      insist3(typeof presentationVersion === "string" && presentationVersion.length > 0 && presentationVersion.length <= 100, "Invalid presentation version");
       detail.presentationVersion = presentationVersion;
     }
     return event(s, "SESSION_RESUMED", now, detail);
   }
   function validateGameSnapshot(s, g) {
-    insist(g?.schema === "political-mirror-study-game/1", "Missing game snapshot");
-    insist(g.sessionId === s.sessionId && g.arm === s.assignment.arm, "Game identity/arm changed");
-    insist(g.spec?.testMode === "natural" && g.spec?.agentCount === 700, "Unexpected game configuration");
-    insist(Array.isArray(g.transcript) && g.canonicalState && typeof g.canonicalHash === "string", "Incomplete canonical snapshot");
-    insist(g.telemetry && typeof g.telemetry === "object", "Game telemetry missing");
+    insist3(g?.schema === "political-mirror-study-game/1", "Missing game snapshot");
+    insist3(g.sessionId === s.sessionId && g.arm === s.assignment.arm, "Game identity/arm changed");
+    insist3(g.spec?.testMode === "natural" && g.spec?.agentCount === 700, "Unexpected game configuration");
+    insist3(Array.isArray(g.transcript) && g.canonicalState && typeof g.canonicalHash === "string", "Incomplete canonical snapshot");
+    insist3(g.telemetry && typeof g.telemetry === "object", "Game telemetry missing");
+    for (const answers of [g.presentation?.survey, g.telemetry?.survey, g.playtest?.survey])
+      if (answers !== void 0 && answers !== null) validateQuestionnaireForInstrument(answers, s);
+    if (hasParticipantContact(s)) assertNoContactIdentifiers(g);
     if (s.game) {
-      insist(g.transcript.length >= s.game.transcript.length, "Canonical actions cannot disappear");
-      insist(eq(g.transcript.slice(0, s.game.transcript.length), s.game.transcript), "Canonical history changed");
-      if (s.stage !== "GAME") insist(eq(g.canonicalState, s.game.canonicalState) && g.canonicalHash === s.game.canonicalHash, "Feedback/survey must not alter canonical state");
+      insist3(g.transcript.length >= s.game.transcript.length, "Canonical actions cannot disappear");
+      insist3(eq(g.transcript.slice(0, s.game.transcript.length), s.game.transcript), "Canonical history changed");
+      if (s.stage !== "GAME") insist3(eq(g.canonicalState, s.game.canonicalState) && g.canonicalHash === s.game.canonicalHash, "Feedback/survey must not alter canonical state");
     }
   }
   function validateStudyState(s, { predictionCommitted } = {}) {
-    insist(s?.schema === "political-mirror-study/1" && s.studyVersion === STUDY_VERSION, "Unknown study schema/version");
-    insist(typeof s.sessionId === "string" && s.participantId === s.sessionId, "Participant/session mismatch");
-    insist(s.coreGame?.version === "0.37.2" && /^[a-f0-9]{64}$/.test(s.coreGame.buildHash) && /^[a-f0-9]{64}$/.test(s.coreGame.sourceManifestHash), "Frozen build identity missing");
-    insist(s.consentVersion === CONSENT_VERSION, "Consent version mismatch");
-    insist(["TRUE", "SHUFFLED"].includes(s.assignment?.arm), "Unknown arm");
-    insist(["ABC", "BCA", "CAB"].includes(s.assignment?.formOrder?.join("")), "Unknown parallel form order");
-    insist([...STAGES, "WITHDRAWN"].includes(s.stage), "Unknown stage");
-    insist(s.status === ({ "COMPLETE": "complete", "WITHDRAWN": "withdrawn" }[s.stage] || "in_progress"), "Status/stage mismatch");
-    insist(validDate(s.timestamps?.createdAt) && validDate(s.timestamps?.updatedAt), "Invalid timestamps");
-    insist(Array.isArray(s.events) && Array.isArray(s.technicalErrors), "Audit arrays missing");
-    s.events.forEach((e, i) => insist(e.seq === i + 1 && validDate(e.at), "Invalid event sequence"));
-    if (!["CONSENT", "WITHDRAWN"].includes(s.stage)) insist(consentRecordIsComplete(s.consent) && s.consent.version === CONSENT_VERSION, "Active consent required");
+    insist3(s?.schema === "political-mirror-study/1" && s.studyVersion === STUDY_VERSION, "Unknown study schema/version");
+    insist3(typeof s.sessionId === "string" && s.participantId === s.sessionId, "Participant/session mismatch");
+    insist3(s.coreGame?.version === "0.37.2" && /^[a-f0-9]{64}$/.test(s.coreGame.buildHash) && /^[a-f0-9]{64}$/.test(s.coreGame.sourceManifestHash), "Frozen build identity missing");
+    const hasBackground = hasBackgroundInstrument(s);
+    insist3(s.instrumentVersion === void 0 || hasBackground, "Unknown background instrument");
+    insist3(s.consentVersion === consentVersionForInstrument(s), "Consent version mismatch");
+    if (hasBackground) {
+      insist3(typeof s.presentationVersion === "string" && s.presentationVersion.length > 0 && s.presentationVersion.length <= 100, "Invalid presentation version");
+      validateBackground(s.background);
+      insist3(s.background.instrumentVersion === s.instrumentVersion, "Background instrument mismatch");
+    } else insist3(s.background === void 0 && s.presentationVersion === void 0, "Legacy session cannot acquire a new background instrument");
+    if (hasParticipantContact(s)) {
+      const allowed = ["schema", "studyVersion", "coreGame", "consentVersion", "participantId", "sessionId", "assignment", "stage", "consent", "responses", "presentation", "game", "prediction", "predictionReceipt", "questionnaire", "timestamps", "events", "status", "technicalErrors", "instrumentVersion", "presentationVersion", "background", "contact", "withdrawal"];
+      insist3(Object.keys(s).every((key) => allowed.includes(key)), "Unknown study state field");
+      validateContactMetadata(s.contact);
+      assertNoContactIdentifiers(s);
+      validateQuestionnaireForInstrument(s.questionnaire, s);
+      if (s.contact.status === "completed") {
+        insist3(consentRecordIsComplete(s.consent), "Contact details require prior consent");
+        insist3(s.events.filter((e) => e.type === "CONTACT_COMPLETED").length === 1 && s.events.some((e) => e.type === "CONTACT_COMPLETED" && e.at === s.contact.collectedAt), "Contact completion record missing");
+      }
+    } else insist3(s.contact === void 0, "Legacy session cannot acquire contact collection");
+    insist3(["TRUE", "SHUFFLED"].includes(s.assignment?.arm), "Unknown arm");
+    insist3(["ABC", "BCA", "CAB"].includes(s.assignment?.formOrder?.join("")), "Unknown parallel form order");
+    const stages = stagesFor(s);
+    insist3([...stages, "WITHDRAWN"].includes(s.stage), "Unknown stage");
+    insist3(s.status === ({ "COMPLETE": "complete", "WITHDRAWN": "withdrawn" }[s.stage] || "in_progress"), "Status/stage mismatch");
+    insist3(validDate(s.timestamps?.createdAt) && validDate(s.timestamps?.updatedAt), "Invalid timestamps");
+    insist3(Array.isArray(s.events) && Array.isArray(s.technicalErrors), "Audit arrays missing");
+    s.events.forEach((e, i) => insist3(e.seq === i + 1 && validDate(e.at), "Invalid event sequence"));
+    if (!["CONSENT", "WITHDRAWN"].includes(s.stage)) insist3(consentRecordIsComplete(s.consent) && s.consent.version === s.consentVersion, "Active consent required");
     for (const block of ["T0", "T1", "T2"]) {
       const rows = s.responses?.[block];
-      insist(Array.isArray(rows) && rows.length <= 8, `Invalid ${block} rows`);
+      insist3(Array.isArray(rows) && rows.length <= 8, `Invalid ${block} rows`);
       const cases = getCases(formFor(s, block));
-      rows.forEach((r, i) => insist(r.caseId === cases[i].id && validScore(r.score) && ["RETAIN", "REPLACE"].includes(r.vote) && validDate(r.presentedAt) && validDate(r.answeredAt) && Date.parse(r.answeredAt) >= Date.parse(r.presentedAt) && Number.isFinite(r.rtMs) && r.rtMs === Date.parse(r.answeredAt) - Date.parse(r.presentedAt), `Invalid ${block} response ${i}`));
+      rows.forEach((r, i) => insist3(r.caseId === cases[i].id && validScore(r.score) && ["RETAIN", "REPLACE"].includes(r.vote) && validDate(r.presentedAt) && validDate(r.answeredAt) && Date.parse(r.answeredAt) >= Date.parse(r.presentedAt) && Number.isFinite(r.rtMs) && r.rtMs === Date.parse(r.answeredAt) - Date.parse(r.presentedAt), `Invalid ${block} response ${i}`));
     }
-    if (s.stage === "CONSENT") insist(Object.values(s.responses).every((rows) => rows.length === 0) && !s.presentation && !s.game && !s.prediction && Object.keys(s.questionnaire).length === 0, "No research responses before consent");
-    if (s.stage === "T0") insist(!s.game && !s.prediction, "Gameplay cannot precede completed T0");
-    if (Object.values(s.responses).some((rows) => rows.length) || s.game) insist(s.consent?.agreed === true && s.consent?.eligible === true && s.consent?.adult === true, "Research data require prior consent");
-    const ix = STAGES.indexOf(s.stage);
-    if (ix >= 2) insist(s.responses.T0.length === 8, "T0 incomplete");
-    if (ix >= 5) insist(s.responses.T1.length === 8, "T1 incomplete");
-    if (ix >= 7) insist(s.responses.T2.length === 8, "T2 incomplete");
-    if (ix < 4 && s.stage !== "WITHDRAWN") insist(s.responses.T1.length === 0, "Premature T1 data");
-    if (ix < 6 && s.stage !== "WITHDRAWN") insist(s.responses.T2.length === 0, "Premature T2 data");
+    if (s.stage === "CONSENT") insist3(Object.values(s.responses).every((rows) => rows.length === 0) && !s.presentation && !s.game && !s.prediction && Object.keys(s.questionnaire).length === 0, "No research responses before consent");
+    if (s.stage === "CONTACT") insist3(Object.values(s.responses).every((rows) => rows.length === 0) && !s.presentation && !s.game && !s.prediction && Object.keys(s.questionnaire).length === 0, "No research responses before contact collection");
+    if (s.stage === "DEMOGRAPHICS") insist3(Object.values(s.responses).every((rows) => rows.length === 0) && !s.presentation && !s.game && !s.prediction && Object.keys(s.questionnaire).length === 0, "No research responses before demographics");
+    if (s.stage === "T0") insist3(!s.game && !s.prediction, "Gameplay cannot precede completed T0");
+    if (Object.values(s.responses).some((rows) => rows.length) || s.game) insist3(s.consent?.agreed === true && s.consent?.eligible === true && s.consent?.adult === true, "Research data require prior consent");
+    const ix = stages.indexOf(s.stage);
+    if (hasParticipantContact(s)) {
+      if (["CONSENT", "CONTACT"].includes(s.stage)) insist3(s.contact.status === "not_collected", "Premature contact collection");
+      if (ix >= stages.indexOf("DEMOGRAPHICS")) insist3(s.contact.status === "completed", "Contact collection incomplete");
+    }
+    if (hasBackground) {
+      if (["CONSENT", "CONTACT"].includes(s.stage)) insist3(s.background.demographics.status === "not_collected", "Background answers require consent and prior contact collection");
+      if (ix >= stages.indexOf("T0")) insist3(s.background.demographics.status === "completed", "Demographics incomplete");
+      if (ix < stages.indexOf("POLITICAL_BACKGROUND") && s.stage !== "WITHDRAWN") insist3(s.background.political.status === "not_collected", "Political background must follow T2");
+      if (ix >= stages.indexOf("SURVEY")) insist3(s.background.political.status === "completed", "Political background incomplete");
+      if (Object.values(s.background).some((b) => b?.status && b.status !== "not_collected")) insist3(consentRecordIsComplete(s.consent) && s.consent.version === s.consentVersion, "Background answers require prior consent");
+    }
+    if (ix >= stages.indexOf("GAME")) insist3(s.responses.T0.length === 8, "T0 incomplete");
+    if (ix >= stages.indexOf("MIRROR")) insist3(s.responses.T1.length === 8, "T1 incomplete");
+    if (ix > stages.indexOf("T2")) insist3(s.responses.T2.length === 8, "T2 incomplete");
+    if (ix < stages.indexOf("T1") && s.stage !== "WITHDRAWN") insist3(s.responses.T1.length === 0, "Premature T1 data");
+    if (ix < stages.indexOf("T2") && s.stage !== "WITHDRAWN") insist3(s.responses.T2.length === 0, "Premature T2 data");
     if (s.presentation) {
-      insist(["T0", "T1", "T2"].includes(s.stage) && s.presentation.block === s.stage, "Invalid item presentation");
-      insist(s.presentation.caseId === getCases(formFor(s, s.stage))[s.responses[s.stage].length]?.id && validDate(s.presentation.presentedAt), "Wrong presented item");
+      insist3(["T0", "T1", "T2"].includes(s.stage) && s.presentation.block === s.stage, "Invalid item presentation");
+      insist3(s.presentation.caseId === getCases(formFor(s, s.stage))[s.responses[s.stage].length]?.id && validDate(s.presentation.presentedAt), "Wrong presented item");
     }
-    if (ix >= 3) insist(s.game?.canonicalState?.phase === "MINI_MIRROR", "Missing completed canonical game");
+    if (ix >= stages.indexOf("PREDICTION")) insist3(s.game?.canonicalState?.phase === "MINI_MIRROR", "Missing completed canonical game");
     if (s.game) validateGameSnapshot({ ...s, game: null }, s.game);
-    if (ix >= 4 || s.responses.T1.length || s.responses.T2.length || s.prediction) {
+    if (ix >= stages.indexOf("T1") || s.responses.T1.length || s.responses.T2.length || s.prediction) {
       const p = s.prediction;
-      insist(p && s.predictionReceipt?.predictionSha256 && validDate(s.predictionReceipt.committedAt), "Missing committed prediction");
-      insist(predictionCommitted !== false, "Server prediction not committed");
-      insist(p.participantId === s.participantId && p.sessionId === s.sessionId && p.studyVersion === s.studyVersion && p.coreHash === s.coreGame.buildHash, "Prediction identity mismatch");
-      insist(p.form === formFor(s, "T1") && validDate(p.timestamp), "Prediction form/timestamp mismatch");
-      insist(Array.isArray(p.predictions) && p.predictions.length === 8 && p.modelState, "Incomplete prediction payload");
+      insist3(p && s.predictionReceipt?.predictionSha256 && validDate(s.predictionReceipt.committedAt), "Missing committed prediction");
+      insist3(predictionCommitted !== false, "Server prediction not committed");
+      insist3(p.participantId === s.participantId && p.sessionId === s.sessionId && p.studyVersion === s.studyVersion && p.coreHash === s.coreGame.buildHash, "Prediction identity mismatch");
+      insist3(p.form === formFor(s, "T1") && validDate(p.timestamp), "Prediction form/timestamp mismatch");
+      insist3(Array.isArray(p.predictions) && p.predictions.length === 8 && p.modelState, "Incomplete prediction payload");
       p.predictions.forEach((r, i) => {
-        insist(r.caseId === getCases(p.form)[i].id, "Wrong prediction case");
-        for (const m of ["M0", "M1", "M2", "M3"]) insist(Number.isFinite(r[m]?.predictedScore) && r[m].predictedScore >= 0 && r[m].predictedScore <= 100, "Invalid prediction score");
+        insist3(r.caseId === getCases(p.form)[i].id, "Wrong prediction case");
+        for (const m of ["M0", "M1", "M2", "M3"]) insist3(Number.isFinite(r[m]?.predictedScore) && r[m].predictedScore >= 0 && r[m].predictedScore <= 100, "Invalid prediction score");
       });
       const commitEvent = s.events.find((e) => e.type === "PREDICTION_COMMITTED");
       const firstT1 = s.events.find((e) => e.type === "ITEM_PRESENTED" && e.block === "T1");
-      insist(commitEvent, "Prediction commit event missing");
-      if (firstT1) insist(firstT1.seq > commitEvent.seq, "T1 presentation precedes prediction commitment");
+      insist3(commitEvent, "Prediction commit event missing");
+      if (firstT1) insist3(firstT1.seq > commitEvent.seq, "T1 presentation precedes prediction commitment");
     }
     return true;
   }
 
   // pilot/app.jsx
-  var import_jsx_runtime3 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime5 = __toESM(require_jsx_runtime(), 1);
   var CONTACT = "b0966821923@gmail.com";
-  var CSS = `
+  var PILOT_CSS = `
  .ps-wrap{max-width:820px;margin:0 auto;padding:34px 24px 70px;line-height:1.65}
  .ps-head{border-bottom:1px solid var(--pm-rule);padding:18px 24px;display:flex;gap:15px;align-items:center;justify-content:space-between}
  .ps-head strong{font-size:17px;letter-spacing:.04em}.ps-meta{font-size:12px;color:var(--pm-ink-3)}
+ .ps-researcher-contact p{margin:4px 0}
  .ps-card{border:1px solid var(--pm-rule);padding:24px;margin:22px 0;background:var(--pm-sheet);border-radius:4px}
  .ps-wrap h1{font-size:34px;font-weight:400;line-height:1.2;margin:22px 0}.ps-wrap h2{font-size:23px;font-weight:400;line-height:1.4}
  .ps-wrap p{margin:14px 0}.ps-check{display:flex;gap:13px;align-items:flex-start;margin:18px 0;cursor:pointer}.ps-check input{margin-top:6px;width:18px;height:18px;flex:none}
@@ -31785,16 +32477,17 @@
  button:disabled{opacity:.45;cursor:not-allowed}@media(max-width:600px){.ps-head{align-items:flex-start}.ps-wrap{padding:22px 18px 70px}.ps-card{padding:18px}.ps-wrap h1{font-size:29px}}
 `;
   function Button({ children, onClick, disabled = false, secondary = false, type = "button" }) {
-    return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("button", { type, disabled, className: secondary ? "pm-ghost" : "pm-cta", onClick, children });
+    return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("button", { type, disabled, className: secondary ? "pm-ghost" : "pm-cta", onClick, children });
   }
+  var instrumentFromRecord = (record) => ({ instrumentVersion: record.instrumentVersion ?? void 0, consentVersion: record.consentVersion ?? record.consent?.version ?? void 0, presentationVersion: record.presentationVersion ?? void 0 });
   var consentAnswersFrom = (c) => ({ adult: c.adult, english: c.english, informed: c.informed, agreed: c.agreed, eligible: c.eligible, researcherConfigSha256: c.researcherConfigSha256, consentTextSha256: c.consentTextSha256, ethicsReference: c.ethicsReference ?? null, studyTitle: c.studyTitle ?? null });
   function Consent({ config, onSubmit, busy, notice, testSession }) {
-    const [checks, setChecks] = (0, import_react3.useState)({ adult: false, english: false, informed: false, agreed: false });
+    const [checks, setChecks] = (0, import_react5.useState)({ adult: false, english: false, informed: false, agreed: false });
     const doc = config?.consentDocument;
-    (0, import_react3.useEffect)(() => {
+    (0, import_react5.useEffect)(() => {
       setChecks({ adult: false, english: false, informed: false, agreed: false });
     }, [config?.consentTextSha256, config?.collectionMode]);
-    if (!doc) return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("main", { className: "ps-wrap", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { role: "status", children: "Loading the participant information\u2026" }) });
+    if (!doc) return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("main", { className: "ps-wrap", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { role: "status", children: "Loading the participant information\u2026" }) });
     const integrity = sha256Hex(stableJSON(doc)) === config.consentTextSha256;
     const allTrue = CONSENT_CONFIRMATIONS.every((k) => checks[k] === true);
     const notSupplied = !config.configured || (config.researcher?.ethics?.arrangement || "NOT_SUPPLIED") === "NOT_SUPPLIED";
@@ -31809,30 +32502,33 @@
       ethicsReference: config.researcher?.ethics?.reference ?? null,
       studyTitle: doc.title
     });
-    return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", "data-consent-version": doc.version, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-progress", children: "Participant information and consent" }),
-      testSession && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-code", role: "status", children: "TEST MODE \u2014 this session is not counted as a research participant." }),
-      notice && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-error", role: "alert", children: notice }),
-      !integrity && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-error", role: "alert", children: "The information on this page does not match the study\u2019s saved version. Please reload the page." }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: doc.title }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-meta", children: doc.researcherLine }),
-      doc.sections.map((section) => /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: `ps-card${section.heading === "Ethics and contact" && notSupplied ? " ps-error" : ""}`, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { children: section.heading }),
-        section.paragraphs.map((text, i) => /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: text }, i))
+    return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("main", { className: "ps-wrap", "data-consent-version": doc.version, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-progress", children: "Participant information and consent" }),
+      testSession && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "ps-code", role: "status", children: "TEST MODE \u2014 this session is not counted as a research participant." }),
+      notice && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "ps-error", role: "alert", children: notice }),
+      !integrity && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "ps-error", role: "alert", children: "The information on this page does not match the study\u2019s saved version. Please reload the page." }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h1", { children: doc.title }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "ps-meta ps-researcher-contact", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: doc.researcherLine }),
+        doc.contactLine && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: doc.contactLine })
+      ] }),
+      doc.sections.map((section) => /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: `ps-card${section.heading === "Ethics and contact" && notSupplied ? " ps-error" : ""}`, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h2", { children: section.heading }),
+        section.paragraphs.map((text2, i) => /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: text2 }, i))
       ] }, section.heading)),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-meta", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { className: "ps-meta", children: [
         "Consent document version: ",
         doc.version,
         " \xB7 ",
         String(config.consentTextSha256).slice(0, 12)
       ] }),
-      doc.confirmations.map((c) => /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("label", { className: "ps-check", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("input", { type: "checkbox", checked: checks[c.id] === true, onChange: (e) => setChecks({ ...checks, [c.id]: e.target.checked === true }) }),
+      doc.confirmations.map((c) => /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("label", { className: "ps-check", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("input", { type: "checkbox", checked: checks[c.id] === true, onChange: (e) => setChecks({ ...checks, [c.id]: e.target.checked === true }) }),
         c.text
       ] }, c.id)),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-actions", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: !allTrue || !integrity || busy, onClick: submit, children: "Agree and begin" }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { secondary: true, disabled: busy, onClick: () => onSubmit(null), children: "I do not agree \u2014 leave the study" })
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "ps-actions", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { disabled: !allTrue || !integrity || busy, onClick: submit, children: "Agree and begin" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { secondary: true, disabled: busy, onClick: () => onSubmit(null), children: "I do not agree \u2014 leave the study" })
       ] })
     ] });
   }
@@ -31841,10 +32537,10 @@
     const canonicalItem = getCases(formFor(state, state.stage))[state.responses[state.stage].length];
     const ready = state.presentation && state.presentation.caseId === canonicalItem?.id;
     const scope = ready ? judgmentDraftScope(state, canonicalItem) : null;
-    const [draft, setDraft] = (0, import_react3.useState)(() => scope ? readJudgmentDraft(storage, scope) : { score: 50, touched: false, vote: "", firstInteractionAt: null });
-    const draftRef = (0, import_react3.useRef)(draft);
-    const lastScope = (0, import_react3.useRef)(scope ? JSON.stringify(scope) : null);
-    (0, import_react3.useEffect)(() => {
+    const [draft, setDraft] = (0, import_react5.useState)(() => scope ? readJudgmentDraft(storage, scope) : { score: 50, touched: false, vote: "", firstInteractionAt: null });
+    const draftRef = (0, import_react5.useRef)(draft);
+    const lastScope = (0, import_react5.useRef)(scope ? JSON.stringify(scope) : null);
+    (0, import_react5.useEffect)(() => {
       const key = scope ? JSON.stringify(scope) : null;
       if (key !== lastScope.current) {
         lastScope.current = key;
@@ -31855,7 +32551,7 @@
         }
       }
     }, [scope?.sessionId, scope?.caseId, scope?.presentedAt]);
-    if (!ready) return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("main", { className: "ps-wrap", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { role: "status", children: "Preparing the next case\u2026" }) });
+    if (!ready) return /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("main", { className: "ps-wrap", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { role: "status", children: "Preparing the next case\u2026" }) });
     const item = presentCase(canonicalItem);
     const blockNumber = { T0: 1, T1: 2, T2: 3 }[state.stage];
     const valid = draft.touched && validSliderScore(draft.score) && ["RETAIN", "REPLACE"].includes(draft.vote);
@@ -31869,25 +32565,26 @@
         onDraftError(error);
       }
     };
-    return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", "data-study-block": state.stage, children: [
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-progress", children: [
+    const submitAnswer = (event2) => {
+      event2.preventDefault();
+      if (valid && !busy) onAnswer({ score: draft.score, vote: draft.vote });
+    };
+    return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("main", { className: "ps-wrap", "data-study-block": state.stage, children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "ps-progress", children: [
         "Judgment set ",
         blockNumber,
         " \xB7 Case ",
         state.responses[state.stage].length + 1,
         " of 8"
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "Your judgment as a voter" }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: PRESENTATION_BLOCK_INSTRUCTIONS }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("article", { className: "ps-card", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { children: item.title }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: item.text })
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h1", { children: "Your judgment as a voter" }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: PRESENTATION_BLOCK_INSTRUCTIONS }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("article", { className: "ps-card", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h2", { children: item.title }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: item.text })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("form", { onSubmit: (e) => {
-        e.preventDefault();
-        if (valid && !busy) onAnswer({ score: draft.score, vote: draft.vote });
-      }, children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-field", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("form", { onSubmit: submitAnswer, children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-field", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
           JudgmentSlider,
           {
             prompt: item.prompt,
@@ -31897,46 +32594,46 @@
             onInteract: (value) => updateDraft((previous) => interactWithJudgment(previous, value))
           }
         ) }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("fieldset", { className: "ps-field", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("legend", { children: item.votePrompt }),
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-vote", children: [
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("label", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("input", { type: "radio", name: "vote", value: "RETAIN", checked: draft.vote === "RETAIN", onChange: () => updateDraft((previous) => ({ ...previous, vote: "RETAIN" })), required: true, disabled: busy }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("fieldset", { className: "ps-field", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("legend", { children: item.votePrompt }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "ps-vote", children: [
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("label", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("input", { type: "radio", name: "vote", value: "RETAIN", checked: draft.vote === "RETAIN", onChange: () => updateDraft((previous) => ({ ...previous, vote: "RETAIN" })), required: true, disabled: busy }),
               "Keep"
             ] }),
-            /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("label", { children: [
-              /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("input", { type: "radio", name: "vote", value: "REPLACE", checked: draft.vote === "REPLACE", onChange: () => updateDraft((previous) => ({ ...previous, vote: "REPLACE" })), required: true, disabled: busy }),
+            /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("label", { children: [
+              /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("input", { type: "radio", name: "vote", value: "REPLACE", checked: draft.vote === "REPLACE", onChange: () => updateDraft((previous) => ({ ...previous, vote: "REPLACE" })), required: true, disabled: busy }),
               "Replace"
             ] })
           ] })
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-actions", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { type: "submit", disabled: !valid || busy, children: "Save and continue" }) })
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-actions", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { onClick: submitAnswer, disabled: !valid || busy, children: "Save and continue" }) })
       ] })
     ] });
   }
   function Debrief({ state, onFinish, busy, contact = CONTACT, withdrawn = false, onDownload }) {
-    return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-progress", children: withdrawn ? "Participation stopped \u2014 debrief" : "Debrief" }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: withdrawn ? "You have left the study. Here is an explanation of your feedback." : "Thank you for taking part." }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "This small study asks whether choices and judgments made in the game help predict how people judge new cases. It also looks at whether those judgments change after playing a political career and reading feedback." }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-card", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { children: "How your feedback was assigned" }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "Each participant was randomly assigned to one of two types of feedback. One uses the player\u2019s own choices. The other uses a fixed profile for comparison. Some of the extra information also differs, so any differences between the groups cannot be explained by personal feedback alone." }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: state.assignment.arm === "TRUE" ? "Your feedback was based on your own choices in the game." : "You received the fixed comparison profile. It was not based on your own choices and does not describe your personality." }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "The study saved its predictions before you answered the second set of cases. It did not use your answers to make those predictions. The profiles and predictions are still being tested. They cannot diagnose your personality or reliably tell us how you would vote in real life." })
+    return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("main", { className: "ps-wrap", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-progress", children: withdrawn ? "Participation stopped \u2014 debrief" : "Debrief" }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h1", { children: withdrawn ? "You have left the study. Here is an explanation of your feedback." : "Thank you for taking part." }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "This small study asks whether choices and judgments made in the game help predict how people judge new cases. It also looks at whether those judgments change after playing a political career and reading feedback." }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "ps-card", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h2", { children: "How your feedback was assigned" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "Each participant was randomly assigned to one of two types of feedback. One uses the player\u2019s own choices. The other uses a fixed profile for comparison. Some of the extra information also differs, so any differences between the groups cannot be explained by personal feedback alone." }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: state.assignment.arm === "TRUE" ? "Your feedback was based on your own choices in the game." : "You received the fixed comparison profile. It was not based on your own choices and does not describe your personality." }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "The study saved its predictions before you answered the second set of cases. It did not use your answers to make those predictions. The profiles and predictions are still being tested. They cannot diagnose your personality or reliably tell us how you would vote in real life." })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "There was no politically correct answer. This small study checks whether the research tasks work and looks for early patterns. It cannot show that the game changes real elections or that one political view is better than another." }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "There was no politically correct answer. This small study checks whether the research tasks work and looks for early patterns. It cannot show that the game changes real elections or that one political view is better than another." }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { children: [
         "If the feedback worried you, or you have questions about your data, contact ",
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: `mailto:${contact}`, children: contact }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("a", { href: `mailto:${contact}`, children: contact }),
         " and quote your session ID below."
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-code", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { className: "ps-code", children: [
         "Session: ",
         state.sessionId
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-actions", children: withdrawn ? /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy, onClick: onDownload, children: "Download my study record" }) : /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy, onClick: onFinish, children: "I have read this explanation \u2014 finish" }) }),
-      withdrawn && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-actions", children: withdrawn ? /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { disabled: busy, onClick: onDownload, children: "Download my study record" }) : /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { disabled: busy, onClick: onFinish, children: "I have read this explanation \u2014 finish" }) }),
+      withdrawn && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { children: [
         "You do not need to do any more tasks. Use the confirmation below to delete the research data you have submitted",
         state.withdrawal?.dataRemovalRequested ? "; your removal request has been recorded and the researcher will follow the stated procedure" : "",
         ". You can return to this page on the same browser to read this again."
@@ -31945,48 +32642,51 @@
   }
   function RemovalReceipt({ receipt, contact = CONTACT }) {
     const arm = receipt.feedbackArm;
-    return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", "data-withdrawal-receipt": "true", children: [
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-progress", children: "Participation stopped \u2014 deletion confirmed" }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "You have left the study." }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "Your submitted answers, game records, predictions and questionnaire have been deleted from the active study database. Unsaved answers and the details used to access your session have also been cleared from this browser. Only a short coded record that you left the study and this receipt remain." }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-code", children: [
+    return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("main", { className: "ps-wrap", "data-withdrawal-receipt": "true", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-progress", children: "Participation stopped \u2014 deletion confirmed" }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h1", { children: "You have left the study." }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "Your submitted answers, background information, game records, predictions, questionnaire and any contact details you provided have been deleted from the active study database. Unsaved answers and the details used to access your session have also been cleared from this browser. Only a short coded record that you left the study and this receipt remain." }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { className: "ps-code", children: [
         "Study number: ",
         receipt.participantCode,
         " \xB7 Session: ",
         receipt.sessionId
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-meta", children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { className: "ps-meta", children: [
         "Deletion confirmed: ",
         receipt.removedAt
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("section", { className: "ps-card", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { children: "About the study and its feedback" }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "This small study looks at judgments before and after a fictional political career and its feedback. One type of feedback uses the player\u2019s own choices. The other uses a fixed profile for comparison. These profiles are research tools and cannot diagnose your personality." }),
-        receipt.sawFeedback ? /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: arm === "SHUFFLED" ? "You received the fixed comparison profile. It was not based on your own choices and does not describe your personality." : "Your feedback was based on your own choices in the game." }) : /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "The study has no record of showing you feedback before you left. You do not need to do anything else." })
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("section", { className: "ps-card", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h2", { children: "About the study and its feedback" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "This small study looks at judgments before and after a fictional political career and its feedback. One type of feedback uses the player\u2019s own choices. The other uses a fixed profile for comparison. These profiles are research tools and cannot diagnose your personality." }),
+        receipt.sawFeedback ? /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: arm === "SHUFFLED" ? "You received the fixed comparison profile. It was not based on your own choices and does not describe your personality." : "Your feedback was based on your own choices in the game." }) : /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "The study has no record of showing you feedback before you left. You do not need to do anything else." })
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { children: [
         "Copies already downloaded and the hosting service\u2019s recovery history are handled separately, as described in the participant information. Contact ",
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: `mailto:${contact}`, children: contact }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("a", { href: `mailto:${contact}`, children: contact }),
         " with your code for any question or deletion request."
       ] }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-actions", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { onClick: () => downloadJSON(receipt, `PoliticalMirror_withdrawal_${receipt.participantCode}.json`), children: "Download deletion receipt" }) }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "You may close this page. Returning on the same browser shows this receipt, not your deleted answers." })
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-actions", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { onClick: () => downloadJSON(receipt, `PoliticalMirror_withdrawal_${receipt.participantCode}.json`), children: "Download deletion receipt" }) }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "You may close this page. Returning on the same browser shows this receipt, not your deleted answers." })
     ] });
   }
   function PilotApp({ client: suppliedClient }) {
-    const clientRef = (0, import_react3.useRef)(suppliedClient || new StudyClient());
+    const clientRef = (0, import_react5.useRef)(suppliedClient || new StudyClient());
     const client = clientRef.current;
-    const [config, setConfig] = (0, import_react3.useState)(null), [state, setState] = (0, import_react3.useState)(null);
-    const [busy, setBusy] = (0, import_react3.useState)(false), [error, setError] = (0, import_react3.useState)(null), [paused, setPaused] = (0, import_react3.useState)(false), [stopping, setStopping] = (0, import_react3.useState)(false), [notice, setNotice] = (0, import_react3.useState)(null);
-    const [removalReceipt, setRemovalReceipt] = (0, import_react3.useState)(null);
-    const [booted, setBooted] = (0, import_react3.useState)(false), [resumeKey, setResumeKey] = (0, import_react3.useState)(0), [preConsent, setPreConsent] = (0, import_react3.useState)(false);
-    const stateRef = (0, import_react3.useRef)(null), configRef = (0, import_react3.useRef)(null), processing = (0, import_react3.useRef)(false), errorQueue = (0, import_react3.useRef)([]);
+    const [config, setConfig] = (0, import_react5.useState)(null), [state, setState] = (0, import_react5.useState)(null);
+    const [busy, setBusy] = (0, import_react5.useState)(false), [error, setError] = (0, import_react5.useState)(null), [paused, setPaused] = (0, import_react5.useState)(false), [stopping, setStopping] = (0, import_react5.useState)(false), [notice, setNotice] = (0, import_react5.useState)(null);
+    const [removalReceipt, setRemovalReceipt] = (0, import_react5.useState)(null);
+    const [booted, setBooted] = (0, import_react5.useState)(false), [resumeKey, setResumeKey] = (0, import_react5.useState)(0), [preConsent, setPreConsent] = (0, import_react5.useState)(false);
+    const stateRef = (0, import_react5.useRef)(null), configRef = (0, import_react5.useRef)(null), processing = (0, import_react5.useRef)(false), errorQueue = (0, import_react5.useRef)([]);
+    const backgroundPending = (0, import_react5.useRef)(null), backgroundBlocked = (0, import_react5.useRef)(false), backgroundCompletion = (0, import_react5.useRef)(null);
     const now = () => (/* @__PURE__ */ new Date()).toISOString();
     const publish = (value) => {
       stateRef.current = value;
       setState(value);
     };
     const showError = (cause) => {
+      backgroundBlocked.current = true;
+      cancelBackgroundCompletion();
       const value = cause instanceof Error ? cause : new Error(cause?.message || String(cause));
       const issue = { message: value.message, code: value.code || cause?.code || "CLIENT_ERROR", at: now() };
       errorQueue.current.push(issue);
@@ -32009,25 +32709,86 @@
       processing.current = true;
       setBusy(true);
       setError(null);
+      let succeeded = false;
       try {
-        return await fn();
+        const result = await fn();
+        succeeded = true;
+        return result;
       } catch (cause) {
         showError(cause);
         return void 0;
       } finally {
         processing.current = false;
         setBusy(false);
+        if (succeeded) queueMicrotask(drainBackgroundDraft);
       }
+    };
+    function cancelBackgroundCompletion() {
+      const completion = backgroundCompletion.current;
+      backgroundCompletion.current = null;
+      completion?.resolve(void 0);
+    }
+    function drainBackgroundDraft() {
+      if (processing.current || backgroundBlocked.current) return;
+      const completion = backgroundCompletion.current;
+      if (completion) {
+        const expectedStage2 = completion.block === "demographics" ? "DEMOGRAPHICS" : "POLITICAL_BACKGROUND";
+        if (stateRef.current?.stage !== expectedStage2 || stateRef.current?.sessionId !== completion.sessionId) {
+          cancelBackgroundCompletion();
+        } else if (!completion.started) {
+          completion.started = true;
+          task(async () => {
+            const ack = await persist(finishBackground(stateRef.current, completion.block, completion.answers, now()));
+            clearBackgroundDraft(client.storage);
+            if (backgroundCompletion.current === completion) {
+              backgroundCompletion.current = null;
+              completion.resolve(ack);
+            }
+          });
+          return;
+        } else return;
+      }
+      if (!backgroundPending.current) return;
+      const pending = backgroundPending.current;
+      backgroundPending.current = null;
+      const expectedStage = pending.block === "demographics" ? "DEMOGRAPHICS" : "POLITICAL_BACKGROUND";
+      if (stateRef.current?.stage !== expectedStage || stateRef.current?.sessionId !== pending.sessionId) return;
+      task(() => persist(saveBackgroundDraft(stateRef.current, pending.block, pending.answers, now())));
+    }
+    const queueBackgroundDraft = (block, answers) => {
+      if (backgroundCompletion.current || backgroundBlocked.current) return;
+      backgroundPending.current = { block, answers, sessionId: stateRef.current.sessionId };
+      drainBackgroundDraft();
+    };
+    const finishBackgroundBlock = (block, answers) => {
+      if (backgroundBlocked.current) return Promise.resolve(void 0);
+      const sessionId = stateRef.current?.sessionId;
+      const expectedStage = block === "demographics" ? "DEMOGRAPHICS" : "POLITICAL_BACKGROUND";
+      if (!sessionId || stateRef.current.stage !== expectedStage) return Promise.resolve(void 0);
+      const existing = backgroundCompletion.current;
+      if (existing) {
+        if (!existing.started) existing.answers = answers;
+        return existing.promise;
+      }
+      backgroundPending.current = null;
+      let resolve;
+      const promise = new Promise((done) => {
+        resolve = done;
+      });
+      backgroundCompletion.current = { block, answers, sessionId, promise, resolve, started: false };
+      drainBackgroundDraft();
+      return promise;
     };
     const transition = (mutate) => task(() => persist(mutate(stateRef.current, now())));
     const loadConfig = async () => {
       const value = await client.config();
+      if (value.instrumentVersion && !hasBackgroundInstrument(value.instrumentVersion)) throw Object.assign(new Error("The study has been updated. Reload this page before continuing."), { code: "STALE_PARTICIPANT_APP_RELOAD_REQUIRED" });
       if (value.studyVersion !== build_info_default.studyVersion) throw new Error("This page and the study\u2019s saved records use different versions. Please contact the researcher before continuing.");
       configRef.current = value;
       setConfig(value);
       return value;
     };
-    (0, import_react3.useEffect)(() => {
+    (0, import_react5.useEffect)(() => {
       task(async () => {
         const receipt = client.withdrawalReceipt();
         if (receipt) {
@@ -32044,7 +32805,7 @@
       if (!freshConfig.allowedNewEnroll && !client.hasEnrollment()) throw new Error("The study is not accepting new participants right now. Please contact the researcher.");
       setPreConsent(true);
     });
-    const [declined, setDeclined] = (0, import_react3.useState)(false), [consentNotice, setConsentNotice] = (0, import_react3.useState)(null);
+    const [declined, setDeclined] = (0, import_react5.useState)(false), [consentNotice, setConsentNotice] = (0, import_react5.useState)(null);
     const testSession = config?.collectionMode === "TEST";
     const enrollWithConsent = (answers) => task(async () => {
       if (answers === null) {
@@ -32066,7 +32827,7 @@
       if (!freshConfig.allowedNewEnroll && !client.hasEnrollment()) throw new Error("The study is not accepting new participants right now. Please contact the researcher.");
       let record;
       try {
-        record = await client.enroll({ consent: answers, collectionMode: freshConfig.collectionMode });
+        record = await client.enroll({ consent: answers, collectionMode: freshConfig.collectionMode, ...hasBackgroundInstrument(freshConfig.instrumentVersion) ? { instrumentVersion: freshConfig.instrumentVersion, presentationVersion: freshConfig.instrumentVersion === PARTICIPANT_INSTRUMENT_VERSION ? PARTICIPANT_PRESENTATION_VERSION : BACKGROUND_PRESENTATION_VERSION } : {} });
       } catch (e) {
         if (["CONSENT_CONFIG_MISMATCH", "COLLECTION_MODE_CHANGED"].includes(e.code)) {
           client.clearEnrollment();
@@ -32076,13 +32837,17 @@
         }
         throw e;
       }
-      const initial = consentStudy(createStudy({ sessionId: record.sessionId, assignment: record.assignment, coreGame: build_info_default, now: now() }), consentAnswersFrom(record.consent), now(), { at: record.consent.at });
+      const initial = consentStudy(createStudy({ sessionId: record.sessionId, assignment: record.assignment, coreGame: build_info_default, ...instrumentFromRecord(record), now: now() }), consentAnswersFrom(record.consent), now(), { at: record.consent.at });
       await persist(initial);
       setConsentNotice(null);
       setPreConsent(false);
       setBooted(true);
     });
     const acceptRemoval = (receipt) => {
+      cancelBackgroundCompletion();
+      backgroundPending.current = null;
+      clearBackgroundDraft(client.storage);
+      clearContactDraft(client.storage);
       publish(null);
       setRemovalReceipt(receipt);
       setPaused(false);
@@ -32092,8 +32857,13 @@
       setBooted(true);
       errorQueue.current = [];
     };
-    const stopAndDelete = () => task(async () => acceptRemoval(await client.withdraw()));
-    (0, import_react3.useEffect)(() => {
+    const stopAndDelete = () => task(async () => {
+      cancelBackgroundCompletion();
+      backgroundPending.current = null;
+      backgroundBlocked.current = true;
+      acceptRemoval(await client.withdraw());
+    });
+    (0, import_react5.useEffect)(() => {
       const onStorage = (e) => {
         if (e.key === WITHDRAWAL_RECEIPT_KEY) {
           const receipt = client.withdrawalReceipt();
@@ -32107,6 +32877,9 @@
       return () => globalThis.removeEventListener?.("storage", onStorage);
     }, []);
     const resume = () => task(async () => {
+      cancelBackgroundCompletion();
+      backgroundPending.current = null;
+      backgroundBlocked.current = false;
       if (client.withdrawalReceipt()) {
         acceptRemoval(client.withdrawalReceipt());
         return;
@@ -32119,7 +32892,7 @@
       if (!client.hasSession()) {
         if (client.hasEnrollment()) {
           const enrolled = await client.enroll();
-          await persist(consentStudy(createStudy({ sessionId: enrolled.sessionId, assignment: enrolled.assignment, coreGame: build_info_default, now: now() }), consentAnswersFrom(enrolled.consent), now(), { at: enrolled.consent.at }));
+          await persist(consentStudy(createStudy({ sessionId: enrolled.sessionId, assignment: enrolled.assignment, coreGame: build_info_default, ...instrumentFromRecord(enrolled), now: now() }), consentAnswersFrom(enrolled.consent), now(), { at: enrolled.consent.at }));
         } else {
           setBooted(true);
           return;
@@ -32136,9 +32909,10 @@
         throw e;
       }
       setNotice(record.recoveryNotice || null);
+      if (record.recoveryNotice) clearBackgroundDraft(client.storage);
       let next = record.checkpoint;
       if (!next) {
-        next = consentStudy(createStudy({ sessionId: client.credentials().sessionId, assignment: record.assignment, coreGame: build_info_default, now: now() }), consentAnswersFrom(record.consent), now(), { at: record.consent.at });
+        next = consentStudy(createStudy({ sessionId: client.credentials().sessionId, assignment: record.assignment, coreGame: build_info_default, ...instrumentFromRecord(record), now: now() }), consentAnswersFrom(record.consent), now(), { at: record.consent.at });
         await persist(next);
       } else {
         validateStudyState(next);
@@ -32148,6 +32922,7 @@
         next = attachPrediction(next, record.prediction, record.predictionReceipt, now());
         await persist(next);
       }
+      if (next.stage !== "CONTACT") clearContactDraft(client.storage);
       if (!["COMPLETE", "WITHDRAWN"].includes(next.stage)) {
         next = markResume(next, now(), { presentationVersion: build_info_default.presentationVersion });
         let issues = errorQueue.current;
@@ -32166,7 +32941,7 @@
       setStopping(false);
       setBooted(true);
     });
-    (0, import_react3.useEffect)(() => {
+    (0, import_react5.useEffect)(() => {
       if (!state || busy || error || paused || processing.current) return;
       if (["T0", "T1", "T2"].includes(state.stage) && !state.presentation) {
         task(() => persist(presentItem(stateRef.current, now())));
@@ -32190,6 +32965,21 @@
         });
       }
     }, [state, busy, error, paused]);
+    const saveContact = (answers) => task(async () => {
+      if (stateRef.current?.stage !== "CONTACT" || !hasParticipantContact(stateRef.current)) throw Object.assign(new Error("Please resume your current study step."), { code: "CONTACT_STAGE_REQUIRED" });
+      let ack;
+      try {
+        ack = await client.saveContact(answers);
+      } catch (cause) {
+        const code = typeof cause?.code === "string" && /^[A-Z0-9_]{1,80}$/.test(cause.code) ? cause.code : "CONTACT_SAVE_FAILED";
+        throw Object.assign(new Error("Your contact details could not be saved. Please try again."), { code });
+      }
+      validateStudyState(ack.checkpoint);
+      if (ack.checkpoint.sessionId !== stateRef.current.sessionId || ack.checkpoint.stage !== "DEMOGRAPHICS" || ack.checkpoint.contact?.status !== "completed") throw Object.assign(new Error("The contact details were not confirmed as saved. Please resume your session."), { code: "CONTACT_SAVE_NOT_CONFIRMED" });
+      clearContactDraft(client.storage);
+      publish(ack.checkpoint);
+      return ack;
+    });
     const saveGame = async (snapshot) => {
       setBusy(true);
       try {
@@ -32236,7 +33026,7 @@
     };
     const download = () => task(async () => {
       const exported = await client.researchExport();
-      downloadJSON(exported, `PoliticalMirror_Pilot_${stateRef.current.sessionId}.json`);
+      downloadJSON(exported, `PoliticalMirror_${stateRef.current.sessionId}.json`);
     });
     let savedSession = false, pendingEnrollment = false;
     try {
@@ -32247,66 +33037,65 @@
     const active = state && !["COMPLETE", "WITHDRAWN"].includes(state.stage);
     const contact = config?.contactEmail || CONTACT;
     const blockers = config?.enrollmentBlockers || [];
-    if (removalReceipt) return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("style", { children: CSS }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(RemovalReceipt, { receipt: removalReceipt, contact })
+    if (removalReceipt) return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("style", { children: PILOT_CSS }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(RemovalReceipt, { receipt: removalReceipt, contact })
     ] });
-    return /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { children: [
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("style", { children: CSS }),
-      /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("header", { className: "ps-head", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { children: [
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("strong", { children: "Political Mirror" }),
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-meta", children: [
-            "A research study \xB7 v",
-            STUDY_VERSION
-          ] })
+    return /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { children: [
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("style", { children: PILOT_CSS }),
+      /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("header", { className: "ps-head", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("strong", { children: "Political Mirror" }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-meta", children: "A research study" })
         ] }),
-        active && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-actions", style: { margin: 0 }, children: [
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { secondary: true, disabled: busy, onClick: () => setPaused(true), children: "Pause" }),
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { secondary: true, disabled: busy, onClick: () => setStopping(true), children: "Stop participation" })
+        active && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "ps-actions", style: { margin: 0 }, children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { secondary: true, disabled: busy, onClick: () => setPaused(true), children: "Pause" }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { secondary: true, disabled: busy, onClick: () => setStopping(true), children: "Stop participation" })
         ] })
       ] }),
-      (state?.assignment?.test === true || !state && testSession) && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { role: "status", className: "ps-wrap", style: { paddingBottom: 0 }, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-code", children: "TEST MODE \u2014 stored as test data, excluded from the 20-person pilot. \u6E2C\u8A66\u6A21\u5F0F\uFF1A\u4E0D\u8A08\u5165\u6B63\u5F0F\u6536\u6848\u3002" }) }),
-      notice && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { role: "status", className: "ps-wrap", style: { paddingBottom: 0 }, children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-card", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: notice }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { secondary: true, onClick: () => setNotice(null), children: "I understand" })
+      (state?.assignment?.test === true || !state && testSession) && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { role: "status", className: "ps-wrap", style: { paddingBottom: 0 }, children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "ps-code", children: "TEST MODE \u2014 stored as test data, excluded from the 20-person study. \u6E2C\u8A66\u6A21\u5F0F\uFF1A\u4E0D\u8A08\u5165\u6B63\u5F0F\u6536\u6848\u3002" }) }),
+      notice && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { role: "status", className: "ps-wrap", style: { paddingBottom: 0 }, children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "ps-card", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: notice }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { secondary: true, onClick: () => setNotice(null), children: "I understand" })
       ] }) }),
-      !state && !preConsent && !declined && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-progress", children: "Welcome" }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "Step into public life." }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "Play a fictional political career and consider how you would judge other people in office." }),
-        !booted ? /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { role: "status", children: "Connecting to the study\u2026" }) : savedSession ? /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-card", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { children: "Your previous session is saved." }),
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "Continue on this browser to keep your answers and place in the study." }),
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy, onClick: resume, children: "Continue previous session" })
-        ] }) : pendingEnrollment ? /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-card", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "You started joining the study, but that step still needs to be confirmed." }),
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy, onClick: resume, children: "Continue joining the study" })
-        ] }) : /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-actions", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy || !config?.allowedNewEnroll, onClick: start, children: "Read about the study" }),
-          !config?.allowedNewEnroll && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: blockers.length ? "This study is not yet open for participation." : "The study is not accepting new participants right now." }),
-          blockers.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-code", role: "alert", children: [
+      !state && !preConsent && !declined && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("main", { className: "ps-wrap", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-progress", children: "Welcome" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h1", { children: "Step into public life." }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "Play a fictional political career and consider how you would judge other people in office." }),
+        !booted ? /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { role: "status", children: "Connecting to the study\u2026" }) : savedSession ? /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "ps-card", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h2", { children: "Your previous session is saved." }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "Continue on this browser to keep your answers and place in the study." }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { disabled: busy, onClick: resume, children: "Continue previous session" })
+        ] }) : pendingEnrollment ? /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "ps-card", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "You started joining the study, but that step still needs to be confirmed." }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { disabled: busy, onClick: resume, children: "Continue joining the study" })
+        ] }) : /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "ps-actions", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { disabled: busy || !config?.allowedNewEnroll, onClick: start, children: "Read about the study" }),
+          !config?.allowedNewEnroll && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: blockers.length ? "This study is not yet open for participation." : "The study is not accepting new participants right now." }),
+          blockers.length > 0 && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { className: "ps-code", role: "alert", children: [
             "The researcher still needs to complete the setup: ",
             blockers.join(", ")
           ] })
         ] }),
-        config?.qaModeWithoutEthicsApproval && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-code", role: "alert", children: "Technical test only: an ethics approval reference has not been entered. This version must not be used to collect research data from participants." }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-meta", children: [
+        config?.qaModeWithoutEthicsApproval && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "ps-code", role: "alert", children: "Technical test only: an ethics approval reference has not been entered. This version must not be used to collect research data from participants." }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { className: "ps-meta", children: [
           "Questions? ",
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: `mailto:${contact}`, children: contact })
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("a", { href: `mailto:${contact}`, children: contact })
         ] })
       ] }),
-      !state && preConsent && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Consent, { config, busy, notice: consentNotice, testSession, onSubmit: enrollWithConsent }),
-      !state && declined && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-progress", children: "Not participating" }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "Thank you for considering the study." }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "No study session was created and nothing was recorded. You may close this page." })
+      !state && preConsent && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Consent, { config, busy, notice: consentNotice, testSession, onSubmit: enrollWithConsent }),
+      !state && declined && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("main", { className: "ps-wrap", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-progress", children: "Not participating" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h1", { children: "Thank you for considering the study." }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "No study session was created and nothing was recorded. You may close this page." })
       ] }),
-      state && ["T0", "T1", "T2"].includes(state.stage) && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Measurement, { state, busy, storage: client.storage, onDraftError: showError, onAnswer: (answer) => transition((s, at) => answerItem(s, answer, at)) }, `${state.stage}:${state.responses[state.stage].length}`),
-      state && ["GAME", "MIRROR", "SURVEY"].includes(state.stage) && !error && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(
+      state?.stage === "CONTACT" && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(ContactForm, { state, busy, blocked: !!error || paused || stopping, storage: client.storage, onDraftError: showError, onComplete: saveContact }, `${resumeKey}:CONTACT`),
+      state && ["DEMOGRAPHICS", "POLITICAL_BACKGROUND"].includes(state.stage) && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(BackgroundForm, { state, block: state.stage === "DEMOGRAPHICS" ? "demographics" : "political", busy, blocked: !!error || paused || stopping, storage: client.storage, onDraftError: showError, onSaveDraft: (answers) => queueBackgroundDraft(state.stage === "DEMOGRAPHICS" ? "demographics" : "political", answers), onComplete: (answers) => finishBackgroundBlock(state.stage === "DEMOGRAPHICS" ? "demographics" : "political", answers) }, `${resumeKey}:${state.stage}`),
+      state && ["T0", "T1", "T2"].includes(state.stage) && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Measurement, { state, busy, storage: client.storage, onDraftError: showError, onAnswer: (answer2) => transition((s, at) => answerItem(s, answer2, at)) }, `${state.stage}:${state.responses[state.stage].length}`),
+      state && ["GAME", "MIRROR", "SURVEY"].includes(state.stage) && !error && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(
         PoliticalMirrorStudy,
         {
-          study: { sessionId: state.sessionId, arm: state.assignment.arm, gameSnapshot: state.game, stage: state.stage },
+          study: { sessionId: state.sessionId, arm: state.assignment.arm, gameSnapshot: state.game, stage: state.stage, instrumentVersion: state.instrumentVersion },
           onCheckpoint: saveGame,
           onGameplayComplete: endGame,
           onMirrorComplete: endMirror,
@@ -32315,75 +33104,79 @@
         },
         `${resumeKey}:${state.stage}`
       ),
-      state?.stage === "PREDICTION" && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "Your career is complete." }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { role: "status", children: "Saving your study record before the next set of cases\u2026" })
+      state?.stage === "PREDICTION" && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("main", { className: "ps-wrap", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h1", { children: "Your career is complete." }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { role: "status", children: "Saving your study record before the next set of cases\u2026" })
       ] }),
-      state?.stage === "DEBRIEF" && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Debrief, { state, busy, contact, onFinish: () => transition((s, at) => completeStudy(s, at)) }),
-      state?.stage === "COMPLETE" && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-progress", children: "Study complete" }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "Your responses have been saved." }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "Thank you. You may close this page." }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-code", children: [
+      state?.stage === "DEBRIEF" && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Debrief, { state, busy, contact, onFinish: () => transition((s, at) => completeStudy(s, at)) }),
+      state?.stage === "COMPLETE" && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("main", { className: "ps-wrap", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-progress", children: "Study complete" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h1", { children: "Your responses have been saved." }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "Thank you. You may close this page." }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { className: "ps-code", children: [
           "Session: ",
           state.sessionId
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-actions", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy, onClick: download, children: "Download my study record" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-actions", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { disabled: busy, onClick: download, children: "Download my study record" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { children: [
           "Contact: ",
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: `mailto:${contact}`, children: contact })
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("a", { href: `mailto:${contact}`, children: contact })
         ] })
       ] }),
-      state?.stage === "WITHDRAWN" && state.withdrawal?.sawFeedback && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Debrief, { state, busy, contact, withdrawn: true, onDownload: download }),
-      state?.stage === "WITHDRAWN" && !state.withdrawal?.sawFeedback && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("main", { className: "ps-wrap", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-progress", children: "Participation stopped" }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h1", { children: "You have left the study." }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "You left before seeing feedback about your play. Participants who continue are randomly assigned to one of two types of feedback. One uses their own choices; the other uses a fixed profile for comparison. They are told which type they received at the end. Neither type can diagnose their personality." }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { children: [
+      state?.stage === "WITHDRAWN" && state.withdrawal?.sawFeedback && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Debrief, { state, busy, contact, withdrawn: true, onDownload: download }),
+      state?.stage === "WITHDRAWN" && !state.withdrawal?.sawFeedback && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("main", { className: "ps-wrap", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-progress", children: "Participation stopped" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h1", { children: "You have left the study." }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "You left before seeing feedback about your play. Participants who continue are randomly assigned to one of two types of feedback. One uses their own choices; the other uses a fixed profile for comparison. They are told which type they received at the end. Neither type can diagnose their personality." }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { children: [
           "You do not need to do any more tasks. Use the confirmation below to delete the research data you have submitted",
           state.withdrawal?.dataRemovalRequested ? "; your removal request has been recorded and the researcher will follow the stated procedure" : "",
           ". Contact the researcher with your session ID if you have questions."
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-code", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { className: "ps-code", children: [
           "Session: ",
           state.sessionId
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-actions", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy, onClick: download, children: "Download my study record" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-actions", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { disabled: busy, onClick: download, children: "Download my study record" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { children: [
           "Contact: ",
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: `mailto:${contact}`, children: contact })
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("a", { href: `mailto:${contact}`, children: contact })
         ] })
       ] }),
-      busy && !error && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-save", role: "status", children: "Saving \u2014 please wait\u2026" }),
-      paused && !error && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-screen", role: "dialog", "aria-modal": "true", "aria-labelledby": "pause-title", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-dialog", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { id: "pause-title", children: "Your last completed step is saved." }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "You can close this page and return on the same browser. Your slider answer and choice on the current case are kept on this browser until you submit them. They have not yet been sent to the study. Do not clear this browser\u2019s stored site data." }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-code", children: [
+      busy && !error && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-save", role: "status", children: "Saving \u2014 please wait\u2026" }),
+      paused && !error && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-screen", role: "dialog", "aria-modal": "true", "aria-labelledby": "pause-title", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "ps-dialog", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h2", { id: "pause-title", children: "Your last completed step is saved." }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { children: [
+          "You can close this page and return on the same browser. ",
+          state?.stage === "CONTACT" ? "Unfinished contact details are kept on this browser until you choose Save and continue. They have not yet been sent to the study." : ["DEMOGRAPHICS", "POLITICAL_BACKGROUND"].includes(state?.stage) ? "Your background answers are saved as you go. Any unfinished typing is also kept on this browser." : "Your slider answer and choice on the current case are kept on this browser until you submit them. They have not yet been sent to the study.",
+          " Do not clear this browser\u2019s stored site data."
+        ] }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { className: "ps-code", children: [
           "Session: ",
           state?.sessionId
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { onClick: () => setPaused(false), children: "Continue study" })
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { onClick: () => setPaused(false), children: "Continue study" })
       ] }) }),
-      stopping && !error && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-screen", role: "dialog", "aria-modal": "true", "aria-labelledby": "stop-title", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-dialog", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { id: "stop-title", children: "Stop and delete your study data?" }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "This will end your participation and ask the study to delete all your submitted answers, game records, predictions and questionnaire from its active database. This cannot be undone. Wait for the page to confirm that deletion is complete. If the connection fails, retry or email the researcher with your session code. A short coded record that you left and a receipt explaining the feedback will remain. If you only want a break, choose Pause." }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-actions", children: [
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy, onClick: stopAndDelete, children: "Stop participation and delete my data" }),
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { secondary: true, disabled: busy, onClick: () => setStopping(false), children: "Keep participating" })
+      stopping && !error && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-screen", role: "dialog", "aria-modal": "true", "aria-labelledby": "stop-title", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "ps-dialog", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h2", { id: "stop-title", children: "Stop and delete your study data?" }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "This will end your participation and ask the study to delete all your submitted answers, background information, game records, predictions, questionnaire and any contact details you provided from its active database. This cannot be undone. Wait for the page to confirm that deletion is complete. If the connection fails, retry or email the researcher with your session code. A short coded record that you left and a receipt explaining the feedback will remain. If you only want a break, choose Pause." }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "ps-actions", children: [
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { disabled: busy, onClick: stopAndDelete, children: "Stop participation and delete my data" }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { secondary: true, disabled: busy, onClick: () => setStopping(false), children: "Keep participating" })
         ] })
       ] }) }),
-      error && /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-screen", role: "alertdialog", "aria-modal": "true", "aria-labelledby": "error-title", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("div", { className: "ps-dialog", children: [
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("h2", { id: "error-title", children: "We could not finish this step." }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { className: "ps-error", children: participantErrorMessage(error) }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("p", { children: "You can continue from the last step that was successfully saved. Please do not start a new session." }),
-        error.code && /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-code", children: [
+      error && /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-screen", role: "alertdialog", "aria-modal": "true", "aria-labelledby": "error-title", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("div", { className: "ps-dialog", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("h2", { id: "error-title", children: "We could not finish this step." }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { className: "ps-error", children: participantErrorMessage(error) }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("p", { children: "You can continue from the last step that was successfully saved. Please do not start a new session." }),
+        error.code && /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { className: "ps-code", children: [
           "Reference: ",
           error.code
         ] }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("div", { className: "ps-actions", children: /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { disabled: busy, onClick: resume, children: "Retry / resume" }) }),
-        /* @__PURE__ */ (0, import_jsx_runtime3.jsxs)("p", { className: "ps-meta", children: [
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("div", { className: "ps-actions", children: /* @__PURE__ */ (0, import_jsx_runtime5.jsx)(Button, { disabled: busy, onClick: resume, children: "Retry / resume" }) }),
+        /* @__PURE__ */ (0, import_jsx_runtime5.jsxs)("p", { className: "ps-meta", children: [
           "If this continues, contact ",
-          /* @__PURE__ */ (0, import_jsx_runtime3.jsx)("a", { href: `mailto:${contact}`, children: contact }),
+          /* @__PURE__ */ (0, import_jsx_runtime5.jsx)("a", { href: `mailto:${contact}`, children: contact }),
           state?.sessionId ? ` with session ${state.sessionId}` : "",
           "."
         ] })
@@ -32392,10 +33185,10 @@
   }
 
   // pilot/browser.jsx
-  var import_jsx_runtime4 = __toESM(require_jsx_runtime(), 1);
+  var import_jsx_runtime6 = __toESM(require_jsx_runtime(), 1);
   var mount = document.getElementById("root");
   if (!mount) throw new Error("Missing #root mount element.");
-  (0, import_client2.createRoot)(mount).render(/* @__PURE__ */ (0, import_jsx_runtime4.jsx)(PilotApp, {}));
+  (0, import_client2.createRoot)(mount).render(/* @__PURE__ */ (0, import_jsx_runtime6.jsx)(PilotApp, {}));
   mount.dataset.mounted = "true";
   mount.dataset.presentationVersion = build_info_default.presentationVersion;
 })();

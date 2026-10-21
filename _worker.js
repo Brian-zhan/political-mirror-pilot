@@ -4,7 +4,8 @@ var build_info_default = {
   buildHash: "f5eaaff91d5ccc9b03bb7fbc240cd4b5ed592e0a37448a15b537024a2c8f5e04",
   sourceManifestHash: "439b4dc3ac6cd7b884976530230e99f088b7d82e9998e299b04c8db49be88934",
   studyVersion: "0.38.3-pilot.1",
-  presentationVersion: "0.38.3-readability.2"
+  presentationVersion: "0.38.3-background.4",
+  instrumentVersion: "PM-BACKGROUND-2"
 };
 
 // pilot-cloud/schema-statements.json
@@ -68,7 +69,221 @@ var schema_statements_default = [
   "CREATE TRIGGER IF NOT EXISTS participants_clear AFTER UPDATE OF removed_at ON sessions\nWHEN NEW.removed_at IS NOT NULL\nBEGIN\n UPDATE participants SET status='removed',last_stage='REMOVED',T0_answers=0,T1_answers=0,T2_answers=0,\n prediction_saved=0,updated_at=NEW.updated_at,remove_requested=1,\n research_json=json_object('schema','political-mirror-research-export/1','sessionId',NEW.session_id,\n 'studyVersion',NEW.study_version,'slot',NEW.slot,'revision',NEW.revision,\n 'test',json(CASE WHEN NEW.is_test=1 THEN 'true' ELSE 'false' END),\n 'simulated',json(CASE WHEN NEW.is_test=1 THEN 'true' ELSE 'false' END),\n 'removedAt',NEW.removed_at,'checkpoint',NULL,'prediction',NULL,\n 'integrity',json_object('ok',NULL,'disposition','intentionally_removed'))\n WHERE session_id=NEW.session_id;\nEND;",
   "CREATE TRIGGER IF NOT EXISTS participants_removal_request AFTER UPDATE OF remove_requested ON participants\nWHEN NEW.remove_requested=1 AND OLD.remove_requested=0\n AND EXISTS(SELECT 1 FROM sessions WHERE session_id=NEW.session_id AND removed_at IS NULL)\nBEGIN\n INSERT INTO pm_remove_data(session_id,note) VALUES(NEW.session_id,'Cloudflare account data-removal request');\nEND;",
   "CREATE TRIGGER IF NOT EXISTS participants_no_direct_delete BEFORE DELETE ON participants\nBEGIN SELECT RAISE(ABORT,'SET_REMOVE_REQUESTED_INSTEAD_OF_DELETING_RECORD'); END;",
-  "INSERT OR IGNORE INTO schema_version(id,version,applied_at) VALUES(1,6,strftime('%Y-%m-%dT%H:%M:%fZ','now'));"
+  "INSERT OR IGNORE INTO schema_version(id,version,applied_at) VALUES(1,6,strftime('%Y-%m-%dT%H:%M:%fZ','now'));",
+  "-- Schema 7 is additive. Existing configuration/consent5 snapshots and all session rows stay unchanged.\nCREATE TABLE IF NOT EXISTS instrument_consent_snapshots (\n consent_text_sha256 TEXT PRIMARY KEY,\n researcher_config_sha256 TEXT NOT NULL,\n consent_template_version TEXT NOT NULL,\n instrument_version TEXT,\n consent_document_json TEXT NOT NULL,\n first_seen_at TEXT NOT NULL\n);",
+  "INSERT OR IGNORE INTO instrument_consent_snapshots\n SELECT consent_text_sha256,researcher_config_sha256,consent_template_version,NULL,consent_document_json,first_seen_at\n FROM config_snapshots;",
+  "CREATE TRIGGER IF NOT EXISTS instrument_consents_no_update BEFORE UPDATE ON instrument_consent_snapshots\nBEGIN SELECT RAISE(ABORT,'CONSENT_SNAPSHOT_IMMUTABLE'); END;",
+  "CREATE TRIGGER IF NOT EXISTS instrument_consents_no_delete BEFORE DELETE ON instrument_consent_snapshots\nBEGIN SELECT RAISE(ABORT,'CONSENT_SNAPSHOT_IMMUTABLE'); END;",
+  "ALTER TABLE deployment_state ADD COLUMN instrument_version TEXT;",
+  "ALTER TABLE deployment_state ADD COLUMN presentation_version TEXT;",
+  "ALTER TABLE deployment_state ADD COLUMN participant_consent_version TEXT NOT NULL DEFAULT 'PM-CONSENT-5';",
+  "ALTER TABLE deployment_state ADD COLUMN participant_consent_sha256 TEXT;",
+  "DROP TRIGGER IF EXISTS sessions_enrollment_commit_guard;",
+  "CREATE TRIGGER IF NOT EXISTS sessions_enrollment_commit_guard\nBEFORE INSERT ON sessions\nBEGIN\n  SELECT CASE WHEN NOT EXISTS (\n    SELECT 1 FROM study_run r JOIN config_snapshots c\n      ON c.researcher_config_sha256 = r.active_config_sha256\n    JOIN instrument_consent_snapshots d ON d.researcher_config_sha256 = c.researcher_config_sha256\n    JOIN deployment_state v ON v.id = 1\n    WHERE r.id = 1 AND r.run_id = NEW.run_id AND r.study_version = NEW.study_version\n      AND r.active_config_sha256 = json_extract(NEW.consent_config_json, '$.researcherConfigSha256')\n      AND d.consent_text_sha256 = json_extract(NEW.consent_config_json, '$.consentTextSha256')\n      AND d.consent_text_sha256 = json_extract(NEW.consent_json, '$.consentTextSha256')\n      AND d.consent_template_version = json_extract(NEW.consent_json, '$.version')\n      AND d.consent_template_version = v.participant_consent_version\n      AND d.consent_text_sha256 = COALESCE(v.participant_consent_sha256,c.consent_text_sha256)\n      AND json_extract(NEW.consent_config_json, '$.instrumentVersion') IS v.instrument_version\n      AND json_extract(NEW.consent_config_json, '$.presentationVersion') IS v.presentation_version\n      AND c.researcher_config_sha256 = json_extract(NEW.consent_json, '$.researcherConfigSha256')\n  ) THEN RAISE(ABORT, 'CONSENT_CONFIG_MISMATCH') END;\n  SELECT CASE WHEN NEW.is_test = 0 AND NOT EXISTS (\n    SELECT 1 FROM study_run WHERE id = 1 AND recruitment_open = 1\n  ) THEN RAISE(ABORT, 'RECRUITMENT_CLOSED') END;\n  SELECT CASE WHEN NEW.is_test = 0 AND (SELECT COUNT(*) FROM sessions WHERE is_test = 0) >= COALESCE((\n    SELECT json_extract(c.researcher_config_json, '$.recruitment.targetAllocations')\n    FROM study_run r JOIN config_snapshots c ON c.researcher_config_sha256 = r.active_config_sha256 WHERE r.id = 1\n  ), 0) THEN RAISE(ABORT, 'NEW_ENROLLMENT_CLOSED') END;\n  SELECT CASE WHEN (NEW.is_test = 0 AND NOT EXISTS (\n    SELECT 1 FROM slot_reservations WHERE slot = NEW.slot AND enrollment_hash = NEW.enrollment_hash\n  )) OR (NEW.is_test = 1 AND NOT EXISTS (\n    SELECT 1 FROM test_slot_reservations WHERE slot = NEW.slot - 1000000 AND enrollment_hash = NEW.enrollment_hash\n  )) THEN RAISE(ABORT, 'RESERVATION_SESSION_MISMATCH') END;\nEND;",
+  "CREATE TRIGGER IF NOT EXISTS session_consent_identity_immutable BEFORE UPDATE OF consent_config_json ON sessions\nWHEN NEW.consent_config_json IS NOT OLD.consent_config_json\nBEGIN SELECT RAISE(ABORT,'SESSION_INSTRUMENT_IDENTITY_IMMUTABLE'); END;",
+  "DROP VIEW IF EXISTS pm_research_exports;",
+  `CREATE VIEW IF NOT EXISTS pm_research_exports AS
+SELECT s.session_id,s.is_test,s.slot,
+ json_object(
+  'schema','political-mirror-research-export/1','collector','pm-cloud-collector/3.3.0',
+  'exportedAt',strftime('%Y-%m-%dT%H:%M:%fZ','now'),
+  'sessionId',s.session_id,'studyVersion',s.study_version,
+  'participantCode',CASE WHEN s.is_test=1 THEN printf('TEST%03d',s.slot-1000000+1) ELSE printf('P%03d',s.slot+1) END,
+  'instrumentVersion',json_extract(s.consent_config_json,'$.instrumentVersion'),
+  'presentationVersion',json_extract(s.consent_config_json,'$.presentationVersion'),
+  'consentVersion',json_extract(s.consent_config_json,'$.consentVersion'),
+  'background',json_object('instrumentVersion',json_extract(s.consent_config_json,'$.instrumentVersion'),'age',json(COALESCE(json_extract(s.checkpoint_json,'$.background.demographics.answers.age'),'{"status":"not_collected","value":null}')),'gender',json(COALESCE(json_extract(s.checkpoint_json,'$.background.demographics.answers.gender'),'{"status":"not_collected","value":null}')),'education',json(COALESCE(json_extract(s.checkpoint_json,'$.background.demographics.answers.education'),'{"status":"not_collected","value":null}')),'residenceCountry',json(COALESCE(json_extract(s.checkpoint_json,'$.background.demographics.answers.residenceCountry'),'{"status":"not_collected","value":null}')),'politicalContext',json(COALESCE(json_extract(s.checkpoint_json,'$.background.political.answers.politicalContext'),'{"status":"not_collected","value":null}')),'politicalOrientation',json(COALESCE(json_extract(s.checkpoint_json,'$.background.political.answers.politicalOrientation'),'{"status":"not_collected","value":null}')),'politicalInterest',json(COALESCE(json_extract(s.checkpoint_json,'$.background.political.answers.politicalInterest'),'{"status":"not_collected","value":null}'))),'assignment',json(s.assignment_json),
+  'consentConfig',json(s.consent_config_json),'consent',json(s.consent_json),
+  'test',json(CASE WHEN s.is_test=1 THEN 'true' ELSE 'false' END),
+  'simulated',json(CASE WHEN s.is_test=1 THEN 'true' ELSE 'false' END),
+  'slot',s.slot,'revision',s.revision,'checkpoint',json(s.checkpoint_json),
+  'prediction',json(s.prediction_json),'predictionReceipt',json(s.prediction_receipt_json),
+  'createdAt',s.created_at,'updatedAt',s.updated_at,'removedAt',s.removed_at,
+  'journalHeadSha256',s.last_event_sha256,'journalSequence',s.revision,
+  'consentDocument',json(COALESCE(d.consent_document_json,c.consent_document_json)),'researcherConfig',json(c.researcher_config_json),
+  'integrity',json_object(
+    'ok',json(CASE WHEN s.removed_at IS NOT NULL THEN 'null'
+     WHEN (SELECT COUNT(*) FROM session_events e WHERE e.session_id=s.session_id)=s.revision+1
+      AND (SELECT MIN(sequence) FROM session_events WHERE session_id=s.session_id)=0
+      AND (SELECT MAX(sequence) FROM session_events WHERE session_id=s.session_id)=s.revision
+      AND (SELECT record_sha256 FROM session_events WHERE session_id=s.session_id ORDER BY sequence DESC LIMIT 1) IS s.last_event_sha256
+      AND NOT EXISTS(SELECT 1 FROM session_events e LEFT JOIN session_events p
+        ON p.session_id=e.session_id AND p.sequence=e.sequence-1
+        WHERE e.session_id=s.session_id AND ((e.sequence=0 AND e.previous_sha256 IS NOT NULL)
+          OR (e.sequence>0 AND (p.sequence IS NULL OR e.previous_sha256 IS NOT p.record_sha256))))
+     THEN 'true' ELSE 'false' END),
+    'disposition',CASE WHEN s.removed_at IS NOT NULL THEN 'intentionally_removed' ELSE 'retained' END),
+  'events',json((SELECT json_group_array(json_object('session_id',e.session_id,'sequence',e.sequence,
+    'type',e.type,'at',e.at,'revision',e.revision,'stage',e.stage,'record_sha256',e.record_sha256,
+    'previous_sha256',e.previous_sha256,'summary',json(e.summary_json)))
+    FROM (SELECT * FROM session_events WHERE session_id=s.session_id ORDER BY sequence) e))
+ ) AS research_json
+FROM sessions s LEFT JOIN config_snapshots c
+ ON c.researcher_config_sha256=json_extract(s.consent_config_json,'$.researcherConfigSha256')
+LEFT JOIN instrument_consent_snapshots d
+ ON d.consent_text_sha256=json_extract(s.consent_config_json,'$.consentTextSha256');`,
+  "UPDATE participants SET research_json=(SELECT e.research_json FROM pm_research_exports e WHERE e.session_id=participants.session_id)\n WHERE EXISTS(SELECT 1 FROM sessions s WHERE s.session_id=participants.session_id AND s.removed_at IS NULL);",
+  "UPDATE storage_installation SET schema_version=7 WHERE id=1 AND product='political-mirror-autostorage' AND schema_version=6;",
+  "UPDATE schema_version SET version=7,applied_at=strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id=1 AND version=6;",
+  "-- Contact details are account-only operational data; never joined into research exports.\nCREATE TABLE IF NOT EXISTS participant_contacts (\n session_id TEXT PRIMARY KEY REFERENCES sessions(session_id) ON DELETE CASCADE,\n participant_code TEXT NOT NULL UNIQUE,\n name_raw TEXT NOT NULL,\n email_raw TEXT NOT NULL,\n collected_at TEXT NOT NULL,\n instrument_version TEXT NOT NULL CHECK(instrument_version='PM-BACKGROUND-2'),\n consent_version TEXT NOT NULL CHECK(consent_version='PM-CONSENT-7')\n);",
+  "CREATE TRIGGER IF NOT EXISTS participant_contacts_live_insert BEFORE INSERT ON participant_contacts\nBEGIN\n SELECT CASE WHEN NOT EXISTS(SELECT 1 FROM sessions s WHERE s.session_id=NEW.session_id AND s.removed_at IS NULL\n  AND s.stage='CONTACT'\n  AND json_extract(s.consent_config_json,'$.instrumentVersion')=NEW.instrument_version\n  AND json_extract(s.consent_config_json,'$.consentVersion')=NEW.consent_version\n  AND NEW.participant_code=CASE WHEN s.is_test=1 THEN printf('TEST%03d',s.slot-1000000+1) ELSE printf('P%03d',s.slot+1) END)\n THEN RAISE(ABORT,'CONTACT_SESSION_MISMATCH') END;\nEND;",
+  "CREATE TRIGGER IF NOT EXISTS participant_contacts_no_update BEFORE UPDATE ON participant_contacts\nBEGIN SELECT RAISE(ABORT,'CONTACT_RECORD_IMMUTABLE'); END;",
+  "-- All deletion paths set removed_at, including withdrawal, retention and account removal.\nCREATE TRIGGER IF NOT EXISTS participant_contacts_remove AFTER UPDATE OF removed_at ON sessions\nWHEN NEW.removed_at IS NOT NULL\nBEGIN DELETE FROM participant_contacts WHERE session_id=NEW.session_id; END;",
+  "-- Contact completion cannot be forged by a regular checkpoint or a racing writer.\nCREATE TRIGGER IF NOT EXISTS session_contact_completion_guard BEFORE UPDATE OF checkpoint_json ON sessions\nWHEN NEW.removed_at IS NULL AND json_extract(NEW.consent_config_json,'$.instrumentVersion')='PM-BACKGROUND-2'\n AND json_extract(NEW.checkpoint_json,'$.contact.status')='completed'\nBEGIN\n SELECT CASE WHEN NOT EXISTS(SELECT 1 FROM participant_contacts c WHERE c.session_id=NEW.session_id\n  AND c.collected_at=json_extract(NEW.checkpoint_json,'$.contact.collectedAt'))\n THEN RAISE(ABORT,'CONTACT_NOT_SAVED') END;\nEND;",
+  "DROP VIEW IF EXISTS pm_research_exports;",
+  `CREATE VIEW IF NOT EXISTS pm_research_exports AS
+SELECT s.session_id,s.is_test,s.slot,
+ json_object(
+  'schema','political-mirror-research-export/1','collector','pm-cloud-collector/3.4.0',
+  'exportedAt',strftime('%Y-%m-%dT%H:%M:%fZ','now'),
+  'sessionId',s.session_id,'studyVersion',s.study_version,
+  'participantCode',CASE WHEN s.is_test=1 THEN printf('TEST%03d',s.slot-1000000+1) ELSE printf('P%03d',s.slot+1) END,
+  'instrumentVersion',json_extract(s.consent_config_json,'$.instrumentVersion'),
+  'presentationVersion',json_extract(s.consent_config_json,'$.presentationVersion'),
+  'consentVersion',json_extract(s.consent_config_json,'$.consentVersion'),
+  'background',json_object('instrumentVersion',json_extract(s.consent_config_json,'$.instrumentVersion'),'age',json(COALESCE(json_extract(s.checkpoint_json,'$.background.demographics.answers.age'),'{"status":"not_collected","value":null}')),'gender',json(COALESCE(json_extract(s.checkpoint_json,'$.background.demographics.answers.gender'),'{"status":"not_collected","value":null}')),'education',json(COALESCE(json_extract(s.checkpoint_json,'$.background.demographics.answers.education'),'{"status":"not_collected","value":null}')),'residenceCountry',json(COALESCE(json_extract(s.checkpoint_json,'$.background.demographics.answers.residenceCountry'),'{"status":"not_collected","value":null}')),'politicalContext',json(COALESCE(json_extract(s.checkpoint_json,'$.background.political.answers.politicalContext'),'{"status":"not_collected","value":null}')),'politicalOrientation',json(COALESCE(json_extract(s.checkpoint_json,'$.background.political.answers.politicalOrientation'),'{"status":"not_collected","value":null}')),'politicalInterest',json(COALESCE(json_extract(s.checkpoint_json,'$.background.political.answers.politicalInterest'),'{"status":"not_collected","value":null}'))),'assignment',json(s.assignment_json),
+  'consentConfig',json(s.consent_config_json),'consent',json(s.consent_json),
+  'test',json(CASE WHEN s.is_test=1 THEN 'true' ELSE 'false' END),
+  'simulated',json(CASE WHEN s.is_test=1 THEN 'true' ELSE 'false' END),
+  'slot',s.slot,'revision',s.revision,'checkpoint',json(s.checkpoint_json),
+  'prediction',json(s.prediction_json),'predictionReceipt',json(s.prediction_receipt_json),
+  'createdAt',s.created_at,'updatedAt',s.updated_at,'removedAt',s.removed_at,
+  'journalHeadSha256',s.last_event_sha256,'journalSequence',s.revision,
+  'consentDocument',json(COALESCE(d.consent_document_json,c.consent_document_json)),'researcherConfig',json(c.researcher_config_json),
+  'integrity',json_object(
+    'ok',json(CASE WHEN s.removed_at IS NOT NULL THEN 'null'
+     WHEN (SELECT COUNT(*) FROM session_events e WHERE e.session_id=s.session_id)=s.revision+1
+      AND (SELECT MIN(sequence) FROM session_events WHERE session_id=s.session_id)=0
+      AND (SELECT MAX(sequence) FROM session_events WHERE session_id=s.session_id)=s.revision
+      AND (SELECT record_sha256 FROM session_events WHERE session_id=s.session_id ORDER BY sequence DESC LIMIT 1) IS s.last_event_sha256
+      AND NOT EXISTS(SELECT 1 FROM session_events e LEFT JOIN session_events p
+        ON p.session_id=e.session_id AND p.sequence=e.sequence-1
+        WHERE e.session_id=s.session_id AND ((e.sequence=0 AND e.previous_sha256 IS NOT NULL)
+          OR (e.sequence>0 AND (p.sequence IS NULL OR e.previous_sha256 IS NOT p.record_sha256))))
+     THEN 'true' ELSE 'false' END),
+    'disposition',CASE WHEN s.removed_at IS NOT NULL THEN 'intentionally_removed' ELSE 'retained' END),
+  'events',json((SELECT json_group_array(json_object('session_id',e.session_id,'sequence',e.sequence,
+    'type',e.type,'at',e.at,'revision',e.revision,'stage',e.stage,'record_sha256',e.record_sha256,
+    'previous_sha256',e.previous_sha256,'summary',json(e.summary_json)))
+    FROM (SELECT * FROM session_events WHERE session_id=s.session_id ORDER BY sequence) e))
+ ) AS research_json
+FROM sessions s LEFT JOIN config_snapshots c
+ ON c.researcher_config_sha256=json_extract(s.consent_config_json,'$.researcherConfigSha256')
+LEFT JOIN instrument_consent_snapshots d
+ ON d.consent_text_sha256=json_extract(s.consent_config_json,'$.consentTextSha256');`,
+  "UPDATE storage_installation SET schema_version=8 WHERE id=1 AND product='political-mirror-autostorage' AND schema_version=7;",
+  "UPDATE schema_version SET version=8,applied_at=strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id=1 AND version=7;"
+];
+
+// pilot-cloud/schema6-to7-statements.json
+var schema6_to7_statements_default = [
+  "-- Schema 7 is additive. Existing configuration/consent5 snapshots and all session rows stay unchanged.\nCREATE TABLE IF NOT EXISTS instrument_consent_snapshots (\n consent_text_sha256 TEXT PRIMARY KEY,\n researcher_config_sha256 TEXT NOT NULL,\n consent_template_version TEXT NOT NULL,\n instrument_version TEXT,\n consent_document_json TEXT NOT NULL,\n first_seen_at TEXT NOT NULL\n);",
+  "INSERT OR IGNORE INTO instrument_consent_snapshots\n SELECT consent_text_sha256,researcher_config_sha256,consent_template_version,NULL,consent_document_json,first_seen_at\n FROM config_snapshots;",
+  "CREATE TRIGGER IF NOT EXISTS instrument_consents_no_update BEFORE UPDATE ON instrument_consent_snapshots\nBEGIN SELECT RAISE(ABORT,'CONSENT_SNAPSHOT_IMMUTABLE'); END;",
+  "CREATE TRIGGER IF NOT EXISTS instrument_consents_no_delete BEFORE DELETE ON instrument_consent_snapshots\nBEGIN SELECT RAISE(ABORT,'CONSENT_SNAPSHOT_IMMUTABLE'); END;",
+  "ALTER TABLE deployment_state ADD COLUMN instrument_version TEXT;",
+  "ALTER TABLE deployment_state ADD COLUMN presentation_version TEXT;",
+  "ALTER TABLE deployment_state ADD COLUMN participant_consent_version TEXT NOT NULL DEFAULT 'PM-CONSENT-5';",
+  "ALTER TABLE deployment_state ADD COLUMN participant_consent_sha256 TEXT;",
+  "DROP TRIGGER IF EXISTS sessions_enrollment_commit_guard;",
+  "CREATE TRIGGER IF NOT EXISTS sessions_enrollment_commit_guard\nBEFORE INSERT ON sessions\nBEGIN\n  SELECT CASE WHEN NOT EXISTS (\n    SELECT 1 FROM study_run r JOIN config_snapshots c\n      ON c.researcher_config_sha256 = r.active_config_sha256\n    JOIN instrument_consent_snapshots d ON d.researcher_config_sha256 = c.researcher_config_sha256\n    JOIN deployment_state v ON v.id = 1\n    WHERE r.id = 1 AND r.run_id = NEW.run_id AND r.study_version = NEW.study_version\n      AND r.active_config_sha256 = json_extract(NEW.consent_config_json, '$.researcherConfigSha256')\n      AND d.consent_text_sha256 = json_extract(NEW.consent_config_json, '$.consentTextSha256')\n      AND d.consent_text_sha256 = json_extract(NEW.consent_json, '$.consentTextSha256')\n      AND d.consent_template_version = json_extract(NEW.consent_json, '$.version')\n      AND d.consent_template_version = v.participant_consent_version\n      AND d.consent_text_sha256 = COALESCE(v.participant_consent_sha256,c.consent_text_sha256)\n      AND json_extract(NEW.consent_config_json, '$.instrumentVersion') IS v.instrument_version\n      AND json_extract(NEW.consent_config_json, '$.presentationVersion') IS v.presentation_version\n      AND c.researcher_config_sha256 = json_extract(NEW.consent_json, '$.researcherConfigSha256')\n  ) THEN RAISE(ABORT, 'CONSENT_CONFIG_MISMATCH') END;\n  SELECT CASE WHEN NEW.is_test = 0 AND NOT EXISTS (\n    SELECT 1 FROM study_run WHERE id = 1 AND recruitment_open = 1\n  ) THEN RAISE(ABORT, 'RECRUITMENT_CLOSED') END;\n  SELECT CASE WHEN NEW.is_test = 0 AND (SELECT COUNT(*) FROM sessions WHERE is_test = 0) >= COALESCE((\n    SELECT json_extract(c.researcher_config_json, '$.recruitment.targetAllocations')\n    FROM study_run r JOIN config_snapshots c ON c.researcher_config_sha256 = r.active_config_sha256 WHERE r.id = 1\n  ), 0) THEN RAISE(ABORT, 'NEW_ENROLLMENT_CLOSED') END;\n  SELECT CASE WHEN (NEW.is_test = 0 AND NOT EXISTS (\n    SELECT 1 FROM slot_reservations WHERE slot = NEW.slot AND enrollment_hash = NEW.enrollment_hash\n  )) OR (NEW.is_test = 1 AND NOT EXISTS (\n    SELECT 1 FROM test_slot_reservations WHERE slot = NEW.slot - 1000000 AND enrollment_hash = NEW.enrollment_hash\n  )) THEN RAISE(ABORT, 'RESERVATION_SESSION_MISMATCH') END;\nEND;",
+  "CREATE TRIGGER IF NOT EXISTS session_consent_identity_immutable BEFORE UPDATE OF consent_config_json ON sessions\nWHEN NEW.consent_config_json IS NOT OLD.consent_config_json\nBEGIN SELECT RAISE(ABORT,'SESSION_INSTRUMENT_IDENTITY_IMMUTABLE'); END;",
+  "DROP VIEW IF EXISTS pm_research_exports;",
+  `CREATE VIEW IF NOT EXISTS pm_research_exports AS
+SELECT s.session_id,s.is_test,s.slot,
+ json_object(
+  'schema','political-mirror-research-export/1','collector','pm-cloud-collector/3.3.0',
+  'exportedAt',strftime('%Y-%m-%dT%H:%M:%fZ','now'),
+  'sessionId',s.session_id,'studyVersion',s.study_version,
+  'participantCode',CASE WHEN s.is_test=1 THEN printf('TEST%03d',s.slot-1000000+1) ELSE printf('P%03d',s.slot+1) END,
+  'instrumentVersion',json_extract(s.consent_config_json,'$.instrumentVersion'),
+  'presentationVersion',json_extract(s.consent_config_json,'$.presentationVersion'),
+  'consentVersion',json_extract(s.consent_config_json,'$.consentVersion'),
+  'background',json_object('instrumentVersion',json_extract(s.consent_config_json,'$.instrumentVersion'),'age',json(COALESCE(json_extract(s.checkpoint_json,'$.background.demographics.answers.age'),'{"status":"not_collected","value":null}')),'gender',json(COALESCE(json_extract(s.checkpoint_json,'$.background.demographics.answers.gender'),'{"status":"not_collected","value":null}')),'education',json(COALESCE(json_extract(s.checkpoint_json,'$.background.demographics.answers.education'),'{"status":"not_collected","value":null}')),'residenceCountry',json(COALESCE(json_extract(s.checkpoint_json,'$.background.demographics.answers.residenceCountry'),'{"status":"not_collected","value":null}')),'politicalContext',json(COALESCE(json_extract(s.checkpoint_json,'$.background.political.answers.politicalContext'),'{"status":"not_collected","value":null}')),'politicalOrientation',json(COALESCE(json_extract(s.checkpoint_json,'$.background.political.answers.politicalOrientation'),'{"status":"not_collected","value":null}')),'politicalInterest',json(COALESCE(json_extract(s.checkpoint_json,'$.background.political.answers.politicalInterest'),'{"status":"not_collected","value":null}'))),'assignment',json(s.assignment_json),
+  'consentConfig',json(s.consent_config_json),'consent',json(s.consent_json),
+  'test',json(CASE WHEN s.is_test=1 THEN 'true' ELSE 'false' END),
+  'simulated',json(CASE WHEN s.is_test=1 THEN 'true' ELSE 'false' END),
+  'slot',s.slot,'revision',s.revision,'checkpoint',json(s.checkpoint_json),
+  'prediction',json(s.prediction_json),'predictionReceipt',json(s.prediction_receipt_json),
+  'createdAt',s.created_at,'updatedAt',s.updated_at,'removedAt',s.removed_at,
+  'journalHeadSha256',s.last_event_sha256,'journalSequence',s.revision,
+  'consentDocument',json(COALESCE(d.consent_document_json,c.consent_document_json)),'researcherConfig',json(c.researcher_config_json),
+  'integrity',json_object(
+    'ok',json(CASE WHEN s.removed_at IS NOT NULL THEN 'null'
+     WHEN (SELECT COUNT(*) FROM session_events e WHERE e.session_id=s.session_id)=s.revision+1
+      AND (SELECT MIN(sequence) FROM session_events WHERE session_id=s.session_id)=0
+      AND (SELECT MAX(sequence) FROM session_events WHERE session_id=s.session_id)=s.revision
+      AND (SELECT record_sha256 FROM session_events WHERE session_id=s.session_id ORDER BY sequence DESC LIMIT 1) IS s.last_event_sha256
+      AND NOT EXISTS(SELECT 1 FROM session_events e LEFT JOIN session_events p
+        ON p.session_id=e.session_id AND p.sequence=e.sequence-1
+        WHERE e.session_id=s.session_id AND ((e.sequence=0 AND e.previous_sha256 IS NOT NULL)
+          OR (e.sequence>0 AND (p.sequence IS NULL OR e.previous_sha256 IS NOT p.record_sha256))))
+     THEN 'true' ELSE 'false' END),
+    'disposition',CASE WHEN s.removed_at IS NOT NULL THEN 'intentionally_removed' ELSE 'retained' END),
+  'events',json((SELECT json_group_array(json_object('session_id',e.session_id,'sequence',e.sequence,
+    'type',e.type,'at',e.at,'revision',e.revision,'stage',e.stage,'record_sha256',e.record_sha256,
+    'previous_sha256',e.previous_sha256,'summary',json(e.summary_json)))
+    FROM (SELECT * FROM session_events WHERE session_id=s.session_id ORDER BY sequence) e))
+ ) AS research_json
+FROM sessions s LEFT JOIN config_snapshots c
+ ON c.researcher_config_sha256=json_extract(s.consent_config_json,'$.researcherConfigSha256')
+LEFT JOIN instrument_consent_snapshots d
+ ON d.consent_text_sha256=json_extract(s.consent_config_json,'$.consentTextSha256');`,
+  "UPDATE participants SET research_json=(SELECT e.research_json FROM pm_research_exports e WHERE e.session_id=participants.session_id)\n WHERE EXISTS(SELECT 1 FROM sessions s WHERE s.session_id=participants.session_id AND s.removed_at IS NULL);",
+  "UPDATE storage_installation SET schema_version=7 WHERE id=1 AND product='political-mirror-autostorage' AND schema_version=6;",
+  "UPDATE schema_version SET version=7,applied_at=strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id=1 AND version=6;"
+];
+
+// pilot-cloud/schema7-to8-statements.json
+var schema7_to8_statements_default = [
+  "-- Contact details are account-only operational data; never joined into research exports.\nCREATE TABLE IF NOT EXISTS participant_contacts (\n session_id TEXT PRIMARY KEY REFERENCES sessions(session_id) ON DELETE CASCADE,\n participant_code TEXT NOT NULL UNIQUE,\n name_raw TEXT NOT NULL,\n email_raw TEXT NOT NULL,\n collected_at TEXT NOT NULL,\n instrument_version TEXT NOT NULL CHECK(instrument_version='PM-BACKGROUND-2'),\n consent_version TEXT NOT NULL CHECK(consent_version='PM-CONSENT-7')\n);",
+  "CREATE TRIGGER IF NOT EXISTS participant_contacts_live_insert BEFORE INSERT ON participant_contacts\nBEGIN\n SELECT CASE WHEN NOT EXISTS(SELECT 1 FROM sessions s WHERE s.session_id=NEW.session_id AND s.removed_at IS NULL\n  AND s.stage='CONTACT'\n  AND json_extract(s.consent_config_json,'$.instrumentVersion')=NEW.instrument_version\n  AND json_extract(s.consent_config_json,'$.consentVersion')=NEW.consent_version\n  AND NEW.participant_code=CASE WHEN s.is_test=1 THEN printf('TEST%03d',s.slot-1000000+1) ELSE printf('P%03d',s.slot+1) END)\n THEN RAISE(ABORT,'CONTACT_SESSION_MISMATCH') END;\nEND;",
+  "CREATE TRIGGER IF NOT EXISTS participant_contacts_no_update BEFORE UPDATE ON participant_contacts\nBEGIN SELECT RAISE(ABORT,'CONTACT_RECORD_IMMUTABLE'); END;",
+  "-- All deletion paths set removed_at, including withdrawal, retention and account removal.\nCREATE TRIGGER IF NOT EXISTS participant_contacts_remove AFTER UPDATE OF removed_at ON sessions\nWHEN NEW.removed_at IS NOT NULL\nBEGIN DELETE FROM participant_contacts WHERE session_id=NEW.session_id; END;",
+  "-- Contact completion cannot be forged by a regular checkpoint or a racing writer.\nCREATE TRIGGER IF NOT EXISTS session_contact_completion_guard BEFORE UPDATE OF checkpoint_json ON sessions\nWHEN NEW.removed_at IS NULL AND json_extract(NEW.consent_config_json,'$.instrumentVersion')='PM-BACKGROUND-2'\n AND json_extract(NEW.checkpoint_json,'$.contact.status')='completed'\nBEGIN\n SELECT CASE WHEN NOT EXISTS(SELECT 1 FROM participant_contacts c WHERE c.session_id=NEW.session_id\n  AND c.collected_at=json_extract(NEW.checkpoint_json,'$.contact.collectedAt'))\n THEN RAISE(ABORT,'CONTACT_NOT_SAVED') END;\nEND;",
+  "DROP VIEW IF EXISTS pm_research_exports;",
+  `CREATE VIEW IF NOT EXISTS pm_research_exports AS
+SELECT s.session_id,s.is_test,s.slot,
+ json_object(
+  'schema','political-mirror-research-export/1','collector','pm-cloud-collector/3.4.0',
+  'exportedAt',strftime('%Y-%m-%dT%H:%M:%fZ','now'),
+  'sessionId',s.session_id,'studyVersion',s.study_version,
+  'participantCode',CASE WHEN s.is_test=1 THEN printf('TEST%03d',s.slot-1000000+1) ELSE printf('P%03d',s.slot+1) END,
+  'instrumentVersion',json_extract(s.consent_config_json,'$.instrumentVersion'),
+  'presentationVersion',json_extract(s.consent_config_json,'$.presentationVersion'),
+  'consentVersion',json_extract(s.consent_config_json,'$.consentVersion'),
+  'background',json_object('instrumentVersion',json_extract(s.consent_config_json,'$.instrumentVersion'),'age',json(COALESCE(json_extract(s.checkpoint_json,'$.background.demographics.answers.age'),'{"status":"not_collected","value":null}')),'gender',json(COALESCE(json_extract(s.checkpoint_json,'$.background.demographics.answers.gender'),'{"status":"not_collected","value":null}')),'education',json(COALESCE(json_extract(s.checkpoint_json,'$.background.demographics.answers.education'),'{"status":"not_collected","value":null}')),'residenceCountry',json(COALESCE(json_extract(s.checkpoint_json,'$.background.demographics.answers.residenceCountry'),'{"status":"not_collected","value":null}')),'politicalContext',json(COALESCE(json_extract(s.checkpoint_json,'$.background.political.answers.politicalContext'),'{"status":"not_collected","value":null}')),'politicalOrientation',json(COALESCE(json_extract(s.checkpoint_json,'$.background.political.answers.politicalOrientation'),'{"status":"not_collected","value":null}')),'politicalInterest',json(COALESCE(json_extract(s.checkpoint_json,'$.background.political.answers.politicalInterest'),'{"status":"not_collected","value":null}'))),'assignment',json(s.assignment_json),
+  'consentConfig',json(s.consent_config_json),'consent',json(s.consent_json),
+  'test',json(CASE WHEN s.is_test=1 THEN 'true' ELSE 'false' END),
+  'simulated',json(CASE WHEN s.is_test=1 THEN 'true' ELSE 'false' END),
+  'slot',s.slot,'revision',s.revision,'checkpoint',json(s.checkpoint_json),
+  'prediction',json(s.prediction_json),'predictionReceipt',json(s.prediction_receipt_json),
+  'createdAt',s.created_at,'updatedAt',s.updated_at,'removedAt',s.removed_at,
+  'journalHeadSha256',s.last_event_sha256,'journalSequence',s.revision,
+  'consentDocument',json(COALESCE(d.consent_document_json,c.consent_document_json)),'researcherConfig',json(c.researcher_config_json),
+  'integrity',json_object(
+    'ok',json(CASE WHEN s.removed_at IS NOT NULL THEN 'null'
+     WHEN (SELECT COUNT(*) FROM session_events e WHERE e.session_id=s.session_id)=s.revision+1
+      AND (SELECT MIN(sequence) FROM session_events WHERE session_id=s.session_id)=0
+      AND (SELECT MAX(sequence) FROM session_events WHERE session_id=s.session_id)=s.revision
+      AND (SELECT record_sha256 FROM session_events WHERE session_id=s.session_id ORDER BY sequence DESC LIMIT 1) IS s.last_event_sha256
+      AND NOT EXISTS(SELECT 1 FROM session_events e LEFT JOIN session_events p
+        ON p.session_id=e.session_id AND p.sequence=e.sequence-1
+        WHERE e.session_id=s.session_id AND ((e.sequence=0 AND e.previous_sha256 IS NOT NULL)
+          OR (e.sequence>0 AND (p.sequence IS NULL OR e.previous_sha256 IS NOT p.record_sha256))))
+     THEN 'true' ELSE 'false' END),
+    'disposition',CASE WHEN s.removed_at IS NOT NULL THEN 'intentionally_removed' ELSE 'retained' END),
+  'events',json((SELECT json_group_array(json_object('session_id',e.session_id,'sequence',e.sequence,
+    'type',e.type,'at',e.at,'revision',e.revision,'stage',e.stage,'record_sha256',e.record_sha256,
+    'previous_sha256',e.previous_sha256,'summary',json(e.summary_json)))
+    FROM (SELECT * FROM session_events WHERE session_id=s.session_id ORDER BY sequence) e))
+ ) AS research_json
+FROM sessions s LEFT JOIN config_snapshots c
+ ON c.researcher_config_sha256=json_extract(s.consent_config_json,'$.researcherConfigSha256')
+LEFT JOIN instrument_consent_snapshots d
+ ON d.consent_text_sha256=json_extract(s.consent_config_json,'$.consentTextSha256');`,
+  "UPDATE storage_installation SET schema_version=8 WHERE id=1 AND product='political-mirror-autostorage' AND schema_version=7;",
+  "UPDATE schema_version SET version=8,applied_at=strftime('%Y-%m-%dT%H:%M:%fZ','now') WHERE id=1 AND version=7;"
 ];
 
 // pilot/sha256.mjs
@@ -246,7 +461,10 @@ function loadResearcherConfig(raw) {
 
 // pilot/consent-text.mjs
 var CONSENT_TEMPLATE_VERSION = "PM-CONSENT-5";
-function buildConsentDocument(researcher = {}) {
+function buildConsentDocument(researcher = {}, version2 = CONSENT_TEMPLATE_VERSION) {
+  if (version2 === "PM-CONSENT-7") return buildContactConsentDocument(researcher);
+  if (version2 === "PM-CONSENT-6") return buildBackgroundConsentDocument(researcher);
+  if (version2 !== CONSENT_TEMPLATE_VERSION) throw new Error("UNSUPPORTED_CONSENT_VERSION");
   const r = researcher, e = r.ethics || {};
   const duration = r.estimatedDurationMinutes ? `about ${r.estimatedDurationMinutes} minutes (${r.durationEstimateBasis || "researcher estimate"})` : "a duration the researcher has not yet confirmed";
   const arrangement = {
@@ -281,12 +499,420 @@ function buildConsentDocument(researcher = {}) {
     ]
   };
 }
-function consentDocumentSha256(researcher) {
-  return sha256Hex(stableJSON(buildConsentDocument(researcher)));
+function buildBackgroundConsentDocument(researcher) {
+  const doc = buildConsentDocument(researcher, "PM-CONSENT-5");
+  doc.version = "PM-CONSENT-6";
+  const knownResearcher = researcher.principalInvestigator === "\u8A79\u5B50\u6BC5" && researcher.institution === "\u6E05\u83EF\u5927\u5B78 \u6559\u80B2\u8207\u5FC3\u7406\u8AEE\u5546\u5B78\u7CFB Agile Brain and Cognition Lab";
+  const researcherName = knownResearcher ? "Brian Zhan" : researcher.principalInvestigator || "Researcher not yet named";
+  const laboratory = knownResearcher ? "Agile Brain and Cognition Lab" : null;
+  doc.title = "Political Mirror";
+  doc.participantDisplay = { researcherName, laboratory, contactEmail: researcher.contactEmail || "" };
+  doc.researcherLine = `Researcher: ${researcherName}${laboratory ? ` (${laboratory})` : ""}`;
+  doc.contactLine = `Contact: ${researcher.contactEmail || ""}`;
+  for (const section of doc.sections) section.paragraphs = section.paragraphs.map((text3) => text3.replace("conference pilot paper", "conference paper").replace("before this pilot", "before this study"));
+  const task = doc.sections.find((s) => s.heading === "What you will do");
+  task.paragraphs.push("After agreeing, you will answer four short questions about your age, gender, education and country of residence. You must give your age to confirm that you are 18 or older. You may choose \u201CPrefer not to say\u201D for gender, education and country of residence. After all three sets of cases, you will answer three questions about the country whose politics you know best, your political views on a left-to-right scale, and your interest in politics. All three political background questions require answers to continue. You may still stop taking part at any time.");
+  const data = doc.sections.find((s) => s.heading === "Your data and privacy");
+  data.paragraphs.splice(
+    1,
+    0,
+    "We also record your age, gender (including any description you choose to provide), completed education, country of residence, the country whose politics you know best, political views and political interest. These answers are stored with the same session code as your study responses, under the same access, retention and withdrawal arrangements. We use them to describe the people who took part and for exploratory research. This small study cannot establish differences caused by nationality or political views. Political background is asked after the tasks and may reflect your experience in the study. Left and right can mean different things in different countries.",
+    "We do not ask for your name, phone number, email address, street address, date of birth or membership of a political party. Country names and an optional gender description are free text; please enter only what is asked and avoid names or other identifying details. We retain your country answers as you type them. We do not use your IP address to fill in a country answer."
+  );
+  const stop = doc.sections.find((s) => s.heading === "Voluntary participation and your right to stop");
+  stop.paragraphs[0] = stop.paragraphs[0].replace("your submitted answers, game records, predictions and questionnaire", "your submitted answers, background answers, game records, predictions and questionnaire");
+  return doc;
+}
+function buildContactConsentDocument(researcher) {
+  const doc = buildBackgroundConsentDocument(researcher);
+  doc.version = "PM-CONSENT-7";
+  const task = doc.sections.find((s) => s.heading === "What you will do");
+  task.paragraphs[0] = task.paragraphs[0].replace("answer optional questions about your experience", "answer 14 optional questions about your experience by choosing options or ratings");
+  task.paragraphs[1] = task.paragraphs[1].replace("After agreeing, you will answer four short questions", "After agreeing, you will first enter your name and an email address where the researcher can contact you. Both are required to continue. You will then answer four short questions");
+  const data = doc.sections.find((s) => s.heading === "Your data and privacy");
+  data.paragraphs[0] = data.paragraphs[0].replace("We do not ask for your name; please do not enter your name or other identifying details in free-text answers. The records are pseudonymous (linked to a code, not to your identity), not absolutely anonymous.", "We also collect your name and contact email address. These are stored separately from your study answers, but they are linked by your session code. The researcher and supervising professor can link your identity to your coded responses, so this study is not anonymous. Ordinary research-data downloads do not include your name or email address; this separation does not make your responses anonymous.");
+  data.paragraphs[2] = "We use your name and email address only to administer your participation, contact you about this participation, and handle withdrawal or deletion requests. They are not used in research analysis, for future-study invitations or for promotional messages. They follow the same access and retention arrangements stated below, including the stated retention period after the study ends. Only the researcher and supervising professor with authorized account access can retrieve the separately stored contact details. We do not ask for your phone number, street address, date of birth or membership of a political party. Apart from the name and contact email fields, please enter only what each question asks and avoid other identifying details. We retain your country answers as you type them. We do not use your IP address to fill in a country answer.";
+  const withdrawalIndex = data.paragraphs.findIndex((text3) => text3.startsWith("Withdrawal of data:"));
+  data.paragraphs[withdrawalIndex] = data.paragraphs[withdrawalIndex].replace(/[.\s]*$/, ".") + " The same withdrawal and deletion arrangements apply to your separately stored name and email address as well as your linked study responses.";
+  const stop = doc.sections.find((s) => s.heading === "Voluntary participation and your right to stop");
+  stop.paragraphs[0] = stop.paragraphs[0].replace("your submitted answers, background answers, game records, predictions and questionnaire", "your name, contact email address, submitted answers, background answers, game records, predictions and questionnaire");
+  doc.confirmations.find((c) => c.id === "agreed").text = "I agree to take part in this study and to the described use of my name, email address and study responses.";
+  return doc;
+}
+function consentDocumentSha256(researcher, version2 = CONSENT_TEMPLATE_VERSION) {
+  return sha256Hex(stableJSON(buildConsentDocument(researcher, version2)));
+}
+
+// src/playtest.mjs
+var PLAYTEST_SEEDS = {
+  natural: {
+    seed: null,
+    label: "Natural seed",
+    note: "A random world. What an ordinary player gets."
+  },
+  defeat: {
+    seed: "POL-003K",
+    label: "Forced early defeat",
+    note: "Most scripted styles lose the first election here, and every one of those runs finds a way back. Re-hunted for v0.37: the formative years leave players stronger, so no seed defeats every style any more."
+  },
+  close: {
+    seed: "POL-001J",
+    label: "Competitive",
+    note: "Across the shipped backgrounds and styles, only one run loses the first election; mayoral results span 15.7 points and one lands at 49.72%. Choices decide it."
+  },
+  strong: {
+    seed: "POL-001Q",
+    label: "Strong opponent",
+    note: "A true STRONG-rival world. Twelve of eighteen runs lose first, four still win the mayoralty, and four of the twelve defeated runs find a comeback."
+  }
+};
+function resolveTestMode(raw) {
+  const k = String(raw || "").toLowerCase();
+  return Object.prototype.hasOwnProperty.call(PLAYTEST_SEEDS, k) ? k : null;
+}
+var SURVEY = [
+  {
+    id: "q1",
+    type: "scale7",
+    q: "How much did you want to keep playing until the end?",
+    lo: "Wanted to stop",
+    hi: "Wanted to keep going"
+  },
+  { id: "q2", type: "text", q: "At what point, if any, did the game start to feel repetitive?" },
+  { id: "q3", type: "text", q: "Which decision was hardest to make?" },
+  {
+    id: "q4",
+    type: "yesno_text",
+    q: 'Did any choice feel like it had an obvious "correct answer"?',
+    followUp: "Which one?"
+  },
+  {
+    id: "q5",
+    type: "choice",
+    q: "When an old case returned years later, did you remember the original event?",
+    options: ["Yes, clearly", "Vaguely", "No"]
+  },
+  {
+    id: "q6",
+    type: "choice",
+    q: "If you lost an election: did losing make you want to continue?",
+    options: ["More", "Same", "Less", "Not applicable"]
+  },
+  {
+    id: "q7",
+    type: "choice",
+    q: "How did the locked resource options feel?",
+    options: ["A meaningful constraint", "Frustrating", "Confusing", "Barely noticed them"]
+  },
+  {
+    id: "q8",
+    type: "scale7",
+    q: "Did the Mini Mirror feel specific to your choices?",
+    lo: "Could be anyone",
+    hi: "Specifically me"
+  },
+  { id: "q9", type: "text", q: "Did anything in the Mirror surprise you?" },
+  {
+    id: "q10",
+    type: "scale7_na",
+    q: "Did the Counterfactual Audit help you understand why voters reacted differently?",
+    lo: "Not at all",
+    hi: "A lot",
+    na: "I did not open it"
+  },
+  {
+    id: "q11",
+    type: "scale7",
+    q: "After playing, how interested are you in living another political life?",
+    lo: "Not at all",
+    hi: "Very"
+  },
+  { id: "q12", type: "text", q: "What single thing would make you want to play again?" },
+  // ── ability section (v0.36 build only) ──
+  {
+    id: "q13",
+    type: "scale7",
+    section: "ability",
+    q: "Did developing your politician make the game feel more like a political life?",
+    lo: "Not at all",
+    hi: "Very much"
+  },
+  {
+    id: "q14",
+    type: "choice",
+    section: "ability",
+    q: "Did the development choices feel like career decisions, or like a stat menu?",
+    options: [
+      "Strongly like career decisions",
+      "Somewhat like career decisions",
+      "Mixed",
+      "Somewhat like stat allocation",
+      "Strongly like stat allocation"
+    ]
+  },
+  {
+    id: "q15",
+    type: "multitext",
+    section: "ability",
+    q: "Without looking back: what do you think each of these actually does?",
+    fields: ["Public Communication", "Policy & Governance", "Organization", "Negotiation", "Political Strategy"]
+  },
+  {
+    id: "q16",
+    type: "choice",
+    section: "ability",
+    q: "Which ability felt most useful in your run?",
+    options: ["Public Communication", "Policy & Governance", "Organization", "Negotiation", "Political Strategy", "None stood out"]
+  },
+  {
+    id: "q17",
+    type: "choice",
+    section: "ability",
+    q: "Which ability felt least noticeable?",
+    options: ["Public Communication", "Policy & Governance", "Organization", "Negotiation", "Political Strategy", "They all registered"]
+  },
+  {
+    id: "q18",
+    type: "scale7",
+    section: "ability",
+    q: "Did you understand why some development choices produced more growth than others?",
+    lo: "No idea",
+    hi: "Completely clear"
+  },
+  {
+    id: "q19",
+    type: "choice",
+    section: "ability",
+    q: "Some things came more naturally to your politician than others. That felt:",
+    options: ["Interesting", "Confusing", "Unfair", "Barely noticed it", "Not sure"]
+  },
+  {
+    id: "q20",
+    type: "yesno_text",
+    section: "ability",
+    q: 'Did any option you could not take make you think "I wish I had developed differently"?',
+    followUp: "Which moment?"
+  },
+  {
+    id: "q21",
+    type: "scale7_text",
+    section: "ability",
+    q: "Did the development screen ever interrupt the feeling of living a political life?",
+    lo: "Never",
+    hi: "Constantly",
+    followUp: "Anything you want to add?"
+  },
+  {
+    id: "q22",
+    type: "scale7",
+    section: "ability",
+    q: "If you played again, would you deliberately build a different kind of politician?",
+    lo: "Same again",
+    hi: "Definitely different"
+  }
+];
+var ABILITY_SURVEY_IDS = SURVEY.filter((q) => q.section === "ability").map((q) => q.id);
+
+// pilot/participant-instrument.mjs
+var PARTICIPANT_INSTRUMENT_VERSION = "PM-BACKGROUND-2";
+var PARTICIPANT_CONSENT_VERSION = "PM-CONSENT-7";
+var PARTICIPANT_PRESENTATION_VERSION = "0.38.3-background.4";
+var REMOVED_SURVEY_IDS = Object.freeze(["q2", "q3", "q4", "q9", "q12", "q15", "q20", "q21"]);
+var PARTICIPANT_SURVEY_IDS = Object.freeze(SURVEY.filter((q) => !REMOVED_SURVEY_IDS.includes(q.id)).map((q) => q.id));
+var version = (value) => typeof value === "object" && value !== null ? value.instrumentVersion : value;
+var insist = (condition, message2) => {
+  if (!condition) throw new Error(message2);
+};
+var object = (value) => !!value && typeof value === "object" && !Array.isArray(value);
+var date = (value) => typeof value === "string" && Number.isFinite(Date.parse(value));
+var same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+function exactKeys(value, keys, message2) {
+  insist(object(value) && Object.keys(value).length === keys.length && keys.every((key) => Object.hasOwn(value, key)), message2);
+}
+function hasBackgroundInstrument(value) {
+  return ["PM-BACKGROUND-1", PARTICIPANT_INSTRUMENT_VERSION].includes(version(value));
+}
+function hasParticipantContact(value) {
+  return version(value) === PARTICIPANT_INSTRUMENT_VERSION;
+}
+function consentVersionForInstrument(value) {
+  const instrument = version(value);
+  if (instrument === void 0 || instrument === null) return "PM-CONSENT-5";
+  if (instrument === "PM-BACKGROUND-1") return "PM-CONSENT-6";
+  insist(instrument === PARTICIPANT_INSTRUMENT_VERSION, "Unknown background instrument");
+  return PARTICIPANT_CONSENT_VERSION;
+}
+function surveyQuestionsForInstrument(questions, value) {
+  return hasParticipantContact(value) ? questions.filter((q) => !REMOVED_SURVEY_IDS.includes(q.id)) : questions;
+}
+function validateQuestionnaireForInstrument(answers, value) {
+  if (!hasParticipantContact(value)) return true;
+  insist(object(answers), "Invalid questionnaire answers");
+  const questions = surveyQuestionsForInstrument(SURVEY, value);
+  for (const [key, answer] of Object.entries(answers)) {
+    const question = questions.find((q) => q.id === key);
+    insist(question, `Questionnaire field is not collected by this instrument: ${key}`);
+    if (question.type === "choice") insist(question.options.includes(answer), `Invalid questionnaire answer: ${key}`);
+    else insist(Number.isInteger(answer) && answer >= 1 && answer <= 7 || question.type === "scale7_na" && answer === "NA", `Invalid questionnaire answer: ${key}`);
+  }
+  return true;
+}
+function validateContactSubmission(input) {
+  exactKeys(input, ["nameRaw", "emailRaw"], "Enter your name and contact email.");
+  insist(typeof input.nameRaw === "string" && input.nameRaw.length <= 200 && input.nameRaw.trim().length > 0 && !/[\r\n]/.test(input.nameRaw), "Enter your name.");
+  insist(typeof input.emailRaw === "string" && input.emailRaw.length <= 254 && !/[\r\n]/.test(input.emailRaw) && /^[^\s@]+@[^\s@]+\.[^\s@]+$/u.test(input.emailRaw.trim()), "Enter a valid email address.");
+  return { nameRaw: input.nameRaw, emailRaw: input.emailRaw };
+}
+function validateContactMetadata(contact) {
+  exactKeys(contact, ["status", "collectedAt"], "Invalid contact metadata; direct identifiers are stored separately");
+  insist(["not_collected", "completed"].includes(contact.status), "Invalid contact status");
+  insist(contact.status === "not_collected" ? contact.collectedAt === null : date(contact.collectedAt), "Invalid contact collection time");
+  return true;
+}
+function validateContactTransition(previous, next) {
+  validateContactMetadata(next.contact);
+  if (previous.contact.status === "completed" || previous.stage !== "CONTACT")
+    insist(same(previous.contact, next.contact), "Contact metadata changed outside contact collection");
+  return true;
+}
+function assertNoContactIdentifiers(value) {
+  if (!value || typeof value !== "object") return true;
+  for (const [key, child] of Object.entries(value)) {
+    insist(!["nameRaw", "emailRaw", "contactName", "contactEmail", "contactDetails"].includes(key), "Direct contact identifiers cannot be saved in research data");
+    if (child && typeof child === "object") assertNoContactIdentifiers(child);
+  }
+  return true;
+}
+
+// pilot/background.mjs
+var BACKGROUND_INSTRUMENT_VERSION = "PM-BACKGROUND-1";
+var BACKGROUND_CONSENT_VERSION = "PM-CONSENT-6";
+var BACKGROUND_PRESENTATION_VERSION = "0.38.3-background.3";
+var BACKGROUND_FIELDS = Object.freeze({
+  demographics: Object.freeze(["age", "gender", "education", "residenceCountry"]),
+  political: Object.freeze(["politicalContext", "politicalOrientation", "politicalInterest"])
+});
+var GENDER_OPTIONS = Object.freeze([
+  { value: "male", label: "Male" },
+  { value: "female", label: "Female" },
+  { value: "non_binary", label: "Non-binary" },
+  { value: "another_gender", label: "Another gender (please specify)" },
+  { value: "prefer_not_to_say", label: "Prefer not to say" }
+]);
+var EDUCATION_OPTIONS = Object.freeze([
+  { value: "less_than_high_school", label: "Less than high school" },
+  { value: "high_school", label: "High school or equivalent" },
+  { value: "some_college", label: "Some college or university, no degree" },
+  { value: "associate", label: "Associate degree or equivalent" },
+  { value: "bachelor", label: "Bachelor's degree" },
+  { value: "master", label: "Master's degree" },
+  { value: "doctoral_professional", label: "Doctoral or professional degree" },
+  { value: "other", label: "Other" },
+  { value: "prefer_not_to_say", label: "Prefer not to say" }
+]);
+var insist2 = (ok, message2) => {
+  if (!ok) throw new Error(message2);
+};
+var object2 = (x) => !!x && typeof x === "object" && !Array.isArray(x);
+var date2 = (x) => typeof x === "string" && Number.isFinite(Date.parse(x));
+var missing = () => ({ status: "not_collected", value: null });
+var fields = Object.values(BACKGROUND_FIELDS).flat();
+var same2 = (a, b) => JSON.stringify(a) === JSON.stringify(b);
+function knownKeys(value, allowed, message2) {
+  insist2(object2(value), message2);
+  for (const key of Object.keys(value)) insist2(allowed.includes(key), `${message2}: unknown field ${key}`);
+}
+function text2(value, name, { required = true, max = 200 } = {}) {
+  insist2(typeof value === "string" && value.length <= max && (!required || value.trim().length > 0), `Invalid ${name}`);
+}
+function validateBackgroundAnswer(field, answer, { complete = false } = {}) {
+  insist2(fields.includes(field), "Unknown background field");
+  knownKeys(answer, ["status", "value", "raw", "detailRaw", "touched"], `Invalid ${field} answer`);
+  const allowed = ["answered", "not_collected"];
+  if (["gender", "education", "residenceCountry"].includes(field)) allowed.push("prefer_not_to_say");
+  insist2(allowed.includes(answer.status), `Invalid ${field} response status`);
+  if (answer.status !== "answered") {
+    insist2(answer.value === null, `${field} nonanswer must have a null value`);
+    insist2(!Object.keys(answer).some((k) => ["raw", "detailRaw", "touched"].includes(k)), `${field} nonanswer cannot contain a response`);
+    if (complete) insist2(answer.status !== "not_collected", `Please answer ${field}`);
+    return true;
+  }
+  if (field === "age") {
+    insist2(Number.isSafeInteger(answer.value), "Enter your age as a whole number.");
+    insist2(answer.value >= 18, "You must be 18 or older to take part.");
+    if (Object.hasOwn(answer, "raw")) {
+      text2(answer.raw, "age raw input", { max: 30 });
+      insist2(/^\d+$/.test(answer.raw.trim()) && Number(answer.raw.trim()) === answer.value, "Age raw input does not match the age.");
+    }
+  } else if (field === "gender" || field === "education") {
+    const choices = field === "gender" ? GENDER_OPTIONS : EDUCATION_OPTIONS;
+    insist2(choices.some((x) => x.value === answer.value && x.value !== "prefer_not_to_say"), `Invalid ${field} choice`);
+    if (field === "gender" && answer.value === "another_gender") text2(answer.detailRaw, "gender description");
+    else if (field === "education" && answer.value === "other" && Object.hasOwn(answer, "detailRaw")) text2(answer.detailRaw, "education description", { required: false });
+    else insist2(!Object.hasOwn(answer, "detailRaw"), `Unexpected ${field} description`);
+  } else if (field === "residenceCountry" || field === "politicalContext") {
+    text2(answer.value, field);
+    text2(answer.raw, `${field} raw input`);
+    insist2(answer.value === answer.raw, `${field} must preserve the original country input`);
+  } else if (field === "politicalOrientation") {
+    insist2(Number.isInteger(answer.value) && answer.value >= 0 && answer.value <= 10, "Choose a number from 0 to 10.");
+    insist2(answer.touched === true, "Move or select the slider to answer.");
+  } else if (field === "politicalInterest") {
+    insist2(Number.isInteger(answer.value) && answer.value >= 1 && answer.value <= 7, "Choose a number from 1 to 7.");
+  }
+  if (!["age", "residenceCountry", "politicalContext"].includes(field)) insist2(!Object.hasOwn(answer, "raw"), `Unexpected ${field} raw input`);
+  if (!["gender", "education"].includes(field)) insist2(!Object.hasOwn(answer, "detailRaw"), `Unexpected ${field} description`);
+  if (field !== "politicalOrientation") insist2(!Object.hasOwn(answer, "touched"), `Unexpected ${field} interaction marker`);
+  return true;
+}
+function validateBackgroundAnswers(block, answers, { complete = false, partial = false } = {}) {
+  insist2(BACKGROUND_FIELDS[block], "Unknown background block");
+  knownKeys(answers, BACKGROUND_FIELDS[block], `Invalid ${block} answers`);
+  for (const field of BACKGROUND_FIELDS[block]) {
+    if (partial && !Object.hasOwn(answers, field)) continue;
+    validateBackgroundAnswer(field, answers[field], { complete });
+  }
+  return true;
+}
+function validateBackground(background) {
+  knownKeys(background, ["instrumentVersion", ...Object.keys(BACKGROUND_FIELDS)], "Invalid background data");
+  insist2(hasBackgroundInstrument(background.instrumentVersion), "Unknown background instrument");
+  for (const block of Object.keys(BACKGROUND_FIELDS)) {
+    const value = background[block];
+    knownKeys(value, ["status", "answers", "startedAt", "completedAt"], `Invalid ${block} block`);
+    insist2(["not_collected", "in_progress", "completed"].includes(value.status), `Invalid ${block} block status`);
+    validateBackgroundAnswers(block, value.answers, { complete: value.status === "completed" });
+    if (value.status === "not_collected") {
+      insist2(value.startedAt === null && value.completedAt === null, `Unexpected ${block} timestamps`);
+      insist2(Object.values(value.answers).every((a) => a.status === "not_collected"), `Premature ${block} answers`);
+    } else {
+      insist2(date2(value.startedAt), `Invalid ${block} start timestamp`);
+      if (value.status === "completed") insist2(date2(value.completedAt) && Date.parse(value.completedAt) >= Date.parse(value.startedAt), `Invalid ${block} completion timestamp`);
+      else insist2(value.completedAt === null, `Premature ${block} completion timestamp`);
+    }
+  }
+  return true;
+}
+function validateBackgroundTransition(previous, next) {
+  validateBackground(next);
+  insist2(previous.instrumentVersion === next.instrumentVersion, "Background instrument changed");
+  for (const block of Object.keys(BACKGROUND_FIELDS)) {
+    const a = previous[block], b = next[block];
+    if (a.status === "completed") insist2(same2(a, b), `Completed ${block} answers changed`);
+    if (a.startedAt) insist2(a.startedAt === b.startedAt, `${block} start timestamp changed`);
+    if (a.status === "in_progress") insist2(b.status !== "not_collected", `${block} progress cannot be reset`);
+  }
+  return true;
+}
+function exportBackground(state) {
+  const response = { instrumentVersion: state.instrumentVersion ?? null };
+  for (const [block, names] of Object.entries(BACKGROUND_FIELDS)) for (const field of names)
+    response[field] = structuredClone(state.background?.[block]?.answers?.[field] ?? missing());
+  return response;
 }
 
 // pilot-cloud/auto-storage.mjs
-var STORAGE_SCHEMA = 6;
+var STORAGE_SCHEMA = 8;
 var PRODUCT = "political-mirror-autostorage";
 function fail(code, status = 503) {
   const e = new Error(code);
@@ -304,16 +930,21 @@ async function readDeployment(env, url) {
   const assetURL = new URL("/study-deployment.json", url);
   const response = await env.ASSETS.fetch(new Request(assetURL, { method: "GET" }));
   check(response.ok, "DEPLOYMENT_SETTINGS_FILE_MISSING");
-  const text2 = await response.text();
-  check(text2.length < 1e5, "DEPLOYMENT_SETTINGS_TOO_LARGE");
+  const text3 = await response.text();
+  check(text3.length < 1e5, "DEPLOYMENT_SETTINGS_TOO_LARGE");
   let m;
   try {
-    m = JSON.parse(text2);
+    m = JSON.parse(text3);
   } catch {
     fail("DEPLOYMENT_SETTINGS_INVALID_JSON");
   }
   check(m && m.schema === "pm-autostorage-deployment/1", "DEPLOYMENT_SETTINGS_WRONG_FORMAT");
-  check(m.releaseVersion === "0.38.3-storage.2", "DEPLOYMENT_RELEASE_MISMATCH");
+  check(["0.38.3-storage.2", "0.38.3-storage.3", "0.38.3-storage.4"].includes(m.releaseVersion), "DEPLOYMENT_RELEASE_MISMATCH");
+  const current = m.releaseVersion !== "0.38.3-storage.2";
+  if (m.releaseVersion === "0.38.3-storage.4") check(m.instrumentVersion === PARTICIPANT_INSTRUMENT_VERSION && m.consentVersion === PARTICIPANT_CONSENT_VERSION && m.presentationVersion === PARTICIPANT_PRESENTATION_VERSION, "DEPLOYMENT_INSTRUMENT_MISMATCH");
+  else if (current) check(m.instrumentVersion === BACKGROUND_INSTRUMENT_VERSION && m.consentVersion === BACKGROUND_CONSENT_VERSION && m.presentationVersion === BACKGROUND_PRESENTATION_VERSION, "DEPLOYMENT_INSTRUMENT_MISMATCH");
+  else check(!m.instrumentVersion && !m.presentationVersion && (!m.consentVersion || m.consentVersion === "PM-CONSENT-5"), "DEPLOYMENT_INSTRUMENT_MISMATCH");
+  const instrumentVersion = current ? m.instrumentVersion : null, presentationVersion = current ? m.presentationVersion : null, consentVersion = current ? m.consentVersion : "PM-CONSENT-5";
   check(Number.isSafeInteger(m.revision) && m.revision > 0, "DEPLOYMENT_REVISION_INVALID");
   check(["TEST", "HUMAN", "CLOSED"].includes(m.mode), "DEPLOYMENT_MODE_INVALID");
   const loaded = m.researcherConfig == null ? null : loadResearcherConfig(m.researcherConfig);
@@ -323,32 +954,48 @@ async function readDeployment(env, url) {
   check(Array.isArray(removals) && removals.length <= 20 && removals.every((x) => typeof x === "string" && /^[a-f0-9-]{36}$/.test(x)), "INVALID_REMOVAL_SESSION_IDS");
   check(removals.length === 0 || m.mode === "CLOSED", "CLOSE_RECRUITMENT_FOR_DEPLOYMENT_REMOVAL");
   const document = loaded ? buildConsentDocument(loaded.config) : null;
+  const participantDocument = loaded ? buildConsentDocument(loaded.config, consentVersion) : null;
+  const participantConsentSha256 = loaded ? consentDocumentSha256(loaded.config, consentVersion) : null;
   const content = { schema: m.schema, releaseVersion: m.releaseVersion, revision: m.revision, mode: m.mode, researcherConfig: loaded?.config ?? null, removeSessionIds: [...new Set(removals)].sort() };
-  return { revision: m.revision, mode: m.mode, loaded, document, removals: content.removeSessionIds, digest: sha256Hex(stableJSON(content)) };
+  if (current) Object.assign(content, { instrumentVersion, presentationVersion, consentVersion });
+  return { revision: m.revision, mode: m.mode, loaded, document, participantDocument, participantConsentSha256, instrumentVersion, presentationVersion, consentVersion, removals: content.removeSessionIds, digest: sha256Hex(stableJSON(content)) };
 }
 async function inspectSchema(db) {
   const table = await db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='schema_version'").first();
   if (!table) return null;
-  const version = await db.prepare("SELECT version FROM schema_version WHERE id=1").first();
-  check(version?.version === STORAGE_SCHEMA, "USE_A_NEW_DEDICATED_DATABASE: existing schema is not auto-storage version 6");
+  const version2 = await db.prepare("SELECT version FROM schema_version WHERE id=1").first();
+  check([6, 7, STORAGE_SCHEMA].includes(version2?.version), "INCOMPATIBLE_DATABASE: this release supports the existing Political Mirror auto-storage schema 6, 7 or 8 only");
   const marker = await db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='storage_installation'").first();
   check(marker, "DATABASE_OWNERSHIP_MARKER_MISSING");
   const identity = await db.prepare("SELECT product,schema_version FROM storage_installation WHERE id=1").first();
-  check(identity?.product === PRODUCT && identity.schema_version === STORAGE_SCHEMA, "DATABASE_OWNERSHIP_MISMATCH");
-  return version;
+  check(identity?.product === PRODUCT && identity.schema_version === version2.version, "DATABASE_OWNERSHIP_MISMATCH");
+  return version2;
+}
+async function migrate(db, found) {
+  if (found.version === STORAGE_SCHEMA) return found;
+  try {
+    await db.batch([...found.version === 6 ? schema6_to7_statements_default : [], ...schema7_to8_statements_default].map((sql) => db.prepare(sql)));
+  } catch (e) {
+    const current = await inspectSchema(db);
+    if (current?.version === STORAGE_SCHEMA) return current;
+    fail("SCHEMA_MIGRATION_FAILED_NO_PARTIAL_CHANGES: " + message(e).slice(0, 170));
+  }
+  return await inspectSchema(db);
 }
 async function initialize(db) {
   let found = await inspectSchema(db);
-  if (found) return found;
+  if (found) return await migrate(db, found);
   const others = await db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' AND name NOT LIKE '_cf_%' AND name != 'd1_migrations'").all();
   if (others.results.length) {
     found = await inspectSchema(db);
-    if (found) return found;
+    if (found) return await migrate(db, found);
     fail("DATABASE_NOT_EMPTY: create a new dedicated D1; existing data was not changed");
   }
   try {
     await db.batch(schema_statements_default.map((sql) => db.prepare(sql)));
   } catch (e) {
+    const current = await inspectSchema(db);
+    if (current?.version === STORAGE_SCHEMA) return current;
     fail("AUTOMATIC_DATABASE_SETUP_FAILED: " + message(e).slice(0, 170));
   }
   return await inspectSchema(db);
@@ -363,8 +1010,13 @@ async function applyDeployment(db, m) {
   }
   const at = (/* @__PURE__ */ new Date()).toISOString();
   try {
-    await db.prepare(`UPDATE deployment_state SET revision=?,manifest_sha256=?,config_sha256=?,
-   consent_text_sha256=?,researcher_config_json=?,consent_document_json=?,mode=?,updated_at=?,removal_ids_json=?
+    const writes = [];
+    if (m.loaded) writes.push(db.prepare(`INSERT OR IGNORE INTO instrument_consent_snapshots
+    (consent_text_sha256,researcher_config_sha256,consent_template_version,instrument_version,consent_document_json,first_seen_at)
+    VALUES(?,?,?,?,?,?)`).bind(m.participantConsentSha256, m.loaded.sha256, m.consentVersion, m.instrumentVersion, JSON.stringify(m.participantDocument), at));
+    writes.push(db.prepare(`UPDATE deployment_state SET revision=?,manifest_sha256=?,config_sha256=?,
+   consent_text_sha256=?,researcher_config_json=?,consent_document_json=?,mode=?,updated_at=?,removal_ids_json=?,
+   instrument_version=?,presentation_version=?,participant_consent_version=?,participant_consent_sha256=?
    WHERE id=1 AND revision<?`).bind(
       m.revision,
       m.digest,
@@ -375,8 +1027,13 @@ async function applyDeployment(db, m) {
       m.mode,
       at,
       JSON.stringify(m.removals),
+      m.instrumentVersion,
+      m.presentationVersion,
+      m.consentVersion,
+      m.participantConsentSha256,
       m.revision
-    ).run();
+    ));
+    await db.batch(writes);
   } catch (e) {
     if (/CONFIG_LOCKED_AFTER_FIRST_CONSENT/.test(message(e))) fail("STUDY_INFORMATION_LOCKED: use the original saved study details", 409);
     if (/CANNOT_REOPEN_TEST_MODE/.test(message(e))) fail("CANNOT_CHANGE_HUMAN_STUDY_BACK_TO_TEST", 409);
@@ -488,7 +1145,7 @@ function freezeDeep(value) {
 }
 var FORMS = freezeDeep(Object.fromEntries(Object.entries(TEXTS).map(([form, rows]) => [
   form,
-  rows.map(([title, text2], index) => {
+  rows.map(([title, text3], index) => {
     const [slot, dimension, level, features] = FEATURE_ROWS[index];
     return {
       id: `${form}_${slot}`,
@@ -499,7 +1156,7 @@ var FORMS = freezeDeep(Object.fromEntries(Object.entries(TEXTS).map(([form, rows
       pairId: `${form}_${dimension}`,
       level,
       title,
-      text: text2,
+      text: text3,
       features: { ...features },
       prompt: JUDGMENT_PROMPT,
       votePrompt: VOTE_PROMPT,
@@ -521,95 +1178,167 @@ function getCase(caseId) {
 
 // pilot/study.mjs
 var STUDY_VERSION = "0.38.3-pilot.1";
-var CONSENT_VERSION = "PM-CONSENT-5";
 var STAGES = ["CONSENT", "T0", "GAME", "PREDICTION", "T1", "MIRROR", "T2", "SURVEY", "DEBRIEF", "COMPLETE"];
-var insist = (condition, message2) => {
+var BACKGROUND_STAGES = ["CONSENT", "DEMOGRAPHICS", "T0", "GAME", "PREDICTION", "T1", "MIRROR", "T2", "POLITICAL_BACKGROUND", "SURVEY", "DEBRIEF", "COMPLETE"];
+var PARTICIPANT_STAGES = ["CONSENT", "CONTACT", "DEMOGRAPHICS", "T0", "GAME", "PREDICTION", "T1", "MIRROR", "T2", "POLITICAL_BACKGROUND", "SURVEY", "DEBRIEF", "COMPLETE"];
+function stagesFor(s) {
+  return hasParticipantContact(s) ? PARTICIPANT_STAGES : hasBackgroundInstrument(s) ? BACKGROUND_STAGES : STAGES;
+}
+var clone = (x) => structuredClone(x);
+var iso = (value) => new Date(value ?? Date.now()).toISOString();
+var insist3 = (condition, message2) => {
   if (!condition) throw new Error(message2);
 };
 var eq = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 var validDate = (x) => typeof x === "string" && Number.isFinite(Date.parse(x));
 var validScore = (x) => Number.isInteger(x) && x >= 0 && x <= 100;
+function requireStage(s, stage) {
+  insist3(s.stage === stage, `Expected ${stage}, received ${s.stage}`);
+}
+function event(s, type, now2, detail = {}) {
+  const at = iso(now2);
+  s.timestamps.updatedAt = at;
+  s.events.push({ seq: s.events.length + 1, type, at, stage: s.stage, ...detail });
+  return s;
+}
+function mutable(s) {
+  validateStudyState(s);
+  return clone(s);
+}
 function formFor(s, block) {
   return s.assignment.formOrder[["T0", "T1", "T2"].indexOf(block)];
 }
+function finishContact(state, now2) {
+  const s = mutable(state);
+  requireStage(s, "CONTACT");
+  insist3(hasParticipantContact(s), "This session does not collect contact details");
+  const at = iso(now2);
+  s.contact = { status: "completed", collectedAt: at };
+  s.timestamps.contactCompletedAt = at;
+  s.stage = "DEMOGRAPHICS";
+  event(s, "CONTACT_COMPLETED", at);
+  validateStudyState(s);
+  return s;
+}
 function validateGameSnapshot(s, g) {
-  insist(g?.schema === "political-mirror-study-game/1", "Missing game snapshot");
-  insist(g.sessionId === s.sessionId && g.arm === s.assignment.arm, "Game identity/arm changed");
-  insist(g.spec?.testMode === "natural" && g.spec?.agentCount === 700, "Unexpected game configuration");
-  insist(Array.isArray(g.transcript) && g.canonicalState && typeof g.canonicalHash === "string", "Incomplete canonical snapshot");
-  insist(g.telemetry && typeof g.telemetry === "object", "Game telemetry missing");
+  insist3(g?.schema === "political-mirror-study-game/1", "Missing game snapshot");
+  insist3(g.sessionId === s.sessionId && g.arm === s.assignment.arm, "Game identity/arm changed");
+  insist3(g.spec?.testMode === "natural" && g.spec?.agentCount === 700, "Unexpected game configuration");
+  insist3(Array.isArray(g.transcript) && g.canonicalState && typeof g.canonicalHash === "string", "Incomplete canonical snapshot");
+  insist3(g.telemetry && typeof g.telemetry === "object", "Game telemetry missing");
+  for (const answers of [g.presentation?.survey, g.telemetry?.survey, g.playtest?.survey])
+    if (answers !== void 0 && answers !== null) validateQuestionnaireForInstrument(answers, s);
+  if (hasParticipantContact(s)) assertNoContactIdentifiers(g);
   if (s.game) {
-    insist(g.transcript.length >= s.game.transcript.length, "Canonical actions cannot disappear");
-    insist(eq(g.transcript.slice(0, s.game.transcript.length), s.game.transcript), "Canonical history changed");
-    if (s.stage !== "GAME") insist(eq(g.canonicalState, s.game.canonicalState) && g.canonicalHash === s.game.canonicalHash, "Feedback/survey must not alter canonical state");
+    insist3(g.transcript.length >= s.game.transcript.length, "Canonical actions cannot disappear");
+    insist3(eq(g.transcript.slice(0, s.game.transcript.length), s.game.transcript), "Canonical history changed");
+    if (s.stage !== "GAME") insist3(eq(g.canonicalState, s.game.canonicalState) && g.canonicalHash === s.game.canonicalHash, "Feedback/survey must not alter canonical state");
   }
 }
 function validateStudyState(s, { predictionCommitted } = {}) {
-  insist(s?.schema === "political-mirror-study/1" && s.studyVersion === STUDY_VERSION, "Unknown study schema/version");
-  insist(typeof s.sessionId === "string" && s.participantId === s.sessionId, "Participant/session mismatch");
-  insist(s.coreGame?.version === "0.37.2" && /^[a-f0-9]{64}$/.test(s.coreGame.buildHash) && /^[a-f0-9]{64}$/.test(s.coreGame.sourceManifestHash), "Frozen build identity missing");
-  insist(s.consentVersion === CONSENT_VERSION, "Consent version mismatch");
-  insist(["TRUE", "SHUFFLED"].includes(s.assignment?.arm), "Unknown arm");
-  insist(["ABC", "BCA", "CAB"].includes(s.assignment?.formOrder?.join("")), "Unknown parallel form order");
-  insist([...STAGES, "WITHDRAWN"].includes(s.stage), "Unknown stage");
-  insist(s.status === ({ "COMPLETE": "complete", "WITHDRAWN": "withdrawn" }[s.stage] || "in_progress"), "Status/stage mismatch");
-  insist(validDate(s.timestamps?.createdAt) && validDate(s.timestamps?.updatedAt), "Invalid timestamps");
-  insist(Array.isArray(s.events) && Array.isArray(s.technicalErrors), "Audit arrays missing");
-  s.events.forEach((e, i) => insist(e.seq === i + 1 && validDate(e.at), "Invalid event sequence"));
-  if (!["CONSENT", "WITHDRAWN"].includes(s.stage)) insist(consentRecordIsComplete(s.consent) && s.consent.version === CONSENT_VERSION, "Active consent required");
+  insist3(s?.schema === "political-mirror-study/1" && s.studyVersion === STUDY_VERSION, "Unknown study schema/version");
+  insist3(typeof s.sessionId === "string" && s.participantId === s.sessionId, "Participant/session mismatch");
+  insist3(s.coreGame?.version === "0.37.2" && /^[a-f0-9]{64}$/.test(s.coreGame.buildHash) && /^[a-f0-9]{64}$/.test(s.coreGame.sourceManifestHash), "Frozen build identity missing");
+  const hasBackground = hasBackgroundInstrument(s);
+  insist3(s.instrumentVersion === void 0 || hasBackground, "Unknown background instrument");
+  insist3(s.consentVersion === consentVersionForInstrument(s), "Consent version mismatch");
+  if (hasBackground) {
+    insist3(typeof s.presentationVersion === "string" && s.presentationVersion.length > 0 && s.presentationVersion.length <= 100, "Invalid presentation version");
+    validateBackground(s.background);
+    insist3(s.background.instrumentVersion === s.instrumentVersion, "Background instrument mismatch");
+  } else insist3(s.background === void 0 && s.presentationVersion === void 0, "Legacy session cannot acquire a new background instrument");
+  if (hasParticipantContact(s)) {
+    const allowed = ["schema", "studyVersion", "coreGame", "consentVersion", "participantId", "sessionId", "assignment", "stage", "consent", "responses", "presentation", "game", "prediction", "predictionReceipt", "questionnaire", "timestamps", "events", "status", "technicalErrors", "instrumentVersion", "presentationVersion", "background", "contact", "withdrawal"];
+    insist3(Object.keys(s).every((key) => allowed.includes(key)), "Unknown study state field");
+    validateContactMetadata(s.contact);
+    assertNoContactIdentifiers(s);
+    validateQuestionnaireForInstrument(s.questionnaire, s);
+    if (s.contact.status === "completed") {
+      insist3(consentRecordIsComplete(s.consent), "Contact details require prior consent");
+      insist3(s.events.filter((e) => e.type === "CONTACT_COMPLETED").length === 1 && s.events.some((e) => e.type === "CONTACT_COMPLETED" && e.at === s.contact.collectedAt), "Contact completion record missing");
+    }
+  } else insist3(s.contact === void 0, "Legacy session cannot acquire contact collection");
+  insist3(["TRUE", "SHUFFLED"].includes(s.assignment?.arm), "Unknown arm");
+  insist3(["ABC", "BCA", "CAB"].includes(s.assignment?.formOrder?.join("")), "Unknown parallel form order");
+  const stages = stagesFor(s);
+  insist3([...stages, "WITHDRAWN"].includes(s.stage), "Unknown stage");
+  insist3(s.status === ({ "COMPLETE": "complete", "WITHDRAWN": "withdrawn" }[s.stage] || "in_progress"), "Status/stage mismatch");
+  insist3(validDate(s.timestamps?.createdAt) && validDate(s.timestamps?.updatedAt), "Invalid timestamps");
+  insist3(Array.isArray(s.events) && Array.isArray(s.technicalErrors), "Audit arrays missing");
+  s.events.forEach((e, i) => insist3(e.seq === i + 1 && validDate(e.at), "Invalid event sequence"));
+  if (!["CONSENT", "WITHDRAWN"].includes(s.stage)) insist3(consentRecordIsComplete(s.consent) && s.consent.version === s.consentVersion, "Active consent required");
   for (const block of ["T0", "T1", "T2"]) {
     const rows = s.responses?.[block];
-    insist(Array.isArray(rows) && rows.length <= 8, `Invalid ${block} rows`);
+    insist3(Array.isArray(rows) && rows.length <= 8, `Invalid ${block} rows`);
     const cases = getCases(formFor(s, block));
-    rows.forEach((r, i) => insist(r.caseId === cases[i].id && validScore(r.score) && ["RETAIN", "REPLACE"].includes(r.vote) && validDate(r.presentedAt) && validDate(r.answeredAt) && Date.parse(r.answeredAt) >= Date.parse(r.presentedAt) && Number.isFinite(r.rtMs) && r.rtMs === Date.parse(r.answeredAt) - Date.parse(r.presentedAt), `Invalid ${block} response ${i}`));
+    rows.forEach((r, i) => insist3(r.caseId === cases[i].id && validScore(r.score) && ["RETAIN", "REPLACE"].includes(r.vote) && validDate(r.presentedAt) && validDate(r.answeredAt) && Date.parse(r.answeredAt) >= Date.parse(r.presentedAt) && Number.isFinite(r.rtMs) && r.rtMs === Date.parse(r.answeredAt) - Date.parse(r.presentedAt), `Invalid ${block} response ${i}`));
   }
-  if (s.stage === "CONSENT") insist(Object.values(s.responses).every((rows) => rows.length === 0) && !s.presentation && !s.game && !s.prediction && Object.keys(s.questionnaire).length === 0, "No research responses before consent");
-  if (s.stage === "T0") insist(!s.game && !s.prediction, "Gameplay cannot precede completed T0");
-  if (Object.values(s.responses).some((rows) => rows.length) || s.game) insist(s.consent?.agreed === true && s.consent?.eligible === true && s.consent?.adult === true, "Research data require prior consent");
-  const ix = STAGES.indexOf(s.stage);
-  if (ix >= 2) insist(s.responses.T0.length === 8, "T0 incomplete");
-  if (ix >= 5) insist(s.responses.T1.length === 8, "T1 incomplete");
-  if (ix >= 7) insist(s.responses.T2.length === 8, "T2 incomplete");
-  if (ix < 4 && s.stage !== "WITHDRAWN") insist(s.responses.T1.length === 0, "Premature T1 data");
-  if (ix < 6 && s.stage !== "WITHDRAWN") insist(s.responses.T2.length === 0, "Premature T2 data");
+  if (s.stage === "CONSENT") insist3(Object.values(s.responses).every((rows) => rows.length === 0) && !s.presentation && !s.game && !s.prediction && Object.keys(s.questionnaire).length === 0, "No research responses before consent");
+  if (s.stage === "CONTACT") insist3(Object.values(s.responses).every((rows) => rows.length === 0) && !s.presentation && !s.game && !s.prediction && Object.keys(s.questionnaire).length === 0, "No research responses before contact collection");
+  if (s.stage === "DEMOGRAPHICS") insist3(Object.values(s.responses).every((rows) => rows.length === 0) && !s.presentation && !s.game && !s.prediction && Object.keys(s.questionnaire).length === 0, "No research responses before demographics");
+  if (s.stage === "T0") insist3(!s.game && !s.prediction, "Gameplay cannot precede completed T0");
+  if (Object.values(s.responses).some((rows) => rows.length) || s.game) insist3(s.consent?.agreed === true && s.consent?.eligible === true && s.consent?.adult === true, "Research data require prior consent");
+  const ix = stages.indexOf(s.stage);
+  if (hasParticipantContact(s)) {
+    if (["CONSENT", "CONTACT"].includes(s.stage)) insist3(s.contact.status === "not_collected", "Premature contact collection");
+    if (ix >= stages.indexOf("DEMOGRAPHICS")) insist3(s.contact.status === "completed", "Contact collection incomplete");
+  }
+  if (hasBackground) {
+    if (["CONSENT", "CONTACT"].includes(s.stage)) insist3(s.background.demographics.status === "not_collected", "Background answers require consent and prior contact collection");
+    if (ix >= stages.indexOf("T0")) insist3(s.background.demographics.status === "completed", "Demographics incomplete");
+    if (ix < stages.indexOf("POLITICAL_BACKGROUND") && s.stage !== "WITHDRAWN") insist3(s.background.political.status === "not_collected", "Political background must follow T2");
+    if (ix >= stages.indexOf("SURVEY")) insist3(s.background.political.status === "completed", "Political background incomplete");
+    if (Object.values(s.background).some((b) => b?.status && b.status !== "not_collected")) insist3(consentRecordIsComplete(s.consent) && s.consent.version === s.consentVersion, "Background answers require prior consent");
+  }
+  if (ix >= stages.indexOf("GAME")) insist3(s.responses.T0.length === 8, "T0 incomplete");
+  if (ix >= stages.indexOf("MIRROR")) insist3(s.responses.T1.length === 8, "T1 incomplete");
+  if (ix > stages.indexOf("T2")) insist3(s.responses.T2.length === 8, "T2 incomplete");
+  if (ix < stages.indexOf("T1") && s.stage !== "WITHDRAWN") insist3(s.responses.T1.length === 0, "Premature T1 data");
+  if (ix < stages.indexOf("T2") && s.stage !== "WITHDRAWN") insist3(s.responses.T2.length === 0, "Premature T2 data");
   if (s.presentation) {
-    insist(["T0", "T1", "T2"].includes(s.stage) && s.presentation.block === s.stage, "Invalid item presentation");
-    insist(s.presentation.caseId === getCases(formFor(s, s.stage))[s.responses[s.stage].length]?.id && validDate(s.presentation.presentedAt), "Wrong presented item");
+    insist3(["T0", "T1", "T2"].includes(s.stage) && s.presentation.block === s.stage, "Invalid item presentation");
+    insist3(s.presentation.caseId === getCases(formFor(s, s.stage))[s.responses[s.stage].length]?.id && validDate(s.presentation.presentedAt), "Wrong presented item");
   }
-  if (ix >= 3) insist(s.game?.canonicalState?.phase === "MINI_MIRROR", "Missing completed canonical game");
+  if (ix >= stages.indexOf("PREDICTION")) insist3(s.game?.canonicalState?.phase === "MINI_MIRROR", "Missing completed canonical game");
   if (s.game) validateGameSnapshot({ ...s, game: null }, s.game);
-  if (ix >= 4 || s.responses.T1.length || s.responses.T2.length || s.prediction) {
+  if (ix >= stages.indexOf("T1") || s.responses.T1.length || s.responses.T2.length || s.prediction) {
     const p = s.prediction;
-    insist(p && s.predictionReceipt?.predictionSha256 && validDate(s.predictionReceipt.committedAt), "Missing committed prediction");
-    insist(predictionCommitted !== false, "Server prediction not committed");
-    insist(p.participantId === s.participantId && p.sessionId === s.sessionId && p.studyVersion === s.studyVersion && p.coreHash === s.coreGame.buildHash, "Prediction identity mismatch");
-    insist(p.form === formFor(s, "T1") && validDate(p.timestamp), "Prediction form/timestamp mismatch");
-    insist(Array.isArray(p.predictions) && p.predictions.length === 8 && p.modelState, "Incomplete prediction payload");
+    insist3(p && s.predictionReceipt?.predictionSha256 && validDate(s.predictionReceipt.committedAt), "Missing committed prediction");
+    insist3(predictionCommitted !== false, "Server prediction not committed");
+    insist3(p.participantId === s.participantId && p.sessionId === s.sessionId && p.studyVersion === s.studyVersion && p.coreHash === s.coreGame.buildHash, "Prediction identity mismatch");
+    insist3(p.form === formFor(s, "T1") && validDate(p.timestamp), "Prediction form/timestamp mismatch");
+    insist3(Array.isArray(p.predictions) && p.predictions.length === 8 && p.modelState, "Incomplete prediction payload");
     p.predictions.forEach((r, i) => {
-      insist(r.caseId === getCases(p.form)[i].id, "Wrong prediction case");
-      for (const m of ["M0", "M1", "M2", "M3"]) insist(Number.isFinite(r[m]?.predictedScore) && r[m].predictedScore >= 0 && r[m].predictedScore <= 100, "Invalid prediction score");
+      insist3(r.caseId === getCases(p.form)[i].id, "Wrong prediction case");
+      for (const m of ["M0", "M1", "M2", "M3"]) insist3(Number.isFinite(r[m]?.predictedScore) && r[m].predictedScore >= 0 && r[m].predictedScore <= 100, "Invalid prediction score");
     });
     const commitEvent = s.events.find((e) => e.type === "PREDICTION_COMMITTED");
     const firstT1 = s.events.find((e) => e.type === "ITEM_PRESENTED" && e.block === "T1");
-    insist(commitEvent, "Prediction commit event missing");
-    if (firstT1) insist(firstT1.seq > commitEvent.seq, "T1 presentation precedes prediction commitment");
+    insist3(commitEvent, "Prediction commit event missing");
+    if (firstT1) insist3(firstT1.seq > commitEvent.seq, "T1 presentation precedes prediction commitment");
   }
   return true;
 }
 function validateStudyTransition(previous, next, options = {}) {
   validateStudyState(next, options);
   if (!previous) return true;
-  for (const field of ["schema", "studyVersion", "coreGame", "consentVersion", "participantId", "sessionId", "assignment"])
-    insist(eq(previous[field], next[field]), `Immutable field changed: ${field}`);
-  if (previous.consent) insist(eq(previous.consent, next.consent), "Consent changed");
-  for (const b2 of ["T0", "T1", "T2"]) insist(eq(previous.responses[b2], next.responses[b2].slice(0, previous.responses[b2].length)), "A saved response changed");
-  insist(eq(previous.events, next.events.slice(0, previous.events.length)), "Audit history changed");
-  insist(eq(previous.technicalErrors, next.technicalErrors.slice(0, previous.technicalErrors.length)), "Error history changed");
-  if (previous.prediction) insist(eq(previous.prediction, next.prediction) && eq(previous.predictionReceipt, next.predictionReceipt), "Prediction lock changed");
+  for (const field of ["schema", "studyVersion", "coreGame", "consentVersion", "instrumentVersion", "presentationVersion", "participantId", "sessionId", "assignment"])
+    insist3(eq(previous[field], next[field]), `Immutable field changed: ${field}`);
+  if (previous.consent) insist3(eq(previous.consent, next.consent), "Consent changed");
+  for (const b2 of ["T0", "T1", "T2"]) insist3(eq(previous.responses[b2], next.responses[b2].slice(0, previous.responses[b2].length)), "A saved response changed");
+  insist3(eq(previous.events, next.events.slice(0, previous.events.length)), "Audit history changed");
+  insist3(eq(previous.technicalErrors, next.technicalErrors.slice(0, previous.technicalErrors.length)), "Error history changed");
+  if (previous.prediction) insist3(eq(previous.prediction, next.prediction) && eq(previous.predictionReceipt, next.predictionReceipt), "Prediction lock changed");
   if (previous.game && next.game) validateGameSnapshot(previous, next.game);
-  const a = STAGES.indexOf(previous.stage), b = STAGES.indexOf(next.stage);
-  if (next.stage !== "WITHDRAWN") insist(previous.stage !== "WITHDRAWN" && b >= a && b <= a + 1, "Illegal study transition");
-  if (previous.stage === "COMPLETE") insist(next.stage === "COMPLETE", "Completed session reopened");
+  if (previous.contact) validateContactTransition(previous, next);
+  if (previous.background) {
+    validateBackgroundTransition(previous.background, next.background);
+    for (const [block, stage] of [["demographics", "DEMOGRAPHICS"], ["political", "POLITICAL_BACKGROUND"]])
+      if (previous.stage !== stage) insist3(eq(previous.background[block], next.background[block]), `${block} answers cannot change outside their background stage`);
+  }
+  const stages = stagesFor(previous), a = stages.indexOf(previous.stage), b = stages.indexOf(next.stage);
+  if (next.stage !== "WITHDRAWN") insist3(previous.stage !== "WITHDRAWN" && b >= a && b <= a + 1, "Illegal study transition");
+  if (previous.stage === "COMPLETE") insist3(next.stage === "COMPLETE", "Completed session reopened");
   return true;
 }
 
@@ -2991,176 +3720,6 @@ var ROUTE_ENTRY = {
 };
 var SCRIPT = (P) => [...EARLY_SCRIPT(P), ...RAW_SCRIPT(P)].map((b, i) => ({ b, i })).sort((x, y) => x.b.age - y.b.age || x.i - y.i).map((x) => x.b);
 
-// src/playtest.mjs
-var PLAYTEST_SEEDS = {
-  natural: {
-    seed: null,
-    label: "Natural seed",
-    note: "A random world. What an ordinary player gets."
-  },
-  defeat: {
-    seed: "POL-003K",
-    label: "Forced early defeat",
-    note: "Most scripted styles lose the first election here, and every one of those runs finds a way back. Re-hunted for v0.37: the formative years leave players stronger, so no seed defeats every style any more."
-  },
-  close: {
-    seed: "POL-001J",
-    label: "Competitive",
-    note: "Across the shipped backgrounds and styles, only one run loses the first election; mayoral results span 15.7 points and one lands at 49.72%. Choices decide it."
-  },
-  strong: {
-    seed: "POL-001Q",
-    label: "Strong opponent",
-    note: "A true STRONG-rival world. Twelve of eighteen runs lose first, four still win the mayoralty, and four of the twelve defeated runs find a comeback."
-  }
-};
-function resolveTestMode(raw) {
-  const k = String(raw || "").toLowerCase();
-  return Object.prototype.hasOwnProperty.call(PLAYTEST_SEEDS, k) ? k : null;
-}
-var SURVEY = [
-  {
-    id: "q1",
-    type: "scale7",
-    q: "How much did you want to keep playing until the end?",
-    lo: "Wanted to stop",
-    hi: "Wanted to keep going"
-  },
-  { id: "q2", type: "text", q: "At what point, if any, did the game start to feel repetitive?" },
-  { id: "q3", type: "text", q: "Which decision was hardest to make?" },
-  {
-    id: "q4",
-    type: "yesno_text",
-    q: 'Did any choice feel like it had an obvious "correct answer"?',
-    followUp: "Which one?"
-  },
-  {
-    id: "q5",
-    type: "choice",
-    q: "When an old case returned years later, did you remember the original event?",
-    options: ["Yes, clearly", "Vaguely", "No"]
-  },
-  {
-    id: "q6",
-    type: "choice",
-    q: "If you lost an election: did losing make you want to continue?",
-    options: ["More", "Same", "Less", "Not applicable"]
-  },
-  {
-    id: "q7",
-    type: "choice",
-    q: "How did the locked resource options feel?",
-    options: ["A meaningful constraint", "Frustrating", "Confusing", "Barely noticed them"]
-  },
-  {
-    id: "q8",
-    type: "scale7",
-    q: "Did the Mini Mirror feel specific to your choices?",
-    lo: "Could be anyone",
-    hi: "Specifically me"
-  },
-  { id: "q9", type: "text", q: "Did anything in the Mirror surprise you?" },
-  {
-    id: "q10",
-    type: "scale7_na",
-    q: "Did the Counterfactual Audit help you understand why voters reacted differently?",
-    lo: "Not at all",
-    hi: "A lot",
-    na: "I did not open it"
-  },
-  {
-    id: "q11",
-    type: "scale7",
-    q: "After playing, how interested are you in living another political life?",
-    lo: "Not at all",
-    hi: "Very"
-  },
-  { id: "q12", type: "text", q: "What single thing would make you want to play again?" },
-  // ── ability section (v0.36 build only) ──
-  {
-    id: "q13",
-    type: "scale7",
-    section: "ability",
-    q: "Did developing your politician make the game feel more like a political life?",
-    lo: "Not at all",
-    hi: "Very much"
-  },
-  {
-    id: "q14",
-    type: "choice",
-    section: "ability",
-    q: "Did the development choices feel like career decisions, or like a stat menu?",
-    options: [
-      "Strongly like career decisions",
-      "Somewhat like career decisions",
-      "Mixed",
-      "Somewhat like stat allocation",
-      "Strongly like stat allocation"
-    ]
-  },
-  {
-    id: "q15",
-    type: "multitext",
-    section: "ability",
-    q: "Without looking back: what do you think each of these actually does?",
-    fields: ["Public Communication", "Policy & Governance", "Organization", "Negotiation", "Political Strategy"]
-  },
-  {
-    id: "q16",
-    type: "choice",
-    section: "ability",
-    q: "Which ability felt most useful in your run?",
-    options: ["Public Communication", "Policy & Governance", "Organization", "Negotiation", "Political Strategy", "None stood out"]
-  },
-  {
-    id: "q17",
-    type: "choice",
-    section: "ability",
-    q: "Which ability felt least noticeable?",
-    options: ["Public Communication", "Policy & Governance", "Organization", "Negotiation", "Political Strategy", "They all registered"]
-  },
-  {
-    id: "q18",
-    type: "scale7",
-    section: "ability",
-    q: "Did you understand why some development choices produced more growth than others?",
-    lo: "No idea",
-    hi: "Completely clear"
-  },
-  {
-    id: "q19",
-    type: "choice",
-    section: "ability",
-    q: "Some things came more naturally to your politician than others. That felt:",
-    options: ["Interesting", "Confusing", "Unfair", "Barely noticed it", "Not sure"]
-  },
-  {
-    id: "q20",
-    type: "yesno_text",
-    section: "ability",
-    q: 'Did any option you could not take make you think "I wish I had developed differently"?',
-    followUp: "Which moment?"
-  },
-  {
-    id: "q21",
-    type: "scale7_text",
-    section: "ability",
-    q: "Did the development screen ever interrupt the feeling of living a political life?",
-    lo: "Never",
-    hi: "Constantly",
-    followUp: "Anything you want to add?"
-  },
-  {
-    id: "q22",
-    type: "scale7",
-    section: "ability",
-    q: "If you played again, would you deliberately build a different kind of politician?",
-    lo: "Same again",
-    hi: "Definitely different"
-  }
-];
-var ABILITY_SURVEY_IDS = SURVEY.filter((q) => q.section === "ability").map((q) => q.id);
-
 // src/game-session.mjs
 var clamp2 = (value, low, high) => Math.max(low, Math.min(high, value));
 var SESSION_CONFIG = Object.freeze({
@@ -3373,18 +3932,18 @@ function activeTrace(session) {
   }
   return null;
 }
-function fireEvent(session, event, age, seedActor = null, label = null) {
-  const full = { ...event, __age: age, __seedActor: seedActor, __label: label };
-  if (seedActor) seedBeliefs(session.agents, event.actorId, seedActor[0], seedActor[1], session.actorRng);
+function fireEvent(session, event2, age, seedActor = null, label = null) {
+  const full = { ...event2, __age: age, __seedActor: seedActor, __label: label };
+  if (seedActor) seedBeliefs(session.agents, event2.actorId, seedActor[0], seedActor[1], session.actorRng);
   tapeEvent(session.tape, full);
-  const reaction = applyEvent(session.agents, event, session.eventRng, session.player.bloc);
+  const reaction = applyEvent(session.agents, event2, session.eventRng, session.player.bloc);
   const record = {
     index: session.eventTrace.length,
     beatId: currentBeat(session)?.id || null,
     age,
-    actorId: event.actorId,
-    trait: event.trait || "integrity",
-    implication: event.implication,
+    actorId: event2.actorId,
+    trait: event2.trait || "integrity",
+    implication: event2.implication,
     label
   };
   session.eventTrace.push(record);
@@ -3514,7 +4073,7 @@ function resolveChain(session, beat) {
     credence: read?.credence ?? null,
     choiceId: move?.choiceId ?? null
   };
-  const text2 = CHAIN_TEXT[beat.chain](verdict);
+  const text3 = CHAIN_TEXT[beat.chain](verdict);
   let reaction = null;
   if (verdict.signal) {
     reaction = fireEvent(
@@ -3527,7 +4086,7 @@ function resolveChain(session, beat) {
   }
   session.pending.chain = {
     chain: beat.chain,
-    ...text2,
+    ...text3,
     verdictData: verdict,
     recall: chainRecall(spec, read ? read.credence : null, move),
     said: read ? LADDER[0][read.credence] : null,
@@ -4140,11 +4699,11 @@ function normalized(value) {
 function stableStringify(value) {
   return JSON.stringify(normalized(value));
 }
-function hashText(text2) {
+function hashText(text3) {
   let hash = 0xcbf29ce484222325n;
   const prime = 0x100000001b3n;
-  for (let i = 0; i < text2.length; i++) {
-    const code = text2.charCodeAt(i);
+  for (let i = 0; i < text3.length; i++) {
+    const code = text3.charCodeAt(i);
     hash ^= BigInt(code & 255);
     hash = BigInt.asUintN(64, hash * prime);
     hash ^= BigInt(code >>> 8);
@@ -4374,7 +4933,7 @@ var ACTOR_RULE = Object.freeze({
 var clamp3 = (x, lo, hi) => Math.max(lo, Math.min(hi, x));
 var mean = (xs) => xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : null;
 var shrink = (n, k) => n / (n + k);
-var clone = (value) => JSON.parse(JSON.stringify(value));
+var clone2 = (value) => JSON.parse(JSON.stringify(value));
 function freezeDeep2(value) {
   if (value && typeof value === "object") {
     Object.values(value).forEach(freezeDeep2);
@@ -4391,11 +4950,11 @@ function actorModel(actorContext) {
     decided.set(d.eventId, d);
   }
   const dimensions = {};
-  const dimension = (key, fields) => {
+  const dimension = (key, fields2) => {
     dimensions[key] = {
-      ...fields,
-      coefficient: fields.available ? ACTOR_RULE.pointsPerUnitIndex / 100 * fields.index / DESIGN_RANGE[key] : 0,
-      predictedPairContrastPoints: fields.available ? ACTOR_RULE.pointsPerUnitIndex * fields.index : 0
+      ...fields2,
+      coefficient: fields2.available ? ACTOR_RULE.pointsPerUnitIndex / 100 * fields2.index / DESIGN_RANGE[key] : 0,
+      predictedPairContrastPoints: fields2.available ? ACTOR_RULE.pointsPerUnitIndex * fields2.index : 0
     };
   };
   for (const [key, pair] of Object.entries(ACTOR_RULE.pairs)) {
@@ -4587,7 +5146,7 @@ function buildPredictionCommit(input) {
       M3: { predictedScore: m3, personalized: M3.dimensions[item.dimension].available === true }
     };
   });
-  return freezeDeep2(clone({
+  return freezeDeep2(clone2({
     schema: "political-mirror-prediction-commit/1",
     participantId,
     sessionId,
@@ -4638,9 +5197,9 @@ function rebuildCommittedPredictionWith(state, prediction, buildInfo) {
 }
 
 // pilot-cloud/worker.mjs
-var WORKER_VERSION = "pm-cloud-collector/3.2.0";
-var RELEASE_VERSION = "0.38.3-storage.2";
-var SCHEMA_VERSION = 6;
+var WORKER_VERSION = "pm-cloud-collector/3.4.0";
+var RELEASE_VERSION = "0.38.3-storage.4";
+var SCHEMA_VERSION = 8;
 var MAX_BODY_BYTES = 4 * 1024 * 1024;
 var SHA = (v) => sha256Hex(typeof v === "string" ? v : stableJSON(v));
 var plain = (v) => v !== null && typeof v === "object" && !Array.isArray(v);
@@ -4732,20 +5291,26 @@ async function ensureRun(env, s) {
 }
 async function activeConfig(env, run) {
   const settings = await env.DB.prepare("SELECT mode, config_sha256 FROM dashboard_settings WHERE id = 1").first();
-  assert(settings, "DASHBOARD_SETTINGS_MISSING", 503);
+  const deployment = await env.DB.prepare("SELECT instrument_version,presentation_version,participant_consent_version,participant_consent_sha256 FROM deployment_state WHERE id=1").first();
+  assert(settings && deployment, "DASHBOARD_SETTINGS_MISSING", 503);
   assert(settings.config_sha256 === run.active_config_sha256, "CONFIG_CHANGED_RELOAD_REQUIRED", 409);
+  const versions = { instrumentVersion: deployment.instrument_version ?? null, presentationVersion: deployment.presentation_version ?? null, consentVersion: deployment.participant_consent_version };
   if (!run.active_config_sha256) {
     const loaded2 = loadResearcherConfig({ schema: RESEARCHER_CONFIG_SCHEMA });
-    return { ...loaded2, configured: false, mode: settings.mode, document: buildConsentDocument(loaded2.config), consentTextSha256: consentDocumentSha256(loaded2.config), snapshot: null };
+    return { ...loaded2, ...versions, configured: false, mode: settings.mode, document: buildConsentDocument(loaded2.config, versions.consentVersion), consentTextSha256: consentDocumentSha256(loaded2.config, versions.consentVersion), snapshot: null };
   }
   const snap = await env.DB.prepare("SELECT * FROM config_snapshots WHERE researcher_config_sha256 = ?").bind(run.active_config_sha256).first();
   assert(snap, "ACTIVE_CONFIG_SNAPSHOT_MISSING", 503);
   const loaded = loadResearcherConfig(JSON.parse(snap.researcher_config_json));
-  const document = buildConsentDocument(loaded.config);
   assert(loaded.sha256 === snap.researcher_config_sha256, "CONFIG_SNAPSHOT_HASH_MISMATCH", 503);
-  assert(consentDocumentSha256(loaded.config) === snap.consent_text_sha256 && equal(document, JSON.parse(snap.consent_document_json)), "CONSENT_SNAPSHOT_HASH_MISMATCH", 503);
-  assert(snap.study_version === STUDY_VERSION && snap.consent_template_version === CONSENT_TEMPLATE_VERSION, "CONSENT_SNAPSHOT_VERSION_MISMATCH", 503);
-  return { ...loaded, configured: true, mode: settings.mode, document, consentTextSha256: snap.consent_text_sha256, snapshot: { savedAt: snap.first_seen_at, templateVersion: snap.consent_template_version } };
+  assert(consentDocumentSha256(loaded.config, snap.consent_template_version) === snap.consent_text_sha256 && equal(buildConsentDocument(loaded.config, snap.consent_template_version), JSON.parse(snap.consent_document_json)), "CONSENT_SNAPSHOT_HASH_MISMATCH", 503);
+  assert(snap.study_version === STUDY_VERSION && snap.consent_template_version === "PM-CONSENT-5", "CONSENT_SNAPSHOT_VERSION_MISMATCH", 503);
+  const consentSha = deployment.participant_consent_sha256 ?? snap.consent_text_sha256;
+  const participantSnap = await env.DB.prepare("SELECT * FROM instrument_consent_snapshots WHERE consent_text_sha256=?").bind(consentSha).first();
+  assert(participantSnap && participantSnap.researcher_config_sha256 === loaded.sha256 && participantSnap.consent_template_version === versions.consentVersion && (participantSnap.instrument_version ?? null) === versions.instrumentVersion, "CONSENT_INSTRUMENT_SNAPSHOT_MISMATCH", 503);
+  const document = buildConsentDocument(loaded.config, versions.consentVersion);
+  assert(consentDocumentSha256(loaded.config, versions.consentVersion) === consentSha && equal(document, JSON.parse(participantSnap.consent_document_json)), "CONSENT_INSTRUMENT_HASH_MISMATCH", 503);
+  return { ...loaded, ...versions, configured: true, mode: settings.mode, document, consentTextSha256: consentSha, snapshot: { savedAt: participantSnap.first_seen_at, templateVersion: versions.consentVersion } };
 }
 async function humanCount(env) {
   return (await env.DB.prepare("SELECT COUNT(*) AS n FROM sessions WHERE is_test = 0").first()).n;
@@ -4763,6 +5328,8 @@ function rowToRecord(row) {
     studyVersion: row.study_version,
     assignment: JSON.parse(row.assignment_json),
     consentConfig: JSON.parse(row.consent_config_json),
+    instrumentVersion: JSON.parse(row.consent_config_json).instrumentVersion ?? null,
+    presentationVersion: JSON.parse(row.consent_config_json).presentationVersion ?? null,
     consent: row.consent_json ? JSON.parse(row.consent_json) : null,
     isTest: row.is_test === 1,
     removedAt: row.removed_at || null,
@@ -4782,6 +5349,8 @@ function rowToRecord(row) {
 var responseView = (r) => ({
   sessionId: r.sessionId,
   studyVersion: r.studyVersion,
+  instrumentVersion: r.instrumentVersion ?? null,
+  presentationVersion: r.presentationVersion ?? null,
   assignment: r.assignment,
   consentConfig: r.consentConfig,
   consent: r.consent,
@@ -4793,7 +5362,7 @@ var responseView = (r) => ({
   createdAt: r.createdAt,
   updatedAt: r.updatedAt
 });
-var exportView = (r) => ({ schema: "political-mirror-research-export/1", collector: WORKER_VERSION, exportedAt: now(), ...responseView(r), simulated: r.isTest, removedAt: r.removedAt, journalHeadSha256: r.lastEventSha256, journalSequence: r.revision });
+var exportView = (r) => ({ schema: "political-mirror-research-export/1", collector: WORKER_VERSION, exportedAt: now(), ...responseView(r), participantCode: (r.isTest ? "TEST" : "P") + String(r.isTest ? r.slot - 1e6 + 1 : r.slot + 1).padStart(3, "0"), consentVersion: r.consentConfig.consentVersion, background: exportBackground(r.checkpoint ?? { instrumentVersion: r.instrumentVersion }), simulated: r.isTest, removedAt: r.removedAt, journalHeadSha256: r.lastEventSha256, journalSequence: r.revision });
 async function readBody(request) {
   assert(/^application\/json(?:\s*;|$)/i.test(request.headers.get("content-type") || ""), "JSON_CONTENT_TYPE_REQUIRED", 415);
   assert(Number(request.headers.get("content-length") || 0) <= MAX_BODY_BYTES, "BODY_TOO_LARGE", 413);
@@ -4823,8 +5392,9 @@ function authenticate(request, record, { allowRemoved = false } = {}) {
 function validateIdentity(state, r) {
   assert(state.sessionId === r.sessionId && state.participantId === r.sessionId, "SESSION_ID_MISMATCH");
   assert(state.studyVersion === STUDY_VERSION, "STUDY_VERSION_MISMATCH");
-  assert(consentRecordIsComplete(state.consent) && state.consent.version === CONSENT_VERSION, "CONSENT_INCOMPLETE");
+  assert(consentRecordIsComplete(state.consent) && state.consent.version === r.consentConfig.consentVersion, "CONSENT_INCOMPLETE");
   assert(equal(state.consent, r.consent), "CONSENT_RECORD_MISMATCH");
+  assert((state.instrumentVersion ?? null) === (r.instrumentVersion ?? null) && (state.presentationVersion ?? null) === (r.presentationVersion ?? null), "SESSION_INSTRUMENT_MISMATCH");
   assert(state.coreGame?.buildHash === build_info_default.buildHash && state.coreGame?.sourceManifestHash === build_info_default.sourceManifestHash, "FROZEN_BUILD_MISMATCH");
   assert(equal(state.assignment, r.assignment), "ASSIGNMENT_MISMATCH");
   try {
@@ -4834,6 +5404,7 @@ function validateIdentity(state, r) {
   }
 }
 function validateEvolution(old, next, r) {
+  const STAGES2 = stagesFor(next);
   try {
     validateStudyTransition(old, next, { predictionCommitted: !!r.prediction });
   } catch (e) {
@@ -4842,25 +5413,25 @@ function validateEvolution(old, next, r) {
   assert((next.responses?.T1?.length || 0) === 0 || r.prediction, "T1_BEFORE_PREDICTION_COMMIT", 409);
   if (next.prediction != null) assert(r.prediction && equal(next.prediction, r.prediction), "PREDICTION_MISMATCH", 409);
   if (next.predictionReceipt != null) assert(equal(next.predictionReceipt, r.predictionReceipt), "PREDICTION_RECEIPT_MISMATCH", 409);
-  if (STAGES.indexOf(next.stage) >= STAGES.indexOf("T1") && next.stage !== "WITHDRAWN") assert(r.prediction && equal(next.prediction, r.prediction) && equal(next.predictionReceipt, r.predictionReceipt), "UNCOMMITTED_T1_STAGE", 409);
+  if (STAGES2.indexOf(next.stage) >= STAGES2.indexOf("T1") && next.stage !== "WITHDRAWN") assert(r.prediction && equal(next.prediction, r.prediction) && equal(next.predictionReceipt, r.predictionReceipt), "UNCOMMITTED_T1_STAGE", 409);
   if (next.presentation?.block === "T1") assert(r.prediction, "T1_PRESENTATION_BEFORE_COMMIT", 409);
   if (!old) {
-    assert(next.stage === "T0" && next.responses.T0.length === 0 && (next.events || []).length <= 2, "INITIAL_STATE_MUST_BE_CONSENTED_T0");
+    assert(next.stage === (hasParticipantContact(r.instrumentVersion) ? "CONTACT" : r.instrumentVersion ? "DEMOGRAPHICS" : "T0") && next.responses.T0.length === 0 && (next.events || []).length <= 2, "INITIAL_STATE_MUST_BE_CONSENTED_T0");
     return;
   }
-  for (const k of ["schema", "studyVersion", "coreGame", "consentVersion", "participantId", "sessionId", "assignment", "consent"]) assert(equal(old[k], next[k]), `${k.toUpperCase()}_IMMUTABLE`);
+  for (const k of ["schema", "studyVersion", "coreGame", "consentVersion", "instrumentVersion", "presentationVersion", "participantId", "sessionId", "assignment", "consent"]) assert(equal(old[k], next[k]), `${k.toUpperCase()}_IMMUTABLE`);
   for (const block of ["T0", "T1", "T2"]) prefix(old.responses[block], next.responses[block], block + "_RESPONSES");
   prefix(old.events || [], next.events || [], "EVENTS");
   prefix(old.technicalErrors || [], next.technicalErrors || [], "TECHNICAL_ERRORS");
   assert(old.timestamps.createdAt === next.timestamps.createdAt, "CREATION_TIME_IMMUTABLE");
-  const before = STAGES.indexOf(old.stage), after = STAGES.indexOf(next.stage);
+  const before = STAGES2.indexOf(old.stage), after = STAGES2.indexOf(next.stage);
   assert(next.stage === "WITHDRAWN" || before >= 0 && after >= before && after <= before + 1, "INVALID_STAGE_TRANSITION");
   if (["COMPLETE", "WITHDRAWN"].includes(old.stage)) assert(equal(old, next), "TERMINAL_STATE_IMMUTABLE");
   if (old.game) {
     assert(next.game, "GAME_REMOVED");
     for (const k of ["schema", "sessionId", "arm", "spec"]) assert(equal(old.game[k], next.game[k]), "GAME_IDENTITY_IMMUTABLE");
     if (Array.isArray(old.game.transcript)) prefix(old.game.transcript, next.game.transcript, "GAME_TRANSCRIPT");
-    if (before >= STAGES.indexOf("PREDICTION")) for (const k of ["canonicalState", "canonicalHash", "transcript", "mirror"]) assert(equal(old.game[k], next.game[k]), "COMPLETED_GAME_IMMUTABLE");
+    if (before >= STAGES2.indexOf("PREDICTION")) for (const k of ["canonicalState", "canonicalHash", "transcript", "mirror"]) assert(equal(old.game[k], next.game[k]), "COMPLETED_GAME_IMMUTABLE");
   }
 }
 function eventStatement(env, r, sequence, type, requestId, at, record, summary) {
@@ -4879,9 +5450,9 @@ async function removeParticipantData(env, r) {
       await env.DB.batch([env.DB.prepare(`
         INSERT INTO pm_remove_data(session_id,note)
         SELECT session_id,json_object('cause','participant_withdrawal',
-          'sawFeedback',CASE WHEN stage IN ('T2','SURVEY','DEBRIEF','COMPLETE')
+          'sawFeedback',CASE WHEN stage IN ('T2','POLITICAL_BACKGROUND','SURVEY','DEBRIEF','COMPLETE')
             OR json_extract(checkpoint_json,'$.game.telemetry.mirrorPresentedAt') IS NOT NULL THEN 1 ELSE 0 END,
-          'feedbackArm',CASE WHEN stage IN ('T2','SURVEY','DEBRIEF','COMPLETE')
+          'feedbackArm',CASE WHEN stage IN ('T2','POLITICAL_BACKGROUND','SURVEY','DEBRIEF','COMPLETE')
             OR json_extract(checkpoint_json,'$.game.telemetry.mirrorPresentedAt') IS NOT NULL THEN arm ELSE NULL END)
         FROM sessions WHERE session_id=? AND removed_at IS NULL
       `).bind(r.sessionId)]);
@@ -4912,7 +5483,7 @@ async function removeParticipantData(env, r) {
 }
 async function handleEnroll(env, s, run, cfg, request) {
   const input = await readBody(request);
-  assert(Object.keys(input).every((k) => ["requestId", "consent", "collectionMode"].includes(k)), "UNKNOWN_ENROLLMENT_FIELD");
+  assert(Object.keys(input).every((k) => ["requestId", "consent", "collectionMode", "instrumentVersion", "presentationVersion"].includes(k)), "UNKNOWN_ENROLLMENT_FIELD");
   assert(typeof input.requestId === "string" && /^[A-Za-z0-9_-]{20,128}$/.test(input.requestId), "INVALID_ENROLLMENT_KEY", 400);
   const enrollmentHash = SHA(input.requestId);
   const existing = await env.DB.prepare("SELECT * FROM sessions WHERE enrollment_hash = ?").bind(enrollmentHash).first();
@@ -4921,6 +5492,7 @@ async function handleEnroll(env, s, run, cfg, request) {
     assert(!r.removedAt, "SESSION_REMOVED", 410);
     return json(200, { ...responseView(r), token: enrollmentToken(s.runKey, r.sessionId, input.requestId) });
   }
+  assert((input.instrumentVersion ?? null) === (cfg.instrumentVersion ?? null) && (input.presentationVersion ?? null) === (cfg.presentationVersion ?? null), "STALE_PARTICIPANT_APP_RELOAD_REQUIRED", 409);
   let consent;
   try {
     consent = validateConsentSubmission(input.consent, { researcherConfigSha256: cfg.sha256, consentTextSha256: cfg.consentTextSha256 });
@@ -4954,13 +5526,14 @@ async function handleEnroll(env, s, run, cfg, request) {
     const assignment = assignmentForSlot(slot, isTest ? s.runKey + "|TEST-SESSIONS" : s.runKey, run.run_id);
     if (isTest) assignment.test = true;
     const token = enrollmentToken(s.runKey, sessionId, input.requestId);
-    const consentRecord = { ...consent, at, version: CONSENT_VERSION };
+    const consentRecord = { ...consent, at, version: cfg.consentVersion };
     const consentConfig = {
-      consentVersion: CONSENT_VERSION,
-      consentTemplateVersion: CONSENT_TEMPLATE_VERSION,
+      consentVersion: cfg.consentVersion,
+      consentTemplateVersion: cfg.consentVersion,
+      ...cfg.instrumentVersion ? { instrumentVersion: cfg.instrumentVersion, presentationVersion: cfg.presentationVersion } : {},
       consentTextSha256: cfg.consentTextSha256,
       researcherConfigSha256: cfg.sha256,
-      studyTitle: cfg.config.studyTitle,
+      studyTitle: cfg.document.title,
       ethicsArrangement: cfg.config.ethics.arrangement,
       ethicsReference: cfg.config.ethics.reference,
       ethicsBody: cfg.config.ethics.body,
@@ -4985,7 +5558,7 @@ async function handleEnroll(env, s, run, cfg, request) {
     const statements = [
       env.DB.prepare(`INSERT INTO ${table} (slot, enrollment_hash, at) VALUES (?, ?, ?)`).bind(slot, enrollmentHash, at),
       env.DB.prepare("INSERT INTO sessions (session_id, slot, run_id, arm, form_order, assignment_json, enrollment_hash, token_hash, study_version, consent_config_json, consent_json, is_test, revision, stage, status, consented_at, last_event_sha256, created_at, updated_at) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 0, NULL, ?, ?, ?, ?, ?)").bind(sessionId, isTest ? 1e6 + slot : slot, run.run_id, assignment.arm, assignment.formOrder.join(""), JSON.stringify(assignment), enrollmentHash, SHA(token), STUDY_VERSION, JSON.stringify(consentConfig), JSON.stringify(consentRecord), isTest ? 1 : 0, "consented_no_checkpoint", at, recordSha, at, at),
-      env.DB.prepare("INSERT INTO consent_records (session_id, consent_version, consent_text_sha256, researcher_config_sha256, consent_json, consented_at, recorded_at, revision) VALUES (?, ?, ?, ?, ?, ?, ?, 0)").bind(sessionId, CONSENT_VERSION, cfg.consentTextSha256, cfg.sha256, JSON.stringify(consentRecord), at, at),
+      env.DB.prepare("INSERT INTO consent_records (session_id, consent_version, consent_text_sha256, researcher_config_sha256, consent_json, consented_at, recorded_at, revision) VALUES (?, ?, ?, ?, ?, ?, ?, 0)").bind(sessionId, cfg.consentVersion, cfg.consentTextSha256, cfg.sha256, JSON.stringify(consentRecord), at, at),
       env.DB.prepare("INSERT INTO session_events (session_id, sequence, type, request_id, at, revision, stage, record_sha256, previous_sha256, summary_json) VALUES (?, 0, ?, NULL, ?, 0, NULL, ?, NULL, ?)").bind(sessionId, "session-created", at, recordSha, JSON.stringify({ slot, arm: assignment.arm, formOrder: assignment.formOrder, test: isTest, consentTextSha256: cfg.consentTextSha256 }))
     ];
     if (!isTest) statements.push(env.DB.prepare("UPDATE study_run SET config_locked_at = COALESCE(config_locked_at, ?) WHERE id = 1").bind(at));
@@ -5006,6 +5579,8 @@ async function handleEnroll(env, s, run, cfg, request) {
     return json(201, {
       sessionId,
       studyVersion: STUDY_VERSION,
+      instrumentVersion: cfg.instrumentVersion,
+      presentationVersion: cfg.presentationVersion,
       assignment,
       consentConfig,
       consent: consentRecord,
@@ -5031,12 +5606,36 @@ async function handleWrite(env, s, request, r, kind) {
   assert(input.expectedRevision === r.revision, "REVISION_CONFLICT", 409);
   const revision = r.revision + 1, at = now(), digest = SHA({ kind, input });
   const statements = [];
-  let result, nextRecord;
-  if (kind === "checkpoint") {
+  let result, nextRecord, updateIndex;
+  if (kind === "contact") {
+    assert(hasParticipantContact(r.instrumentVersion), "CONTACT_NOT_IN_SESSION_INSTRUMENT", 409);
+    assert(r.checkpoint?.stage === "CONTACT", "INVALID_CONTACT_STAGE", 409);
+    let contact;
+    try {
+      contact = validateContactSubmission(input.contact);
+    } catch {
+      throw failure(422, "INVALID_CONTACT_DETAILS");
+    }
+    const cp = finishContact(r.checkpoint, at);
+    validateIdentity(cp, r);
+    validateEvolution(r.checkpoint, cp, r);
+    nextRecord = { ...responseView(r), revision, updatedAt: at, checkpoint: cp };
+    result = { revision, checkpoint: cp, contactSaved: true };
+    const ev = eventStatement(env, r, revision, "contact", input.requestId, at, nextRecord, { stage: cp.stage, contactSaved: true });
+    const code = (r.isTest ? "TEST" : "P") + String(r.isTest ? r.slot - 1e6 + 1 : r.slot + 1).padStart(3, "0");
+    statements.push(env.DB.prepare("INSERT INTO participant_contacts (session_id, participant_code, name_raw, email_raw, collected_at, instrument_version, consent_version) VALUES (?, ?, ?, ?, ?, ?, ?)").bind(r.sessionId, code, contact.nameRaw, contact.emailRaw, at, r.instrumentVersion, r.consentConfig.consentVersion));
+    updateIndex = statements.length;
+    statements.push(env.DB.prepare("UPDATE sessions SET revision = ?, checkpoint_json = ?, checkpoint_sha256 = ?, stage = ?, status = ?, last_event_sha256 = ?, updated_at = ? WHERE session_id = ?").bind(revision, JSON.stringify(cp), SHA(cp), cp.stage, cp.status, ev.recordSha, at, r.sessionId));
+    statements.push(ev.statement);
+  } else if (kind === "checkpoint") {
     assert(plain(input.checkpoint), "CHECKPOINT_REQUIRED");
     validateIdentity(input.checkpoint, r);
     validateEvolution(r.checkpoint, input.checkpoint, r);
     const cp = input.checkpoint;
+    if (hasParticipantContact(r.instrumentVersion) && cp.contact?.status === "completed") {
+      const contact = await env.DB.prepare("SELECT collected_at FROM participant_contacts WHERE session_id=?").bind(r.sessionId).first();
+      assert(contact && contact.collected_at === cp.contact.collectedAt, "CONTACT_NOT_SAVED", 409);
+    }
     if (cp.stage === "WITHDRAWN") return json(200, await removeParticipantData(env, r));
     nextRecord = { ...responseView(r), revision, updatedAt: at, checkpoint: cp };
     result = { revision, predictionCommitted: !!r.prediction, ...r.predictionReceipt ? { committedAt: r.predictionReceipt.committedAt, predictionSha256: r.predictionReceipt.predictionSha256, predictionReceipt: r.predictionReceipt } : {} };
@@ -5051,6 +5650,7 @@ async function handleWrite(env, s, request, r, kind) {
       withdrawal: cp.withdrawal ? { reason: cp.withdrawal.reason, stageAtStop: cp.withdrawal.stageAtStop, sawFeedback: cp.withdrawal.sawFeedback, dataRemovalRequested: cp.withdrawal.dataRemovalRequested } : null
     };
     const ev = eventStatement(env, r, revision, "checkpoint", input.requestId, at, nextRecord, summary);
+    updateIndex = statements.length;
     statements.push(env.DB.prepare("UPDATE sessions SET revision = ?, checkpoint_json = ?, checkpoint_sha256 = ?, stage = ?, status = ?, technical_error_count = ?, last_event_sha256 = ?, updated_at = ? WHERE session_id = ?").bind(revision, JSON.stringify(cp), SHA(cp), cp.stage, cp.status, cp.technicalErrors.length, ev.recordSha, at, r.sessionId));
     statements.push(ev.statement);
   } else {
@@ -5072,6 +5672,7 @@ async function handleWrite(env, s, request, r, kind) {
     statements.push(env.DB.prepare("INSERT INTO prediction_commits (session_id, prediction_sha256, model_version, actor_rule_version, case_bank_version, study_version, core_hash, form, committed_at, revision, commit_json) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)").bind(r.sessionId, predictionSha256, p.modelVersion, p.actorRuleVersion, p.caseBankVersion, p.studyVersion, p.coreHash, p.form, at, revision, JSON.stringify(p)));
     const rows = p.predictions.map((row, i) => [r.sessionId, row.caseId, i, row.dimension, row.M0.predictedScore, row.M1.predictedScore, row.M2.predictedScore, row.M3.predictedScore, row.M3.personalized ? 1 : 0]);
     statements.push(env.DB.prepare("INSERT INTO prediction_items (session_id, case_id, position, dimension, m0, m1, m2, m3, m3_personalized) VALUES " + rows.map(() => "(?, ?, ?, ?, ?, ?, ?, ?, ?)").join(", ")).bind(...rows.flat()));
+    updateIndex = statements.length;
     statements.push(env.DB.prepare("UPDATE sessions SET revision = ?, prediction_json = ?, prediction_receipt_json = ?, last_event_sha256 = ?, updated_at = ? WHERE session_id = ?").bind(revision, JSON.stringify(p), JSON.stringify(receipt), ev.recordSha, at, r.sessionId));
     statements.push(ev.statement);
   }
@@ -5089,7 +5690,7 @@ async function handleWrite(env, s, request, r, kind) {
     if (replayed) return json(200, replayed);
     throw failure(409, kind === "prediction" && /prediction_commits/.test(String(e.message)) ? "PREDICTION_ALREADY_COMMITTED" : "REVISION_CONFLICT");
   }
-  assert(results[kind === "checkpoint" ? 0 : 2]?.meta?.changes === 1, "D1_UPDATE_DID_NOT_APPLY", 503);
+  assert(results[updateIndex]?.meta?.changes === 1, "D1_UPDATE_DID_NOT_APPLY", 503);
   return json(200, result);
 }
 var worker_default = {
@@ -5117,7 +5718,7 @@ var worker_default = {
       const cfg = await activeConfig(env, run);
       if (url.pathname === "/api/health" && request.method === "GET") {
         const rec = await recruitmentState(env, run, cfg);
-        return json(200, { ok: true, releaseVersion: RELEASE_VERSION, collector: WORKER_VERSION, studyVersion: STUDY_VERSION, schemaVersion: schema.version, runId: run.run_id, configured: cfg.configured, recruitmentOpen: rec.open, blockers: rec.blockers, management: "cloudflare-account-only", manualSecretsRequired: false, manualSQLRequired: false, recordsTable: "participants", automaticDatabaseSetup: true, mode: cfg.mode, testOpen: rec.testOpen });
+        return json(200, { ok: true, releaseVersion: RELEASE_VERSION, collector: WORKER_VERSION, studyVersion: STUDY_VERSION, schemaVersion: schema.version, instrumentVersion: cfg.instrumentVersion, presentationVersion: cfg.presentationVersion, consentVersion: cfg.consentVersion, runId: run.run_id, configured: cfg.configured, recruitmentOpen: rec.open, blockers: rec.blockers, management: "cloudflare-account-only", manualSecretsRequired: false, manualSQLRequired: false, recordsTable: "participants", automaticDatabaseSetup: true, mode: cfg.mode, testOpen: rec.testOpen });
       }
       if (url.pathname === "/api/config" && request.method === "GET") {
         const rec = await recruitmentState(env, run, cfg), c = cfg.config;
@@ -5149,13 +5750,15 @@ var worker_default = {
           },
           consentDocument: cfg.document,
           consentTextSha256: cfg.consentTextSha256,
-          consentTemplateVersion: CONSENT_TEMPLATE_VERSION,
+          consentTemplateVersion: cfg.consentVersion,
           contactEmail: c.contactEmail,
-          consentVersion: CONSENT_VERSION
+          consentVersion: cfg.consentVersion,
+          instrumentVersion: cfg.instrumentVersion,
+          presentationVersion: cfg.presentationVersion
         });
       }
       if (url.pathname === "/api/session" && request.method === "POST") return await handleEnroll(env, s, run, cfg, request);
-      const match = /^\/api\/session\/([^/]+)(?:\/(checkpoint|prediction|export|withdraw))?$/.exec(url.pathname);
+      const match = /^\/api\/session\/([^/]+)(?:\/(checkpoint|prediction|contact|export|withdraw))?$/.exec(url.pathname);
       assert(match, "NOT_FOUND", 404);
       const record = await loadSession(env, match[1]);
       authenticate(request, record, { allowRemoved: match[2] === "withdraw" });
@@ -5167,7 +5770,7 @@ var worker_default = {
       }
       if (request.method === "GET" && !match[2]) return json(200, responseView(record));
       if (request.method === "GET" && match[2] === "export") return json(200, exportView(record));
-      assert(request.method === "POST" && ["checkpoint", "prediction"].includes(match[2]), "METHOD_NOT_ALLOWED", 405);
+      assert(request.method === "POST" && ["checkpoint", "prediction", "contact"].includes(match[2]), "METHOD_NOT_ALLOWED", 405);
       return await handleWrite(env, s, request, record, match[2]);
     } catch (e) {
       const status = e.status || 500;
